@@ -1,0 +1,27 @@
+package _02_ProgrammingFundamentals._04_Methods._01_Lecture;
+
+import java.util.Scanner;
+
+public class _03_PrintingTriangle {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        int n = Integer.parseInt(scan.nextLine());
+        printTraingle(n);
+    }
+
+    private static void printTraingle(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+        for (int i = n-1; i > 0; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+}
