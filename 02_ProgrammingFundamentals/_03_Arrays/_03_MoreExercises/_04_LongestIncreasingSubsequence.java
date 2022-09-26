@@ -1,0 +1,59 @@
+package _02_ProgrammingFundamentals._03_Arrays._03_MoreExercises;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class _04_LongestIncreasingSubsequence {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int[] console = Arrays.stream(scan.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        int[] empty = new int[console.length];
+        Arrays.fill(empty, 1);
+        int max = 0;
+        if(console.length<=1){
+            System.out.println(console.length);
+            return;
+        }
+        for (int i = 1; i < console.length; i++) {
+            for (int j = 0; j < i; j++) {
+                if(console[j] < console[i] && empty[i] <= empty[j]){
+                    empty[i] = empty[j]+1;
+                }
+                if (max<empty[i]){
+                    max++;
+                }
+            }
+        }
+        int value = 0;
+        int sequence = max;
+        int[] print = new int[sequence];
+        int count = 0;
+        for (int i = empty.length - 1; i >= 0; i--) {
+            if (empty[i] == sequence) {
+                print[count] = i;
+                value = console[i];
+            }
+        }
+        sequence--;
+        count++;
+        while (sequence != 0) {
+            for (int i = 0; i < empty.length; i++) {
+                if(empty[i] == sequence && console[i]<value){
+                    print[count] = i;
+                    sequence--;
+                    count++;
+                    value = console[i];
+                    break;
+                }
+            }
+        }
+        int[] print2 = new int[print.length];
+        for (int i = 0; i < print.length; i++) {
+            print2[i] = console[print[i]];
+        }
+        Arrays.sort(print2);
+        for (int i = 0; i < print2.length; i++) {
+            System.out.print(print2[i] + " ");
+        }
+    }
+}
