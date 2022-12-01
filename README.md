@@ -1,4 +1,4 @@
 # SoftUni
 
->Java
+>Java\
 >JavaScript
