@@ -1,0 +1,39 @@
+body{
+    padding: 5px 15px;
+    background-color: #e4e978;
+    width: 700px 
+}
+
+random {
+    background-color: #f2f4c0;
+    background-color: #e4e978;
+    background-color: #4c7658;
+    
+}
+
+header {
+    background-color: #f2f4c0;
+    border: 1px solid #b2ad7d;
+    margin: 15px 10px;
+    padding: 5px 15px;
+}
+
+main {
+    background-color: #f2f4c0;
+    border: 1px solid #b2ad7d;
+    margin: 15px 10px;
+    padding: 5px 15px;
+}
+
+section{
+    background-color: #f2f4c0;
+    font-style: italic;
+    color: #5c6e91;
+    border: 1px solid #b2ad7d;
+    margin: 15px 10px;
+    padding: 5px 15px;
+}
+
+h2 {
+    font-size: 32px;
+}
