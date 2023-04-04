@@ -1,0 +1,39 @@
+body {
+    background-color: lightgray;
+    font-family: Helvetica, sans-serif;
+    max-width: 2200px;
+    margin: 50px auto;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 52px;
+}
+
+ul {
+    margin-left: 150px;
+    margin-right: 150px;
+    display: inline-block;
+    list-style: none;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+li {
+    display: inline-block;
+}
+
+hr {
+    border: solid 1px black
+}
+
+h2 {
+    font-size: 32px;
+}
+
+a {
+    font-size: 22px;
+    padding-right: 30px;
+    text-decoration: none;
+    color: green;
+}
