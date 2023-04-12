@@ -1,0 +1,74 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: lightgray;
+    padding: 12px;
+}
+
+.card {
+    max-width: 500px;
+    aspect-ratio: 1/1;
+    border-radius: 6px;
+    border: solid 1px black;
+    overflow: hidden;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* margin: 50px auto; */
+}
+
+.card .content {
+    padding: 24px 32px;
+}
+
+.card .one {
+    height: 55%;
+}
+
+.card .card-title {
+    font-size: 24px;
+    text-align: left;
+    padding-bottom: 12px;
+}
+
+.card .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .card-a {
+    position: absolute;
+    right: 6%;
+    bottom: 6%;
+    text-decoration: none;
+    color: white;
+    background-color: green;
+    border: solid 1px black;
+    padding: 5px 12px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* .card {
+    border: solid 1px darkgrey;
+    border-radius: 6px;
+    position: absolute;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background-color: whitesmoke;
+}
+
+.card .card-image {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.card .card-title {
+
+} */
