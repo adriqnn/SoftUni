@@ -1,0 +1,92 @@
+body {
+    background-color: lightgray;
+    margin: 36px 52px;
+}
+
+.site-title {
+    display: inline-block;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+nav {
+    display: inline-block;
+    position: absolute;
+    right: 52px; 
+    top: 50px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: green;
+    text-align: center;
+    padding-left: 24px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5%;
+    grid-template-areas: "article article aside";
+}
+
+article{
+    grid-area: article;
+}
+
+aside{
+    grid-area: aside;
+}
+
+aside ul li a{
+    color: green;
+    text-decoration: none;
+}
+
+hr{
+    margin-bottom: 20px;
+}
+
+.first{
+    float: right;
+    padding-left: 6px;
+    margin-left: 10px;
+}
+
+#section1, #section2, #section3 {
+    margin-bottom: 28px;
+}
+
+.second{
+    float: left;
+    padding: 6px;
+    margin-right: 10px;
+}
+
+.header1, .header2 {
+    margin-bottom: 16px;
+}
+
+div blockquote {
+    border-left: 3px solid gray;
+    padding: 10px;
+}
+
+.quote{
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+}
+
+div blockquote .p {
+    padding-top: 10px;
+    text-align: right;
+}
+
+img {
+    border: 3px solid lightgrey;
+    outline: 2px solid black;
+}
