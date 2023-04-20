@@ -1,0 +1,15 @@
+body{
+    background: url(./resources/livingroom.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 100px;
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: antiquewhite;
+    text-shadow: 1px 1px 20px black;
+}
