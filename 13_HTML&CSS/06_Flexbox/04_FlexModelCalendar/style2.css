@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 70vh;
+}
+
+span {
+    border: 1px solid black;
+    text-align: center;
+    height: 25%;
+    padding: 25px;
+}
+
+div, section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+div {
+    max-width: 65vw;
+    margin: 50px auto;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.week {
+    flex-basis: 70%;
+}
+
+.week span:nth-child(1) {
+    flex: 5 1 100%;
+}
+
+.week span:nth-child(2) {
+    flex: 1 1 auto;
+}
+
+.week span:nth-child(3) {
+    flex: 1 1 auto;
+}
+
+.week span:nth-child(4) {
+    flex: 1 1 auto;
+}
+
+.week span:nth-child(5) {
+    flex: 1 1 auto;
+}
+
+.week span:nth-child(6) {
+    flex: 1 1 auto;
+}
+
+.week span:nth-child(7) {
+    flex: 5 1 100%;
+}
+
+.week span:nth-child(8) {
+    flex: 1 1 auto;
+}
+
+.week span:nth-child(9) {
+    flex: 1 1 auto;
+}
+
+.notes {
+    flex-basis: 20%;
+    flex-direction: column;
+    gap: 0px;
+    max-height: calc(100%);
+}
+
+.notes > span:nth-child(1) {
+    flex: 1 1 auto;
+    height: 50%;
+    width: 100%;
+}
+
+.notes > span:nth-child(2) {
+    flex: 1 1 auto;
+    height: 50%;
+    width: 100%;
+}
