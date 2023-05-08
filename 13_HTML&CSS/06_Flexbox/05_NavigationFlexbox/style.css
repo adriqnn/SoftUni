@@ -1,0 +1,51 @@
+html {
+    box-sizing: border-box;
+    background-color: lightgrey;
+    font-family: cursive;
+}
+
+body {
+    width: 60vw;
+    margin: 20px auto;
+}
+
+body header {
+    display: flex;
+    border-bottom: 2px solid black;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    margin-right: 10px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+header h1 {
+    font-family: sans-serif;
+    text-decoration: underline;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 38px;
+}
+
+a {
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: whitesmoke;
+    border-radius: 6px;
+    padding: 3px;
+    border: 2px green solid;
+}
+
+main h1 {
+    font-size: 32px;
+    font-weight: normal;
+}
