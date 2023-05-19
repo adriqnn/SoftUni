@@ -1,0 +1,36 @@
+body{
+    background-color: lightgray;
+    font-family: cursive;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin: 30px auto 0px auto;
+    min-height: calc(100vh - 30px);
+    padding: 0;
+    height: 100%;
+}
+
+header {
+    border-bottom: 3px solid black;
+}
+
+header h1 {
+    font-size: 52px;
+}
+
+main h1 {
+    /* padding: 20px 0px; */
+    font-size: 32px;
+}
+
+main { 
+    flex-grow: 1;
+}
+
+footer {
+    background-color: rgb(42, 42, 42);
+    color: white;
+    text-align: center;
+    height: 50px;
+    width: 60vw;
+}
