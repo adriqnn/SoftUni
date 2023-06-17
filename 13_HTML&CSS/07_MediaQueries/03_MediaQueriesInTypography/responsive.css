@@ -1,0 +1,64 @@
+@media screen and (max-width: 1800px){
+    p {
+        font-size: 22px;
+    }
+
+}
+
+@media screen and (max-width: 1300px){
+    body {
+        width: 80vw;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+    body {
+        width: 80vw;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    body {
+        width: 90vw;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .float-right {
+        margin: auto;
+        float: none;
+    }
+    
+    .float-left {
+        margin: auto;
+        float: none;
+    }
+
+    .flex-p-two {
+        flex-basis: 100%;
+    }
+
+    .flex-container blockquote {
+        flex-basis: 100%;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    p {
+        font-size: 12px;
+    }
+
+}
