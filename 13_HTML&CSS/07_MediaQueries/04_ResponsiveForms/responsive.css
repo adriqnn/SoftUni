@@ -1,0 +1,32 @@
+@media screen and (max-width: 800px){
+
+    form div {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    form label {
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+    
+    form input {
+        width: 250px;
+        height: 20px;
+    }
+
+    form i {
+        top: 3px;
+    }
+
+    form .lgn-btn {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 350px){
+    form input {
+        width: 100%;
+    }
+}
