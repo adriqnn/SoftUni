@@ -1,0 +1,329 @@
+body {
+    background-image: url(./resources/images/382.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-size: 100vw 100vh;
+    background-color: lightgray;
+    font-family: cursive;
+}
+
+.section-one::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+
+main {
+    width: 60vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.section-one {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-basis: 30%; */
+}
+
+.left-nav h1 {
+    color: rgb(249, 208, 255);
+    font-size: 56px;
+    text-align: center;
+}
+
+.left-nav p {
+    font-size: 16px;
+    text-align: center;
+    color: rgb(255, 249, 213);
+
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    color: rgb(255, 249, 213);
+}
+
+.div-page-one {
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin: auto;
+}
+
+.div-page-one-left {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.div-page-one-left h1{
+    font-size: 42px;
+    color: rgb(255, 249, 213);
+}
+
+.div-page-one-left p{
+    color: rgb(255, 249, 213);
+}
+
+.div-page-one-left h1{
+    font-size: 42px;
+    color: rgb(255, 249, 213);
+}
+
+.div-page-one-left button{
+    width: 260px;
+    display: inline-block;
+    background-color: rgb(255, 249, 213);
+    color: black;
+    border: 2px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.div-page-one-right {
+    flex-basis: 50%;
+}
+
+.section-two::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100vh;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+
+.section-two {
+    width: 30vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.team h1 {
+    font-size: 48px;
+    color: rgb(255, 249, 213);
+}
+
+.team .team-break {
+    background-color: rgb(255, 249, 213);
+    height: 3px;
+    width: 20%;
+}
+
+.team .team-members {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.team .team-card {
+    background-color: whitesmoke;
+    flex-basis: 25%;
+    padding: 6px;
+    border-radius: 20px;
+    border: 2px solid black;
+    height: 360px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.team-card .container-img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.team-card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.team-card .team-card-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.team-card .team-card-info .title {
+    color: rgb(99, 99, 99);
+    font-weight: 600;
+}
+
+.newsletter {
+    height: 20vh;
+    background-color: rgb(178, 95, 255);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.newsletter .newsletter-h1 {
+    font-size: 32px;
+    padding-top: 5%;
+    color: rgb(255, 249, 213);
+}
+
+.newsletter .newsletter-break {
+    background-color: black;
+    height: 3px;
+    width: 20%;
+}
+
+.newsletter .newsletter-form {
+    padding-bottom: 10%;
+}
+
+.newsletter .newsletter-form input {
+    width: 300px;
+}
+
+.section-three::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 200vh;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+
+.section-three {
+    width: 30vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.cards-container h1 {
+    font-size: 48px;
+    color: rgb(255, 249, 213);
+}
+
+.cards-container .cards-container-break {
+    background-color: rgb(255, 249, 213);
+    height: 3px;
+    width: 20%;
+}
+
+.cards-container .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.cards-container .team-card {
+    background-color: whitesmoke;
+    flex-basis: 25%;
+    padding: 6px;
+    border-radius: 20px;
+    border: 2px solid black;
+    height: 360px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.cards-container .container-img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.cards-container img {
+    object-fit: fit;
+    width: 100%;
+    height: 100%;
+}
+
+.cards-container .team-card-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cards-container .team-card-info .title {
+    color: rgb(99, 99, 99);
+    font-weight: 600;
+}
+
+
+.footer {
+    padding: 10px;
+    position: relative;
+    color: rgb(255, 249, 213);
+    background-color: black;
+    border-radius: black 2px solid;
+    border-radius: 6px;
+}
