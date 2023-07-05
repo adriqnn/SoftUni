@@ -1,0 +1,25 @@
+@media screen and (max-width: 850px){
+    .card .content {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .card .card-title {
+        margin: 0px;
+        text-align: center;
+    }
+
+
+    .card .card-p {
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .card .card-a {
+        position: initial;
+        display: inline-block;
+        width: 160px;
+    }
+}
