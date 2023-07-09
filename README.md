@@ -1,5 +1,5 @@
 # SoftUni
 
 >Java\
->JavaScript
+>JavaScript\
 >HTML & CSS
