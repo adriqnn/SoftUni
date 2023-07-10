@@ -1,4 +1,4 @@
-# SoftUni
+# SoftUni Courses
 
 >Java\
 >JavaScript\
