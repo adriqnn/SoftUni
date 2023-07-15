@@ -1,0 +1,71 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: lightgrey;
+}
+
+main {
+    margin: 100px auto;
+    width: 60vw;
+    height: 100vh;
+}
+
+.enterprise {
+    background-color: white;
+    border-radius: 8px;
+    padding: 6px 24px;
+    margin: 20px auto;
+    position: relative;
+
+    width: 960px;
+    height: 364px;
+}
+
+.info {
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    padding: 24px;
+}
+
+.image {
+    position: absolute;
+    bottom: 0px;
+    right: 60px;
+    width: 330px;
+}
+
+.subtitle {
+    font-size: 12px;
+    margin-bottom: 8px;
+    font-weight: normal;
+    color: #383838;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #273240;
+}
+
+.description {
+    color: #383838;
+}
+
+.enterprise .info .btn{
+    all: unset;
+    border: 1px solid black;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 20px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.enterprise .info .btn.btn-primary {
+    border: 1px solid #786eff;
+    background-color: #786eff;
+    color: white;
+}
