@@ -1,0 +1,234 @@
+:root {
+    --gray-light: #efefef;
+    --gray-dark: #909090;
+    --gray-black: #222222;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: black;
+    color: var(--gray-black);
+}
+
+.page-section {
+    background-color: var(--gray-light);
+    width: calc(100vw - 6rem);
+    height: calc(100vh - 3rem);
+    padding: 4rem 8rem;
+    margin: 1.5rem auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20rem;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.page-section .description {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.page-section .divider.vertical{
+    height: 6rem;
+    width: 1px;
+    background-color: #222222;
+}
+
+.page-section .divider.horizontal{
+    margin: auto 0px;
+    height: 1px;
+    width: 6rem;
+    background-color: #222222;
+}
+
+.page-section .section-info{
+    flex: 0 0 35%;
+}
+
+.page-section .section-img{
+    flex: 0 1 50%;
+}
+
+.page-section .title{
+    font-weight: normal;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+#hero .title {
+    color: rgb(79, 79, 79);
+}
+
+#hero .bolded {
+    color: black;
+}
+
+#hero.page-section{
+    position: relative;
+}
+
+#hero .navigation{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+#hero .hero-img{
+    position: absolute;
+    width: 55%;
+    bottom: 0px;
+    right: 5rem;
+}
+
+#camera .socials{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#camera .socials .social{
+    width: 3rem;
+    height: 3rem;
+    background-color: #3e3d3d;
+    color: white;
+    position: relative;
+}
+
+#camera .socials .social i{
+    font-size: 2.0rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#camera .title {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-align: center;
+}
+
+#big-pic {
+    padding: 0px;
+}
+
+#big-pic .sectionimg{
+    height: 100%;
+    width: 100%;
+}
+
+#stairs .section-img3{
+    height: 70%;
+    margin: 100px;
+}
+
+#gallery{
+    display: flex;
+    align-items: center;
+}
+
+#gallery .list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+#gallery .list .picture{
+    transform: scale(1);
+    transition: transform 300ms ease-in-out;
+}
+
+#gallery .list .picture:nth-child(2){
+    transform: scale(1.5);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.page-section2{
+    width: calc(100vw - 6rem);
+    margin: 1.5rem auto;
+    background-color: var(--gray-light);
+    height: calc(100vh - 3rem);
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 8rem;
+    overflow: hidden;
+}
+
+#contacts .section-six {
+    display: flex;
+    flex-direction: column;
+}
+
+#contacts .greeting{
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    align-content: center;
+    text-align: center;
+}
+
+#contacts .form{
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "email subject"
+    "msg msg"
+    "submit submit"
+}
+
+#contacts .form input,
+#contacts .form textarea{
+    background-color: transparent;
+    border: 1px solid var(--gray-black);
+    padding: 0.25rem;
+    width: 100%;
+}
+
+#contacts .form textarea{
+    resize: none;
+}
+
+#contacts .form .email{
+    grid-area: email;
+}
+
+#contacts .form .subject{
+    grid-area: subject;
+}
+
+#contacts .form .msg{
+    grid-area: msg;
+}
+
+.section-six .title2{
+    font-weight: normal;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-content: center;
+}
+
+.section-six .description2 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    margin-bottom: 3rem;
+    justify-content: center;
+    align-content: center;
+}
+
+#contacts .form .btn{
+    width: 100%;
+    padding: .5rem;
+    text-align: center;
+    border: 1px solid var(--gray-black);
+    background-color: black;
+    color: white;
+    grid-area: submit;
+}
