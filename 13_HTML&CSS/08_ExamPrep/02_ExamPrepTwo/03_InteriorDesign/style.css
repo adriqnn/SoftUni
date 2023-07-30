@@ -1,0 +1,220 @@
+body { 
+    background-color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+}
+
+#hero {
+    overflow: hidden;
+    width: calc(100vw-30px);
+    height: 100vh;
+}
+
+#hero .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: middle;
+    position: relative;
+}
+
+#hero .logo{
+    position: absolute;
+    left: 80px;
+    top: 80px;
+    padding: 40px 80px 20px 16px;
+
+    background-color: transparent;
+    border: solid 1px rgb(76, 76, 76);
+    border-radius: 4px;
+    box-shadow: 8px 5px 5px rgb(76, 76, 76);
+
+    width: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#hero .logo-title {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 38px;
+    line-height: normal;
+    font-weight: 600;
+}
+
+#hero .logo-break {
+    width: 100%;
+    height: 3px;
+    background-color: #3d3d3d;
+}
+
+#hero .logo-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#hero .banner {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translate(0, -50%);
+    /* margin-right: 80px; */
+    padding: 70px 20px 12px 16px;
+
+    background: linear-gradient(to right, #5e573e, rgb(209, 209, 209));
+    border: solid 1px rgb(76, 76, 76);
+    border-radius: 4px;
+    box-shadow: 8px 5px 5px rgb(76, 76, 76);
+
+    width: 380px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    text-align: end;
+    gap: 0px;
+}
+
+#hero .banner-quotes {
+    color: #3f3f3f;
+    font-size: 64px;
+    line-height: 10px;
+}
+
+#hero .banner-quote {
+    font-size: 22px;
+    font-weight: 700;
+    color: whitesmoke;
+    text-shadow: 1px 1px 1px black;
+}
+
+#info {
+    width: calc(100vw-30px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#info .options {
+    flex: 0 0 25%;
+    
+    width: 100%;
+    background-color: #bab1ad;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.options .option-h1 {
+    text-align: start;
+    font-size: 120px;
+    color: whitesmoke;
+    font-weight: 300;
+}
+
+.options .option-p {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+#info .services-and-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#info .services {
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    gap: 30px;
+}
+
+#info .services-title {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+#info .service{
+    width: 50%;
+}
+
+#info i {
+    background-color: #3d3d3d;
+    color: whitesmoke;
+    padding: 4px 4px;
+    border-radius: 100%;
+    border: 1px solid black;
+    margin-right: 6px;
+}
+
+#info .bold-caps {
+    font-weight: bold;
+}
+
+#info .contacts-header {
+    border-bottom: 2px solid black;
+}
+
+#info .contacts-h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 50px;
+    text-transform: uppercase;
+    padding-left: 100px;
+}
+
+#info .contacts-main {
+    padding-left: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 40%;
+}
+
+#info .contacts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 18px;
+}
+
+#info .bold-letter {
+    font-weight: bold;
+}
+
+#info .contacts-email-btn {
+    padding-left: 100px;
+    display: flex;
+    padding-bottom: 100px;
+    gap: 10px;
+}
+
+#info .email-field input{
+    height: 38px;
+    width: 400px;
+    border-radius: 6px;
+    border: 1px solid black;
+    background-color: #bab1ad;
+    padding-left: 20px;
+}
+
+#info input::placeholder {
+    color: white;
+    opacity: 1;
+    font-weight: 500;
+}
+
+#info .btn {
+    height: 38px;
+    width: 160px;
+    color: white;
+    background-color: #67784d;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
