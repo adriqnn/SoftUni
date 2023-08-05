@@ -1,0 +1,93 @@
+@media screen and (max-width: 600px) {
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    figure,
+    blockquote,
+    dl,
+    dd {
+        margin: 0;
+    }
+
+    html {
+        box-sizing: border-box;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .left-to-right:first-child {
+        width: 100%;
+        overflow: hidden;
+        padding: 0px;
+    }
+
+    main .left-to-right article {
+        width: 350px;
+        height: 350px;
+        padding: 75px 81px 75px 90px;
+        color: #6c6c6c;
+        border-radius: 20%;
+        margin: 50px auto;
+        background-color: white;
+    }
+
+    main section:nth-child(2) {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    main section:nth-child(2) article {
+        margin-right: 10%;
+        margin-left: 10%;
+        gap: 20px;
+    }
+
+    main section:nth-child(2) button {
+        display: none;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    main section:nth-child(2) article img {
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+    main .left-to-right article button {
+        display: none;
+    }
+
+    main section:nth-child(4) {
+        flex-direction: column;
+    }
+
+    main section:nth-child(4) article {
+        margin-right: 16%;
+        margin-left: 16%;
+        gap: 20px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    section form label input,
+    section form textarea {
+        width: 100%;
+    }
+
+    section form label {
+        display: flex;
+        align-items: center;
+    }
+}
