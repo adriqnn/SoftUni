@@ -6,9 +6,15 @@ public class _04_InchesToCentimeters {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        double inch = Double.parseDouble(scan.nextLine());
-        double cm = inch * 2.54;
+        // Read input value in inches
+        double inches = Double.parseDouble(scan.nextLine());
 
-        System.out.println(cm);
+        // Convert inches to centimeters
+        double centimeters = inches * 2.54;
+
+        // Print the result in centimeters
+        System.out.println(centimeters);
+
+        scan.close();
     }
 }
