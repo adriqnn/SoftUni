@@ -20,8 +20,7 @@ public class _03_DepositCalculator {
 
         // Print the final deposit amount
         System.out.println(finalDeposit);
-
-        // Close the scanner
+        
         scan.close();
     }
 }
