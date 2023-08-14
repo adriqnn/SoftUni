@@ -6,13 +6,22 @@ public class _03_DepositCalculator {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input data
         double deposit = Double.parseDouble(scan.nextLine());
         int interestPeriod = Integer.parseInt(scan.nextLine());
         double interestRate = Double.parseDouble(scan.nextLine());
 
-        double yearlyInterest = deposit * (interestRate * 1/100);
-        double monthlyInterest = yearlyInterest/12;
+        // Calculate yearly and monthly interest
+        double yearlyInterest = deposit * (interestRate * 1 / 100);
+        double monthlyInterest = yearlyInterest / 12;
 
-        System.out.println(deposit + (monthlyInterest * interestPeriod));
+        // Calculate final deposit amount
+        double finalDeposit = deposit + (monthlyInterest * interestPeriod);
+
+        // Print the final deposit amount
+        System.out.println(finalDeposit);
+
+        // Close the scanner
+        scan.close();
     }
 }
