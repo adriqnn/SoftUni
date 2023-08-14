@@ -6,10 +6,19 @@ public class _07_ProjectsCreation {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input data
         String name = scan.nextLine();
-        int countProjects = Integer.parseInt(scan.nextLine());
-        int allHours = countProjects*3;
+        int projectsCount = Integer.parseInt(scan.nextLine());
 
-        System.out.printf("The architect %s will need %d hours to complete %d project/s.", name, allHours, countProjects);
+        // Calculate total hours
+        int allHours = projectsCount * 3;
+
+        // Print formatted message
+        System.out.printf("The architect %s will need %d hours to complete %d project/s.",
+                name, allHours, projectsCount);
+        /*System.out.printf("The architect %s will need %d hours to complete %d project%s.",
+                name, allHours, projectsCount, projectsCount == 1 ? "" : "s");*/
+
+        scan.close();
     }
 }
