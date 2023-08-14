@@ -16,6 +16,8 @@ public class _07_ProjectsCreation {
         // Print formatted message
         System.out.printf("The architect %s will need %d hours to complete %d project/s.",
                 name, allHours, projectsCount);
+
+        // Old version
         /*System.out.printf("The architect %s will need %d hours to complete %d project%s.",
                 name, allHours, projectsCount, projectsCount == 1 ? "" : "s");*/
 
