@@ -6,12 +6,20 @@ public class _08_PetShop {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input data
         int dogsCount = Integer.parseInt(scan.nextLine());
         int otherAnimalsCount = Integer.parseInt(scan.nextLine());
 
-        double resultA = dogsCount * 2.50;
-        double resultB = otherAnimalsCount * 4.00;
+        // Calculate costs for dogs and other animals
+        double costForAllDogs = dogsCount * 2.50;
+        double costForAllTheOtherAnimals = otherAnimalsCount * 4.00;
 
-        System.out.println(resultA + resultB);
+        // Calculate total cost
+        double totalCost = costForAllDogs + costForAllTheOtherAnimals;
+
+        // Print the total cost
+        System.out.println(totalCost);
+
+        scan.close();
     }
 }
