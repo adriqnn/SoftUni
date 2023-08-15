@@ -6,9 +6,13 @@ public class _02_GreaterNumber {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        int one = Integer.parseInt(scan.nextLine());
-        int two = Integer.parseInt(scan.nextLine());
+        // Read the two integers
+        int numberOne = Integer.parseInt(scan.nextLine());
+        int numberTwo = Integer.parseInt(scan.nextLine());
 
-        System.out.println(Math.max(one, two));
+        // Print the greater of the two integers
+        System.out.println(Math.max(numberOne, numberTwo));
+        
+        scan.close();
     }
 }
