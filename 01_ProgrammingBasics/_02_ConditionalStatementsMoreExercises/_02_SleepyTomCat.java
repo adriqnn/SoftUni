@@ -17,7 +17,7 @@ public class _02_SleepyTomCat {
         // Calculate the difference between Tom's total playtime and the required norm
         double playtimeNorm = 30000 - (vacationDaysPlaytime + workingDaysPlaytime);
 
-        if (playtimeNorm > 0) {
+        if (playtimeNorm >= 0) {
             System.out.println("Tom sleeps well");
             System.out.printf("%.0f hours and %.0f minutes less for play", Math.floor(playtimeNorm / 60), playtimeNorm % 60);
         } else {
