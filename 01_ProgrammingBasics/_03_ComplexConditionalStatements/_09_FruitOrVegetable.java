@@ -6,8 +6,10 @@ public class _09_FruitOrVegetable {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         String entry = scan.nextLine();
 
+        // Print based on the input if the item is fruit, vegetable or unknown
         switch(entry){
             case "banana":
             case "apple":
@@ -27,5 +29,7 @@ public class _09_FruitOrVegetable {
                 System.out.println("unknown");
                 break;
         }
+
+        scan.close();
     }
 }
