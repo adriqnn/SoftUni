@@ -6,64 +6,67 @@ public class _03_NewHouse {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        String types = scan.nextLine();
+        // Read input values
+        String flowerType = scan.nextLine();
         int quantity = Integer.parseInt(scan.nextLine());
         int budget = Integer.parseInt(scan.nextLine());
 
-        //Roses,Dahlias,Tulips,Narcissus,Gladiolus
+        double totalCost = 0;
 
-        double woot = 0;
-
-        switch (types) {
+        // Calculate the total cost based on flower type and quantity
+        switch (flowerType) {
             case "Roses":
                 if (quantity <= 80) {
-                    woot += (quantity * 5.00);
+                    totalCost = quantity * 5.00;
                 } else {
-                    woot += ((quantity * 5.00) * (0.9));
+                    totalCost = (quantity * 5.00) * 0.9;
                 }
                 break;
             case "Dahlias":
                 if (quantity <= 90) {
-                    woot += (quantity * 3.80);
+                    totalCost = quantity * 3.80;
                 } else {
-                    woot += ((quantity * 3.80) * (0.85));
+                    totalCost = (quantity * 3.80) * 0.85;
                 }
                 break;
             case "Tulips":
                 if (quantity <= 80) {
-                    woot += (quantity* 2.80);
-                }else {
-                    woot += ((quantity* 2.80)*(0.85));
+                    totalCost = quantity * 2.80;
+                } else {
+                    totalCost = (quantity * 2.80) * 0.85;
                 }
                 break;
             case "Narcissus":
                 if (quantity < 120) {
-                    woot += ((quantity * 3.00) * (1.15));
+                    totalCost = (quantity * 3.00) * 1.15;
                 } else {
-                    woot += (quantity * 3.00);
+                    totalCost = quantity * 3.00;
                 }
                 break;
-            default:
+            default: // For "Gladiolus" or other types
                 if (quantity < 80) {
-                    woot += ((quantity * 2.50) * (1.2));
+                    totalCost = (quantity * 2.50) * 1.2;
                 } else {
-                    woot += (quantity * 2.50);
+                    totalCost = quantity * 2.50;
                 }
                 break;
         }
 
-        double yikes = Math.abs(budget - woot);
-        double yikes2 = Math.abs(woot-budget);
+        // Calculate the difference between budget and total cost
+        double difference = Math.abs(budget - totalCost);
 
-        boolean isValid2 = (woot !=0);
+        // Check if the flower type and quantity are valid
+        boolean isValidFlower = totalCost != 0;
 
-        if (isValid2) {
-
-            if (budget >= woot) {
-                System.out.printf("Hey, you have a great garden with %d %s and %.2f leva left.", quantity, types, yikes);
+        // Determine the appropriate output based on budget
+        if (isValidFlower) {
+            if (budget >= totalCost) {
+                System.out.printf("Hey, you have a great garden with %d %s and %.2f leva left.%n", quantity, flowerType, difference);
             } else {
-                System.out.printf("Not enough money, you need %.2f leva more.", yikes2);
+                System.out.printf("Not enough money, you need %.2f leva more.%n", difference);
             }
         }
+        
+        scan.close();
     }
 }
