@@ -6,7 +6,7 @@ public class _03_AnimalType {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input values
+        // Read animal input value
         String animal = scan.nextLine().toLowerCase();
 
         // Determine whether the animal is mammal, reptile or unknown
