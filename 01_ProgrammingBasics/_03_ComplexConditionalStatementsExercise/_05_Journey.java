@@ -6,42 +6,47 @@ public class _05_Journey {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        double budget = Double.parseDouble(scan.nextLine());
-        String season = scan.nextLine().toLowerCase();
+        // Read input values
+        double budget = Double.parseDouble(scan.nextLine()); // Available budget
+        String season = scan.nextLine().toLowerCase(); // Season of the year
 
         double price = 0;
-        String place = "";
-        String place2 = "";
+        String destination = "";
+        String accommodation = "";
 
-        if (budget<=100){
-            place = "Bulgaria";
-            if(season.equals("summer")){
-                place2 = "Camp";
-                price = budget*0.30;
-            }else if(season.equals("winter")){
-                place2 = "Hotel";
-                price = budget*0.70;
+        // Determine the destination and accommodation based on budget and season
+        if (budget <= 100) {
+            destination = "Bulgaria";
+            if (season.equals("summer")) {
+                accommodation = "Camp";
+                price = budget * 0.30;
+            } else if (season.equals("winter")) {
+                accommodation = "Hotel";
+                price = budget * 0.70;
             }
-        }else if (budget<=1000){
-            place = "Balkans";
-            if(season.equals("summer")){
-                place2 = "Camp";
-                price = budget*0.40;
-            }else if(season.equals("winter")){
-                place2 = "Hotel";
-                price = budget*0.80;
+        } else if (budget <= 1000) {
+            destination = "Balkans";
+            if (season.equals("summer")) {
+                accommodation = "Camp";
+                price = budget * 0.40;
+            } else if (season.equals("winter")) {
+                accommodation = "Hotel";
+                price = budget * 0.80;
             }
-        }else {
-            place = "Europe";
-            place2 = "Hotel";
-            price = budget*0.90;
+        } else {
+            destination = "Europe";
+            accommodation = "Hotel";
+            price = budget * 0.90;
         }
 
-        double sum = budget - price;
+        double difference = budget - price;
 
-        if (budget >= price){
-            System.out.printf("Somewhere in %s\n", place);
-            System.out.printf("%s - %.2f", place2, price);
+        // Determine the appropriate output based on budget
+        if (budget >= price) {
+            System.out.printf("Somewhere in %s%n", destination);
+            System.out.printf("%s - %.2f%n", accommodation, price);
         }
+        
+        scan.close();
     }
 }
