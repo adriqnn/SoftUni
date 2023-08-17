@@ -16,5 +16,7 @@ public class _10_InvalidNumber {
         if (!isValid){
             System.out.println("invalid");
         }
+        
+        scan.close();
     }
 }
