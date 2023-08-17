@@ -6,8 +6,10 @@ public class _02_WeekendOrWorkingDay {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read day from the console
         String day = scan.nextLine();
 
+        // Print whether the day if valid is working day or weekend day
         switch (day){
             case "Monday":
             case "Tuesday":
@@ -24,5 +26,7 @@ public class _02_WeekendOrWorkingDay {
                 System.out.println("Error");
                 break;
         }
+
+        scan.close();
     }
 }
