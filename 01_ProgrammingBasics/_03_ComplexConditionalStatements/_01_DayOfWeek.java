@@ -6,7 +6,7 @@ public class _01_DayOfWeek {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read day of the week
+        // Read input value for day of the week
         int day = Integer.parseInt(scan.nextLine());
 
         // Check and print day of the week if it's valid
