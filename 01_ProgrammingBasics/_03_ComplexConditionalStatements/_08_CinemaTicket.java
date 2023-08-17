@@ -6,8 +6,10 @@ public class _08_CinemaTicket {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         String day = scan.nextLine();
 
+        // Print the price of the ticket based on the day
         switch(day) {
             case "Monday":
             case "Tuesday":
