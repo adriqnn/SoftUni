@@ -6,8 +6,10 @@ public class _03_AnimalType {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        String animal = scan.nextLine();
+        // Read input values
+        String animal = scan.nextLine().toLowerCase();
 
+        // Determine whether the animal is mammal, reptile or unknown
         switch (animal){
             case "dog":
                 System.out.println("mammal");
@@ -21,5 +23,7 @@ public class _03_AnimalType {
                 System.out.println("unknown");
                 break;
         }
+
+        scan.close();
     }
 }
