@@ -6,45 +6,52 @@ public class _02_SummerOutfit {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        int degrees = Integer.parseInt(scan.nextLine());
-        String dayTime = scan.nextLine();
+        // Read input values
+        int degrees = Integer.parseInt(scan.nextLine()); // Temperature in degrees
+        String dayTime = scan.nextLine(); // Part of the day (Morning, Afternoon, Evening)
 
         String outfit = "";
         String shoes = "";
 
-        if ("Morning".equals(dayTime)){
-            if (degrees >= 10 && degrees <=18 ) {
+        // Determine outfit and shoes based on temperature and part of the day
+        if ("Morning".equals(dayTime)) {
+            if (degrees >= 10 && degrees <= 18) {
                 outfit = "Sweatshirt";
                 shoes = "Sneakers";
-            }else if (degrees > 18 && degrees <= 24){
+            } else if (degrees > 18 && degrees <= 24) {
                 outfit = "Shirt";
                 shoes = "Moccasins";
-            }else{
+            } else {
                 outfit = "T-Shirt";
                 shoes = "Sandals";
             }
-        } else if (dayTime.equals("Afternoon")){
-            if (degrees <= 18 && degrees >=10 ) {
+        } else if ("Afternoon".equals(dayTime)) {
+            if (degrees <= 18 && degrees >= 10) {
                 outfit = "Shirt";
                 shoes = "Moccasins";
-            }else if (degrees <= 24 && degrees >18){
+            } else if (degrees <= 24 && degrees > 18) {
                 outfit = "T-Shirt";
                 shoes = "Sandals";
-            }else{
+            } else {
                 outfit = "Swim Suit";
                 shoes = "Barefoot";
             }
-        } else if (dayTime.equals("Evening")){
-            if (degrees <= 18 && degrees >=10 ) {
+        } else if ("Evening".equals(dayTime)) {
+            if (degrees <= 18 && degrees >= 10) {
                 outfit = "Shirt";
                 shoes = "Moccasins";
-            }else if (degrees <= 24 && degrees >18){
+            } else if (degrees <= 24 && degrees > 18) {
                 outfit = "Shirt";
                 shoes = "Moccasins";
-            }else{
+            } else {
                 outfit = "Shirt";
                 shoes = "Moccasins";
             }
-        }System.out.printf("It's %d degrees, get your %s and %s.", degrees, outfit, shoes);
+        }
+
+        // Display the suggested outfit and shoes based on conditions
+        System.out.printf("It's %d degrees, get your %s and %s.%n", degrees, outfit, shoes);
+
+        scan.close();
     }
 }
