@@ -7,8 +7,8 @@ public class _02_SummerOutfit {
         Scanner scan = new Scanner(System.in);
 
         // Read input values
-        int degrees = Integer.parseInt(scan.nextLine()); // Temperature in degrees
-        String dayTime = scan.nextLine(); // Part of the day (Morning, Afternoon, Evening)
+        int degrees = Integer.parseInt(scan.nextLine());
+        String dayTime = scan.nextLine();
 
         String outfit = "";
         String shoes = "";
