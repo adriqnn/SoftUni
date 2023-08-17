@@ -6,48 +6,32 @@ public class _07_WorkingHours {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input values for hours and day
         int hours = Integer.parseInt(scan.nextLine());
         String day = scan.nextLine();
 
-        if (day.equals("Monday")) {
-            if (hours >= 10 && hours <= 18) {
-                System.out.println("open");
-            } else {
-                System.out.println("closed");
-            }
+        // Set a check for the working hours of the store
+        boolean isOpen = (hours >= 10 && hours <= 18);
 
-        } else if (day.equals("Tuesday")) {
-            if (hours >= 10 && hours <= 18) {
-                System.out.println("open");
-            } else {
+        // Determine if the store is opened or closed and print the result
+        switch (day) {
+            case "Monday":
+            case "Tuesday":
+            case "Wednesday":
+            case "Thursday":
+            case "Friday":
+            case "Saturday":
+                if (isOpen) {
+                    System.out.println("open");
+                } else {
+                    System.out.println("closed");
+                }
+                break;
+            default:
                 System.out.println("closed");
-            }
-        } else if (day.equals("Wednesday")) {
-            if (hours >= 10 && hours <= 18) {
-                System.out.println("open");
-            } else {
-                System.out.println("closed");
-            }
-        } else if (day.equals("Thursday")) {
-            if (hours >= 10 && hours <= 18) {
-                System.out.println("open");
-            } else {
-                System.out.println("closed");
-            }
-        } else if (day.equals("Friday")) {
-            if (hours >= 10 && hours <= 18) {
-                System.out.println("open");
-            } else {
-                System.out.println("closed");
-            }
-        } else if (day.equals("Saturday")) {
-            if (hours >= 10 && hours <= 18) {
-                System.out.println("open");
-            } else {
-                System.out.println("closed");
-            }
-        } else {
-            System.out.println("closed");
+                break;
         }
+
+        scan.close();
     }
 }
