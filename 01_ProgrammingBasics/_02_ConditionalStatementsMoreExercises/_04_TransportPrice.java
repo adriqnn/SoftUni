@@ -27,7 +27,6 @@ public class _04_TransportPrice {
         // Output the calculated trip price
         System.out.printf("%.2f", tripPrice);
 
-        // Close the scanner
         scan.close();
     }
 }
