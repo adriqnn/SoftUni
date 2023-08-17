@@ -6,37 +6,44 @@ public class _09_SkiTrip {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input values
         int days = Integer.parseInt(scan.nextLine());
-        String room = scan.nextLine();
+        String roomType = scan.nextLine();
         String rating = scan.nextLine();
 
-        double result = 0;
+        double totalPrice = 0;
 
-        if (room.equals("room for one person")){
-            result = (days-1)*18.00;
-        }else if (room.equals("apartment")){
-            if (days > 15){
-                result = ((days-1)*25.00)*0.5;
-            }else if (days >= 10){
-                result = ((days-1)*25.00)*0.65;
-            }else if (days >= 0){
-                result = ((days-1)*25.00)*0.7;
+        // Calculate total price based on room type and number of days
+        if (roomType.equals("room for one person")) {
+            totalPrice = (days - 1) * 18.00;
+        } else if (roomType.equals("apartment")) {
+            if (days > 15) {
+                totalPrice = ((days - 1) * 25.00) * 0.5;
+            } else if (days >= 10) {
+                totalPrice = ((days - 1) * 25.00) * 0.65;
+            } else if (days >= 0) {
+                totalPrice = ((days - 1) * 25.00) * 0.7;
             }
-        }else if (room.equals("president apartment")){
-            if (days > 15){
-                result = ((days-1)*35.00)*0.8;
-            }else if (days >= 10){
-                result = ((days-1)*35.00)*0.85;
-            }else if (days >= 0){
-                result = ((days-1)*35.00)*0.9;
+        } else if (roomType.equals("president apartment")) {
+            if (days > 15) {
+                totalPrice = ((days - 1) * 35.00) * 0.8;
+            } else if (days >= 10) {
+                totalPrice = ((days - 1) * 35.00) * 0.85;
+            } else if (days >= 0) {
+                totalPrice = ((days - 1) * 35.00) * 0.9;
             }
         }
 
+        // Adjust the total price based on the guest rating
         if (rating.equals("positive")) {
-            result += result * 0.25;
-        }else if (rating.equals("negative")){
-            result -= result * 0.10;
+            totalPrice *= 1.25; // Increase the price by 25%
+        } else if (rating.equals("negative")) {
+            totalPrice *= 0.9; // Decrease the price by 10%
         }
-        System.out.printf("%.2f",result);
+
+        // Display the total price with two decimal places
+        System.out.printf("%.2f", totalPrice);
+        
+        scan.close();
     }
 }
