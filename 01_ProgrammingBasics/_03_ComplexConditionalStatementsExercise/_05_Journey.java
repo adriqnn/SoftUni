@@ -7,8 +7,8 @@ public class _05_Journey {
         Scanner scan = new Scanner(System.in);
 
         // Read input values
-        double budget = Double.parseDouble(scan.nextLine()); // Available budget
-        String season = scan.nextLine().toLowerCase(); // Season of the year
+        double budget = Double.parseDouble(scan.nextLine());
+        String season = scan.nextLine().toLowerCase();
 
         double price = 0;
         String destination = "";
