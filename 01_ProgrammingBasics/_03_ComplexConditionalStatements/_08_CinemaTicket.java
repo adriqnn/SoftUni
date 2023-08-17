@@ -24,5 +24,7 @@ public class _08_CinemaTicket {
                 System.out.println(16);
                 break;
         }
+        
+        scan.close();
     }
 }
