@@ -6,67 +6,94 @@ public class _05_SmallShop {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input values from console
         String product = scan.nextLine();
         String town = scan.nextLine();
         double quantity = Double.parseDouble(scan.nextLine());
 
-        double coffee = 0;
-        double water = 0;
-        double beer = 0;
-        double sweets = 0;
-        double peanuts = 0;
+        // Prices in Sofia
+        final double SOFIA_COFFEE_PRICE = 0.50;
+        final double SOFIA_WATER_PRICE = 0.80;
+        final double SOFIA_BEER_PRICE = 1.20;
+        final double SOFIA_SWEETS_PRICE = 1.45;
+        final double SOFIA_PEANUTS_PRICE = 1.60;
 
+        // Prices in Plovdiv
+        final double PLOVDIV_COFFEE_PRICE = 0.40;
+        final double PLOVDIV_WATER_PRICE = 0.70;
+        final double PLOVDIV_BEER_PRICE = 1.15;
+        final double PLOVDIV_SWEETS_PRICE = 1.30;
+        final double PLOVDIV_PEANUTS_PRICE = 1.50;
+
+        // Prices in Varna
+        final double VARNA_COFFEE_PRICE = 0.45;
+        final double VARNA_WATER_PRICE = 0.70;
+        final double VARNA_BEER_PRICE = 1.10;
+        final double VARNA_SWEETS_PRICE = 1.35;
+        final double VARNA_PEANUTS_PRICE = 1.55;
+
+        double totalPrice = 0;
+
+        // Calculate the profit based on town
         if (town.equals("Sofia")) {
-            if (product.equals("coffee")) {
-                coffee += quantity * 0.50;
-                System.out.println(coffee);
-            } else if (product.equals("water")) {
-                water += quantity * 0.80;
-                System.out.println(water);
-            } else if (product.equals("beer")) {
-                beer += quantity * 1.20;
-                System.out.println(beer);
-            } else if (product.equals("sweets")) {
-                sweets += quantity * 1.45;
-                System.out.println(sweets);
-            } else if (product.equals("peanuts")) {
-                peanuts += quantity * 1.60;
-                System.out.println(peanuts);
+            switch (product) {
+                case "coffee":
+                    totalPrice = quantity * SOFIA_COFFEE_PRICE;
+                    break;
+                case "water":
+                    totalPrice = quantity * SOFIA_WATER_PRICE;
+                    break;
+                case "beer":
+                    totalPrice = quantity * SOFIA_BEER_PRICE;
+                    break;
+                case "sweets":
+                    totalPrice = quantity * SOFIA_SWEETS_PRICE;
+                    break;
+                case "peanuts":
+                    totalPrice = quantity * SOFIA_PEANUTS_PRICE;
+                    break;
             }
         } else if (town.equals("Plovdiv")) {
-            if (product.equals("coffee")) {
-                coffee += quantity * 0.40;
-                System.out.println(coffee);
-            } else if (product.equals("water")) {
-                water += quantity * 0.70;
-                System.out.println(water);
-            } else if (product.equals("beer")) {
-                beer += quantity * 1.15;
-                System.out.println(beer);
-            } else if (product.equals("sweets")) {
-                sweets += quantity * 1.30;
-                System.out.println(sweets);
-            } else if (product.equals("peanuts")) {
-                peanuts += quantity * 1.50;
-                System.out.println(peanuts);
+            switch (product) {
+                case "coffee":
+                    totalPrice = quantity * PLOVDIV_COFFEE_PRICE;
+                    break;
+                case "water":
+                    totalPrice = quantity * PLOVDIV_WATER_PRICE;
+                    break;
+                case "beer":
+                    totalPrice = quantity * PLOVDIV_BEER_PRICE;
+                    break;
+                case "sweets":
+                    totalPrice = quantity * PLOVDIV_SWEETS_PRICE;
+                    break;
+                case "peanuts":
+                    totalPrice = quantity * PLOVDIV_PEANUTS_PRICE;
+                    break;
             }
         } else if (town.equals("Varna")) {
-            if (product.equals("coffee")) {
-                coffee += quantity * 0.45;
-                System.out.println(coffee);
-            } else if (product.equals("water")) {
-                water += quantity * 0.70;
-                System.out.println(water);
-            } else if (product.equals("beer")) {
-                beer += quantity * 1.10;
-                System.out.println(beer);
-            } else if (product.equals("sweets")) {
-                sweets += quantity * 1.35;
-                System.out.println(sweets);
-            } else if (product.equals("peanuts")) {
-                peanuts += quantity * 1.55;
-                System.out.println(peanuts);
+            switch (product) {
+                case "coffee":
+                    totalPrice = quantity * VARNA_COFFEE_PRICE;
+                    break;
+                case "water":
+                    totalPrice = quantity * VARNA_WATER_PRICE;
+                    break;
+                case "beer":
+                    totalPrice = quantity * VARNA_BEER_PRICE;
+                    break;
+                case "sweets":
+                    totalPrice = quantity * VARNA_SWEETS_PRICE;
+                    break;
+                case "peanuts":
+                    totalPrice = quantity * VARNA_PEANUTS_PRICE;
+                    break;
             }
         }
+
+        // Print the result total price
+        System.out.printf("Total price: %.2f%n", totalPrice);
+
+        scan.close();
     }
 }
