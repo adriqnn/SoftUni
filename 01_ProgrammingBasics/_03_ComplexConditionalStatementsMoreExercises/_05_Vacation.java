@@ -16,13 +16,13 @@ public class _05_Vacation {
         double price = 0;
 
         // Determine accommodation and price based on budget
-        if(budget <= 1000){
+        if (budget <= 1000) {
             accommodation = "Camp";
             price = season.equals("summer") ? budget * 0.65 : budget * 0.45;
-        }else if(budget <= 3000){
+        } else if (budget <= 3000) {
             accommodation = "Hut";
             price = season.equals("summer") ? budget * 0.80 : budget * 0.60;
-        }else{
+        } else {
             accommodation = "Hotel";
             price = budget * 0.90;
         }
