@@ -9,6 +9,7 @@ public class _03_Logistics {
         // Read input value
         int cargoCount = Integer.parseInt(scan.nextLine());
 
+        // Add variables
         double totalCargoTransported = 0;
         double totalPrice = 0;
         double cargoByBus = 0;
