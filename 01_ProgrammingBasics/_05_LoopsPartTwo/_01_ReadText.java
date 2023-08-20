@@ -6,14 +6,18 @@ public class _01_ReadText {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Use a while loop to continuously read input until "Stop" is entered
         while(true){
-            String console = scan.nextLine();
+            String input = scan.nextLine();
 
-            if (console.equals("Stop")){
+            if (input.equalsIgnoreCase("Stop")){
                 break;
             }
 
-            System.out.println(console);
+            // Print the input to the console
+            System.out.println(input);
         }
+
+        scan.close();
     }
 }
