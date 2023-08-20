@@ -35,10 +35,10 @@ public class _03_Logistics {
         }
 
         // Calculate and print the statistics
-        System.out.printf("%.2f%n", totalPrice/totalCargoTransported);
-        System.out.printf("%.2f%%%n", cargoByBus/totalCargoTransported*100);
-        System.out.printf("%.2f%%%n", cargoByTruck/totalCargoTransported*100);
-        System.out.printf("%.2f%%%n", cargoByTrain/totalCargoTransported*100);
+        System.out.printf("%.2f%n", totalPrice / totalCargoTransported);
+        System.out.printf("%.2f%%%n", cargoByBus / totalCargoTransported * 100);
+        System.out.printf("%.2f%%%n", cargoByTruck / totalCargoTransported * 100);
+        System.out.printf("%.2f%%%n", cargoByTrain / totalCargoTransported * 100);
 
         scan.close();
     }
