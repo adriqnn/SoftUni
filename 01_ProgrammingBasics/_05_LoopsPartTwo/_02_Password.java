@@ -18,7 +18,7 @@ public class _02_Password {
         }
 
         // Welcome the user after successful login
-        System.out.printf("Welcome %s!",username);
+        System.out.printf("Welcome %s!", username);
 
         scan.close();
     }
