@@ -34,11 +34,11 @@ public class _04_Grades {
         }
 
         // Calculate and print the statistics
-        System.out.printf("Top students: %.2f%%%n", topStudents/examStudentsCount*100);
-        System.out.printf("Between 4.00 and 4.99: %.2f%%%n", studentsWith4/examStudentsCount*100);
-        System.out.printf("Between 3.00 and 3.99: %.2f%%%n", studentsWith3/examStudentsCount*100);
-        System.out.printf("Fail: %.2f%%%n", failedStudents/examStudentsCount*100);
-        System.out.printf("Average: %.2f%n", allTheGrades/examStudentsCount);
+        System.out.printf("Top students: %.2f%%%n", topStudents / examStudentsCount * 100);
+        System.out.printf("Between 4.00 and 4.99: %.2f%%%n", studentsWith4 / examStudentsCount * 100);
+        System.out.printf("Between 3.00 and 3.99: %.2f%%%n", studentsWith3 / examStudentsCount * 100);
+        System.out.printf("Fail: %.2f%%%n", failedStudents / examStudentsCount * 100);
+        System.out.printf("Average: %.2f%n", allTheGrades / examStudentsCount);
 
         scan.close();
     }
