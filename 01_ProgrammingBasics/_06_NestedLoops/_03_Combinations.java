@@ -14,14 +14,15 @@ public class _03_Combinations {
 
         for (int i = 0; i <= num ; i++) {
             for (int j = 0; j <= num ; j++) {
-                for (int k = 0; k <=num ; k++) {
+                for (int k = 0; k <= num ; k++) {
                     if(i + j + k == num){
                         count++;
                     }
                 }
             }
         }
-        
+
+         // Print the result
         System.out.println(count);
         
         scan.close();
