@@ -6,36 +6,44 @@ public class _03_Vacation {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        double vacation = Double.parseDouble(scan.nextLine());
-        double money = Double.parseDouble(scan.nextLine());
+        // Read input values
+        double vacationCost = Double.parseDouble(scan.nextLine());
+        double initialMoney = Double.parseDouble(scan.nextLine());
 
-        int countSpend = 0;
-        int allDays = 0;
+        // Add variables
+        int daysSpent = 0;
+        int daysPassed = 0;
 
-        while (money < vacation){
+        // Use a while loop to track the progress of saving money for the vacation
+        while (initialMoney < vacationCost){
             String action = scan.nextLine();
             double amount = Double.parseDouble(scan.nextLine());
-            allDays++;
+
+            daysPassed++;
 
             if (action.equals("save")){
-                countSpend = 0;
-                money += amount;
-            }
-            if(action.equals("spend")){
-                countSpend++;
-                money -= amount;
-                if (money<0){
-                    money=0;
+                daysSpent = 0;
+                initialMoney += amount;
+            }else if(action.equals("spend")){
+                daysSpent++;
+                initialMoney -= amount;
+
+                if (initialMoney < 0){
+                    initialMoney = 0;
                 }
             }
-            if (countSpend == 5){
-                System.out.printf("You can't save the money.\n"
-                        + "%d", allDays);
+
+            if (daysSpent == 5){
+                System.out.printf("You can't save the money.%n%d", daysPassed);
                 break;
             }
         }
-        if (money >= vacation){
-            System.out.printf("You saved the money for %d days.",allDays);
+
+        // Display the result based on whether the vacation cost was met
+        if (initialMoney >= vacationCost){
+            System.out.printf("You saved the money for %d days.",daysPassed);
         }
+
+        scan.close();
     }
 }
