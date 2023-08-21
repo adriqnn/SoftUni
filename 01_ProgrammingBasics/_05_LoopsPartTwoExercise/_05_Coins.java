@@ -41,6 +41,8 @@ public class _05_Coins {
                 coinsMonetaryValue -= 1;
             }
         }
+        
+        // Print the coin count
         System.out.println(coinCount);
 
         scan.close();
