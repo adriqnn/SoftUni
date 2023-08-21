@@ -6,53 +6,43 @@ public class _05_Coins {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        double console = Double.parseDouble(scan.nextLine());
-        double console2 = console*100;
-        int console3 = (int)console2;
-        int count =0;
+        // Read input value
+        double monetaryValue = Double.parseDouble(scan.nextLine());
 
-        while (console3>0){
-            if ((console3-200)>=0){
-                count++;
-                console3-=200;
-                continue;
-            }
-            if ((console3-100)>=0){
-                count++;
-                console3-=100;
-                continue;
-            }
-            if ((console3-50)>=0){
-                count++;
-                console3-=50;
-                continue;
-            }
-            if ((console3-20)>=0){
-                count++;
-                console3-=20;
-                continue;
-            }
-            if ((console3-10)>=0){
-                count++;
-                console3-=10;
-                continue;
-            }
-            if ((console3-5)>=0){
-                count++;
-                console3-=5;
-                continue;
-            }
-            if ((console3-2)>=0){
-                count++;
-                console3-=2;
-                continue;
-            }
-            if (console3==1){
-                count++;
-                console3-=1;
-                break;
+        // Add variables
+        int coinsMonetaryValue = (int) (monetaryValue * 100);
+        int coinCount = 0;
+
+        // Use a while loop to calculate the number of coins needed
+        while (coinsMonetaryValue > 0) {
+            if (coinsMonetaryValue >= 200) {
+                coinCount++;
+                coinsMonetaryValue -= 200;
+            } else if (coinsMonetaryValue >= 100) {
+                coinCount++;
+                coinsMonetaryValue -= 100;
+            } else if (coinsMonetaryValue >= 50) {
+                coinCount++;
+                coinsMonetaryValue -= 50;
+            } else if (coinsMonetaryValue >= 20) {
+                coinCount++;
+                coinsMonetaryValue -= 20;
+            } else if (coinsMonetaryValue >= 10) {
+                coinCount++;
+                coinsMonetaryValue -= 10;
+            } else if (coinsMonetaryValue >= 5) {
+                coinCount++;
+                coinsMonetaryValue -= 5;
+            } else if (coinsMonetaryValue >= 2) {
+                coinCount++;
+                coinsMonetaryValue -= 2;
+            } else {
+                coinCount++;
+                coinsMonetaryValue -= 1;
             }
         }
-        System.out.println(count);
+        System.out.println(coinCount);
+
+        scan.close();
     }
 }
