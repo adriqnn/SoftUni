@@ -8,7 +8,7 @@ public class _12_TheSongOfTheWheels {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input values
+        // Read input value
         int controlNumber = Integer.parseInt(scan.nextLine());
 
         // Add variable
