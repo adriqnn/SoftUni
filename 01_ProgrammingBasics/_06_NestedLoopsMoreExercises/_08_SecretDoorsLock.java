@@ -6,11 +6,12 @@ public class _08_SecretDoorsLock {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input values
         int hundredsLimit = Integer.parseInt(scan.nextLine());
         int tensLimit = Integer.parseInt(scan.nextLine());
         int unitsLimit = Integer.parseInt(scan.nextLine());
 
-
+        // Print all the possible combination within the limitations
         for (int i = 2; i <= hundredsLimit; i += 2) {
             for (int j = 1; j <= tensLimit; j++) {
                 if(isPrime(j)) {
