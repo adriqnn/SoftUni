@@ -5,56 +5,72 @@ import java.util.Scanner;
 public class _06_CinemaTickets {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+
+        // Read input value
         String movie = scan.nextLine();
-        int countAll = 0;
-        int studentsAll = 0;
-        int standardAll = 0;
-        int kidsAll = 0;
+
+        // Add variables
+        int totalTickets = 0;
+        int studentsTotal = 0;
+        int standardTotal = 0;
+        int kidsTotal = 0;
+
+        // Make statistics for ticket types and movies
         while(!movie.equals("Finish")){
+
+            // Read additional input values for each movie
             int seats = Integer.parseInt(scan.nextLine());
             String type = scan.nextLine();
+
+            // Variables for each money
             int count = 0;
             int students = 0;
             int standard = 0;
             int kids = 0;
+
+
             while(!type.equals("End")){
                 if (type.equals("student")){
-                    count++;
                     students++;
                 }else if (type.equals("standard")){
-                    count++;
                     standard++;
                 }else if (type.equals("kid")){
-                    count++;
                     kids++;
                 }
+                count++;
+
                 if (count == seats){
-                    double percentile = ((1.00*count)/seats)*100;
-                    System.out.printf("%s - %.2f%% full.%n",movie,percentile);
+                    double occupancy = ((1.00 * count) / seats) * 100;
+                    System.out.printf("%s - %.2f%% full.%n", movie, occupancy);
                     break;
                 }
                 type = scan.nextLine();
             }
-            double percentile1 = ((1.00*count)/seats)*100;
+
+            double occupancy = ((1.00 * count) / seats) * 100;
+
             if(type.equals("End")){
-                System.out.printf("%s - %.2f%% full.%n",movie,percentile1);
+                System.out.printf("%s - %.2f%% full.%n", movie, occupancy);
             }
 
-            int all = students+standard+kids;
-            countAll +=all;
-            studentsAll += students;
-            standardAll += standard;
-            kidsAll += kids;
+            int all = students + standard + kids;
+            totalTickets += all;
+            studentsTotal += students;
+            standardTotal += standard;
+            kidsTotal += kids;
             movie = scan.nextLine();
         }
-        double p1 = (1.00*studentsAll/countAll)*100;
-        double p2 = (1.00*standardAll/countAll)*100;
-        double p3 = (1.00*kidsAll/countAll)*100;
-        if(movie.equals("Finish")){
-            System.out.printf("Total tickets: %d%n",countAll);
-            System.out.printf("%.2f%% student tickets.%n",p1);
-            System.out.printf("%.2f%% standard tickets.%n",p2);
-            System.out.printf("%.2f%% kids tickets.%n",p3);
-        }
+
+        double percentStudents = (1.00 * studentsTotal / totalTickets) * 100;
+        double percentStandard = (1.00 * standardTotal / totalTickets) * 100;
+        double percentKids = (1.00 * kidsTotal / totalTickets) * 100;
+
+        // Print statistics
+        System.out.printf("Total tickets: %d%n", totalTickets);
+        System.out.printf("%.2f%% student tickets.%n", percentStudents);
+        System.out.printf("%.2f%% standard tickets.%n", percentStandard);
+        System.out.printf("%.2f%% kids tickets.%n", percentKids);
+
+        scan.close();
     }
 }
