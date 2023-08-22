@@ -26,7 +26,7 @@ public class _03_BestPlayer {
             console = scan.nextLine();
         }
 
-        // Print the result
+        // Print result
         if(max >= 10){
             System.out.printf("%s is the best player!%n", bestPlayer);
             System.out.printf("He has scored %d goals and made a hat-trick !!!", max);
