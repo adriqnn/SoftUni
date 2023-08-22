@@ -29,8 +29,8 @@ public class _03_GoldMine {
             }else {
                 System.out.printf("You need %.2f gold.%n", average - average2);
             }
-
-            scan.close();
         }
+        
+        scan.close();
     }
 }
