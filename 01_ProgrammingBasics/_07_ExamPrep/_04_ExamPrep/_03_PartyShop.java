@@ -54,7 +54,7 @@ public class _03_PartyShop {
         }
 
         // Print result
-        System.out.printf("%.2f",price);
+        System.out.printf("%.2f", price);
 
         scan.close();
     }
