@@ -6,10 +6,10 @@ public class _05_SpecialNumbers {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         int num = Integer.parseInt(scan.nextLine());
 
-        int count = 0;
-
+        // Print all the special numbers
         for (int i = 1; i <= 9; i++) {
             for (int j = 1; j <= 9; j++) {
                 for (int k = 1; k <= 9; k++) {
@@ -20,5 +20,7 @@ public class _05_SpecialNumbers {
                 }
             }
         }
+
+        scan.close();
     }
 }
