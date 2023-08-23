@@ -29,7 +29,6 @@ public class _10_Diamond {
                 System.out.println();
             }
 
-
         scan.close();
     }
 
