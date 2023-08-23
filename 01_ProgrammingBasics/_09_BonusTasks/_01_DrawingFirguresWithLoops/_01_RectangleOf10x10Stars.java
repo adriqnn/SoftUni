@@ -8,6 +8,7 @@ public class _01_RectangleOf10x10Stars {
             for (int j = 1; j <= 10; j++) {
                 System.out.print("*");
             }
+            
             System.out.println();
         }
     }
