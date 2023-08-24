@@ -6,14 +6,17 @@ public class _01_StudentInformation {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         String name = scan.next();
         int age = scan.nextInt();
         double grade = scan.nextDouble();
 
-
-        System.out.println(studentPrint(name,age,grade));
+        // Print result
+        System.out.println(studentPrint(name, age, grade));
     }
+
+    // Add method for the printing
     private static String studentPrint(String name, int age, double grade) {
-        return String.format("Name: %s, Age: %d, Grade: %.2f",name,age,grade);
+        return String.format("Name: %s, Age: %d, Grade: %.2f", name, age, grade);
     }
 }
