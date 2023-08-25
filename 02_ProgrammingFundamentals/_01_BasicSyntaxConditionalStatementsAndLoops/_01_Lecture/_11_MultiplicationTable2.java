@@ -18,5 +18,7 @@ public class _11_MultiplicationTable2 {
                 System.out.printf("%d X %d = %d%n", n1, i, n1 * i);
             }
         }
+
+        scan.close();
     }
 }
