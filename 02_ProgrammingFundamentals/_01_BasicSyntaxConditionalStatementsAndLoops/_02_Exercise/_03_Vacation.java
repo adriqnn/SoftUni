@@ -6,11 +6,14 @@ public class _03_Vacation {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input values
         int n = Integer.parseInt(scan.nextLine());
         String person = scan.nextLine();
         String day = scan.nextLine();
 
         double price = 0;
+
+        // Calculate the price of the vacation
         if(day.equals("Friday")){
             switch (person){
                 case "Students":
@@ -48,14 +51,20 @@ public class _03_Vacation {
                     break;
             }
         }
-        double total = n*price;
+
+        // Calculate additional discounts
+        double total = n * price;
         if(person.equals("Students") && n >= 30){
             total *= 0.85;
         }else if(person.equals("Business") && n >= 100){
-            total -= 10*price;
+            total -= 10 * price;
         }else if(person.equals("Regular") && n >= 10 & n <= 20){
             total *= 0.95;
         }
-        System.out.printf("Total price: %.2f",total);
+
+        // Print result
+        System.out.printf("Total price: %.2f", total);
+
+        scan.close();
     }
 }
