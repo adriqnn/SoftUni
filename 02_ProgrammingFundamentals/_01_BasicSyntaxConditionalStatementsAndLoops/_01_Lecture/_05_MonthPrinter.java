@@ -18,5 +18,7 @@ public class _05_MonthPrinter {
         }catch (Exception e){
             System.out.println("Error!");
         }
+
+        scan.close();
     }
 }
