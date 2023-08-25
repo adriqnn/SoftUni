@@ -15,5 +15,7 @@ public class _03_PassedOrFailed {
         }else{
             System.out.println("Failed!");
         }
+
+        scan.close();
     }
 }
