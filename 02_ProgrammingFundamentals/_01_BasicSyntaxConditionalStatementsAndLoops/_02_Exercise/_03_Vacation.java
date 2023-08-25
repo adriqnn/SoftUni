@@ -11,6 +11,7 @@ public class _03_Vacation {
         String person = scan.nextLine();
         String day = scan.nextLine();
 
+        // Add variable
         double price = 0;
 
         // Calculate the price of the vacation
