@@ -6,8 +6,10 @@ public class _06_ForeignLanguages {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         String country = scan.nextLine();
 
+        // Print country based on the input
         switch(country){
             case "England":
             case "USA":
