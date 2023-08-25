@@ -6,12 +6,14 @@ public class _07_TheatrePromotion {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         String day = scan.nextLine();
         int age  = Integer.parseInt(scan.nextLine());
 
-        if (age<0 || age >122){
+        // Print price of a theater ticket
+        if (age < 0 || age > 122){
             System.out.println("Error!");
-        }else if (age<=18){
+        }else if (age <= 18){
             switch(day){
                 case "Weekday":
                     System.out.println("12$");
@@ -23,7 +25,7 @@ public class _07_TheatrePromotion {
                     System.out.println("5$");
                     break;
             }
-        }else if (age<=64){
+        }else if (age <= 64){
             switch(day){
                 case "Weekday":
                     System.out.println("18$");
