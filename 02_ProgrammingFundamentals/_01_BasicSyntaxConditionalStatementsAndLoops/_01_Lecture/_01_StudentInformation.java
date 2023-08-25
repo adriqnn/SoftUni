@@ -13,6 +13,8 @@ public class _01_StudentInformation {
 
         // Print result
         System.out.println(studentPrint(name, age, grade));
+
+        scan.close();
     }
 
     // Add method for the printing
