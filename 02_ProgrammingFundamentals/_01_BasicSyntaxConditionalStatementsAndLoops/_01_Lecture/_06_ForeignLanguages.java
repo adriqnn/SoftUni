@@ -23,5 +23,7 @@ public class _06_ForeignLanguages {
             default:
                 System.out.println("unknown");
         }
+
+        scan.close();
     }
 }
