@@ -20,5 +20,7 @@ public class _09_SumOfOddNumbers {
         
         // Print result
         System.out.println("Sum: " + sum);
+
+        scan.close();
     }
 }
