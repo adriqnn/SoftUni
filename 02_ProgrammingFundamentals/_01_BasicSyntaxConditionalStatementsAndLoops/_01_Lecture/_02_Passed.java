@@ -13,5 +13,7 @@ public class _02_Passed {
         if (grade >= 3.00){
             System.out.println("Passed!");
         }
+
+        scan.close();
     }
 }
