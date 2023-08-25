@@ -22,5 +22,7 @@ public class _12_EvenNumber {
             
             console = scan.nextLine();
         }
+
+        scan.close();
     }
 }
