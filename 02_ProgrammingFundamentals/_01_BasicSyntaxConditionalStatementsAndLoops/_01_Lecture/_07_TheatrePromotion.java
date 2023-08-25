@@ -50,5 +50,7 @@ public class _07_TheatrePromotion {
                     break;
             }
         }
+
+        scan.close();
     }
 }
