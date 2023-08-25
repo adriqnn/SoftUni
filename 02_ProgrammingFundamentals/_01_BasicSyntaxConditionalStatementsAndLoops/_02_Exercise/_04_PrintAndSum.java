@@ -13,7 +13,7 @@ public class _04_PrintAndSum {
         // Add variable
         int sum = 0;
         
-        // Print the numbers
+        // Print numbers
         for (int i = nStart; i <= nEnd; i++) {
             System.out.print(i + " ");
             sum += i;
