@@ -20,7 +20,7 @@ public class _04_BackIn30Minutes {
         }
 
         // Print result
-        System.out.printf("%d:%02d",newHour,newMinutes);
+        System.out.printf("%d:%02d", newHour, newMinutes);
 
         scan.close();
     }
