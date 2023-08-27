@@ -6,7 +6,10 @@ public class _04_TownInfo {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input values
         String town = scan.nextLine(),population = scan.nextLine(),square = scan.nextLine();
-        System.out.printf("Town %s has population of %s and area %s square km.", town,population,square);
+        
+        // Print result
+        System.out.printf("Town %s has population of %s and area %s square km.", town, population, square);
     }
 }
