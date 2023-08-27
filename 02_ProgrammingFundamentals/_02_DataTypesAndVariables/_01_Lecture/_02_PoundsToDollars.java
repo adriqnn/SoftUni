@@ -6,8 +6,13 @@ public class _02_PoundsToDollars {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        double n = Double.parseDouble(scan.nextLine());
+        // Read input value
+        double inputPounds = Double.parseDouble(scan.nextLine());
 
-        System.out.printf("%.3f",n*1.36);
+        // Add variable
+        double poundsToDollars = inputPounds * 1.36;
+
+        // Print value
+        System.out.printf("%.3f", poundsToDollars);
     }
 }
