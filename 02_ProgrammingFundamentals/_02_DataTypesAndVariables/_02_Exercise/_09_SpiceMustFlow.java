@@ -6,20 +6,31 @@ public class _09_SpiceMustFlow {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        int total = Integer.parseInt(scan.nextLine());
+        // Read input value
+        int startingYieldOfSource = Integer.parseInt(scan.nextLine());
 
+        // Add variables
         int yield = 0;
         int days = 0;
-        while (total >= 100){
-            yield += total;
-            total -= 10;
+
+
+        while (startingYieldOfSource >= 100){
+            yield += startingYieldOfSource;
+            startingYieldOfSource -= 10;
+            
             days++;
             yield -= 26;
         }
-        if (yield>=26){
+
+        // Yield check for additional days
+        if (yield >= 26){
             yield -= 26;
         }
+
+        // Print result
         System.out.println(days);
         System.out.println(yield);
+
+        scan.close();
     }
 }
