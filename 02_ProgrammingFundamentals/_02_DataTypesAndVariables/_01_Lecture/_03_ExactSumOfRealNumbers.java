@@ -21,5 +21,7 @@ public class _03_ExactSumOfRealNumbers {
         
         // Print result
         System.out.println(sumOfRealNumbers);
+
+        scan.close();
     }
 }
