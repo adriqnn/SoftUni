@@ -6,8 +6,13 @@ public class _01_ConvertMetersToKilometers {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        double n = Double.parseDouble(scan.nextLine());
+        // Read input value
+        double meters = Double.parseDouble(scan.nextLine());
 
-        System.out.printf("%.2f", n/1000);
+        // Add variable
+        double transformMetersToKilometers = meters / 1000;
+
+        // Print result
+        System.out.printf("%.2f", transformMetersToKilometers);
     }
 }
