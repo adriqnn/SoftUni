@@ -7,9 +7,9 @@ public class _04_TownInfo {
         Scanner scan = new Scanner(System.in);
 
         // Read input values
-        String town = scan.nextLine(), population = scan.nextLine(), square = scan.nextLine();
+        String town = scan.nextLine(), population = scan.nextLine(), area = scan.nextLine();
 
         // Print result
-        System.out.printf("Town %s has population of %s and area %s square km.", town, population, square);
+        System.out.printf("Town %s has population of %s and area %s square km.", town, population, area);
     }
 }
