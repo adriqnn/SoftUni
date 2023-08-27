@@ -11,5 +11,7 @@ public class _04_TownInfo {
 
         // Print result
         System.out.printf("Town %s has population of %s and area %s square km.", town, population, area);
+
+        scan.close();
     }
 }
