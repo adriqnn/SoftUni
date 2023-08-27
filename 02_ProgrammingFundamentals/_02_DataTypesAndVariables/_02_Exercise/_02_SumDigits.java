@@ -11,16 +11,18 @@ public class _02_SumDigits {
 
         // Add variable
         int sum = 0;
-        
+
         // Sum the numbers
         for (int i = 0; i < console.length(); i++) {
             char symbol = console.charAt(i);
-            
+
             int n = Character.getNumericValue(symbol);
             sum += n;
         }
-        
+
         // Print result
         System.out.println(sum);
+
+        scan.close();
     }
 }
