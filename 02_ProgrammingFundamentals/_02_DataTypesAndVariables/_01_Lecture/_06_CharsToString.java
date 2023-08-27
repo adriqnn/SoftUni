@@ -11,5 +11,7 @@ public class _06_CharsToString {
 
         // Print result
         System.out.println(one + two + three);
+
+        scan.close();
     }
 }
