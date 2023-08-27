@@ -11,5 +11,7 @@ public class _07_ReversedChars {
 
         // Print result
         System.out.println(three + " " +  two + " " + one);
+        
+        scan.close();
     }
 }
