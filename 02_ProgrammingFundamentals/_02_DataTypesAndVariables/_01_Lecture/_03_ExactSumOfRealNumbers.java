@@ -7,13 +7,19 @@ public class _03_ExactSumOfRealNumbers {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         int n = Integer.parseInt(scan.nextLine());
 
-        BigDecimal sum = new BigDecimal(0);
+        // Add variable
+        BigDecimal sumOfRealNumbers = new BigDecimal(0);
+        
+        // Sum the numbers
         for (int i = 0; i < n; i++) {
-            BigDecimal num = new BigDecimal(scan.nextLine());
-            sum = sum.add(num);
+            BigDecimal realNumber = new BigDecimal(scan.nextLine());
+            sumOfRealNumbers = sumOfRealNumbers.add(realNumber);
         }
-        System.out.println(sum);
+        
+        // Print result
+        System.out.println(sumOfRealNumbers);
     }
 }
