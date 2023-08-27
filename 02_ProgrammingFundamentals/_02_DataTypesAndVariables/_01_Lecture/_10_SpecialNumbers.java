@@ -21,9 +21,9 @@ public class _10_SpecialNumbers {
 
             // Print result
             if(sum  == 5 || sum  == 7 || sum == 11){
-                System.out.printf("%d -> True%n",i);
+                System.out.printf("%d -> True%n", i);
             }else{
-                System.out.printf("%d -> False%n",i);
+                System.out.printf("%d -> False%n", i);
             }
         }
 
