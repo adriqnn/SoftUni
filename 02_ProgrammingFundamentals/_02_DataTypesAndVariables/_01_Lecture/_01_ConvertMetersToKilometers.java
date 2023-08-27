@@ -14,5 +14,7 @@ public class _01_ConvertMetersToKilometers {
 
         // Print result
         System.out.printf("%.2f", transformMetersToKilometers);
+
+        scan.close();
     }
 }
