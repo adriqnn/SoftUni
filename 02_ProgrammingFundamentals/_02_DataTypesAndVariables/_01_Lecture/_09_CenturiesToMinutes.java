@@ -6,12 +6,18 @@ public class _09_CenturiesToMinutes {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        int n = Integer.parseInt(scan.nextLine());
-        double years = n*100;
-        double days = years*365.2422;
-        double hours = days*24;
-        double minutes = hours*60;
+        // Read input value
+        int centuries = Integer.parseInt(scan.nextLine());
+        
+        // Add variables
+        double years = centuries * 100;
+        double days = years * 365.2422;
+        double hours = days * 24;
+        double minutes = hours * 60;
 
-        System.out.printf("%d centuries = %.0f years = %.0f days = %.0f hours = %.0f minutes",n,years,days,hours,minutes);
+        // Print result
+        System.out.printf("%d centuries = %.0f years = %.0f days = %.0f hours = %.0f minutes", centuries, years, days, hours, minutes);
+
+        scan.close();
     }
 }
