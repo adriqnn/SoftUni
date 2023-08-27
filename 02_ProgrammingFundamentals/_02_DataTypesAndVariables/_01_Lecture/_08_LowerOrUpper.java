@@ -6,13 +6,15 @@ public class _08_LowerOrUpper {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         String console = scan.nextLine();
+
+        // Add variable
         char symbol = console.charAt(0);
 
-        if (symbol >= 97){
-            System.out.println("lower-case");
-        }else{
-            System.out.println("upper-case");
-        }
+        // Print result
+        System.out.println(symbol >= 97 ? "lower-case" : "upper-case");
+
+        scan.close();
     }
 }
