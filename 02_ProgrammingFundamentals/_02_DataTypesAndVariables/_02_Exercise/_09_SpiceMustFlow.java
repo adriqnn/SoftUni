@@ -13,7 +13,7 @@ public class _09_SpiceMustFlow {
         int yield = 0;
         int days = 0;
 
-
+        // Calculate the yield of the source
         while (startingYieldOfSource >= 100){
             yield += startingYieldOfSource;
             startingYieldOfSource -= 10;
