@@ -14,5 +14,7 @@ public class _02_PoundsToDollars {
 
         // Print value
         System.out.printf("%.3f", poundsToDollars);
+
+        scan.close();
     }
 }
