@@ -6,9 +6,13 @@ public class _03_Elevator {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        int n1 = Integer.parseInt(scan.nextLine());
-        int n2 = Integer.parseInt(scan.nextLine());
+        // Read input values
+        int numberOfPeople = Integer.parseInt(scan.nextLine());
+        int elevatorCapacity = Integer.parseInt(scan.nextLine());
 
-        System.out.printf("%.0f",Math.ceil(n1*1.00/n2));
+        // Print result
+        System.out.printf("%.0f", Math.ceil(numberOfPeople * 1.00 / elevatorCapacity));
+
+        scan.close();
     }
 }
