@@ -6,7 +6,7 @@ public class _05_PrintPartOfASCIITable {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input value
+        // Read input values
         int n1 = Integer.parseInt(scan.nextLine());
         int n2 = Integer.parseInt(scan.nextLine());
 
