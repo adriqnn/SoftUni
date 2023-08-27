@@ -12,7 +12,7 @@ public class _02_PoundsToDollars {
         // Add variable
         double poundsToDollars = inputPounds * 1.36;
 
-        // Print value
+        // Print result
         System.out.printf("%.3f", poundsToDollars);
 
         scan.close();
