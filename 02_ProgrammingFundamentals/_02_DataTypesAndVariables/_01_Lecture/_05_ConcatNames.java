@@ -11,5 +11,7 @@ public class _05_ConcatNames {
         
         // Print result
         System.out.println(first + third + second);
+
+        scan.close();
     }
 }
