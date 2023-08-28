@@ -6,7 +6,7 @@ public class _03_FloatingEquality {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input value
+        // Read input values
         double n1 = Double.parseDouble(scan.nextLine());
         double n2 = Double.parseDouble(scan.nextLine());
         
