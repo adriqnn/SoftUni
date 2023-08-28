@@ -9,7 +9,7 @@ public class _05_TopIntegers {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input value
+        // Read input values
         int[] numbersArray = Arrays.stream(scan.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
 
         // Add variable
