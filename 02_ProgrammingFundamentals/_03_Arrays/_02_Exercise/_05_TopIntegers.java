@@ -15,7 +15,6 @@ public class _05_TopIntegers {
         // Add variable
         List<Integer> topIntegers = new ArrayList<>();
 
-
         // Determine the top integers
         for (int i = 0; i < numbersArray.length; i++) {
 
