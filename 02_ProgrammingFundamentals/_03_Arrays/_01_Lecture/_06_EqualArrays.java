@@ -14,7 +14,8 @@ public class _06_EqualArrays {
         // Add variables
         int sum = 0;
         boolean isEqual = true;
-        
+
+        // Compare each element of the arrays
         for (int i = 0; i < numberOneArray.length; i++) {
             if(numberOneArray[i] == numberTwoArray[i]){
                 sum += numberOneArray[i];
