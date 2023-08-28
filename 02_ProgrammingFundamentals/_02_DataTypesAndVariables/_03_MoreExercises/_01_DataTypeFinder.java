@@ -21,7 +21,8 @@ public class _01_DataTypeFinder {
         while(!console.equals("END")){
             Matcher matcherInteger = patternInteger.matcher(console);
             Matcher matcherFloat = patternFloat.matcher(console);
-            
+
+            // Print result
             if(console.equalsIgnoreCase("true") || console.equalsIgnoreCase("false")){
                 System.out.printf("%s is boolean type%n", console);
             }else if (console.length() == 1 && (console.charAt(0) <= 47 || console.charAt(0) >= 58)){
