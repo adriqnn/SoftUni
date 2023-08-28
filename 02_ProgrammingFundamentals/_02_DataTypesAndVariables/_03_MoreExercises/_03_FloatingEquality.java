@@ -6,10 +6,16 @@ public class _03_FloatingEquality {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        double epsilon = 0.000001;
+        // Read input value
         double n1 = Double.parseDouble(scan.nextLine());
         double n2 = Double.parseDouble(scan.nextLine());
+        
+        // Add comparator value
+        double epsilon = 0.000001;
 
-        System.out.println(Math.abs(n1 - n2) <= epsilon ? "True":"False");
+        // Print result
+        System.out.println(Math.abs(n1 - n2) <= epsilon ? "True" : "False");
+        
+        scan.close();
     }
 }
