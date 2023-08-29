@@ -6,8 +6,13 @@ public class _02_Grades {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         double grade = Double.parseDouble(scan.nextLine());
+        
+        // Create method to qualify grades
         whatIsTheGrade(grade);
+        
+        scan.close();
     }
 
     private static void whatIsTheGrade(double grade) {
