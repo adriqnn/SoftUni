@@ -7,9 +7,14 @@ public class _08_MathPower {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         double num = Double.parseDouble(scan.nextLine());
         double power = Double.parseDouble(scan.nextLine());
-        System.out.println(new DecimalFormat("0.####").format(whatIsThePowerOF(num,power)));
+        
+        // Print result from the method
+        System.out.println(new DecimalFormat("0.####").format(whatIsThePowerOF(num, power)));
+        
+        scan.close();
     }
 
     private static double whatIsThePowerOF(double num, double power) {
