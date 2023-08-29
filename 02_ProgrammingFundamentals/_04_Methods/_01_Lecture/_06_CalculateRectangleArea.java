@@ -6,9 +6,14 @@ public class _06_CalculateRectangleArea {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        double width = Double.parseDouble(scan.nextLine());;
-        double height = Double.parseDouble(scan.nextLine());;
-        rectangleArea(width,height);
+        // Read input values
+        double width = Double.parseDouble(scan.nextLine());
+        double height = Double.parseDouble(scan.nextLine());
+
+        // Create method that calculates rectangle area
+        rectangleArea(width, height);
+
+        scan.close();
     }
 
     private static void rectangleArea(double width, double height) {
