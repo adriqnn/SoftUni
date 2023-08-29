@@ -6,9 +6,13 @@ public class _01_SignOfIntegerNumbers {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         int num = Integer.parseInt(scan.nextLine());
 
+        // Create method to determine the char sign
         whatIsTheSign(num);
+        
+        scan.close();
     }
 
     private static void whatIsTheSign(int num) {
