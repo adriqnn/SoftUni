@@ -12,10 +12,10 @@ public class _05_AddAndSubtract {
         int num3 = Integer.parseInt(scan.nextLine());
         
         // Create method that sums num1 and num2
-        int result = addMethod(num1,num2);
+        int result = addMethod(num1, num2);
         
         // Create method that subtracts the previous result and num3
-        subtractMethod(result,num3);
+        subtractMethod(result, num3);
         
         scan.close();
     }
