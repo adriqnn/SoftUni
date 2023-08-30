@@ -6,12 +6,14 @@ public class _04_PasswordValidator {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         String password = scan.nextLine();
 
-        if(isValid6_10(password) && hasLettersAndDigitsOnly(password) && hasAtLeast2Digits(password)){
+        // Determine if a password is valid
+        if(isPasswordValidLength(password) && hasLettersAndDigitsOnly(password) && hasAtLeast2Digits(password)){
             System.out.println("Password is valid");
         }else{
-            if (!isValid6_10(password)){
+            if (!isPasswordValidLength(password)){
                 System.out.println("Password must be between 6 and 10 characters");
             }
             if (!hasLettersAndDigitsOnly(password)){
@@ -21,31 +23,37 @@ public class _04_PasswordValidator {
                 System.out.println("Password must have at least 2 digits");
             }
         }
+
+        scan.close();
     }
+
     private static boolean hasAtLeast2Digits(String password) {
         int count = 0;
+        
         for (int i = 0; i < password.length(); i++) {
             char symbol = password.charAt(i);
+            
             if (Character.isDigit(symbol)){
                 count++;
             }
         }
-        if (count >= 2) {
-            return true;
-        }else{
-            return false;
-        }
+
+        return count >= 2;
     }
+
     private static boolean hasLettersAndDigitsOnly(String password) {
         for (int i = 0; i < password.length(); i++) {
             char symbol = password.charAt(i);
+            
             if (!Character.isLetterOrDigit(symbol)){
                 return false;
             }
         }
+        
         return true;
     }
-    private static boolean isValid6_10(String password) {
+
+    private static boolean isPasswordValidLength(String password) {
         if (password.length() >= 6 && password.length() <= 10){
             return true;
         }else{
