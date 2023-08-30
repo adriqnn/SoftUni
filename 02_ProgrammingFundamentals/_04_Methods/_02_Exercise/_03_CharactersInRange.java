@@ -6,14 +6,19 @@ public class _03_CharactersInRange {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        char one = scan.nextLine().charAt(0);
-        char two = scan.nextLine().charAt(0);
-        printThis(one,two);
+        // Read input values
+        char charOne = scan.nextLine().charAt(0);
+        char charTwo = scan.nextLine().charAt(0);
+
+        // Create method that prints ASCII chars in a given range
+        printThis(charOne,charTwo);
+
+        scan.close();
     }
 
-    private static void printThis(char one, char two) {
+    private static void printThis(char charOne, char charTwo) {
 
-        for (int i = Math.min(one,two)+1; i < Math.max(one,two); i++) {
+        for (int i = Math.min(charOne, charTwo) + 1; i < Math.max(charOne, charTwo); i++) {
             System.out.print((char) i + " ");
         }
     }
