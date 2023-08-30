@@ -9,6 +9,7 @@ public class _09_PalindromeIntegers {
         // Read input value
         String  number = scan.nextLine();
 
+        // Cycle through and print result
         while(!number.equals("END")){
 
             // Create method that determines if the input is palindrome
