@@ -13,6 +13,8 @@ public class _01_SmallestOfThreeNumbers {
 
         // Create method to determine the smallest number out of three numbers
         printBiggestNumber(n1, n2, n3);
+
+        scan.close();
     }
 
     private static void printBiggestNumber(int n1, int n2, int n3) {
