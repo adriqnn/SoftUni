@@ -14,6 +14,8 @@ public class _02_CenterPoint {
 
         // Create method that prints the closest point
         rectangleDistance(x1, y1, x2, y2);
+
+        scan.close();
     }
 
     private static void rectangleDistance(double x1, double y1, double x2, double y2) {
