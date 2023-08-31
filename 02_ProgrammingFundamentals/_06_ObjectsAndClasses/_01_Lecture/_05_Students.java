@@ -14,7 +14,7 @@ public class _05_Students {
         // Add variable
         List<Student> studentList = new ArrayList<>();
 
-        // Save a list of students and theri information
+        // Save a list of students and their information
         while(!console.equals("end")){
             String[] lineFromConsole = console.split("\\s+");
             
