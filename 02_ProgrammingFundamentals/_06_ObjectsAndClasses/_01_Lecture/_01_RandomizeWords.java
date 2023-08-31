@@ -16,7 +16,7 @@ public class _01_RandomizeWords {
         // Add variable
         Random rnd = new Random();
         
-        // Randomize the input
+        // Randomize the input and print
         while(words.size() > 0){
             String word = words.remove(rnd.nextInt(words.size()));
             System.out.println(word);
