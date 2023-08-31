@@ -17,12 +17,14 @@ public class _03_MergingLists {
         // Add variables
         List<Integer> newNumbersList1and2 = new ArrayList<>();
         int sizeOfSmaller = Math.min(numbersList1.size(), numbersList2.size());
-        
+
+        // Merge the lists based on the smaller one
         for (int i = 0; i < sizeOfSmaller; i++) {
             newNumbersList1and2.add(numbersList1.get(i));
             newNumbersList1and2.add(numbersList2.get(i));
         }
-        
+
+        // Continue merging the lists
         if(numbersList1.size() < numbersList2.size()){
             for (int i = sizeOfSmaller; i < numbersList2.size(); i++) {
                 newNumbersList1and2.add(numbersList2.get(i));
@@ -32,10 +34,10 @@ public class _03_MergingLists {
                 newNumbersList1and2.add(numbersList1.get(i));
             }
         }
-        
+
         // Print result
         newNumbersList1and2.stream().forEach(e -> System.out.print(e + " "));
-        
+
         scan.close();
     }
 }
