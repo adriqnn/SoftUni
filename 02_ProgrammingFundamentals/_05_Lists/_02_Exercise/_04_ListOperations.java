@@ -9,11 +9,14 @@ public class _04_ListOperations {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input values
         List<Integer> numbersList = Arrays.stream(scan.nextLine().split("\\s+")).map(Integer::parseInt).collect(Collectors.toList());
         String console = scan.nextLine();
 
+        // Transform the list based on the given commands
         while(!console.equals("End")){
             String[] commandLine = console.split("\\s+");
+            
             if(commandLine[0].equals("Add")){
                 numbersList.add(Integer.parseInt(commandLine[1]));
             }else if(commandLine[0].equals("Insert")){
@@ -30,6 +33,7 @@ public class _04_ListOperations {
                 }
             }else if(commandLine[0].equals("Shift")){
                 int n = Integer.parseInt(commandLine[2]);
+                
                 if(commandLine[1].equals("left")){
                     for (int i = 0; i < n; i++) {
                         numbersList.add(numbersList.get(0));
@@ -42,8 +46,13 @@ public class _04_ListOperations {
                     }
                 }
             }
+            
             console = scan.nextLine();
         }
+        
+        //Print result
         numbersList.stream().forEach(e -> System.out.print(e + " "));
+        
+        scan.close();
     }
 }
