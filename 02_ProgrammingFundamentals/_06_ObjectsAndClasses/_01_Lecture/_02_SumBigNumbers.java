@@ -16,5 +16,7 @@ public class _02_SumBigNumbers {
 
         // Print result
         System.out.println(sum);
+        
+        scan.close();
     }
 }
