@@ -8,7 +8,7 @@ public class _03_HouseParty {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input value
+        // Read input values
         int n = Integer.parseInt(scan.nextLine());
         List<String> partyList = new ArrayList<>();
 
