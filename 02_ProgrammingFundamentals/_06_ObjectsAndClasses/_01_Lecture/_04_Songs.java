@@ -8,47 +8,59 @@ public class _04_Songs {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         int n = Integer.parseInt(scan.nextLine());
-        List<SongClass> songsList = new ArrayList<>();
 
+        // Add variable
+        List<Song> songsList = new ArrayList<>();
+
+        // Save the songs
         for (int i = 0; i < n; i++) {
             String[] tokens = scan.nextLine().split("_");
+
             String type = tokens[0];
             String name = tokens[1];
             String time = tokens[2];
 
-            SongClass song = new SongClass(type, name, time);
+            Song song = new Song(type, name, time);
             songsList.add(song);
         }
 
         String consoleType = scan.nextLine();
 
+        // Print result
         if(consoleType.equals("all")){
-            for (SongClass element : songsList) {
+            for (Song element : songsList) {
                 System.out.println(element);
             }
         }else{
-            for (SongClass element : songsList) {
+            for (Song element : songsList) {
                 if(element.getType().equals(consoleType)){
                     System.out.println(element);
                 }
             }
         }
+
+        scan.close();
     }
 }
 
-class SongClass{
+// Create practise Song class
+class Song {
     private String type;
     private String name;
     private String time;
-    public SongClass(String type, String name, String time) {
+
+    public Song(String type, String name, String time) {
         this.type = type;
         this.name = name;
         this.time = time;
     }
+
     public String getType(){
         return type;
     }
+
     @Override
     public String toString(){
         return this.name;
