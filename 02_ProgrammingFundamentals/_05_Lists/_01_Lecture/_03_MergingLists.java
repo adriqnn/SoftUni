@@ -10,15 +10,19 @@ public class _03_MergingLists {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input values
         List<Integer> numbersList1 = Arrays.stream(scan.nextLine().split("\\s+")).map(Integer::parseInt).collect(Collectors.toList());
         List<Integer> numbersList2 = Arrays.stream(scan.nextLine().split("\\s+")).map(Integer::parseInt).collect(Collectors.toList());
 
+        // Add variables
         List<Integer> newNumbersList1and2 = new ArrayList<>();
         int sizeOfSmaller = Math.min(numbersList1.size(), numbersList2.size());
+        
         for (int i = 0; i < sizeOfSmaller; i++) {
             newNumbersList1and2.add(numbersList1.get(i));
             newNumbersList1and2.add(numbersList2.get(i));
         }
+        
         if(numbersList1.size() < numbersList2.size()){
             for (int i = sizeOfSmaller; i < numbersList2.size(); i++) {
                 newNumbersList1and2.add(numbersList2.get(i));
@@ -28,6 +32,10 @@ public class _03_MergingLists {
                 newNumbersList1and2.add(numbersList1.get(i));
             }
         }
+        
+        // Print result
         newNumbersList1and2.stream().forEach(e -> System.out.print(e + " "));
+        
+        scan.close();
     }
 }
