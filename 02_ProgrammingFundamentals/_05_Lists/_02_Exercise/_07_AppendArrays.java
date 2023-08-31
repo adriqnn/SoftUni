@@ -10,7 +10,7 @@ public class _07_AppendArrays {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input value
+        // Read input values
         List<String> numbersList = Arrays.stream(scan.nextLine().split("\\|+")).collect(Collectors.toList());
 
         // Reverse the input
