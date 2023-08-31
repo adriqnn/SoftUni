@@ -10,6 +10,8 @@ public class _03_HouseParty {
 
         // Read input values
         int n = Integer.parseInt(scan.nextLine());
+
+        // Add variable
         List<String> partyList = new ArrayList<>();
 
         // Determine who is going to the party
