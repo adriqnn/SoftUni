@@ -10,11 +10,15 @@ public class _07_AppendArrays {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         List<String> numbersList = Arrays.stream(scan.nextLine().split("\\|+")).collect(Collectors.toList());
 
+        // Reverse the input
         Collections.reverse(numbersList);
 
+        // Print result
         System.out.println(numbersList.toString().replace("[", "").replace("]","").replaceAll(",","").replaceAll("\\s+"," "));
 
+        scan.close();
     }
 }
