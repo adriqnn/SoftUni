@@ -8,35 +8,52 @@ public class _06_Students2 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        List<StudentInfoNew> studentList = new ArrayList<>();
+        // Read input value
         String console = scan.nextLine();
 
+        // Add variable
+        List<StudentInfo> studentList = new ArrayList<>();
+
+        // Save a list of students and their information
         while(!console.equals("end")){
             String[] lineFromConsole = console.split("\\s+");
+            
             String firstName = lineFromConsole[0];
             String secondName = lineFromConsole[1];
             int age = Integer.parseInt(lineFromConsole[2]);
             String town = lineFromConsole[3];
+            
             if(!isAlreadyExistingInsideTheList(firstName,secondName,age,town,studentList)){
-                StudentInfoNew student = new StudentInfoNew(firstName,secondName,age,town);
+                StudentInfo student = new StudentInfo(firstName,secondName,age,town);
+                
                 studentList.add(student);
             }
+            
             console = scan.nextLine();
         }
+        
         String town = scan.nextLine();
-        for (StudentInfoNew element : studentList) {
+        
+        // Print result
+        for (StudentInfo element : studentList) {
             if(element.getTown().equals(town)) {
                 System.out.println(element);
             }
         }
+        
+        scan.close();
     }
-    private static boolean isAlreadyExistingInsideTheList(String firstName,String secondName,int age,String town, List<StudentInfoNew> studentList){
-        for (StudentInfoNew element : studentList) {
+    
+    // Define method to check if the value already exists in the list
+    private static boolean isAlreadyExistingInsideTheList(String firstName,String secondName,int age,String town, List<StudentInfo> studentList){
+        for (StudentInfo element : studentList) {
             boolean firstNameBoolean = element.getFirstName().equals(firstName);
             boolean secondNameBoolean = element.getSecondName().equals(secondName);
+            
             if(firstNameBoolean && secondNameBoolean){
                 element.setAge(age);
                 element.setTown(town);
+                
                 return true;
             }
         }
@@ -44,35 +61,44 @@ public class _06_Students2 {
     }
 }
 
-class StudentInfoNew{
+// Create practise Student class
+class StudentInfo {
     private String firstName;
     private String secondName;
     private int age;
     private String town;
-    public StudentInfoNew(String firstName, String secondName, int age, String town) {
+    
+    public StudentInfo(String firstName, String secondName, int age, String town) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.age = age;
         this.town = town;
     }
+    
     public void setTown(String town) {
         this.town = town;
     }
+    
     public void setAge(int age) {
         this.age = age;
     }
+    
     public String getFirstName() {
         return firstName;
     }
+    
     public String getSecondName() {
         return secondName;
     }
+    
     public int getAge() {
         return age;
     }
+    
     public String getTown() {
         return town;
     }
+    
     @Override
     public String toString() {
         return this.firstName + " " + this.secondName + " is " + this.age + " years old";
