@@ -54,6 +54,7 @@ public class _09_PokemonDontGo {
             }
         }
 
+        // Print result
         System.out.println(sum);
 
         scan.close();
