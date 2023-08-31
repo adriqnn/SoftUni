@@ -8,45 +8,60 @@ public class _05_Students {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        List<StudentInfo> studentList = new ArrayList<>();
+        // Read input value
         String console = scan.nextLine();
+        
+        // Add variable
+        List<Student> studentList = new ArrayList<>();
 
+        // Save a list of students and theri information
         while(!console.equals("end")){
             String[] lineFromConsole = console.split("\\s+");
+            
             String firstName = lineFromConsole[0];
             String secondName = lineFromConsole[1];
             int age = Integer.parseInt(lineFromConsole[2]);
             String town = lineFromConsole[3];
-            StudentInfo student = new StudentInfo(firstName,secondName,age,town);
+            
+            Student student = new Student(firstName,secondName,age,town);
             studentList.add(student);
+            
             console = scan.nextLine();
         }
 
         String consoleTown = scan.nextLine();
-        for (StudentInfo element : studentList) {
+        
+        // Print result
+        for (Student element : studentList) {
             if (element.getTown().equals(consoleTown)){
                 System.out.println(element);
             }
         }
+        
+        scan.close();
     }
 }
-class StudentInfo{
+
+// Create practise Student class
+class Student {
     private String firstName;
     private String secondName;
     private int age;
     private String town;
-    public StudentInfo(String firstName, String secondName, int age, String town) {
+    
+    public Student(String firstName, String secondName, int age, String town) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.age = age;
         this.town = town;
     }
+    
     public String getTown() {
         return town;
     }
+    
     @Override
     public String toString(){
         return this.firstName + " " + this.secondName + " is " + this.age + " years old";
     }
 }
-
