@@ -9,22 +9,31 @@ public class _02_ChangeList {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         List<Integer> numbersList = Arrays.stream(scan.nextLine().split("\\s+")).map(Integer::parseInt).collect(Collectors.toList());
         String console = scan.nextLine();
 
+        // Change the list based on the commands
         while(!console.equals("end")){
             String[] commandLine = console.split("\\s+");
             String command = commandLine[0];
+            
             if(command.equals("Delete")){
                 int element = Integer.parseInt(commandLine[1]);
-                numbersList.removeIf(e -> e==element);
+                
+                numbersList.removeIf(e -> e == element);
             }else if(command.equals("Insert")){
                 int index = Integer.parseInt(commandLine[2]);
                 int num = Integer.parseInt(commandLine[1]);
-                numbersList.add(index,num);
+                
+                numbersList.add(index, num);
             }
             console = scan.nextLine();
         }
+
+        // Print result
         numbersList.stream().forEach(e -> System.out.print(e + " "));
+
+        scan.close();
     }
 }
