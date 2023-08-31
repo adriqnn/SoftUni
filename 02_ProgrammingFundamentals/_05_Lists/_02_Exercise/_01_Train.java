@@ -9,7 +9,7 @@ public class _01_Train {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input value
+        // Read input values
         List<Integer> trainWagonsPassengers = Arrays.stream(scan.nextLine().split("\\s+")).map(Integer::parseInt).collect(Collectors.toList());
         int capacityOfWagon = Integer.parseInt(scan.nextLine());
         String passengersListActions = scan.nextLine();
