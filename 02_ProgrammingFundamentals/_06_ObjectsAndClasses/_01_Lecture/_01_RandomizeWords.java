@@ -10,11 +10,18 @@ public class _01_RandomizeWords {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input values 
         List<String> words = Arrays.stream(scan.nextLine().split("\\s+")).collect(Collectors.toList());
+        
+        // Add variable
         Random rnd = new Random();
+        
+        // Randomize the input
         while(words.size() > 0){
             String word = words.remove(rnd.nextInt(words.size()));
             System.out.println(word);
         }
+        
+        scan.close();
     }
 }
