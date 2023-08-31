@@ -8,12 +8,14 @@ public class _03_HouseParty {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         int n = Integer.parseInt(scan.nextLine());
         List<String> partyList = new ArrayList<>();
 
-
+        // Determine who is going to the party
         for (int i = 0; i < n; i++) {
             String[] commandline = scan.nextLine().split("\\s+");
+            
             if(commandline[2].equals("going!")){
                 if(!partyList.contains(commandline[0])){
                     partyList.add(commandline[0]);
@@ -28,6 +30,10 @@ public class _03_HouseParty {
                 }
             }
         }
+        
+        // Print result
         partyList.stream().forEach(System.out::println);
+        
+        scan.close();
     }
 }
