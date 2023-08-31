@@ -9,9 +9,13 @@ public class _09_PokemonDontGo {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input values
         List<Integer> pokemonDistance = Arrays.stream(scan.nextLine().split("\\s+")).map(Integer::parseInt).collect(Collectors.toList());
 
+        // Add variable
         int sum = 0;
+
+        // Read and execute commands based on the input
         while(!pokemonDistance.isEmpty()){
             int element = Integer.parseInt(scan.nextLine());
             if(element >= 0 && element < pokemonDistance.size()){
@@ -49,6 +53,9 @@ public class _09_PokemonDontGo {
                 }
             }
         }
+
         System.out.println(sum);
+
+        scan.close();
     }
 }
