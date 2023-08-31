@@ -9,11 +9,14 @@ public class _04_ListManipulationBasics {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input values
         List<Integer> numberList = Arrays.stream(scan.nextLine().split("\\s+")).map(Integer::parseInt).collect(Collectors.toList());
         String console = scan.nextLine();
 
+        // Manipulate lists based on the given commands
         while(!console.equals("end")){
             String commandline = console.split("\\s+")[0];
+
             if(commandline.equals("Add")){
                 numberList.add(Integer.parseInt(console.split("\\s+")[1]));
             }else if(commandline.equals("Remove")){
@@ -23,8 +26,13 @@ public class _04_ListManipulationBasics {
             }else if(commandline.equals("Insert")){
                 numberList.add(Integer.parseInt(console.split("\\s+")[2]),Integer.parseInt(console.split("\\s+")[1]));
             }
+
             console = scan.nextLine();
         }
+
+        // Print result
         numberList.stream().forEach(e-> System.out.print(e + " "));
+
+        scan.close();
     }
 }
