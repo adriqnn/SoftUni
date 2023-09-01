@@ -45,7 +45,7 @@ public class _04_Songs {
     }
 }
 
-// Create practise Song class
+// Create practice Song class
 class Song {
     private String type;
     private String name;
