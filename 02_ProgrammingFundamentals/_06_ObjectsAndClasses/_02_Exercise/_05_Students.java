@@ -22,7 +22,7 @@ public class _05_Students {
             String lastName = studentsInformation[1];
             double grade = Double.parseDouble(studentsInformation[2]);
 
-            Student student = new Student(firstName,lastName,grade);
+            Student student = new Student(firstName, lastName, grade);
             students.add(student);
         }
 
@@ -51,6 +51,6 @@ class Student {
 
     @Override
     public String toString(){
-        return String.format("%s %s: %.2f%n",this.firstName,this.lastName,this.grade);
+        return String.format("%s %s: %.2f%n", this.firstName, this.lastName, this.grade);
     }
 }
