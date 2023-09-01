@@ -22,7 +22,7 @@ public class _04_Articles2 {
             String content = articleLines[1];
             String author = articleLines[2];
             
-            ArticlesDatabase article = new ArticlesDatabase(title,content,author);
+            ArticlesDatabase article = new ArticlesDatabase(title, content, author);
             articles.add(article);
         }
 
