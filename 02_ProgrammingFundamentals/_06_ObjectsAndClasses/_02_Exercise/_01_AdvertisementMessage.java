@@ -34,7 +34,7 @@ public class _01_AdvertisementMessage {
             int randomFour = randomFromList.nextInt(four.size());
             String fourth = four.get(randomFour);
             
-            System.out.printf("%s %s %s - %s%n",first,second,third,fourth);
+            System.out.printf("%s %s %s - %s%n", first, second, third, fourth);
         }
         
         scan.close();
