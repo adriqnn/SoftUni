@@ -61,7 +61,7 @@ public class _06_Students2 {
     }
 }
 
-// Create practise Student class
+// Create practice StudentInfo class
 class StudentInfo {
     private String firstName;
     private String secondName;
