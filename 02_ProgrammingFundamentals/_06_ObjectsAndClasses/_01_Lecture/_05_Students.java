@@ -42,7 +42,7 @@ public class _05_Students {
     }
 }
 
-// Create practise Student class
+// Create practice Student class
 class Student {
     private String firstName;
     private String secondName;
