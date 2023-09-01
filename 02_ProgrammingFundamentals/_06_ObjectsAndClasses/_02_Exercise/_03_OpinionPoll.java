@@ -9,34 +9,49 @@ public class _03_OpinionPoll {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         int n = Integer.parseInt(scan.nextLine());
 
-        List<Persons> listOfPeople = new ArrayList<>();
+        // Add variable
+        List<Person> listOfPeople = new ArrayList<>();
+
+        // Populate the list with data for people
         for (int i = 0; i < n; i++) {
             String[] consoleLine = scan.nextLine().split("\\s+");
+
             String person = consoleLine[0];
             int age = Integer.parseInt(consoleLine[1]);
-            Persons newOne = new Persons(consoleLine[0],Integer.parseInt(consoleLine[1]));
-            listOfPeople.add(newOne);
+
+            Person newPerson = new Person(person, age);
+            listOfPeople.add(newPerson);
         }
+
         /*listOfPeople.stream().sorted(Comparator.comparingInt(Persons::getAge).reversed()).forEach(e -> {
             if(e.getAge() >= 30) {
                 System.out.println(e.getPerson() + " - " + e.getAge());
             }
         });*/
-        listOfPeople.sort(Comparator.comparing(Persons::getPerson));
 
+        // Sort the list
+        listOfPeople.sort(Comparator.comparing(Person::getPerson));
+
+        // Print result
         listOfPeople.forEach(e -> {
             if(e.getAge() > 30) {
                 System.out.println(e.getPerson() + " - " + e.getAge());
             }
         });
+
+        scan.close();
     }
 }
-class Persons{
+
+// Create practice Person class
+class Person {
     private String person;
     private int age;
-    public Persons(String person, int age) {
+
+    public Person(String person, int age) {
         this.person = person;
         this.age = age;
     }
@@ -48,4 +63,3 @@ class Persons{
         return person;
     }
 }
-
