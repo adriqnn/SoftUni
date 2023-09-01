@@ -44,7 +44,7 @@ public class _04_Articles2 {
     }
 }
 
-// Create practice AricleDatabase class
+// Create practice ArticleDatabase class
 class ArticlesDatabase{
     private String title;
     private String content;
