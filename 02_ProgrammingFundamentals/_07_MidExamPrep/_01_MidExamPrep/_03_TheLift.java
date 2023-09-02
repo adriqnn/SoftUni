@@ -7,12 +7,15 @@ public class _03_TheLift {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input values
         int people = Integer.parseInt(scan.nextLine());
         int[] state = Arrays.stream(scan.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
 
+        // Determine the state of the lift
         for (int i = 0; i < state.length; i++) {
-            if(state[i]<4){
+            if(state[i] < 4){
                 int n1 = 4 - state[i]; // free spots
+                
                 if (people >= n1){
                     state[i] = state[i] + n1;
                     people -= n1;
@@ -22,6 +25,7 @@ public class _03_TheLift {
                 }
             }
         }
+        
         int count = 0;
         for (int i = 0; i < state.length; i++) {
             if (state[i] < 4){
@@ -30,13 +34,17 @@ public class _03_TheLift {
             }
 
         }
+        
+        // Print result
         if (count > 0 && people == 0){
             System.out.println("The lift has empty spots!");
+            
             for (int i : state) {
                 System.out.print(i + " ");
             }
         }else if (count == 0 && people > 0){
             System.out.printf("There isn't enough space! %d people in a queue!%n",people);
+            
             for (int i : state) {
                 System.out.print(i + " ");
             }
@@ -45,5 +53,7 @@ public class _03_TheLift {
                 System.out.print(i + " ");
             }
         }
+        
+        scan.close();
     }
 }
