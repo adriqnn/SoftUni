@@ -23,6 +23,7 @@ public class _04_SoftUniParking {
 
             if(command.equals("register")){
                 String licensePlate = commands[2];
+                
                 if(registry.containsKey(username)){
                     System.out.printf("ERROR: already registered with plate number %s%n", licensePlate);
                     continue;
