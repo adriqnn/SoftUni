@@ -22,7 +22,7 @@ public class _02_AMinerTask {
                 resourcesQuantity.put(resource, quantity);
             }else{
                 int currentQuantity = resourcesQuantity.get(resource);
-                resourcesQuantity.put(resource, currentQuantity+ quantity);
+                resourcesQuantity.put(resource, currentQuantity + quantity);
             }
             
             resource = scan.nextLine();
