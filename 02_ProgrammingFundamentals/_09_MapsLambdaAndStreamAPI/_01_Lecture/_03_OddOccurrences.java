@@ -8,7 +8,7 @@ public class _03_OddOccurrences {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input value
+        // Read input values
         String[] words = scan.nextLine().split(" ");
 
         // Add variable
