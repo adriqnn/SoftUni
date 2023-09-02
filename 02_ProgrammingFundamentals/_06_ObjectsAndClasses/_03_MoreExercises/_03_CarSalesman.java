@@ -8,24 +8,32 @@ public class _03_CarSalesman {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input vale
         int engineCount = Integer.parseInt(scan.nextLine());
 
+        // Add variables
         List<EngineInfo> engines = new ArrayList<>();
         List<CarInfo> cars = new ArrayList<>();
+
+        // Create catalog for engines
         for (int i = 0; i < engineCount; i++) {
             String[] engineSpecs = scan.nextLine().split("\\s+");
+
             String model = engineSpecs[0];
             String power = engineSpecs[1];
             String displacement = "";
             String efficiency = "";
+
             try{
                 displacement = String.valueOf(Integer.parseInt(engineSpecs[2]));
                 efficiency = engineSpecs[3];
             }catch (Exception e){
+
                 try{
                     displacement = String.valueOf(Integer.parseInt(engineSpecs[2]));
                     efficiency = "n/a";
                 }catch (Exception e1){
+
                     try{
                         displacement = "n/a";
                         efficiency = engineSpecs[2];
@@ -35,26 +43,32 @@ public class _03_CarSalesman {
                     }
                 }
             }
-            EngineInfo engine = new EngineInfo(model,power,displacement,efficiency);
+            EngineInfo engine = new EngineInfo(model, power, displacement, efficiency);
+
             engines.add(engine);
         }
 
         int carCount = Integer.parseInt(scan.nextLine());
 
+        // Create catalog for cars
         for (int i = 0; i < carCount; i++) {
             String[] carInformation = scan.nextLine().split("\\s+");
+
             String model = carInformation[0];
             String engine = carInformation[1];
             String weight = "";
             String color = "";
+
             try{
                 weight = String.valueOf(Integer.parseInt(carInformation[2]));
                 color = carInformation[3];
             }catch (Exception e){
+
                 try{
                     weight = String.valueOf(Integer.parseInt(carInformation[2]));
                     color = "n/a";
                 }catch (Exception e1){
+
                     try {
                         weight = "n/a";
                         color = carInformation[2];
@@ -64,13 +78,16 @@ public class _03_CarSalesman {
                     }
                 }
             }
+
             for (EngineInfo eng: engines) {
                 if (eng.getModel().equals(engine)){
-                    CarInfo car = new CarInfo(model,eng,weight,color);
+                    CarInfo car = new CarInfo(model, eng, weight, color);
                     cars.add(car);
                 }
             }
         }
+
+        // Print result
         for (CarInfo car: cars) {
             System.out.println(car.getModel() + ":");
             System.out.println("  " +car.getEngine().getModel() + ":");
@@ -80,54 +97,68 @@ public class _03_CarSalesman {
             System.out.println("  Weight: " + car.getWeight());
             System.out.println("  Color: " + car.getColor());
         }
+
+        scan.close();
     }
 }
+
+// Create practice CarInfo class
 class CarInfo{
     private String model;
     private EngineInfo engine;
-
     private String weight;
     private String color;
+
     public CarInfo(String model, EngineInfo engine, String weight, String color) {
         this.model = model;
         this.engine = engine;
         this.weight = weight;
         this.color = color;
     }
+
     public String getModel() {
         return model;
     }
+
     public EngineInfo getEngine() {
         return engine;
     }
+
     public String getWeight() {
         return weight;
     }
+
     public String getColor() {
         return color;
     }
 }
+
+// Create practice EngineInfo class
 class EngineInfo{
     private String model;
     private String power;
-
     private String displacement;
     private String efficiency;
+
     public EngineInfo(String model, String power, String displacement, String efficiency) {
         this.model = model;
         this.power = power;
         this.displacement = displacement;
         this.efficiency = efficiency;
     }
+
     public String getModel() {
         return model;
     }
+
     public String getPower() {
         return power;
     }
+
     public String getDisplacement() {
         return displacement;
     }
+
     public String getEfficiency() {
         return efficiency;
     }
