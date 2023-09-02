@@ -8,11 +8,16 @@ public class _04_SoftUniParking {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input values
         int numberOfCommands = Integer.parseInt(scan.nextLine());
+
+        // Add variable
         Map<String, String> registry = new LinkedHashMap<>();
 
+        // Validate parking permissions and save data
         for (int i = 0; i < numberOfCommands; i++) {
             String[] commands = scan.nextLine().split("\\s+");
+
             String command = commands[0];
             String username = commands[1];
 
@@ -23,6 +28,7 @@ public class _04_SoftUniParking {
                     continue;
                 }
                 registry.put(username, licensePlate);
+
                 System.out.printf("%s registered %s successfully%n", username, licensePlate);
             }else{
                 if(!registry.containsKey(username)){
@@ -30,9 +36,14 @@ public class _04_SoftUniParking {
                     continue;
                 }
                 registry.remove(username);
+
                 System.out.printf("%s unregistered successfully%n", username);
             }
         }
+
+        // Print result
         registry.forEach((key, value) -> System.out.printf("%s => %s%n", key, value));
+
+        scan.close();
     }
 }
