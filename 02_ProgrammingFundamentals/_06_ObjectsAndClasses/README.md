@@ -1,1 +1,5 @@
-# Objects and Classes - More Exercises
+# Objects and Classes:
+- Lecture
+- Exercise
+- More Exercises
+
