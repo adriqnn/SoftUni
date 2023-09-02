@@ -9,7 +9,7 @@ public class _02_MemoryGame {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input vale
+        // Read input values
         List<String> game = Arrays.stream(scan.nextLine().split(" ")).collect(Collectors.toList());
         String console = scan.nextLine();
 
