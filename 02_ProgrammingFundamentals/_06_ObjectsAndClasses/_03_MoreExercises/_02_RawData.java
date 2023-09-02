@@ -8,11 +8,16 @@ public class _02_RawData {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         int n = Integer.parseInt(scan.nextLine());
 
+        // Add variable
         List<Car> carList = new ArrayList<>();
+
+        // Create car database
         for (int i = 0; i < n; i++) {
             String[] console = scan.nextLine().split("\\s+");
+
             String model = console[0];
             int engineHP = Integer.parseInt(console[2]);
             String cargoType = console[4];
@@ -20,11 +25,15 @@ public class _02_RawData {
             double tire2Pressure = Double.parseDouble(console[7]);
             double tire3Pressure = Double.parseDouble(console[9]);
             double tire4Pressure = Double.parseDouble(console[11]);
-            Car newCar = new Car(model,engineHP,cargoType,tire1Pressure,tire2Pressure,tire3Pressure,tire4Pressure);
+
+            Car newCar = new Car(model, engineHP, cargoType, tire1Pressure, tire2Pressure, tire3Pressure, tire4Pressure);
+
             carList.add(newCar);
         }
+
         String cargo = scan.nextLine();
 
+        // Print result
         if(cargo.equals("fragile")){
             for (Car element: carList) {
                 if((element.getCargoType().equals(cargo)) && (element.getTire1Pressure() < 1 || element.getTire2Pressure() < 1) || element.getTire3Pressure() < 1 || element.getTire4Pressure() < 1){
@@ -38,8 +47,12 @@ public class _02_RawData {
                 }
             }
         }
+
+        scan.close();
     }
 }
+
+// Create practice Car class
 class Car{
     private String model;
     private int engineHP;
@@ -58,25 +71,33 @@ class Car{
         this.tire3Pressure = tire3Pressure;
         this.tire4Pressure = tire4Pressure;
     }
+
     public String getModel() {
         return model;
     }
+
     public int getEngineHP() {
         return engineHP;
     }
+
     public String getCargoType() {
         return cargoType;
     }
+
     public double getTire1Pressure() {
         return tire1Pressure;
     }
+
     public double getTire2Pressure() {
         return tire2Pressure;
     }
+
     public double getTire3Pressure() {
         return tire3Pressure;
     }
+
     public double getTire4Pressure() {
         return tire4Pressure;
     }
 }
+
