@@ -47,13 +47,13 @@ public class _01_ComputerStore1 {
                     "Price without taxes: %.2f$%n" +
                     "Taxes: %.2f$%n" +
                     "-----------%n" +
-                    "Total price: %.2f$",price-taxes,taxes,price);
+                    "Total price: %.2f$", price - taxes, taxes, price);
         }else{
             System.out.printf("Congratulations you've just bought a new computer!%n" +
                     "Price without taxes: %.2f$%n" +
                     "Taxes: %.2f$%n" +
                     "-----------%n" +
-                    "Total price: %.2f$",price-taxes,taxes,price*0.9);
+                    "Total price: %.2f$", price - taxes, taxes, price * 0.9);
         }
 
         scan.close();
