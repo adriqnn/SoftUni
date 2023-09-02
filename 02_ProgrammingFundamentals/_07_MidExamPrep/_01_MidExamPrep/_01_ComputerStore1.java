@@ -6,7 +6,7 @@ public class _01_ComputerStore1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input values
+        // Read input value
         String console = scan.nextLine();
 
         // Add variables
