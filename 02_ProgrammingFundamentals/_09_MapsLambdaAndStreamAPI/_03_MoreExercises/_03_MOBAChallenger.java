@@ -7,13 +7,18 @@ public class _03_MOBAChallenger {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         String input = scan.nextLine();
+
+        // Add variable
         Map<String, Map<String, Integer>> players = new HashMap<>();
 
+        // Create statistics for MOBA players
         while(!input.equals("Season end")){
 
             if(input.contains("->")){
                 String[] information = input.split(" -> ");
+
                 String player = information[0];
                 String position = information[1];
                 int skill = Integer.parseInt(information[2]);
@@ -21,6 +26,7 @@ public class _03_MOBAChallenger {
                 if(!players.containsKey(player)){
                     players.put(player, new HashMap<>());
                 }
+
                 if(!players.get(player).containsKey(position)){
                     players.get(player).put(position, skill);
                 }else{
@@ -28,8 +34,10 @@ public class _03_MOBAChallenger {
                         players.get(player).put(position, skill);
                     }
                 }
+
             }else{
                 String[] information = input.split(" vs ");
+
                 String player1 = information[0];
                 String player2 = information[1];
 
@@ -37,6 +45,7 @@ public class _03_MOBAChallenger {
                     if(!Collections.disjoint(players.get(player1).keySet(), players.get(player2).keySet())){
                         int playerOneScore = players.get(player1).values().stream().mapToInt(Integer::intValue).sum();
                         int playerTwoScore = players.get(player2).values().stream().mapToInt(Integer::intValue).sum();
+
                         if(playerOneScore > playerTwoScore){
                             players.remove(player2);
                         }else if(playerOneScore < playerTwoScore){
@@ -45,9 +54,11 @@ public class _03_MOBAChallenger {
                     }
                 }
             }
+
             input = scan.nextLine();
         }
 
+        // Sort by rating
         List<PLayer> playersNew = new ArrayList<>();
         players.entrySet().stream().forEach(e -> {
             PLayer pLayer = new PLayer(e.getKey(), 0);
@@ -59,14 +70,18 @@ public class _03_MOBAChallenger {
             playersNew.add(pLayer);
         });
 
+        // Print result
         playersNew.stream().sorted(Comparator.comparing(PLayer::getTotalPoints).reversed().thenComparing(PLayer::getName)).forEach(e -> {
             System.out.printf("%s: %d skill%n",e.getName(),e.getTotalPoints());
             String collect = e.getPositions().stream().sorted(Comparator.comparing(Position::getSkillPoints).reversed().thenComparing(Position::getName)).map(p -> String.format("- %s <::> %d", p.getName(), p.getSkillPoints())).collect(Collectors.joining("\n"));
             System.out.printf("%s%n",collect);
         });
+
+        scan.close();
     }
 }
 
+// Create practice Player class
 class PLayer{
     private String name;
     private int totalPoints;
@@ -106,6 +121,7 @@ class PLayer{
     }
 }
 
+// Create practice Position class
 class Position{
     private String name;
     private int skillPoints;
@@ -133,6 +149,5 @@ class Position{
         return this;
     }
 }
-
 
 
