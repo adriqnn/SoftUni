@@ -6,7 +6,7 @@ public class _03_ExtractFile {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input value
+        // Read input values
         String[] console = scan.nextLine().split("\\\\");
         
         // Add variable
