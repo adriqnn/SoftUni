@@ -7,10 +7,14 @@ public class _04_SnowWhite {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         String input = scan.nextLine();
+
+        // Add variables
         Map<String, Integer> dwarfs = new LinkedHashMap<>();
         Map<String, Integer> colorGroups = new LinkedHashMap<>();
 
+        // Create database for dwarfs
         while(!input.equals("Once upon a time")){
             String[] information = input.split(" <:> ");
 
@@ -34,6 +38,7 @@ public class _04_SnowWhite {
             input = scan.nextLine();
         }
 
+        // Print result
         dwarfs.entrySet().stream().sorted((pair1, pair2) -> {
             int sort = Integer.compare(pair2.getValue(), pair1.getValue());
             if (sort == 0) {
@@ -50,6 +55,8 @@ public class _04_SnowWhite {
             String[] print = pair.getKey().split(">>>>>");
             System.out.printf("(%s) %s <-> %d%n", print[1], print[0], pair.getValue());
         });
+        
+        scan.close();
     }
 }
 
