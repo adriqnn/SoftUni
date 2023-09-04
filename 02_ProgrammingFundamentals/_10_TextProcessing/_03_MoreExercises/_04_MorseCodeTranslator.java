@@ -8,12 +8,20 @@ import java.util.stream.Collectors;
 public class _04_MorseCodeTranslator {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        
+        // Read input value
         String code = scan.nextLine();
+        
+        // Add variable
         List<String> morseCode = Arrays.stream(code.split(" \\| ".trim())).collect(Collectors.toList());
+        
+        
         for (int i = 0; i < morseCode.size(); i++) {
             String[] actualDecode = morseCode.get(i).split("\\s+".trim());
+            
             for (int j = 0; j < actualDecode.length; j++) {
                 String thisPart = actualDecode[j].trim();
+                
                 switch (thisPart) {
                     case ".-":
                         System.out.print("A");
@@ -95,7 +103,11 @@ public class _04_MorseCodeTranslator {
                         break;
                 }
             }
+            
+            // Print result
             System.out.print(" ");
         }
+        
+        scan.close();
     }
 }
