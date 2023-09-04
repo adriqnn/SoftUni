@@ -6,30 +6,40 @@ public class _02_CharacterMultiplier {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input values
         String[] console = scan.nextLine().split("\\s+");
-        String one = console[0];
-        String two = console[1];
 
+        // Add variables
+        String firstWord = console[0];
+        String secondWord = console[1];
         int sum = 0;
-        if(one.length() > two.length()){
-            for (int i = 0; i < two.length(); i++) {
-                sum += one.charAt(i)*two.charAt(i);
+
+        // Multiply characters
+        if(firstWord.length() > secondWord.length()){
+            for (int i = 0; i < secondWord.length(); i++) {
+                sum += firstWord.charAt(i) * secondWord.charAt(i);
             }
-            for (int i = two.length(); i < one.length(); i++) {
-                sum += one.charAt(i);
+
+            for (int i = secondWord.length(); i < firstWord.length(); i++) {
+                sum += firstWord.charAt(i);
             }
-        }else if(one.length() < two.length()){
-            for (int i = 0; i < one.length(); i++) {
-                sum += one.charAt(i)*two.charAt(i);
+        }else if(firstWord.length() < secondWord.length()){
+            for (int i = 0; i < firstWord.length(); i++) {
+                sum += firstWord.charAt(i) * secondWord.charAt(i);
             }
-            for (int i = one.length(); i < two.length(); i++) {
-                sum += two.charAt(i);
+
+            for (int i = firstWord.length(); i < secondWord.length(); i++) {
+                sum += secondWord.charAt(i);
             }
         }else{
-            for (int i = 0; i < two.length(); i++) {
-                sum += one.charAt(i)*two.charAt(i);
+            for (int i = 0; i < secondWord.length(); i++) {
+                sum += firstWord.charAt(i) * secondWord.charAt(i);
             }
         }
+
+        // Print result
         System.out.println(sum);
+
+        scan.close();
     }
 }
