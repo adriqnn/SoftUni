@@ -6,11 +6,14 @@ public class _01_ValidUsernames {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input values
         String[] console = scan.nextLine().split(", ");
 
+        // Validate usernames
         for (int i = 0; i < console.length; i++) {
             if(console[i].length() >= 3 && console[i].length() <= 16){
                 boolean isValid = true;
+
                 for (int j = 0; j < console[i].length(); j++) {
                     char symbol = console[i].charAt(j);
                     if(Character.isLetterOrDigit(symbol) || symbol == '-' || symbol == '_' ){
@@ -19,10 +22,14 @@ public class _01_ValidUsernames {
                         isValid = false;
                     }
                 }
+                
                 if(isValid){
                     System.out.println(console[i]);
                 }
             }
         }
+        
+        scan.close();
     }
 }
+
