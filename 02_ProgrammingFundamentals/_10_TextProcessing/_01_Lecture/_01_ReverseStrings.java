@@ -6,12 +6,20 @@ public class _01_ReverseStrings {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        StringBuilder reverse = new StringBuilder(scan.nextLine());
-        while(!reverse.toString().equals("end")) {
-            String console = reverse.toString();
-            reverse.reverse();
-            System.out.printf("%s = %s%n", console, reverse);
-            reverse = new StringBuilder(scan.nextLine());
+        // Read input value
+        StringBuilder input = new StringBuilder(scan.nextLine());
+        
+        // Reverse strings
+        while(!input.toString().equals("end")) {
+            String original = input.toString();
+            input.reverse();
+            
+            // Print result
+            System.out.printf("%s = %s%n", original, input);
+            
+            input = new StringBuilder(scan.nextLine());
         }
+        
+        scan.close();
     }
 }
