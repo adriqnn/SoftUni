@@ -19,14 +19,14 @@ public class _02_WordSynonyms {
 
             if (!synonymDictionary.containsKey(word)){
                 List<String> synonymForCurrentWord = new ArrayList<>();
-                
+
                 synonymForCurrentWord.add(synonym);
                 synonymDictionary.put(word, synonymForCurrentWord);
             }else {
                 List<String> synonymsForCurrentWord = synonymDictionary.get(word);
-                
+
                 synonymsForCurrentWord.add(synonym);
-                synonymDictionary.put(word,synonymsForCurrentWord);
+                synonymDictionary.put(word, synonymsForCurrentWord);
             }
         }
 
@@ -34,7 +34,8 @@ public class _02_WordSynonyms {
         for(Map.Entry<String, List<String>> wordEntry : synonymDictionary.entrySet()){
             String currentWord = wordEntry.getKey();
             List<String> synonymsForCurrentWord = wordEntry.getValue();
-            System.out.printf("%s - %s%n", currentWord,String.join(", ",synonymsForCurrentWord));
+            
+            System.out.printf("%s - %s%n", currentWord, String.join(", ", synonymsForCurrentWord));
         }
 
         scan.close();
