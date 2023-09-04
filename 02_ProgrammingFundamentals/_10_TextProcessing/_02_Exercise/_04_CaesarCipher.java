@@ -9,8 +9,10 @@ public class _04_CaesarCipher {
         // Read input value
         String console = scan.nextLine();
 
-        // Encrypt the message
+        // Add variable
         StringBuilder encrypt = new StringBuilder();
+
+        // Encrypt the message
         for (int i = 0; i < console.length(); i++) {
             char symbol = (char) (console.charAt(i) + 3);
 
@@ -19,5 +21,7 @@ public class _04_CaesarCipher {
 
         // Print result
         System.out.println(encrypt);
+
+        scan.close();
     }
 }
