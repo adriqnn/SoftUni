@@ -18,7 +18,7 @@ public class _01_CountCharsInAString {
         for (int i = 0; i < text.length(); i++) {
             char currentSymbol = text.charAt(i);
 
-            if (currentSymbol==' '){
+            if (currentSymbol == ' '){
                 continue;
             }
 
@@ -26,8 +26,8 @@ public class _01_CountCharsInAString {
                 lettersCount.put(currentSymbol, 1);
             }else{
                 int currentCount = lettersCount.get(currentSymbol);
-                currentCount = currentCount+1;
-                lettersCount.put(currentSymbol,currentCount);
+                currentCount = currentCount + 1;
+                lettersCount.put(currentSymbol, currentCount);
             }
         }
 
