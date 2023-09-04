@@ -6,9 +6,13 @@ public class _06_StudentAcademy {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         int inputNumber = Integer.parseInt(scan.nextLine());
+        
+        // Add variable
         Map<String, List<Double>> students = new LinkedHashMap<>();
 
+        // Create Student stats
         for (int i = 0; i < inputNumber; i++) {
             String name = scan.nextLine();
             Double grade = Double.parseDouble(scan.nextLine());
@@ -19,6 +23,7 @@ public class _06_StudentAcademy {
             students.get(name).add(grade);
         }
 
+        // Print result
         students
                 .entrySet()
                 .stream()
@@ -26,6 +31,8 @@ public class _06_StudentAcademy {
                     System.out.printf("%s -> %.2f%n", e.getKey(), e.getValue().stream().mapToDouble(Double::doubleValue).sum()/e.getValue().size());
                 });
 
+        scan.close();
+        
 //        List<String> output = students
 //                .entrySet()
 //                .stream()
