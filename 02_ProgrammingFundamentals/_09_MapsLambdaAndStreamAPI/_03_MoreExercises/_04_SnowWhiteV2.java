@@ -7,10 +7,12 @@ public class _04_SnowWhiteV2 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Add variables
         String input;
         Map<String, Integer> dwarfs = new LinkedHashMap<>();
         Map<String, Integer> colorGroups = new LinkedHashMap<>();
 
+        // Read input values and create database for dwarfs
         while(!"Once upon a time".equals(input = scan.nextLine())){
             String[] information = input.split(" <:> ");
 
@@ -40,13 +42,17 @@ public class _04_SnowWhiteV2 {
             unorderedDwarfs.add(new Dwarf(name, color, value, colorGroup));
         });
 
+        // Print result
         System.out.println(unorderedDwarfs.stream().sorted(Comparator.comparing(Dwarf::getPhysics).reversed().thenComparing(Dwarf::getColorGrp, Comparator.reverseOrder()))
                 .map(e -> String.format("(%s) %s <-> %d", e.getColor(), e.getName(), e.getPhysics())).collect(Collectors.joining("\n")));
 
 
+        scan.close();
     }
 }
 
+
+// Create practice Dwarf class
 class Dwarf{
     private String name;
     private String color;
