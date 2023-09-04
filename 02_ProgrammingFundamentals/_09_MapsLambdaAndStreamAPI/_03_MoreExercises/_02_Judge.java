@@ -11,12 +11,17 @@ public class _02_Judge {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         String input = scan.nextLine();
+
+        // Add variables
         Map<String, List<String>> contests = new LinkedHashMap<>();
         Map<String, Map<String, Integer>> students = new HashMap<>();
 
+        // Create student's score system and db
         while (!input.equals("no more time")) {
             String[] information = input.split(" -> ");
+            
             String username = information[0];
             String contest = information[1];
             int points = Integer.parseInt(information[2]);
@@ -48,8 +53,8 @@ public class _02_Judge {
 
         String collect = contests.entrySet().stream().map(contest -> {
             String firstLine = String.format("%s: %d participants%n", contest.getKey(), contest.getValue().size());
+            
             List<String> secondLine = new ArrayList<>();
-
             List<String> participants = contest.getValue();
             Map<String, Integer> participantsResults = new HashMap<>();
 
@@ -66,7 +71,7 @@ public class _02_Judge {
             List<Student> orderedStudents = unorderedStudents.stream().sorted(Comparator.comparing(Student::getScore).reversed().thenComparing(Student::getName)).collect(Collectors.toList());
 
             for (int i = 0; i < orderedStudents.size(); i++) {
-                String format = String.format("%d. %s <::> %d", i+1, orderedStudents.get(i).getName(), orderedStudents.get(i).getScore());
+                String format = String.format("%d. %s <::> %d", i + 1, orderedStudents.get(i).getName(), orderedStudents.get(i).getScore());
                 secondLine.add(format);
             }
 
@@ -83,15 +88,19 @@ public class _02_Judge {
 
         List<Student> orderedFinalScores = finalScores.stream().sorted(Comparator.comparing(Student::getScore).reversed().thenComparing(Student::getName)).collect(Collectors.toList());
         List<String> finalLines = new ArrayList<>();
+        
         for (int i = 0; i < orderedFinalScores.size(); i++) {
             String format = String.format("%d. %s -> %d", i+1, orderedFinalScores.get(i).getName(), orderedFinalScores.get(i).getScore());
             finalLines.add(format);
         }
 
 
+        // Print result
         System.out.println(collect);
         System.out.println("Individual standings:");
         System.out.println(finalLines.stream().collect(Collectors.joining("\n")));
+        
+        scan.close();
     }
 }
 
@@ -103,6 +112,8 @@ public class _02_Judge {
 //            participantsResults.entrySet().stream().sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))
 //                    .sorted(Comparator.comparing(Map.Entry::getKey).reversed()).forEach(e -> orderedMap.put(e.getKey(), e.getValue()));
 
+
+// Create practice Student class
 class Student {
     private String name;
     private int score;
