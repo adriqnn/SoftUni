@@ -34,7 +34,7 @@ public class _08_CompanyUsers {
             String company = element.getKey();
             String ids = element.getValue().stream().map(string -> String.format("-- %s",string)).collect(Collectors.joining("\n"));
 
-            System.out.printf("%s%n%s%n",company,ids);
+            System.out.printf("%s%n%s%n", company, ids);
         });
 
         scan.close();
@@ -43,7 +43,7 @@ public class _08_CompanyUsers {
 //            String company = element.getKey();
 //            String ids = element.getValue().stream().sorted().map(string -> String.format("-- %s",string)).collect(Collectors.joining("\n"));
 //
-//            System.out.printf("%s%n%s%n",company,ids);
+//            System.out.printf("%s%n%s%n", company, ids);
 //        });
 
 
@@ -51,7 +51,8 @@ public class _08_CompanyUsers {
 //            String company = element.getKey();
 //            String ids = element.getValue().stream().sorted(String::compareTo).map(string -> String.format("-- %s",string)).collect(Collectors.joining("\n"));
 //
-//            System.out.printf("%s%n%s%n",company,ids);
+//            System.out.printf("%s%n%s%n", company, ids);
 //        });
     }
 }
+
