@@ -8,7 +8,7 @@ public class _04_SoftUniParking {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input values
+        // Read input value
         int numberOfCommands = Integer.parseInt(scan.nextLine());
 
         // Add variable
