@@ -97,7 +97,8 @@ public class _03_HeroesOfCodeAndLogicVII {
 
                     break;
             }
-            command =scan.nextLine();
+            
+            command = scan.nextLine();
         }
 
         // Print result
