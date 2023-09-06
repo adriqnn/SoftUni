@@ -34,7 +34,7 @@ public class _02_FancyBarcodes {
                 if (group.toString().equals("")){
                     System.out.println("Product group: 00");
                 }else{
-                    System.out.printf("Product group: %s%n",group);
+                    System.out.printf("Product group: %s%n", group);
                 }
             }else{
                 System.out.println("Invalid barcode");
