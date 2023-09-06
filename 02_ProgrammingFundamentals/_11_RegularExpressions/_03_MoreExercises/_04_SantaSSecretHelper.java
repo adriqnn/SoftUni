@@ -8,9 +8,11 @@ public class _04_SantaSSecretHelper {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input values
         int subtractNumber = Integer.parseInt(scan.nextLine());
         String input = scan.nextLine();
 
+        // Read the message and decipher
         while(!input.equals("end")){
 
             StringBuilder message = new StringBuilder();
@@ -28,7 +30,10 @@ public class _04_SantaSSecretHelper {
                     System.out.println(decodeMatcher.group("name"));
                 }
             }
+            
             input = scan.nextLine();
         }
+        
+        scan.close();
     }
 }
