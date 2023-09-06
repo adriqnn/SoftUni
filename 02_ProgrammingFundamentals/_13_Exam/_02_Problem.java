@@ -20,7 +20,8 @@ public class _02_Problem {
             String console = scan.nextLine();
             
             Matcher matcher = pattern.matcher(console);
-            
+
+            // Print result
             if(matcher.find()){
                 String one = matcher.group("grp2");
                 String two = matcher.group("grp3");
