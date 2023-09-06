@@ -27,10 +27,12 @@ public class _02_MirrorWorlds {
             countPairs++;
             String first = matcher.group("word1");
             String second = matcher.group("word2");
+            
             StringBuilder match = new StringBuilder();
             for (int i = second.length()-1; i >= 0; i--) {
                 match.append(second.charAt(i));
             }
+            
             if(match.toString().equals(first)){
                 countMirrorWords++;
                 mirrors.add(first + " <=> " + second);
