@@ -20,11 +20,11 @@ public class _03_PlantDiscovery {
 
             String plantName = plantParts[0];
             int plantRarity = Integer.parseInt(plantParts[1]);
-            
+
             PlantData newPlant = new PlantData(new ArrayList<>(), plantRarity);
             currentPlants.put(plantName, newPlant);
         }
-        
+
         String command = scan.nextLine();
 
         // Create plant data
@@ -56,7 +56,6 @@ public class _03_PlantDiscovery {
                     System.out.println("error");
                     break;
             }
-            
             command = scan.nextLine();
         }
 
@@ -64,14 +63,14 @@ public class _03_PlantDiscovery {
         System.out.println("Plants for the exhibition:");
         currentPlants.entrySet().stream().sorted((p1,p2) -> {
             int result = Integer.compare(p2.getValue().getRarity(), p1.getValue().getRarity());
-            
+
             if (result == 0){
                 result = Double.compare(p2.getValue().getAverageRating(), p1.getValue().getAverageRating());
             }
-            
+
             return result;
 
-        }).forEach(p -> System.out.printf("- %s; Rarity: %d; Rating: %.2f%n", p.getKey(),p.getValue().getRarity(),p.getValue().getAverageRating()));
+        }).forEach(p -> System.out.printf("- %s; Rarity: %d; Rating: %.2f%n", p.getKey(), p.getValue().getRarity(), p.getValue().getAverageRating()));
 
         scan.close();
     }
