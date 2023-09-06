@@ -9,15 +9,18 @@ public class _02_RageQuit {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        Set<String> unique = new TreeSet<>();
+        // Read input value
         String input = scan.nextLine();
+
+        // Add variables
+        Set<String> unique = new TreeSet<>();
+        StringBuilder result = new StringBuilder();
 
         String regexInput = "(?<match>(?<string>[^0-9]+)(?<number>[0-9]+))";
         Pattern patternInput = Pattern.compile(regexInput);
         Matcher matcherInput = patternInput.matcher(input);
 
-        StringBuilder result = new StringBuilder();
-
+        // Decipher the message
         while (matcherInput.find()){
             String stringType = matcherInput.group("string");
             int times = Integer.parseInt(matcherInput.group("number"));
@@ -25,6 +28,7 @@ public class _02_RageQuit {
             for (int i = 0; i < times; i++) {
                 result.append(stringType.toUpperCase());
             }
+
             for (int i = 0; i < stringType.length(); i++) {
                 unique.add((stringType.charAt(i) + "").toUpperCase());
             }
@@ -36,10 +40,14 @@ public class _02_RageQuit {
 //        Set<String> collect = result.chars().distinct().mapToObj(e -> Character.toString((char) e)).collect(Collectors.toSet());
 //        System.out.println(collect.stream().collect(Collectors.joining("")));
 
-        System.out.println(unique.size());
+        // Print result
         System.out.printf("Unique symbols used: %d%n", result.chars().distinct().count());
         System.out.println(result);
-        char e = 'C';
-        System.out.println((e+"").toUpperCase());
+
+//        System.out.println(unique.size());
+//        char e = 'C';
+//        System.out.println((e + "").toUpperCase());
+
+        scan.close();
     }
 }
