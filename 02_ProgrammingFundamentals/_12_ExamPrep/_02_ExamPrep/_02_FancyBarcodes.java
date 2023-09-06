@@ -15,7 +15,7 @@ public class _02_FancyBarcodes {
         String regexBarcodes = "@#+(?<group2>[A-Z][A-Za-z0-9]{4,}[A-Z])@#+";
         Pattern patternBarcodes = Pattern.compile(regexBarcodes);
 
-        // Read barcodes
+        // Read barcodes and print result
         for (int i = 1; i <= n; i++) {
             String console = scan.next();
             Matcher matcherBarcodes = patternBarcodes.matcher(console);
