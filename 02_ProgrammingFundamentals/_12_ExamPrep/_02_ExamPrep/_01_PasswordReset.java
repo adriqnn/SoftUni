@@ -59,7 +59,7 @@ public class _01_PasswordReset {
             command = scan.nextLine();
         }
 
-        // Print result
+        // Print result 
         System.out.printf("Your password is: %s", console);
 
         scan.close();
