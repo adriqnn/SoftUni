@@ -14,6 +14,8 @@ public class _02_SimpleCalculator {
         // Add variables
         ArrayDeque<String> stack = new ArrayDeque<>();
         Collections.addAll(stack,tokens);
+
+        // Read array with for loop
         /*String[] input = scan.nextLine().split("\\s+");
         for (String s : input) {
             stack.push(s);
