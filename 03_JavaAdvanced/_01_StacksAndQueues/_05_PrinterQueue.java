@@ -7,8 +7,13 @@ import java.util.stream.Collectors;
 public class _05_PrinterQueue {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        ArrayDeque<String> queue = new ArrayDeque<>();
+        
+        // Read input value
         String task = scan.nextLine();
+        
+        // Add variable
+        ArrayDeque<String> queue = new ArrayDeque<>();
+        
         while(!task.equals("print")){
             if(task.equals("cancel")){
                 if(queue.isEmpty()){
@@ -20,8 +25,10 @@ public class _05_PrinterQueue {
             }else{
                 queue.offer(task);
             }
+            
             task = scan.nextLine();
         }
+        
         /*for (String file : queue) {
             System.out.println(file);
         }*/
@@ -34,6 +41,9 @@ public class _05_PrinterQueue {
             System.out.println(queue.poll());
         }*/
 
+        // Print result
         System.out.println(queue.stream().collect(Collectors.joining(System.lineSeparator())));
+        
+        scan.close();
     }
 }
