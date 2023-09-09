@@ -48,11 +48,13 @@ public class _07_MathPotatoV2 {
         if (cycle <= 1){
             return false;
         }
+        
         for (int i = 2; i < cycle; i++) {
             if(cycle%i == 0){
                 return false;
             }
         }
+        
         return true;
     }
 }
