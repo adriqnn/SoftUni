@@ -1,6 +1,7 @@
 package _03_JavaAdvanced._01_StacksAndQueues;
 
 import java.util.ArrayDeque;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class _06_HotPotato {
@@ -22,7 +23,7 @@ public class _06_HotPotato {
         // Play the game
         while(queueOfPlayers.size() > 1){
             for (int i = 1; i < turns; i++) {
-                queueOfPlayers.offer(queueOfPlayers.poll());
+                queueOfPlayers.offer(Objects.requireNonNull(queueOfPlayers.poll()));
             }
 
             System.out.println("Removed " + queueOfPlayers.poll());
