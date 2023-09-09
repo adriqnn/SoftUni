@@ -12,7 +12,7 @@ public class _07_MathPotato {
         String[] players = scan.nextLine().split("\\s+");
         int turns = Integer.parseInt(scan.nextLine());
 
-        // Add variables
+        // Add variable
         ArrayDeque<String> queueOfPlayers = new ArrayDeque<>();
 
         // Create queue
