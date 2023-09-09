@@ -13,7 +13,8 @@ public class _05_PrinterQueue {
         
         // Add variable
         ArrayDeque<String> queue = new ArrayDeque<>();
-        
+
+        // Create printer queue
         while(!task.equals("print")){
             if(task.equals("cancel")){
                 if(queue.isEmpty()){
