@@ -1,5 +1,6 @@
 package _03_JavaAdvanced._01_StacksAndQueues;
 
+
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
@@ -8,36 +9,36 @@ public class _07_MathPotatoV2 {
         Scanner scan = new Scanner(System.in);
 
         // Read input values
-        String[] input = scan.nextLine().split("\\s+");
-        int n = Integer.parseInt(scan.nextLine());
+        String[] players = scan.nextLine().split("\\s+");
+        int turns = Integer.parseInt(scan.nextLine());
 
-        // Add variables
-        PriorityQueue<String> players = new PriorityQueue<>();
+        // Add variable
+        PriorityQueue<String> queueOfPlayers = new PriorityQueue<>();
 
         // Create queue
-        for (String child : input) {
-            players.offer(child);
+        for (String child : players) {
+            queueOfPlayers.offer(child);
         }
 
         int cycle = 1;
 
         // Play the game
-        while(players.size() > 1){
-            for (int i = 1; i < n; i++) {
-                players.offer(players.poll());
+        while(queueOfPlayers.size() > 1){
+            for (int i = 1; i < turns; i++) {
+                queueOfPlayers.offer(queueOfPlayers.poll());
             }
 
             if(isPrime(cycle)){
-                System.out.println("Prime " + players.peek());
+                System.out.println("Prime " + queueOfPlayers.peek());
             }else {
-                System.out.println("Removed " + players.poll());
+                System.out.println("Removed " + queueOfPlayers.poll());
             }
 
             cycle ++;
         }
 
         // Print result
-        System.out.println("Last is " + players.poll());
+        System.out.println("Last is " + queueOfPlayers.poll());
 
         scan.close();
     }
