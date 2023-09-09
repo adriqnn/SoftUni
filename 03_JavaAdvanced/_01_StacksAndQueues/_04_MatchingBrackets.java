@@ -17,16 +17,17 @@ public class _04_MatchingBrackets {
         // Determine if the brackets are matching
         for (int i = 0; i < expression.length(); i++) {
             char current = expression.charAt(i);
-            
+
             if(current == '('){
                 stack.push(i);
             }else if (current == ')'){
                 int begin = stack.pop();
-                
+
+                // Print result
                 System.out.println(expression.substring(begin, i+1));
             }
         }
-        
+
         scan.close();
     }
 }
