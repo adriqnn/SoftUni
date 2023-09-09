@@ -7,44 +7,44 @@ import java.util.stream.Collectors;
 public class _05_PrinterQueue {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        
+
         // Read input value
-        String task = scan.nextLine();
-        
+        String tasks = scan.nextLine();
+
         // Add variable
-        ArrayDeque<String> queue = new ArrayDeque<>();
+        ArrayDeque<String> queueOfPrinterTasks = new ArrayDeque<>();
 
         // Create printer queue
-        while(!task.equals("print")){
-            if(task.equals("cancel")){
-                if(queue.isEmpty()){
+        while(!tasks.equals("print")){
+            if(tasks.equals("cancel")){
+                if(queueOfPrinterTasks.isEmpty()){
                     System.out.println("Printer is on standby");
                 }else{
-                    String canceledTask = queue.poll();
+                    String canceledTask = queueOfPrinterTasks.poll();
                     System.out.println("Canceled " + canceledTask);
                 }
             }else{
-                queue.offer(task);
+                queueOfPrinterTasks.offer(tasks);
             }
-            
-            task = scan.nextLine();
+
+            tasks = scan.nextLine();
         }
-        
-        /*for (String file : queue) {
+
+        /*for (String file : queueOfPrinterTasks) {
             System.out.println(file);
         }*/
 
-        //queue.stream().map(String::valueOf).collect(Collectors.joining(", "))
+        //queueOfPrinterTasks.stream().map(String::valueOf).collect(Collectors.joining(", "))
 
-        //queue.stream().collect(Collectors.joining(", "));
+        //queueOfPrinterTasks.stream().collect(Collectors.joining(", "));
 
-        /*while(!queue.isEmpty()){
-            System.out.println(queue.poll());
+        /*while(!queueOfPrinterTasks.isEmpty()){
+            System.out.println(queueOfPrinterTasks.poll());
         }*/
 
         // Print result
-        System.out.println(queue.stream().collect(Collectors.joining(System.lineSeparator())));
-        
+        System.out.println(queueOfPrinterTasks.stream().collect(Collectors.joining(System.lineSeparator())));
+
         scan.close();
     }
 }
