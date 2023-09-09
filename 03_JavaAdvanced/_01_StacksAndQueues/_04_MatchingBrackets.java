@@ -11,16 +11,16 @@ public class _04_MatchingBrackets {
         String expression = scan.nextLine();
 
         // Add variable
-        ArrayDeque<Integer> stack = new ArrayDeque<>();
+        ArrayDeque<Integer> stackOfBrackets = new ArrayDeque<>();
 
         // Determine if the brackets are matching
         for (int i = 0; i < expression.length(); i++) {
             char current = expression.charAt(i);
 
             if(current == '('){
-                stack.push(i);
+                stackOfBrackets.push(i);
             }else if (current == ')'){
-                int begin = stack.pop();
+                int begin = stackOfBrackets.pop();
 
                 // Print result
                 System.out.println(expression.substring(begin, i+1));
