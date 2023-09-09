@@ -9,28 +9,28 @@ public class _06_HotPotato {
 
         // Read input values
         String[] players = scan.nextLine().split("\\s+");
-        int n = Integer.parseInt(scan.nextLine());
+        int turns = Integer.parseInt(scan.nextLine());
 
         // Add variables
-        ArrayDeque<String> queue = new ArrayDeque<>();
+        ArrayDeque<String> queueOfPlayers = new ArrayDeque<>();
 
         // Create queue
         for (String e : players) {
-            queue.offer(e);
+            queueOfPlayers.offer(e);
         }
 
         // Play the game
-        while(queue.size() > 1){
-            for (int i = 1; i < n; i++) {
-                queue.offer(queue.poll());
+        while(queueOfPlayers.size() > 1){
+            for (int i = 1; i < turns; i++) {
+                queueOfPlayers.offer(queueOfPlayers.poll());
             }
 
-            System.out.println("Removed " + queue.poll());
+            System.out.println("Removed " + queueOfPlayers.poll());
         }
 
         // Print result
-        System.out.println("Last is " + queue.poll());
-        
+        System.out.println("Last is " + queueOfPlayers.poll());
+
         scan.close();
     }
 }
