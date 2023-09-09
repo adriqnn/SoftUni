@@ -9,16 +9,16 @@ public class _01_ReverseNumbersWithAStack {
         Scanner scan = new Scanner(System.in);
 
         // Add variable
-        ArrayDeque<String> stack = new ArrayDeque<>();
-        
+        ArrayDeque<String> stackOfInputNumbers = new ArrayDeque<>();
+
         // Read input values
-        Arrays.stream(scan.nextLine().split("\\s+")).forEach(stack::push);
-        
+        Arrays.stream(scan.nextLine().split("\\s+")).forEach(stackOfInputNumbers::push);
+
         // Reverse numbers array
-        while(!stack.isEmpty()){
-            System.out.print(stack.pop() + " ");
+        while(!stackOfInputNumbers.isEmpty()){
+            System.out.print(stackOfInputNumbers.pop() + " ");
         }
-        
+
         scan.close();
     }
 }
