@@ -11,7 +11,7 @@ public class _01_ReverseNumbersWithAStack {
         // Add variable
         ArrayDeque<String> stack = new ArrayDeque<>();
         
-        // Read input value
+        // Read input values
         Arrays.stream(scan.nextLine().split("\\s+")).forEach(stack::push);
         
         // Reverse numbers array
