@@ -7,43 +7,43 @@ import java.util.Scanner;
 public class _02_SimpleCalculator {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        
+
         // Read input values
-        String[] tokens = scan.nextLine().split("\\s+");
-        
+        String[] inputExpression = scan.nextLine().split("\\s+");
+
         // Add variables
-        ArrayDeque<String> stack = new ArrayDeque<>();
-        Collections.addAll(stack,tokens);
+        ArrayDeque<String> inputExpressionValues = new ArrayDeque<>();
+        Collections.addAll(inputExpressionValues, inputExpression);
 
         // Read array with for loop
-        /*String[] input = scan.nextLine().split("\\s+");
-        for (String s : input) {
-            stack.push(s);
+        /*String[] inputExpression = scan.nextLine().split("\\s+");
+        for (String s : inputExpression) {
+            inputExpressionValues.push(s);
         }*/
 
         // Read array and push values to a deque
-        //Arrays.stream(scan.nextLine().split("\\s+")).forEach(stack::push);
+        //Arrays.stream(scan.nextLine().split("\\s+")).forEach(inputExpressionValues::push);
 
         //Read array and push values to a newly created deque
-        //Arrays.stream(scan.nextLine().split("\\s+")).collect(Collectors.toCollection(ArrayDeque::new)).forEach(stack::push);
-        
+        //Arrays.stream(scan.nextLine().split("\\s+")).collect(Collectors.toCollection(ArrayDeque::new)).forEach(inputExpressionValues::push);
+
         // Execute calculations
-        while (stack.size() > 1){
-            int first = Integer.valueOf(stack.pop());
-            String operation = stack.pop();
-            int second = Integer.valueOf(stack.pop());
-            
+        while (inputExpressionValues.size() > 1){
+            int firstValue = Integer.parseInt(inputExpressionValues.pop());
+            String operation = inputExpressionValues.pop();
+            int secondValue = Integer.parseInt(inputExpressionValues.pop());
+
             switch(operation){
-                case "+": stack.push(String.valueOf(first + second));
+                case "+": inputExpressionValues.push(String.valueOf(firstValue + secondValue));
                     break;
-                case "-": stack.push(String.valueOf(first - second));
+                case "-": inputExpressionValues.push(String.valueOf(firstValue - secondValue));
                     break;
             }
         }
-        
+
         // Print result
-        System.out.println(stack.pop());
-        
+        System.out.println(inputExpressionValues.pop());
+
         scan.close();
     }
 }
