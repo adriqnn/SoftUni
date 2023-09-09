@@ -13,7 +13,6 @@ public class _04_MatchingBrackets {
         // Add variable
         ArrayDeque<Integer> stack = new ArrayDeque<>();
 
-
         // Determine if the brackets are matching
         for (int i = 0; i < expression.length(); i++) {
             char current = expression.charAt(i);
