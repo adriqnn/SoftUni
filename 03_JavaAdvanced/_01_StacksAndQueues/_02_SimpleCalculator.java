@@ -11,7 +11,7 @@ public class _02_SimpleCalculator {
         // Read input values
         String[] inputExpression = scan.nextLine().split("\\s+");
 
-        // Add variables
+        // Add variable
         ArrayDeque<String> inputExpressionValues = new ArrayDeque<>();
         Collections.addAll(inputExpressionValues, inputExpression);
 
