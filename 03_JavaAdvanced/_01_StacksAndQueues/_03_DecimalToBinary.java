@@ -8,25 +8,25 @@ public class _03_DecimalToBinary {
         Scanner scan = new Scanner(System.in);
 
         // Read input value
-        int num = Integer.parseInt(scan.nextLine());
+        int number = Integer.parseInt(scan.nextLine());
 
         // Add variable
-        ArrayDeque<Integer> binary = new ArrayDeque<>();
+        ArrayDeque<Integer> binaryValue = new ArrayDeque<>();
 
-        if (num == 0){
+        if (number == 0){
             System.out.println(0);
             return;
         }
 
         // Convert decimal to binary
-        while (num != 0){
-            binary.push(num % 2);
-            num /= 2;
+        while (number != 0){
+            binaryValue.push(number % 2);
+            number /= 2;
         }
 
         // Print result
-        while(!binary.isEmpty()){
-            System.out.print(binary.pop());
+        while(!binaryValue.isEmpty()){
+            System.out.print(binaryValue.pop());
         }
 
         scan.close();
