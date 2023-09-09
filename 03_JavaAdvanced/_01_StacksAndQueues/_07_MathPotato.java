@@ -1,6 +1,7 @@
 package _03_JavaAdvanced._01_StacksAndQueues;
 
 import java.util.ArrayDeque;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class _07_MathPotato {
@@ -8,36 +9,36 @@ public class _07_MathPotato {
         Scanner scan = new Scanner(System.in);
 
         // Read input values
-        String[] input = scan.nextLine().split("\\s+");
-        int n = Integer.parseInt(scan.nextLine());
+        String[] players = scan.nextLine().split("\\s+");
+        int turns = Integer.parseInt(scan.nextLine());
 
         // Add variables
-        ArrayDeque<String> players = new ArrayDeque<>();
+        ArrayDeque<String> queueOfPlayers = new ArrayDeque<>();
 
         // Create queue
-        for (String child : input) {
-            players.offer(child);
+        for (String e : players) {
+            queueOfPlayers.offer(e);
         }
 
         int cycle = 1;
 
         // Play the game
-        while(players.size() > 1){
-            for (int i = 1; i < n; i++) {
-                players.offer(players.poll());
+        while(queueOfPlayers.size() > 1){
+            for (int i = 1; i < turns; i++) {
+                queueOfPlayers.offer(Objects.requireNonNull(queueOfPlayers.poll()));
             }
 
             if(isPrime(cycle)){
-                System.out.println("Prime " + players.peek());
+                System.out.println("Prime " + queueOfPlayers.peek());
             }else {
-                System.out.println("Removed " + players.poll());
+                System.out.println("Removed " + queueOfPlayers.poll());
             }
 
             cycle ++;
         }
 
         // Print result
-        System.out.println("Last is " + players.poll());
+        System.out.println("Last is " + queueOfPlayers.poll());
 
         scan.close();
     }
@@ -47,13 +48,11 @@ public class _07_MathPotato {
         if (cycle <= 1){
             return false;
         }
-        
         for (int i = 2; i < cycle; i++) {
             if(cycle%i == 0){
                 return false;
             }
         }
-        
         return true;
     }
 }
