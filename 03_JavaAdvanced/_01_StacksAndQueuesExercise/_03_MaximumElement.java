@@ -8,11 +8,19 @@ import java.util.Scanner;
 public class _03_MaximumElement {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+
+        // Read input value
         int n = Integer.parseInt(scan.nextLine());
+
+        // Add variable
         Deque<Long> stack = new ArrayDeque<>();
+
+        // Determine the max element in the stack
         for (int i = 0; i < n; i++) {
             String[] commandLine = scan.nextLine().split("\\s+");
+            
             String command = commandLine[0];
+            
             if(command.equals("1")){
                 stack.push(Long.parseLong(commandLine[1]));
             }else if(command.equals("2")){
@@ -29,5 +37,7 @@ public class _03_MaximumElement {
                 }
             }
         }
+
+        scan.close();
     }
 }
