@@ -7,24 +7,36 @@ import java.util.Scanner;
 public class _02_BasicStackOperationsV2 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        ArrayDeque<Integer> stack = new ArrayDeque<>();
+
+        // Read input values
         int n = scan.nextInt();
         int s = scan.nextInt();
         int x = scan.nextInt();
+
+        // Add variable
+        ArrayDeque<Integer> stackOfIntegers = new ArrayDeque<>();
+
+        // Populate the stack
         for (int i = 1; i <= n; i++) {
-            stack.push(scan.nextInt());
+            stackOfIntegers.push(scan.nextInt());
         }
+
+        // Pop s number of elements from the stack
         for (int i = 1; i <= s; i++) {
-            stack.pop();
+            stackOfIntegers.pop();
         }
-        if(stack.contains(x)){
+
+        // Print result
+        if(stackOfIntegers.contains(x)){
             System.out.println("true");
         }else{
-            if(!stack.isEmpty()){
-                System.out.println(Collections.min(stack));
+            if(!stackOfIntegers.isEmpty()){
+                System.out.println(Collections.min(stackOfIntegers));
             }else{
                 System.out.println("0");
             }
         }
+
+        scan.close();
     }
 }
