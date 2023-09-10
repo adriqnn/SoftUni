@@ -14,7 +14,7 @@ public class _01_ReverseNumbersWithAStack {
         // Read input values
         Arrays.stream(scan.nextLine().split("\\s+")).forEach(stackOfInputNumbers::push);
 
-        // Reverse numbers array
+        // Reverse numbers array and print result
         while(!stackOfInputNumbers.isEmpty()){
             System.out.print(stackOfInputNumbers.pop() + " ");
         }
