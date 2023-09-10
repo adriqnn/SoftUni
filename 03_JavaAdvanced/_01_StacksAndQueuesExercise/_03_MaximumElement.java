@@ -13,27 +13,27 @@ public class _03_MaximumElement {
         int n = Integer.parseInt(scan.nextLine());
 
         // Add variable
-        Deque<Long> stack = new ArrayDeque<>();
+        Deque<Long> stackOfIntegers = new ArrayDeque<>();
 
         // Determine the max element in the stack
         for (int i = 0; i < n; i++) {
             String[] commandLine = scan.nextLine().split("\\s+");
-            
+
             String command = commandLine[0];
-            
+
             if(command.equals("1")){
-                stack.push(Long.parseLong(commandLine[1]));
+                stackOfIntegers.push(Long.parseLong(commandLine[1]));
             }else if(command.equals("2")){
-                if(stack.isEmpty()){
+                if(stackOfIntegers.isEmpty()){
                     continue;
                 }else{
-                    stack.pop();
+                    stackOfIntegers.pop();
                 }
             }else if(command.equals("3")){
-                if(stack.isEmpty()){
+                if(stackOfIntegers.isEmpty()){
                     continue;
                 }else{
-                    System.out.println(Collections.max(stack));
+                    System.out.println(Collections.max(stackOfIntegers));
                 }
             }
         }
