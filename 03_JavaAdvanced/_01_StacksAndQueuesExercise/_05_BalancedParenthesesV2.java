@@ -32,18 +32,20 @@ public class _05_BalancedParenthesesV2 {
         return stack.isEmpty();
     }
 
+    // Method that determines if bracket is opening
     public static boolean isOpeningBracket(char c) {
         return c == '(' || c == '{' || c == '[';
     }
 
+    // Method that determine if bracket is closing
     public static boolean isClosingBracket(char c) {
         return c == ')' || c == '}' || c == ']';
     }
 
+    // Method that determines if brackets are matching
     public static boolean areMatchingBrackets(char open, char close) {
         return (open == '(' && close == ')') ||
                 (open == '{' && close == '}') ||
                 (open == '[' && close == ']');
     }
 }
-
