@@ -16,6 +16,7 @@ public class _05_BalancedParenthesesV2 {
         scan.close();
     }
 
+    // Method that determines if brackets are balanced
     public static boolean areParenthesesBalanced(String s) {
         ArrayDeque<Character> stack = new ArrayDeque<>();
 
@@ -49,3 +50,4 @@ public class _05_BalancedParenthesesV2 {
                 (open == '[' && close == ']');
     }
 }
+
