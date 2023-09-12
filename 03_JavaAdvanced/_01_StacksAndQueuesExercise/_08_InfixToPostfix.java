@@ -7,8 +7,14 @@ import java.util.Scanner;
 public class _08_InfixToPostfix {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+
+        // Read input values
         String[] tokens = scan.nextLine().split(" ");
+
+        // Add variable
         Deque<String> tokensStack = new ArrayDeque<>();
+
+        // Run through the input and determine the result
         for (int i = 0; i < tokens.length; i++) {
             if(!tokens[i].equals("+") && !tokens[i].equals("-") && !tokens[i].equals("*") && !tokens[i].equals("/") && !tokens[i].equals("(") && !tokens[i].equals(")")){
                 System.out.print(tokens[i] + " ");
@@ -17,35 +23,32 @@ public class _08_InfixToPostfix {
                     if (tokens[i].equals("+")) {
                         if (tokensStack.peek().equals("+") || tokensStack.peek().equals("-")) {
                             System.out.print(tokensStack.pop() + " ");
-                            tokensStack.push(tokens[i]);
-                        } else if (tokensStack.peek().equals("*") || tokensStack.peek().equals("/") || tokensStack.peek().equals("(")) {
-                            tokensStack.push(tokens[i]);
-                        }else{
-                            tokensStack.push(tokens[i]);
                         }
+
+                        tokensStack.push(tokens[i]);
+
                     }else if (tokens[i].equals("-")) {
                         if(tokensStack.peek().equals("+") || tokensStack.peek().equals("-")) {
                             System.out.print(tokensStack.pop() + " ");
-                            tokensStack.push(tokens[i]);
-                        }else if(tokensStack.peek().equals("*") || tokensStack.peek().equals("/") || tokensStack.peek().equals("(")) {
-                            tokensStack.push(tokens[i]);
-                        }else {
-                            tokensStack.push(tokens[i]);
+
                         }
+
+                        tokensStack.push(tokens[i]);
+
                     }else if(tokens[i].equals("*")) {
                         if (tokensStack.peek().equals("*") || tokensStack.peek().equals("/")) {
                             System.out.print(tokensStack.pop() + " ");
-                            tokensStack.push(tokens[i]);
-                        } else {
-                            tokensStack.push(tokens[i]);
                         }
+
+                        tokensStack.push(tokens[i]);
+
                     }else if(tokens[i].equals("/")) {
                         if (tokensStack.peek().equals("*") || tokensStack.peek().equals("/")) {
                             System.out.print(tokensStack.pop() + " ");
-                            tokensStack.push(tokens[i]);
-                        } else {
-                            tokensStack.push(tokens[i]);
                         }
+
+                        tokensStack.push(tokens[i]);
+
                     }else if (tokens[i].equals("(")) {
                         tokensStack.push(tokens[i]);
                     }else if (tokens[i].equals(")")) {
@@ -66,6 +69,8 @@ public class _08_InfixToPostfix {
                 }
             }
         }
+
+        // Print result
         while(!tokensStack.isEmpty()) {
             if(tokensStack.peek().equals("(")){
                 tokensStack.pop();
@@ -73,6 +78,8 @@ public class _08_InfixToPostfix {
                 System.out.print(tokensStack.pop() + " ");
             }
         }
+
+        scan.close();
     }
 }
 /*for (String element: stringArray) {
