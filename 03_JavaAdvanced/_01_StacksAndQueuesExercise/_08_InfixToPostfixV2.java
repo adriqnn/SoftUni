@@ -16,24 +16,33 @@ public class _08_InfixToPostfixV2 {
 
         for (String token : tokens) {
             if (isOperand(token)) {
+                
                 // Operand, output directly
                 System.out.print(token + " ");
+                
             } else if (token.equals("(")) {
+                
                 // Left parenthesis, push onto stack
                 operatorStack.push(token);
+                
             } else if (token.equals(")")) {
+                
                 // Right parenthesis, pop and output operators until left parenthesis
                 while (!operatorStack.isEmpty() && !operatorStack.peek().equals("(")) {
                     System.out.print(operatorStack.pop() + " ");
                 }
+                
                 if (!operatorStack.isEmpty() && operatorStack.peek().equals("(")) {
                     operatorStack.pop(); // Remove the left parenthesis
                 }
+                
             } else {
+                
                 // Operator
                 while (!operatorStack.isEmpty() && precedence(getOperatorType(token)) <= precedence(getOperatorType(operatorStack.peek()))) {
                     System.out.print(operatorStack.pop() + " ");
                 }
+                
                 operatorStack.push(token);
             }
         }
@@ -42,6 +51,8 @@ public class _08_InfixToPostfixV2 {
         while (!operatorStack.isEmpty()) {
             System.out.print(operatorStack.pop() + " ");
         }
+        
+        scan.close();
     }
 
     private static boolean isOperand(String token) {
@@ -71,3 +82,4 @@ public class _08_InfixToPostfixV2 {
         return -1; // Handle invalid operatorType gracefully
     }
 }
+
