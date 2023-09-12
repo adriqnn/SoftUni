@@ -42,6 +42,7 @@ public class _09_PoisonousPlants {
             }
         }
 
+        // Print result
         System.out.println(days);
 
         scan.close();
