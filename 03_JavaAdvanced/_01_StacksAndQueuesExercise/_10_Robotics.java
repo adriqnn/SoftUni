@@ -12,13 +12,14 @@ public class _10_Robotics {
         int[] time = Arrays.stream(scan.nextLine().split(":")).mapToInt(Integer::parseInt).toArray();
 
         // Add variables
-        Map<String,List<Integer>> robotsMapAndWork = new LinkedHashMap<>();
+        Map<String, List<Integer>> robotsMapAndWork = new LinkedHashMap<>();
         ArrayDeque<String> productionLine = new ArrayDeque<>();
 
         // Read additional details
         String console = scan.nextLine();
         while(!console.equals("End")){
             productionLine.offer(console);
+            
             console = scan.nextLine();
         }
 
@@ -26,31 +27,36 @@ public class _10_Robotics {
 
         for (int i = 0; i < robots.size(); i++) {
             String[] robotSpecs = robots.get(i).split("-");
-            
-            robotsMapAndWork.put(robotSpecs[0],new ArrayList<>());
+
+            robotsMapAndWork.put(robotSpecs[0], new ArrayList<>());
             robotsMapAndWork.get(robotSpecs[0]).add(Integer.parseInt(robotSpecs[1]));
             robotsMapAndWork.get(robotSpecs[0]).add(0);
-            
-            robots.set(i,robotSpecs[0]);
+
+            robots.set(i, robotSpecs[0]);
         }
 
-        // Robotics factory
+        // Robotics factory production line
         while(!productionLine.isEmpty()){
             timeInSeconds++;
+            
             for (int i = 0; i < robotsMapAndWork.size(); i++) {
                 if(robotsMapAndWork.get(robots.get(i)).get(1) > 0){
-                    robotsMapAndWork.get(robots.get(i)).set(1,(robotsMapAndWork.get(robots.get(i)).get(1))-1);
+                    robotsMapAndWork.get(robots.get(i)).set(1, (robotsMapAndWork.get(robots.get(i)).get(1))-1);
                 }
             }
+            
             int size = productionLine.size();
+            
             for (int i = 0; i < robotsMapAndWork.size(); i++) {
                 if(robotsMapAndWork.get(robots.get(i)).get(1) == 0){
                     robotsMapAndWork.get(robots.get(i)).set(1,robotsMapAndWork.get(robots.get(i)).get(0));
                     int[] getTime = convertTime(timeInSeconds);
-                    System.out.printf("%s - %s [%02d:%02d:%02d]%n",robots.get(i),productionLine.poll(),getTime[0],getTime[1],getTime[2]);
+                    
+                    System.out.printf("%s - %s [%02d:%02d:%02d]%n", robots.get(i), productionLine.poll(), getTime[0], getTime[1], getTime[2]);
                     break;
                 }
             }
+            
             if(size == productionLine.size()){
                 productionLine.offer(productionLine.poll());
             }
