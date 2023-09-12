@@ -24,37 +24,38 @@ public class _09_PoisonousPlantsV2 {
             plants[i] = Integer.parseInt(tokens[i]);
         }
 
+        // Determine the health of the plants
         int[] days = new int[n];
         for (int i = 0; i < n; i++) {
             int maxDays = 0;
-            
+
             while(!indexes.isEmpty() && plants[indexes.peek()] >= plants[i]){
                 maxDays = Math.max(maxDays, days[indexes.pop()]);
             }
-            
+
             if(!indexes.isEmpty()){
                 days[i] = maxDays + 1;
             }
-            
+
             indexes.push(i);
         }
-        
+
         // Print result
         System.out.println(getLast(days));
-        
+
         reader.close();
     }
-    
+
     // Method that determines the  last day
     private static int getLast(int[] days){
         int lastDay = 0;
-        
+
         for (int day : days) {
             if(day > lastDay) {
                 lastDay = day;
             }
         }
-        
+
         return lastDay;
     }
 }
