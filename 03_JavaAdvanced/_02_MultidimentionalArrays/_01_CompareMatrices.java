@@ -26,7 +26,7 @@ public class _01_CompareMatrices {
     }
 
     // Method that determines if inputs are equal
-    private static boolean areEqual(int[][] firstMatrix,int[][] secondMatrix){
+    private static boolean areEqual(int[][] firstMatrix, int[][] secondMatrix){
         if(firstMatrix.length != secondMatrix.length){
             return false;
         }
