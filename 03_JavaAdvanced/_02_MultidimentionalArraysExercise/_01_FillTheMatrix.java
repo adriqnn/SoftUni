@@ -32,7 +32,7 @@ public class _01_FillTheMatrix {
         int n = 1;
 
         for (int col = 0; col < matrix.length; col++) {
-            if(col%2 == 0){
+            if(col % 2 == 0){
                 for (int i = 0; i < matrix[col].length; i++) {
                     matrix[i][col] = n++;
                 }
