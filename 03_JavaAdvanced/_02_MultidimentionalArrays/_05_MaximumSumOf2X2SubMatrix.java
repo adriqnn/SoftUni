@@ -51,6 +51,7 @@ public class _05_MaximumSumOf2X2SubMatrix {
     // Method that reads the matrix
     public static int[][] readMatrix(int rows,Scanner scan,String splitPattern){
         int[][] matrix = new int[rows][];
+        
         for (int i = 0; i < rows; i++) {
             matrix[i] = Arrays.stream(scan.nextLine().split(splitPattern)).mapToInt(Integer::parseInt).toArray();
         }
