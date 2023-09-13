@@ -6,38 +6,56 @@ import java.util.Scanner;
 public class _04_MaximalSum {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String[] line = scan.nextLine().split("\\s+");
-        int rows = Integer.parseInt(line[0]);
-        int cols = Integer.parseInt(line[1]);
+
+        // Read input values
+        String[] inputLine = scan.nextLine().split("\\s+");
+
+        // Add variables and
+        int rows = Integer.parseInt(inputLine[0]);
+
         int [][] matrix = new int[rows][];
         int [][] maxMatrix = new int [3][3];
+
+        // Read the matrix
         for (int i = 0; i < rows; i++) {
             matrix[i] = Arrays.stream(scan.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
         }
-        int max = Integer.MIN_VALUE;
+
+        int maxSum = Integer.MIN_VALUE;
+
+        // Determine the matrix with max sum value
         for (int i = 0; i < matrix.length-2; i++) {
             for (int j = 0; j < matrix[i].length-2; j++) {
-                int sum = 0;
-                sum +=    matrix[i][j] + matrix[i][j+1] + matrix[i][j+2]
-                        + matrix[i+1][j] + matrix[i+1][j+1] + matrix[i+1][j+2]
-                        + matrix[i+2][j] + matrix[i+2][j+1] + matrix[i+2][j+2];
-                if (sum > max){
-                    max = sum;
-                    int[] yep1 = {matrix[i][j], matrix[i][j+1], matrix[i][j+2]};
-                    int[] yep2 = {matrix[i+1][j], matrix[i+1][j+1], matrix[i+1][j+2]};
-                    int[] yep3 = {matrix[i+2][j], matrix[i+2][j+1], matrix[i+2][j+2]};
-                    maxMatrix[0] =  yep1;
-                    maxMatrix[1] = yep2;
-                    maxMatrix[2] = yep3;
+                int currentSum = 0;
+
+                currentSum +=    matrix[i][j]   + matrix[i][j+1]   + matrix[i][j+2]
+                               + matrix[i+1][j] + matrix[i+1][j+1] + matrix[i+1][j+2]
+                               + matrix[i+2][j] + matrix[i+2][j+1] + matrix[i+2][j+2];
+
+                if (currentSum > maxSum){
+                    maxSum = currentSum;
+
+                    int[] firstRow = {matrix[i][j], matrix[i][j+1], matrix[i][j+2]};
+                    int[] secondRow = {matrix[i+1][j], matrix[i+1][j+1], matrix[i+1][j+2]};
+                    int[] thirdRow = {matrix[i+2][j], matrix[i+2][j+1], matrix[i+2][j+2]};
+
+                    maxMatrix[0] =  firstRow;
+                    maxMatrix[1] = secondRow;
+                    maxMatrix[2] = thirdRow;
                 }
             }
         }
-        System.out.println("Sum = " + max);
+
+        // Print result
+        System.out.println("Sum = " + maxSum);
         for (int i = 0; i < maxMatrix.length; i++) {
             for (int j = 0; j < maxMatrix[i].length; j++) {
                 System.out.print(maxMatrix[i][j] + " ");
             }
+
             System.out.println();
         }
+
+        scan.close();
     }
 }
