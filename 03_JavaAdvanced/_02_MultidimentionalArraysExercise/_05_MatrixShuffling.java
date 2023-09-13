@@ -51,6 +51,7 @@ public class _05_MatrixShuffling {
             for (int j = 0; j < matrix[i].length; j++) {
                 System.out.print(matrix[i][j] + " ");
             }
+            
             System.out.println();
         }
     }
