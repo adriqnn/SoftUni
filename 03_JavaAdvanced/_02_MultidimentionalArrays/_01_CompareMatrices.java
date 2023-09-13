@@ -22,7 +22,7 @@ public class _01_CompareMatrices {
         // Print result
         System.out.println(output);
 
-        scan.close();
+        scan.close(); 
     }
 
     // Method that determines if inputs are equal
