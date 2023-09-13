@@ -3,41 +3,60 @@ package _03_JavaAdvanced._02_MultidimentionalArrays;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class _02_PositionsOf {
+public class _01_CompareMatrices {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Red input values
-        String[] dimensions = scan.nextLine().split("\\s+");
+        // Read input values
+        int rows = Integer.parseInt(scan.nextLine().split("\\s+")[0]);
+        int[][] firstMatrix = readingMatrix(rows, scan);
+
+        // Read input values
+        rows = Integer.parseInt(scan.nextLine().split("\\s+")[0]);
+        int[][] secondMatrix = readingMatrix(rows, scan);
 
         // Add variables
-        int rows = Integer.parseInt(dimensions[0]);
-        int cols = Integer.parseInt(dimensions[1]);
-        int[][] matrix = new int[rows][cols];
+        boolean areEqual = areEqual(firstMatrix,secondMatrix);
+        String output = areEqual ? "equal" : "not equal";
 
-        // Read matrix
-        for (int i = 0; i < rows; i++) {
-            matrix[i] = Arrays.stream(scan.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
+        // Print result
+        System.out.println(output);
+
+        scan.close();
+    }
+
+    // Method that determines if inputs are equal
+    private static boolean areEqual(int[][] firstMatrix,int[][] secondMatrix){
+        if(firstMatrix.length != secondMatrix.length){
+            return false;
         }
 
-        boolean notFound = true;
-        int number = Integer.parseInt(scan.nextLine());
+        for (int row = 0; row < firstMatrix.length; row++) {
+            int[] firstArr = firstMatrix[row];
+            int[] secondArr = secondMatrix[row];
 
-        // Find the positions of input number
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                if(matrix[i][j] == number){
-                    System.out.println(i + " " + j);
-                    notFound = false;
+            if(firstArr.length != secondArr.length){
+                return false;
+            }
+
+            for (int index = 0; index < firstArr.length; index++) {
+                if(firstArr[index] != secondArr[index]){
+                    return false;
                 }
             }
         }
 
-        // Print result
-        if(notFound){
-            System.out.println("not found");
+        return true;
+    }
+
+    // Method that read the matrix
+    public static int[][] readingMatrix(int rows, Scanner scan){
+        int[][] matrix = new int[rows][];
+
+        for (int row = 0; row < rows; row++) {
+            matrix[row] = Arrays.stream(scan.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
         }
 
-        scan.close();
+        return matrix;
     }
 }
