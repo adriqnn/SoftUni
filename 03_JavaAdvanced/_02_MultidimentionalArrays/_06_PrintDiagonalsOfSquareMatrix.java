@@ -16,10 +16,12 @@ public class _06_PrintDiagonalsOfSquareMatrix {
         // Add variable
         int row = 0, col = 0;
 
-
+        // Print the diagonal of the matrix
         while(row < rows && col < rows){
             int current = matrix[row][col];
+
             System.out.print(current + " ");
+
             row++;
             col++;
         }
@@ -32,18 +34,24 @@ public class _06_PrintDiagonalsOfSquareMatrix {
         // Print result
         while(row >= 0 && col < rows){
             int current = matrix[row][col];
+
             System.out.print(current + " ");
+
             row--;
             col++;
         }
 
         scan.close();
     }
+
+    // Method that reads matrix
     public static int[][] readMatrix(int rows, Scanner scan, String splitPattern){
         int[][] matrix = new int[rows][];
+
         for (int i = 0; i < rows; i++) {
             matrix[i] = Arrays.stream(scan.nextLine().split(splitPattern)).mapToInt(Integer::parseInt).toArray();
         }
+
         return matrix;
     }
 }
