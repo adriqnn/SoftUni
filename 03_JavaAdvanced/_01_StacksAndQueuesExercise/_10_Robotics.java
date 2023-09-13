@@ -19,7 +19,7 @@ public class _10_Robotics {
         String console = scan.nextLine();
         while(!console.equals("End")){
             productionLine.offer(console);
-            
+
             console = scan.nextLine();
         }
 
@@ -38,28 +38,30 @@ public class _10_Robotics {
         // Robotics factory production line
         while(!productionLine.isEmpty()){
             timeInSeconds++;
-            
+
             for (int i = 0; i < robotsMapAndWork.size(); i++) {
                 if(robotsMapAndWork.get(robots.get(i)).get(1) > 0){
                     robotsMapAndWork.get(robots.get(i)).set(1, (robotsMapAndWork.get(robots.get(i)).get(1))-1);
                 }
             }
-            
+
             int size = productionLine.size();
-            
+
             for (int i = 0; i < robotsMapAndWork.size(); i++) {
                 if(robotsMapAndWork.get(robots.get(i)).get(1) == 0){
                     robotsMapAndWork.get(robots.get(i)).set(1,robotsMapAndWork.get(robots.get(i)).get(0));
                     int[] getTime = convertTime(timeInSeconds);
-                    
+
                     System.out.printf("%s - %s [%02d:%02d:%02d]%n", robots.get(i), productionLine.poll(), getTime[0], getTime[1], getTime[2]);
                     break;
                 }
             }
-            
+
             if(size == productionLine.size()){
                 productionLine.offer(productionLine.poll());
             }
+            
+            scan.close();
         }
     }
 
@@ -82,4 +84,3 @@ public class _10_Robotics {
         return time;
     }
 }
-
