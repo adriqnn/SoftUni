@@ -43,22 +43,27 @@ public class _07_FindTheRealQueen {
 
     private static boolean isItReal(char[][] matrix, int row, int col) {
         //row/column/diagonal1/diagonal2
+        
         for (int r = 0; r < matrix.length; r++) {
             if(r == row){
                 continue;
             }
+            
             if (matrix[r][col] == 'q'){
                 return false;
             }
         }
+        
         for (int c = 0; c < matrix.length; c++) {
             if (c == col){
                 continue;
             }
+            
             if(matrix[row][c] == 'q'){
                 return false;
             }
         }
+        
         int uldElement = col - 1;
         for (int i = row - 1; i >= 0 && uldElement >= 0; i--, uldElement--) { // UpLeftDiagonal yes
             char charToCheck = matrix[i][uldElement];
@@ -66,6 +71,7 @@ public class _07_FindTheRealQueen {
                 return false;
             }
         }
+        
         int urdElement = col + 1;
         for (int i = row - 1; i >= 0 && urdElement < matrix[i].length; i--, urdElement++) { // UpRightDiagonal yes
             char charToCheck = matrix[i][urdElement];
@@ -73,6 +79,7 @@ public class _07_FindTheRealQueen {
                 return false;
             }
         }
+        
         int element = col - 1;
         for (int i = row + 1; i < matrix.length && element >= 0; i++, element--) { // DownLeftDiagonal
             char charToCheck = matrix[i][element];
@@ -80,6 +87,7 @@ public class _07_FindTheRealQueen {
                 return false;
             }
         }
+        
         int element1 = col + 1;
         for (int i = row + 1; i < matrix.length && element1 < matrix[row].length; i++, element1++) { // DownRightDiagonal
             char charToCheck = matrix[i][element1];
@@ -87,6 +95,7 @@ public class _07_FindTheRealQueen {
                 return false;
             }
         }
+        
         return true;
     }
 
@@ -105,7 +114,7 @@ public class _07_FindTheRealQueen {
         return queens;
     }
 
-    // fill the matrix
+    // Method that fills the matrix
     private static char[][] fillMatrix(Scanner scan) {
         char[][] matrix = new char[8][8];
 
