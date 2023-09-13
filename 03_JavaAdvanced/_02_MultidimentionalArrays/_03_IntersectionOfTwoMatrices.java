@@ -6,7 +6,7 @@ public class _03_IntersectionOfTwoMatrices {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input value
+        // Read input values
         int rows = Integer.parseInt(scan.nextLine());
         int cols = Integer.parseInt(scan.nextLine());
         
