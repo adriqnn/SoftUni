@@ -6,25 +6,38 @@ import java.util.Scanner;
 public class _07_FindTheRealQueen {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        char[][] matrix = fillMatrix(scan,8);
+
+        // Read input values for the matrix
+        char[][] matrix = fillMatrix(scan);
+
+        // Find queen indexes
         ArrayDeque<String> queens = getQueenIndexes(matrix);
+
+        // Find the real queen
         String theRealQueen = revealTheRealQueen(matrix,queens);
+
+        // Print result
         System.out.println(theRealQueen.charAt(0) + " " + theRealQueen.charAt(1));
 
+        scan.close();
     }
 
     private static String revealTheRealQueen(char[][] matrix, ArrayDeque<String> queens) {
         int length = queens.size();
         String realQueen = "";
+
         for (int i = 0; i < length; i++) {
             String coordinates = queens.poll();
+
             int c1 = Character.getNumericValue(coordinates.charAt(0));
             int c2 = Character.getNumericValue(coordinates.charAt(1));
             boolean isItTheRealQueen = isItReal(matrix,c1,c2);
+
             if (isItTheRealQueen){
                 realQueen = coordinates;
             }
         }
+
         return realQueen;
     }
 
@@ -76,8 +89,11 @@ public class _07_FindTheRealQueen {
         }
         return true;
     }
+
+    // Method that determines the position of the queen
     private static ArrayDeque<String> getQueenIndexes(char[][] matrix) {
         ArrayDeque<String> queens = new ArrayDeque<>();
+
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
                 if (matrix[i][j] == 'q'){
@@ -85,15 +101,20 @@ public class _07_FindTheRealQueen {
                 }
             }
         }
+
         return queens;
     }
-    private static char[][] fillMatrix(Scanner scan, int i) {
+
+    // fill the matrix
+    private static char[][] fillMatrix(Scanner scan) {
         char[][] matrix = new char[8][8];
+
         for (int j = 0; j < matrix.length; j++) {
             String line = scan.nextLine();
             char[] charsArr = line.replaceAll(" ","").toCharArray();
             matrix[j] = charsArr;
         }
+
         return matrix;
     }
 }
