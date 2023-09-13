@@ -9,17 +9,17 @@ public class _03_IntersectionOfTwoMatrices {
         // Read input value
         int rows = Integer.parseInt(scan.nextLine());
         int cols = Integer.parseInt(scan.nextLine());
-
-        char[][] firstMatrix = readMatrix(rows,cols,scan);
-        char[][] secondMatrix = readMatrix(rows,cols,scan);
+        
+        char[][] firstMatrix = readMatrix(rows, cols, scan);
+        char[][] secondMatrix = readMatrix(rows, cols, scan);
         char[][] outputMatrix = new char[rows][cols];
 
         // Determine if there are elements that repeat in both arrays
         for (int row = 0; row < rows; row++) {
-            
+
             for (int col = 0; col < cols; col++) {
-                char fillChar = firstMatrix[row][col] == secondMatrix[row][col]?firstMatrix[row][col]:'*';
-                
+                char fillChar = firstMatrix[row][col] == secondMatrix[row][col] ? firstMatrix[row][col] : '*';
+
                 outputMatrix[row][col] = fillChar;
             }
         }
