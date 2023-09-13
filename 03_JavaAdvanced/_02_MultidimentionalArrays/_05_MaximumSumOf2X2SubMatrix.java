@@ -44,6 +44,8 @@ public class _05_MaximumSumOf2X2SubMatrix {
         System.out.println(numbersMax.get(0) + " " + numbersMax.get(1));
         System.out.println(numbersMax.get(2) + " " + numbersMax.get(3));
         System.out.println(max);
+
+        scan.close();
     }
     
     // Method that reads the matrix
