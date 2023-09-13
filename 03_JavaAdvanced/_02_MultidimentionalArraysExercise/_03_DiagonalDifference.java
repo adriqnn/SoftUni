@@ -23,7 +23,7 @@ public class _03_DiagonalDifference {
         scan.close();
     }
 
-    // Method the calculates the sum of second diagonal
+    // Method the calculates the sum of first diagonal
     private static int getSum1(int[][] matrix) {
         int sum = 0;
         
