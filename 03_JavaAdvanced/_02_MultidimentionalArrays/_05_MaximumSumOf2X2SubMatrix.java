@@ -34,7 +34,7 @@ public class _05_MaximumSumOf2X2SubMatrix {
                     max = sum;
                     List<Integer> numbers = new ArrayList<>();
                     
-                    numbers.add(n1);numbers.add(n2);numbers.add(n3);numbers.add(n4);
+                    numbers.add(n1); numbers.add(n2); numbers.add(n3); numbers.add(n4);
                     numbersMax = numbers;
                 }
             }
