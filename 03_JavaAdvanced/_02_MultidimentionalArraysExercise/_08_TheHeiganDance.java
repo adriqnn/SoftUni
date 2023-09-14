@@ -43,14 +43,14 @@ public class _08_TheHeiganDance {
             int c = Integer.parseInt(actions[2]);
             int[][] room = new int[15][15];
 
-            Arrays.stream(room).forEach(e -> Arrays.fill(e,9));
+            Arrays.stream(room).forEach(e -> Arrays.fill(e, 9));
             damageIndexes(r, c, room);
 
             int one = Integer.parseInt(position.split("\\s+")[0]);
             int two = Integer.parseInt(position.split("\\s+")[1]);
 
             if(spell.equals("Cloud")){
-                String newPosition = move(position,room);
+                String newPosition = move(position, room);
 
                 if(newPosition.equals(position) && room[one][two] == -1){
                     raidHP -= 3500;
@@ -65,7 +65,7 @@ public class _08_TheHeiganDance {
                     position = newPosition;
                 }
             }else if (spell.equals("Eruption")){
-                String newPosition = move(position,room);
+                String newPosition = move(position, room);
 
                 if(newPosition.equals(position) && room[one][two] == -1){
                     raidHP -= 6000;
