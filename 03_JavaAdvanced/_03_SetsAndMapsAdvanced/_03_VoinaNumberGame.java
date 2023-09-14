@@ -11,7 +11,7 @@ public class _03_VoinaNumberGame {
         Set<Integer> firstDeck = Arrays.stream(scan.nextLine().split("\\s+")).map(Integer::parseInt).collect(Collectors.toCollection(LinkedHashSet::new));
         Set<Integer> secondDeck = Arrays.stream(scan.nextLine().split("\\s+")).map(Integer::parseInt).collect(Collectors.toCollection(LinkedHashSet::new));
         
-        // Add variables
+        // Add variable
         int rounds = 50;
         
         // Play war card game
