@@ -12,7 +12,7 @@ public class _07_CitiesByContinentAndCountry {
         // Add variable
         Map<String, Map<String, List<String>>> countries = new LinkedHashMap<>();
 
-        
+        // Database of cities by country and continent
         while(n-- > 0){
             String[] tokens = scan.nextLine().split("\\s+");
             
