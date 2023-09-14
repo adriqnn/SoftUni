@@ -10,7 +10,7 @@ public class _04_MaximalSumV2 {
         // Read input values
         String[] inputLine = scan.nextLine().split("\\s+");
 
-        // Add variables and
+        // Add variables
         int rows = Integer.parseInt(inputLine[0]);
 
         int [][] matrix = new int[rows][];
