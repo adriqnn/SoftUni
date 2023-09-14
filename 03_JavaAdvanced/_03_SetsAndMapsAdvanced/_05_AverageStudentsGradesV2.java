@@ -10,7 +10,7 @@ public class _05_AverageStudentsGradesV2 {
         // Read input value
         int n = Integer.parseInt(scan.nextLine());
 
-        // Add variables
+        // Add variable
         Map<String, List<Double>> studentGrades = new TreeMap<>();
 
         // Determine the average grades of students
@@ -23,6 +23,7 @@ public class _05_AverageStudentsGradesV2 {
             studentGrades.computeIfAbsent(name, k -> new ArrayList<>()).add(grade);
         }
 
+        // Print result
         studentGrades.forEach((name, grades) -> {
             double average = grades.stream().mapToDouble(Double::doubleValue).average().orElse(0.0);
 
