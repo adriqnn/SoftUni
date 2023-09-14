@@ -7,10 +7,17 @@ import java.util.TreeMap;
 public class _04_CountSymbols {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+
+        // Read input value
         String text = scan.nextLine();
-        Map<Character,Integer> countSymbols = new TreeMap<>();
+
+        // Add variable
+        Map<Character, Integer> countSymbols = new TreeMap<>();
+
+        // Make a statistic of how many characters are used in the input
         for (int i = 0; i < text.length(); i++) {
             char currentSymbol = text.charAt(i);
+
             if(countSymbols.containsKey(currentSymbol)){
                 int currentCount = countSymbols.get(currentSymbol);
                 countSymbols.put(currentSymbol,currentCount+1);
@@ -18,6 +25,10 @@ public class _04_CountSymbols {
                 countSymbols.put(currentSymbol,1);
             }
         }
+
+        // Print result
         countSymbols.entrySet().forEach(e -> System.out.println(e.getKey() + ": " + e.getValue() + " time/s"));
+
+        scan.close();
     }
 }
