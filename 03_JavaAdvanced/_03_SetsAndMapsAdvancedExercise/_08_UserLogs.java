@@ -11,20 +11,23 @@ public class _08_UserLogs {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+        // Add variables
         Map<String, Map<String, Integer>> nameToIpToCount = new TreeMap<>();
-
         String line = "";
+
+        // Create user logs
         while (!(line = reader.readLine()).equals("end")) {
             String ip = line.substring(line.indexOf("=") + 1, line.indexOf(" "));
             String user = line.substring(line.lastIndexOf("=") + 1);
 
             nameToIpToCount.putIfAbsent(user, new LinkedHashMap<>());
-
             Map<String, Integer> ipToCountInternMap = nameToIpToCount.get(user);
+            
             ipToCountInternMap.putIfAbsent(ip, 0);
             ipToCountInternMap.put(ip, ipToCountInternMap.get(ip) + 1);
         }
 
+        // Print result
         nameToIpToCount.entrySet().stream()
                 .forEach(e -> {
                     System.out.println(e.getKey() + ":");
@@ -42,5 +45,7 @@ public class _08_UserLogs {
                         System.out.printf(format, secondMap.getKey(), secondMap.getValue());
                     }
                 });
+        
+        reader.close();
     }
 }
