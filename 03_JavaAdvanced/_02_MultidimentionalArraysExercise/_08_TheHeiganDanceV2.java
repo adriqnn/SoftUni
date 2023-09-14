@@ -47,8 +47,8 @@ public class _08_TheHeiganDanceV2 {
             int cc = Integer.parseInt(position.split("\\s+")[1]);
             
             if(spell.equals("Cloud")){
-                room = damageIndexes(r,c,room);
-                String newPosition = move(position,room);
+                room = damageIndexes(r, c, room);
+                String newPosition = move(position, room);
                 
                 if(newPosition.equals(position) && room[rr][cc] == -1){
                     raidHP -= 3500;
@@ -64,8 +64,8 @@ public class _08_TheHeiganDanceV2 {
                 }
                 
             }else if (spell.equals("Eruption")){
-                room = damageIndexes(r,c,room);
-                String newPosition = move(position,room);
+                room = damageIndexes(r, c, room);
+                String newPosition = move(position, room);
                 
                 if(newPosition.equals(position) && room[rr][cc] == -1){
                     raidHP -= 6000;
