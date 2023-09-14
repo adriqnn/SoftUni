@@ -28,7 +28,7 @@ public class _11_ReverseMatrixDiagonals {
             int firstIndex = matrix.length-1;
 
             for (int j = n; j <= matrix[row-1].length-1; j++) {
-                if(indexIsValid(firstIndex,secondIndex,matrix)) {
+                if(indexIsValid(firstIndex, secondIndex, matrix)) {
                     System.out.print(matrix[firstIndex--][secondIndex++] + " ");
                 }else{
                     firstIndex--;
@@ -50,7 +50,7 @@ public class _11_ReverseMatrixDiagonals {
             int indexTwo = 0;
 
             for (int j = 0; j < i+1; j++) {
-                if(indexIsValid(indexOne,indexTwo,matrix)) {
+                if(indexIsValid(indexOne, indexTwo, matrix)) {
                     System.out.print(matrix[indexOne--][indexTwo++] + " ");
                 }else{
                     indexOne--;
