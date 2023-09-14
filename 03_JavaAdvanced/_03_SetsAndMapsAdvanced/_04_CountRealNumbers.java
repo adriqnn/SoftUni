@@ -7,7 +7,7 @@ public class _04_CountRealNumbers {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input value
+        // Read input values
         List<Double> numbers = Arrays.stream(scan.nextLine().split("\\s+")).map(Double::parseDouble).collect(Collectors.toList());
 
         // Add variable
