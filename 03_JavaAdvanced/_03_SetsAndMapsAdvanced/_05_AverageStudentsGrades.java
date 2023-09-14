@@ -9,7 +9,7 @@ public class _05_AverageStudentsGrades {
         // Read input value
         int n = Integer.parseInt(scan.nextLine());
 
-        // Add variables
+        // Add variable
         Map<String, List<Double>> students = new TreeMap<>();
 
         // Determine the average grades of students
