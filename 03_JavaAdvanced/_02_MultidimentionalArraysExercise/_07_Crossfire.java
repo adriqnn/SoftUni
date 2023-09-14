@@ -11,8 +11,10 @@ public class _07_Crossfire {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+        // Read input values
         int[] dimensions = Arrays.stream(reader.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
+        // Add variables
         int rows = dimensions[0];
         int cols = dimensions[1];
 
@@ -20,8 +22,10 @@ public class _07_Crossfire {
 
         int count = 1;
 
+        // Create the matrix
         for (int row = 0; row < rows; row++) {
             matrix.add(new ArrayList<>());
+
             for (int col = 0; col < cols; col++) {
                 matrix.get(row).add(count++);
             }
@@ -29,6 +33,7 @@ public class _07_Crossfire {
 
         String line = reader.readLine();
 
+        // Receive input and execute commands
         while (!line.equals("Nuke it from orbit")){
             String[] data = line.split(" ");
 
@@ -52,15 +57,20 @@ public class _07_Crossfire {
             line = reader.readLine();
         }
 
+        // Print result
         for(List<Integer> integers : matrix){
             for (Integer integer : integers) {
                 System.out.print(integer + " ");
             }
             System.out.println();
         }
+
+        reader.close();
     }
 
+    // Method that determines if an index is in range
     private static boolean isInRange(int row, int col, List<List<Integer>> matrix) {
         return row >= 0 && row < matrix.size() && col >= 0 && col < matrix.get(row).size();
     }
 }
+
