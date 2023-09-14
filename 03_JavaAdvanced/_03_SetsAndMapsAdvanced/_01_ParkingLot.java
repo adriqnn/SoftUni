@@ -12,6 +12,7 @@ public class _01_ParkingLot {
         // Read input value
         String input = scan.nextLine();
 
+        // Add variable
         Set<String> parkingLot = new LinkedHashSet<>();
 
         // Make a car record
