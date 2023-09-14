@@ -7,13 +7,19 @@ public class _10_LogsAggregator {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input value
         int inputLines = Integer.parseInt(scan.nextLine());
+
+        // Add variable
         Map<String, List<String>> list = new TreeMap<>();
 
+        // Create logs aggregator
         for (int i = 0; i < inputLines; i++) {
             String[] information = scan.nextLine().split("\\s+");
+
             String ipAddress = information[0];
             String name = information[1];
+
             int session = Integer.parseInt(information[2]);
 
             if(!list.containsKey(name)){
@@ -29,16 +35,21 @@ public class _10_LogsAggregator {
             }
         }
 
+        // Print result
         list.entrySet().forEach(e -> {
             String first = e.getKey();
             String second = e.getValue().get(0);
+
             Set<String> ips = new TreeSet<>();
+
             for (int i = 1; i < e.getValue().size(); i++) {
                 ips.add(e.getValue().get(i));
             }
-            String third = String.format("[%s]", String.join(", ", ips));
 
+            String third = String.format("[%s]", String.join(", ", ips));
             System.out.printf("%s: %s %s%n",first,second,third);
         });
+
+        scan.close();
     }
 }
