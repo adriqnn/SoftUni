@@ -2,33 +2,39 @@ package _03_JavaAdvanced._03_SetsAndMapsAdvancedExercise;
 
 import java.util.*;
 
-public class _07_HandsOfCardsV2 {
+public class _07_HandsOfCards {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        
+
         // Read input value
-        String console;
-        
+        String console = scan.nextLine();
+
         // Add variable
         LinkedHashMap<String, Set<String>> playersCards = new LinkedHashMap<>();
 
         // Determine the card values for all the players
-        while (!(console = scan.nextLine()).equals("JOKER")) {
-            String[] parts = console.split(": ");
-            String name = parts[0];
-            String[] cardsStringArray = parts[1].split(", ");
-            
-            Set<String> cards = new HashSet<>(Arrays.asList(cardsStringArray));
+        while(!console.equals("JOKER")){
+            String name = console.split(": ")[0];
+            String[] cardsStringArray = console.split(": ")[1].split(", ");
+            Set<String> cards = new HashSet<>();
 
-            playersCards.merge(name, cards, (existingCards, newCards) -> {
-                existingCards.addAll(newCards);
-                return existingCards;
-            });
+            Collections.addAll(cards, cardsStringArray);
+
+            if(playersCards.containsKey(name)){
+                Set<String> currentCards = playersCards.get(name);
+                currentCards.addAll(cards);
+                playersCards.put(name, currentCards);
+            }else{
+                playersCards.put(name, cards);
+            }
+
+            console = scan.nextLine();
         }
 
         // Print result
-        playersCards.forEach((name, cards) -> {
-            int points = getCardsPoints(cards);
+        playersCards.entrySet().forEach(e -> {
+            String name = e.getKey();
+            int points = getCardsPoints(e.getValue());
             System.out.printf("%s: %d%n", name, points);
         });
 
@@ -36,23 +42,23 @@ public class _07_HandsOfCardsV2 {
     }
 
     // Method that gets the cards points
-    private static int getCardsPoints(Set<String> cards) {
+    private static int getCardsPoints(Set<String> value) {
         Map<Character, Integer> points = getPartOfCardValue();
-        
+
         int sumCards = 0;
 
-        for (String card : cards) {
+        for (String v : value) {
             int sum = 0;
-            
-            if (card.length() == 3) {
-                char type = card.charAt(2);
+
+            if(v.contains("10")){
+                char type = v.charAt(2);
                 sum = 10 * points.get(type);
-            } else {
-                char number = card.charAt(0);
-                char type = card.charAt(1);
+            }else{
+                char number = v.charAt(0);
+                char type = v.charAt(1);
                 sum = points.get(number) * points.get(type);
             }
-            
+
             sumCards += sum;
         }
 
@@ -83,4 +89,5 @@ public class _07_HandsOfCardsV2 {
         return points;
     }
 }
+
 
