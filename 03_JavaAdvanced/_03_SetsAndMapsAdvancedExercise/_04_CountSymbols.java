@@ -20,9 +20,9 @@ public class _04_CountSymbols {
 
             if(countSymbols.containsKey(currentSymbol)){
                 int currentCount = countSymbols.get(currentSymbol);
-                countSymbols.put(currentSymbol,currentCount+1);
+                countSymbols.put(currentSymbol, currentCount+1);
             }else{
-                countSymbols.put(currentSymbol,1);
+                countSymbols.put(currentSymbol, 1);
             }
         }
 
