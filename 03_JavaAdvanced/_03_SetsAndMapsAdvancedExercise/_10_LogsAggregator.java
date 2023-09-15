@@ -25,6 +25,7 @@ public class _10_LogsAggregator {
             if(!list.containsKey(name)){
                 list.put(name, new ArrayList<>());
             }
+            
             if(list.get(name).size() == 0){
                 list.get(name).add(session + "");
                 list.get(name).add(ipAddress);
