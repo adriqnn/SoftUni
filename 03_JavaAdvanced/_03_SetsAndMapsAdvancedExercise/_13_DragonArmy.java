@@ -7,9 +7,13 @@ public class _13_DragonArmy {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // Read input values
         int inputLines = Integer.parseInt(scan.nextLine());
+
+        // Add variables
         Map<String, Map<String, List<Double>>> database = new LinkedHashMap<>();
 
+        // Create dragon database
         for (int i = 0; i < inputLines; i++) {
             String[] information = scan.nextLine().split(" ");
 
@@ -24,8 +28,11 @@ public class _13_DragonArmy {
             Collections.addAll(stats, damage,health,armor);
             database.get(type).put(name, stats);
         }
+
+        // Print result
         database.entrySet().forEach(type -> {
             String typeOf = type.getKey();
+
             double dmgAverage = type.getValue().values().stream().map(e -> e.get(0)).mapToDouble(Double::valueOf).sum()/type.getValue().size();
             double healthAverage = type.getValue().values().stream().map(e -> e.get(1)).mapToDouble(Double::valueOf).sum()/type.getValue().size();
             double armorAverage = type.getValue().values().stream().map(e -> e.get(2)).mapToDouble(Double::valueOf).sum()/type.getValue().size();
@@ -35,5 +42,7 @@ public class _13_DragonArmy {
 
             System.out.printf("%s%n%s%n", firstLine, secondLine);
         });
+
+        scan.close();
     }
 }
