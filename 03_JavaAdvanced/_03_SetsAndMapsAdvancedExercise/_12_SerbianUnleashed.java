@@ -5,19 +5,24 @@ import java.util.Scanner;
 
 public class _12_SerbianUnleashed {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scan = new Scanner (System.in);
 
+        // Read input value
+        String input = scan.nextLine();
+
+        // Add variable
         LinkedHashMap<String, LinkedHashMap<String, Integer>> concerts = new LinkedHashMap<>();
-        String input = scanner.nextLine();
 
+        // Make a concerts list
         while(!input.equals("End")) {
             if(!input.contains("@") || input.charAt(input.indexOf("@") - 1) != ' '){
-                input = scanner.nextLine();
+                input = scan.nextLine();
                 continue;
             }
 
             String singer = input.substring(0, input.indexOf("@") - 1);
             int firstIndexOfNumber = 0;
+
             for (int i = input.indexOf("@"); i < input.length(); i++) {
                 char currentSymbol = input.charAt(i);
                 if(Character.isDigit(currentSymbol) && input.charAt(i - 1) == ' '){
@@ -27,17 +32,19 @@ public class _12_SerbianUnleashed {
             }
 
             if(firstIndexOfNumber == 0) {
-                input = scanner.nextLine();
+                input = scan.nextLine();
                 continue;
             }
 
             String venue = input.substring(input.indexOf("@") + 1, firstIndexOfNumber - 1);
             String numbers = input.substring(firstIndexOfNumber);//"25 3000"
             String [] numbersArray = numbers.split("\\s+");
+
             if(numbersArray.length != 2) {
-                input = scanner.nextLine();
+                input = scan.nextLine();
                 continue;
             }
+
             int price = Integer.parseInt(numbersArray[0]);
             int capacity = Integer.parseInt(numbersArray[1]);
 
@@ -55,9 +62,11 @@ public class _12_SerbianUnleashed {
 
                 concerts.put(venue, currentSingers);
             }
-            input = scanner.nextLine();
+            
+            input = scan.nextLine();
         }
 
+        // Print result
         for (String venue : concerts.keySet()) {
             System.out.println(venue);
 
@@ -65,5 +74,8 @@ public class _12_SerbianUnleashed {
             singers.entrySet().stream().sorted((singer1, singer2) -> singer2.getValue().compareTo(singer1.getValue()))
                     .forEach(singer -> System.out.println(String.format("#  %s -> %d", singer.getKey(), singer.getValue())));
         }
+
+        scan.close();
     }
 }
+
