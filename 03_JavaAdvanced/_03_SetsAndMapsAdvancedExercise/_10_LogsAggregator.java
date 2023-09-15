@@ -19,7 +19,6 @@ public class _10_LogsAggregator {
 
             String ipAddress = information[0];
             String name = information[1];
-
             int session = Integer.parseInt(information[2]);
 
             if(!list.containsKey(name)){
