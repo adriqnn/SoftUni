@@ -28,7 +28,7 @@ public class _06_FixEmails {
             String email = queue.poll();
             
             if (!email.toLowerCase().endsWith("us") && !email.toLowerCase().endsWith("uk") && !email.toLowerCase().endsWith("com")){
-                emailList.put(name,email);
+                emailList.put(name, email);
             }
         }
 
