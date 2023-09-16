@@ -34,12 +34,12 @@ public class _09_PopulationCounter {
 
         // Print result
         countriesAndCities.entrySet().stream()
-                .sorted((c1,c2)-> countriesOnly.get(c2.getKey()).compareTo(countriesOnly.get(c1.getKey())))
+                .sorted((c1, c2)-> countriesOnly.get(c2.getKey()).compareTo(countriesOnly.get(c1.getKey())))
                 .forEach(country ->{
-                    System.out.format("%s (total population: %d)\n",country.getKey(),countriesOnly.get(country.getKey()));
+                    System.out.format("%s (total population: %d)\n", country.getKey(), countriesOnly.get(country.getKey()));
                     country.getValue().entrySet()
-                            .stream().sorted((t1,t2)-> t2.getValue().compareTo(t1.getValue())).forEach(city ->{
-                                System.out.format("=>%s: %d\n", city.getKey(),city.getValue());
+                            .stream().sorted((t1, t2)-> t2.getValue().compareTo(t1.getValue())).forEach(city ->{
+                                System.out.format("=>%s: %d\n", city.getKey(), city.getValue());
                             });
                 });
 
