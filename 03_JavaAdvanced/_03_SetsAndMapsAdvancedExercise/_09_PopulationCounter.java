@@ -21,13 +21,14 @@ public class _09_PopulationCounter {
             Long population = Long.parseLong(data[2]);
 
             if(!countriesAndCities.containsKey(country)){
-                countriesAndCities.put(country,new LinkedHashMap<>());
+                countriesAndCities.put(country, new LinkedHashMap<>());
                 countriesOnly.put(country, 0L);
             }
-            countriesOnly.put(country,countriesOnly.get(country)+population);
+            
+            countriesOnly.put(country, countriesOnly.get(country) + population);
 
             if(!countriesAndCities.get(country).containsKey(city)){
-                countriesAndCities.get(country).put(city,population);
+                countriesAndCities.get(country).put(city, population);
             }
         }
 
