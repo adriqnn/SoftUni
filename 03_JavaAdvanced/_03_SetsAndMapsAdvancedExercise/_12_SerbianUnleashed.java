@@ -37,7 +37,7 @@ public class _12_SerbianUnleashed {
             }
 
             String venue = input.substring(input.indexOf("@") + 1, firstIndexOfNumber - 1);
-            String numbers = input.substring(firstIndexOfNumber);//"25 3000"
+            String numbers = input.substring(firstIndexOfNumber); //"25 3000"
             String [] numbersArray = numbers.split("\\s+");
 
             if(numbersArray.length != 2) {
