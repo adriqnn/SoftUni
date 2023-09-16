@@ -91,7 +91,7 @@ public class _11_LegendaryFarming {
         });
 
         // Print result
-        map.entrySet().stream().sorted(reverseOrder(Map.Entry.comparingByValue())).forEach(e -> System.out.printf("%s: %d%n",e.getKey(), e.getValue()));
+        map.entrySet().stream().sorted(reverseOrder(Map.Entry.comparingByValue())).forEach(e -> System.out.printf("%s: %d%n", e.getKey(), e.getValue()));
         garbage.entrySet().forEach(e -> System.out.printf("%s: %d%n", e.getKey(), e.getValue()));
         
         scan.close();
