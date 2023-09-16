@@ -49,7 +49,7 @@ public class _10_LogsAggregatorV2 {
             }
 
             String third = String.format("[%s]", String.join(", ", ips));
-            System.out.printf("%s: %s %s%n",first,second,third);
+            System.out.printf("%s: %s %s%n", first, second, third);
         });
 
         reader.close();
