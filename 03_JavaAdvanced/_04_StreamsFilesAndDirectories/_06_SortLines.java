@@ -12,15 +12,22 @@ import java.util.stream.Collectors;
 public class _06_SortLines {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+
+        // Path
         Path path = Paths.get("...");
+
+        // Read and sort all lines from input file
         try{
             List<String> lines = Files.readAllLines(path);
             lines = lines.stream().filter(l -> !l.isBlank()).collect(Collectors.toList());
+
             Collections.sort(lines);
+
             lines.forEach(System.out::println);
         }catch(IOException e){
             e.printStackTrace();
         }
+
         scan.close();
     }
 }
