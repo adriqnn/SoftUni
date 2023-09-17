@@ -17,11 +17,11 @@ public class _05_FilterByAge {
 
         Supplier<Person> personCreator = () -> {
             String[] tokens = scan.nextLine().split(", ");
-            return new Person((tokens[0]),Integer.parseInt(tokens[1]));
+            return new Person((tokens[0]), Integer.parseInt(tokens[1]));
         };
 
         // Create record of people
-        List<Person> people = IntStream.range(0,n).mapToObj(ignored -> personCreator.get()).collect(Collectors.toList());
+        List<Person> people = IntStream.range(0, n).mapToObj(ignored -> personCreator.get()).collect(Collectors.toList());
 
         // Additional input
         String conditionParam = scan.nextLine();
