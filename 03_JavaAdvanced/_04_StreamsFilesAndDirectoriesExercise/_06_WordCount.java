@@ -19,7 +19,7 @@ public class _06_WordCount {
         LinkedHashMap<String, Integer> wordsCount = new LinkedHashMap<>();
         allLinesWords.forEach(e -> Arrays.stream(e.split("\\s+")).forEach(word -> wordsCount.put(word, 0)));
         
-        // Count how many times the word is contained in the text
+        // Count how many times the given words are contained in the text file
         for (String e : textAllLines) {
             String[] wordInLine = e.split("\\s+");
             
