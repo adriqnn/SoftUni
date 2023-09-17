@@ -50,9 +50,9 @@ public class _05_FilterByAge {
             return p -> System.out.println(p.name + " - " + p.age);
         }else  if(format[0].equals("name")){
             return  p -> System.out.println(p.name);
+        }else{
+            return p -> System.out.println(p.age);
         }
-
-        return p -> System.out.println(p.age);
     }
 
     // Predicate Method
