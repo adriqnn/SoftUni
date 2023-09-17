@@ -12,7 +12,7 @@ public class _03_ALLCAPITALS {
         // Path
         String pathStr = "...";
         
-        // Read file path
+        // Read file path and transform letters to capital letters
         Files.readAllLines(Path.of(pathStr)).forEach(e -> System.out.println(e.toUpperCase()));
         //BufferedWriter writer = new BufferedWriter(new FileWriter(name));
         
