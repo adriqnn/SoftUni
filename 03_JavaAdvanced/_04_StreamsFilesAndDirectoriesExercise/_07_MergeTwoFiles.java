@@ -7,10 +7,16 @@ import java.util.List;
 
 public class _07_MergeTwoFiles {
     public static void main(String[] args) throws IOException {
+        
+        // Paths
         Path pathFileOne = Path.of("...");
-        List<String> allLinesFileOne = Files.readAllLines(pathFileOne);
         Path pathFileTwo = Path.of("...");
+        
+        // Read file paths
+        List<String> allLinesFileOne = Files.readAllLines(pathFileOne);
         List<String> allLinesFileTwo = Files.readAllLines(pathFileTwo);
+        
+        // Print result
         allLinesFileOne.forEach(System.out::println);
         allLinesFileTwo.forEach(System.out::println);
     }
