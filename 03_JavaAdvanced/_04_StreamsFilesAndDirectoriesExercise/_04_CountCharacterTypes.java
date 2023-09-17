@@ -21,7 +21,7 @@ public class _04_CountCharacterTypes {
         int countConsonants = 0;
         int countPunctuations = 0;
 
-        // Count vowels, consonants and punctuation
+        // Count vowels, consonants and punctuation in the file
         for (String e : allLines) {
             for (int i = 0; i < e.length(); i++) {
                 char currentSymbol = e.charAt(i);
