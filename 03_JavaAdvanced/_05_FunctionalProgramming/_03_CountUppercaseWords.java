@@ -21,7 +21,7 @@ public class _03_CountUppercaseWords {
         
         //Print result
         System.out.println(upperCaseStrings.size());
-        System.out.println(String.join(System.lineSeparator(),upperCaseStrings));
+        System.out.println(String.join(System.lineSeparator(), upperCaseStrings));
         
         scan.close();
     }
