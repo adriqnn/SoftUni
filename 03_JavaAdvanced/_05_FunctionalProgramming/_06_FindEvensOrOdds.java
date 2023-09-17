@@ -15,10 +15,12 @@ public class _06_FindEvensOrOdds {
         String condition = scan.nextLine();
         
         // Print result
-        printNumbersIn(range[0], range[1], condition.equals("even") ? n -> n % 2 == 0: n -> n % 2 != 0);
+        printNumbersIn(range[0], range[1], condition.equals("even") ? n -> n % 2 == 0 : n -> n % 2 != 0);
         
         scan.close();
     }
+
+    // Method that prints number in a range that comply with a predicate
     private static void printNumbersIn(int beginInclusive, int endInclusive, Predicate<Integer> predicate){
         System.out.println(IntStream.rangeClosed(beginInclusive, endInclusive).boxed().filter(predicate).map(String::valueOf).collect(Collectors.joining(" ")));
     }
