@@ -141,7 +141,7 @@ public class _10_RadioactiveMutantVampireBunnies {
                 int rr = Integer.parseInt(indexesForMultiply[0]);
                 int cc = Integer.parseInt(indexesForMultiply[1]);
 
-                if(isValid(rr-1,cc,rabbitDen)){
+                if(isValid(rr-1, cc, rabbitDen)){
                     if(rabbitDen[rr-1][cc] == 'P'){
                         player -= 1;
                         playerLastR = rr-1;
@@ -151,7 +151,7 @@ public class _10_RadioactiveMutantVampireBunnies {
                     rabbitDen[rr-1][cc] = 'B';
                 }
 
-                if(isValid(rr+1,cc,rabbitDen)){
+                if(isValid(rr+1, cc, rabbitDen)){
                     if(rabbitDen[rr+1][cc] == 'P'){
                         player -= 1;
                         playerLastR = rr+1;
@@ -161,7 +161,7 @@ public class _10_RadioactiveMutantVampireBunnies {
                     rabbitDen[rr+1][cc] = 'B';
                 }
 
-                if(isValid(rr,cc-1,rabbitDen)){
+                if(isValid(rr, cc-1, rabbitDen)){
                     if(rabbitDen[rr][cc-1] == 'P'){
                         player -= 1;
                         playerLastR = rr;
@@ -170,7 +170,7 @@ public class _10_RadioactiveMutantVampireBunnies {
 
                     rabbitDen[rr][cc-1] = 'B';
                 }
-                if(isValid(rr,cc+1,rabbitDen)){
+                if(isValid(rr, cc+1, rabbitDen)){
                     if(rabbitDen[rr][cc+1] == 'P'){
                         player -= 1;
                         playerLastR = rr;
