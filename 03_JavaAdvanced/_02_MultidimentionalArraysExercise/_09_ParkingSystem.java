@@ -15,7 +15,7 @@ public class _09_ParkingSystem {
         int col = Integer.parseInt(dimensions[1]);
         boolean[][] parkingLot = new boolean[row][col];
 
-        Arrays.stream(parkingLot).forEach(e -> Arrays.fill(e,true));
+        Arrays.stream(parkingLot).forEach(e -> Arrays.fill(e, true));
 
         String console = scan.nextLine();
 
