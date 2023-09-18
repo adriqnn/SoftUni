@@ -106,22 +106,22 @@ public class _08_TheHeiganDanceV2 {
         int row = Integer.parseInt(positionArray[0]);
         int col = Integer.parseInt(positionArray[1]);
 
-        if (isValidIndex(row-1,col,room) && room[row-1][col] != -1 && room[row][col] == -1){
+        if (isValidIndex(row-1, col, room) && room[row-1][col] != -1 && room[row][col] == -1){
             int thisUp = row-1;
             return thisUp + " " + col;
         }
 
-        if (isValidIndex(row,col+1,room) && room[row][col+1] != -1 && room[row][col] == -1){
+        if (isValidIndex(row, col+1, room) && room[row][col+1] != -1 && room[row][col] == -1){
             int thisRight = col+1;
             return row + " " + thisRight;
         }
 
-        if (isValidIndex(row+1,col,room) && room[row+1][col] != -1 && room[row][col] == -1){
+        if (isValidIndex(row+1, col, room) && room[row+1][col] != -1 && room[row][col] == -1){
             int thisDown = row+1;
             return thisDown + " " + col;
         }
 
-        if (isValidIndex(row,col-1,room) && room[row][col-1] != -1 && room[row][col] == -1){
+        if (isValidIndex(row, col-1, room) && room[row][col-1] != -1 && room[row][col] == -1){
             int thisLeft = col-1;
             return row + " " + thisLeft;
         }
