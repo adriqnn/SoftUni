@@ -75,7 +75,7 @@ public class _09_ParkingSystem {
             
             // Print result
             if(noParkingSpots){
-                System.out.printf("Row %d full%n",rowPark);
+                System.out.printf("Row %d full%n", rowPark);
             }
             
             console = scan.nextLine();
