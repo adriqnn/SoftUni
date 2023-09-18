@@ -68,7 +68,7 @@ public class _12_TheMatrix {
             int rr = Integer.parseInt(coordinates[0]);
             int cc = Integer.parseInt(coordinates[1]);
 
-            if(isValid(rr-1,cc,matrix)) {
+            if(isValid(rr-1, cc, matrix)) {
                 if (matrix[rr - 1][cc] == replaceChar) {
                     int up = rr - 1;
                     String upQ = up + " " + cc;
@@ -79,7 +79,7 @@ public class _12_TheMatrix {
                 }
             }
 
-            if(isValid(rr+1,cc,matrix)) {
+            if(isValid(rr+1, cc, matrix)) {
                 if (matrix[rr + 1][cc] == replaceChar) {
                     int down = rr + 1;
                     String downQ = down + " " + cc;
@@ -90,7 +90,7 @@ public class _12_TheMatrix {
                 }
             }
 
-            if(isValid(rr,cc-1,matrix)) {
+            if(isValid(rr, cc-1, matrix)) {
                 if (matrix[rr][cc - 1] == replaceChar) {
                     int left = cc - 1;
                     String leftQ = rr + " " + left;
@@ -101,7 +101,7 @@ public class _12_TheMatrix {
                 }
             }
 
-            if(isValid(rr,cc+1,matrix)) {
+            if(isValid(rr, cc+1, matrix)) {
                 if (matrix[rr][cc + 1] == replaceChar) {
                     int right = cc +1;
                     String rightQ = rr + " " + right;
