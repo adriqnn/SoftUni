@@ -30,28 +30,28 @@ public class _12_TheMatrix {
 
         // Generate the coordinates to replace
         for (int i = 0; i < 4; i++) {
-            if(isValid(startRow-1,startCol,matrix)) {
+            if(isValid(startRow-1, startCol, matrix)) {
                 if (matrix[startRow - 1][startCol] == replaceChar) {
                     int up = startRow - 1;
                     coordinatesToReplace.offer(up + " " + startCol);
                 }
             }
 
-            if(isValid(startRow+1,startCol,matrix)) {
+            if(isValid(startRow+1, startCol, matrix)) {
                 if (matrix[startRow + 1][startCol] == replaceChar) {
                     int down = startRow + 1;
                     coordinatesToReplace.offer(down + " " + startCol);
                 }
             }
 
-            if(isValid(startRow,startCol-1,matrix)) {
+            if(isValid(startRow, startCol-1, matrix)) {
                 if (matrix[startRow][startCol - 1] == replaceChar) {
                     int left = startCol - 1;
                     coordinatesToReplace.offer(startRow + " " + left);
                 }
             }
 
-            if(isValid(startRow,startCol+1,matrix)) {
+            if(isValid(startRow, startCol+1, matrix)) {
                 if (matrix[startRow][startCol + 1] == replaceChar) {
                     int right = startCol + 1;
                     coordinatesToReplace.offer(startRow + " " + right);
