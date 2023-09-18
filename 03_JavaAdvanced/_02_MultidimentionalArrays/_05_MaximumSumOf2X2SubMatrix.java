@@ -55,6 +55,7 @@ public class _05_MaximumSumOf2X2SubMatrix {
         for (int i = 0; i < rows; i++) {
             matrix[i] = Arrays.stream(scan.nextLine().split(splitPattern)).mapToInt(Integer::parseInt).toArray();
         }
+        
         return matrix;
     }
 }
