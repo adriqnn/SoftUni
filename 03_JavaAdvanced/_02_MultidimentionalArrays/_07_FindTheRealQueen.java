@@ -31,7 +31,7 @@ public class _07_FindTheRealQueen {
 
             int c1 = Character.getNumericValue(coordinates.charAt(0));
             int c2 = Character.getNumericValue(coordinates.charAt(1));
-            boolean isItTheRealQueen = isItReal(matrix,c1,c2);
+            boolean isItTheRealQueen = isItReal(matrix, c1, c2);
 
             if (isItTheRealQueen){
                 realQueen = coordinates;
@@ -120,7 +120,7 @@ public class _07_FindTheRealQueen {
 
         for (int j = 0; j < matrix.length; j++) {
             String line = scan.nextLine();
-            char[] charsArr = line.replaceAll(" ","").toCharArray();
+            char[] charsArr = line.replaceAll(" ", "").toCharArray();
             matrix[j] = charsArr;
         }
 
