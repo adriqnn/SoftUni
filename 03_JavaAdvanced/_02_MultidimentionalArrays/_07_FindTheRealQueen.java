@@ -14,7 +14,7 @@ public class _07_FindTheRealQueen {
         ArrayDeque<String> queens = getQueenIndexes(matrix);
 
         // Find the real queen
-        String theRealQueen = revealTheRealQueen(matrix,queens);
+        String theRealQueen = revealTheRealQueen(matrix, queens);
 
         // Print result
         System.out.println(theRealQueen.charAt(0) + " " + theRealQueen.charAt(1));
