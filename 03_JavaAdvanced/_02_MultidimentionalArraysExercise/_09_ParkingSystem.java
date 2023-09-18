@@ -43,7 +43,7 @@ public class _09_ParkingSystem {
             boolean noParkingSpots = true;
             
             while(toLeft > 0 || toRight < parkingLot[rowPark].length){
-                if((isValidLeft(rowPark,toLeft,parkingLot) && parkingLot[rowPark][toLeft]) && (isValidRight(rowPark,toRight,parkingLot) && parkingLot[rowPark][toRight])){
+                if((isValidLeft(rowPark, toLeft, parkingLot) && parkingLot[rowPark][toLeft]) && (isValidRight(rowPark,toRight,parkingLot) && parkingLot[rowPark][toRight])){
                     parkingLot[rowPark][toLeft] = false;
                     noParkingSpots = false;
                     countMoves += toLeft;
@@ -51,7 +51,7 @@ public class _09_ParkingSystem {
                     System.out.println(countMoves);
                     
                     break;
-                }else if(!(isValidLeft(rowPark,toLeft,parkingLot) && parkingLot[rowPark][toLeft]) && (isValidRight(rowPark,toRight,parkingLot) && parkingLot[rowPark][toRight])){
+                }else if(!(isValidLeft(rowPark, toLeft, parkingLot) && parkingLot[rowPark][toLeft]) && (isValidRight(rowPark,toRight,parkingLot) && parkingLot[rowPark][toRight])){
                     parkingLot[rowPark][toRight] = false;
                     noParkingSpots = false;
                     countMoves += toRight;
@@ -59,7 +59,7 @@ public class _09_ParkingSystem {
                     System.out.println(countMoves);
                     
                     break;
-                }else if((isValidLeft(rowPark,toLeft,parkingLot) && parkingLot[rowPark][toLeft]) && !(isValidRight(rowPark,toRight,parkingLot) && parkingLot[rowPark][toRight])){
+                }else if((isValidLeft(rowPark, toLeft, parkingLot) && parkingLot[rowPark][toLeft]) && !(isValidRight(rowPark,toRight,parkingLot) && parkingLot[rowPark][toRight])){
                     parkingLot[rowPark][toLeft] = false;
                     noParkingSpots = false;
                     countMoves += toLeft;
