@@ -7,11 +7,14 @@ import java.util.stream.Collectors;
 public class _08_CustomComparator {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        
+        // Read input values
         List<Integer> numbers = Arrays.stream(scan.nextLine().split("\\s+")).map(Integer::parseInt).collect(Collectors.toList());
-        //comparator - function that has 2 ints In
-        //0 -> int 1 = int 2 - doesn't swap elements
-        //1 -> int 1 > int 2 - swaps elements
-        //-1 -> int 1 < int 2 - doesn't swap elements
+        
+        // Comparator - function that has 2 ints In
+        // 0 -> int 1 = int 2 - doesn't swap elements
+        // 1 -> int 1 > int 2 - swaps elements
+        // -1 -> int 1 < int 2 - doesn't swap elements
         Comparator<Integer> comparator = ((first, second) ->{
             // even and odd;
             //odd and even;
@@ -23,6 +26,10 @@ public class _08_CustomComparator {
                 return first.compareTo(second);
             }
         });
+        
+        // Print result
         numbers.stream().sorted(comparator).forEach(e -> System.out.print(e + " "));
+        
+        scan.close();
     }
 }
