@@ -23,6 +23,8 @@ public class _03_CustomMinFunction {
 
         // Print result
         System.out.println(getMinNumber.apply(numbers));
+        
+        scan.close();
 
         // Other Solution
 //        Consumer<List<Integer>> print = list -> System.out.println(Collections.min(list));
