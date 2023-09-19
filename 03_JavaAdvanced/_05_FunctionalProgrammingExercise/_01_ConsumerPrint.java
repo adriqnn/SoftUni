@@ -20,11 +20,13 @@ public class _01_ConsumerPrint {
 
         scan.close();
 
+        // Other solution
 //        Consumer<String[]> printNames = array -> {
 //            for (String s : array) {
 //                System.out.println(s);
 //            }
 //        };
+        
 //        printNames.accept(names);
     }
 }
