@@ -11,7 +11,7 @@ public class Main {
         
         int numberOfEmployees = Integer.parseInt(scan.nextLine());
         
-        Map<String,Department> departments = new HashMap<>();
+        Map<String, Department> departments = new HashMap<>();
         
         for (int i = 0; i < numberOfEmployees; i++) {
             String[] input = scan.nextLine().split("\\s+");
