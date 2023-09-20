@@ -5,7 +5,6 @@ public class Employee {
     private double salary;
     private String position;
     private String department;
-
     private String email;
     private int age;
 
