@@ -19,6 +19,6 @@ public class Persons {
     
     @Override
     public String toString(){
-        return String.format("%s - %d",this.person,this.age);
+        return String.format("%s - %d", this.person, this.age);
     }
 }
