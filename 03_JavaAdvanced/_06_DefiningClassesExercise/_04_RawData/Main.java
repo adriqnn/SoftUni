@@ -23,7 +23,7 @@ public class Main {
             double tire3Pressure = Double.parseDouble(console[9]);
             double tire4Pressure = Double.parseDouble(console[11]);
             
-            Car newCar = new Car(model,engineHP,cargoType,tire1Pressure,tire2Pressure,tire3Pressure,tire4Pressure);
+            Car newCar = new Car(model, engineHP, cargoType, tire1Pressure, tire2Pressure, tire3Pressure, tire4Pressure);
             carList.add(newCar);
         }
         
