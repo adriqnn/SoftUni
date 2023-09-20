@@ -34,6 +34,6 @@ public class CarInfo {
 
     @Override
     public String toString(){
-        return String.format("The car is: %s %s - %d HP.",this.getBrand(),this.getModel(),this.getHorsePower());
+        return String.format("The car is: %s %s - %d HP.", this.getBrand(), this.getModel(), this.getHorsePower());
     }
 }
