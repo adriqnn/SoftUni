@@ -28,5 +28,7 @@ public class Main {
         for (Car car : cars) {
             System.out.println(car);
         }
+        
+        scan.close();
     }
 }
