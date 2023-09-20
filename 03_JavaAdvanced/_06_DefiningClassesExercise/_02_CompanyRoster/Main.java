@@ -23,21 +23,21 @@ public class Main {
             Employee employee = null;
             
             if(input.length == 4){
-                employee = new Employee(name,salary,position,department);
+                employee = new Employee(name, salary, position, department);
             }else if(input.length == 6){
                 String email = input[4];
                 int age = Integer.parseInt(input[5]);
                 
-                employee = new Employee(name,salary,position,department,email,age);
+                employee = new Employee(name, salary, position, department, email, age);
             }else if (input.length == 5){
                 try{
                     int age = Integer.parseInt(input[4]);
                     
-                    employee = new Employee(name,salary,position,department,age);
+                    employee = new Employee(name, salary, position, department, age);
                 }catch (NumberFormatException e){
                     String email = input[4];
                     
-                    employee = new Employee(name,salary,position,department,email);
+                    employee = new Employee(name, salary, position, department, email);
                 }
             }
             
@@ -48,7 +48,7 @@ public class Main {
         
         Department highestPaidDepartment = departments.entrySet().stream().max(Comparator.comparing(e -> e.getValue().calculateAverageSalary())).get().getValue();
         System.out.println("Highest Average Salary: " + highestPaidDepartment.getName());
-        highestPaidDepartment.getEmployees().stream().sorted((e1,e2) -> Double.compare(e2.getSalary(),e1.getSalary())).forEach(System.out::println);
+        highestPaidDepartment.getEmployees().stream().sorted((e1, e2) -> Double.compare(e2.getSalary(), e1.getSalary())).forEach(System.out::println);
         
         scan.close();
     }
