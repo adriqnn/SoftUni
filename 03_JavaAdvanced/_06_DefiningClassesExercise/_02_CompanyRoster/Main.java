@@ -47,6 +47,7 @@ public class Main {
         }
         
         Department highestPaidDepartment = departments.entrySet().stream().max(Comparator.comparing(e -> e.getValue().calculateAverageSalary())).get().getValue();
+        
         System.out.println("Highest Average Salary: " + highestPaidDepartment.getName());
         highestPaidDepartment.getEmployees().stream().sorted((e1, e2) -> Double.compare(e2.getSalary(), e1.getSalary())).forEach(System.out::println);
         
