@@ -18,24 +18,31 @@ public class Car {
         this.tire3Pressure = tire3Pressure;
         this.tire4Pressure = tire4Pressure;
     }
+    
     public String getModel() {
         return model;
     }
+    
     public int getEngineHP() {
         return engineHP;
     }
+    
     public String getCargoType() {
         return cargoType;
     }
+    
     public double getTire1Pressure() {
         return tire1Pressure;
     }
+    
     public double getTire2Pressure() {
         return tire2Pressure;
     }
+    
     public double getTire3Pressure() {
         return tire3Pressure;
     }
+    
     public double getTire4Pressure() {
         return tire4Pressure;
     }
