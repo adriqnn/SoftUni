@@ -8,20 +8,26 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        Map<String,Person> information = new LinkedHashMap<>();
+        
         String console = scan.nextLine();
+        
+        Map<String, Person> information = new LinkedHashMap<>();
+        
         while(!console.equals("End")){
             String[] commandLine = console.split("\\s+");
+            
             String name = commandLine[0];
             String nr1 = commandLine[1];
             String nr2 = commandLine[2];
             String nr3 = commandLine[3];
             String nr4 = "";
+            
             try{
                 nr4 = commandLine[4];
             }catch(Exception e){
                 nr4 = "";
             }
+            
             information.putIfAbsent(name,new Person(name));
             if (nr1.equals("company")){
                 information.get(name).getCompany().setName(nr2);
@@ -54,5 +60,7 @@ public class Main {
         /*String pokemon3 = pokemon.entrySet().forEach(e -> String.join(System.,S));
         String parents4 = this.parents.toString();
         String children5 = this.children.toString();*/
+        
+        scan.close();
     }
 }
