@@ -8,7 +8,7 @@ public class Main {
 
         int numberOfEngines = Integer.parseInt(scan.nextLine());
 
-        Map<String,Engine> engines = new HashMap<>();
+        Map<String, Engine> engines = new HashMap<>();
 
         for (int i = 0; i < numberOfEngines; i++) {
             String [] input = scan.nextLine().split("\\s+");
@@ -47,25 +47,33 @@ public class Main {
 
         for (int i = 0; i < numberOfCars; i++) {
             String[] input = scan.nextLine().split("\\s+");
+
             String model = input[0];
             String engineModel = input[1];
             Engine carEngine = engines.get(engineModel);
             Car car = null;
+
             if(input.length == 2){
-                car = new Car(model,carEngine);
+                car = new Car(model, carEngine);
             }else if(input.length == 4){
                 int weight = Integer.parseInt(input[2]);
                 String color = input[3];
-                car = new Car(model,carEngine,weight,color);
+
+                car = new Car(model, carEngine, weight, color);
+
             }else{
+                
                 try{
                     int weight = Integer.parseInt(input[2]);
-                    car = new Car(model,carEngine,weight);
+                    
+                    car = new Car(model, carEngine, weight);
+                    
                 }catch (NumberFormatException e){
                     String color = input[2];
-                    car = new Car(model,carEngine,color);
+                    car = new Car(model, carEngine, color);
                 }
             }
+            
             cars.add(car);
         }
 
