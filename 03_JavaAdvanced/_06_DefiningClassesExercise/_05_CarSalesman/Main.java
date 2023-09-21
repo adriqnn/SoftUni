@@ -5,36 +5,46 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        
+
         int numberOfEngines = Integer.parseInt(scan.nextLine());
-        
+
         Map<String,Engine> engines = new HashMap<>();
+
         for (int i = 0; i < numberOfEngines; i++) {
             String [] input = scan.nextLine().split("\\s+");
+
             String model = input[0];
             int power = Integer.parseInt(input[1]);
             Engine engine = null;
+
             if (input.length == 2){
-                engine = new Engine(model,power);
+                engine = new Engine(model, power);
             }else if ( input.length == 4) {
                 int displacement = Integer.parseInt(input[2]);
                 String efficiency = input[3];
-                engine = new Engine(model,power,displacement,efficiency);
+
+                engine = new Engine(model, power, displacement, efficiency);
+
             }else if(input.length == 3){
+
                 try{
                     int displacement = Integer.parseInt(input[2]);
-                    engine =  new Engine(model,power,displacement);
+
+                    engine =  new Engine(model, power, displacement);
+
                 }catch(NumberFormatException e){
                     String efficiency = input[2];
-                    engine = new Engine(model,power,efficiency);
+
+                    engine = new Engine(model, power, efficiency);
                 }
             }
-            engines.put(model,engine);
+
+            engines.put(model, engine);
         }
-        
+
         List<Car> cars = new ArrayList<>();
         int numberOfCars = Integer.parseInt(scan.nextLine());
-        
+
         for (int i = 0; i < numberOfCars; i++) {
             String[] input = scan.nextLine().split("\\s+");
             String model = input[0];
@@ -58,9 +68,9 @@ public class Main {
             }
             cars.add(car);
         }
-        
+
         cars.forEach(System.out::println);
-        
+
         scan.close();
     }
 }
