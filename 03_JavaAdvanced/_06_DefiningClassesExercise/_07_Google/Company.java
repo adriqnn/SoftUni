@@ -10,12 +10,15 @@ public class Company {
         this.department = department;
         this.salary = salary;
     }
+    
     public String getName() {
         return name;
     }
+    
     public String getDepartment() {
         return department;
     }
+    
     public String getSalary() {
         return salary;
     }
@@ -31,13 +34,16 @@ public class Company {
     public void setSalary(String salary) {
         this.salary = salary;
     }
+    
     @Override
     public String toString(){
         if (this.name.equals("")){
             return "Company:" + "\n";
         }
+        
         double number = Double.parseDouble(this.salary);
-        String printSalary = String.format("%.2f",number);
+        
+        String printSalary = String.format("%.2f", number);
         return "Company:" + "\n" + this.name + " " + this.department + " " + printSalary + "\n";
     }
 }
