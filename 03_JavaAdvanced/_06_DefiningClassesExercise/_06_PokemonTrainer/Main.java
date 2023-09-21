@@ -7,14 +7,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+
         String console = scan.nextLine();
-        Map<String,Trainer> tournamentPlayers = new LinkedHashMap<>();
+
+        Map<String, Trainer> tournamentPlayers = new LinkedHashMap<>();
+
         while(!console.equals("Tournament")){
             String[] commandLine = console.split("\\s+");
+
             String trainerName = commandLine[0];
             String pokemonName = commandLine[1];
             String pokemonElement = commandLine[2];
             int pokemonHealth = Integer.parseInt(commandLine[3]);
+
             Pokemon pokemon = new Pokemon(pokemonName,pokemonElement,pokemonHealth);
             tournamentPlayers.putIfAbsent(trainerName,new Trainer(trainerName));
             tournamentPlayers.get(trainerName).getAnimals().add(pokemon);
