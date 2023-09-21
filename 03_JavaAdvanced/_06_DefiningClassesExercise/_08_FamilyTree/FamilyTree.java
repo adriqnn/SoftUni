@@ -34,9 +34,11 @@ public class FamilyTree {
             List<String> children = this.relations.get(key);
             for (String childString : children) {
                 Person child = this.getPerson(childString);
+                
                 if (child == null) {
                     continue;
                 }
+                
                 parent.addChild(child);
             }
         }
@@ -64,15 +66,20 @@ public class FamilyTree {
     public String toString() {
         Collection<Person> parents = this.descendent.getParents();
         Collection<Person> children = this.descendent.getChildren();
+        
         String output = String.format("%s %s\nParents:\n", this.descendent.getName(), this.descendent.getBirthDate());
+        
         if (!parents.isEmpty()) {
             output += getCollectionToString(parents);
             output += "\n";
         }
+        
         output += "Children:\n";
+        
         if (!children.isEmpty()) {
             output += getCollectionToString(children);
         }
+        
         return output;
     }
 
