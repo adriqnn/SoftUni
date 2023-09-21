@@ -32,16 +32,19 @@ public class Engine {
     @Override
     public String toString(){
         String displacementPrint;
+        
         if(displacement == 0){
             displacementPrint = "n/a";
         }else{
             displacementPrint = displacement + "";
         }
+        
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(model).append(":").append("\n")
                 .append("Power: ").append(power).append("\n")
                 .append("Displacement: ").append(displacementPrint).append("\n")
                 .append("Efficiency: ").append(efficiency);
+        
         return stringBuilder.toString();
     }
 }
