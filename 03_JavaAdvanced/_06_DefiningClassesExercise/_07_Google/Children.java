@@ -24,6 +24,7 @@ public class Children {
     public void setDate(String date) {
         this.date = date;
     }
+    
     @Override
     public String toString(){
         return this.name + " " + this.date;
