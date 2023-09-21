@@ -5,7 +5,9 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        
         int numberOfEngines = Integer.parseInt(scan.nextLine());
+        
         Map<String,Engine> engines = new HashMap<>();
         for (int i = 0; i < numberOfEngines; i++) {
             String [] input = scan.nextLine().split("\\s+");
@@ -29,8 +31,10 @@ public class Main {
             }
             engines.put(model,engine);
         }
+        
         List<Car> cars = new ArrayList<>();
         int numberOfCars = Integer.parseInt(scan.nextLine());
+        
         for (int i = 0; i < numberOfCars; i++) {
             String[] input = scan.nextLine().split("\\s+");
             String model = input[0];
@@ -54,6 +58,10 @@ public class Main {
             }
             cars.add(car);
         }
+        
         cars.forEach(System.out::println);
+        
+        scan.close();
     }
 }
+
