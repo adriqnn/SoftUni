@@ -20,20 +20,24 @@ public class Main {
             String pokemonElement = commandLine[2];
             int pokemonHealth = Integer.parseInt(commandLine[3]);
 
-            Pokemon pokemon = new Pokemon(pokemonName,pokemonElement,pokemonHealth);
-            tournamentPlayers.putIfAbsent(trainerName,new Trainer(trainerName));
+            Pokemon pokemon = new Pokemon(pokemonName, pokemonElement, pokemonHealth);
+            tournamentPlayers.putIfAbsent(trainerName, new Trainer(trainerName));
             tournamentPlayers.get(trainerName).getAnimals().add(pokemon);
+            
+            // Other solution
             /*if(!tournamentPlayers.containsKey(trainerName)){
                 Trainer trainer = new Trainer(trainerName);
-                Pokemon pokemon = new Pokemon(pokemonName,pokemonElement,pokemonHealth);
+                Pokemon pokemon = new Pokemon(pokemonName, pokemonElement, pokemonHealth);
                 trainer.getAnimals().add(pokemon);
-                tournamentPlayers.put(trainerName,trainer);
+                tournamentPlayers.put(trainerName, trainer);
             }else{
-                Pokemon pokemon = new Pokemon(pokemonName,pokemonElement,pokemonHealth);
+                Pokemon pokemon = new Pokemon(pokemonName, pokemonElement, pokemonHealth);
                 tournamentPlayers.get(trainerName).getAnimals().add(pokemon);
             }*/
+            
             console = scan.nextLine();
         }
+        
         String element = scan.nextLine();
         while(!element.equals("End")){
             for (String e : tournamentPlayers.keySet()) {
@@ -55,9 +59,13 @@ public class Main {
             }
             element = scan.nextLine();
         }
+        
+        tournamentPlayers.entrySet().stream().sorted((e1,e2) -> Integer.compare(e2.getValue().getNumberOfBadges(),e1.getValue().getNumberOfBadges())).forEach(e -> System.out.println(e.getValue()));
+        
+        scan.close();
+        
         //tournamentPlayers.entrySet().stream().sorted((e1,e2) -> Integer.compare(e1.getValue().getNumberOfBadges(),e2.getValue().getNumberOfBadges())).forEach();
         //tournamentPlayers.entrySet().stream().sorted(Comparator.comparingInt(e -> e.getValue().getNumberOfBadges())).forEach(System.out::println);
-        tournamentPlayers.entrySet().stream().sorted((e1,e2) -> Integer.compare(e2.getValue().getNumberOfBadges(),e1.getValue().getNumberOfBadges())).forEach(e -> System.out.println(e.getValue()));
         // forEach(e -> System.out.println(e.getValue()));
         /*tournamentPlayers.entrySet().stream().sorted((e1,e2) -> Integer.compare(e2.getValue().getNumberOfBadges(),e1.getValue().getNumberOfBadges())).forEach(e -> {
             int yep = 0;
