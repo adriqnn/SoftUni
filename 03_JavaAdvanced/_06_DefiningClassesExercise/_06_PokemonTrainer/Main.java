@@ -23,7 +23,7 @@ public class Main {
             Pokemon pokemon = new Pokemon(pokemonName, pokemonElement, pokemonHealth);
             tournamentPlayers.putIfAbsent(trainerName, new Trainer(trainerName));
             tournamentPlayers.get(trainerName).getAnimals().add(pokemon);
-            
+
             // Other solution
             /*if(!tournamentPlayers.containsKey(trainerName)){
                 Trainer trainer = new Trainer(trainerName);
@@ -34,10 +34,10 @@ public class Main {
                 Pokemon pokemon = new Pokemon(pokemonName, pokemonElement, pokemonHealth);
                 tournamentPlayers.get(trainerName).getAnimals().add(pokemon);
             }*/
-            
+
             console = scan.nextLine();
         }
-        
+
         String element = scan.nextLine();
         while(!element.equals("End")){
             for (String e : tournamentPlayers.keySet()) {
@@ -51,30 +51,34 @@ public class Main {
                         break;
                     }
                 }
+
                 if(!hasCounter){
                     for (Pokemon p : tournamentPlayers.get(e).getAnimals()) {
                         p.setHealth(p.getHealth()-10);
                     }
                 }
             }
+
             element = scan.nextLine();
         }
-        
-        tournamentPlayers.entrySet().stream().sorted((e1,e2) -> Integer.compare(e2.getValue().getNumberOfBadges(),e1.getValue().getNumberOfBadges())).forEach(e -> System.out.println(e.getValue()));
-        
+
+        tournamentPlayers.entrySet().stream().sorted((e1, e2) -> Integer.compare(e2.getValue().getNumberOfBadges(), e1.getValue().getNumberOfBadges())).forEach(e -> System.out.println(e.getValue()));
+
         scan.close();
-        
-        //tournamentPlayers.entrySet().stream().sorted((e1,e2) -> Integer.compare(e1.getValue().getNumberOfBadges(),e2.getValue().getNumberOfBadges())).forEach();
+
+        //tournamentPlayers.entrySet().stream().sorted((e1, e2) -> Integer.compare(e1.getValue().getNumberOfBadges(), e2.getValue().getNumberOfBadges())).forEach();
         //tournamentPlayers.entrySet().stream().sorted(Comparator.comparingInt(e -> e.getValue().getNumberOfBadges())).forEach(System.out::println);
-        // forEach(e -> System.out.println(e.getValue()));
-        /*tournamentPlayers.entrySet().stream().sorted((e1,e2) -> Integer.compare(e2.getValue().getNumberOfBadges(),e1.getValue().getNumberOfBadges())).forEach(e -> {
+        //forEach(e -> System.out.println(e.getValue()));
+        /*tournamentPlayers.entrySet().stream().sorted((e1, e2) -> Integer.compare(e2.getValue().getNumberOfBadges(), e1.getValue().getNumberOfBadges())).forEach(e -> {
             int yep = 0;
+
             for (Pokemon p : e.getValue().getAnimals()) {
                 if (p.getHealth() > 0){
                     yep++;
                 }
             }
-            System.out.println(String.format("%s %s %d", e.getKey(),e.getValue().getNumberOfBadges(),yep));
+
+            System.out.println(String.format("%s %s %d", e.getKey(), e.getValue().getNumberOfBadges(), yep));
         });*/
     }
 }
