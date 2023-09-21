@@ -13,12 +13,15 @@ public class Trainer {
         numberOfBadges = 0;
         animals = new ArrayList<>();
     }
+    
     public int getNumberOfBadges() {
         return numberOfBadges;
     }
+    
     public List<Pokemon> getAnimals() {
         return animals;
     }
+    
     public String getName() {
         return name;
     }
@@ -26,17 +29,21 @@ public class Trainer {
     public void setNumberOfBadges(int numberOfBadges) {
         this.numberOfBadges = numberOfBadges;
     }
+    
     public void setAnimals(List<Pokemon> animals) {
         this.animals = animals;
     }
+    
     @Override
     public String toString(){
         int number = 0;
+        
         for (int i = 0; i < animals.size(); i++) {
             if(animals.get(i).getHealth() > 0){
                 number++;
             }
         }
+        
         return this.name + " " + this.numberOfBadges + " " + number;
     }
 }
