@@ -12,18 +12,23 @@ public class Main {
     public static void main(String[] args) throws IOException {
         readDescendent();
         String input;
+        
         while (! END_COMMAND.equals(input = reader.readLine())) {
             String[] tokens = input.split(" - ");
 
             if (tokens.length == 2) {
                 String parent = tokens[0];
                 String child = tokens[1];
+                
                 familyTree.addRelation(parent, child);
+                
             } else {
                 String[] tie = tokens[0].split("\\s+");
+                
                 String givenName = tie[0];
                 String familyName = tie[1];
                 String birthDate = tie[2];
+                
                 familyTree.addFamilyMember(givenName, familyName, birthDate);
             }
         }
@@ -40,12 +45,16 @@ public class Main {
 
     private static Person initPerson(String token) {
         String[] tokens = token.split("\\s+");
+        
         if (tokens.length == 2) {
             String givenName = tokens[0];
             String familyName = tokens[1];
+            
             return new Person(givenName, familyName);
+            
         } else {
             String birthDate = tokens[0];
+            
             return new Person(birthDate);
         }
     }
