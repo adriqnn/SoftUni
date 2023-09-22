@@ -1,4 +1,5 @@
 package _03_JavaAdvanced._07_WorkshopExercise._01_LinkedList;
+
 public class Node {
     public int value;
     public Node next;
