@@ -14,6 +14,7 @@ public class Main {
 
         while (!"End".equals(input = reader.readLine())) {
             String[] tokens = input.split(" ");
+            
             String type = tokens[0];
             String name = tokens[1];
             double value = Double.parseDouble(tokens[2]);
@@ -33,10 +34,13 @@ public class Main {
                 cats.put(name, cat);
             }
         }
+        
         String catName = reader.readLine();
 
         if (cats.containsKey(catName)) {
             System.out.println(cats.get(catName));
         }
+        
+        reader.close();
     }
 }
