@@ -14,12 +14,14 @@ public class Box<T extends Comparable<T>> {
     public Box() {
         this.values = new ArrayList<>();
     }
-    public void swap(int firstIndex,int secondIndex){
-        //Collections.swap(values,firstIndex,secondIndex);
+    
+    public void swap(int firstIndex, int secondIndex){
+        //Collections.swap(values, firstIndex, secondIndex);
         T temporary = values.get(firstIndex);
-        values.set(firstIndex,values.get(secondIndex));
-        values.set(secondIndex,temporary);
+        values.set(firstIndex, values.get(secondIndex));
+        values.set(secondIndex, temporary);
     }
+    
     public int countOfGreaterItems(T element){
         return (int) values.stream().filter(e -> e.compareTo(element) > 0).count();
 
@@ -31,10 +33,12 @@ public class Box<T extends Comparable<T>> {
 
     @Override
     public String toString(){
-        StringBuilder sb  = new StringBuilder();
+        StringBuilder sb  = new StringBuilder(); 
+        
         for (T value : values) {
-            sb.append(String.format("%s: %s",value.getClass().getName(),value)).append(System.lineSeparator());
-        }
+            sb.append(String.format("%s: %s", value.getClass().getName(), value)).append(System.lineSeparator());
+        } 
+        
         return sb.toString();
     }
 }
