@@ -22,9 +22,11 @@ public class Box<T> {
     @Override
     public String toString(){
         StringBuilder sb  = new StringBuilder();
+
         for (T value : values) {
-            sb.append(String.format("%s: %s",value.getClass().getName(),value)).append(System.lineSeparator());
+            sb.append(String.format("%s: %s", value.getClass().getName(), value)).append(System.lineSeparator());
         }
+
         return sb.toString();
     }
 }
