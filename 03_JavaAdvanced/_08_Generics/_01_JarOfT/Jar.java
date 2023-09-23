@@ -4,7 +4,6 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class Jar<T> {
-    // Test Jar
     private Deque<T> elements;
 
     public Jar() {
