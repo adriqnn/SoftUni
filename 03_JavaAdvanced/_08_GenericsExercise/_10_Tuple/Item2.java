@@ -13,6 +13,7 @@ public class Item2<G> {
 
     public Item2<G> setElement(G element) {
         this.element = element;
+        
         return this;
     }
 
