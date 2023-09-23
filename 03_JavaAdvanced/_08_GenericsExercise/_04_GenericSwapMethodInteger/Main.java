@@ -18,6 +18,7 @@ public class Main {
 
         int firstIndex = Integer.parseInt(indexes[0]);
         int secondIndex = Integer.parseInt(indexes[1]);
+        
         box.swap(firstIndex, secondIndex);
 
         System.out.println(box);
