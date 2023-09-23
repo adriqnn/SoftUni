@@ -4,12 +4,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String console = scanner.nextLine();
+        // Test CustomList and Sorter
+        Scanner scan = new Scanner(System.in);
+
+        String console = scan.nextLine();
         CustomList<String> customList = new CustomList<>();
+
         while(!console.equals("END")){
             String[] commandLine = console.split("\\s+");
+
             String commandName = commandLine[0];
+
             switch (commandName){
                 case "Add":
                     String elementToAdd = commandLine[1];
@@ -45,7 +50,10 @@ public class Main {
                     System.out.print(customList);
                     break;
             }
-            console = scanner.nextLine();
+
+            console = scan.nextLine();
         }
+
+        scan.close();
     }
 }
