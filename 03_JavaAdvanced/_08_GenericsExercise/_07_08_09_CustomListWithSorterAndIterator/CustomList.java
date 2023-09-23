@@ -24,8 +24,8 @@ public class CustomList<T extends Comparable<T>> implements Iterable<T> {
         return elements.contains(element);
     }
 
-    public void swap(int firstIndex,int secondIndex){
-        Collections.swap(elements,firstIndex,secondIndex);
+    public void swap(int firstIndex, int secondIndex){
+        Collections.swap(elements, firstIndex, secondIndex);
     }
 
     public int countGreaterThan(T element){
@@ -34,13 +34,13 @@ public class CustomList<T extends Comparable<T>> implements Iterable<T> {
 
     public T getMax(){
         return Collections.max(elements);
-        //return elements.stream().max((first,second) -> first.compareTo(second)).get();
+        //return elements.stream().max((first, second) -> first.compareTo(second)).get();
         //return elements.stream().max(Comparator.naturalOrder()).get();
     }
 
     public T getMin(){
         return Collections.min(elements);
-        //return elements.stream().min((first,second) -> second.compareTo(first)).get();
+        //return elements.stream().min((first, second) -> second.compareTo(first)).get();
         //return elements.stream().min(Comparator.naturalOrder()).get();
     }
 
@@ -55,9 +55,11 @@ public class CustomList<T extends Comparable<T>> implements Iterable<T> {
     @Override
     public String toString(){
         StringBuilder builder = new StringBuilder();
+        
         for (T element : this.elements) {
             builder.append(element).append(System.lineSeparator());
         }
+        
         return builder.toString();
     }
 
@@ -65,19 +67,24 @@ public class CustomList<T extends Comparable<T>> implements Iterable<T> {
     public Iterator<T> iterator(){
         Iterator<T> it = new Iterator<T>() {
             private int currentIndex = 0;
+            
             @Override
             public boolean hasNext(){
                 return currentIndex < elements.size() && elements.get(currentIndex) != null;
             }
+            
             @Override
             public T next(){
                 return elements.get(currentIndex++);
             }
+            
             @Override
             public void remove(){
                 throw new UnsupportedOperationException();
             }
         };
+        
         return it;
     }
 }
+
