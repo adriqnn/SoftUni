@@ -9,7 +9,6 @@ public class Tuple<T, G> {
 //        this.item2 = item2;
 //    }
 
-
     public Tuple(Item1<T> item1, Item2<G> item2) {
         this.item1 = item1;
         this.item2 = item2;
