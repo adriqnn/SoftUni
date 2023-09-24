@@ -94,7 +94,7 @@ class PlantData{
     }
 
     public int getRarity() {
-        return rarity;
+        return this.rarity;
     }
 
     public double getAverageRating(){
