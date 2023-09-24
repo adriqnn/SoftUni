@@ -76,7 +76,7 @@ public class _03_PlantDiscovery {
     }
 }
 
-// Create practice PlantData class
+// Create practice PlantData class 
 class PlantData{
     private List<Integer> ratings;
     private int rarity;
@@ -116,3 +116,4 @@ class PlantData{
         this.ratings = ratings;
     }
 }
+
