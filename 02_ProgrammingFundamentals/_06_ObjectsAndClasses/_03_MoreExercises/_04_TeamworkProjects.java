@@ -156,7 +156,7 @@ class Teams{
     }
 
     public int getSize() {
-        return size;
+        return this.size;
     }
 
     public void setSize(int size) {
@@ -164,15 +164,15 @@ class Teams{
     }
 
     public String getCreator() {
-        return creator;
+        return this.creator;
     }
 
     public String getTeam() {
-        return team;
+        return this.team;
     }
 
     public List<String> getMembers() {
-        return members;
+        return this.members;
     }
 
     @Override
