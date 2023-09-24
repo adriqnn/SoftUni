@@ -110,26 +110,27 @@ class Employee {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public double getSalary() {
-        return salary;
+        return this.salary;
     }
 
     public String getPosition() {
-        return position;
+        return this.position;
     }
 
     public String getDepartment() {
-        return department;
+        return this.department;
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
+
     public int getAge() {
-        return age;
+        return this.age;
     }
 
     @Override
@@ -155,11 +156,11 @@ class Department{
     }
 
     public double getSalaries() {
-        return salaries;
+        return this.salaries;
     }
 
     public int getNumber() {
-        return number;
+        return this.number;
     }
 
     public void setDepartment(String department) {
@@ -179,3 +180,4 @@ class Department{
         return String.format("%s %d %.2f", this.department, this.number, this.salaries);
     }
 }
+
