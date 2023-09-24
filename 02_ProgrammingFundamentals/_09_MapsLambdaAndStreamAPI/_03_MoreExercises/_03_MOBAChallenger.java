@@ -94,7 +94,7 @@ class PLayer{
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public PLayer setName(String name) {
@@ -103,7 +103,7 @@ class PLayer{
     }
 
     public int getTotalPoints() {
-        return totalPoints;
+        return this.totalPoints;
     }
 
     public PLayer setTotalPoints(int totalPoints) {
@@ -112,7 +112,7 @@ class PLayer{
     }
 
     public List<Position> getPositions() {
-        return positions;
+        return this.positions;
     }
 
     public PLayer setPositions(List<Position> positions) {
@@ -132,7 +132,7 @@ class Position{
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public Position setName(String name) {
@@ -141,7 +141,7 @@ class Position{
     }
 
     public int getSkillPoints() {
-        return skillPoints;
+        return this.skillPoints;
     }
 
     public Position setSkillPoints(int skillPoints) {
@@ -149,5 +149,3 @@ class Position{
         return this;
     }
 }
-
-
