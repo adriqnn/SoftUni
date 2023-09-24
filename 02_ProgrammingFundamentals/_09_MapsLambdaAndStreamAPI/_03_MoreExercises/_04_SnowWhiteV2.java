@@ -67,7 +67,7 @@ class Dwarf{
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public Dwarf setName(String name) {
@@ -76,7 +76,7 @@ class Dwarf{
     }
 
     public String getColor() {
-        return color;
+        return this.color;
     }
 
     public Dwarf setColor(String color) {
@@ -85,7 +85,7 @@ class Dwarf{
     }
 
     public int getPhysics() {
-        return physics;
+        return this.physics;
     }
 
     public Dwarf setPhysics(int physics) {
@@ -94,7 +94,7 @@ class Dwarf{
     }
 
     public int getColorGrp() {
-        return colorGrp;
+        return this.colorGrp;
     }
 
     public Dwarf setColorGrp(int colorGrp) {
