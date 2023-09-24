@@ -57,7 +57,7 @@ class Student {
     }
     
     public String getTown() {
-        return town;
+        return this.town;
     }
     
     @Override
