@@ -67,38 +67,38 @@ class StudentInfo {
     private String secondName;
     private int age;
     private String town;
-    
+
     public StudentInfo(String firstName, String secondName, int age, String town) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.age = age;
         this.town = town;
     }
-    
+
     public void setTown(String town) {
         this.town = town;
     }
-    
+
     public void setAge(int age) {
         this.age = age;
     }
-    
+
     public String getFirstName() {
-        return firstName;
+        return this.firstName;
     }
-    
+
     public String getSecondName() {
-        return secondName;
+        return this.secondName;
     }
-    
+
     public int getAge() {
-        return age;
+        return this.age;
     }
-    
+
     public String getTown() {
-        return town;
+        return this.town;
     }
-    
+
     @Override
     public String toString() {
         return this.firstName + " " + this.secondName + " is " + this.age + " years old";
