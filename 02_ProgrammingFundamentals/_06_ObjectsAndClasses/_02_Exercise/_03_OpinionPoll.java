@@ -55,11 +55,12 @@ class Person {
         this.person = person;
         this.age = age;
     }
+    
     public int getAge() {
-        return age;
+        return this.age;
     }
 
     public String getPerson() {
-        return person;
+        return this.person;
     }
 }
