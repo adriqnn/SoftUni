@@ -40,24 +40,24 @@ public class _06_OrderByAge {
     }
 }
 
-// Create practice Student class
-class Student {
-    private String firstName;
-    private String lastName;
-    private double grade;
+// Create practice Album class
+class Album{
+    private String name ;
+    private String personalNUmber;
+    private int age;
 
-    public Student(String firstName, String lastName, double grade) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.grade = grade;
+    public Album(String name, String personalNUmber, int age) {
+        this.name = name;
+        this.personalNUmber = personalNUmber;
+        this.age = age;
     }
 
-    public double getGrade() {
-        return this.grade;
+    public int getAge() {
+        return this.age;
     }
 
     @Override
     public String toString(){
-        return String.format("%s %s: %.2f%n", this.firstName, this.lastName, this.grade);
+        return String.format("%s with ID: %s is %d years old.", this.name, this.personalNUmber, this.age);
     }
 }
