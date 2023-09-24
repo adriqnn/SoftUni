@@ -46,7 +46,7 @@ class Student {
     }
 
     public double getGrade() {
-        return grade;
+        return this.grade;
     }
 
     @Override
@@ -54,3 +54,4 @@ class Student {
         return String.format("%s %s: %.2f%n", this.firstName, this.lastName, this.grade);
     }
 }
+
