@@ -85,7 +85,7 @@ class Vehicle {
     }
 
     public String getModel() {
-        return model;
+        return this.model;
     }
 
     @Override
