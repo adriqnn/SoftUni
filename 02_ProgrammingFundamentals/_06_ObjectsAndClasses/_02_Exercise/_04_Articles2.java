@@ -49,22 +49,22 @@ class ArticlesDatabase{
     private String title;
     private String content;
     private String author;
-    
+
     public ArticlesDatabase(String title, String content, String author) {
         this.title = title;
         this.content = content;
         this.author = author;
     }
-    
+
     public String getTitle() {
-        return title;
+        return this.title;
     }
-    
+
     public String getContent() {
-        return content;
+        return this.content;
     }
-    
+
     public String getAuthor() {
-        return author;
+        return this.author;
     }
 }
