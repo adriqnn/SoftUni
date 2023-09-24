@@ -124,7 +124,7 @@ class Student {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public Student setName(String name) {
@@ -133,7 +133,7 @@ class Student {
     }
 
     public int getScore() {
-        return score;
+        return this.score;
     }
 
     public Student setScore(int score) {
