@@ -117,19 +117,19 @@ class CarInfo{
     }
 
     public String getModel() {
-        return model;
+        return this.model;
     }
 
     public EngineInfo getEngine() {
-        return engine;
+        return this.engine;
     }
 
     public String getWeight() {
-        return weight;
+        return this.weight;
     }
 
     public String getColor() {
-        return color;
+        return this.color;
     }
 }
 
@@ -148,18 +148,18 @@ class EngineInfo{
     }
 
     public String getModel() {
-        return model;
+        return this.model;
     }
 
     public String getPower() {
-        return power;
+        return this.power;
     }
 
     public String getDisplacement() {
-        return displacement;
+        return this.displacement;
     }
 
     public String getEfficiency() {
-        return efficiency;
+        return this.efficiency;
     }
 }
