@@ -10,7 +10,7 @@ public class _10_OddEvenSum {
         int n = Integer.parseInt(scan.nextLine());
 
         int sumEven = 0;
-        int sumOdd =0;
+        int sumOdd = 0;
 
         // Loop through the n sequence of numbers and sum even and odd numbers
         for (int i = 1; i <= n; i++) {
@@ -27,9 +27,9 @@ public class _10_OddEvenSum {
 
         // Compare the sums and print the result
         if (sumEven == sumOdd){
-            System.out.printf("Yes%n Sum = %d",sumEven);
+            System.out.printf("Yes%n Sum = %d", sumEven);
         }else{
-            System.out.printf("No %n Diff = %d",Math.abs(sumEven-sumOdd));
+            System.out.printf("No %n Diff = %d", Math.abs(sumEven - sumOdd));
         }
 
         scan.close();
