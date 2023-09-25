@@ -35,7 +35,7 @@ public class _04_SumOfTwoNumbers {
 
         // Print result
         if(!isDone){
-            System.out.printf("%d combinations - neither equals %d",count,magicNum);
+            System.out.printf("%d combinations - neither equals %d", count, magicNum);
         }
 
         scan.close();
