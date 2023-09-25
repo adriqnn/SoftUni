@@ -22,13 +22,13 @@ public class _03_HouseParty {
                 if(!partyList.contains(commandline[0])){
                     partyList.add(commandline[0]);
                 }else{
-                    System.out.printf("%s is already in the list!%n",commandline[0]);
+                    System.out.printf("%s is already in the list!%n", commandline[0]);
                 }
             }else{
                 if(partyList.contains(commandline[0])){
                     partyList.remove(commandline[0]);
                 }else{
-                    System.out.printf("%s is not in the list!%n",commandline[0]);
+                    System.out.printf("%s is not in the list!%n", commandline[0]);
                 }
             }
         }
