@@ -24,7 +24,7 @@ public class _05_Login {
             count++;
             
             if(count == 4){
-                System.out.printf("User %s blocked!%n",username);
+                System.out.printf("User %s blocked!%n", username);
                 return;
             }
             
@@ -34,7 +34,7 @@ public class _05_Login {
         }
 
         // Print result
-        System.out.printf("User %s logged in.%n",username);
+        System.out.printf("User %s logged in.%n", username);
 
         scan.close();
     }
