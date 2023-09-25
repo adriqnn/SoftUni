@@ -21,7 +21,7 @@ public class _04_ListOperations {
                 numbersList.add(Integer.parseInt(commandLine[1]));
             }else if(commandLine[0].equals("Insert")){
                 if(Integer.parseInt(commandLine[2]) >= 0 && Integer.parseInt(commandLine[2]) < numbersList.size()){
-                    numbersList.add(Integer.parseInt(commandLine[2]),Integer.parseInt(commandLine[1]));
+                    numbersList.add(Integer.parseInt(commandLine[2]), Integer.parseInt(commandLine[1]));
                 }else{
                     System.out.println("Invalid index");
                 }
