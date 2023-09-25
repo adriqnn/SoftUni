@@ -17,6 +17,6 @@ public class _06_CalculateRectangleArea {
     }
 
     private static void rectangleArea(double width, double height) {
-        System.out.printf("%.0f",width*height);
+        System.out.printf("%.0f", width * height);
     }
 }
