@@ -54,8 +54,8 @@ public class _03_TakeSkipRope {
                         result.append(fromDecryptStrings.charAt(j));
                     }
                     
-                    fromDecryptStrings.delete(0,take);
-                    fromDecryptStrings.delete(0,skip);
+                    fromDecryptStrings.delete(0, take);
+                    fromDecryptStrings.delete(0, skip);
                 }catch (Exception e){
                 }
             }catch(Exception e){
