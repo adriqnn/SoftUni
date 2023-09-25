@@ -18,6 +18,6 @@ public class _08_MathPower {
     }
 
     private static double whatIsThePowerOF(double num, double power) {
-        return Math.pow(num,power);
+        return Math.pow(num, power);
     }
 }
