@@ -26,13 +26,13 @@ public class _01_DataTypeFinder {
             if(console.equalsIgnoreCase("true") || console.equalsIgnoreCase("false")){
                 System.out.printf("%s is boolean type%n", console);
             }else if (console.length() == 1 && (console.charAt(0) <= 47 || console.charAt(0) >= 58)){
-                System.out.printf("%s is character type%n",console);
+                System.out.printf("%s is character type%n", console);
             }else if (matcherFloat.find()){
-                System.out.printf("%s is floating point type%n",console);
+                System.out.printf("%s is floating point type%n", console);
             }else if (matcherInteger.find()){
-                System.out.printf("%s is integer type%n",console);
+                System.out.printf("%s is integer type%n", console);
             }else{
-                System.out.printf("%s is string type%n",console);
+                System.out.printf("%s is string type%n", console);
             }
             
             console = scan.nextLine();
