@@ -11,7 +11,7 @@ public class _08_FactorialDivision {
         int n2 = Integer.parseInt(scan.nextLine());
         
         // Print result from the factorial division method
-        System.out.printf("%.2f",(1.00 * factorialDivision(n1)) / factorialDivision(n2));
+        System.out.printf("%.2f", (1.00 * factorialDivision(n1)) / factorialDivision(n2));
         
         scan.close();
     }
