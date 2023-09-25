@@ -33,7 +33,7 @@ public class _04_Walking {
             if (stepsCounter >= 10000){
                 System.out.printf("Goal reached! Good job!%n%d steps over the goal!", Math.abs(10000 - stepsCounter));
             }else{
-                System.out.printf("%d more steps to reach goal.",Math.abs(10000 - stepsCounter));
+                System.out.printf("%d more steps to reach goal.", Math.abs(10000 - stepsCounter));
             }
         }
 
