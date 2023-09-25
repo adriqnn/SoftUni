@@ -38,9 +38,9 @@ public class _02_CarRace {
         
         // Print result
         if(timeFirstRacer < timeSecondRacer){
-            System.out.printf("The winner is left with total time: %.1f%n",timeFirstRacer);
+            System.out.printf("The winner is left with total time: %.1f%n", timeFirstRacer);
         }else if(timeFirstRacer > timeSecondRacer){
-            System.out.printf("The winner is right with total time: %.1f%n",timeSecondRacer);
+            System.out.printf("The winner is right with total time: %.1f%n", timeSecondRacer);
         }
         
         scan.close();
