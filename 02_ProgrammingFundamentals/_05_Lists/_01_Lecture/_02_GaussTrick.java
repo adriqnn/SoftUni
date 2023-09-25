@@ -14,7 +14,7 @@ public class _02_GaussTrick {
         //List<String> hmm = Arrays.stream(scan.nextLine().split("\\s+")).collect(Collectors.toList());
 
         // Add variable
-        int middle = listNumbers.size()/2;
+        int middle = listNumbers.size() / 2;
 
         // Sum numbers in the given pattern
         for (int i = 0; i < middle; i++) {
