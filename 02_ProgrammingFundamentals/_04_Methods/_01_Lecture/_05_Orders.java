@@ -11,7 +11,7 @@ public class _05_Orders {
         double quantity = Double.parseDouble(scan.nextLine());
 
         // Create method for incoming orders
-        whatIsThePrice(item,quantity);
+        whatIsThePrice(item, quantity);
 
         scan.close();
     }
