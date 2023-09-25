@@ -18,6 +18,7 @@ public class _10_TheLift {
         for (int i = 0; i < liftSeatsPosition.length; i++) {
             if(liftSeatsPosition[i] < 4){
                 int availableSeats = 4 - liftSeatsPosition[i];
+                
                 if(remainingPeopleInQueue >= availableSeats){
                     remainingPeopleInQueue -= availableSeats;
                     liftSeatsPosition[i] = 4;
