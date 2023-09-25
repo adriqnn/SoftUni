@@ -38,7 +38,7 @@ public class _08_TennisRankList {
         // Print the statistics
         System.out.printf("Final points: %d%n", score2);
         System.out.printf("Average points: %.0f%n", Math.floor(average));
-        System.out.printf("%.2f%%",percentile);
+        System.out.printf("%.2f%%", percentile);
 
         scan.close();
     }
