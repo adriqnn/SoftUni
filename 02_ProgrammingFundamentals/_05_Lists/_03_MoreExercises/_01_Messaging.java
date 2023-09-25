@@ -24,7 +24,7 @@ public class _01_Messaging {
                 sum += Character.getNumericValue(symbol);
             }
             
-            numbersList.set(i,sum);
+            numbersList.set(i, sum);
         }
         
         StringBuilder lineToPrint = new StringBuilder();
