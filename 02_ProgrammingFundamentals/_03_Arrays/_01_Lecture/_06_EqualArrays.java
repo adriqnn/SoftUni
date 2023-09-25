@@ -30,7 +30,7 @@ public class _06_EqualArrays {
         if(isEqual){
             System.out.println("Arrays are identical. Sum: " + sum);
         }else{
-            System.out.println("Arrays are not identical. Found difference at "+sum+" index.");
+            System.out.println("Arrays are not identical. Found difference at " + sum + " index.");
         }
         
         scan.close();
