@@ -16,7 +16,7 @@ public class _05_DecryptingMessage {
         // Decrypt the message
         for (int i = 0; i < numberOfLines; i++) {
             char symbol = scan.nextLine().charAt(0);
-            symbol = (char) (symbol+keyToDecrypt);
+            symbol = (char) (symbol + keyToDecrypt);
 
             message.append(symbol);
         }
