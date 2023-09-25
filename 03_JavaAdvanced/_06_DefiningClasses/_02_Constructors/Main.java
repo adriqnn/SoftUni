@@ -19,7 +19,7 @@ public class Main {
             if(tokens.length == 1){
                 car = new Car(tokens[0]);
             }else{
-                car = new Car(tokens[0],tokens[1],Integer.parseInt(tokens[2]));
+                car = new Car(tokens[0], tokens[1], Integer.parseInt(tokens[2]));
             }
 
             cars.add(car);
