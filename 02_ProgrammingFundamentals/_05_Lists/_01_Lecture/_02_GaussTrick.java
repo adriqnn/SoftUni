@@ -18,7 +18,7 @@ public class _02_GaussTrick {
 
         // Sum numbers in the given pattern
         for (int i = 0; i < middle; i++) {
-            listNumbers.set(i,listNumbers.get(i) + listNumbers.get(listNumbers.size()-1));
+            listNumbers.set(i, listNumbers.get(i) + listNumbers.get(listNumbers.size()-1));
             listNumbers.remove(listNumbers.size()-1);
         }
         
