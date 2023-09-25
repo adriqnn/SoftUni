@@ -5,7 +5,7 @@ public class CarInfo {
     private String model;
     private int horsePower;
 
-    public CarInfo(String brand, String model, int horsePower){
+    public CarInfo(String brand,String model,int horsePower){
         this.brand = brand;
         this.model = model;
         this.horsePower = horsePower;
@@ -17,15 +17,15 @@ public class CarInfo {
     }
 
     public String getBrand(){
-        return brand;
+        return this.brand;
     }
 
     public String getModel(){
-        return model;
+        return this.model;
     }
 
     public int getHorsePower() {
-        return horsePower;
+        return this.horsePower;
     }
 
     public void setHorsePower(int horsePower) {
