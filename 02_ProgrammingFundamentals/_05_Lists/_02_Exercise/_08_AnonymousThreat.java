@@ -40,7 +40,7 @@ public class _08_AnonymousThreat {
                         endIndex--;
                     }
 
-                    stringList.add(startIndex,appendElements.toString());
+                    stringList.add(startIndex, appendElements.toString());
                 }
             }else if(command.equals("divide")){
                 int index = Integer.parseInt(commandsInformation[1]);
@@ -49,11 +49,11 @@ public class _08_AnonymousThreat {
                 String toDivide = stringList.get(index);
                 stringList.remove(index);
 
-                int partitionSize = toDivide.length()/partitions;
+                int partitionSize = toDivide.length() / partitions;
                 int begin = 0;
 
                 for (int i = 1; i < partitions; i++) {
-                    stringList.add(index,toDivide.substring(begin,begin+partitionSize));
+                    stringList.add(index, toDivide.substring(begin, begin + partitionSize));
                     index++;
                     begin += partitionSize;
                 }
@@ -65,7 +65,7 @@ public class _08_AnonymousThreat {
         }
 
         // Print result
-        System.out.println(String.join(" ",stringList));
+        System.out.println(String.join(" ", stringList));
 
         scan.close();
     }
