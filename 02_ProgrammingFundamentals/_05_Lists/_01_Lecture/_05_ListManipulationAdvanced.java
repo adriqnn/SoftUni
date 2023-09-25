@@ -89,6 +89,7 @@ public class _05_ListManipulationAdvanced {
                 
                 System.out.println();
             }
+            
             console = scan.nextLine();
         }
         
