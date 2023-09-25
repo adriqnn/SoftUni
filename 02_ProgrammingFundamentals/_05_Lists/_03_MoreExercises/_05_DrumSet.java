@@ -24,14 +24,14 @@ public class _05_DrumSet {
             int hitPower = Integer.parseInt(commands);
             
             for (int i = 0; i < drumsActualQualityNow.size(); i++) {
-                drumsActualQualityNow.set(i,(drumsActualQualityNow.get(i) - hitPower));
+                drumsActualQualityNow.set(i, (drumsActualQualityNow.get(i) - hitPower));
             }
             
             for (int i = 0; i < drumsActualQualityNow.size(); i++) {
                 if(drumsActualQualityNow.get(i) <= 0){
-                    if(moneyToSpend - (drumsBaseQuality.get(i)*3) >= 0){
-                        drumsActualQualityNow.set(i,drumsBaseQuality.get(i));
-                        moneyToSpend -= drumsBaseQuality.get(i)*3;
+                    if(moneyToSpend - (drumsBaseQuality.get(i) * 3) >= 0){
+                        drumsActualQualityNow.set(i, drumsBaseQuality.get(i));
+                        moneyToSpend -= drumsBaseQuality.get(i) * 3;
                     }else{
                         drumsBaseQuality.remove(i);
                         drumsActualQualityNow.remove(i);
@@ -45,7 +45,7 @@ public class _05_DrumSet {
         // Print result
         drumsActualQualityNow.stream().forEach(e -> System.out.print(e + " "));
         System.out.println();
-        System.out.printf("Gabsy has %.2flv.",moneyToSpend);
+        System.out.printf("Gabsy has %.2flv.", moneyToSpend);
         
         scan.close();
     }
