@@ -27,6 +27,7 @@ public class _11_TreasureHunt {
                 }
             }else if(command.equals("Drop")){
                 int index = Integer.parseInt(commands[1]);
+                
                 if(index < loot.size() && index >= 0){
                     String removed = loot.remove(index);
                     loot.add(removed);
@@ -34,12 +35,13 @@ public class _11_TreasureHunt {
             }else if(command.equals("Steal")){
                 int count = Integer.parseInt(commands[1]);
                 List<String> stolen = new ArrayList<>();
+                
                 if(count >= loot.size()){
                     stolen.addAll(loot);
                     loot.clear();
                 }else{
                     for (int i = 0; i < count; i++) {
-                        stolen.add(loot.remove(loot.size()-(count - i)));
+                        stolen.add(loot.remove(loot.size() - (count - i)));
                     }
                 }
                 System.out.println(stolen.stream().collect(Collectors.joining(", ")));
