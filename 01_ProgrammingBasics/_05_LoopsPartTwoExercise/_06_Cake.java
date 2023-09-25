@@ -34,7 +34,7 @@ public class _06_Cake {
 
         // Display the remaining pieces if the user stopped
         if (console.equals("STOP")){
-            System.out.printf("%d pieces are left.",remainingCake);
+            System.out.printf("%d pieces are left.", remainingCake);
         }
 
         scan.close();
