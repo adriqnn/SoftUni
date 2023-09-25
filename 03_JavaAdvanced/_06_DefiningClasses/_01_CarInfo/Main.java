@@ -14,13 +14,12 @@ public class Main {
         for (int i = 0; i < n; i++) {
             String[] carLine = scan.nextLine().split("\\s+");
 
-            CarInfo car = new CarInfo(carLine[0],carLine[1],Integer.parseInt(carLine[2]));
+            CarInfo car = new CarInfo(carLine[0], carLine[1], Integer.parseInt(carLine[2]));
             cars.add(car);
         }
 
         cars.forEach(System.out::println);
-        
+
         scan.close();
     }
 }
-
