@@ -24,7 +24,7 @@ public class _04_ListManipulationBasics {
             }else if(commandline.equals("RemoveAt")){
                 numberList.remove(Integer.parseInt(console.split("\\s+")[1]));
             }else if(commandline.equals("Insert")){
-                numberList.add(Integer.parseInt(console.split("\\s+")[2]),Integer.parseInt(console.split("\\s+")[1]));
+                numberList.add(Integer.parseInt(console.split("\\s+")[2]), Integer.parseInt(console.split("\\s+")[1]));
             }
 
             console = scan.nextLine();
