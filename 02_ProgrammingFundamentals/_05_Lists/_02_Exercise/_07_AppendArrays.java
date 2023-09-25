@@ -17,7 +17,7 @@ public class _07_AppendArrays {
         Collections.reverse(numbersList);
 
         // Print result
-        System.out.println(numbersList.toString().replace("[", "").replace("]","").replaceAll(",","").replaceAll("\\s+"," "));
+        System.out.println(numbersList.toString().replace("[", "").replace("]", "").replaceAll(",", "").replaceAll("\\s+", " "));
 
         scan.close();
     }
