@@ -50,7 +50,7 @@ public class _04_TribonacciSequence {
             n1 = n2;
             n2 = n3;
             
-            n3 += temp1+temp2;
+            n3 += temp1 + temp2;
         }
     }
 }
