@@ -38,7 +38,7 @@ public class _11_RageExpenses {
         double total = (headset * headset2) + (mouse * mouse2) + (keyboard * keyboard2) + (display2 * display);
 
         // Print result
-        System.out.printf("Rage expenses: %.2f lv.",total);
+        System.out.printf("Rage expenses: %.2f lv.", total);
         
         scan.close();
     }
