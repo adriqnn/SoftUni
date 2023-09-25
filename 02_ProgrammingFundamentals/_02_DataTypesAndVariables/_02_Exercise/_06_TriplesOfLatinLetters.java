@@ -16,6 +16,7 @@ public class _06_TriplesOfLatinLetters {
                     char first = (char) ('a' + i);
                     char second = (char) ('a' + j);
                     char third = (char) ('a' + k);
+                    
                     System.out.printf("%c%c%c%n", first, second, third);
                 }
             }
