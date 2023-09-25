@@ -41,13 +41,13 @@ public class _06_CardsGame {
                 sum += integer;
             }
 
-            System.out.printf("Second player wins! Sum: %d%n",sum);
+            System.out.printf("Second player wins! Sum: %d%n", sum);
         }else {
             for (Integer integer : cardsList1) {
                 sum += integer;
             }
 
-            System.out.printf("First player wins! Sum: %d%n",sum);
+            System.out.printf("First player wins! Sum: %d%n", sum);
         }
 
         scan.close();
