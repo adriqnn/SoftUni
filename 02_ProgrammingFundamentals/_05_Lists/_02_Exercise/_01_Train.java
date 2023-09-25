@@ -25,7 +25,7 @@ public class _01_Train {
                 
                 for (int i = 0; i < trainWagonsPassengers.size(); i++) {
                     if(trainWagonsPassengers.get(i) + addPassengers <= capacityOfWagon){
-                        trainWagonsPassengers.set(i,trainWagonsPassengers.get(i) + addPassengers);
+                        trainWagonsPassengers.set(i, trainWagonsPassengers.get(i) + addPassengers);
                         break;
                     }
                 }
