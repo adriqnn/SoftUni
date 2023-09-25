@@ -41,7 +41,7 @@ public class _03_Vacation {
 
         // Display the result based on whether the vacation cost was met
         if (initialMoney >= vacationCost){
-            System.out.printf("You saved the money for %d days.",daysPassed);
+            System.out.printf("You saved the money for %d days.", daysPassed);
         }
 
         scan.close();
