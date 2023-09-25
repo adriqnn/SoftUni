@@ -17,7 +17,7 @@ public class _01_SumAdjacentEqualNumbers {
         for (int i = 0; i < listNumbers.size()-1; i++) {
             if (listNumbers.get(i).equals(listNumbers.get(i+1))){
                 double sum = listNumbers.get(i) + listNumbers.get(i+1);
-                listNumbers.set(i,sum);
+                listNumbers.set(i, sum);
                 listNumbers.remove(i+1);
                 i = -1;
             }
