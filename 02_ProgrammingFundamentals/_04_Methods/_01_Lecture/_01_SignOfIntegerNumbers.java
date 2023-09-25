@@ -19,9 +19,9 @@ public class _01_SignOfIntegerNumbers {
         if (num == 0){
             System.out.println("The number 0 is zero.");
         }else if (num > 0){
-            System.out.printf("The number %d is positive.",num);
+            System.out.printf("The number %d is positive.", num);
         }else{
-            System.out.printf("The number %d is negative.",num);
+            System.out.printf("The number %d is negative.", num);
         }
     }
 }
