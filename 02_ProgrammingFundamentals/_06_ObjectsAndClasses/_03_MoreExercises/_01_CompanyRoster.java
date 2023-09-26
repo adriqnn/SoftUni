@@ -56,10 +56,10 @@ public class _01_CompanyRoster {
             }
             
             if (containsDepartment){
-                departments.get(index).setNumber(departments.get(index).getNumber()+1);
-                departments.get(index).setSalaries(departments.get(index).getSalaries()+salary);
+                departments.get(index).setNumber(departments.get(index).getNumber() + 1);
+                departments.get(index).setSalaries(departments.get(index).getSalaries() + salary);
             }else{
-                Department newDepartment = new Department(department,1,salary);
+                Department newDepartment = new Department(department, 1, salary);
                 departments.add(newDepartment);
             }
             
@@ -79,7 +79,7 @@ public class _01_CompanyRoster {
         departments.sort(Comparator.comparing(Department::getSalaries).reversed());
 
         // Print result
-        System.out.printf("Highest Average Salary: %s%n",departments.get(0).getDepartment());
+        System.out.printf("Highest Average Salary: %s%n", departments.get(0).getDepartment());
         employeeList.sort(Comparator.comparing(Employee::getSalary).reversed());
         employeeList.stream().forEach(e ->{
             if(e.getDepartment().equals(departments.get(0).getDepartment())){
@@ -172,7 +172,7 @@ class Department{
     }
 
     public String getDepartment() {
-        return department;
+        return this.department;
     }
 
     @Override
