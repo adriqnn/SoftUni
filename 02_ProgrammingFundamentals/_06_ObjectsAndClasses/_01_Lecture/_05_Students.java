@@ -23,7 +23,7 @@ public class _05_Students {
             int age = Integer.parseInt(lineFromConsole[2]);
             String town = lineFromConsole[3];
             
-            Student student = new Student(firstName,secondName,age,town);
+            Student student = new Student(firstName, secondName, age, town);
             studentList.add(student);
             
             console = scan.nextLine();
