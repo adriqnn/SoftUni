@@ -23,8 +23,8 @@ public class _06_Students2 {
             int age = Integer.parseInt(lineFromConsole[2]);
             String town = lineFromConsole[3];
             
-            if(!isAlreadyExistingInsideTheList(firstName,secondName,age,town,studentList)){
-                StudentInfo student = new StudentInfo(firstName,secondName,age,town);
+            if(!isAlreadyExistingInsideTheList(firstName, secondName, age, town, studentList)){
+                StudentInfo student = new StudentInfo(firstName, secondName, age, town);
                 
                 studentList.add(student);
             }
@@ -45,7 +45,7 @@ public class _06_Students2 {
     }
     
     // Define method to check if the value already exists in the list
-    private static boolean isAlreadyExistingInsideTheList(String firstName,String secondName,int age,String town, List<StudentInfo> studentList){
+    private static boolean isAlreadyExistingInsideTheList(String firstName, String secondName, int age, String town, List<StudentInfo> studentList){
         for (StudentInfo element : studentList) {
             boolean firstNameBoolean = element.getFirstName().equals(firstName);
             boolean secondNameBoolean = element.getSecondName().equals(secondName);
