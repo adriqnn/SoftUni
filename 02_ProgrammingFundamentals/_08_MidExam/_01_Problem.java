@@ -24,7 +24,7 @@ public class _01_Problem {
         }
         
         // Print result
-        System.out.printf("Total: $%.2f%n",everything);
+        System.out.printf("Total: $%.2f%n", everything);
         
         scan.close();
     }
