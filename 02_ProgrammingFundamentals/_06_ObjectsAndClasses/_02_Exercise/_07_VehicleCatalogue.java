@@ -35,7 +35,7 @@ public class _07_VehicleCatalogue {
                 trucks++;
             }
             
-            Vehicle catalogueEntry = new Vehicle(type,model,color,horsePower);
+            Vehicle catalogueEntry = new Vehicle(type, model, color, horsePower);
             vehicles.add(catalogueEntry);
             
             console = scan.nextLine();
