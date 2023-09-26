@@ -43,7 +43,7 @@ public class _03_TheLift {
                 System.out.print(i + " ");
             }
         }else if (count == 0 && people > 0){
-            System.out.printf("There isn't enough space! %d people in a queue!%n",people);
+            System.out.printf("There isn't enough space! %d people in a queue!%n", people);
             
             for (int i : state) {
                 System.out.print(i + " ");
