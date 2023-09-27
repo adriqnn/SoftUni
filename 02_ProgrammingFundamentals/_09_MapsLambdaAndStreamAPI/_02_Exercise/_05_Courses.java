@@ -15,6 +15,7 @@ public class _05_Courses {
         // Register courses
         while(!input.equals("end")){
             String[] courseInformation = input.split(" : ");
+            
             String course = courseInformation[0];
             String name = courseInformation[1];
 
