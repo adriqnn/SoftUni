@@ -26,7 +26,7 @@ public class _03_Problem {
             switch(command){
                 case "Like":
                     if(!guestLikes.containsKey(guestName)){
-                        guestLikes.put(guestName,new ArrayList<>());
+                        guestLikes.put(guestName, new ArrayList<>());
                     }
                     
                     if(!guestLikes.get(guestName).contains(mealName)){
@@ -36,17 +36,17 @@ public class _03_Problem {
                     break;
                 case "Unlike":
                     if (!guestLikes.containsKey(guestName)){
-                        System.out.printf("%s is not at the party.%n",guestName);
+                        System.out.printf("%s is not at the party.%n", guestName);
                         console = scan.nextLine();
                         continue;
                     }
                     
                     if(guestLikes.get(guestName).contains(mealName)){
                         guestLikes.get(guestName).remove(mealName);
-                        System.out.printf("%s doesn't like the %s.%n",guestName,mealName);
+                        System.out.printf("%s doesn't like the %s.%n", guestName, mealName);
                         unlikedMeals++;
                     }else{
-                        System.out.printf("%s doesn't have the %s in his/her collection.%n",guestName,mealName);
+                        System.out.printf("%s doesn't have the %s in his/her collection.%n", guestName, mealName);
                     }
                     
                     break;
@@ -56,10 +56,10 @@ public class _03_Problem {
         }
         
         // Print result
-        guestLikes.entrySet().stream().sorted((m1,m2) -> Integer.compare(m2.getValue().size(), m1.getValue().size()))
+        guestLikes.entrySet().stream().sorted((m1, m2) -> Integer.compare(m2.getValue().size(), m1.getValue().size()))
                 .forEach(guest -> {
                     System.out.print(guest.getKey() + ": ");
-                    System.out.print(guest.getValue().toString().replace("[", "").replace("]",""));
+                    System.out.print(guest.getValue().toString().replace("[", "").replace("]", ""));
                     System.out.println();
                 });
         System.out.printf("Unliked meals: %d", unlikedMeals);
@@ -68,15 +68,15 @@ public class _03_Problem {
     }
 }
 /*
-carsMileage.entrySet().stream().sorted((car1,car2) -> Integer.compare(car2.getValue(),car1.getValue()))
+carsMileage.entrySet().stream().sorted((car1, car2) -> Integer.compare(car2.getValue(), car1.getValue()))
                 .forEach(carEntry -> {
                     String carName = carEntry.getKey();
-                    System.out.printf("%s -> Mileage: %d kms, Fuel in the tank: %d lt.%n",carEntry.getKey(),carEntry.getValue(),carsFuel.get(carName));
+                    System.out.printf("%s -> Mileage: %d kms, Fuel in the tank: %d lt.%n", carEntry.getKey(), carEntry.getValue(), carsFuel.get(carName));
                 });
  */
 /*
 courses.entrySet().stream()
-                .sorted((e1,e2) -> Integer.compare(e2.getValue().size(), e1.getValue().size()))
+                .sorted((e1, e2) -> Integer.compare(e2.getValue().size(), e1.getValue().size()))
                 .forEach(entry -> {
                     System.out.println(entry.getKey() + ": " + entry.getValue().size());
                     //entry.getValue().stream().sorted().forEach(studentName -> System.out.println("-- " + studentName));});
