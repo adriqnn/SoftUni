@@ -8,7 +8,7 @@ public class _04_SoftUniParking {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input value
+        // Read input values
         int numberOfCommands = Integer.parseInt(scan.nextLine());
 
         // Add variable
@@ -28,16 +28,16 @@ public class _04_SoftUniParking {
                     System.out.printf("ERROR: already registered with plate number %s%n", licensePlate);
                     continue;
                 }
+                
                 registry.put(username, licensePlate);
-
                 System.out.printf("%s registered %s successfully%n", username, licensePlate);
             }else{
-                if(!registry.containsKey(username)){
+                if(!registry.containsKey(username)) {
                     System.out.printf("ERROR: user %s not found%n", username);
                     continue;
                 }
+                
                 registry.remove(username);
-
                 System.out.printf("%s unregistered successfully%n", username);
             }
         }
