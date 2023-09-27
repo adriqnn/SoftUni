@@ -27,6 +27,7 @@ public class _03_HeroesOfCodeAndLogicVII {
             if (hp <= 100){
                 heroesHP.put(heroName, hp);
             }
+            
             if (mp <= 200){
                 heroesMP.put(heroName, mp);
             }
@@ -80,7 +81,7 @@ public class _03_HeroesOfCodeAndLogicVII {
                     }
 
                     heroesMP.put(heroName, increasedMP);
-                    System.out.printf("%s recharged for %d MP!%n", heroName, increasedMP-currentMPForRecharge);
+                    System.out.printf("%s recharged for %d MP!%n", heroName, increasedMP - currentMPForRecharge);
 
                     break;
                 case "Heal":
@@ -93,7 +94,7 @@ public class _03_HeroesOfCodeAndLogicVII {
                     }
 
                     heroesHP.put(heroName, increasedHP);
-                    System.out.printf("%s healed for %d HP!%n", heroName, increasedHP-currentHPForHeal);
+                    System.out.printf("%s healed for %d HP!%n", heroName, increasedHP - currentHPForHeal);
 
                     break;
             }
@@ -102,7 +103,7 @@ public class _03_HeroesOfCodeAndLogicVII {
         }
 
         // Print result
-        heroesHP.entrySet().stream().sorted((h1, h2) -> Integer.compare(h2.getValue(),h1.getValue()))
+        heroesHP.entrySet().stream().sorted((h1, h2) -> Integer.compare(h2.getValue(), h1.getValue()))
                 .forEach(heroEntry -> {
                     String heroName = heroEntry.getKey();
                     System.out.println(heroEntry.getKey());
