@@ -1,6 +1,6 @@
 # Programming Basics
 
-1. First Steps in Programming
+* First Steps in Programming
 2. Conditional Statements
 3. Complex Conditional Statements
 4. For Loop
