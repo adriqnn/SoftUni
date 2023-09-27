@@ -10,7 +10,7 @@ public class _03_PlantDiscovery {
         int plantNumber = Integer.parseInt(scan.nextLine());
 
         // Add variable
-        Map<String,PlantData> currentPlants = new LinkedHashMap<>();
+        Map<String, PlantData> currentPlants = new LinkedHashMap<>();
 
         // Add plants
         for (int i = 0; i < plantNumber; i++) {
@@ -56,12 +56,13 @@ public class _03_PlantDiscovery {
                     System.out.println("error");
                     break;
             }
+            
             command = scan.nextLine();
         }
 
         // Print result
         System.out.println("Plants for the exhibition:");
-        currentPlants.entrySet().stream().sorted((p1,p2) -> {
+        currentPlants.entrySet().stream().sorted((p1, p2) -> {
             int result = Integer.compare(p2.getValue().getRarity(), p1.getValue().getRarity());
 
             if (result == 0){
