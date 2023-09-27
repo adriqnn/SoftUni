@@ -44,6 +44,7 @@ public class _03_PostOffice {
         scan.close();
     }
 }
+
 //    String capitalLetters = "([#$%*&]+)(?<string>[A-Z]+)\\1";
 //
 //    char c = (int) 'C';
@@ -51,12 +52,12 @@ public class _03_PostOffice {
 //
 //    String character = "";
 //    int length = 1;
-//    String word = String.format("%s[a-z]{%d}",length);
+//    String word = String.format("%s[a-z]{%d}", length);
 //
-//            String regexWord = String.format("%s[^ A-Z]{%d}", letter, wordLength);
-//            Pattern patternWord = Pattern.compile(regexWord);
-//            Matcher matcherWord = patternWord.matcher(input[2]);
+//    String regexWord = String.format("%s[^ A-Z]{%d}", letter, wordLength);
+//    Pattern patternWord = Pattern.compile(regexWord);
+//    Matcher matcherWord = patternWord.matcher(input[2]);
 //
-//            while(matcherWord.find()){
-//                System.out.println(matcherWord.group());
-//            }
+//    while(matcherWord.find()){
+//        System.out.println(matcherWord.group());
+//    }
