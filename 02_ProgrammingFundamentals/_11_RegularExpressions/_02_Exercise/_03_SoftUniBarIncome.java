@@ -26,9 +26,9 @@ public class _03_SoftUniBarIncome {
                 int count = Integer.parseInt(matcher.group("count"));
                 double price = Double.parseDouble(matcher.group("price"));
                 
-                total += count*price;
+                total += count * price;
                 
-                System.out.printf("%s: %s - %.2f%n",customer,product,count*price);
+                System.out.printf("%s: %s - %.2f%n", customer, product, count * price);
             }
             
             input = scan.nextLine();
