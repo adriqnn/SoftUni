@@ -77,14 +77,14 @@ public class _05_NetherRealms {
 }
 
 //    Matcher matcherAction = patternAction.matcher(console.get(i));
-//            while(matcherAction.find()){
-//                    actions.add(matcherAction.group().charAt(0));
-//                    }
-//
-//                    for (int j = 0; j < actions.size(); j++) {
-//        if(actions.get(j) == '*'){
-//        attackDemons *= 2;
-//        }else if(actions.get(j) == '/'){
-//        attackDemons /=2;
+//        while(matcherAction.find()){
+//            actions.add(matcherAction.group().charAt(0));
 //        }
+//
+//        for (int j = 0; j < actions.size(); j++) {
+//            if(actions.get(j) == '*'){
+//                attackDemons *= 2;
+//            }else if(actions.get(j) == '/'){
+//                attackDemons /=2;
+//            }
 //        }
