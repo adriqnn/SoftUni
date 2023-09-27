@@ -27,8 +27,8 @@ public class _06_StudentAcademy {
         students
                 .entrySet()
                 .stream()
-                .filter(e -> (e.getValue().stream().mapToDouble(Double::doubleValue).sum()/e.getValue().size()) >= 4.50).forEach(e -> {
-                    System.out.printf("%s -> %.2f%n", e.getKey(), e.getValue().stream().mapToDouble(Double::doubleValue).sum()/e.getValue().size());
+                .filter(e -> (e.getValue().stream().mapToDouble(Double::doubleValue).sum() / e.getValue().size()) >= 4.50).forEach(e -> {
+                    System.out.printf("%s -> %.2f%n", e.getKey(), e.getValue().stream().mapToDouble(Double::doubleValue).sum() / e.getValue().size());
                 });
 
         scan.close();
