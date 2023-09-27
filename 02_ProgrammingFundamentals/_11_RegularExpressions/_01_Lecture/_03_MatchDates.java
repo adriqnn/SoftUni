@@ -22,7 +22,7 @@ public class _03_MatchDates {
             String month = matcher.group("month");
             String year = matcher.group("year");
             
-            System.out.printf("Day: %s, Month: %s, Year: %s%n",day,month,year);
+            System.out.printf("Day: %s, Month: %s, Year: %s%n", day, month, year);
         }
         
         scan.close();
