@@ -42,11 +42,13 @@ public class _02_Judge {
                     students.get(username).put(contest, points);
                 } else {
                     int savedPoints = students.get(username).get(contest);
+                    
                     if (savedPoints < points) {
                         students.get(username).put(contest, points);
                     }
                 }
             }
+            
             input = scan.nextLine();
         }
 
@@ -65,9 +67,10 @@ public class _02_Judge {
 
             List<Student> unorderedStudents = new ArrayList<>();
             participantsResults.entrySet().forEach(e -> {
-                Student student = new Student(e.getKey(),e.getValue());
+                Student student = new Student(e.getKey(), e.getValue());
                 unorderedStudents.add(student);
             });
+            
             List<Student> orderedStudents = unorderedStudents.stream().sorted(Comparator.comparing(Student::getScore).reversed().thenComparing(Student::getName)).collect(Collectors.toList());
 
             for (int i = 0; i < orderedStudents.size(); i++) {
