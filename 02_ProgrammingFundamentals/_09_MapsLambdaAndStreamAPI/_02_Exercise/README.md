@@ -1,1 +1,1 @@
-# Maps Lambda and Stream API - Exercise 
+# Maps Lambda and Stream API - Exercise
