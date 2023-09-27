@@ -32,7 +32,7 @@ public class _01_WorldTour {
                     int index2 = Integer.parseInt(input[1]);
                     int index3 = Integer.parseInt(input[2]);
 
-                    if (indexIsValid(index2,initialDestination.toString()) && indexIsValid(index3, initialDestination.toString())) {
+                    if (indexIsValid(index2, initialDestination.toString()) && indexIsValid(index3, initialDestination.toString())) {
                         initialDestination.delete(index2, index3+1);
                     }
 
