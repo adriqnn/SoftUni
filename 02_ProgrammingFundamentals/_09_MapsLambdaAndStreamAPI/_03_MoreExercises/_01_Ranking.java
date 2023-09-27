@@ -80,7 +80,7 @@ public class _01_Ranking {
         System.out.println("Ranking:");
 
         System.out.println(students.entrySet().stream()
-                .map(e -> String.format("%s%n%s", e.getKey(), e.getValue().entrySet().stream().sorted((e1,e2) -> e2.getValue().compareTo(e1.getValue())).map(element -> String.format("#  %s -> %d", element.getKey(), element.getValue())).collect(Collectors.joining("\n")))).collect(Collectors.joining("\n")));
+                .map(e -> String.format("%s%n%s", e.getKey(), e.getValue().entrySet().stream().sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue())).map(element -> String.format("#  %s -> %d", element.getKey(), element.getValue())).collect(Collectors.joining("\n")))).collect(Collectors.joining("\n")));
 
         scan.close();
     }
