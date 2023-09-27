@@ -45,7 +45,7 @@ public class _02_Race {
 
             if(racersDistance.containsKey(racerName)){
                 int currentDistance = racersDistance.get(racerName);
-                racersDistance.put(racerName,currentDistance + distance);
+                racersDistance.put(racerName, currentDistance + distance);
             }
 
             input = scan.nextLine();
@@ -54,14 +54,14 @@ public class _02_Race {
         /*List<String> firstThreeNames = racersDistance.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
                 .limit(3).map(entry -> entry.getKey()).collect(Collectors.toList());*/
 
-        Map<String,Integer> sortedMap = racersDistance.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).limit(3)
-                .collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue, (a1,a2) -> a1,LinkedHashMap::new));
+        Map<String, Integer> sortedMap = racersDistance.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).limit(3)
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (a1, a2) -> a1, LinkedHashMap::new));
         List<String> firstThreeNames = new ArrayList<>();
         sortedMap.entrySet().forEach(entry -> firstThreeNames.add(entry.getKey()));
 
         //racersDistance = racersDistance.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).collect(Collectors.toMap());
-        //sorted(entry2.getValue.entry1.getValue)
-        //racerDistance.entrySet().stream().sorted(e1,e2 -> e2.getValue().compareTo(getValue(e1))
+        //sorted(entry2.getValue, entry1.getValue)
+        //racerDistance.entrySet().stream().sorted(e1, e2 -> e2.getValue().compareTo(getValue(e1))
 
         // Print result
         System.out.println("1st place: " + firstThreeNames.get(0));
