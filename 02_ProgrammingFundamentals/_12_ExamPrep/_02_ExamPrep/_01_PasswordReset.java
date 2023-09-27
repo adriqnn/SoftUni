@@ -35,7 +35,7 @@ public class _01_PasswordReset {
                     //String substringToRemove = password.substring(index, index+length);
                     //password = password.replaceFirst(substringToRemove, "");
 
-                    console.replace(index,index+length, "");
+                    console.replace(index, index + length, "");
                     System.out.println(console);
                     break;
                 case "Substitute":
