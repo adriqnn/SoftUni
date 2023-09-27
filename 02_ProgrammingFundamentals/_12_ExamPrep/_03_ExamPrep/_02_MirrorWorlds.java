@@ -44,12 +44,12 @@ public class _02_MirrorWorlds {
             System.out.println("No word pairs found!");
             System.out.println("No mirror words!");
         }else{
-            System.out.printf("%d word pairs found!%n",countPairs);
+            System.out.printf("%d word pairs found!%n", countPairs);
             if (countMirrorWords == 0){
                 System.out.println("No mirror words!");
             }else{
                 System.out.println("The mirror words are:");
-                System.out.println(mirrors.toString().replace("[", "").replace("]",""));
+                System.out.println(mirrors.toString().replace("[", "").replace("]", ""));
             }
         }
         
