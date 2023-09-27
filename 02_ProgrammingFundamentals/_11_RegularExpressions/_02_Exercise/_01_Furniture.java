@@ -40,7 +40,7 @@ public class _01_Furniture {
         // Print result
         System.out.println("Bought furniture:");
         furnitureList.forEach(System.out::println);
-        System.out.printf("Total money spend: %.2f",totalMoney);
+        System.out.printf("Total money spend: %.2f", totalMoney);
         
         scan.close();
     }
