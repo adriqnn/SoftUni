@@ -36,9 +36,11 @@ public class _04_SnowWhiteV2 {
         List<Dwarf> unorderedDwarfs = new ArrayList<>();
         dwarfs.forEach((key, value) -> {
             String[] info = key.split(">>>>>");
+            
             String name = info[0];
             String color = info[1];
             int colorGroup = colorGroups.get(color);
+            
             unorderedDwarfs.add(new Dwarf(name, color, value, colorGroup));
         });
 
