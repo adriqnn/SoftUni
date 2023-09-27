@@ -28,6 +28,7 @@ public class _02_DestinationMapper {
         // Determine destination
         while (regexMatcher.find()){
             locations.add(regexMatcher.group("destination"));
+            
             for (int i = 0; i < regexMatcher.group("destination").length(); i++) {
                 sum++;
             }
