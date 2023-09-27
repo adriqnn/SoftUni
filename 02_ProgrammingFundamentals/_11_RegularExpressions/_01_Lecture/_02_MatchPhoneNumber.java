@@ -25,7 +25,7 @@ public class _02_MatchPhoneNumber {
         }
 
         // Print result
-        System.out.println(matchedPhones.toString().replaceAll("[\\[\\]]",""));
+        System.out.println(matchedPhones.toString().replaceAll("[\\[\\]]", ""));
 
         scan.close();
     }
