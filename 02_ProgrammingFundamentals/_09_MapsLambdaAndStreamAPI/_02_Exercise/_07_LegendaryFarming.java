@@ -86,8 +86,8 @@ public class _07_LegendaryFarming {
         }
 
         // Print result
-        System.out.printf("shards: %d%n",legendaries.get("Shadowmourne"));
-        System.out.printf("fragments: %d%n",legendaries.get("Valanyr"));
+        System.out.printf("shards: %d%n", legendaries.get("Shadowmourne"));
+        System.out.printf("fragments: %d%n", legendaries.get("Valanyr"));
         System.out.printf("motes: %d%n", legendaries.get("Dragonwrath"));
 
         garbage.entrySet().forEach(e -> System.out.printf("%s: %d%n", e.getKey(), e.getValue()));
