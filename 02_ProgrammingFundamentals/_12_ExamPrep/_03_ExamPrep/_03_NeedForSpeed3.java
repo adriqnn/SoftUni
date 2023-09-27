@@ -94,7 +94,7 @@ public class _03_NeedForSpeed3 {
         }
         
         // Print result
-        carsMileage.entrySet().stream().sorted((car1,car2) -> Integer.compare(car2.getValue(),car1.getValue()))
+        carsMileage.entrySet().stream().sorted((car1, car2) -> Integer.compare(car2.getValue(), car1.getValue()))
                 .forEach(carEntry -> {
                     String carName = carEntry.getKey();
                     System.out.printf("%s -> Mileage: %d kms, Fuel in the tank: %d lt.%n", carEntry.getKey(), carEntry.getValue(), carsFuel.get(carName));
