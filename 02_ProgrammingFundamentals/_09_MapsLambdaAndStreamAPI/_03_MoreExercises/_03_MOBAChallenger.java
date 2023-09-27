@@ -63,18 +63,20 @@ public class _03_MOBAChallenger {
         players.entrySet().stream().forEach(e -> {
             PLayer pLayer = new PLayer(e.getKey(), 0);
             pLayer.setTotalPoints(e.getValue().values().stream().mapToInt(Integer::intValue).sum());
+            
             e.getValue().entrySet().stream().forEach(el -> {
                 Position position = new Position(el.getKey(), el.getValue());
                 pLayer.getPositions().add(position);
             });
+            
             playersNew.add(pLayer);
         });
 
         // Print result
         playersNew.stream().sorted(Comparator.comparing(PLayer::getTotalPoints).reversed().thenComparing(PLayer::getName)).forEach(e -> {
-            System.out.printf("%s: %d skill%n",e.getName(),e.getTotalPoints());
+            System.out.printf("%s: %d skill%n", e.getName(), e.getTotalPoints());
             String collect = e.getPositions().stream().sorted(Comparator.comparing(Position::getSkillPoints).reversed().thenComparing(Position::getName)).map(p -> String.format("- %s <::> %d", p.getName(), p.getSkillPoints())).collect(Collectors.joining("\n"));
-            System.out.printf("%s%n",collect);
+            System.out.printf("%s%n", collect);
         });
 
         scan.close();
