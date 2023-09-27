@@ -41,6 +41,7 @@ public class _04_SnowWhite {
         // Print result
         dwarfs.entrySet().stream().sorted((pair1, pair2) -> {
             int sort = Integer.compare(pair2.getValue(), pair1.getValue());
+            
             if (sort == 0) {
 
                 String[] color1 = pair1.getKey().split(">>>>>");
@@ -48,8 +49,10 @@ public class _04_SnowWhite {
 
                 int size1 = colorGroups.get(color1[1]);
                 int size2 = colorGroups.get(color2[1]);
+                
                 sort = Integer.compare(size2, size1);
             }
+            
             return sort;
         }).forEach(pair -> {
             String[] print = pair.getKey().split(">>>>>");
