@@ -76,9 +76,11 @@ public class _08_InfixToPostfixV2 {
 
     private static int precedence(int operatorType) {
         int[] precedence = {1, 1, 2, 2};
+        
         if (operatorType >= 0 && operatorType < precedence.length) {
             return precedence[operatorType];
         }
+        
         return -1; // Handle invalid operatorType gracefully
     }
 }
