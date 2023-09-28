@@ -50,7 +50,7 @@ public class _07_MathPotato {
         }
         
         for (int i = 2; i < cycle; i++) {
-            if(cycle%i == 0){
+            if(cycle % i == 0){
                 return false;
             }
         }
