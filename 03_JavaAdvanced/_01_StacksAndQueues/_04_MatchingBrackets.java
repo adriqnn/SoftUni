@@ -23,7 +23,7 @@ public class _04_MatchingBrackets {
                 int begin = stackOfBrackets.pop();
 
                 // Print result
-                System.out.println(expression.substring(begin, i+1));
+                System.out.println(expression.substring(begin, i + 1));
             }
         }
 
