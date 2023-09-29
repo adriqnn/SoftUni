@@ -32,19 +32,19 @@ public class _08_WrongMeasurements {
                     int newValueFromFor = 0;
 
                     if(matrix[i][j] == n){
-                        if(indexIsValid(matrix,i-1,j) && matrix[i-1][j] != n){
+                        if(indexIsValid(matrix, i-1, j) && matrix[i-1][j] != n){
                             newValueFromFor += matrix[i-1][j];
                         }
 
-                        if(indexIsValid(matrix,i,j-1) && matrix[i][j-1] != n){
+                        if(indexIsValid(matrix, i, j-1) && matrix[i][j-1] != n){
                             newValueFromFor += matrix[i][j-1];
                         }
 
-                        if(indexIsValid(matrix,i,j+1) && matrix[i][j+1] != n){
+                        if(indexIsValid(matrix, i, j+1) && matrix[i][j+1] != n){
                             newValueFromFor += matrix[i][j+1];
                         }
 
-                        if(indexIsValid(matrix,i+1,j) && matrix[i+1][j] != n){
+                        if(indexIsValid(matrix, i+1, j) && matrix[i+1][j] != n){
                             newValueFromFor += matrix[i+1][j];
                         }
 
