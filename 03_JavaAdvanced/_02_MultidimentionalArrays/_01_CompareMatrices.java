@@ -16,7 +16,7 @@ public class _01_CompareMatrices {
         int[][] secondMatrix = readingMatrix(rows, scan);
 
         // Add variables
-        boolean areEqual = areEqual(firstMatrix,secondMatrix);
+        boolean areEqual = areEqual(firstMatrix, secondMatrix);
         String output = areEqual ? "equal" : "not equal";
 
         // Print result
