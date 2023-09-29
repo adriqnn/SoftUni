@@ -58,7 +58,7 @@ public class _03_IntersectionOfTwoMatrices {
 
         for (int i = 0; i < rows; i++) {
             String line = scan.nextLine();
-            /*char[] charsArr = line.replaceAll(" ","").toCharArray();
+            /*char[] charsArr = line.replaceAll(" ", "").toCharArray();
             matrix[i] = charsArr;*/
             String[] elements = line.split("\\s+");
 
