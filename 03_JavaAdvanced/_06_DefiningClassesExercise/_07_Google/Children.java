@@ -1,10 +1,10 @@
 package _03_JavaAdvanced._06_DefiningClassesExercise._07_Google;
 
-public class Children {
+public class Child {
     private String name;
     private String date;
 
-    public Children(String name, String date) {
+    public Child(String name, String date) {
         this.name = name;
         this.date = date;
     }
