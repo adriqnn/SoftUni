@@ -22,27 +22,27 @@ public class Person {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public Company getCompany() {
-        return company;
+        return this.company;
     }
 
     public Map<String, List<Pokemon>> getPokemon() {
-        return pokemon;
+        return this.pokemon;
     }
 
     public Map<String, List<Parents>>getParents() {
-        return parents;
+        return this.parents;
     }
 
     public Map<String, List<Children>> getChildren() {
-        return children;
+        return this.children;
     }
 
     public Car getCar() {
-        return car;
+        return this.car;
     }
 
     @Override
@@ -50,7 +50,7 @@ public class Person {
         String nameString = this.name + "\n";
         String companyString = this.company.toString();
         String carString = this.car.toString();
-        
+
         return nameString + companyString + carString;
     }
 }
