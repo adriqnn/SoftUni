@@ -12,10 +12,10 @@ public class Car {
         this.consumption = consumption;
         this.distanceTraveled = 0;
     }
-    
+
     public boolean drive(double kilometersToDrive){
-        double fuelRequired = kilometersToDrive * consumption;
-        
+        double fuelRequired = kilometersToDrive * this.consumption;
+
         if(fuelRequired > this.fuelAmount){
             return false;
         }else{
@@ -24,7 +24,7 @@ public class Car {
             return true;
         }
     }
-    
+
     @Override
     public String toString(){
         return String.format("%s %.2f %.0f", this.model, this.fuelAmount, this.distanceTraveled);
