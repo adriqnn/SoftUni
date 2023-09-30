@@ -23,7 +23,7 @@ public class _03_PeriodicTable {
             /*for (int j = 0; j < input.length; j++) {
                 elements.add(input[j]);
             }*/
-            /*Collections.addAll(elements,input);*/
+            /*Collections.addAll(elements, input);*/
         }
 
         // Print result
