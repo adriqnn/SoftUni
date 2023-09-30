@@ -11,7 +11,7 @@ public class Main {
 
         int n = Integer.parseInt(scan.nextLine());
 
-        List<Persons> listOfPeople = new ArrayList<>();
+        List<Person> listOfPeople = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
             String[] consoleLine = scan.nextLine().split("\\s+");
@@ -19,11 +19,11 @@ public class Main {
             String person = consoleLine[0];
             int age = Integer.parseInt(consoleLine[1]);
 
-            Persons newOne = new Persons(consoleLine[0], Integer.parseInt(consoleLine[1]));
+            Person newOne = new Person(consoleLine[0], Integer.parseInt(consoleLine[1]));
             listOfPeople.add(newOne);
         }
 
-        listOfPeople.sort(Comparator.comparing(Persons::getPerson));
+        listOfPeople.sort(Comparator.comparing(Person::getPerson));
         listOfPeople.forEach(e -> {
             if(e.getAge() > 30) {
                 System.out.println(e.getPerson() + " - " + e.getAge());
