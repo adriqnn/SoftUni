@@ -10,11 +10,11 @@ public class Children {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public String getDate() {
-        return date;
+        return this.date;
     }
 
     public void setName(String name) {
@@ -24,7 +24,7 @@ public class Children {
     public void setDate(String date) {
         this.date = date;
     }
-    
+
     @Override
     public String toString(){
         return this.name + " " + this.date;
