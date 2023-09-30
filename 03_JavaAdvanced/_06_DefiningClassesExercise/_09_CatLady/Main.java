@@ -7,8 +7,8 @@ import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        
         HashMap<String, Cat> cats = new HashMap<>();
         String input;
 
