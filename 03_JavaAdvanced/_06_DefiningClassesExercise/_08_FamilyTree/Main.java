@@ -35,6 +35,8 @@ public class Main {
 
         familyTree.tieInformation();
         System.out.println(familyTree.toString());
+
+        reader.close();
     }
 
     private static void readDescendent() throws IOException {
