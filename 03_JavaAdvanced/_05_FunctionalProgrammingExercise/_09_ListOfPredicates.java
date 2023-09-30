@@ -29,7 +29,7 @@ public class _09_ListOfPredicates {
 
         // Print result
         for (int i = 1; i <= n; i++) {
-            if(isDivisible.apply(numbersForDivision,i)){
+            if(isDivisible.apply(numbersForDivision, i)){
                 System.out.print(i + " ");
             }
         }
