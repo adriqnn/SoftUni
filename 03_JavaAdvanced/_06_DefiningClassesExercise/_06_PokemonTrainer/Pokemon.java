@@ -12,15 +12,15 @@ public class Pokemon {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public String getElement() {
-        return element;
+        return this.element;
     }
 
     public int getHealth() {
-        return health;
+        return this.health;
     }
 
     public void setName(String name) {
