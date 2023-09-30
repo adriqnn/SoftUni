@@ -29,38 +29,38 @@ public class Main {
             }
 
             information.putIfAbsent(name, new Person(name));
-            
+
             if (nr1.equals("company")){
-                
+
                 information.get(name).getCompany().setName(nr2);
                 information.get(name).getCompany().setDepartment(nr3);
                 information.get(name).getCompany().setSalary(nr4);
-                
+
             }else if(nr1.equals("pokemon")){
-                
+
                 information.get(name).getPokemon().putIfAbsent(name,new ArrayList<>());
                 information.get(name).getPokemon().get(name).add(new Pokemon(nr2, nr3));
-                
+
             }else if(nr1.equals("parents")){
-                
+
                 information.get(name).getParents().putIfAbsent(name,new ArrayList<>());
-                information.get(name).getParents().get(name).add(new Parents(nr2, nr3));
-                
+                information.get(name).getParents().get(name).add(new Parent(nr2, nr3));
+
             }else if(nr1.equals("children")){
-                
+
                 information.get(name).getChildren().putIfAbsent(name,new ArrayList<>());
-                information.get(name).getChildren().get(name).add(new Children(nr2, nr3));
-                
+                information.get(name).getChildren().get(name).add(new Child(nr2, nr3));
+
             }else if(nr1.equals("car")){
                 information.get(name).getCar().setModel(nr2);
                 information.get(name).getCar().setSpeed(nr3);
             }
-            
+
             console = scan.nextLine();
         }
-        
+
         String print = scan.nextLine();
-        
+
         System.out.print(information.get(print));
         System.out.println("Pokemon:");
         information.get(print).getPokemon().forEach((key, value) -> value.forEach(System.out::println));
