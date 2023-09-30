@@ -34,7 +34,7 @@ public class _05_AverageStudentsGrades {
             }
 
             /*String doubles = e.getValue().stream().map(String::valueOf).collect(Collectors.joining(" "));
-            System.out.printf("%s -> %s (avg: %.2f)%n",e.getKey(),doubles,sum/count);*/
+            System.out.printf("%s -> %s (avg: %.2f)%n", e.getKey(), doubles, sum / count);*/
 
             System.out.print(e.getKey() + " -> ");
             e.getValue().forEach(av -> System.out.printf("%.2f ", av));
