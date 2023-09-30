@@ -10,11 +10,11 @@ public class Car {
     }
 
     public String getModel() {
-        return model;
+        return this.model;
     }
 
     public String getSpeed() {
-        return speed;
+        return this.speed;
     }
 
     public void setModel(String model) {
@@ -24,13 +24,13 @@ public class Car {
     public void setSpeed(String speed) {
         this.speed = speed;
     }
-    
+
     @Override
     public String toString(){
         if(this.model.equals("")){
             return "Car:" + "\n";
         }
-        
+
         return "Car:" + "\n" + this.model + " " + this.speed + "\n";
     }
 }
