@@ -28,7 +28,7 @@ public class _04_CountRealNumbers {
         map.forEach((key, value) -> System.out.printf("%.1f -> %d%n", key, value));
 
 //        map.entrySet().forEach(e -> {
-//            System.out.printf("%.1f -> %d%n",e.getKey(),e.getValue());
+//            System.out.printf("%.1f -> %d%n", e.getKey(), e.getValue());
 //        });
 
         scan.close();
