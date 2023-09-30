@@ -1,10 +1,10 @@
 package _03_JavaAdvanced._06_DefiningClassesExercise._01_OpinionPoll;
 
-public class Persons {
+public class Person {
     private String person;
     private int age;
 
-    public Persons(String person, int age) {
+    public Person(String person, int age) {
         this.person = person;
         this.age = age;
     }
