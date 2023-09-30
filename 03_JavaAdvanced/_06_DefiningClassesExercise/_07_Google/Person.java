@@ -8,8 +8,8 @@ public class Person {
     private String name; //unique
     private Company company; //unique
     private Map<String, List<Pokemon>> pokemon; //multiple
-    private Map<String, List<Parents>> parents; //multiple
-    private Map<String, List<Children>> children; //multiple
+    private Map<String, List<Parent>> parents; //multiple
+    private Map<String, List<Child>> children; //multiple
     private Car car; //unique
 
     public Person(String name) {
@@ -33,11 +33,11 @@ public class Person {
         return this.pokemon;
     }
 
-    public Map<String, List<Parents>>getParents() {
+    public Map<String, List<Parent>>getParents() {
         return this.parents;
     }
 
-    public Map<String, List<Children>> getChildren() {
+    public Map<String, List<Child>> getChildren() {
         return this.children;
     }
 
