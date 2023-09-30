@@ -42,8 +42,10 @@ public class Main {
         while(!element.equals("End")){
             for (String e : tournamentPlayers.keySet()) {
                 boolean hasCounter = false;
+                
                 for (Pokemon p : tournamentPlayers.get(e).getAnimals()) {
                     String type = p.getElement();
+                    
                     if(element.equals(type) && p.getHealth() > 0){
                         int newBadges = tournamentPlayers.get(e).getNumberOfBadges() + 1;
                         tournamentPlayers.get(e).setNumberOfBadges(newBadges);
@@ -54,7 +56,7 @@ public class Main {
 
                 if(!hasCounter){
                     for (Pokemon p : tournamentPlayers.get(e).getAnimals()) {
-                        p.setHealth(p.getHealth()-10);
+                        p.setHealth(p.getHealth() - 10);
                     }
                 }
             }
