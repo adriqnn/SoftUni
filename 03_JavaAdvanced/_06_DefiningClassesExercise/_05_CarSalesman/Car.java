@@ -32,19 +32,19 @@ public class Car {
     @Override
     public String toString(){
         String printWeight;
-        
-        if(weight == 0){
+
+        if(this.weight == 0){
             printWeight = "n/a";
         }else{
-            printWeight = weight + "";
+            printWeight = this.weight + "";
         }
-        
+
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(model).append(":").append("\n")
-                .append(engine.toString()).append("\n")
+        stringBuilder.append(this.model).append(":").append("\n")
+                .append(this.engine.toString()).append("\n")
                 .append("Weight: ").append(printWeight).append("\n")
-                .append("Color: ").append(color);
-        
+                .append("Color: ").append(this.color);
+
         return stringBuilder.toString();
     }
 }
