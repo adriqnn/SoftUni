@@ -25,26 +25,26 @@ public class _11_ThePartyReservationFilterModule {
                 if(console.contains("Starts with")){
                     
                     predicate = x -> x.startsWith(commandLine[2]);
-                    predicates.putIfAbsent(commandLine[1]+commandLine[2], predicate);
+                    predicates.putIfAbsent(commandLine[1] + commandLine[2], predicate);
                     
                 }else if(console.contains("Ends with")){
                     
                     predicate = x -> x.endsWith(commandLine[2]);
-                    predicates.putIfAbsent(commandLine[1]+commandLine[2], predicate);
+                    predicates.putIfAbsent(commandLine[1] + commandLine[2], predicate);
                     
                 }else if(console.contains("Length")){
                     
                     predicate = x -> x.length() == Integer.parseInt(commandLine[2]);
-                    predicates.putIfAbsent(commandLine[1]+commandLine[2], predicate);
+                    predicates.putIfAbsent(commandLine[1] + commandLine[2], predicate);
                     
                 }else if (console.contains("Contains")){
                     
                     predicate = x -> x.contains(commandLine[2]);
-                    predicates.putIfAbsent(commandLine[1]+commandLine[2], predicate);
+                    predicates.putIfAbsent(commandLine[1] + commandLine[2], predicate);
                     
                 }
             }else{
-                predicates.remove(commandLine[1]+commandLine[2]);
+                predicates.remove(commandLine[1] + commandLine[2]);
             }
 
             console = scan.nextLine();
