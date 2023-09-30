@@ -23,7 +23,7 @@ public class _07_CitiesByContinentAndCountry {
             countries.putIfAbsent(continent, new LinkedHashMap<>());
             
             Map<String, List<String>> map = countries.get(continent);
-            map.putIfAbsent(country,new ArrayList<>());
+            map.putIfAbsent(country, new ArrayList<>());
             
             List<String> cities = map.get(country);
             cities.add(city);
