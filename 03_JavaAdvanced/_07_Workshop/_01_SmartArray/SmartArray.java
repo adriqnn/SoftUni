@@ -13,7 +13,7 @@ public class SmartArray {
     }
 
     public void add(int element){
-        if (this.size == elements.length){
+        if (this.size == this.elements.length){
             this.elements = grow();
         }
 
@@ -22,7 +22,7 @@ public class SmartArray {
     }
 
     private int[] grow(){
-        int[] newElements = new int[elements.length * 2];
+        int[] newElements = new int[this.elements.length * 2];
         System.arraycopy(this.elements, 0, newElements, 0, this.elements.length);
 
         return newElements;
