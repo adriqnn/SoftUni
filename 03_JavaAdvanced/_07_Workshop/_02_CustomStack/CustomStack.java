@@ -12,18 +12,18 @@ public class CustomStack {
 
     public void push(int element){
         Node newNode = new Node(element);
-        
+
         if(this.top != null){
             newNode.prev = this.top;
         }
-        
-        top = newNode;
+
+        this.top = newNode;
         this.size++;
     }
 
     public int peek(){
         ensureNotEmpty();
-        
+
         return this.top.element;
     }
 
@@ -35,21 +35,21 @@ public class CustomStack {
 
     public int pop(){
         ensureNotEmpty();
-        
+
         int popped = this.top.element;
         this.top = this.top.prev;
         this.size--;
-        
+
         return popped;
     }
 
     public int size(){
         return this.size;
     }
-    
+
     public void forEach(Consumer<Integer> consumer){
         Node current = this.top;
-        
+
         while(current != null){
             consumer.accept(current.element);
             current = current.prev;
@@ -65,3 +65,4 @@ public class CustomStack {
         }
     }
 }
+
