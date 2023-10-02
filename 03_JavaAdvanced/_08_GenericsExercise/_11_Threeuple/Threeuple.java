@@ -12,7 +12,7 @@ public class Threeuple<T, G, F> {
     }
 
     public Item1<T> getItem1() {
-        return item1;
+        return this.item1;
     }
 
     public Threeuple<T, G, F> setItem1(Item1<T> item1) {
@@ -21,7 +21,7 @@ public class Threeuple<T, G, F> {
     }
 
     public Item2<G> getItem2() {
-        return item2;
+        return this.item2;
     }
 
     public Threeuple<T, G, F> setItem2(Item2<G> item2) {
@@ -30,7 +30,7 @@ public class Threeuple<T, G, F> {
     }
 
     public Item3<F> getItem3() {
-        return item3;
+        return this.item3;
     }
 
     public Threeuple<T, G, F> setItem3(Item3<F> item3) {
