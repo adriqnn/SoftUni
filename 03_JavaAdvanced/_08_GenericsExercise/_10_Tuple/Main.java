@@ -15,22 +15,22 @@ public class Main {
         Item2<String> firstTupleB = new Item2<>(first.split("\\s+")[2]);
         
         Tuple<String, String> firstTuple = new Tuple<>(firstTupleA, firstTupleB);
-        
         System.out.println(firstTuple);
 
+        
         Item1<String> secondTupleA = new Item1<>(second.split(" ")[0]);
         Item2<Integer> secondTupleB = new Item2<>(Integer.parseInt(second.split(" ")[1]));
         
         Tuple<String, Integer> secondTuple = new Tuple<>(secondTupleA, secondTupleB);
-        
         System.out.println(secondTuple);
 
+        
         Item1<Integer> thirdTupleA = new Item1<>(Integer.parseInt(third.split(" ")[0]));
         Item2<Double> thirdTupleB = new Item2<>(Double.parseDouble(third.split(" ")[1]));
         
         Tuple<Integer, Double> thirdTuple = new Tuple<>(thirdTupleA, thirdTupleB);
-        
         System.out.println(thirdTuple);
+        
 
         scan.close();
     }
