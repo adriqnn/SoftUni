@@ -113,10 +113,12 @@ public class LinkedList {
         int[] array = new int[this.size];
         int counter = 0;
         Node currentNode = this.head;
+        
         while(currentNode != null){
             array[counter] = currentNode.value;
             counter++;
         }
+        
         return array;
     }*/
 
