@@ -8,7 +8,7 @@ public class Item3<F> {
     }
 
     public F getElement() {
-        return element;
+        return this.element;
     }
 
     public Item3<F> setElement(F element) {
