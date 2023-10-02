@@ -15,7 +15,7 @@ public class Tuple<T, G> {
     }
 
     public Item1<T> getItem1() {
-        return item1;
+        return this.item1;
     }
 
     public Tuple<T, G> setItem1(Item1<T> item1) {
@@ -24,7 +24,7 @@ public class Tuple<T, G> {
     }
 
     public Item2<G> getItem2() {
-        return item2;
+        return this.item2;
     }
 
     public Tuple<T, G> setItem2(Item2<G> item2) {
