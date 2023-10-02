@@ -16,14 +16,14 @@ public class Box<T> {
     }
 
     public void add(T element){
-        values.add(element);
+        this.values.add(element);
     }
 
     @Override
     public String toString(){
         StringBuilder sb  = new StringBuilder();
 
-        for (T value : values) {
+        for (T value : this.values) {
             sb.append(String.format("%s: %s", value.getClass().getName(), value)).append(System.lineSeparator());
         }
 
