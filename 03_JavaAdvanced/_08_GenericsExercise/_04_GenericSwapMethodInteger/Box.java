@@ -16,24 +16,24 @@ public class Box<T> {
     }
 
     public void swap(int firstIndex, int secondIndex){
-        //Collections.swap(values, firstIndex, secondIndex);
-        T temporary = values.get(firstIndex);
-        values.set(firstIndex, values.get(secondIndex));
-        values.set(secondIndex, temporary);
+        //Collections.swap(this.values,firstIndex,secondIndex);
+        T temporary = this.values.get(firstIndex);
+        this.values.set(firstIndex, this.values.get(secondIndex));
+        this.values.set(secondIndex, temporary);
     }
 
     public void add(T element){
-        values.add(element);
+        this.values.add(element);
     }
 
     @Override
     public String toString(){
         StringBuilder sb  = new StringBuilder();
-        
-        for (T value : values) {
+
+        for (T value : this.values) {
             sb.append(String.format("%s: %s", value.getClass().getName(), value)).append(System.lineSeparator());
         }
-        
+
         return sb.toString();
     }
 }
