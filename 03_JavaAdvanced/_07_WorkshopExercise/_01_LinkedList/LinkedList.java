@@ -12,7 +12,7 @@ public class LinkedList {
         Node newNode = new Node(element);
 
         if(!isEmpty()){
-            newNode.next = head;
+            newNode.next = this.head;
         }
 
         this.head = newNode;
@@ -102,7 +102,7 @@ public class LinkedList {
 
     public void forEach(Consumer<Integer> consumer){
         Node currentNode = this.head;
-        
+
         while(currentNode != null){
             consumer.accept(currentNode.value);
             currentNode = currentNode.next;
@@ -119,11 +119,11 @@ public class LinkedList {
         }
         return array;
     }*/
-    
+
     public int[] toArray(){
         List<Integer> result = new ArrayList<>();
         forEach((result::add));
-        
+
         return  result.stream().mapToInt(e -> e).toArray();
     }
 }
