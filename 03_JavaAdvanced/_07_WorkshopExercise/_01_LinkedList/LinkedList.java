@@ -16,7 +16,7 @@ public class LinkedList {
         }
 
         this.head = newNode;
-        size++;
+        this.size++;
     }
 
     public void addLast(int element){
