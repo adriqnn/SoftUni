@@ -8,16 +8,16 @@ public class Scale<T extends Comparable<T>> {
         this.left = left;
         this.right = right;
     }
-    
+
     public T getHeavier(){
-        int compared = left.compareTo(right);
-        
+        int compared = this.left.compareTo(this.right);
+
         if (compared > 0){
-            return left;
+            return this.left;
         }else if (compared < 0){
-            return right;
+            return this.right;
         }
-        
+
         return null;
     }
 }
