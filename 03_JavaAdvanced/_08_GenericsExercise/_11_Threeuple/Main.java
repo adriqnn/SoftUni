@@ -14,7 +14,7 @@ public class Main {
         Item1<String> firstThreeupleA = new Item1<>(first.split("\\s+")[0] + " " + first.split("\\s+")[1]);
         Item2<String> firstThreeupleB = new Item2<>(first.split("\\s+")[2]);
         Item3<String> firstThreeupleC = new Item3<>(first.split("\\s+")[3]);
-        Threeuple<String,String,String> firstThreeuple = new Threeuple<>(firstThreeupleA,firstThreeupleB,firstThreeupleC);
+        Threeuple<String,String,String> firstThreeuple = new Threeuple<>(firstThreeupleA, firstThreeupleB,firstThreeupleC);
 
         System.out.println(firstThreeuple);
 
