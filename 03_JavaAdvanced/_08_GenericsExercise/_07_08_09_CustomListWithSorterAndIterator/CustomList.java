@@ -9,57 +9,57 @@ public class CustomList<T extends Comparable<T>> implements Iterable<T> {
     private List<T> elements;
 
     public CustomList(){
-        elements = new ArrayList<>();
+        this.elements = new ArrayList<>();
     }
 
     public void add(T element){
-        elements.add(element);
+        this.elements.add(element);
     }
 
     public T remove(int index){
-        return elements.remove(index);
+        return this.elements.remove(index);
     }
 
     public boolean contains(T element){
-        return elements.contains(element);
+        return this.elements.contains(element);
     }
 
     public void swap(int firstIndex, int secondIndex){
-        Collections.swap(elements, firstIndex, secondIndex);
+        Collections.swap(this.elements, firstIndex, secondIndex);
     }
 
     public int countGreaterThan(T element){
-        return (int) elements.stream().filter(value -> value.compareTo(element) > 0).count();
+        return (int) this.elements.stream().filter(value -> value.compareTo(element) > 0).count();
     }
 
     public T getMax(){
-        return Collections.max(elements);
-        //return elements.stream().max((first, second) -> first.compareTo(second)).get();
-        //return elements.stream().max(Comparator.naturalOrder()).get();
+        return Collections.max(this.elements);
+        //return this.elements.stream().max((first, second) -> first.compareTo(second)).get();
+        //return this.elements.stream().max(Comparator.naturalOrder()).get();
     }
 
     public T getMin(){
-        return Collections.min(elements);
-        //return elements.stream().min((first, second) -> second.compareTo(first)).get();
-        //return elements.stream().min(Comparator.naturalOrder()).get();
+        return Collections.min(this.elements);
+        //return this.elements.stream().min((first, second) -> second.compareTo(first)).get();
+        //return this.elements.stream().min(Comparator.naturalOrder()).get();
     }
 
     public int size(){
-        return elements.size();
+        return this.elements.size();
     }
 
     public T get (int index){
-        return elements.get(index);
+        return this.elements.get(index);
     }
 
     @Override
     public String toString(){
         StringBuilder builder = new StringBuilder();
-        
+
         for (T element : this.elements) {
             builder.append(element).append(System.lineSeparator());
         }
-        
+
         return builder.toString();
     }
 
@@ -67,24 +67,23 @@ public class CustomList<T extends Comparable<T>> implements Iterable<T> {
     public Iterator<T> iterator(){
         Iterator<T> it = new Iterator<T>() {
             private int currentIndex = 0;
-            
+
             @Override
             public boolean hasNext(){
                 return currentIndex < elements.size() && elements.get(currentIndex) != null;
             }
-            
+
             @Override
             public T next(){
                 return elements.get(currentIndex++);
             }
-            
+
             @Override
             public void remove(){
                 throw new UnsupportedOperationException();
             }
         };
-        
+
         return it;
     }
 }
-
