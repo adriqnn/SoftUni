@@ -13,7 +13,7 @@ public class Main {
 
         Item1<String> firstTupleA = new Item1<>(first.split("\\s+")[0] + " " + first.split("\\s+")[1]);
         Item2<String> firstTupleB = new Item2<>(first.split("\\s+")[2]);
-        Tuple<String, String> firstTuple = new Tuple<>(firstTupleA,firstTupleB);
+        Tuple<String, String> firstTuple = new Tuple<>(firstTupleA, firstTupleB);
         
         System.out.println(firstTuple);
 
@@ -25,7 +25,7 @@ public class Main {
 
         Item1<Integer> thirdTupleA = new Item1<>(Integer.parseInt(third.split(" ")[0]));
         Item2<Double> thirdTupleB = new Item2<>(Double.parseDouble(third.split(" ")[1]));
-        Tuple<Integer, Double> thirdTuple = new Tuple<>(thirdTupleA,thirdTupleB);
+        Tuple<Integer, Double> thirdTuple = new Tuple<>(thirdTupleA, thirdTupleB);
         
         System.out.println(thirdTuple);
 
