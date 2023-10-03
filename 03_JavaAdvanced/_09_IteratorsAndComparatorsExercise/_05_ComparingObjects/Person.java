@@ -12,15 +12,15 @@ public class Person implements Comparable<Person>{
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public int getAge() {
-        return age;
+        return this.age;
     }
 
     public String getTown() {
-        return town;
+        return this.town;
     }
 
     public void setName(String name) {
@@ -41,8 +41,10 @@ public class Person implements Comparable<Person>{
             if(this.getAge() == otherPerson.getAge()){
                 return this.getTown().compareTo(otherPerson.getTown());
             }
-            return Integer.compare(this.getAge(),otherPerson.getAge());
+            
+            return Integer.compare(this.getAge(), otherPerson.getAge());
         }
+        
         return this.getName().compareTo(otherPerson.getName());
     }
 }
