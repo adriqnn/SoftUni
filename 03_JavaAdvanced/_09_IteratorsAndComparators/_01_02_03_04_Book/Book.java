@@ -16,15 +16,15 @@ public class Book implements Comparable<Book>{
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public int getYear() {
-        return year;
+        return this.year;
     }
 
     public List<String> getAuthors() {
-        return authors;
+        return this.authors;
     }
 
     private void setTitle(String title) {
@@ -42,18 +42,19 @@ public class Book implements Comparable<Book>{
     @Override
     public String toString() {
         return "Book{" +
-                "title='" + title + '\'' +
-                ", year=" + year +
-                ", authors=" + authors +
-                '}';
+                "title='" + this.title + '\'' +
+                ", year=" + this.year +
+                ", authors=" + this.authors + '}';
     }
 
     @Override
     public int compareTo(Book other) {
         int compared = this.title.compareTo(other.title);
+
         if(compared == 0){
-            compared = Integer.compare(this.year,other.year);
+            compared = Integer.compare(this.year, other.year);
         }
+
         return compared;
     }
 }
