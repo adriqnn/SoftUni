@@ -9,7 +9,7 @@ public class Book implements Comparable<Book>{
     private int year;
     private List<String> authors;
 
-    public Book(String title,int year,String... authors){
+    public Book(String title, int year, String... authors){
         this.setTitle(title);
         this.setYear(year);
         this.setAuthors(authors);
