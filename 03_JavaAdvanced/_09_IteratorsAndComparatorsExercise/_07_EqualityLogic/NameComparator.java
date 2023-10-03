@@ -6,7 +6,8 @@ public class NameComparator implements Comparator<Person> {
 
     @Override
     public int compare(Person o1, Person o2) {
-        int result = Integer.compare(o1.hashCode(),o2.hashCode());
+        int result = Integer.compare(o1.hashCode(), o2.hashCode());
+        
         return  result;
     }
 }
