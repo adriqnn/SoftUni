@@ -12,7 +12,7 @@ public class Person {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public Person setName(String name) {
@@ -21,7 +21,7 @@ public class Person {
     }
 
     public int getAge() {
-        return age;
+        return this.age;
     }
 
     public Person setAge(int age) {
@@ -32,13 +32,15 @@ public class Person {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
+        
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return age == person.age && Objects.equals(name, person.name);
+        
+        return this.age == person.age && Objects.equals(this.name, person.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, age);
+        return Objects.hash(this.name, this.age);
     }
 }
