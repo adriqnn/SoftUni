@@ -9,7 +9,6 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         int lines = Integer.parseInt(scan.nextLine());
-
         Set<Person> treeSet = new HashSet<>();
         Set<Integer> hashSet = new HashSet<>();
 
@@ -24,7 +23,10 @@ public class Main {
             treeSet.add(person);
             hashSet.add(person.hashCode());
         }
+
         System.out.println(treeSet.size());
         System.out.println(hashSet.size());
+
+        scan.close();
     }
 }
