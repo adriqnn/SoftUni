@@ -11,11 +11,13 @@ public class ListyIterator implements Iterable<String>{
 
     public ListyIterator(String... elements){
         this.elements = Arrays.asList(elements);
-        currentIndex = 0;
+        this.currentIndex = 0;
     }
+    
     public boolean hasNext(){
-        return currentIndex < elements.size()-1;
+        return currentIndex < elements.size() - 1;
     }
+    
     public boolean move(){
         if(hasNext()){
             this.currentIndex++;
