@@ -3,12 +3,15 @@ package _03_JavaAdvanced._09_IteratorsAndComparators._01_02_03_04_Book;
 import java.util.Comparator;
 
 public class BookComparator implements Comparator<Book> {
+    
     @Override
     public int compare(Book f, Book s) {
         int compared = f.getTitle().compareTo(s.getTitle());
+        
         if(compared == 0){
             compared = Integer.compare(f.getYear(), s.getYear());
         }
+        
         return compared;
     }
 }
