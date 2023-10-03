@@ -1,16 +1,19 @@
 package _03_JavaAdvanced._09_IteratorsAndComparatorsExercise._02_Collection;
-
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        
         String line = scan.nextLine();
         ListyIterator listyIterator = null;
+        
         while(!line.equals("END")){
             String[] commandParts = line.split("\\s+");
+            
             String commandName = commandParts[0];
+            
             switch(commandName){
                 case "Create":
                     if(commandParts.length > 1) {
@@ -19,12 +22,15 @@ public class Main {
                     }else{
                         listyIterator = new ListyIterator();
                     }
+                    
                     break;
                 case "Move":
                     System.out.println(listyIterator.move());
+                    
                     break;
                 case "HasNext":
                     System.out.println(listyIterator.hasNext());
+                    
                     break;
                 case "Print":
                     try{
@@ -32,12 +38,17 @@ public class Main {
                     }catch(IllegalStateException e){
                         System.out.println(e.getMessage());
                     }
+                    
                     break;
                 case "PrintAll":
                     listyIterator.printAll();
+                    
                     break;
             }
+            
             line = scan.nextLine();
         }
+        
+        scan.close();
     }
 }
