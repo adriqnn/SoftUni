@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
-        String command = scanner.nextLine();
+        String command = scan.nextLine();
         Stack<Integer> stack = new Stack<>();
 
         while (!command.equals("END")){
@@ -17,7 +17,7 @@ public class Main {
                     for (int i = 1; i < tokens.length; i++) {
                         stack.push(Integer.parseInt(tokens[i]));
                     }
-                    
+
                     break;
                 case "Pop":
                     try {
@@ -25,11 +25,11 @@ public class Main {
                     }catch (Exception e){
                         System.out.println("No elements");
                     }
-                    
+
                     break;
             }
 
-            command = scanner.nextLine();
+            command = scan.nextLine();
         }
 
         for (int i = 0; i < 2; i++) {
@@ -37,5 +37,7 @@ public class Main {
                 System.out.println(number);
             }
         }
+        
+        scan.close();
     }
 }
