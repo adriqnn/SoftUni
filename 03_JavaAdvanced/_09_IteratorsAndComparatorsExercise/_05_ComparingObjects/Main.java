@@ -26,12 +26,12 @@ public class Main {
 
         int comparePerson = Integer.parseInt(scan.nextLine());
         int size = people.size();
-        
+
         Person personToCompare = people.remove(comparePerson - 1);
-        
+
         int samePeople = 0;
         int differentPeople = 0;
-        
+
         for (Person person : people) {
             if(person.compareTo(personToCompare) == 0){
                 samePeople++;
@@ -39,11 +39,13 @@ public class Main {
                 differentPeople++;
             }
         }
-        
+
         if(samePeople == 0){
             System.out.println("No matches");
         }else{
-            System.out.printf("%d %d %d",++samePeople,differentPeople,size);
+            System.out.printf("%d %d %d", ++samePeople, differentPeople, size);
         }
+        
+        scan.close();
     }
 }
