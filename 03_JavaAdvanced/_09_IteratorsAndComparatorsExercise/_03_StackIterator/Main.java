@@ -17,6 +17,7 @@ public class Main {
                     for (int i = 1; i < tokens.length; i++) {
                         stack.push(Integer.parseInt(tokens[i]));
                     }
+                    
                     break;
                 case "Pop":
                     try {
@@ -24,6 +25,7 @@ public class Main {
                     }catch (Exception e){
                         System.out.println("No elements");
                     }
+                    
                     break;
             }
 
