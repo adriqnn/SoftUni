@@ -8,9 +8,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        int lines = Integer.parseInt(scan.nextLine());
         Set<Person> treeSet = new HashSet<>();
         Set<Integer> hashSet = new HashSet<>();
+        int lines = Integer.parseInt(scan.nextLine());
 
         for (int i = 0; i < lines; i++) {
             String[] information = scan.nextLine().split("\\s+");
