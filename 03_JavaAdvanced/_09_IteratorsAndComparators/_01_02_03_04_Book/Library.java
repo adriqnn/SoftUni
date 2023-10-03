@@ -10,6 +10,7 @@ public class Library implements Iterable<Book> {
     public Library(){
         this.books = new ArrayList<>();
     }
+    
     public void add(Book book){
         this.books.add(book);
     }
@@ -23,7 +24,7 @@ public class Library implements Iterable<Book> {
     }
 
     public List<Book> getBooks() {
-        return books;
+        return this.books;
     }
 
     private class LibIterator implements Iterator<Book> {
@@ -36,8 +37,7 @@ public class Library implements Iterable<Book> {
 
         @Override
         public Book next() {
-            Book nextBook = books.get(begin++);
-            return nextBook;
+            return books.get(begin++);
         }
     }
 
@@ -45,9 +45,9 @@ public class Library implements Iterable<Book> {
     public Iterator<Book> iterator(){
         return  new LibIterator();
     }
+    
     /*@Override
     public Iterator<Book> iterator(){
-        return  books.iterator();
+        return books.iterator();
     }*/
-
 }
