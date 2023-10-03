@@ -7,17 +7,23 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        
         String input = scan.nextLine();
         List<Person> people = new ArrayList<>();
+        
         while(!input.equals("END")){
             String[] peopleParameters = input.split("\\s+");
+            
             String name = peopleParameters[0];
             int age = Integer.parseInt(peopleParameters[1]);
             String town = peopleParameters[2];
+            
             Person person = new Person(name,age,town);
             people.add(person);
+            
             input = scan.nextLine();
         }
+        
         int comparePerson = Integer.parseInt(scan.nextLine());
         int size = people.size();
         Person personToCompare = people.remove(comparePerson-1);
