@@ -12,6 +12,7 @@ public class Stack<Integer>  implements Iterable<Integer>{
     public void push(int newElement){
         Node<Integer> newNode = new Node<>(newElement);
         newNode.prev = this.top;
+        
         this.top = newNode;
     }
 
@@ -21,6 +22,7 @@ public class Stack<Integer>  implements Iterable<Integer>{
         }else {
             Node<Integer> currentTop = this.top;
             this.top = this.top.prev;
+            
             return currentTop.element;
         }
     }
@@ -30,6 +32,7 @@ public class Stack<Integer>  implements Iterable<Integer>{
     public Iterator<Integer> iterator() {
         return new Iterator<Integer>() {
             private Node<Integer> current = top;
+            
             @Override
             public boolean hasNext() {
                 return current != null;
@@ -39,6 +42,7 @@ public class Stack<Integer>  implements Iterable<Integer>{
             public Integer next() {
                 int currentValue = current.element;
                 this.current = this.current.prev;
+                
                 return (Integer) java.lang.Integer.valueOf(currentValue);
             }
         };
