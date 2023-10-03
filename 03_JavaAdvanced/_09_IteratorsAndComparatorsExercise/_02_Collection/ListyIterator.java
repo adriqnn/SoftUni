@@ -11,24 +11,30 @@ public class ListyIterator implements Iterable<String>{
 
     public ListyIterator(String... elements){
         this.elements = Arrays.asList(elements);
-        currentIndex = 0;
+        this.currentIndex = 0;
     }
+    
     public boolean hasNext(){
-        return currentIndex < elements.size()-1;
+        return this.currentIndex < this.elements.size() - 1;
     }
+    
     public boolean move(){
         if(hasNext()){
             this.currentIndex++;
             return true;
         }
+        
         return false;
     }
+    
     public void print(){
         if(this.elements.size() == 0){
             throw new IllegalStateException("Invalid Operation!");
         }
-        System.out.println(this.elements.get(currentIndex));
+        
+        System.out.println(this.elements.get(this.currentIndex));
     }
+    
     public void printAll(){
         this.forEach(e -> System.out.print(e + " "));
         System.out.println();
@@ -38,6 +44,7 @@ public class ListyIterator implements Iterable<String>{
     public Iterator<String> iterator() {
         return new Iterator<String>() {
             private int index;
+            
             @Override
             public boolean hasNext() {
                 return index < elements.size();
