@@ -46,4 +46,3 @@ public class PetImpl implements Pet {
         return String.format("%s %d %s", this.getPetName(), this.getPetAge(), this.getPetKind());
     }
 }
-
