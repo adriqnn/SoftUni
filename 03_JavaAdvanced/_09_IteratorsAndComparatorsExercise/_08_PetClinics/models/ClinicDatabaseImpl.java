@@ -1,6 +1,5 @@
 package _03_JavaAdvanced._09_IteratorsAndComparatorsExercise._08_PetClinics.models;
 
-
 import _03_JavaAdvanced._09_IteratorsAndComparatorsExercise._08_PetClinics.interfaces.Clinic;
 import _03_JavaAdvanced._09_IteratorsAndComparatorsExercise._08_PetClinics.interfaces.ClinicDatabase;
 import _03_JavaAdvanced._09_IteratorsAndComparatorsExercise._08_PetClinics.interfaces.Pet;
@@ -52,6 +51,7 @@ public class ClinicDatabaseImpl implements ClinicDatabase {
         if (this.allClinics.get(clinicName).hasEmptyRooms()) {
             this.allClinics.get(clinicName).addPet(pet);
             this.isAdded = true;
+            
             return;
         }
 
