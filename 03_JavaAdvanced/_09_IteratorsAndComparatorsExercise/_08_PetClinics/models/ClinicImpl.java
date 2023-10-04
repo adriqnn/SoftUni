@@ -4,7 +4,6 @@ import _03_JavaAdvanced._09_IteratorsAndComparatorsExercise._08_PetClinics.inter
 import _03_JavaAdvanced._09_IteratorsAndComparatorsExercise._08_PetClinics.interfaces.Pet;
 
 public class ClinicImpl implements Clinic {
-
     private String clinicName;
     private Pet[] rooms;
     private int roomsCapacity;
@@ -58,6 +57,7 @@ public class ClinicImpl implements Clinic {
         if (roomsCapacity % 2 == 0) {
             throw new IllegalArgumentException("Invalid Operation!");
         }
+        
         this.roomsCapacity = roomsCapacity;
     }
 
@@ -86,6 +86,7 @@ public class ClinicImpl implements Clinic {
             this.hasReleased = false;
             return;
         }
+        
         int currentIndex = this.releaseIndex;
         while (true) {
             if (this.rooms[currentIndex] != null) {
@@ -94,6 +95,7 @@ public class ClinicImpl implements Clinic {
                 this.occupiedRoomsCount--;
                 break;
             }
+            
             currentIndex = (currentIndex + 1) % this.rooms.length;
             if (currentIndex % this.releaseIndex == 0) {
                 break;
@@ -121,10 +123,12 @@ public class ClinicImpl implements Clinic {
     @Override
     public String getAllRoomsInfo() {
         StringBuilder builder = new StringBuilder();
+        
         for (int currentRoom = 1; currentRoom <= this.rooms.length; currentRoom++) { // <= because room 1 corresponds to 0 index
             builder.append(getSpecificRoomInfo(currentRoom));
             builder.append(System.lineSeparator());
         }
+        
         return builder.toString();
     }
 
@@ -140,9 +144,9 @@ public class ClinicImpl implements Clinic {
             this.roomIndex = --leftIndex;
             return;
         }
+        
         // right room add
         this.canAddToLeftRoom = true;
         this.roomIndex = ++rightIndex;
     }
-
 }
