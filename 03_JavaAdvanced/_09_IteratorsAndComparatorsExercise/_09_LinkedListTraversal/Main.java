@@ -19,15 +19,20 @@ public class Main {
                 numbers.add(Integer.parseInt(information[1]));
             }else{
                 int num = Integer.parseInt(information[1]);
+
                 for (int j = 0; j < numbers.size(); j++) {
                     if(num == numbers.get(j)){
                         numbers.remove(j);
+
                         break;
                     }
                 }
             }
         }
+
         System.out.println(numbers.size());
         System.out.println(numbers.stream().map(String::valueOf).collect(Collectors.joining(" ")));
+
+        scan.close();
     }
 }
