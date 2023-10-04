@@ -15,5 +15,4 @@ public interface Clinic {
     boolean hasEmptyRooms();
 
     boolean hasReleased();
-
 }
