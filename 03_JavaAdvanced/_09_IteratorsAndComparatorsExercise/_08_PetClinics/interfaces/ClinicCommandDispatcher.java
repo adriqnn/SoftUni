@@ -1,6 +1,5 @@
 package _03_JavaAdvanced._09_IteratorsAndComparatorsExercise._08_PetClinics.interfaces;
 
-
 public interface ClinicCommandDispatcher extends CommandDispatcher {
 
     void createPet(String name, Integer age, String kind);
