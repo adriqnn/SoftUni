@@ -7,5 +7,4 @@ public interface Pet {
     Integer getPetAge();
 
     String getPetKind();
-
 }
