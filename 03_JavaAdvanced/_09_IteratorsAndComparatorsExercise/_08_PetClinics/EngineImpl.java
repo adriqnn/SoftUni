@@ -24,7 +24,6 @@ public class EngineImpl implements Engine {
         for (int currentLine = 0; currentLine < lineCount; currentLine++) {
 
             String[] params = this.bufferedReader.readLine().split("\\s+");
-
             this.commandDispatcher.dispatch(params);
         }
     }
