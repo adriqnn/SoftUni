@@ -4,9 +4,9 @@ import java.util.Map;
 
 public interface ClinicDatabase {
 
-    Map<String,Clinic> getAllClinics();
+    Map<String, Clinic> getAllClinics();
 
-    Map<String,Pet> getAllPets();
+    Map<String, Pet> getAllPets();
 
     void addClinic(String clinicName, Integer roomCapacity);
 
@@ -15,6 +15,4 @@ public interface ClinicDatabase {
     void addPetToClinic(String petName, String clinicName);
 
     boolean isAdded();
-
-
 }
