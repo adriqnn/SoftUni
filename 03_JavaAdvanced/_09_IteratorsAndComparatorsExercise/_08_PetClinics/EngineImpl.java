@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class EngineImpl implements Engine {
-
     private CommandDispatcher commandDispatcher;
     private BufferedReader bufferedReader;
 
