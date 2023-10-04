@@ -3,5 +3,4 @@ package _03_JavaAdvanced._09_IteratorsAndComparatorsExercise._08_PetClinics.inte
 public interface CommandDispatcher {
 
     void dispatch(String...args);
-    
 }
