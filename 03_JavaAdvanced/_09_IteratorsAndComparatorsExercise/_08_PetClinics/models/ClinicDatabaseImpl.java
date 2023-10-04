@@ -7,7 +7,6 @@ import _03_JavaAdvanced._09_IteratorsAndComparatorsExercise._08_PetClinics.inter
 import java.util.*;
 
 public class ClinicDatabaseImpl implements ClinicDatabase {
-
     private Map<String, Clinic> allClinics;
     private Map<String, Pet> allPets;
     private boolean isAdded;
