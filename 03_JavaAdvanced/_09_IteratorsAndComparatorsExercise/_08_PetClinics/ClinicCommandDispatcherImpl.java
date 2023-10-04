@@ -5,7 +5,6 @@ import _03_JavaAdvanced._09_IteratorsAndComparatorsExercise._08_PetClinics.inter
 import _03_JavaAdvanced._09_IteratorsAndComparatorsExercise._08_PetClinics.models.ClinicDatabaseImpl;
 
 public class ClinicCommandDispatcherImpl implements ClinicCommandDispatcher {
-
     private ClinicDatabase clinicDatabase;
 
     public ClinicCommandDispatcherImpl() {
