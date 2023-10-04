@@ -21,15 +21,19 @@ public class ClinicCommandDispatcherImpl implements ClinicCommandDispatcher {
                     return;
                 }
                 this.createClinic(args[2], Integer.valueOf(args[3]));
+                
                 break;
             case "add":
                 this.addPetToClinic(args[1], args[2]);
+                
                 break;
             case "release":
                 this.release(args[1]);
+                
                 break;
             case "hasemptyrooms":
                 this.hasEmptyRooms(args[1]);
+                
                 break;
             case "print":
                 if (args.length == 2) {
@@ -37,6 +41,7 @@ public class ClinicCommandDispatcherImpl implements ClinicCommandDispatcher {
                     return;
                 }
                 this.getInfoForParticularRoom(args[1], Integer.valueOf(args[2]));
+                
                 break;
         }
     }
@@ -54,38 +59,29 @@ public class ClinicCommandDispatcherImpl implements ClinicCommandDispatcher {
     @Override
     public void addPetToClinic(String petName, String clinicName) {
         this.clinicDatabase.addPetToClinic(petName, clinicName);
+        
         System.out.println(this.clinicDatabase.isAdded());
     }
 
     @Override
     public void release(String clinicName) {
-        this.clinicDatabase.getAllClinics()
-                .get(clinicName)
-                .releasePet();
+        this.clinicDatabase.getAllClinics().get(clinicName).releasePet();
+        
         System.out.println(this.clinicDatabase.getAllClinics().get(clinicName).hasReleased());
     }
 
     @Override
     public void hasEmptyRooms(String clinicName) {
-        System.out.println(this.clinicDatabase
-                .getAllClinics()
-                .get(clinicName)
-                .hasEmptyRooms());
+        System.out.println(this.clinicDatabase.getAllClinics().get(clinicName).hasEmptyRooms());
     }
 
     @Override
     public void getInfoForEachRoom(String clinicName) {
-        System.out.print(this.clinicDatabase
-                .getAllClinics()
-                .get(clinicName)
-                .getAllRoomsInfo());
+        System.out.print(this.clinicDatabase.getAllClinics().get(clinicName).getAllRoomsInfo());
     }
 
     @Override
     public void getInfoForParticularRoom(String clinicName, Integer roomNumber) {
-        System.out.println(this.clinicDatabase
-                .getAllClinics()
-                .get(clinicName)
-                .getSpecificRoomInfo(roomNumber));
+        System.out.println(this.clinicDatabase.getAllClinics().get(clinicName).getSpecificRoomInfo(roomNumber));
     }
 }
