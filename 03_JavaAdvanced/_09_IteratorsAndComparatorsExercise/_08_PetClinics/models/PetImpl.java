@@ -3,7 +3,6 @@ package _03_JavaAdvanced._09_IteratorsAndComparatorsExercise._08_PetClinics.mode
 import _03_JavaAdvanced._09_IteratorsAndComparatorsExercise._08_PetClinics.interfaces.Pet;
 
 public class PetImpl implements Pet {
-
     private String petName;
     private Integer petAge;
     private String petKind;
