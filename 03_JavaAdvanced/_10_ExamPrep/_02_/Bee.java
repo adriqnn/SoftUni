@@ -5,13 +5,17 @@ import java.util.Scanner;
 public class Bee {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+
         int size = Integer.parseInt(scan.nextLine());
         char[][] territoryMatrix = new char[size][];
+
         for (int i = 0; i < territoryMatrix.length; i++) {
             territoryMatrix[i] = scan.nextLine().toCharArray();
         }
+
         int r = 0;
         int c = 0;
+
         for (int i = 0; i < territoryMatrix.length; i++) {
             for (int j = 0; j < territoryMatrix[i].length; j++) {
                 if(territoryMatrix[i][j] == 'B'){
@@ -20,20 +24,25 @@ public class Bee {
                 }
             }
         }
+
         int pollinatedFlowers = 0;
         boolean isOut = false;
         String command = scan.nextLine();
+
         while(!command.equals("End")){
             territoryMatrix[r][c] = '.';
+
             if(command.equals("up")){
                 if(isValid(r-1,c,territoryMatrix)){
                     r--;
                     char character = territoryMatrix[r][c];
+
                     if(character == 'f'){
                         pollinatedFlowers++;
                     }else if(character == 'O'){
                         territoryMatrix[r][c] = '.';
                         r--;
+
                         if(territoryMatrix[r][c] == 'f'){
                             pollinatedFlowers++;
                         }
@@ -43,13 +52,16 @@ public class Bee {
                 }
             }else if(command.equals("down")){
                 if(isValid(r+1,c,territoryMatrix)){
+
                     r++;
                     char character = territoryMatrix[r][c];
+
                     if(character == 'f'){
                         pollinatedFlowers++;
                     }else if(character == 'O'){
                         territoryMatrix[r][c] = '.';
                         r++;
+                        
                         if(territoryMatrix[r][c] == 'f'){
                             pollinatedFlowers++;
                         }
