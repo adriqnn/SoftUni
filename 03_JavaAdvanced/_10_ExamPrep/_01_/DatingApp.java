@@ -45,7 +45,7 @@ public class DatingApp {
 
             if(m != -1 && f != -1){
                 if(m != f){
-                    m = mStack.pop()-2;
+                    m = mStack.pop() - 2;
                     fQueue.poll();
 
                     if(m > 0){
