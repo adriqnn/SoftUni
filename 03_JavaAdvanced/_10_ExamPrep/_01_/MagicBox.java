@@ -12,8 +12,6 @@ public class MagicBox {
         Deque<Integer> queue = new ArrayDeque<>();
         Deque<Integer> stack = new ArrayDeque<>();
 
-
-
         Arrays.stream(scan.nextLine().split("\\s+")).map(Integer::parseInt).forEach(queue::offer);
         Arrays.stream(scan.nextLine().split("\\s+")).map(Integer::parseInt).forEach(stack::push);
 
