@@ -1,5 +1,6 @@
 package _03_JavaAdvanced._10_ExamPrep._01_;
 
+
 import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
@@ -26,15 +27,19 @@ public class MagicBox {
                 queue.offer(stack.pop());
             }
         }
+        
         if(queue.isEmpty()){
             System.out.println("First magic box is empty.");
         }else{
             System.out.println("Second magic box is empty.");
         }
+        
         if(value >= 90 ){
             System.out.println("Wow, your prey was epic! Value: " + value);
         }else{
             System.out.println("Poor prey... Value: " + value);
         }
+        
+        scan.close();
     }
 }
