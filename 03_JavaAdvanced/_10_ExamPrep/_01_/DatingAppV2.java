@@ -39,7 +39,7 @@ public class DatingAppV2 {
                 f = fQueue.poll();
             }
 
-            while(f % 25 == 0 && fQueue.size() >=2){
+            while(f % 25 == 0 && fQueue.size() >= 2){
                 fQueue.poll();
                 f = fQueue.poll();
             }
@@ -51,7 +51,7 @@ public class DatingAppV2 {
 
             if(m > 0 && f > 0 && m % 25 != 0 && f % 25 != 0) {
                 if (m != f) {
-                    mStack.push(m-2);
+                    mStack.push(m - 2);
                 } else {
                     matches++;
                 }
@@ -59,7 +59,7 @@ public class DatingAppV2 {
                 if(m > 0 && m % 25 != 0){
                     mStack.push(m);
                 }
-                
+
                 if(f > 0 && f % 25 != 0){
                     fQueue.push(f);
                 }
@@ -81,5 +81,7 @@ public class DatingAppV2 {
             System.out.print("Females left: ");
             System.out.print(fQueue.stream().map(String::valueOf).collect(Collectors.joining(", ")));
         }
+        
+        scan.close();
     }
 }
