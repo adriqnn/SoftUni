@@ -1,4 +1,5 @@
 package _03_JavaAdvanced._10_ExamPrep._01_;
+
 import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
@@ -11,6 +12,7 @@ public class Bombs {
         
         Deque<Integer> effectsQueue = new ArrayDeque<>();
         Deque<Integer> casingStack = new ArrayDeque<>();
+        
         Arrays.stream(scan.nextLine().split(", ")).map(Integer::parseInt).forEach(effectsQueue::offer);
         Arrays.stream(scan.nextLine().split(", ")).map(Integer::parseInt).forEach(casingStack::push);
         
@@ -70,9 +72,9 @@ public class Bombs {
             System.out.println();
         }
         
-        System.out.printf("Cherry Bombs: %d%n",b60);
-        System.out.printf("Datura Bombs: %d%n",b40);
-        System.out.printf("Smoke Decoy Bombs: %d%n",b120);
+        System.out.printf("Cherry Bombs: %d%n", b60);
+        System.out.printf("Datura Bombs: %d%n", b40);
+        System.out.printf("Smoke Decoy Bombs: %d%n", b120);
         
         scan.close();
     }
