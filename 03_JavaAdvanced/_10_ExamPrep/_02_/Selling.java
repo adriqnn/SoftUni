@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Selling {
     public static int otherOR;
     public static int otherOC;
+    
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         
