@@ -33,7 +33,7 @@ public class Bakery {
     }
 
     public Employee getOldestEmployee(){
-        return this.employees.stream().sorted((e1,e2) -> Integer.compare(e2.getAge(), e1.getAge())).collect(Collectors.toList()).get(0);
+        return this.employees.stream().sorted((e1, e2) -> Integer.compare(e2.getAge(), e1.getAge())).collect(Collectors.toList()).get(0);
     }
 
     public Employee getEmployee(String name){
