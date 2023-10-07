@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class Guild {
     private String name;
     private int capacity;
-    private Map<String,Player> roster;
+    private Map<String, Player> roster;
     private int size;
 
     public Guild(String name, int capacity) {
@@ -21,7 +21,7 @@ public class Guild {
 
     public void addPlayer(Player player){
         if(this.size < capacity) {
-            this.roster.putIfAbsent(player.getName(),player);
+            this.roster.putIfAbsent(player.getName(), player);
             size++;
         }
     }
