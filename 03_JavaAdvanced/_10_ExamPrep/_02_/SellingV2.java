@@ -122,7 +122,7 @@ public class SellingV2 {
             System.out.println("Good news! You succeeded in collecting enough money!");
         }
 
-        System.out.printf("Money: %d%n",money);
+        System.out.printf("Money: %d%n", money);
         for (int i = 0; i < journeyMatrix.length; i++) {
             for (int j = 0; j < journeyMatrix[i].length; j++) {
                 System.out.print(journeyMatrix[i][j]);
