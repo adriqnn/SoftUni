@@ -32,7 +32,7 @@ public class Bakery {
     }
 
     public Employee getOldestEmployee(){
-        return this.employees.stream().sorted((e1,e2) -> Integer.compare(e2.getAge(),e1.getAge())).collect(Collectors.toList()).get(0);
+        return this.employees.stream().sorted((e1,e2) -> Integer.compare(e2.getAge(), e1.getAge())).collect(Collectors.toList()).get(0);
     }
 
     public Employee getEmployee(String name){
@@ -45,8 +45,10 @@ public class Bakery {
 
     public String report(){
         StringBuilder sb = new StringBuilder();
+        
         sb.append("Employees working at Bakery ").append(this.name).append(":").append(System.lineSeparator());
         this.employees.forEach(e -> sb.append(e).append(System.lineSeparator()));
+        
         return  sb.toString();
     }
 }
