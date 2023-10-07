@@ -28,10 +28,12 @@ public class Guild {
 
     public boolean removePlayer(String name){
         boolean containsThis = roster.containsKey(name);
+        
         if(containsThis) {
             roster.remove(name);
             size--;
         }
+        
         return containsThis;
     }
 
@@ -54,15 +56,18 @@ public class Guild {
 
     public Player[] kickPlayersByClass(String clazz){
         List<Player> kicked = new ArrayList<>();
+        
         for (Map.Entry<String, Player> k : roster.entrySet()) {
             if(k.getValue().getClazz().equals(clazz)){
                 kicked.add(k.getValue());
             }
         }
+        
         for (Player s : kicked) {
             roster.remove(s.getName());
             this.size--;
         }
+        
         return kicked.toArray(new Player[0]);
     }
 
@@ -71,12 +76,17 @@ public class Guild {
     }
 
     public String report(){
-        /*StringBuilder sb = new StringBuilder();
+        /*
+        StringBuilder sb = new StringBuilder();
+        
         sb.append("Players in the a.java.advanced.exampreps.bakery.guild: " + this.name + System.lineSeparator());
         for (Player p : roster.values()) {
             sb.append(p).append(System.lineSeparator());
         }
-        return sb.toString();*/
+        
+        return sb.toString();
+        */
+        
         return String.format(
                 "Players in the guild: %s:%n%s", name, roster.values().stream().map(Player::toString).collect(Collectors.joining(System.lineSeparator())));
     }
