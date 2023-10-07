@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class CookingJourney {
     public static int rowP;
     public static int colP;
+    
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
