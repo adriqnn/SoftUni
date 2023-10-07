@@ -123,7 +123,7 @@ public class Selling {
             System.out.println("Good news! You succeeded in collecting enough money!");
         }
         
-        System.out.printf("Money: %d%n",sum);
+        System.out.printf("Money: %d%n", sum);
         for (int i = 0; i < sellingMatrix.length; i++) {
             for (int j = 0; j < sellingMatrix[i].length; j++) {
                 System.out.print(sellingMatrix[i][j]);
