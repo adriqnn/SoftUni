@@ -12,15 +12,15 @@ public class Car {
     }
 
     public String getManufacturer() {
-        return manufacturer;
+        return this.manufacturer;
     }
 
     public String getModel() {
-        return model;
+        return this.model;
     }
 
     public int getYear() {
-        return year;
+        return this.year;
     }
 
     public String toString(){
