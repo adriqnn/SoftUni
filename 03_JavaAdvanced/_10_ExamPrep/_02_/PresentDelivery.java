@@ -2,7 +2,7 @@ package _03_JavaAdvanced._10_ExamPrep._02_;
 
 import java.util.Scanner;
 
-public class PresentDeliveryV3 {
+public class PresentDelivery {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int presents = Integer.parseInt(scan.nextLine());
