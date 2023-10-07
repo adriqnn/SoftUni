@@ -24,6 +24,6 @@ public class Car {
     }
 
     public String toString(){
-        return String.format("%s %s (%d)",this.manufacturer,this.model,this.year);
+        return String.format("%s %s (%d)", this.manufacturer, this.model, this.year);
     }
 }
