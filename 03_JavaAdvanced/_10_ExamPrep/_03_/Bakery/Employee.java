@@ -12,19 +12,19 @@ public class Employee {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public int getAge() {
-        return age;
+        return this.age;
     }
 
     public String getCountry() {
-        return country;
+        return this.country;
     }
 
     @Override
     public String toString(){
-        return String.format("Employee: %s, %d (%s)",this.name,this.age,this.country);
+        return String.format("Employee: %s, %d (%s)", this.name, this.age, this.country);
     }
 }
