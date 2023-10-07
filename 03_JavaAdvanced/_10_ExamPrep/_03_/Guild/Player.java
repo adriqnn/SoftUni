@@ -14,19 +14,19 @@ public class Player {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public String getClazz() {
-        return clazz;
+        return this.clazz;
     }
 
     public String getRank() {
-        return rank;
+        return this.rank;
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public void setName(String name) {
