@@ -16,40 +16,44 @@ public class Parking {
     }
 
     public void add(Car car){
-        if(capacity > data.size()){
-            data.add(car);
+        if(this.capacity > this.data.size()){
+            this.data.add(car);
         }
     }
 
-    public boolean remove(String manufacturer,String model){
-        for (Car e : data) {
+    public boolean remove(String manufacturer, String model){
+        for (Car e : this.data) {
             if(e.getManufacturer().equals(manufacturer) && e.getModel().equals(model)){
-                data.remove(e);
+                this.data.remove(e);
                 return true;
             }
         }
+        
         return false;
     }
 
     public Car getLatestCar(){
-        if(data.size() > 0){
-            return this.data.stream().sorted((a,b) -> Integer.compare(b.getYear(),a.getYear())).collect(Collectors.toList()).get(0);
+        if(this.data.size() > 0){
+            return this.data.stream().sorted((a, b) -> Integer.compare(b.getYear(), a.getYear())).collect(Collectors.toList()).get(0);
         }
+        
         return null;
     }
 
-    public Car getCar(String manufacturer,String model){
+    public Car getCar(String manufacturer, String model){
         return this.data.stream().filter(p -> p.getManufacturer().equals(manufacturer) && p.getModel().equals(model)).findAny().orElse(null);
     }
 
     public int getCount(){
-        return data.size();
+        return this.data.size();
     }
 
     public String getStatistics(){
         StringBuilder sb = new StringBuilder();
+        
         sb.append("The cars are parked in ").append(this.type).append(":").append(System.lineSeparator());
-        data.forEach(e -> sb.append(e).append(System.lineSeparator()));
+        this.data.forEach(e -> sb.append(e).append(System.lineSeparator()));
+        
         return sb.toString();
     }
 }
