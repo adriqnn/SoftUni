@@ -33,7 +33,7 @@ public class Bee {
             territoryMatrix[r][c] = '.';
 
             if(command.equals("up")){
-                if(isValid(r-1,c,territoryMatrix)){
+                if(isValid(r-1, c, territoryMatrix)){
                     r--;
                     char character = territoryMatrix[r][c];
 
@@ -51,8 +51,7 @@ public class Bee {
                     isOut = true;
                 }
             }else if(command.equals("down")){
-                if(isValid(r+1,c,territoryMatrix)){
-
+                if(isValid(r+1, c, territoryMatrix)){
                     r++;
                     char character = territoryMatrix[r][c];
 
@@ -61,7 +60,7 @@ public class Bee {
                     }else if(character == 'O'){
                         territoryMatrix[r][c] = '.';
                         r++;
-                        
+
                         if(territoryMatrix[r][c] == 'f'){
                             pollinatedFlowers++;
                         }
@@ -70,14 +69,16 @@ public class Bee {
                     isOut = true;
                 }
             }else if(command.equals("left")){
-                if(isValid(r,c-1,territoryMatrix)){
+                if(isValid(r, c-1, territoryMatrix)){
                     c--;
                     char character = territoryMatrix[r][c];
+
                     if(character == 'f'){
                         pollinatedFlowers++;
                     }else if(character == 'O'){
                         territoryMatrix[r][c] = '.';
                         c--;
+
                         if(territoryMatrix[r][c] == 'f'){
                             pollinatedFlowers++;
                         }
@@ -86,14 +87,16 @@ public class Bee {
                     isOut = true;
                 }
             }else if(command.equals("right")){
-                if(isValid(r,c+1,territoryMatrix)){
+                if(isValid(r, c+1, territoryMatrix)){
                     c++;
                     char character = territoryMatrix[r][c];
+
                     if(character == 'f'){
                         pollinatedFlowers++;
                     }else if(character == 'O'){
                         territoryMatrix[r][c] = '.';
                         c++;
+                        
                         if(territoryMatrix[r][c] == 'f'){
                             pollinatedFlowers++;
                         }
@@ -102,20 +105,25 @@ public class Bee {
                     isOut = true;
                 }
             }
+            
             if(isOut){
                 break;
             }
+            
             territoryMatrix[r][c] = 'B';
             command = scan.nextLine();
         }
+        
         if(isOut){
             System.out.println("The bee got lost!");
         }
+        
         if(pollinatedFlowers < 5){
             System.out.printf("The bee couldn't pollinate the flowers, she needed %d flowers more%n",5-pollinatedFlowers);
         }else{
             System.out.printf("Great job, the bee manage to pollinate %d flowers!%n",pollinatedFlowers);
         }
+        
         for (int i = 0; i < territoryMatrix.length; i++) {
             for (int j = 0; j < territoryMatrix[i].length; j++) {
                 System.out.print(territoryMatrix[i][j]);
