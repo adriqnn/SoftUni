@@ -5,16 +5,20 @@ import java.util.Scanner;
 public class SellingV2 {
     public static int rowP;
     public static int colP;
-    
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+
         int size = Integer.parseInt(scan.nextLine());
         char[][] journeyMatrix = new char[size][];
+
         for (int i = 0; i < journeyMatrix.length; i++) {
             journeyMatrix[i] = scan.nextLine().toCharArray();
         }
+
         int r = 0;
         int c = 0;
+
         for (int i = 0; i < journeyMatrix.length; i++) {
             for (int j = 0; j < journeyMatrix[i].length; j++) {
                 if(journeyMatrix[i][j] == 'S'){
@@ -23,20 +27,23 @@ public class SellingV2 {
                 }
             }
         }
+
         int money = 0;
         boolean isOut = false;
         String command = scan.nextLine();
+
         while(money < 50){
             journeyMatrix[r][c] = '-';
             if (command.equals("up")){
-                if(isValid(r-1,c,journeyMatrix)){
+                if(isValid(r-1, c, journeyMatrix)){
                     r--;
                     char place = journeyMatrix[r][c];
                     journeyMatrix[r][c] = '-';
+                    
                     if(Character.isDigit(place)){
                         money += Character.getNumericValue(place);
                     }else if(place == 'O'){
-                        getOtherP(r,c,journeyMatrix);
+                        getOtherP(r, c, journeyMatrix);
                         journeyMatrix[rowP][colP] = '-';
                         r = rowP;
                         c = colP;
@@ -45,14 +52,15 @@ public class SellingV2 {
                     isOut = true;
                 }
             }else if(command.equals("down")){
-                if(isValid(r+1,c,journeyMatrix)){
+                if(isValid(r+1, c, journeyMatrix)){
                     r++;
                     char place = journeyMatrix[r][c];
                     journeyMatrix[r][c] = '-';
+                    
                     if(Character.isDigit(place)){
                         money += Character.getNumericValue(place);
                     }else if(place == 'O'){
-                        getOtherP(r,c,journeyMatrix);
+                        getOtherP(r, c, journeyMatrix);
                         journeyMatrix[rowP][colP] = '-';
                         r = rowP;
                         c = colP;
@@ -61,14 +69,15 @@ public class SellingV2 {
                     isOut = true;
                 }
             }else if(command.equals("left")){
-                if(isValid(r,c-1,journeyMatrix)){
+                if(isValid(r, c-1, journeyMatrix)){
                     c--;
                     char place = journeyMatrix[r][c];
                     journeyMatrix[r][c] = '-';
+                    
                     if(Character.isDigit(place)){
                         money += Character.getNumericValue(place);
                     }else if(place == 'O'){
-                        getOtherP(r,c,journeyMatrix);
+                        getOtherP(r, c, journeyMatrix);
                         journeyMatrix[rowP][colP] = '-';
                         r = rowP;
                         c = colP;
@@ -77,14 +86,15 @@ public class SellingV2 {
                     isOut = true;
                 }
             }else if(command.equals("right")){
-                if(isValid(r,c+1,journeyMatrix)){
+                if(isValid(r, c+1, journeyMatrix)){
                     c++;
                     char place = journeyMatrix[r][c];
                     journeyMatrix[r][c] = '-';
+                    
                     if(Character.isDigit(place)){
                         money += Character.getNumericValue(place);
                     }else if(place == 'O'){
-                        getOtherP(r,c,journeyMatrix);
+                        getOtherP(r, c, journeyMatrix);
                         journeyMatrix[rowP][colP] = '-';
                         r = rowP;
                         c = colP;
@@ -93,27 +103,35 @@ public class SellingV2 {
                     isOut = true;
                 }
             }
+            
             if(isOut){
                 break;
             }
+            
             journeyMatrix[r][c] = 'S';
             if(money >= 50){
                 break;
             }
+            
             command = scan.nextLine();
         }
+        
         if(isOut){
-            System.out.println("Bad news, you are out of the a.java.advanced.week11exam.exampreps.bakery.");
+            System.out.println("Bad news, you are out of the bakery.");
         }else if(money >= 50){
             System.out.println("Good news! You succeeded in collecting enough money!");
         }
+
         System.out.printf("Money: %d%n",money);
         for (int i = 0; i < journeyMatrix.length; i++) {
             for (int j = 0; j < journeyMatrix[i].length; j++) {
                 System.out.print(journeyMatrix[i][j]);
             }
+
             System.out.println();
         }
+
+        scan.close();
     }
 
     private static void getOtherP(int r, int c, char[][] journeyMatrix) {
