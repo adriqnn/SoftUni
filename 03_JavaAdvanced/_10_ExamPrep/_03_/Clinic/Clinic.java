@@ -26,6 +26,7 @@ public class Clinic {
                 return true;
             }
         }
+        
         return false;
     }
 
@@ -34,7 +35,7 @@ public class Clinic {
     }
 
     public Pet getOldestPet(){
-        return this.data.stream().sorted((a,b) -> Integer.compare(b.getAge(),a.getAge())).collect(Collectors.toList()).get(0);
+        return this.data.stream().sorted((a, b) -> Integer.compare(b.getAge(), a.getAge())).collect(Collectors.toList()).get(0);
     }
 
     public int getCount(){
@@ -43,11 +44,13 @@ public class Clinic {
 
     public String getStatistics() {
         StringBuilder sb = new StringBuilder();
+        
         sb.append("The clinic has the following patients:").append(System.lineSeparator());
         for (Pet pet : this.data) {
             sb.append(String.format("%s %s", pet.getName(), pet.getOwner()));
             sb.append(System.lineSeparator());
         }
+        
         return sb.toString();
     }
 }
