@@ -1,6 +1,5 @@
 package _03_JavaAdvanced._12_WorkshopBasicAlgorithms;
 
-
 import java.util.Scanner;
 
 public class _02_RecursiveFactorial {
