@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class Cage {
     private String name;
     private int capacity;
-    private Map<String,Rabbit> data;
+    private Map<String, Rabbit> data;
     private int takenSpots;
 
     public Cage(String name, int capacity) {
@@ -19,16 +19,16 @@ public class Cage {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public int getCapacity() {
-        return capacity;
+        return this.capacity;
     }
 
     public void add(Rabbit rabbit){
-        if(this.data.size() < capacity){
-            this.data.putIfAbsent(rabbit.getName(),rabbit);
+        if(this.data.size() < this.capacity){
+            this.data.putIfAbsent(rabbit.getName(), rabbit);
         }
     }
 
