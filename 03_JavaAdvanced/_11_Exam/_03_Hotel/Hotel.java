@@ -1,5 +1,6 @@
 package _03_JavaAdvanced._11_Exam._03_Hotel;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,12 +22,13 @@ public class Hotel {
     }
 
     public boolean remove(String name){
-        for (Person p : roster) {
+        for (Person p : this.roster) {
             if(p.getName().equals(name)){
                 this.roster.remove(p);
                 return true;
             }
         }
+        
         return false;
     }
 
@@ -40,10 +42,12 @@ public class Hotel {
 
     public String getStatistics(){
         StringBuilder sb = new StringBuilder();
+        
         sb.append("The people in the hotel ").append(this.name).append(" are:").append(System.lineSeparator());
-        for (Person p : roster) {
+        for (Person p : this.roster) {
             sb.append(p).append(System.lineSeparator());
         }
+        
         return sb.toString();
     }
 }
