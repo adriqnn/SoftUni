@@ -36,8 +36,7 @@ public class _05_MergeSort {
         j = 0;
         k = p;
 
-        // Until we reach either end of either L or M, pick larger among
-        // elements L and M and place them in the correct position at A[p..r]
+        // Until we reach either end of either L or M pick larger elements L and M and place them in the correct position at A[p..r]
         while (i < n1 && j < n2) {
             if (L[i] <= M[j]) {
                 arr[k] = L[i];
@@ -50,8 +49,7 @@ public class _05_MergeSort {
             k++;
         }
 
-        // When we run out of elements in either L or M,
-        // pick up the remaining elements and put in A[p..r]
+        // When we run out of elements in either L or M pick up the remaining elements and put in A[p..r]
         while (i < n1) {
             arr[k] = L[i];
             i++;
@@ -65,11 +63,11 @@ public class _05_MergeSort {
         }
     }
 
-    // Divide the array into two sub-arrays, sort them and merge them
+    // Divide the array into two sub-arrays sort them and merge them
     public static void mergeSort(int[] arr, int l, int r) {
         if (l < r) {
 
-            // m is the point where the array is divided into two sub-arrays
+            // M is the point where the array is divided into two sub-arrays
             int m = (l + r) / 2;
 
             mergeSort(arr, l, m);
