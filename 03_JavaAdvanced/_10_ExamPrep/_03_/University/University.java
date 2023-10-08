@@ -29,27 +29,31 @@ public class University {
     }
 
     public String registerStudent(Student student){
-        f.putIfAbsent(student.getFirstName(),student);
+        this.f.putIfAbsent(student.getFirstName(), student);
         String returnString = "";
-        if(!students.contains(student) && capacity > students.size()){
-            students.add(student);
-            returnString = String.format("Added student %s %s",student.getFirstName(),student.getLastName());
-        }else if(students.contains(student)){
+        
+        if(!this.students.contains(student) && this.capacity > this.students.size()){
+            this.students.add(student);
+            returnString = String.format("Added student %s %s", student.getFirstName(), student.getLastName());
+        }else if(this.students.contains(student)){
             returnString = "Student is already in university";
-        }else if(capacity <= students.size()){
+        }else if(this.capacity <= this.students.size()){
             returnString = "No seats in the university";
         }
+        
         return returnString;
     }
 
     public String dismissStudent(Student student){
         String returnString = "";
-        if(students.contains(student)){
-            students.remove(student);
-            returnString = String.format("Removed student %s %s", student.getFirstName(),student.getLastName());
+        
+        if(this.students.contains(student)){
+            this.students.remove(student);
+            returnString = String.format("Removed student %s %s", student.getFirstName(), student.getLastName());
         }else{
             returnString = ("Student not found");
         }
+        
         return returnString;
     }
 
