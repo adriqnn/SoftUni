@@ -12,11 +12,11 @@ public class Rabbit {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public String getSpecies() {
-        return species;
+        return this.species;
     }
 
     public void setAvailable() {
@@ -24,7 +24,7 @@ public class Rabbit {
     }
 
     public boolean isAvailable() {
-        return available;
+        return this.available;
     }
 
     @Override
