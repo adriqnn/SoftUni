@@ -1,51 +1,41 @@
 package _03_JavaAdvanced._12_WorkshopBasicAlgorithms;
 
 import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Arrays;
+        import java.io.IOException;
+        import java.io.InputStreamReader;
+        import java.util.Arrays;
 
 public class _06_Quicksort {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        int[] sequence = Arrays.stream(reader.readLine().split(" "))
+        int[] arr = Arrays.stream(reader.readLine().split(" "))
                 .mapToInt(Integer::parseInt)
                 .toArray();
-        int[] length = new int[sequence.length];
-        int[] prev = new int[sequence.length];
 
-        int maxLength = 0;
-        int maxIndex = -1;
+        arr = bubbleSort(arr);
 
-        for (int i = 0; i < sequence.length; i++) {
-            int bestLength = 1;
-            int index = -1;
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+    }
 
-            int element = sequence[i];
-
-            for (int j = 0; j < i; j++) {
-                if (sequence[j] < element && bestLength < length[j] + 1) {
-                    bestLength = length[j] + 1;
-                    index = j;
+    private static int[] bubbleSort(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            boolean isSort = true;
+            for (int j = 1; j < (arr.length - i); j++) {
+                if (arr[j - 1] > arr[j]) {
+                    //swap elements
+                    int temp = arr[j - 1];
+                    arr[j - 1] = arr[j];
+                    arr[j] = temp;
+                    isSort = false;
                 }
             }
-            length[i] = bestLength;
-            prev[i] = index;
-
-            if (maxLength < bestLength) {
-                maxLength = bestLength;
-                maxIndex = i;
+            if (isSort) {
+                break;
             }
         }
-        int[] result = new int[maxLength];
-        int index = maxLength - 1;
-        while (maxIndex != -1) {
-            result[index--] = sequence[maxIndex];
-            maxIndex = prev[maxIndex];
-        }
-        for (int i = 0; i < result.length; i++) {
-            System.out.print(result[i] + " ");
-        }
+        return arr;
     }
 }
