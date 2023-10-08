@@ -10,14 +10,14 @@ public class _07_BinarySearch {
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int[] arr = Arrays.stream(reader.readLine().split(" "))
-                .mapToInt(Integer::parseInt)
-                .toArray();
+        
+        int[] arr = Arrays.stream(reader.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
         int searchNum = Integer.parseInt(reader.readLine());
-
         int index = binarySearch(arr, searchNum);
 
         System.out.println(index);
+        
+        reader.close();
     }
 
     private static int binarySearch(int[] arr, int key) { //	Binary Search
@@ -26,13 +26,16 @@ public class _07_BinarySearch {
 
         while (end >= start) {
             int mid = (start + end) / 2;
-            if (arr[mid] < key)
+            
+            if (arr[mid] < key){
                 start = mid + 1;
-            else if (arr[mid] > key)
+            } else if (arr[mid] > key) {
                 end = mid - 1;
-            else
+            }else {
                 return mid;
+            }
         }
+        
         return KEY_NOT_FOUND;
     }
 }
