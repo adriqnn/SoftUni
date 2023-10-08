@@ -1,6 +1,5 @@
 package _03_JavaAdvanced._11_Exam._03_Hotel;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
