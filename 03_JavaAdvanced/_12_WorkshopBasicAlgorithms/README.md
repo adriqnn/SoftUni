@@ -1,2 +1,2 @@
-# Workshop Basic Algorithms
+# Workshop Basic Algorithms - Lecture/Exercise
 
