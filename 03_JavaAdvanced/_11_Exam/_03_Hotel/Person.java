@@ -14,22 +14,22 @@ public class Person {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public int getAge() {
-        return age;
+        return this.age;
     }
 
     public String getHometown() {
-        return hometown;
+        return this.hometown;
     }
 
     public String toString(){
-        return String.format("Person %s: %d, Age: %d, Hometown: %s",this.name,this.id,this.age,this.hometown);
+        return String.format("Person %s: %d, Age: %d, Hometown: %s", this.name, this.id, this.age, this.hometown);
     }
 }
