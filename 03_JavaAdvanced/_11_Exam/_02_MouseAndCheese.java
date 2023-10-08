@@ -2,7 +2,7 @@ package _03_JavaAdvanced._11_Exam;
 
 import java.util.Scanner;
 
-public class MouseAndCheese {
+public class _02_MouseAndCheese {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int size = Integer.parseInt(scan.nextLine());
