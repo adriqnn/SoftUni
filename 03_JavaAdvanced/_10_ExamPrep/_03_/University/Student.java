@@ -25,6 +25,6 @@ public class Student {
 
     @Override
     public String toString(){
-        return String.format("Student: %s %s, %s",this.firstName,this.lastName,this.bestSubject);
+        return String.format("Student: %s %s, %s", this.firstName, this.lastName, this.bestSubject);
     }
 }
