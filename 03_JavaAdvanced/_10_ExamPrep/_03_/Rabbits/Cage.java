@@ -34,11 +34,11 @@ public class Cage {
 
     public boolean removeRabbit(String name){
         boolean contains = this.data.containsKey(name);
-        
+
         if(contains){
             this.data.remove(name);
         }
-        
+
         return contains;
     }
 
@@ -52,26 +52,29 @@ public class Cage {
 
     public Rabbit sellRabbit(String name){
         Rabbit r = null;
-        
-        if(data.containsKey(name)) {
-            r = data.get(name);
-            data.get(name).setAvailable();
+
+        if(this.data.containsKey(name)) {
+            r = this.data.get(name);
+            this.data.get(name).setAvailable();
         }
-        
+
         return  r;
     }
 
     public List<Rabbit> sellRabbitBySpecies(String species){
-        List<Rabbit> returnRabbitList = data.values().stream().filter(e -> e.getSpecies().equals(species)).collect(Collectors.toList());
-        data.entrySet().removeIf(e -> e.getValue().getSpecies().equals(species));
+        List<Rabbit> returnRabbitList = this.data.values().stream().filter(e -> e.getSpecies().equals(species)).collect(Collectors.toList());
+        this.data.entrySet().removeIf(e -> e.getValue().getSpecies().equals(species));
+        
         return returnRabbitList;
     }
 
     public int count(){
-        return data.size();
+        return this.data.size();
     }
 
     public String report(){
-        return String.format("Rabbits available at %s:%n%s",name,data.values().stream().filter(Rabbit::isAvailable).map(Rabbit::toString).collect(Collectors.joining(System.lineSeparator())));
+        String values = this.data.values().stream().filter(Rabbit::isAvailable).map(Rabbit::toString).collect(Collectors.joining(System.lineSeparator()));
+
+        return String.format("Rabbits available at %s:%n%s", this.name, values);
     }
 }
