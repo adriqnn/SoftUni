@@ -33,27 +33,31 @@ public class Cage {
     }
 
     public boolean removeRabbit(String name){
-        boolean contains = data.containsKey(name);
+        boolean contains = this.data.containsKey(name);
+        
         if(contains){
-            data.remove(name);
+            this.data.remove(name);
         }
+        
         return contains;
     }
 
     public void removeSpecies(String species){
-        for (Map.Entry<String, Rabbit> r : data.entrySet()) {
+        for (Map.Entry<String, Rabbit> r : this.data.entrySet()) {
             if(r.getValue().getSpecies().equals(species)){
-                data.remove(r.getKey());
+                this.data.remove(r.getKey());
             }
         }
     }
 
     public Rabbit sellRabbit(String name){
         Rabbit r = null;
+        
         if(data.containsKey(name)) {
             r = data.get(name);
             data.get(name).setAvailable();
         }
+        
         return  r;
     }
 
