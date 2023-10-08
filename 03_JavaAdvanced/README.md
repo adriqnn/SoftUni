@@ -8,3 +8,7 @@
 * Workshop
 * Generics
 * Iterators and Comparators
+* Exam Prep
+* Exam
+* Workshop Basic Algorithms
+* Bonus Tasks
