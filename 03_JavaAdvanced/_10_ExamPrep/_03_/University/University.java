@@ -8,7 +8,7 @@ import java.util.Map;
 public class University {
     public int capacity;
     public List<Student> students;
-    private Map<String,Student> f;
+    private Map<String, Student> f;
 
     public University(int capacity) {
         this.capacity = capacity;
@@ -17,15 +17,15 @@ public class University {
     }
 
     public int getCapacity() {
-        return capacity;
+        return this.capacity;
     }
 
     public List<Student> getStudents() {
-        return students;
+        return this.students;
     }
 
     public int getStudentCount(){
-        return students.size();
+        return this.students.size();
     }
 
     public String registerStudent(Student student){
