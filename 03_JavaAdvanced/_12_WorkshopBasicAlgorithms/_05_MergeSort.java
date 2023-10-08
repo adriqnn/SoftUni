@@ -4,9 +4,19 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class _05_MergeSort {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
 
-    // Merge two subarrays L and M into arr
-    void merge(int arr[], int p, int q, int r) {
+        int arr[] = Arrays.stream(scan.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
+
+        mergeSort(arr, 0, arr.length - 1);
+        printArray(arr);
+
+        scan.close();
+    }
+
+    // Merge two sub-arrays L and M into arr
+    public static void merge(int[] arr, int p, int q, int r) {
 
         // Create L ← A[p..q] and M ← A[q+1..r]
         int n1 = q - p + 1;
@@ -36,6 +46,7 @@ public class _05_MergeSort {
                 arr[k] = M[j];
                 j++;
             }
+
             k++;
         }
 
@@ -54,38 +65,29 @@ public class _05_MergeSort {
         }
     }
 
-    // Divide the array into two subarrays, sort them and merge them
-    void mergeSort(int arr[], int l, int r) {
+    // Divide the array into two sub-arrays, sort them and merge them
+    public static void mergeSort(int[] arr, int l, int r) {
         if (l < r) {
 
-            // m is the point where the array is divided into two subarrays
+            // m is the point where the array is divided into two sub-arrays
             int m = (l + r) / 2;
 
             mergeSort(arr, l, m);
             mergeSort(arr, m + 1, r);
 
-            // Merge the sorted subarrays
+            // Merge the sorted sub-arrays
             merge(arr, l, m, r);
         }
     }
 
     // Print the array
-    static void printArray(int arr[]) {
+    public static void printArray(int[] arr) {
         int n = arr.length;
-        for (int i = 0; i < n; ++i)
+
+        for (int i = 0; i < n; ++i) {
             System.out.print(arr[i] + " ");
+        }
+
         System.out.println();
-    }
-
-    // Driver program
-    public static void main(String args[]) {
-        Scanner scan = new Scanner(System.in);
-        int arr[] = Arrays.stream(scan.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
-
-        _05_MergeSort ob = new _05_MergeSort();
-        ob.mergeSort(arr, 0, arr.length - 1);
-
-        //System.out.println("Sorted array:");
-        printArray(arr);
     }
 }
