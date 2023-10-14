@@ -2,14 +2,16 @@ package _04_JavaOOP._01_WorkingWithAbstraction._03_StudentSystem;
 
 public class StudentInfoFormatter {
     public static String getFormatter(Student student){
-        return String.format("%s is %s years old. %s", student.getName(), student.getAge(),getCommentary(student.getGrade()));
+        return String.format("%s is %s years old. %s", student.getName(), student.getAge(), getCommentary(student.getGrade()));
     }
+    
     private static String getCommentary(double grade){
         if( grade >= 5.00){
             return "Excellent student.";
         }else if(grade >= 3.50){
             return "Average student.";
         }
+        
         return "Very nice person.";
     }
 }
