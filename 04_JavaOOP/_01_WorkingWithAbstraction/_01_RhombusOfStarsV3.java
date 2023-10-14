@@ -47,5 +47,4 @@ public class _01_RhombusOfStarsV3 {
             System.out.print(str);
         }
     }
-    
 }
