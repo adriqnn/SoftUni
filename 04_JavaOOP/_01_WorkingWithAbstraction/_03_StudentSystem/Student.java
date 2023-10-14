@@ -1,5 +1,4 @@
 package _04_JavaOOP._01_WorkingWithAbstraction._03_StudentSystem;
-
 public class Student {
     private String name;
     private int age;
@@ -12,14 +11,14 @@ public class Student {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public int getAge() {
-        return age;
+        return this.age;
     }
 
     public double getGrade() {
-        return grade;
+        return this.grade;
     }
 }
