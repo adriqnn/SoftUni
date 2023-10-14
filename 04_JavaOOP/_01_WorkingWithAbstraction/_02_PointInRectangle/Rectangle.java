@@ -10,6 +10,6 @@ public class Rectangle {
     }
 
     public boolean contains(Point p){
-        return p.isGreaterThanOrEqual(pointA) && p.isLessThanOrEqual(pointB);
+        return p.isGreaterThanOrEqual(this.pointA) && p.isLessThanOrEqual(this.pointB);
     }
 }
