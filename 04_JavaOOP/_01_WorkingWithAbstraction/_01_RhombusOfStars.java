@@ -23,8 +23,6 @@ public class _01_RhombusOfStars {
     
     private String printMiddle(){
         return repeatAndPrintString(n, "* ") + System.lineSeparator();
-
-        
     }
     
     private String printBottom(){
