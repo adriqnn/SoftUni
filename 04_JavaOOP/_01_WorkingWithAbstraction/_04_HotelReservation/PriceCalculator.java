@@ -14,9 +14,10 @@ public class PriceCalculator {
     }
 
     public String returnPrice(){
-        double pricePerDayWithSeason = this.pricePerDay*this.season.getPricePerDay();
-        double totalPriceWithoutDiscount = pricePerDayWithSeason*this.numberOfDays;
-        double totalPriceToPay = totalPriceWithoutDiscount*this.discount.getPercentage();
-        return String.format("%.2f",totalPriceToPay);
+        double pricePerDayWithSeason = this.pricePerDay * this.season.getPricePerDay();
+        double totalPriceWithoutDiscount = pricePerDayWithSeason * this.numberOfDays;
+        double totalPriceToPay = totalPriceWithoutDiscount * this.discount.getPercentage();
+        
+        return String.format("%.2f", totalPriceToPay);
     }
 }
