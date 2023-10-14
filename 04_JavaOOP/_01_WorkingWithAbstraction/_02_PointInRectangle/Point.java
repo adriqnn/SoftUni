@@ -1,4 +1,5 @@
 package _04_JavaOOP._01_WorkingWithAbstraction._02_PointInRectangle;
+
 public class Point {
     private final int x;
     private final int y;
