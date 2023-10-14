@@ -13,17 +13,21 @@ public enum Season {
     }
 
     public int getPricePerDay() {
-        return pricePerDay;
+        return this.pricePerDay;
     }
 
-    /*public static Season fromString(String string){
+    /*
+    public static Season fromString(String word){
         return Season.valueOf(seasonAsString.toUpperCase());
-        return switch(string){
+        
+        return switch(word){
             case "Autumn" -> AUTUMN;
             case "Spring" -> SPRING;
             case "Winter" -> WINTER;
             case "Summer" -> SUMMER;
+            
             default -> throw new IllegalArgumentException("just no");
         };
-    }*/
+    }
+    */
 }
