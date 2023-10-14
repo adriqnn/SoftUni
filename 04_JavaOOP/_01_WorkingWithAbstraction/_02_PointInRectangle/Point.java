@@ -1,5 +1,4 @@
 package _04_JavaOOP._01_WorkingWithAbstraction._02_PointInRectangle;
-
 public class Point {
     private final int x;
     private final int y;
@@ -10,10 +9,10 @@ public class Point {
     }
 
     public boolean isGreaterThanOrEqual(Point p){
-        return x >= p.x && y >= p.y;
+        return this.x >= p.x && this.y >= p.y;
     }
 
     public boolean isLessThanOrEqual(Point p){
-        return x <= p.x && y <= p.y;
+        return this.x <= p.x && this.y <= p.y;
     }
 }
