@@ -12,6 +12,6 @@ public enum Discount {
     }
 
     public double getPercentage() {
-        return percentage;
+        return this.percentage;
     }
 }
