@@ -5,7 +5,7 @@ public class Main {
         System.out.println("Card Suits: ");
         
         for (CardSuits cardSuit : CardSuits.values()) {
-            System.out.printf("Ordinal value: %d; Name value: %s%n", cardSuit.ordinal(),cardSuit.name());
+            System.out.printf("Ordinal value: %d; Name value: %s%n", cardSuit.ordinal(), cardSuit.name());
         }
     }
 }
