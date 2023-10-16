@@ -10,11 +10,11 @@ public class Gem {
     }
 
     public long getValue() {
-        return value;
+        return this.value;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setValue(long value) {
