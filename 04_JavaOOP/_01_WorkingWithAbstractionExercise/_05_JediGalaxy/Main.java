@@ -8,31 +8,34 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         int[] dimensions = readPositions(scan.nextLine());
+        
         int rows = dimensions[0];
         int cols = dimensions[1];
 
-        Field field = new Field(rows,cols);
+        Field field = new Field(rows, cols);
         Galaxy galaxy = new Galaxy(field);
-
 
         String command = scan.nextLine();
         long starsCollected = 0;
+        
         while(!command.equals("Let the Force be with you")){
             int[] jediPosition = readPositions(command);
             int[] evilPosition = readPositions(scan.nextLine());
 
             int rowEvil = evilPosition[0];
             int colEvil = evilPosition[1];
-            galaxy.moveEvil(rowEvil,colEvil);
+            galaxy.moveEvil(rowEvil, colEvil);
 
             int rowJedi = jediPosition[0];
             int colJedi = jediPosition[1];
-            starsCollected += galaxy.moveJedi(rowJedi,colJedi);
-
+            starsCollected += galaxy.moveJedi(rowJedi, colJedi);
 
             command = scan.nextLine();
         }
+        
         System.out.println(starsCollected);
+        
+        scan.close();
     }
 
     private static int[] readPositions(String command) {
