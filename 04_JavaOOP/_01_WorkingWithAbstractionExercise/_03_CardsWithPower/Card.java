@@ -10,7 +10,7 @@ public class Card {
     }
 
     public int getPower(){
-        return cardRank.getRankPower() + cardSuit.getSuitPower();
+        return this.cardRank.getRankPower() + this.cardSuit.getSuitPower();
     }
 
     @Override
