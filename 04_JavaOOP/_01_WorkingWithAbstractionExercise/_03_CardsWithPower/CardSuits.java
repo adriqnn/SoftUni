@@ -13,6 +13,6 @@ public enum CardSuits {
     }
 
     public int getSuitPower() {
-        return suitPower;
+        return this.suitPower;
     }
 }
