@@ -15,6 +15,6 @@ public class Card {
 
     @Override
     public String toString(){
-        return String.format("Card name: %s of %s; Card power: %d",this.cardRank,this.cardSuit,this.getPower());
+        return String.format("Card name: %s of %s; Card power: %d", this.cardRank, this.cardSuit, this.getPower());
     }
 }
