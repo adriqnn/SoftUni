@@ -9,7 +9,7 @@ public class Field {
     }
 
     public Field(int rows, int cols) {
-        this(rows,cols,0);
+        this(rows, cols, 0);
     }
 
     private void fillValues(int beginValue){
