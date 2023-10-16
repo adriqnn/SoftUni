@@ -1,4 +1,5 @@
 package _04_JavaOOP._01_WorkingWithAbstractionExercise._04_TrafficLights;
+
 public class TrafficLight {
     private Color color;
 
