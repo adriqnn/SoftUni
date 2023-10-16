@@ -9,9 +9,10 @@ public class Galaxy {
 
     public void moveEvil(int row, int col){
         while(row >= 0 && col >= 0){
-            if(this.field.isInBounds(row,col)){
-                this.field.setValue(row,col,0);
+            if(this.field.isInBounds(row, col)){
+                this.field.setValue(row, col, 0);
             }
+            
             row--;
             col--;
         }
