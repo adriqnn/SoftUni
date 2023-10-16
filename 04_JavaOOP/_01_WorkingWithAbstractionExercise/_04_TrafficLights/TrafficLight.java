@@ -1,5 +1,4 @@
 package _04_JavaOOP._01_WorkingWithAbstractionExercise._04_TrafficLights;
-
 public class TrafficLight {
     private Color color;
 
@@ -11,12 +10,16 @@ public class TrafficLight {
         switch (this.color){
             case RED:
                 this.color = Color.GREEN;
+                
                 break;
             case GREEN:
                 this.color = Color.YELLOW;
+                
                 break;
             case YELLOW:
                 this.color = Color.RED;
+                
+                break;
         }
     }
 
