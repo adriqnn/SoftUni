@@ -8,7 +8,7 @@ public class Gold {
     }
 
     public long getValue() {
-        return value;
+        return this.value;
     }
 
     public void setValue(long value) {
