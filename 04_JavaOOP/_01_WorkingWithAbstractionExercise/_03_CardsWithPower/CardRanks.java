@@ -22,6 +22,6 @@ public enum CardRanks {
     }
 
     public int getRankPower() {
-        return rankPower;
+        return this.rankPower;
     }
 }
