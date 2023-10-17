@@ -55,7 +55,7 @@ public class ValuablesBag {
         if(this.capacity >= this.takenCapacity() + gem.getValue()){
             if(this.getGoldValue() >= this.getGemsValue() + gem.getValue()){
                 boolean changed = false;
-                
+
                 for (Gem g : gems) {
                     if(g.getName().equals(gem.getName())){
                         g.setValue(g.getValue() + gem.getValue());
@@ -63,7 +63,7 @@ public class ValuablesBag {
                         break;
                     }
                 }
-                
+
                 if(!changed){
                     this.gems.add(gem);
                 }
@@ -75,29 +75,40 @@ public class ValuablesBag {
         if(this.capacity >= this.takenCapacity() + cash.getValue()){
             if(this.getGemsValue() >= this.getCashValue() + cash.getValue()){
                 boolean changed = false;
+                
                 for(Cash c : this.cash){
                     if(c.getName().equals(cash.getName())){
                         c.setValue(c.getValue() + cash.getValue());
                         changed = true;
+                        
                         break;
                     }
                 }
+                
                 if(!changed) {
                     this.cash.add(cash);
                 }
             }
         }
     }
-    /*public String printValuablesBag(){
+    
+    /*
+    public String printValuablesBag(){
         StringBuilder sb = new StringBuilder();
+        
         sb.append("<Gold> $").append(this.getGoldValue()).append(System.lineSeparator());
         sb.append("##Gold - $").append(this.getGoldValue()).append(System.lineSeparator());
+        
         sb.append("<Gem> $").append(this.getGemsValue()).append(System.lineSeparator());
         this.gems.stream().sorted((a,b) -> Long.compare(b.getValue(),a.getValue())).forEach(sb::append);
+        
         sb.append("<Cash> $").append(this.getCashValue()).append(System.lineSeparator());
-        this.cash.stream().sorted((a,b) -> Long.compare(b.getValue(),a.getValue())).forEach(sb::append);;
+        this.cash.stream().sorted((a,b) -> Long.compare(b.getValue(),a.getValue())).forEach(sb::append);
+        
         return sb.toString().trim();
-    }*/
+    }
+    */
+    
     public String printValuablesBag(){
         StringBuilder sb = new StringBuilder();
         if(this.gold.size() > 0) {
