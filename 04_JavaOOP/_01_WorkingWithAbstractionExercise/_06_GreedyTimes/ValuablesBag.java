@@ -38,7 +38,7 @@ public class ValuablesBag {
     }
 
     public long getCashValue(){
-        return  this.cash.stream().mapToLong(Cash::getValue).sum();
+        return this.cash.stream().mapToLong(Cash::getValue).sum();
     }
 
     private long takenCapacity(){
@@ -55,6 +55,7 @@ public class ValuablesBag {
         if(this.capacity >= this.takenCapacity() + gem.getValue()){
             if(this.getGoldValue() >= this.getGemsValue() + gem.getValue()){
                 boolean changed = false;
+                
                 for (Gem g : gems) {
                     if(g.getName().equals(gem.getName())){
                         g.setValue(g.getValue() + gem.getValue());
@@ -62,6 +63,7 @@ public class ValuablesBag {
                         break;
                     }
                 }
+                
                 if(!changed){
                     this.gems.add(gem);
                 }
