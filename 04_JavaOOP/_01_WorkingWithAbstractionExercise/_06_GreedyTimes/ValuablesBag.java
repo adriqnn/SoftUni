@@ -18,15 +18,15 @@ public class ValuablesBag {
     }
 
     public List<Gold> getGold() {
-        return gold;
+        return this.gold;
     }
 
     public List<Gem> getGems() {
-        return gems;
+        return this.gems;
     }
 
     public List<Cash> getCash() {
-        return cash;
+        return this.cash;
     }
 
     public long getGoldValue(){
