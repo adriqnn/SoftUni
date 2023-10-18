@@ -12,15 +12,15 @@ public class Person {
     }
 
     public String getFirstName() {
-        return firstName;
+        return this.firstName;
     }
 
     public int getAge() {
-        return age;
+        return this.age;
     }
 
     @Override
     public String toString(){
-        return String.format("%s %s is %d years old.%n",this.firstName,this.lastName,this.age);
+        return String.format("%s %s is %d years old.%n", this.firstName, this.lastName, this.age);
     }
 }
