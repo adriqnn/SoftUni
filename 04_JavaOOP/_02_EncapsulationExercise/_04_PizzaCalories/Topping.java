@@ -24,11 +24,13 @@ public class Topping {
             String message = String.format("%s weight should be in the range [1..50].", toppingType);
             throw new IllegalArgumentException(message);
         }
+        
         this.weight = weight;
     }
 
     public double calculateCalories(){
         double toppingModifier = 0;
+        
         if(this.toppingType.equals("Meat")){
             toppingModifier = 1.2;
         }else if(this.toppingType.equals("Veggies")){
@@ -38,6 +40,7 @@ public class Topping {
         }else{
             toppingModifier = 0.9;
         }
-        return (2*this.weight)*toppingModifier;
+        
+        return (2 * this.weight) * toppingModifier;
     }
 }
