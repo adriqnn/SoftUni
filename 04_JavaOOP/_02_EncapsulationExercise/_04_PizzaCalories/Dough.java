@@ -34,28 +34,28 @@ public class Dough {
             String message = "Dough weight should be in the range [1..200].";
             throw new IllegalArgumentException(message);
         }
-        
+
         this.weight = weight;
     }
 
     public double calculateCalories(){
         double flourModifier = 0;
         double bakingModifier = 0;
-        
-        if(flourType.equals("White")){
+
+        if(this.flourType.equals("White")){
             flourModifier = 1.5;
         }else{
             flourModifier = 1.0;
         }
-        
-        if(bakingTechnique.equals("Crispy")){
+
+        if(this.bakingTechnique.equals("Crispy")){
             bakingModifier = 0.9;
-        }else if(bakingTechnique.equals("Chewy")){
+        }else if(this.bakingTechnique.equals("Chewy")){
             bakingModifier = 1.1;
         }else{
             bakingModifier = 1.0;
         }
-        
-        return ((2 * weight) * flourModifier) * bakingModifier;
+
+        return ((2 * this.weight) * flourModifier) * bakingModifier;
     }
 }
