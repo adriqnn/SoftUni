@@ -15,6 +15,7 @@ public class Box {
         if (length <= 0) {
             throw new IllegalArgumentException("Length cannot be zero or negative.");
         }
+        
         this.length = length;
     }
 
@@ -22,6 +23,7 @@ public class Box {
         if (width <= 0) {
             throw new IllegalArgumentException("Width cannot be zero or negative.");
         }
+        
         this.width = width;
     }
 
@@ -29,18 +31,19 @@ public class Box {
         if (height <= 0) {
             throw new IllegalArgumentException("Height cannot be zero or negative.");
         }
+        
         this.height = height;
     }
 
     public double calculateSurfaceArea(){
-        return (2*this.length*this.width) + (2*this.length*this.height) + (2*this.width*this.height);
+        return (2 * this.length * this.width) + (2 * this.length * this.height) + (2 * this.width * this.height);
     }
 
     public double calculateLateralSurfaceArea(){
-        return (2*this.length*this.height) + (2*this.width*this.height);
+        return (2 * this.length * this.height) + (2 * this.width * this.height);
     }
 
     public double calculateVolume(){
-        return (this.height*this.length*this.width);
+        return this.height * this.length * this.width;
     }
 }
