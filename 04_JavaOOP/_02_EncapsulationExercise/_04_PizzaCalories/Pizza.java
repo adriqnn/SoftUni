@@ -1,5 +1,4 @@
 package _04_JavaOOP._02_EncapsulationExercise._04_PizzaCalories;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +16,7 @@ public class Pizza {
         if (numberOfToppings < 0 || numberOfToppings > 10){
             throw new IllegalArgumentException("Number of toppings should be in range [0..10].");
         }
+        
         this.toppings = new ArrayList<>(numberOfToppings);
     }
 
@@ -24,6 +24,7 @@ public class Pizza {
         if(name.trim().isEmpty() || name.length() > 15){
             throw new IllegalArgumentException("Pizza name should be between 1 and 15 symbols.");
         }
+        
         this.name = name;
     }
 
