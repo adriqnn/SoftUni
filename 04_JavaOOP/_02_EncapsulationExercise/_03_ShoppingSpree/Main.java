@@ -33,10 +33,10 @@ public class Main {
 
         for (String element : products) {
             String[] productData = element.split("=");
-            
+
             String name = productData[0];
             double cost = Double.parseDouble(productData[1]);
-            
+
             try{
                 Product product = new Product(name, cost);
                 productsInfo.put(name, product);
@@ -47,10 +47,13 @@ public class Main {
         }
 
         String command = scan.nextLine();
+        
         while(!command.equals("END")){
             String[] commandParts = command.split("\\s+");
+            
             String personName = commandParts[0];
             String productName = commandParts[1];
+            
             try{
                 Person person = peopleInfo.get(personName);
                 Product product = productsInfo.get(productName);
@@ -58,16 +61,19 @@ public class Main {
             }catch(IllegalArgumentException e){
                 System.out.println(e.getMessage());
             }
+            
             command = scan.nextLine();
         }
 
         for (Person person : peopleInfo.values()) {
             System.out.print(person.getName() + " - ");
+            
             if(person.getProducts().isEmpty()){
                 System.out.print("Nothing bought");
             }else {
                 System.out.print(person.getProducts().stream().map(Product::getName).collect(Collectors.joining(", ")));
             }
+            
             System.out.println();
         }
 
