@@ -1,5 +1,4 @@
 package _04_JavaOOP._02_EncapsulationExercise._05_FootballTeamGenerator;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,15 +15,16 @@ public class Team {
         if(name.trim().isEmpty()){
             throw new IllegalArgumentException("A name should not be empty");
         }
+        
         this.name = name;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public double getRating(){
-        return  this.players.stream().mapToDouble(Player::overallSkillLevel).average().orElse(0.0);
+        return this.players.stream().mapToDouble(Player::overallSkillLevel).average().orElse(0.0);
     }
 
     public void addPlayer(Player player){
@@ -33,8 +33,9 @@ public class Team {
 
     public void removePlayer(String name){
         boolean isRemoved = this.players.removeIf(p -> p.getName().equals(name));
+        
         if(!isRemoved){
-            String message = String.format("Player %s is not in %s team.",name,this.name);
+            String message = String.format("Player %s is not in %s team.", name, this.name);
             throw new IllegalArgumentException(message);
         }
     }
