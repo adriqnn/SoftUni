@@ -4,7 +4,7 @@ public class Topping {
     private String toppingType;
     private double weight;
 
-    public Topping(String toppingType,double weight){
+    public Topping(String toppingType, double weight){
         this.setToppingType(toppingType);
         this.setWeight(weight);
     }
