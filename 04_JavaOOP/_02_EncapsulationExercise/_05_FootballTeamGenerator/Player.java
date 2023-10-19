@@ -21,32 +21,33 @@ public class Player {
         if(name.trim().isEmpty()){
             throw new IllegalArgumentException("A name should not be empty");
         }
+        
         this.name = name;
     }
 
     private void setEndurance(int endurance){
-        checkIfInRange(endurance,"Endurance");
+        checkIfInRange(endurance, "Endurance");
         this.endurance = endurance;
     }
 
     private void setSprint(int sprint){
-        checkIfInRange(sprint,"Sprint");
+        checkIfInRange(sprint, "Sprint");
         this.sprint = sprint;
     }
 
     private void setDribble(int dribble){
-        checkIfInRange(dribble,"Dribble");
+        checkIfInRange(dribble, "Dribble");
         this.dribble = dribble;
     }
 
     private void setPassing(int passing){
-        checkIfInRange(passing,"Passing");
+        checkIfInRange(passing, "Passing");
         this.passing = passing;
     }
 
     private void setShooting(int shooting){
-        checkIfInRange(shooting,"Shooting");
-        this.shooting =shooting;
+        checkIfInRange(shooting, "Shooting");
+        this.shooting = shooting;
     }
 
     private void checkIfInRange(int statValue,String statName){
@@ -56,10 +57,10 @@ public class Player {
     }
 
     public double overallSkillLevel(){
-        return (this.endurance + this.dribble + this.sprint + this.passing + this.shooting)/5.00;
+        return (this.endurance + this.dribble + this.sprint + this.passing + this.shooting) / 5.00;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 }
