@@ -9,13 +9,17 @@ import java.util.stream.Collectors;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        Map<String,Person> peopleInfo = new LinkedHashMap<>();
-        Map<String,Product> productsInfo = new HashMap<>();
+        
+        Map<String, Person> peopleInfo = new LinkedHashMap<>();
+        Map<String, Product> productsInfo = new HashMap<>();
         String[] people = scan.nextLine().split(";");
+        
         for (String element : people) {
             String[] personData = element.split("=");
+            
             String name = personData[0];
             double money = Double.parseDouble(personData[1]);
+            
             try{
                 Person person = new Person(name,money);
                 peopleInfo.put(name,person);
@@ -24,7 +28,9 @@ public class Main {
                 return;
             }
         }
+        
         String[] products = scan.nextLine().split(";");
+        
         for (String element : products) {
             String[] productData = element.split("=");
             String name = productData[0];
@@ -37,6 +43,7 @@ public class Main {
                 return;
             }
         }
+        
         String command = scan.nextLine();
         while(!command.equals("END")){
             String[] commandParts = command.split("\\s+");
@@ -51,6 +58,7 @@ public class Main {
             }
             command = scan.nextLine();
         }
+        
         for (Person person : peopleInfo.values()) {
             System.out.print(person.getName() + " - ");
             if(person.getProducts().isEmpty()){
@@ -61,5 +69,6 @@ public class Main {
             System.out.println();
         }
 
+        scan.close();
     }
 }
