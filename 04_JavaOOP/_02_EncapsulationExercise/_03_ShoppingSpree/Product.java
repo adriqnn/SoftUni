@@ -1,4 +1,5 @@
 package _04_JavaOOP._02_EncapsulationExercise._03_ShoppingSpree;
+
 public class Product {
     private String name;
     private double cost;
