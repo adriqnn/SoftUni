@@ -8,6 +8,6 @@ public class Animal {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 }
