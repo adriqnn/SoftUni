@@ -11,6 +11,6 @@ public class Food extends Product{
     }
 
     public double getGrams() {
-        return grams;
+        return this.grams;
     }
 }
