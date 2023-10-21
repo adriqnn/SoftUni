@@ -1,6 +1,5 @@
 package _04_JavaOOP._03_InheritanceExercise._06_Animals;
 
-
 public class Tomcat extends Cat{
     private static final String GENDER = "Male";
 
