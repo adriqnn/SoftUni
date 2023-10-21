@@ -11,6 +11,6 @@ public class Beverage extends Product{
     }
 
     public double getMilliliters() {
-        return milliliters;
+        return this.milliliters;
     }
 }
