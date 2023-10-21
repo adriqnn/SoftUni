@@ -4,15 +4,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
-        String animalType = scanner.nextLine();
+        String animalType = scan.nextLine();
 
         while(!animalType.equals("Beast!")){
-            String[] animalInfo = scanner.nextLine().split(" ");
+            String[] animalInfo = scan.nextLine().split(" ");
+            
             String name = animalInfo[0];
             int age = Integer.parseInt(animalInfo[1]);
             String gender = animalInfo[2];
+            
             try {
                 switch (animalType) {
                     case "Cat":
@@ -39,7 +41,10 @@ public class Main {
             }catch (IllegalArgumentException e){
                 System.out.println(e.getMessage());
             }
-            animalType = scanner.nextLine();
+            
+            animalType = scan.nextLine();
         }
+        
+        scan.close();
     }
 }
