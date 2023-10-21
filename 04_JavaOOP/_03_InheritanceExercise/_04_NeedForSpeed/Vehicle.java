@@ -14,7 +14,8 @@ public class Vehicle {
     }
 
     public void drive(double kilometers){
-        double fuelNeeded = kilometers * fuelConsumption;
+        double fuelNeeded = kilometers * this.fuelConsumption;
+        
         if(this.fuel >= fuelNeeded){
             this.fuel -= fuelNeeded;
         }
@@ -25,15 +26,15 @@ public class Vehicle {
     }
 
     public int getHorsePower() {
-        return horsePower;
+        return this.horsePower;
     }
 
     public double getFuel() {
-        return fuel;
+        return this.fuel;
     }
 
     public double getFuelConsumption() {
-        return fuelConsumption;
+        return this.fuelConsumption;
     }
 
     public void setFuel(double fuel) {
@@ -48,4 +49,5 @@ public class Vehicle {
         this.horsePower = horsePower;
     }
 }
+
 
