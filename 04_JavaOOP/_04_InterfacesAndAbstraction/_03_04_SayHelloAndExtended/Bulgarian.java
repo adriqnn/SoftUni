@@ -7,6 +7,7 @@ public class Bulgarian extends BasePerson{
 
     @Override
     public String sayHello() {
-        return "Здраей";
+        return "Здравей";
     }
 }
+
