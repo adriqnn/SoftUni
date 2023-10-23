@@ -13,10 +13,10 @@ public abstract class Collection {
     }
 
     public int getMaxSize() {
-        return maxSize;
+        return this.maxSize;
     }
 
     public List<String> getItems() {
-        return items;
+        return this.items;
     }
 }
