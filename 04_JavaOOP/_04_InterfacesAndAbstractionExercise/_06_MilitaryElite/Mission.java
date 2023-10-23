@@ -16,6 +16,7 @@ public class Mission {
             throw new IllegalStateException("wrong");
         }
     }
+    
     public void setState(State state){
         this.state = State.finished;
     }
@@ -27,6 +28,7 @@ public class Mission {
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
+        
         sb.append("  Code Name: ").append(this.codeName).append(" State: ").append(this.state.name());
         return sb.toString();
     }
