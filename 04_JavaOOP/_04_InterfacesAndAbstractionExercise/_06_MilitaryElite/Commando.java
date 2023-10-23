@@ -20,7 +20,7 @@ public class Commando extends SpecialSoldier {
     }
 
     public void completeMission(Mission mission){
-        for (Mission m : missions) {
+        for (Mission m : this.missions) {
             if(m.equals(mission)){
                 m.setState(State.finished);
             }
@@ -30,11 +30,13 @@ public class Commando extends SpecialSoldier {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        
         sb.append(super.toString()).append("Missions:").append(System.lineSeparator());
-        if(missions.size() > 0){
-            missions.forEach(e -> sb.append(e).append(System.lineSeparator()));
+        if(this.missions.size() > 0){
+            this.missions.forEach(e -> sb.append(e).append(System.lineSeparator()));
             return sb.toString();
         }
+        
         return sb.toString();
     }
 }
