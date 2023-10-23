@@ -1,6 +1,6 @@
 package _04_JavaOOP._04_InterfacesAndAbstractionExercise._01_02_03_;
 
-public class Citizen implements Person,Birthable,Identifiable{
+public class Citizen implements Person, Birthable, Identifiable{
     private String name;
     private int age;
     private String id;
