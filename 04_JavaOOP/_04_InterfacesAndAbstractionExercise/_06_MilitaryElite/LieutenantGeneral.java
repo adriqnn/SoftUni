@@ -6,7 +6,6 @@ import java.util.Comparator;
 public class LieutenantGeneral extends Private {
     private ArrayList<Private> privates;
 
-
     public LieutenantGeneral(int id, String firstName, String lastName, double salary, ArrayList<Private> privates) {
         super(id, firstName, lastName, salary);
         this.privates = privates;
