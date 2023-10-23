@@ -19,11 +19,13 @@ public class LieutenantGeneral extends Private {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+
         sb.append(super.toString()).append("Privates:").append(System.lineSeparator());
-        if(privates.size() > 0){
-            privates.stream().sorted(Comparator.comparing(Private::getId).reversed()).forEach(e -> sb.append("  ").append(e));
+        if(this.privates.size() > 0){
+            this.privates.stream().sorted(Comparator.comparing(Private::getId).reversed()).forEach(e -> sb.append("  ").append(e));
             return sb.toString();
         }
+
         return sb.toString();
     }
 }
