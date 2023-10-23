@@ -29,6 +29,7 @@ public class Soldier implements Info{
     @Override
     public String toString() {
         StringBuilder sb =  new StringBuilder();
+        
         sb.append("Name: ").append(this.getFirstName()).append(" ").append(this.getLastName()).append(" Id: ").append(this.getId()).append(" Salary: ");
         return sb.toString();
     }
