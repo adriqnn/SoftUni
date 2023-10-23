@@ -13,9 +13,9 @@ public class Private extends Soldier {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        
         DecimalFormat df = new DecimalFormat("0.00");
         sb.append(super.toString()).append(df.format(this.salary)).append(System.lineSeparator());
         return sb.toString();
     }
 }
-
