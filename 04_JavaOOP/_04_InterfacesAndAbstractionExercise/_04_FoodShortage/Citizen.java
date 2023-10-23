@@ -1,6 +1,6 @@
 package _04_JavaOOP._04_InterfacesAndAbstractionExercise._04_FoodShortage;
 
-public class Citizen implements Person,Identifiable,Buyer{
+public class Citizen implements Person, Identifiable, Buyer{
     private String name;
     private int age;
     private String id;
@@ -40,3 +40,4 @@ public class Citizen implements Person,Identifiable,Buyer{
         return this.age;
     }
 }
+
