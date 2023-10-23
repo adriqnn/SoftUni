@@ -1,5 +1,6 @@
 package _04_JavaOOP._04_InterfacesAndAbstractionExercise._01_02_03_;
 
+
 public class Pet implements Birthable{
     private String name;
     private String birthDate;
