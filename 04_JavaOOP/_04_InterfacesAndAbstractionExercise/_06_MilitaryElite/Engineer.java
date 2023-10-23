@@ -21,11 +21,13 @@ public class Engineer extends SpecialSoldier {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        
         sb.append(super.toString()).append("Repairs:").append(System.lineSeparator());
-        if(repairs.size() > 0){
-            repairs.forEach(e -> sb.append(e).append(System.lineSeparator()));
+        if(this.repairs.size() > 0){
+            this.repairs.forEach(e -> sb.append(e).append(System.lineSeparator()));
             return sb.toString();
         }
+        
         return sb.toString();
     }
 }
