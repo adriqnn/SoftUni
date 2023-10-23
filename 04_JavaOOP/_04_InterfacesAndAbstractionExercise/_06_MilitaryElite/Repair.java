@@ -12,6 +12,7 @@ public class Repair {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        
         sb.append("  Part Name: ").append(this.partName).append(" Hours Worked: ").append(this.hoursWorked);
         return sb.toString();
     }
