@@ -1,6 +1,6 @@
 package _04_JavaOOP._04_InterfacesAndAbstractionExercise._04_FoodShortage;
 
-public class Rebel implements Person,Buyer{
+public class Rebel implements Person, Buyer{
     private String name;
     private int age;
     private String group;
@@ -17,6 +17,7 @@ public class Rebel implements Person,Buyer{
         if(name.trim().isEmpty()){
             throw new IllegalArgumentException();
         }
+        
         this.name = name;
     }
 
