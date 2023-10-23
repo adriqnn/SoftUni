@@ -19,6 +19,7 @@ public class SpecialSoldier extends Private {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        
         sb.append(super.toString()).append("Corps: ").append(this.corps.toString()).append(System.lineSeparator());
         return sb.toString();
     }
