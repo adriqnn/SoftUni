@@ -15,7 +15,7 @@ public class Truck extends VehicleImpl{
 
     @Override
     public void refuel(double liters) {
-        super.refuel(liters*REFUEL_PERCENTAGE);
+        super.refuel(liters * REFUEL_PERCENTAGE);
     }
 
 }
