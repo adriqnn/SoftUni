@@ -8,10 +8,10 @@ public abstract class Shape {
     public abstract Double calculateArea();
 
     public Double getArea() {
-        return area;
+        return this.area;
     }
 
     public Double getPerimeter() {
-        return perimeter;
+        return this.perimeter;
     }
 }
