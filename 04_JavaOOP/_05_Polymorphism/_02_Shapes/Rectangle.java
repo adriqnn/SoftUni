@@ -11,19 +11,19 @@ public class Rectangle extends Shape{
 
     @Override
     public Double calculatePerimeter() {
-        return this.width*2 + this.height*2;
+        return this.width * 2 + this.height * 2;
     }
 
     @Override
     public Double calculateArea() {
-        return this.width*this.height;
+        return this.width * this.height;
     }
 
     public final Double getWidth() {
-        return width;
+        return this.width;
     }
 
     public final Double getHeight() {
-        return height;
+        return this.height;
     }
 }
