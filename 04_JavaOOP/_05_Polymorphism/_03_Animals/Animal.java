@@ -10,6 +10,6 @@ public abstract class Animal {
     }
 
     public String explainSelf(){
-        return "I am " + name + " and my favourite food is " + favouriteFood;
+        return "I am " + this.name + " and my favourite food is " + this.favouriteFood;
     }
 }
