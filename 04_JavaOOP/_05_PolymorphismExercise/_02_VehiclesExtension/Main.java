@@ -12,29 +12,30 @@ public class Main {
         double carFuelAmount = Double.parseDouble(tokens[1]);
         double carConsumption = Double.parseDouble(tokens[2]);
         double carTankCapacity = Double.parseDouble(tokens[3]);
-        Vehicle car = new Car(carFuelAmount,carConsumption,carTankCapacity);
+        Vehicle car = new Car(carFuelAmount, carConsumption, carTankCapacity);
 
         tokens = scan.nextLine().split("\\s+");
         double truckFuelAmount = Double.parseDouble(tokens[1]);
         double truckConsumption = Double.parseDouble(tokens[2]);
         double truckTankCapacity = Double.parseDouble(tokens[3]);
-        Vehicle truck = new Truck(truckFuelAmount,truckConsumption,truckTankCapacity);
+        Vehicle truck = new Truck(truckFuelAmount, truckConsumption, truckTankCapacity);
 
         tokens = scan.nextLine().split("\\s+");
         double busFuelAmount = Double.parseDouble(tokens[1]);
         double busConsumption = Double.parseDouble(tokens[2]);
         double busTankCapacity = Double.parseDouble(tokens[3]);
-        Vehicle bus = new Bus(busFuelAmount,busConsumption,busTankCapacity);
+        Vehicle bus = new Bus(busFuelAmount, busConsumption, busTankCapacity);
 
         Map<String, Vehicle> vehicles = new LinkedHashMap<>();
-        vehicles.put("Car",car);
-        vehicles.put("Truck",truck);
-        vehicles.put("Bus",bus);
+        vehicles.put("Car", car);
+        vehicles.put("Truck", truck);
+        vehicles.put("Bus", bus);
 
         int n = Integer.parseInt(scan.nextLine());
 
         for (int i = 0; i < n; i++) {
             tokens = scan.nextLine().split("\\s+");
+            
             String commandName = tokens[0];
             String vehicleType = tokens[1];
             double amount = Double.parseDouble(tokens[2]);
@@ -46,6 +47,7 @@ public class Main {
                     }catch (Exception e){
                         System.out.println(e.getMessage());
                     }
+                    
                     break;
                 case "Refuel":
                     try {
@@ -53,6 +55,7 @@ public class Main {
                     }catch (Exception e){
                         System.out.println(e.getMessage());
                     }
+                    
                     break;
                 case "DriveEmpty":
                     try {
@@ -62,9 +65,14 @@ public class Main {
                     }catch (Exception e){
                         System.out.println(e.getMessage());
                     }
+                    
                     break;
             }
         }
+        
         vehicles.values().forEach(System.out::println);
+
+        scan.close();
     }
 }
+
