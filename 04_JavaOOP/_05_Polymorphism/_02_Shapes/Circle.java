@@ -18,6 +18,6 @@ public class Circle extends Shape{
     }
 
     public final Double getRadius() {
-        return radius;
+        return this.radius;
     }
 }
