@@ -12,11 +12,11 @@ public abstract class VehicleImpl implements Vehicle{
     }
 
     public double getFuelQuantity() {
-        return fuelQuantity;
+        return this.fuelQuantity;
     }
 
     public double getFuelConsumption() {
-        return fuelConsumption;
+        return this.fuelConsumption;
     }
 
     public void setFuelQuantity(double fuelQuantity) {
@@ -35,16 +35,19 @@ public abstract class VehicleImpl implements Vehicle{
     @Override
     public String drive(double distance) {
         double fuelNeeded = distance * this.getFuelConsumption();
+        
         if(fuelNeeded > this.getFuelQuantity()){
             return this.getClass().getSimpleName() + " needs refueling";
         }
+        
         this.setFuelQuantity(this.getFuelQuantity() - fuelNeeded);
         DecimalFormat formatter = new DecimalFormat("##.##");
-        return String.format("%s travelled %s km",this.getClass().getSimpleName(),formatter.format(distance));
+        
+        return String.format("%s travelled %s km", this.getClass().getSimpleName(), formatter.format(distance));
     }
 
     @Override
     public String toString(){
-        return String.format("%s: %.2f",this.getClass().getSimpleName(),this.fuelQuantity);
+        return String.format("%s: %.2f", this.getClass().getSimpleName(), this.fuelQuantity);
     }
 }
