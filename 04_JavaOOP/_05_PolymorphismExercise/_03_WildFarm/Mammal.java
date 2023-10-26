@@ -13,11 +13,12 @@ public abstract class Mammal extends Animal {
     @Override
     public String toString() {
         DecimalFormat formatter = new DecimalFormat("##.##");
+        
         return String.format("%s[%s, %s, %s, %d]", getType(), getName(),
                 formatter.format(getWeight()), this.livingRegion, getFoodEaten());
     }
 
     public String getLivingRegion() {
-        return livingRegion;
+        return this.livingRegion;
     }
 }
