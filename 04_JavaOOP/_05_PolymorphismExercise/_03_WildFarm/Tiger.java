@@ -16,6 +16,7 @@ public class Tiger extends Feline {
         if(food instanceof Vegetable){
             throw new IllegalArgumentException("Tigers are not eating that type of food!");
         }
+        
         super.eat(food);
     }
 }
