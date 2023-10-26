@@ -16,6 +16,7 @@ public class Mouse extends Mammal{
         if(food instanceof Meat){
             throw new IllegalArgumentException("Mice are not eating that type of food!");
         }
+        
         super.eat(food);
     }
 }
