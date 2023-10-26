@@ -15,6 +15,7 @@ public class Zebra extends Mammal {
         if (food instanceof Meat) {
             throw new IllegalArgumentException("Zebras are not eating that type of food!");
         }
+        
         super.eat(food);
     }
 }
