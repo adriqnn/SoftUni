@@ -20,11 +20,11 @@ public abstract class Animal {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public String getType() {
-        return type;
+        return this.type;
     }
 
     public double getWeight() {
