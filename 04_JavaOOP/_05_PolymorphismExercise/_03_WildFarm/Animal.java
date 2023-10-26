@@ -28,10 +28,10 @@ public abstract class Animal {
     }
 
     public double getWeight() {
-        return weight;
+        return this.weight;
     }
 
     public int getFoodEaten() {
-        return foodEaten;
+        return this.foodEaten;
     }
 }
