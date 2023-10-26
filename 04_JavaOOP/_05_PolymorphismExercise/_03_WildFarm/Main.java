@@ -6,18 +6,21 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
+        
+        String animalInput = scan.nextLine();
+        
         List<Animal> animals = new ArrayList<>();
-
-        String animalInput = scanner.nextLine();
+        
         while (!animalInput.equals("End")) {
             String[] tokens = animalInput.split(" ");
             Animal animal = createAnimal(tokens);
-
-            String foodInput = scanner.nextLine();
+            
+            String foodInput = scan.nextLine();
             Food food = getFood(foodInput.split(" "));
 
             animal.makeSound();
+            
             try{
                 animal.eat(food);
             }catch (IllegalArgumentException ex){
@@ -25,10 +28,12 @@ public class Main {
             }
 
             animals.add(animal);
-            animalInput = scanner.nextLine();
+            animalInput = scan.nextLine();
         }
 
         animals.forEach(System.out::println);
+
+        scan.close();
     }
 
     public static Food getFood(String[] tokens){
@@ -37,7 +42,9 @@ public class Main {
 
         if(type.equals("Meat")){
             return new Meat(quantity);
-        } else return new Vegetable(quantity);
+        } else {
+            return new Vegetable(quantity);
+        }
     }
 
     public static Animal createAnimal(String[] tokens){
@@ -45,6 +52,7 @@ public class Main {
         String animalName = tokens[1];
         double animalWeight = Double.parseDouble(tokens[2]);
         String animalLivingRegion = tokens[3];
+        
         switch (animalType){
             case "Mouse":
                 return new Mouse(animalName, animalType, animalWeight, animalLivingRegion);
