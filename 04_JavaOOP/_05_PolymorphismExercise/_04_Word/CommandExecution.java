@@ -22,27 +22,27 @@ public class CommandExecution implements CommandInterface {
                 if(startInd == endInd){
                     return;
                 }
-                
+
                 String s = this.text.substring(startInd, endInd).toUpperCase();
                 this.text = this.text.delete(startInd, endInd).insert(startInd, s);
-                
+
                 break;
             case"cut":
                 if(startInd == endInd){
                     this.cutToPaste = "";
                 }
-                
+
                 this.cutToPaste = this.text.substring(startInd, endInd);
                 this.text.delete(startInd, endInd);
-                
+
                 break;
             case"paste":
                 if(startInd == 0 && endInd == 0){
-                    this.text.insert(startInd, cutToPaste);
+                    this.text.insert(startInd, this.cutToPaste);
                 }else {
-                    this.text.delete(startInd, endInd).insert(startInd, cutToPaste);
+                    this.text.delete(startInd, endInd).insert(startInd, this.cutToPaste);
                 }
-                
+
                 break;
         }
     }
