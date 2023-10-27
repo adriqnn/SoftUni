@@ -4,20 +4,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
-        StringBuilder text = new StringBuilder(scanner.nextLine());
-
+        StringBuilder text = new StringBuilder(scan.nextLine());
         CommandInterface commandInterface = Initialization.buildCommandInterface(text);
 
-
-        String inputLine = scanner.nextLine();
+        String inputLine = scan.nextLine();
 
         while(!inputLine.equals("exit")) {
             commandInterface.handleInput(inputLine);
-            inputLine = scanner.nextLine();
+            inputLine = scan.nextLine();
         }
 
         System.out.println(text);
+        
+        scan.close();
     }
 }
