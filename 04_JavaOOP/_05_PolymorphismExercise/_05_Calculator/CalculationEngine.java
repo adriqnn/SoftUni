@@ -16,10 +16,10 @@ public class CalculationEngine {
 
     public void pushNumber(int number) {
         if (this.currentOperation != null) {
-            currentOperation.addOperand(number);
+            this.currentOperation.addOperand(number);
 
-            if (currentOperation.isCompleted()) {
-                this.result = currentOperation.getResult();
+            if (this.currentOperation.isCompleted()) {
+                this.result = this.currentOperation.getResult();
                 this.currentOperation = null;
             }
         } else {
@@ -31,6 +31,7 @@ public class CalculationEngine {
         if(operation == null){
             return;
         }
+        
         if (operation.isCompleted()) {
             this.pushNumber(operation.getResult());
         } else {
@@ -40,7 +41,7 @@ public class CalculationEngine {
     }
 
     public Operation getCurrentOperation() {
-        return currentOperation;
+        return this.currentOperation;
     }
 
     int getCurrentResult() {
@@ -48,10 +49,10 @@ public class CalculationEngine {
     }
 
     public Deque<Integer> getMs() {
-        return ms;
+        return this.ms;
     }
 
     public int getResult() {
-        return result;
+        return this.result;
     }
 }
