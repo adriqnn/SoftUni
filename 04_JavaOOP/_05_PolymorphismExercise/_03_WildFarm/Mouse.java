@@ -1,6 +1,6 @@
 package _04_JavaOOP._05_PolymorphismExercise._03_WildFarm;
 
-public class Mouse extends Mammal{
+public class Mouse extends Mammal {
 
     public Mouse(String name, String type, double weight, String livingRegion) {
         super(name, type, weight, livingRegion);
