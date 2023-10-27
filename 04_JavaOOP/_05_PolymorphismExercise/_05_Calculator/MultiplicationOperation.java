@@ -29,5 +29,4 @@ public class MultiplicationOperation implements Operation {
     public int getResult() {
         return this.result;
     }
-
 }
