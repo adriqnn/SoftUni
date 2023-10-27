@@ -13,6 +13,7 @@ public class InputInterpreter {
         }catch (Exception ex){
             engine.pushOperation(this.getOperation(input));
         }
+        
         return true;
     }
 
@@ -28,6 +29,7 @@ public class InputInterpreter {
             this.engine.getMs().push(this.engine.getResult());
             return null;
         }
+        
         return null;
     }
 }
