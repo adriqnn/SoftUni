@@ -4,6 +4,4 @@ public abstract class Initialization implements CommandInterface{
     public static CommandInterface buildCommandInterface(StringBuilder text){
         return new CommandExecution(text);
     }
-
 }
-
