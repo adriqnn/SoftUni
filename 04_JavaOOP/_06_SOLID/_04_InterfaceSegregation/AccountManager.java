@@ -2,7 +2,7 @@ package _04_JavaOOP._06_SOLID._04_InterfaceSegregation;
 
 import _04_JavaOOP._06_SOLID._04_InterfaceSegregation.interfaces.Account;
 import _04_JavaOOP._06_SOLID._04_InterfaceSegregation.interfaces.User;
-
+ 
 public class AccountManager implements Account {
     private boolean requireUniqueEmail;
     private int minRequiredPasswordLength;
