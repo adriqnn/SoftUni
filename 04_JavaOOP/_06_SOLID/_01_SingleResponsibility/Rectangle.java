@@ -34,8 +34,7 @@ public class Rectangle implements Shape {
     }
 
     @Override
-    public void draw(Renderer rengerer, DrawingRepository drawingRepository) {
-        rengerer.render(drawingRepository,this);
-
+    public void draw(Renderer renderer, DrawingRepository drawingRepository) {
+        renderer.render(drawingRepository, this);
     }
 }
