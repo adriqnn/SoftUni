@@ -19,4 +19,3 @@ public class DrawingManagerImpl implements DrawingManager {
         shape.draw(this.renderer, this.drawingRepository);
     }
 }
-
