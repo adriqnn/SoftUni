@@ -2,7 +2,6 @@ package _04_JavaOOP._06_SOLID._03_LiskovSubstitution;
 
 public class Rectangle extends Shape {
     private double width;
-
     private double height;
 
     public double getWidth() {
@@ -23,7 +22,6 @@ public class Rectangle extends Shape {
 
     @Override
     public double getArea() {
-        return this.width*this.height;
+        return this.width * this.height;
     }
 }
-
