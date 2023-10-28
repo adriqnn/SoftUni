@@ -2,9 +2,7 @@ package _04_JavaOOP._06_SOLID._02_OpenClosed._01_FileStream;
 
 public class File {
     private String name;
-
     private int length;
-
     private int sent;
 
     public String getName() {
