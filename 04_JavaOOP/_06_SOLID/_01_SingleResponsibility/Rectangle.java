@@ -30,7 +30,7 @@ public class Rectangle implements Shape {
     }
 
     public double getArea() {
-        return this.height*this.width;
+        return this.height * this.width;
     }
 
     @Override
