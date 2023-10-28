@@ -2,12 +2,9 @@ package _04_JavaOOP._06_SOLID._02_OpenClosed._01_FileStream;
 
 public class Music {
     private int length;
-
     private int sent;
-
-    private String Artist;
-
-    private String Album;
+    private String artist;
+    private String album;
 
     public int getLength() {
         return this.length;
@@ -26,18 +23,18 @@ public class Music {
     }
 
     public String getArtist() {
-        return this.Artist;
+        return this.artist;
     }
 
     public void setArtist(String artist) {
-        Artist = artist;
+        this.artist = artist;
     }
 
     public String getAlbum() {
-        return this.Album;
+        return this.album;
     }
 
     public void setAlbum(String album) {
-        Album = album;
+        this.album = album;
     }
 }
