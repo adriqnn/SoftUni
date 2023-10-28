@@ -6,7 +6,6 @@ import _04_JavaOOP._06_SOLID._01_SingleResponsibility.interfaces.Renderer;
 import _04_JavaOOP._06_SOLID._01_SingleResponsibility.interfaces.Shape;
 
 public class DrawingManagerImpl implements DrawingManager {
-
     private final DrawingRepository drawingRepository;
     private final Renderer renderer;
 
@@ -14,7 +13,6 @@ public class DrawingManagerImpl implements DrawingManager {
         this.drawingRepository = drawingRepository;
         this.renderer = renderer;
     }
-
 
     @Override
     public void draw(Shape shape) {
