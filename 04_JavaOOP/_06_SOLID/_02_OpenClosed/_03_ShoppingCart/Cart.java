@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Cart {
     private final List<OrderItem> items;
-
     public String customerEmail;
 
     public Cart() {
@@ -15,7 +14,6 @@ public class Cart {
     public Iterable<OrderItem> getItems() {
         return new ArrayList<OrderItem>(this.items);
     }
-
 
     public String getCustomerEmail() {
         return this.customerEmail;
