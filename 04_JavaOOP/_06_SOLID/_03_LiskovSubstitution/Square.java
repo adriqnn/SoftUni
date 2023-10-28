@@ -1,7 +1,6 @@
 package _04_JavaOOP._06_SOLID._03_LiskovSubstitution;
 
 public class Square extends Rectangle {
-
     @Override
     public double getWidth() {
         return super.getWidth();
