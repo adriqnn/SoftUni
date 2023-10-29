@@ -12,9 +12,10 @@ public abstract class BaseAppender implements Appender {
     private int messagesCount;
 
     public BaseAppender(Layout layout) {
-        this(layout,DEFAULT_REPORT_LEVEL);
+        this(layout, DEFAULT_REPORT_LEVEL);
     }
-    public BaseAppender(Layout layout,ReportLevel reportLevel) {
+
+    public BaseAppender(Layout layout, ReportLevel reportLevel) {
         this.layout = layout;
         this.reportLevel = reportLevel;
         this.messagesCount = 0;
@@ -34,6 +35,6 @@ public abstract class BaseAppender implements Appender {
 
     @Override
     public String toString() {
-        return String.format("Appender type: %s, Layout type: %s, Report level: %s, Messages appended: %d",this.getClass().getSimpleName(),this.layout.getClass().getSimpleName(),this.reportLevel,messagesCount);
+        return String.format("Appender type: %s, Layout type: %s, Report level: %s, Messages appended: %d", this.getClass().getSimpleName(), this.layout.getClass().getSimpleName(), this.reportLevel, this.messagesCount);
     }
 }
