@@ -8,13 +8,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        
         InputParser inputParser = new InputParser();
-        Scanner scanner = new Scanner(System.in);
         LoggerFactory loggerFactory = new LoggerFactory();
+        Logger logger = loggerFactory.produce(inputParser.readLoggerInfo(scan));
 
-        Logger logger = loggerFactory.produce(inputParser.readLoggerInfo(scanner));
-
-        String input = scanner.nextLine();
+        String input = scan.nextLine();
 
         while (!"END".equals(input)) {
             String[] tokens = input.split("\\|");
@@ -31,9 +31,11 @@ public class Main {
                 case FATAL: logger.logFatal(time, message); break;
             }
 
-            input = scanner.nextLine();
+            input = scan.nextLine();
         }
 
         System.out.println(logger);
+        
+        scan.close();
     }
 }
