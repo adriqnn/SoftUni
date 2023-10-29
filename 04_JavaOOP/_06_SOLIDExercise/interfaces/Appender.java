@@ -7,4 +7,3 @@ public interface Appender {
     
     void setReportLevel(ReportLevel reportLevel);
 }
-
