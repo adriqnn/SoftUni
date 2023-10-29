@@ -14,6 +14,7 @@ public class ConsoleAppender extends BaseAppender {
         if(this.canAppend(reportLevel)) {
             String formattedMessage = this.layout.format(time, message, reportLevel);
             increaseMessageCount();
+            
             System.out.println(formattedMessage);
         }
     }
