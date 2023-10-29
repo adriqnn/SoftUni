@@ -11,7 +11,8 @@ public class FileAppender extends BaseAppender{
         super(layout);
         this.file = new LogFile();
     }
-    public FileAppender(Layout layout,String fileName) {
+    
+    public FileAppender(Layout layout, String fileName) {
         this(layout);
         this.file = new LogFile(fileName);
     }
@@ -21,7 +22,8 @@ public class FileAppender extends BaseAppender{
         if(canAppend(reportLevel)) {
             String output = this.layout.format(time, message, reportLevel);
             increaseMessageCount();
-            file.append(output);
+            
+            this.file.append(output);
         }
     }
 
