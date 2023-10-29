@@ -1,14 +1,20 @@
 package _04_JavaOOP._06_SOLID._03_LiskovSubstitution;
 
 public class Square extends Rectangle {
+
+    public Square(double side) {
+        super(side, side);
+    }
+
     @Override
     public double getWidth() {
         return super.getWidth();
     }
 
     @Override
-    public void setWidth(double width) {
-        super.setWidth(width);
+    public void setWidth(double side) {
+        super.setWidth(side);
+        super.setHeight(side);
     }
 
     @Override
@@ -17,7 +23,8 @@ public class Square extends Rectangle {
     }
 
     @Override
-    public void setHeight(double height) {
-        super.setHeight(height);
+    public void setHeight(double side) {
+        super.setWidth(side);
+        super.setHeight(side);
     }
 }
