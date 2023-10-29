@@ -32,6 +32,7 @@ public class LogFile implements File {
                 size += c;
             }
         }
+        
         return this.calculateSize();
     }
 
@@ -42,6 +43,7 @@ public class LogFile implements File {
                 size += c;
             }
         }
+        
         return size;
     }
 
@@ -53,6 +55,7 @@ public class LogFile implements File {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
         return false;
     }
 
@@ -68,5 +71,4 @@ public class LogFile implements File {
         sb.append(System.lineSeparator());
         return sb.toString();
     }
-
 }
