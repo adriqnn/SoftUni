@@ -10,6 +10,7 @@ public class InputParser {
         while(n-- > 0){
             sb.append(scan.nextLine()).append(System.lineSeparator());
         }
+        
         return sb.toString();
     }
 }
