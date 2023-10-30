@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 // Class responsible for employee data and storage
-
 public class EmployeeData {
     private List<Employee> employees = new ArrayList<>();
 
