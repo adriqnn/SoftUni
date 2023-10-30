@@ -3,7 +3,6 @@ package _04_JavaOOP._06_SOLID._01_SingleResponsibility;
 import java.util.List;
 
 // Class responsible for employee operations
-
 public class EmployeeService {
     private EmployeeData employeeData;
 
