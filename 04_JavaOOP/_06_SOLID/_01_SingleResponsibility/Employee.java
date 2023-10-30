@@ -1,7 +1,6 @@
 package _04_JavaOOP._06_SOLID._01_SingleResponsibility;
 
 // Class representing an individual employee with properties like name and salary
-
 public class Employee {
     private String name;
     private double salary;
