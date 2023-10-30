@@ -18,12 +18,4 @@ public class EmployeeData {
     public List<Employee> getAllEmployees() {
         return this.employees;
     }
-
-    public List<Employee> getEmployees() {
-        return this.employees;
-    }
-
-    public void setEmployees(List<Employee> employees) {
-        this.employees = employees;
-    }
 }
