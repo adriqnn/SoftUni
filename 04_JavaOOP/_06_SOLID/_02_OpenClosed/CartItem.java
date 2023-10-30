@@ -5,4 +5,3 @@ public abstract class CartItem {
     // subclasses are forced to implement the method
     public abstract double calculatePrice();
 }
-
