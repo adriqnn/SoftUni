@@ -26,7 +26,7 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return this.width * this.height;
     }
 }
