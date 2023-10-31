@@ -15,7 +15,6 @@ public class Main {
         //Modifier
         Arrays.stream(clazz.getDeclaredFields()).filter(f -> !Modifier.isPrivate(f.getModifiers())).sorted(Comparator.comparing(Field::getName)).forEach(e -> System.out.println(e.getName() + " must be private!"));
 
-
         Method[] declaredMethods = Arrays.stream(clazz.getDeclaredMethods()).filter(m -> !m.getName().equals("toString")).toArray(Method[]::new);
 
         //Getters
