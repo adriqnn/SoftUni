@@ -3,8 +3,7 @@ package _04_JavaOOP._07_ReflectionAndAnnotation._02_GettersAndSetters;
 import java.io.Serializable;
 
 public class Reflection implements Serializable {
-
-    private static final String nickName = "Pinguin";
+    private static final String nickName = "Penguin";
     public String name;
     protected String webAddress;
     String email;
@@ -32,7 +31,7 @@ public class Reflection implements Serializable {
     }
 
     public final String getName() {
-        return name;
+        return this.name;
     }
 
     private void setName(String name) {
@@ -40,7 +39,7 @@ public class Reflection implements Serializable {
     }
 
     protected String getWebAddress() {
-        return webAddress;
+        return this.webAddress;
     }
 
     private void setWebAddress(String webAddress) {
@@ -48,7 +47,7 @@ public class Reflection implements Serializable {
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public void setEmail(String email) {
@@ -56,7 +55,7 @@ public class Reflection implements Serializable {
     }
 
     protected final int getZip() {
-        return zip;
+        return this.zip;
     }
 
     private void setZip(int zip) {
@@ -68,7 +67,7 @@ public class Reflection implements Serializable {
         result += "WebAddress: " + getWebAddress() + "\n";
         result += "email: " + getEmail() + "\n";
         result += "zip: " + getZip() + "\n";
+        
         return result;
     }
 }
-
