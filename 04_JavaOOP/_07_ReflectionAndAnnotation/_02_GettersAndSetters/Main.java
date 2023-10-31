@@ -23,7 +23,7 @@ public class Main {
                 return f.getName().compareTo(s.getName());
             }
 
-            return Boolean.compare(secondIsGetter,firstIsGetter);
+            return Boolean.compare(secondIsGetter, firstIsGetter);
         }
     }
 
@@ -31,17 +31,18 @@ public class Main {
         Class<Reflection> clazz = Reflection.class;
 
         Method[] allMethods = clazz.getDeclaredMethods();
-
         Arrays.stream(allMethods).filter(m -> !m.getName().equals("toString")).sorted(new MethodComparator()).forEach(Main::printMethodInfo);
 
-        /*Method[] methods = Reflection.class.getDeclaredMethods();
+        /*
+        Method[] methods = Reflection.class.getDeclaredMethods();
         Method[] getters = Arrays.stream(methods).filter(m -> m.getName().startsWith("get") && m.getParameterCount() == 0).sorted(Comparator.comparing(Method::getName)).toArray(Method[]::new);
-        Arrays.stream(getters).forEach(m -> System.out.printf("%s will return class %s%n",m.getName(),m.getReturnType().getName()));*/
+        Arrays.stream(getters).forEach(m -> System.out.printf("%s will return class %s%n",m.getName(),m.getReturnType().getName()));
+        */
     }
 
     private static void printMethodInfo(Method m) {
         System.out.println(m.getName().startsWith("get")
-                ? String.format("%s will return class %s",m.getName(),m.getReturnType().getName())
-                : String.format("%s and will set field of class %s",m.getName(),m.getParameterTypes()[0].getName()));
+                ? String.format("%s will return class %s", m.getName(), m.getReturnType().getName())
+                : String.format("%s and will set field of class %s", m.getName(), m.getParameterTypes()[0].getName()));
     }
 }
