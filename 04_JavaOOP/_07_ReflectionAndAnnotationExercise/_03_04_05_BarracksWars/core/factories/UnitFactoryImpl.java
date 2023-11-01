@@ -16,13 +16,16 @@ public class UnitFactoryImpl implements UnitFactory {
         try {
             Class unitClass = Class.forName(UNITS_PACKAGE_NAME + unitType);
             Constructor<Unit> unitConstructor = unitClass.getDeclaredConstructor();
+            
             return unitConstructor.newInstance();
         } catch (ClassNotFoundException | NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
+            
             return null;
         }
 
-		/*switch(unitType){
+		/*
+		switch(unitType){
 			case "Archer":
 				return new Archer();
 			case "Swordsman":
@@ -34,6 +37,8 @@ public class UnitFactoryImpl implements UnitFactory {
 			case "Gunner":
 				return new Gunner();
 		}
-		throw new ExecutionControl.NotImplementedException("message");*/
+		
+		throw new ExecutionControl.NotImplementedException("message");
+		*/
     }
 }
