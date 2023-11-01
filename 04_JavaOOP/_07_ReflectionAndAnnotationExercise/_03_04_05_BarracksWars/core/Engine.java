@@ -27,17 +27,20 @@ public class Engine implements Runnable {
 
     @Override
     public void run() {
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(System.in));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        
         while (true) {
             try {
                 String input = reader.readLine();
                 String[] data = input.split("\\s+");
+                
                 String commandName = data[0];
                 String result = interpretCommand(data, commandName);
+                
                 if (result.equals("fight")) {
                     break;
                 }
+                
                 System.out.println(result);
             } catch (RuntimeException e) {
                 System.out.println(e.getMessage());
@@ -49,12 +52,15 @@ public class Engine implements Runnable {
 
     private String interpretCommand(String[] data, String commandName) throws ExecutionControl.NotImplementedException {
         String result = "";
+        
         try {
-            String commandClassName = commandName.substring(0,1).toUpperCase() + commandName.substring(1,commandName.length());
+            String commandClassName = commandName.substring(0, 1).toUpperCase() + commandName.substring(1, commandName.length());
+            
             Class clazz = Class.forName(COMMAND_PATH_NAME + commandClassName);
-            Constructor<Command> commandConstructor = clazz.getDeclaredConstructor(String[].class,Repository.class,UnitFactory.class);
-            Command commandInstance = commandConstructor.newInstance(data,this.repository,this.unitFactory);
+            Constructor<Command> commandConstructor = clazz.getDeclaredConstructor(String[].class, Repository.class, UnitFactory.class);
+            Command commandInstance = commandConstructor.newInstance(data, this.repository, this.unitFactory);
             Method executeMethod = clazz.getDeclaredMethod(EXECUTE_METHOD_NAME);
+            
             try{
                 result = (String) executeMethod.invoke(commandInstance);
             }catch (InvocationTargetException e){
@@ -63,9 +69,11 @@ public class Engine implements Runnable {
         } catch (ClassNotFoundException | NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException | IllegalArgumentException e) {
             e.printStackTrace();
         }
+        
         return result;
 
-		/*String result;
+		/*
+		String result;
 		switch (commandName) {
 			case "add":
 				Add addCommand = new Add(data,this.repository,this.unitFactory);
@@ -82,6 +90,8 @@ public class Engine implements Runnable {
 			default:
 				throw new RuntimeException("Invalid command!");
 		}
-		return result;*/
+		
+		return result;
+		*/
     }
 }
