@@ -11,6 +11,7 @@ public class Retire extends Command{
     @Override
     public String execute() {
         String unitType = getData()[1];
+        
         getRepository().removeUnit(unitType);
         return unitType + " retired!";
     }
