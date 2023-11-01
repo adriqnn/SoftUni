@@ -15,6 +15,7 @@ public abstract class AbstractUnit implements Unit {
         if (health <= 0) {
             throw new IllegalArgumentException("Initial health should be positive.");
         }
+
         this.health = health;
     }
 
@@ -41,6 +42,7 @@ public abstract class AbstractUnit implements Unit {
         if (attackDamage <= 0) {
             throw new IllegalArgumentException("Attack damage should be positive.");
         }
+
         this.attackDamage = attackDamage;
     }
 }
