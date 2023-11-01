@@ -16,10 +16,12 @@ public class Main {
         System.out.println(reflectionClass.getSuperclass());
         Arrays.stream(reflectionClass.getInterfaces()).forEach(System.out::println);
 
-        /*Class[] interfaces = reflectionClass.getInterfaces();
+        /*
+        Class[] interfaces = reflectionClass.getInterfaces();
         for (Class anInterface : interfaces) {
             System.out.println(anInterface);
-        }*/
+        }
+        */
 
         try{
             //Arrays.stream(reflectionClass.getInterfaces()).map(Class::getSimpleName).forEach(System.out::println);
