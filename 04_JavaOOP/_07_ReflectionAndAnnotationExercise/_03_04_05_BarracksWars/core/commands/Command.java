@@ -16,7 +16,7 @@ public abstract class Command implements Executable {
     }
 
     public String[] getData() {
-        return data;
+        return this.data;
     }
 
     public void setData(String[] data) {
@@ -24,7 +24,7 @@ public abstract class Command implements Executable {
     }
 
     public Repository getRepository() {
-        return repository;
+        return this.repository;
     }
 
     public void setRepository(Repository repository) {
@@ -32,7 +32,7 @@ public abstract class Command implements Executable {
     }
 
     public UnitFactory getUnitFactory() {
-        return unitFactory;
+        return this.unitFactory;
     }
 
     public void setUnitFactory(UnitFactory unitFactory) {
