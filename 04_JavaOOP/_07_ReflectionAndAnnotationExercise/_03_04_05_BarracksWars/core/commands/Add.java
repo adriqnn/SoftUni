@@ -12,9 +12,11 @@ public class Add extends Command{
     @Override
     public String execute() {
         String unitType = getData()[1];
+        
         Unit unitToAdd = this.getUnitFactory().createUnit(unitType);
         this.getRepository().addUnit(unitToAdd);
         String output = unitType + " added!";
+        
         return output;
     }
 }
