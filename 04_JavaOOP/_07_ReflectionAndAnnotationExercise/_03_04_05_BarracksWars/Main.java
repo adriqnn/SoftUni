@@ -14,6 +14,7 @@ public class Main {
         UnitFactory unitFactory = new UnitFactoryImpl();
 
         Runnable engine = new Engine(repository, unitFactory);
+        
         engine.run();
     }
 }
