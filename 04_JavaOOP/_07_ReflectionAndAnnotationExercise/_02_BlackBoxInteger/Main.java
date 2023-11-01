@@ -8,6 +8,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException, NoSuchFieldException {
+        Scanner scan = new Scanner(System.in);
+        
         Class<BlackBoxInt> clazz = BlackBoxInt.class;
         Constructor<BlackBoxInt> constructor = clazz.getDeclaredConstructor();
         constructor.setAccessible(true);
@@ -15,22 +17,24 @@ public class Main {
 
         Field innerValue = clazz.getDeclaredField("innerValue");
         innerValue.setAccessible(true);
-
-        Scanner scan = new Scanner(System.in);
-        String input= scan.nextLine();
+        
+        String input = scan.nextLine();
+        
         while(!input.equals("END")){
             String[] methodData = input.split("_");
+            
             String methodName = methodData[0];
             int value = Integer.parseInt(methodData[1]);
 
-            Method method = clazz.getDeclaredMethod(methodName,int.class);
+            Method method = clazz.getDeclaredMethod(methodName, int.class);
             method.setAccessible(true);
-            method.invoke(blackBoxInt,value);
+            method.invoke(blackBoxInt, value);
 
             System.out.println(innerValue.get(blackBoxInt));
 
             input = scan.nextLine();
         }
 
+        scan.close();
     }
 }
