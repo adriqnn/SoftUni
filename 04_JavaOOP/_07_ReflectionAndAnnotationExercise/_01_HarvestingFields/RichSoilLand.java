@@ -5,7 +5,6 @@ import java.util.Calendar;
 import java.util.stream.Stream;
 
 public class RichSoilLand {
-
     private int testInt;
     public double testDouble;
     protected String testString;
