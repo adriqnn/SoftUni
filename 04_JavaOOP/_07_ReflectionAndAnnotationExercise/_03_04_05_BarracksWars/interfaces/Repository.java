@@ -5,4 +5,3 @@ public interface Repository {
     String getStatistics();
     void removeUnit(String unitType);
 }
-
