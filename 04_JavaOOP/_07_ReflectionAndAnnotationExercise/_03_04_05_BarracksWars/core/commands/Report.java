@@ -12,6 +12,5 @@ public class Report extends Command{
     public String execute() {
         String output = this.getRepository().getStatistics();
         return output;
-
     }
 }
