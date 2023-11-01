@@ -1,9 +1,7 @@
 package _04_JavaOOP._07_ReflectionAndAnnotationExercise._02_BlackBoxInteger;
 
 public class BlackBoxInt {
-
     private static final int DEFAULT_VALUE = 0;
-
     private int innerValue;
 
     private BlackBoxInt(int innerValue) {
