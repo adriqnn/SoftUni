@@ -27,7 +27,7 @@ public class ListIterator {
     }
 
     public boolean hasNext(){
-        if(currentIndex < elements.size() - 1){
+        if(this.currentIndex < this.elements.size() - 1){
             return true;
         }
 
