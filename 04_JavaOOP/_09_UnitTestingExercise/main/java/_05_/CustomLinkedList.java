@@ -5,7 +5,6 @@ package _04_JavaOOP._09_UnitTestingExercise.main.java._05_;
  */
 public class CustomLinkedList<T> {
     private class ListNode {
-
         private T element;
         private ListNode nextNode;
 
@@ -20,7 +19,7 @@ public class CustomLinkedList<T> {
         }
 
         public T getElement() {
-            return element;
+            return this.element;
         }
 
         public void setElement(T element) {
@@ -28,7 +27,7 @@ public class CustomLinkedList<T> {
         }
 
         public ListNode getNextNode() {
-            return nextNode;
+            return this.nextNode;
         }
 
         public void setNextNode(ListNode nextNode) {
@@ -47,7 +46,7 @@ public class CustomLinkedList<T> {
     }
 
     public int getCount() {
-        return count;
+        return this.count;
     }
 
     /**
@@ -65,6 +64,7 @@ public class CustomLinkedList<T> {
         for (int i = 0; i < index; i++) {
             currentNode = currentNode.getNextNode();
         }
+
         return currentNode.getElement();
     }
 
@@ -97,8 +97,7 @@ public class CustomLinkedList<T> {
             // We have an empty list -> create a new head and tail
             this.head = new ListNode(item);
             this.tail = this.head;
-        }
-        else {
+        } else {
             // We have a non-empty list -> append the item after tail
             ListNode newNode = new ListNode(item, this.tail);
             this.tail = newNode;
