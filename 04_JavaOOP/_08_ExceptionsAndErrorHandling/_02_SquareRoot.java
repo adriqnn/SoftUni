@@ -4,7 +4,9 @@ import java.util.Scanner;
 
 public class _02_SquareRoot {
     public static void main(String[] args) {
-        String numberAsString = new Scanner(System.in).nextLine();
+        Scanner scan = new Scanner(System.in);
+        String numberAsString = scan.nextLine();
+
         double sqrt = -1;
 
         try{
@@ -12,11 +14,13 @@ public class _02_SquareRoot {
         }catch (IllegalArgumentException e){
             System.out.println("Invalid");
         }
+
         if(sqrt != -1){
             System.out.printf("%.2f%n", sqrt);
         }
+
         System.out.println("Goodbye");
+
+        scan.close();
     }
 }
-
-
