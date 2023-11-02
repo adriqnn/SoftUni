@@ -7,25 +7,20 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AxeTest {
-
-    @BeforeClass
-
     @Test
     public void testWeaponLosesDurabilityAfterAttack(){
         //Arrange
-        Axe axe = new Axe(10,10);
-        Dummy dummy = new Dummy(100,100);
+        Axe axe = new Axe(10, 10);
+        Dummy dummy = new Dummy(100, 100);
         //Act
         axe.attack(dummy);
         //Assert
-        Assert.assertEquals(9,axe.getDurabilityPoints());
-
+        Assert.assertEquals(9, axe.getDurabilityPoints());
     }
 
     @Test(expected = IllegalStateException.class)
     public void testAxeAttackThrowsIfAxeIsBroken(){
-        Axe brokenAxe = new Axe(10,0);
+        Axe brokenAxe = new Axe(10, 0);
         brokenAxe.attack(null);
     }
-
 }
