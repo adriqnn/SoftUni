@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-
 public class _03_EnterNumbers {
     public static void main(String[] args) {
         Scanner scan  = new Scanner(System.in);
@@ -18,22 +17,23 @@ public class _03_EnterNumbers {
         while(numbers.size() < 10){
             String input = scan.nextLine();
 
-
             try{
                 int number = Integer.parseInt(input);
+                
                 if(number > lowerRange && number < upperRange){
                     lowerRange = number;
                     numbers.add(number);
                 }else{
-                    System.out.printf("Your number is not in range %d - %d!%n",lowerRange, upperRange);
+                    System.out.printf("Your number is not in range %d - %d!%n", lowerRange, upperRange);
                 }
             }catch(Exception e){
                 System.out.println("Invalid Number!");
             }
 
         }
+        
         System.out.println(numbers.stream().map(String::valueOf).collect(Collectors.joining(", ")));
+        
+        scan.close();
     }
 }
-
-
