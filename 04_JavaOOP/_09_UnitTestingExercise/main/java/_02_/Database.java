@@ -5,11 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Database {
-
     private Person[] elements;
     private int elementsCount = 0;
     private int index;
-
 
     public Database(Person... people) throws OperationNotSupportedException {
         this.elementsCount = people.length;
@@ -28,18 +26,18 @@ public class Database {
 
     public void remove() throws OperationNotSupportedException {
         try {
-            this.elements[index--] = null;
-            this.elementsCount--;
-        } catch (ArrayIndexOutOfBoundsException ex) {
-            throw new OperationNotSupportedException();
-        }
+			this.elements[index--] = null;
+			this.elementsCount--;			
+		} catch (ArrayIndexOutOfBoundsException ex) {
+			throw new OperationNotSupportedException();
+		}
     }
 
     public Person[] getElements() {
-        Person[] buffer = new Person[elementsCount];
+        Person[] buffer = new Person[this.elementsCount];
         int bufferIndex = 0;
 
-        for (Person person : elements) {
+        for (Person person : this.elements) {
             if (person != null) {
                 buffer[bufferIndex++] = person;
             }
@@ -55,8 +53,7 @@ public class Database {
             throw new OperationNotSupportedException();
         }
 
-        for (Person person : elements) {
-
+        for (Person person : this.elements) {
             if (person == null) {
                 continue;
             }
@@ -76,8 +73,7 @@ public class Database {
     public Person findById(long id) throws OperationNotSupportedException {
         List<Person> people = new ArrayList<>();
 
-        for (Person person : elements) {
-
+        for (Person person : this.elements) {
             if (person == null) {
                 continue;
             }
