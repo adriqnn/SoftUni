@@ -1,7 +1,6 @@
 package _04_JavaOOP._09_UnitTestingExercise.main.java._02_;
 
 public class Person {
-
     private int id;
     private String name;
 
