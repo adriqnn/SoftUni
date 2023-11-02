@@ -3,11 +3,9 @@ package _04_JavaOOP._09_UnitTestingExercise.main.java._01_;
 import javax.naming.OperationNotSupportedException;
 
 public class Database {
-
     private Integer[] elements;
     private int elementsCount = 0;
     private int index;
-
 
     public Database(Integer... elements) throws OperationNotSupportedException {
         this.elementsCount = elements.length;
@@ -25,19 +23,19 @@ public class Database {
     }
 
     public void remove() throws OperationNotSupportedException {
-        try {
-            this.elements[index--] = null;
-            this.elementsCount--;
-        } catch (ArrayIndexOutOfBoundsException ex) {
-            throw new OperationNotSupportedException();
-        }
+		try {
+			this.elements[index--] = null;
+			this.elementsCount--;			
+		} catch (ArrayIndexOutOfBoundsException ex) {
+			throw new OperationNotSupportedException();
+		}
     }
 
     public Integer[] getElements() {
-        Integer[] buffer = new Integer[elementsCount];
+        Integer[] buffer = new Integer[this.elementsCount];
         int bufferIndex = 0;
 
-        for (Integer element : elements) {
+        for (Integer element : this.elements) {
             if (element != null) {
                 buffer[bufferIndex++] = element;
             }
