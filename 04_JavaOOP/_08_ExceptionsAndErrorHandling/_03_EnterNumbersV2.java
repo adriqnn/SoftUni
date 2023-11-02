@@ -6,24 +6,19 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class _03_EnterNumbersV2 {
-
     public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         int start = 1;
-
         List<Integer> numbers = new ArrayList<>();
 
         while (numbers.size() < 10) {
-
             int number;
 
             try {
-                number = readNumber(start, 100, scanner);
+                number = readNumber(start, 100, scan);
             } catch (IllegalStateException e) {
                 System.out.println(e.getMessage());
-
                 continue;
             }
 
@@ -31,17 +26,13 @@ public class _03_EnterNumbersV2 {
             numbers.add(number);
         }
 
-        System.out.println(
-                numbers.stream()
-                        .map(String::valueOf)
-                        .collect(Collectors.joining(", "))
-        );
+        System.out.println(numbers.stream().map(String::valueOf).collect(Collectors.joining(", ")));
+        
+        scan.close();
     }
 
-    public static int readNumber(int start, int end, Scanner scanner) {
-
-        String input = scanner.nextLine();
-
+    public static int readNumber(int start, int end, Scanner scan) {
+        String input = scan.nextLine();
         int number;
 
         try {
@@ -57,4 +48,3 @@ public class _03_EnterNumbersV2 {
         return number;
     }
 }
-
