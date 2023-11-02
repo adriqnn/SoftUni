@@ -1,7 +1,6 @@
 package _04_JavaOOP._09_UnitTesting.main.java;
 
 public class Hero {
-
     private String name;
     private int experience;
     private Axe weapon;
