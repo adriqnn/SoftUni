@@ -14,15 +14,15 @@ public class DummyTest {
 
     @Before
     public void setDummy(){
-        this.dummy = new Dummy(HEALTH,XP);
-        this.deadDummy = new Dummy(0,XP);
+        this.dummy = new Dummy(HEALTH, XP);
+        this.deadDummy = new Dummy(0, XP);
     }
 
     @Test
     public void testDummyLosesHealthWhenAttacked(){
         int attackPoints = 10;
         dummy.takeAttack(attackPoints);
-        assertEquals(HEALTH-attackPoints,dummy.getHealth());
+        assertEquals(HEALTH-attackPoints, dummy.getHealth());
     }
 
     @Test(expected = IllegalStateException.class)
@@ -33,12 +33,11 @@ public class DummyTest {
     @Test
     public void testDummyGivesXp(){
         int actual = deadDummy.giveExperience();
-        assertEquals(XP,actual);
+        assertEquals(XP, actual);
     }
 
     @Test(expected = IllegalStateException.class)
     public void testAliveDummyThrowsWhenGivingXP(){
         dummy.giveExperience();
     }
-
 }
