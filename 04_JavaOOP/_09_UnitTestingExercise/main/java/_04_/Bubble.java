@@ -7,7 +7,6 @@ public class Bubble {
         for (int k = 0; k < n - 1; k++) {
             for (int i = 0; i < n - k - 1; i++) {
                 if (arr[i] > arr[i + 1]) {
-                    
                     int temp = arr[i];
                     arr[i] = arr[i + 1];
                     arr[i + 1] = temp;
