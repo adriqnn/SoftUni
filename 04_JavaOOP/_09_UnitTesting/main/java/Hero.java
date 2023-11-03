@@ -1,4 +1,4 @@
-package _04_JavaOOP._09_UnitTesting.main.java;
+package _04_JavaOOP._09_UnitTesting;
 
 public class Hero {
     private String name;
