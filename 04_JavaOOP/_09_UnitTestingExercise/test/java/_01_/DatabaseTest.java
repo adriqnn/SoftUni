@@ -1,4 +1,4 @@
-package unittesting.exercise._01_;
+package _04_JavaOOP._09_UnitTestingExercise._01_;
 
 import org.junit.Assert;
 import org.junit.Before;
