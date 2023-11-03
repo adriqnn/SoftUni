@@ -1,4 +1,4 @@
-package _04_JavaOOP._09_UnitTestingExercise.main.java._04_;
+package _04_JavaOOP._09_UnitTestingExercise._04_;
 
 public class Bubble {
     public static void sort(int[] arr) {
