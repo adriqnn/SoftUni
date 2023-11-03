@@ -1,7 +1,5 @@
 package _04_JavaOOP._09_UnitTestingExercise._03_;
 
-package unittesting.exercise.three;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
