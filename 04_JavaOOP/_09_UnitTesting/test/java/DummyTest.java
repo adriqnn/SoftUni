@@ -1,4 +1,4 @@
-package unittesting.rpg_lab;
+package _04_JavaOOP._09_UnitTesting;
 
 import org.junit.Before;
 import org.junit.Test;
