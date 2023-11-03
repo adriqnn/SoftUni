@@ -1,4 +1,4 @@
-package _04_JavaOOP._09_UnitTestingExercise.main.java._06_;
+package _04_JavaOOP._09_UnitTestingExercise._06_;
 
 import java.util.Random;
 
