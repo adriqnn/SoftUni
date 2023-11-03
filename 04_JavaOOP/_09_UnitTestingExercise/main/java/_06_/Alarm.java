@@ -1,4 +1,4 @@
-package _04_JavaOOP._09_UnitTestingExercise.main.java._06_;
+package _04_JavaOOP._09_UnitTestingExercise._06_;
 
 public class Alarm {
     private static final double LOW_PRESSURE_THRESHOLD = 17;
