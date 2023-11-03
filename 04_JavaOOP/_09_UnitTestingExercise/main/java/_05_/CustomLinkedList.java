@@ -1,4 +1,4 @@
-package _04_JavaOOP._09_UnitTestingExercise.main.java._05_;
+package _04_JavaOOP._09_UnitTestingExercise._05_;
 
 /**
  * Dynamic (linked) list class definition
