@@ -1,4 +1,4 @@
-package _04_JavaOOP._09_UnitTestingExercise.main.java._02_;
+package _04_JavaOOP._09_UnitTestingExercise._02_;
 
 import javax.naming.OperationNotSupportedException;
 import java.util.ArrayList;
