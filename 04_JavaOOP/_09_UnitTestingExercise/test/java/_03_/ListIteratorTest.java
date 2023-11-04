@@ -46,14 +46,14 @@ public class ListIteratorTest {
 
     @Test(expected = IllegalStateException.class)
     public void testPrintShouldThrowExceptionForEmptyList() throws OperationNotSupportedException {
-        listIterator = new ListIterator();
-        listIterator.print();
+        this.listIterator = new ListIterator();
+        this.listIterator.print();
     }
 
     @Test
     public void testPrintSuccess(){
         int index = 0;
-        
+
         while(this.listIterator.hasNext()){
             Assert.assertEquals(testArray[index], this.listIterator.print());
             index++;
