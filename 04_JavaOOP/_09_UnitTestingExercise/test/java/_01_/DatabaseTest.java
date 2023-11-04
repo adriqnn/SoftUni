@@ -12,13 +12,13 @@ public class DatabaseTest {
 
     @Before
     public void prepare() throws OperationNotSupportedException {
-        database = new Database(NUMBERS);
+        this.database = new Database(NUMBERS);
     }
 
     @Test
     public void testConstructorShouldCreateValidDatabase() throws OperationNotSupportedException {
-        database = new Database(NUMBERS);
-        Integer[] dbElements = database.getElements();
+        this.database = new Database(NUMBERS);
+        Integer[] dbElements = this.database.getElements();
 
         Assert.assertEquals("Count of db elements is incorrect", dbElements.length, NUMBERS.length);
 
@@ -41,14 +41,14 @@ public class DatabaseTest {
 
     @Test(expected = OperationNotSupportedException.class)
     public void testAddThrowsExceptionWithNullArgument() throws OperationNotSupportedException {
-        database.add(null);
+        this.database.add(null);
     }
 
     //"Happy Path"
     @Test
     public void testAddShouldAddElement() throws OperationNotSupportedException {
-        database.add(6);
-        Integer[] dbElements = database.getElements();
+        this.database.add(6);
+        Integer[] dbElements = this.database.getElements();
         Assert.assertEquals(dbElements.length, NUMBERS.length + 1);
         Assert.assertEquals(dbElements[dbElements.length - 1], Integer.valueOf(6));
     }
@@ -56,16 +56,16 @@ public class DatabaseTest {
     @Test(expected = OperationNotSupportedException.class)
     public void testRemoveShouldTrowException() throws OperationNotSupportedException {
         for (int i = 0; i < NUMBERS.length; i++) {
-            database.remove();
+            this.database.remove();
         }
 
-        database.remove();
+        this.database.remove();
     }
 
     @Test
     public void testRemoveShouldRemoveLastElement() throws OperationNotSupportedException {
-        database.remove();
-        Integer[] dbElements = database.getElements();
+        this.database.remove();
+        Integer[] dbElements = this.database.getElements();
         Assert.assertEquals(NUMBERS.length - 1, dbElements.length);
         Assert.assertEquals(Integer.valueOf(3), dbElements[dbElements.length - 1]);
     }
