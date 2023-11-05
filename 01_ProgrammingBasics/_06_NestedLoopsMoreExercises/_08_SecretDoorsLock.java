@@ -21,6 +21,8 @@ public class _08_SecretDoorsLock {
                 }
             }
         }
+        
+        scan.close();
     }
 
     public static boolean isPrime(int number) {
