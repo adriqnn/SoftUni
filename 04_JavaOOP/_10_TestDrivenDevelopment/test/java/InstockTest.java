@@ -22,9 +22,9 @@ public class InstockTest {
         Product product = new Product("test_product", 9.99, 1);
 
         // Those assertions will confirm that both add and contains work as expected
-        assertFalse(stock.contains(product));
-        stock.add(product);
-        assertTrue(stock.contains(product));
+        assertFalse(this.stock.contains(product));
+        this.stock.add(product);
+        assertTrue(this.stock.contains(product));
     }
 
     @Test
@@ -98,7 +98,6 @@ public class InstockTest {
         this.stock.add(new Product("not_returned_test_product", 9.99, 1));
 
         Iterable<Product> iterable = this.stock.findFirstByAlphabeticalOrder(addedProducts.length);
-
         int count = assertAndExtract(iterable).size();
 
         assertEquals(addedProducts.length, count);
@@ -107,9 +106,7 @@ public class InstockTest {
     @Test
     public void testFindFirstByAlphabeticalOrderShouldReturnInTheCorrectOrder() {
         Product[] addedProducts = createAndAddProducts(this.stock);
-
         Iterable<Product> iterable = this.stock.findFirstByAlphabeticalOrder(addedProducts.length);
-
         List<String> actualProducts = assertAndExtract(iterable, Product::getLabel);
 
         List<String> expectedProducts = Arrays.stream(addedProducts)
@@ -137,9 +134,7 @@ public class InstockTest {
         double end = addedProducts[2].getPrice();
 
         Iterable<Product> iterable = this.stock.findAllInRange(start, end);
-
         List<Double> returnedPrices = assertAndExtract(iterable, Product::getPrice);
-
         double actual = returnedPrices.get(0);
 
         assertEquals(1, returnedPrices.size());
@@ -153,7 +148,6 @@ public class InstockTest {
         double end = addedProducts[3].getPrice();
 
         Iterable<Product> iterable = this.stock.findAllInRange(start, end);
-
         List<Double> returnedPrices = assertAndExtract(iterable, Product::getPrice);
 
         List<Double> expected = Arrays.stream(addedProducts)
@@ -172,7 +166,6 @@ public class InstockTest {
         double end = -5;
 
         Iterable<Product> iterable = this.stock.findAllInRange(start, end);
-
         List<Double> returnedPrices = assertAndExtract(iterable, Product::getPrice);
 
         assertTrue(returnedPrices.isEmpty());
@@ -184,7 +177,6 @@ public class InstockTest {
         double expectedPrice = addedProducts[3].getPrice();
 
         Iterable<Product> iterable = this.stock.findAllByPrice(expectedPrice);
-
         List<Double> returnedPrices = assertAndExtract(iterable, Product::getPrice);
 
         assertEquals(1, returnedPrices.size());
@@ -200,7 +192,6 @@ public class InstockTest {
         double expectedPrice = 1.99;
 
         Iterable<Product> iterable = this.stock.findAllByPrice(expectedPrice);
-
         List<Double> returnedPrices = assertAndExtract(iterable, Product::getPrice);
 
         assertTrue(returnedPrices.isEmpty());
@@ -222,7 +213,6 @@ public class InstockTest {
         }
 
         Iterable<Product> iterable = this.stock.findFirstMostExpensiveProducts(3);
-
         List<Double> actual = assertAndExtract(iterable, Product::getPrice);
 
         assertEquals(expected, actual);
@@ -239,9 +229,7 @@ public class InstockTest {
         createAndAddProducts(this.stock);
 
         int expected = 13;
-
         Iterable<Product> iterable = this.stock.findAllByQuantity(expected);
-
         List<Integer> actual = assertAndExtract(iterable, Product::getQuantity);
 
         assertTrue(actual.stream().allMatch(q -> q == expected));
@@ -252,9 +240,7 @@ public class InstockTest {
         createAndAddProducts(this.stock);
 
         int expected = -10;
-
         Iterable<Product> iterable = this.stock.findAllByQuantity(expected);
-
         List<Integer> actual = assertAndExtract(iterable, Product::getQuantity);
 
         assertTrue(actual.isEmpty());
@@ -266,7 +252,6 @@ public class InstockTest {
 
         Iterator<Product> iterator = this.stock.iterator();
         assertNotNull(iterator);
-
         List<Product> actualProducts = new ArrayList<>();
 
         while (iterator.hasNext()) {
