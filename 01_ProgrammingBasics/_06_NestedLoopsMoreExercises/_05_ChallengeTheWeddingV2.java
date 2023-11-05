@@ -18,6 +18,7 @@ public class _05_ChallengeTheWeddingV2 {
                 if(maxTables == 0){
                     break outerLoop;
                 }
+                
                 maxTables--;
                 System.out.printf("(%d <-> %d) ", i, j);
             }
