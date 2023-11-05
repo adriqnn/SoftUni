@@ -50,6 +50,7 @@ public class _02_ReportSystem {
                 moneyCollected = true;
                 break;
             }
+            
             input = scan.nextLine();
         }
 
