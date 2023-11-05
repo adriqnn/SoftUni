@@ -29,6 +29,7 @@ public class _01_Dishwasher {
                 plates += dishes;
                 detergentNeeded += dishes * 5;
             }
+            
             washingBatch++;
 
             // Check if there's enough detergent for the current batch
