@@ -23,9 +23,11 @@ public class _07_SafePasswordsGenerator {
                 if(count == max){
                     break forOuter;
                 }
+                
                 if(A == 56){
                     A = '#';
                 }
+                
                 if( B == 97){
                     B = '@';
                 }
