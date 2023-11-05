@@ -24,5 +24,7 @@ public class _14_PasswordGenerator {
                 }
             }
         }
+        
+        scan.close();
     }
 }
