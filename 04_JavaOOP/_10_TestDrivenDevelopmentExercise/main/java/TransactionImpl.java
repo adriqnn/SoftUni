@@ -1,7 +1,8 @@
-package _04_JavaOOP._10_TestDrivenDevelopmentExercise.main.java;
+package _04_JavaOOP._10_TestDrivenDevelopmentExercise;
 
-public class TransactionImpl implements Comparable<TransactionImpl>,Transaction{
+import java.util.Objects;
 
+public class TransactionImpl implements Comparable<TransactionImpl>, Transaction{
     private int id;
     private TransactionStatus status;
     private String from;
@@ -17,7 +18,7 @@ public class TransactionImpl implements Comparable<TransactionImpl>,Transaction{
     }
 
     public int compareTo(TransactionImpl o) {
-        return 0;
+        return Integer.compare(this.hashCode(), o.hashCode());
     }
 
     @Override
@@ -37,11 +38,24 @@ public class TransactionImpl implements Comparable<TransactionImpl>,Transaction{
 
     @Override
     public double getAmount() {
-        return amount;
+        return this.amount;
     }
 
     @Override
     public String getFrom() {
         return this.from;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TransactionImpl that = (TransactionImpl) o;
+        return id == that.id && status == that.status;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, status);
     }
 }
