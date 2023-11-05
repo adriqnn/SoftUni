@@ -1,22 +1,22 @@
 package _04_JavaOOP._10_TestDrivenDevelopment.main.java;
 
 public interface ProductStock extends Iterable<Product> {
-    //getter
+    // Getter
     int getCount();
 
-    //Validations
+    // Validations
     boolean contains(Product product);
 
-    //Modifications
+    // Modifications
     void add(Product product);
     void changeQuantity(String product, int quantity);
 
-    //Retrievals
+    // Retrievals
     Product find(int index);
     Product findByLabel(String label);
     Iterable<Product> findFirstByAlphabeticalOrder(int count);
 
-    //Querying
+    // Querying
     Iterable<Product> findAllInRange(double lo, double hi);
     Iterable<Product> findAllByPrice(double price);
     Iterable<Product> findFirstMostExpensiveProducts(int count);
