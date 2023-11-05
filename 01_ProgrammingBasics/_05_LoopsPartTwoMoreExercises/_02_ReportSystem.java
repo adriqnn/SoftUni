@@ -43,6 +43,7 @@ public class _02_ReportSystem {
                     System.out.println("Product sold!");
                 }
             }
+            
             order++;
 
             if(collectedMoney >= donationGoal){
