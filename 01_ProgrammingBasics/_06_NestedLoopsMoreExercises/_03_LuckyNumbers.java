@@ -17,6 +17,7 @@ public class _03_LuckyNumbers {
                         if((i + j) == (k + l)){
                             int num = Integer.parseInt(String.format("%d%d%d%d", i, j, k, l));
                             int sum = i + j;
+                            
                             if(n % sum == 0){
                                 System.out.printf("%d ", num);
                             }
