@@ -1,4 +1,4 @@
-package tdd;
+package _04_JavaOOP._10_TestDrivenDevelopment;
 
 import org.junit.Before;
 import org.junit.Test;
