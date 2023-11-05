@@ -1,4 +1,4 @@
-package _04_JavaOOP._10_TestDrivenDevelopment.main.java;
+package _04_JavaOOP._10_TestDrivenDevelopment;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -6,9 +6,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Instock implements ProductStock{
+public class Instock implements ProductStock {
     private List<Product> products;
-
+    
     public Instock() {
         this.products = new ArrayList<>();
     }
@@ -86,6 +86,7 @@ public class Instock implements ProductStock{
         if (count > this.products.size()) {
             throw new IllegalArgumentException("Less products in stock than " + count);
         }
+        
         return this.products.stream()
                 .sorted(Comparator.comparing(Product::getPrice).reversed())
                 .limit(count)
