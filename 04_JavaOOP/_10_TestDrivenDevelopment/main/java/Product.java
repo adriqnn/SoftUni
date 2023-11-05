@@ -1,5 +1,5 @@
 package _04_JavaOOP._10_TestDrivenDevelopment.main.java;
-
+ 
 public class Product {
     public String label;
     public double price;
