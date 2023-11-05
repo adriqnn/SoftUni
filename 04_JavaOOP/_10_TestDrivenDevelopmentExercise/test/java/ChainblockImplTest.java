@@ -1,4 +1,4 @@
-package chainblock;
+package _04_JavaOOP._10_TestDrivenDevelopmentExercise;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -21,10 +21,11 @@ public class ChainblockImplTest {
     }
 
     private void prepareTransactions(){
-        Transaction transaction = new TransactionImpl(0,TransactionStatus.SUCCESSFUL,"Pesho","Toshko",10.20);
-        Transaction transaction1 = new TransactionImpl(1,TransactionStatus.SUCCESSFUL,"Pesho","Toshko",9.00);
-        Transaction transaction2 = new TransactionImpl(2,TransactionStatus.UNAUTHORIZED,"Sasho","Pesho",11.00);
-        Transaction transaction3 = new TransactionImpl(3,TransactionStatus.FAILED,"Tasho","Toshko",12.20);
+        Transaction transaction = new TransactionImpl(0, TransactionStatus.SUCCESSFUL, "Pesho", "Toshko", 10.20);
+        Transaction transaction1 = new TransactionImpl(1, TransactionStatus.SUCCESSFUL, "Pesho", "Toshko", 9.00);
+        Transaction transaction2 = new TransactionImpl(2, TransactionStatus.UNAUTHORIZED, "Sasho", "Pesho", 11.00);
+        Transaction transaction3 = new TransactionImpl(3, TransactionStatus.FAILED, "Tasho", "Toshko", 12.20);
+        
         this.transactions.add(transaction);
         this.transactions.add(transaction1);
         this.transactions.add(transaction2);
@@ -37,21 +38,21 @@ public class ChainblockImplTest {
 
     @Test
     public void testContainsReturnTrue(){
-        Transaction transaction = transactions.get(0);
-        chainBlock.add(transaction);
+        Transaction transaction = this.transactions.get(0);
+        this.chainBlock.add(transaction);
         Assert.assertTrue(this.chainBlock.contains(transaction));
     }
 
     @Test
     public void testContainsReturnFalse(){
-        Transaction transaction = transactions.get(0);
+        Transaction transaction = this.transactions.get(0);
         Assert.assertFalse(this.chainBlock.contains(transaction));
     }
 
     @Test
     public void testContainsByIdReturnsTrue(){
-        Transaction transaction = transactions.get(0);
-        chainBlock.add(transaction);
+        Transaction transaction = this.transactions.get(0);
+        this.chainBlock.add(transaction);
         Assert.assertTrue(this.chainBlock.contains(0));
     }
 
@@ -62,47 +63,48 @@ public class ChainblockImplTest {
 
     @Test
     public void testAddCorrectTransaction(){
-        this.chainBlock.add(transactions.get(0));
-        Assert.assertEquals(1,this.chainBlock.getCount());
-        this.chainBlock.add(transactions.get(1));
-        Assert.assertEquals(2,this.chainBlock.getCount());
+        this.chainBlock.add(this.transactions.get(0));
+        Assert.assertEquals(1, this.chainBlock.getCount());
+        this.chainBlock.add(this.transactions.get(1));
+        Assert.assertEquals(2, this.chainBlock.getCount());
     }
 
     @Test
     public void testAddTransactionFailTwoTimesSame(){
-        this.chainBlock.add(transactions.get(0));
-        this.chainBlock.add(transactions.get(0));
-        Assert.assertEquals(1,this.chainBlock.getCount());
+        this.chainBlock.add(this.transactions.get(0));
+        this.chainBlock.add(this.transactions.get(0));
+        
+        Assert.assertEquals(1, this.chainBlock.getCount());
     }
 
     @Test
     public void testGetCount(){
-        Assert.assertEquals(0,chainBlock.getCount());
-        this.chainBlock.add(transactions.get(0));
-        Assert.assertEquals(1,chainBlock.getCount());
-        this.chainBlock.add(transactions.get(1));
-        Assert.assertEquals(2,chainBlock.getCount());
-        this.chainBlock.add(transactions.get(2));
-        Assert.assertEquals(3,chainBlock.getCount());
+        Assert.assertEquals(0, this.chainBlock.getCount());
+        this.chainBlock.add(this.transactions.get(0));
+        Assert.assertEquals(1, this.chainBlock.getCount());
+        this.chainBlock.add(this.transactions.get(1));
+        Assert.assertEquals(2, this.chainBlock.getCount());
+        this.chainBlock.add(this.transactions.get(2));
+        Assert.assertEquals(3, this.chainBlock.getCount());
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testRemoveInvalidTransaction(){
-        this.chainBlock.changeTransactionStatus(-100,TransactionStatus.ABORTED);
+        this.chainBlock.changeTransactionStatus(-100, TransactionStatus.ABORTED);
     }
 
     @Test
     public void testChangeTransactionStatusSuccess(){
-        this.chainBlock.add(transactions.get(0));
-        this.chainBlock.changeTransactionStatus(0,TransactionStatus.UNAUTHORIZED);
-        Assert.assertEquals(TransactionStatus.UNAUTHORIZED,this.chainBlock.getById(0).getStatus());
+        this.chainBlock.add(this.transactions.get(0));
+        this.chainBlock.changeTransactionStatus(0, TransactionStatus.UNAUTHORIZED);
+        Assert.assertEquals(TransactionStatus.UNAUTHORIZED, this.chainBlock.getById(0).getStatus());
     }
 
     @Test
     public void testGetByIdSuccess(){
         fillChainBlockWithTransactions();
         Transaction actualTransaction = this.chainBlock.getById(0);
-        Assert.assertEquals(0,actualTransaction.getId());
+        Assert.assertEquals(0, actualTransaction.getId());
     }
 
     @Test (expected = IllegalArgumentException.class)
@@ -121,7 +123,7 @@ public class ChainblockImplTest {
         fillChainBlockWithTransactions();
         this.chainBlock.removeTransactionById(0);
         Assert.assertFalse(this.chainBlock.contains(0));
-        Assert.assertEquals(3,this.chainBlock.getCount());
+        Assert.assertEquals(3, this.chainBlock.getCount());
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -137,13 +139,13 @@ public class ChainblockImplTest {
         Iterable<Transaction> actualSortedTransactions = this.chainBlock.getByTransactionStatus(TransactionStatus.SUCCESSFUL);
         List<Transaction> actualSortedTransactionsList = new ArrayList<>();
         actualSortedTransactions.forEach(actualSortedTransactionsList::add);
-        Assert.assertEquals(successfulSortedTransactions,actualSortedTransactionsList);
+        Assert.assertEquals(successfulSortedTransactions, actualSortedTransactionsList);
     }
 
     @Test
     public void getAllInAmountRangeSuccess(){
         fillChainBlockWithTransactions();
-        Iterable<Transaction> resultTransactions = this.chainBlock.getAllInAmountRange(10,12);
+        Iterable<Transaction> resultTransactions = this.chainBlock.getAllInAmountRange(10, 12);
         resultTransactions.forEach(e -> {
             Assert.assertTrue(e.getAmount() >= 10);
             Assert.assertTrue(e.getAmount() <= 12);
@@ -153,10 +155,9 @@ public class ChainblockImplTest {
     @Test
     public void getAllInAmountRangeEmptyResult(){
         fillChainBlockWithTransactions();
-        Iterable<Transaction> resultTransactions = this.chainBlock.getAllInAmountRange(-100,-50);
+        Iterable<Transaction> resultTransactions = this.chainBlock.getAllInAmountRange(-100, -50);
         List<Transaction> resultList = new ArrayList<>();
         resultTransactions.forEach(resultList::add);
         Assert.assertTrue(resultList.isEmpty());
     }
-
 }
