@@ -17,9 +17,11 @@ public class _05_ChallengeTheWedding {
                 if(maxTables == 0){
                     break;
                 }
+                
                 maxTables--;
                 System.out.printf("(%d <-> %d) ", i, j);
             }
+            
             if(maxTables == 0){
                 break;
             }
