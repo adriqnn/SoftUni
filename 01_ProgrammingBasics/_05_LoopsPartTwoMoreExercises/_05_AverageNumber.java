@@ -18,6 +18,8 @@ public class _05_AverageNumber {
         }
 
         // Print the average
-        System.out.printf("%.2f", sum/n);
+        System.out.printf("%.2f", sum / n);
+
+        scan.close();
     }
 }
