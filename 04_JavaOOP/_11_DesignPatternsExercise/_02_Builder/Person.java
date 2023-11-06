@@ -13,28 +13,28 @@ public class Person {
 
     // Getters for attributes
     public String getFirstName() {
-        return firstName;
+        return this.firstName;
     }
 
     public String getLastName() {
-        return lastName;
+        return this.lastName;
     }
 
     public int getAge() {
-        return age;
+        return this.age;
     }
 
     public String getAddress() {
-        return address;
+        return this.address;
     }
 
     @Override
     public String toString() {
         return "Person{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                ", address='" + address + '\'' +
+                "firstName='" + this.firstName + '\'' +
+                ", lastName='" + this.lastName + '\'' +
+                ", age=" + this.age +
+                ", address='" + this.address + '\'' +
                 '}';
     }
 
