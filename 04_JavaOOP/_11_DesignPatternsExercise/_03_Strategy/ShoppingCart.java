@@ -8,6 +8,6 @@ public class ShoppingCart {
     }
 
     public void checkout(int amount) {
-        paymentStrategy.pay(amount);
+        this.paymentStrategy.pay(amount);
     }
 }
