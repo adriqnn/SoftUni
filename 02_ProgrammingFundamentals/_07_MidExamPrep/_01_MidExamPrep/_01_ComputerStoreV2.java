@@ -2,7 +2,7 @@ package _02_ProgrammingFundamentals._07_MidExamPrep;
 
 import java.util.Scanner;
 
-public class _01_ComputerStore2 {
+public class _01_ComputerStoreV2 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
