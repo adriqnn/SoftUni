@@ -82,60 +82,63 @@ public class _08_InfixToPostfix {
         scan.close();
     }
 }
-/*for (String element: stringArray) {
-            newString += element;
+
+/*
+    for (String element: stringArray) {
+        newString += element;
+    }
+    char[] tokens = newString.toCharArray();
+    for (int i = 0; i < tokens.length; i++) {
+        if(Character.isLetterOrDigit(tokens[i])){
+            System.out.print(tokens[i] + " ");
+            continue;
         }
-        char[] tokens = newString.toCharArray();
-        for (int i = 0; i < tokens.length; i++) {
-            if(Character.isLetterOrDigit(tokens[i])){
-                System.out.print(tokens[i] + " ");
-                continue;
-            }
-            if(characterStack.size() > 0) {
-                if (tokens[i] == '+') {
-                    if (characterStack.peek() == '+' || characterStack.peek() == '-') {
-                        System.out.print(characterStack.pop() + " ");
-                        characterStack.push(tokens[i]);
-                    } else if (characterStack.peek() == '*' || characterStack.peek() == '/' || characterStack.peek() == '(' || characterStack.peek() == ')') {
-                        characterStack.push(tokens[i]);
-                    } else {
-                        characterStack.push(tokens[i]);
-                    }
-                } else if (tokens[i] == '-') {
-                    if (characterStack.peek() == '+' || characterStack.peek() == '-') {
-                        System.out.print(characterStack.pop() + " ");
-                        characterStack.push(tokens[i]);
-                    } else if (characterStack.peek() == '*' || characterStack.peek() == '/' || characterStack.peek() == '(' || characterStack.peek() == ')') {
-                        characterStack.push(tokens[i]);
-                    } else {
-                        characterStack.push(tokens[i]);
-                    }
-                } else if (tokens[i] == '*') {
-                    if (characterStack.peek() == '*' || characterStack.peek() == '/' || characterStack.peek() == '(' || characterStack.peek() == ')') {
-                        System.out.print(characterStack.pop() + " ");
-                        characterStack.push(tokens[i]);
-                    } else {
-                        characterStack.push(tokens[i]);
-                    }
-                } else if (tokens[i] == '/') {
-                    if (characterStack.peek() == '*' || characterStack.peek() == '/' || characterStack.peek() == '(' || characterStack.peek() == ')') {
-                        System.out.print(characterStack.pop() + " ");
-                        characterStack.push(tokens[i]);
-                    } else {
-                        characterStack.push(tokens[i]);
-                    }
-                } else if (tokens[i] == '(') {
+        if(characterStack.size() > 0) {
+            if (tokens[i] == '+') {
+                if (characterStack.peek() == '+' || characterStack.peek() == '-') {
+                    System.out.print(characterStack.pop() + " ");
                     characterStack.push(tokens[i]);
-                } else if (tokens[i] == ')') {
-                    while (characterStack.peek() != ('(')) {
-                        System.out.print(characterStack.pop() + " ");
-                    }
-                    characterStack.pop();
+                } else if (characterStack.peek() == '*' || characterStack.peek() == '/' || characterStack.peek() == '(' || characterStack.peek() == ')') {
+                    characterStack.push(tokens[i]);
+                } else {
+                    characterStack.push(tokens[i]);
                 }
-            }else{
+            } else if (tokens[i] == '-') {
+                if (characterStack.peek() == '+' || characterStack.peek() == '-') {
+                    System.out.print(characterStack.pop() + " ");
+                    characterStack.push(tokens[i]);
+                } else if (characterStack.peek() == '*' || characterStack.peek() == '/' || characterStack.peek() == '(' || characterStack.peek() == ')') {
+                    characterStack.push(tokens[i]);
+                } else {
+                    characterStack.push(tokens[i]);
+                }
+            } else if (tokens[i] == '*') {
+                if (characterStack.peek() == '*' || characterStack.peek() == '/' || characterStack.peek() == '(' || characterStack.peek() == ')') {
+                    System.out.print(characterStack.pop() + " ");
+                    characterStack.push(tokens[i]);
+                } else {
+                    characterStack.push(tokens[i]);
+                }
+            } else if (tokens[i] == '/') {
+                if (characterStack.peek() == '*' || characterStack.peek() == '/' || characterStack.peek() == '(' || characterStack.peek() == ')') {
+                    System.out.print(characterStack.pop() + " ");
+                    characterStack.push(tokens[i]);
+                } else {
+                    characterStack.push(tokens[i]);
+                }
+            } else if (tokens[i] == '(') {
                 characterStack.push(tokens[i]);
+            } else if (tokens[i] == ')') {
+                while (characterStack.peek() != ('(')) {
+                    System.out.print(characterStack.pop() + " ");
+                }
+                characterStack.pop();
             }
+        }else{
+            characterStack.push(tokens[i]);
         }
-        while(!characterStack.isEmpty()){
-            System.out.print(characterStack.pop() + " ");
-        }*/
+    }
+    while(!characterStack.isEmpty()){
+        System.out.print(characterStack.pop() + " ");
+    }
+*/
