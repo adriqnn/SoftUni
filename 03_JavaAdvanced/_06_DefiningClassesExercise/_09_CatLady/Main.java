@@ -30,6 +30,7 @@ public class Main {
                 case "Cymric":
                     cat = new Cymric(name, value);
             }
+            
             if (cat != null) {
                 cats.put(name, cat);
             }
