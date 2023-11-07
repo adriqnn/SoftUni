@@ -34,7 +34,7 @@ public class _07_MathPotatoV2 {
                 System.out.println("Removed " + queueOfPlayers.poll());
             }
 
-            cycle ++;
+            cycle++;
         }
 
         // Print result
