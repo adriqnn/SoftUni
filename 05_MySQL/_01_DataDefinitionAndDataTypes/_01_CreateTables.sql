@@ -1,13 +1,17 @@
-create table employees(
-id INT primary key auto_increment,
-first_name varchar(50) not null,
-last_name varchar(50) not null);
+CREATE TABLE employees (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  first_name VARCHAR(50) NOT NULL,
+  last_name VARCHAR(50) NOT NULL
+);
 
-create table categories(
-id int primary key auto_increment,
-name varchar(50) not null);
+CREATE TABLE categories (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(50) NOT NULL
+);
 
-create table products(
-id int primary key auto_increment,
-name varchar(50) not null,
-category_id int not null);
+CREATE TABLE products (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(50) NOT NULL,
+  category_id INT NOT NULL,
+  FOREIGN KEY (category_id) REFERENCES categories(id)
+);
