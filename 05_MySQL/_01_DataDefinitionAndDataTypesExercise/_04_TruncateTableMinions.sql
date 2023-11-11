@@ -1,1 +1,1 @@
-TRUNCATE TABLE minions;
+TRUNCATE TABLE `minions`;
