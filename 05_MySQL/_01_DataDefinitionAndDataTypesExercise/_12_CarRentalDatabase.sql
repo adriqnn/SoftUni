@@ -1,9 +1,9 @@
 CREATE TABLE `categories` (
-	`id` INT PRIMARY KEY AUTO_INCREMENT,
-    `category` VARCHAR(20), 
-    `daily_rate` DOUBLE, 
-    `weekly_rate` DOUBLE, 
-    `monthly_rate` DOUBLE, 
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `category` VARCHAR(20),
+    `daily_rate` DOUBLE,
+    `weekly_rate` DOUBLE,
+    `monthly_rate` DOUBLE,
     `weekend_rate` DOUBLE    
 );
 
@@ -14,7 +14,7 @@ VALUES
 ('TestName3');
 
 CREATE TABLE `cars` (
-	`id` INT PRIMARY KEY AUTO_INCREMENT, 
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
     `plate_number` VARCHAR(20),
     `make` VARCHAR(20),
     `model` VARCHAR(20),
@@ -33,7 +33,7 @@ VALUES
 ('TestName3');
 
 CREATE TABLE `employees` (
-	`id` INT PRIMARY KEY AUTO_INCREMENT,
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
     `first_name` VARCHAR(50),
     `last_name` VARCHAR(50),
     `title` VARCHAR(50),
@@ -47,13 +47,13 @@ VALUES
 ('TestName3', 'TestName3');
 
 CREATE TABLE `customers` (
-	`id` INT PRIMARY KEY AUTO_INCREMENT,
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
     `driver_license` VARCHAR(20),
-	`full_name` VARCHAR(50),
-	`address` VARCHAR(50),
-	`city` VARCHAR(10),
-	`zip_code` VARCHAR(10),
-	`notes` TEXT
+    `full_name` VARCHAR(50),
+    `address` VARCHAR(50),
+    `city` VARCHAR(10),
+    `zip_code` VARCHAR(10),
+    `notes` TEXT
 );
 
 INSERT INTO `customers` (`driver_license`, `full_name`)
@@ -63,13 +63,13 @@ VALUES
 ('TestName3', 'TestName3');
 
 CREATE TABLE `rental_orders` (
-	`id` INT PRIMARY KEY AUTO_INCREMENT,
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
     `employee_id` INT,
     `customer_id` INT,
     `car_id` INT,
     `car_condition` VARCHAR(50),
     `tank_level` VARCHAR(20),
-	`kilometrage_start` INT,
+    `kilometrage_start` INT,
     `kilometrage_end` INT,
     `total_kilometrage` INT,
     `start_date` DATE, 
