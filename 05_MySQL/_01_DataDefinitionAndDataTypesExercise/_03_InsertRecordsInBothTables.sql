@@ -1,8 +1,8 @@
 INSERT INTO `towns` (`id`, `name`)
 VALUES 
-( 1, 'Sofia'),
-( 2, 'Plovdiv'),
-( 3, 'Varna');
+(1, 'Sofia'),
+(2, 'Plovdiv'),
+(3, 'Varna');
 
 INSERT INTO `minions` (`id`, `name`, `age`, `town_id`)
 VALUES 
