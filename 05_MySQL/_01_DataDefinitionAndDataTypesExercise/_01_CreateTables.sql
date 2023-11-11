@@ -1,14 +1,10 @@
-create table `minions` (
-`id` INT PRIMARY KEY AUTO_INCREMENT,
-`name` varchar(30),
-`age` int
+CREATE TABLE `minions` (
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(30),
+    `age` INT
 );
-create table towns (
-`id` INT PRIMARY KEY AUTO_INCREMENT,
-`name` varchar(30)
-);
-drop table towns;
-create table towns (
-`town_id` INT PRIMARY KEY AUTO_INCREMENT,
-`name` varchar(30)
+
+CREATE TABLE `towns` (
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(30)
 );
