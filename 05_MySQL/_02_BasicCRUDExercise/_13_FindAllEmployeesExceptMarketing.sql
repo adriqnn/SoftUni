@@ -1,2 +1,2 @@
-SELECT `first_name`,`last_name` from `employees`
+SELECT `first_name`, `last_name` FROM `employees`
 WHERE `department_id` != 4;
