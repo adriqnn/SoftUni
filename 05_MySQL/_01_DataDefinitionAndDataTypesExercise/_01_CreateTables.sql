@@ -5,6 +5,6 @@ CREATE TABLE `minions` (
 );
 
 CREATE TABLE `towns` (
-    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `town_id` INT PRIMARY KEY AUTO_INCREMENT,
     `name` VARCHAR(30)
 );
