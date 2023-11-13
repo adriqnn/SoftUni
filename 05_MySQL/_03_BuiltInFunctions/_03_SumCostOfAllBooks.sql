@@ -1,1 +1,1 @@
-SELECT sum(`cost`) FROM `books`;
+SELECT SUM(`cost`) FROM `books`;
