@@ -39,8 +39,8 @@ CREATE TABLE `order_items` (
     `order_id` INT(11),
     `item_id` INT(11),
     CONSTRAINT `pk_order_items` PRIMARY KEY (`order_id`, `item_id`),
-    CONSTRAINT `fk_order_items_items` FOREIGN KEY (`order_id`)
+    CONSTRAINT `fk_order_items_orders` FOREIGN KEY (`order_id`)
         REFERENCES `orders` (`order_id`),
-    CONSTRAINT `fk_order_items_orders` FOREIGN KEY (`item_id`)
+    CONSTRAINT `fk_order_items_items` FOREIGN KEY (`item_id`)
         REFERENCES `items` (`item_id`)
 );
