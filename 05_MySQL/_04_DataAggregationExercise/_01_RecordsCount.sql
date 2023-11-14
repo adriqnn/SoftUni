@@ -1,1 +1,1 @@
-SELECT count(`id`) FROM `wizzard_deposits`;
+SELECT COUNT(`id`) FROM `wizzard_deposits`;
