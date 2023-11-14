@@ -1,3 +1,4 @@
 SELECT `deposit_group` FROM `wizzard_deposits`
 GROUP BY `deposit_group`
-ORDER BY avg(`magic_wand_size`) LIMIT 1;
+ORDER BY AVG(`magic_wand_size`) ASC 
+LIMIT 1;
