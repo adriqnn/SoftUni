@@ -1,3 +1,4 @@
-SELECT avg(`salary`) AS `e` FROM `employees`
+SELECT AVG(`salary`) AS `e` FROM `employees`
 GROUP BY `department_id`
-ORDER BY `e` LIMIT 1;
+ORDER BY `e`
+LIMIT 1;
