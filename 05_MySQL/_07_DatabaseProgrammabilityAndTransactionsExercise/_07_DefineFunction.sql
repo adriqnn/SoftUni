@@ -3,4 +3,4 @@ RETURNS BIT
 DETERMINISTIC
 BEGIN
     RETURN word REGEXP(concat('^[',set_of_letters, ']+$'));
-END
+END;
