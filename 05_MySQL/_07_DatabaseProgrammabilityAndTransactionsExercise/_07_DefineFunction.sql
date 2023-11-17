@@ -1,6 +1,6 @@
-CREATE FUNCTION ufn_is_word_comprised(IN set_of_letters VARCHAR(50), IN word VARCHAR(50))
+CREATE FUNCTION ufn_is_word_comprised(set_of_letters varchar(50), word VARCHAR(50))
 RETURNS BIT
 DETERMINISTIC
 BEGIN
-    RETURN BINARY word REGEXP CONCAT('^[', set_of_letters, ']+$');
-END;
+    RETURN word REGEXP(concat('^[',set_of_letters, ']+$'));
+END
