@@ -6,4 +6,4 @@ BEGIN
 	RIGHT JOIN `teams` AS tm ON p.team_id = tm.id
 	RIGHT JOIN `stadiums` AS s ON tm.stadium_id = s.id
 	WHERE s.name = stadium_name);
-END
+END;
