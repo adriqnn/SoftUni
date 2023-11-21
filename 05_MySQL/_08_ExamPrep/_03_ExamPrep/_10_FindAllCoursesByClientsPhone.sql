@@ -7,4 +7,4 @@ BEGIN
         JOIN clients AS cl ON cl.id = c.client_id
         WHERE cl.phone_number = phone_num
     );
-END
+END;
