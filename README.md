@@ -1,5 +1,8 @@
 # SoftUni Courses
 
-Java
-JavaScript
+Java,
+JavaScript,
+Spring,
+Angular,
+React,
 HTML & CSS
