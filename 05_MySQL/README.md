@@ -1,5 +1,5 @@
 # MySQL 
-* Data Definition and Data Types
+* Introduction to Databases. Data Definition and Data Types
 * Basic CRUD
 * Built in Functions
 * Data Aggregation
