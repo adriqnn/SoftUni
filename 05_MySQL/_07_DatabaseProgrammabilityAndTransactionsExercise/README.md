@@ -1,1 +1,1 @@
-Database Programmability and Transactions - Lecture
+# Database Programmability and Transactions - Exercise
