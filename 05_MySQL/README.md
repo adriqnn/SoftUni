@@ -4,7 +4,7 @@
 * Built-in Functions
 * Data Aggregation
 * Table Ralations
-* Subqueries and JOINs
+* JOINs Subqueries and Indices
 * Database Programmability and Transactions
 * Exam Prep
 * Exam
