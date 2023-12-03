@@ -1,7 +1,7 @@
 # MySQL 
 * Introduction to Databases. Data Definition and Data Types
 * Basic CRUD
-* Built in Functions
+* Built-in Functions
 * Data Aggregation
 * Table Ralations
 * Subqueries and JOINs
