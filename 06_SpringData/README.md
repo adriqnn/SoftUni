@@ -5,4 +5,5 @@
 * Custom ORM
 * Introduction to Hibernate
 * Hibernate Code First
-* 
+* Spring Data Intro
+* Spring Data Advanced Queries
