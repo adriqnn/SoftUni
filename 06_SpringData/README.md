@@ -6,4 +6,7 @@
 * Introduction to Hibernate
 * Hibernate Code First
 * Spring Data Intro
-* Spring Data Advanced Queries
+* Spring Data Advanced Quering
+* Spring Data Auto Mapping Objects
+* JSON Processing
+* XML Processing
