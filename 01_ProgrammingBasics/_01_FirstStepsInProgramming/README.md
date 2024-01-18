@@ -1,7 +1,8 @@
 # First Steps in Coding - Lecture
 
-* Java
-* IntelliJ IDEA
+* Java;
+* IntelliJ IDEA;
+* Projects;
 * Source Code;
 * Compiling;
 * Data Types;
