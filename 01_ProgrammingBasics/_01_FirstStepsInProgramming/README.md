@@ -7,5 +7,5 @@
 * Compiling;
 * Data Types;
 * Variables;
-* Math Operations(+, -, *, /) and Remainder(%);
+* Math Operations(+, -, * and /) and Remainder(%);
 * Concatenation;
