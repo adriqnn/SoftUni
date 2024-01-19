@@ -49,6 +49,7 @@ public class _10_Diamond {
             }
         }else{
             int locationRight = ((n / 2) + i);
+            
             if(n % 2 != 0){
                 int locationLeft = ((n / 2) + 2 - i);
                 for (int j = 1; j <= n; j++) {
