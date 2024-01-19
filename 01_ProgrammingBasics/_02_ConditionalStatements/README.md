@@ -2,7 +2,7 @@
 
 * Comparing Values;
 * Comparison Operators(==, !=, >, >=, <, <=);
-* * Logical Operators -> &&, || and !;
+* Logical Operators -> &&, || and !;
 * equals;
 * true/false;
 * if/else and switch;
