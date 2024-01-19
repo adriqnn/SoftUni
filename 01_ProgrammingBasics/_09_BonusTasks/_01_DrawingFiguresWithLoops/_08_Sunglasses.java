@@ -38,6 +38,7 @@ public class _08_Sunglasses {
         for (int j = 1; j <= n; j++) {
 
             double mid = Math.ceil((n * 1.00) / 2);
+            
             if(i == mid){
                 System.out.print("|");
             }else {
