@@ -1,4 +1,4 @@
-# IT Talks and Language Comparison
+# IT Talks and Language Comparison:
 
 * C#, Java, JavaScript and Python;
 * Languages Execution -> Compiler(Java and C++) and Interpreter(Python, JavaScript & PHP);
