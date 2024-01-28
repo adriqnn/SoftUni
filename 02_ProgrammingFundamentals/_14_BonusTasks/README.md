@@ -10,4 +10,3 @@
 * Database Basics
 * QA Introduction
 * Git and GitHub
-* Other
