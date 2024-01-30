@@ -10,3 +10,4 @@
 * Database Basics
 * QA Introduction
 * Git and GitHub
+* Basic Web Project
