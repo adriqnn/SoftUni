@@ -7,3 +7,4 @@ Angular,
 React,
 Docker,
 HTML & CSS
+& OTHER
