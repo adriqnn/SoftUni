@@ -2,7 +2,7 @@
 
 Updating a specific trip with the following PATCH request: `https://trips-48955.firebaseio.com/trips/-MIJ0HydEYF0x6fljO55.json`;
 
-Adding the following object to the PATCH request:
+Adding the following object to the PATCH request body:
 
 `{
   "description" : "Egypt welcomes you!",
