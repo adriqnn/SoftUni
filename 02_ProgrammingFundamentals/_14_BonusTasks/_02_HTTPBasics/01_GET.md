@@ -1,3 +1,3 @@
 # Postman GET:
 
-Listing all trips with the following request: https://trips-48955.firebaseio.com/trips.json
+Listing all trips within Postman with the following request: 'https://trips-48955.firebaseio.com/trips.json';
