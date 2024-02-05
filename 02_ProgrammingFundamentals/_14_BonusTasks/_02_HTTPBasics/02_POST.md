@@ -1,6 +1,6 @@
 # Postman POST:
 
-Creating new Trip with Postman with the following POST request: `https://trips-48955.firebaseio.com/trips.json`;
+Creating a new record with Postman with the following POST request: `https://trips-48955.firebaseio.com/trips.json`;
 
 Adding the following object to the POST request body: 
 
