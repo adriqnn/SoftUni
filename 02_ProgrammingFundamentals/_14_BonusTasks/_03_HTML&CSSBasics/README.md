@@ -7,3 +7,4 @@
 * Cascading Style Sheets -> defines styling of HTML elements;
 * Selects HTML elements to style -> elements, classes, ids and other;
 * CSS can be in other file or inline in the html;
+* HTML exercises;
