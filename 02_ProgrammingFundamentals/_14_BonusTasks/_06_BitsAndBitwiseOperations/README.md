@@ -5,4 +5,4 @@
 * Representation of Data -> Integers(signed(+ and -) and unsigned(+)), Real NUmbers(IEEE 754 technical standard and are stored as sequence of bits), Text(represented as characters - ASCII & UNICODE), Strings(arrays of characters);
 * Bitwise Operations -> NOT(~), OR(|), AND(&) & XOR(^) also Bit Shifts;
 * Binary file formats and Data compression;
-*Bitwise Operations Exercise
+* Bitwise Operations Exercise;
