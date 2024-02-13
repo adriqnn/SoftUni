@@ -9,8 +9,8 @@ public class _01_BinaryDigitsCount {
         int numberToCheck = Integer.parseInt(scan.nextLine());
         int binaryDigit = Integer.parseInt(scan.nextLine());
 
-        int count = countBinaryDigits(numberToCheck, binaryDigit);
-        System.out.println(count);
+        int countOfBinaryDigits = countBinaryDigits(numberToCheck, binaryDigit);
+        System.out.println(countOfBinaryDigits);
 
         scan.close();
     }
