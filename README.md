@@ -2,9 +2,13 @@
 
 Java,
 JavaScript,
+MySQL,
 Spring,
 Angular,
 React,
+HTML & CSS,
+Containers and Cloud,
 Docker,
-HTML & CSS
-& OTHER
+DevOps,
+Data Structures,
+Algorithms;
