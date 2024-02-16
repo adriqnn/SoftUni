@@ -5,11 +5,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class ContainsElementAverage {
     public static void main(String[] args) {
-        int[] arr = new Random()
-                .ints()
-                .limit(100000000)
-                .toArray();
-
+        int[] arr = new Random().ints().limit(100000000).toArray();
         int element = arr[ThreadLocalRandom.current().nextInt(0, arr.length)];
 
         contains(arr, element);
@@ -22,6 +18,7 @@ public class ContainsElementAverage {
                 return true;
             }
         }
+        
         System.out.println("Element not found!");
         return false;
     }
