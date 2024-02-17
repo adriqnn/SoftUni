@@ -1,7 +1,6 @@
 package implementations;
 
 import interfaces.List;
-
 import java.util.Arrays;
 import java.util.Iterator;
 
