@@ -245,9 +245,7 @@ public class ArrayListTest {
         }
 
         strings.add(50, "666");
-
         assertEquals("666", strings.get(50));
-
         String values = stringBuilder.toString();
 
         StringBuilder sb = new StringBuilder();
