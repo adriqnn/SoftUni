@@ -11,6 +11,7 @@ public class StackTest {
     @Before
     public void setUp() {
         this.stack = new Stack<>();
+        
         for (int i = 0; i < 100; i++) {
             stack.push(String.valueOf(i));
         }
@@ -59,6 +60,7 @@ public class StackTest {
     @Test
     public void testIteratorShouldTraversItemsFromTopToBottom() {
         int last = 99;
+        
         for (String s : stack) {
             assertEquals(String.valueOf(last--), s);
         }
