@@ -85,7 +85,7 @@ public class SinglyLinkedList<E> implements LinkedList<E> {
             returnValue =  toRemove.value;
         }
 
-        size--;
+        this.size--;
         return returnValue;
     }
 
@@ -129,7 +129,6 @@ public class SinglyLinkedList<E> implements LinkedList<E> {
             @Override
             public E next() {
                 E value = current.value;
-
                 current = current.next;
 
                 return value;
