@@ -1,4 +1,4 @@
-# Linear Data Structures:
+# Linear Data Structures - Lecture
 
 * Dynamic Arrays -> implements abstract data structure and uses array underneath; general complexities of the operations are O(1), O(n) and in some cases O(log n);
 * Nodes -> building blocks of many structures, stores element and pointer to next/previous node;
