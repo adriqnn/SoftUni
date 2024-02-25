@@ -1,4 +1,4 @@
-# Data Structures and Complexity
+# Data Structures and Complexity - Lecture
 
 * Memory -> continuous and numbered(addressed) sequences of bytes;
 * Memory Storage -> temporary(RAM) and permanent(ROM);
