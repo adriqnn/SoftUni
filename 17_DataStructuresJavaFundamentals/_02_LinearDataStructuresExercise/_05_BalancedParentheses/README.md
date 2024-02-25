@@ -4,7 +4,7 @@ Overview:
 
 The task involves analyzing a sequence of parentheses to determine whether they are balanced. A sequence of parentheses is considered balanced if each opening parenthesis has a corresponding closing parenthesis in the correct order, and the intervals between them are also balanced.
 
-Method solve():
+Method:
 
 The solve() method analyzes the provided sequence of parentheses and returns true if they are balanced and false otherwise. It implements the following logic:
 
