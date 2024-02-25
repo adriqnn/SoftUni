@@ -24,12 +24,14 @@ public class Queue<E> implements AbstractQueue<E> {
     @Override
     public void offer(E element) {
         Node<E> newNode = new Node<>(element);
+        
         if (this.head == null) {
             this.head = this.tail = newNode;
         } else {
             this.tail.next = newNode;
             this.tail = newNode;
         }
+        
         this.size++;
     }
 
@@ -37,6 +39,7 @@ public class Queue<E> implements AbstractQueue<E> {
     public E poll() {
         ensureNonEmpty();
         E element = this.head.element;
+        
         if (this.size == 1) {
             this.head = this.tail = null;
         } else {
@@ -44,6 +47,7 @@ public class Queue<E> implements AbstractQueue<E> {
             this.head.next = null;
             this.head = next;
         }
+        
         this.size--;
         return element;
     }
