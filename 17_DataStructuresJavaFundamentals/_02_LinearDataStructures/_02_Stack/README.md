@@ -2,7 +2,7 @@
 
 Overview:
 
-Stack in Java is a data structure that follows the Last In First Out (LIFO) principle. Elements are added and removed from the top of the stack.
+Stack in Java is a data structure that follows the Last In First Out(LIFO) principle. Elements are added and removed from the top of the stack.
 
 Methods:
 
