@@ -2,7 +2,7 @@
 
 Overview:
 
-Queue in Java is a data structure that follows the First In First Out (FIFO) principle. Elements are added to the back of the queue and removed from the front.
+Queue in Java is a data structure that follows the First In First Out(FIFO) principle. Elements are added to the back of the queue and removed from the front.
 
 Methods:
 
