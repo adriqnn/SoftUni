@@ -10,7 +10,7 @@ The solve() method analyzes the provided sequence of parentheses and returns tru
 
 * It uses a stack data structure to keep track of opening parentheses encountered while traversing the sequence.
 * For each character in the sequence:
-    If the character is an opening parenthesis ((, [, {), it is pushed onto the stack.
+    If the character is an opening parenthesis ( '(', '[', '{'), it is pushed onto the stack.
     If the character is a closing parenthesis (), ], }), it is compared with the top element of the stack:
         If they match and form a valid pair, the top element is popped from the stack.
         If they do not match or the stack is empty, the parentheses are unbalanced, and the method returns false.
