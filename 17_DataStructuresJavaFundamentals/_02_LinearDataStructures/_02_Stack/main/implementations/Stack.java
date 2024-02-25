@@ -26,7 +26,7 @@ public class Stack<E> implements AbstractStack<E> {
     public void push(E element) {
         Node<E> toInsert = new Node<>(element);
 
-        toInsert.next = top;
+        toInsert.next = this.top;
         this.top = toInsert;
 
         this.size++;
@@ -38,7 +38,7 @@ public class Stack<E> implements AbstractStack<E> {
 
         Node<E> tmp = this.top;
         this.top = tmp.next;
-        size--;
+        this.size--;
 
         return tmp.value;
     }
