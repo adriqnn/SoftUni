@@ -1,8 +1,8 @@
-Faster Queue Documentation
+# Faster Queue Documentation
 
 Overview:
 
-Queue in Java is a data structure that follows the First In First Out (FIFO) principle. Elements are added to the back of the queue and removed from the front.
+Queue in Java is a data structure that follows the First In First Out (FIFO) principle. Elements are added to the back of the queue and removed from the front. The Queue has both head and tail node pointers for faster performance.
 
 Methods:
 
