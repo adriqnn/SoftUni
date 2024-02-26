@@ -6,4 +6,7 @@ The Tree<E> class provides a generic implementation of a tree data structure. It
 
 Methods:
 
-* 1. Create Tree Method Signature: public Tree(E key, List<Tree<E>> children); Description: Constructs a tree with the specified key and children. Parameters: key: The key value of the root node. children: List of child trees for the root node.;
+* Create Tree Method Signature: public Tree(E key, List<Tree<E>> children); Description: Constructs a tree with the specified key and children; Parameters: key: The key value of the root node. children: List of child trees for the root node;
+* BFS Traversal: Method Signature: public List<E> orderBfs(); Description: Performs Breadth-First Search traversal on the tree and returns elements in level-wise order; Returns: A list containing elements traversed in BFS order;
+
+  
