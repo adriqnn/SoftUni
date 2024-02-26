@@ -16,4 +16,4 @@ Methods:
 
 * Remove Node: Method Signature: public List<E> removeNode(E key); Description: Removes the node with the specified key and all its descendants from the tree; Parameters: key: The key value of the node to be removed; Returns: A list containing elements removed from the tree;
 
-* 6. Swap Nodes: Method Signature: public List<E> swapNodes(E key1, E key2); Description: Swaps two nodes along with their descendants in the tree; Parameters: key1: The key value of the first node to be swapped. key2: The key value of the second node to be swapped;Returns: A list containing elements affected by the node swap operation;
+* Swap Nodes: Method Signature: public List<E> swapNodes(E key1, E key2); Description: Swaps two nodes along with their descendants in the tree; Parameters: key1: The key value of the first node to be swapped. key2: The key value of the second node to be swapped;Returns: A list containing elements affected by the node swap operation;
