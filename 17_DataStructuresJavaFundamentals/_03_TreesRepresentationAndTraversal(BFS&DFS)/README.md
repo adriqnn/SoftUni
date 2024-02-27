@@ -1,4 +1,4 @@
-# Trees Representation and Traversal(BFS & DFS)
+# Trees Representation and Traversal(BFS & DFS) - Lecture
 
 * Tree -> Abstract Data Structure that simulates hierarchical tree structure, with a root value and subtrees of children with parent node, represented as a set of linked nodes;
 * Tree -> node, edge, root, leaf, branch, parent, child, sibling, ancestor, descendant, degree, path, distance, depth, level, height, width, breadth, forest, sub-tree;
