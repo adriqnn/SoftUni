@@ -1,4 +1,4 @@
-# The Matrix - Documentation
+# The Matrix Documentation
 
 Overview:
 
