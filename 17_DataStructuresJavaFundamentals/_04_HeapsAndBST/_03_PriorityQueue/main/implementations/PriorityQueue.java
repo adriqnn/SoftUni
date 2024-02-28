@@ -120,5 +120,4 @@ public class PriorityQueue<E extends Comparable<E>> implements AbstractQueue<E> 
     private int getRightChildIndex(int index){
         return (index * 2) + 2;
     }
-
 }
