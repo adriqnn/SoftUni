@@ -3,7 +3,7 @@
 Overview:
 
 A binary tree is a hierarchical data structure composed of nodes, each containing a key value and references to its left and right subtrees. This implementation provides essential operations for managing a binary tree structure and performing traversals.  
-Class: BinaryTree<E> This class represents a binary tree and implements the basic operations for managing and traversing the tree.
+Class: BinaryTree&lt;E&gt; This class represents a binary tree and implements the basic operations for managing and traversing the tree.
 
 Methods:
 
@@ -23,4 +23,4 @@ Methods:
   
 * List<BinaryTree&lt;E&gt;> postOrder(): Returns the tree in post-order traversal.
   
-* void forEachInOrder(Consumer&lt;E&gt; consumer): Applies a Consumer<E> on each node traversed in in-order.
+* void forEachInOrder(Consumer&lt;E&gt; consumer): Applies a Consumer&lt;E&gt; on each node traversed in in-order.
