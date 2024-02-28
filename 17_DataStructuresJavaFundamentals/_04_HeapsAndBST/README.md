@@ -1,1 +1,1 @@
-# Heaps and BST
+# Heaps and Binary Search Tree - Lecture
