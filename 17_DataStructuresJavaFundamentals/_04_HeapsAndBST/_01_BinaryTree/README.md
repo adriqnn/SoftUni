@@ -2,7 +2,7 @@
 
 Overview:
 
-A binary tree is a hierarchical data structure composed of nodes, each containing a key value and references to its left and right subtrees. This implementation provides essential operations for managing a binary tree structure and performing traversals.\ 
+A binary tree is a hierarchical data structure composed of nodes, each containing a key value and references to its left and right subtrees. This implementation provides essential operations for managing a binary tree structure and performing traversals.  
 Class: BinaryTree<E> This class represents a binary tree and implements the basic operations for managing and traversing the tree.
 
 Methods:
