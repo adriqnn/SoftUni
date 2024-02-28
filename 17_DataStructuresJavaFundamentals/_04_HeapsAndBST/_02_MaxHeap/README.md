@@ -6,16 +6,16 @@ he heap is typically implemented using an array-based representation where the e
 
 Methods:
 
-* public int size(): Returns the number of elements in the max heap.
+* int size(): Returns the number of elements in the max heap.
   
-* public void add(E element): Adds an element to the max heap and adjusts the heap to maintain the max heap property.
+* void add(E element): Adds an element to the max heap and adjusts the heap to maintain the max heap property.
   
-* private void heapifyUp(int index): Adjusts the heap by moving the element at the given index upwards until the heap property is satisfied.
+* void heapifyUp(int index): Adjusts the heap by moving the element at the given index upwards until the heap property is satisfied.
   
-* private boolean isLess(int childIndex, int parentIndex): Checks if the element at the child index is less than the element at the parent index.
+* boolean isLess(int childIndex, int parentIndex): Checks if the element at the child index is less than the element at the parent index.
   
-* private E getAt(int index): Retrieves the element at the specified index.
+* E getAt(int index): Retrieves the element at the specified index.
   
-* private int getParentIndex(int index): Calculates the index of the parent node for a given child index.
+* int getParentIndex(int index): Calculates the index of the parent node for a given child index.
   
-* public E peek(): Returns the maximum element (root) of the max heap without removing it. Throws an IllegalStateException if the heap is empty.
+* E peek(): Returns the maximum element (root) of the max heap without removing it. Throws an IllegalStateException if the heap is empty.
