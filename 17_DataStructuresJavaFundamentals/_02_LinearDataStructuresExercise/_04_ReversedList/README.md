@@ -24,5 +24,5 @@ Methods:
     Removes an element by index in the reverse order of adding.
     Index should be in the range of 0 to size - 1.
 
-* Iterator<E> iterator()
+* Iterator&lt;E&gt; iterator()
     Implements an iterator to allow iterating over the elements in a foreach loop in reverse order of their addition.
