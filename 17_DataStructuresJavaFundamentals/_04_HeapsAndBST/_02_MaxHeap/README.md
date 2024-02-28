@@ -2,7 +2,7 @@
 
 Overview:
 
-he heap is typically implemented using an array-based representation where the elements are stored in level order. Max heap operations include adding elements, removing the maximum element, and heapifying to maintain the heap property. Max heaps are utilized in various algorithms like heap sort, priority queue implementations, and graph algorithms such as Dijkstra's algorithm. Description: The MaxHeap<E> class implements a max heap data structure using a generic type E that extends the Comparable interface. It provides methods for adding elements, peeking at the maximum element, and maintaining the heap property by heapifying elements upwards.
+The heap is typically implemented using an array-based representation where the elements are stored in level order. Max heap operations include adding elements, removing the maximum element, and heapifying to maintain the heap property. Max heaps are utilized in various algorithms like heap sort, priority queue implementations, and graph algorithms such as Dijkstra's algorithm. Description: The MaxHeap<E> class implements a max heap data structure using a generic type E that extends the Comparable interface. It provides methods for adding elements, peeking at the maximum element, and maintaining the heap property by heapifying elements upwards.
 
 Methods:
 
