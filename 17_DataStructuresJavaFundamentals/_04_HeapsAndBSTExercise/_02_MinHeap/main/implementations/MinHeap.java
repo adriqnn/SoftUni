@@ -83,6 +83,7 @@ public class MinHeap<E extends Comparable<E> & Decrease<E>> implements Heap<E> {
 
             Collections.swap(this.elements, index, swapIndex);
             index = swapIndex;
+            
             swapIndex = getLeftChildIndex(index);
         }
     }
