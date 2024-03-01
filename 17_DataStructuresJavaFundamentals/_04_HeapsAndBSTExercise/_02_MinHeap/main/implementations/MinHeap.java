@@ -1,4 +1,4 @@
-package solutions;
+package implementations;
 
 import interfaces.Decrease;
 import interfaces.Heap;
