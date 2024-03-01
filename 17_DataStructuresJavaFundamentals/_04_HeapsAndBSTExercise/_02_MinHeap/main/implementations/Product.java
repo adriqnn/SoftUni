@@ -1,4 +1,4 @@
-package model;
+package implementations;
 
 import interfaces.Decrease;
 
