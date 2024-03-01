@@ -1,4 +1,4 @@
-package solutions;
+package implementations;
 
 public class Pair<K, V> {
     private K key;
