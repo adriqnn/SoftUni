@@ -84,10 +84,10 @@ public class BinarySearchTreeTest {
     @Test
     public void testRange(){
         List<Integer> range = bst.range(3, 7);
-
         List<Integer> expected = Arrays.asList(3, 5, 7, 6);
         
         assertEquals(4, range.size());
+        
         for (Integer value : range) {
             assertTrue(expected.contains(value));
         }
@@ -117,37 +117,3 @@ public class BinarySearchTreeTest {
         assertEquals(5, bst.count());
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
