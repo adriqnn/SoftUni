@@ -15,3 +15,4 @@ Methods:
 * void heapifyDown(): Moves the element at the root of the heap down the heap to maintain the heap property.
 * boolean isLess(int firstIndex, int secondIndex): Compares two elements in the heap to determine if the first element is less than the second.
 * void ensureNonEmpty(): Ensures that the heap is not empty before performing operations that require elements.
+
