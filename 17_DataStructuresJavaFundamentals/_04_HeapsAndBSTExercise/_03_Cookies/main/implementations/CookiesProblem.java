@@ -1,4 +1,4 @@
-package solutions;
+package implementations;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
