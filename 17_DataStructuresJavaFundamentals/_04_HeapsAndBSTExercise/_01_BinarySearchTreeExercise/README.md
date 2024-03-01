@@ -5,12 +5,12 @@ A Binary Search Tree (BST) is a hierarchical data structure where each node has 
 
 Methods:
 
-* void eachInOrder(Consumer<E> consumer): Performs an in-order traversal of the tree, applying the provided consumer to each element.
-* Node<E> getRoot(): Retrieves the root node of the tree.
+* void eachInOrder(Consumer&lt;E&gt; consumer): Performs an in-order traversal of the tree, applying the provided consumer to each element.
+* Node&lt;E&gt; getRoot(): Retrieves the root node of the tree.
 * void insert(E element): Inserts a new element into the tree while maintaining its sorted order.
 * boolean contains(E element): Checks if the tree contains a specified element.
-* BinarySearchTree<E> search(E element): Searches for a specific element in the tree and returns a new tree containing the found node.
-* List<E> range(E lower, E upper): Retrieves a list of elements within the specified range.
+* BinarySearchTree&lt;E&gt; search(E element): Searches for a specific element in the tree and returns a new tree containing the found node.
+* List&lt;E&gt; range(E lower, E upper): Retrieves a list of elements within the specified range.
 * void deleteMin(): Deletes the minimum element from the tree.
 * void deleteMax(): Deletes the maximum element from the tree.
 * int count(): Returns the total number of elements in the tree.
