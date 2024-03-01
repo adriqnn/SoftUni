@@ -6,7 +6,7 @@ The CookiesProblem class provides a solution to a problem involving sweetness le
 
 Method:
 
-* solve(int requiredSweetness, int[] cookiesSweetness): Parameters: requiredSweetness: The minimum sweetness level desired. cookiesSweetness: An array containing the sweetness levels of available cookies. Returns: An Integer representing the minimum number of steps required to achieve the desired sweetness level or -1 if it's not possible.
+solve(int requiredSweetness, int[] cookiesSweetness): Parameters: requiredSweetness: The minimum sweetness level desired. cookiesSweetness: An array containing the sweetness levels of available cookies. Returns: An Integer representing the minimum number of steps required to achieve the desired sweetness level or -1 if it's not possible.
 
 Algorithm: The method operates as follows:
 
