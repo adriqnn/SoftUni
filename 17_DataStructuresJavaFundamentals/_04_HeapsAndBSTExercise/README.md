@@ -1,1 +1,1 @@
-# Heaps and BST Exercise
+# Heaps and Binary Search Tree
