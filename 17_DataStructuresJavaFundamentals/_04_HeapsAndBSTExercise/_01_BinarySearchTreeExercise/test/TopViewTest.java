@@ -1,5 +1,3 @@
-package solutions;
-
 import org.junit.Test;
 
 import java.util.Collections;
