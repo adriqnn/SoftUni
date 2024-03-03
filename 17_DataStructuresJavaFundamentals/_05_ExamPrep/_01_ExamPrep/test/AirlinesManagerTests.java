@@ -2,8 +2,8 @@ package structures;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.softuni.exam.entities.Airline;
-import org.softuni.exam.entities.Flight;
+import entities.Airline;
+import entities.Flight;
 
 import java.util.Arrays;
 import java.util.List;
