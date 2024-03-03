@@ -2,8 +2,8 @@ package structures;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.softuni.exam.entities.Deliverer;
-import org.softuni.exam.entities.Package;
+import entities.Deliverer;
+import entities.Package;
 
 import java.util.Arrays;
 import java.util.List;
