@@ -33,6 +33,7 @@ public class AirlinesManagerImpl implements AirlinesManager {
         }
 
         flight.setAirline(airline);
+        
         this.airlines.get(airline.getId()).getFlights().putIfAbsent(flight.getId(), flight);
         this.flights.putIfAbsent(flight.getId(), flight);
         this.airlineFlightsMap.get(airline).add(flight);
@@ -119,6 +120,7 @@ public class AirlinesManagerImpl implements AirlinesManager {
                     result = a1.getKey().getName().compareTo(a2.getKey().getName());
                 }
             }
+            
             return result;
         }).map(Map.Entry::getKey).collect(Collectors.toList());
     }
