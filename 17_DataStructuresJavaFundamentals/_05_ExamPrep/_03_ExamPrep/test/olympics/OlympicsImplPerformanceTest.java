@@ -1,4 +1,4 @@
-package olympics;
+package olympics
 
 import org.junit.Assert;
 import org.junit.Before;
