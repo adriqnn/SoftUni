@@ -1,4 +1,4 @@
-package src;
+package olympics;
 
 import java.util.Collection;
 import java.util.HashSet;
