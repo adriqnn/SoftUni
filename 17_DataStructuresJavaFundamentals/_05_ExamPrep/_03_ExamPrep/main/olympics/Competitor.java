@@ -1,4 +1,4 @@
-package src;
+package olympics;
 
 import java.util.Comparator;
 
