@@ -1,7 +1,7 @@
 package structures;
 
-import org.softuni.exam.entities.Airline;
-import org.softuni.exam.entities.Flight;
+import entities.Airline;
+import entities.Flight;
 
 import java.util.*;
 import java.util.stream.Collectors;
