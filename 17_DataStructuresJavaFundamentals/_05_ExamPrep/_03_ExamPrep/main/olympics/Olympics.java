@@ -1,4 +1,4 @@
-package src;
+package olympics;
 
 public interface Olympics {
 
