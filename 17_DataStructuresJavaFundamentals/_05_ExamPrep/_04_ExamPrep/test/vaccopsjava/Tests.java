@@ -1,9 +1,7 @@
+package vaccopsjava;
+
 import org.junit.Before;
 import org.junit.Test;
-
-import vaccopsjava.Doctor;
-import vaccopsjava.Patient;
-import vaccopsjava.VaccOps;
 
 import java.util.ArrayList;
 import java.util.Arrays;
