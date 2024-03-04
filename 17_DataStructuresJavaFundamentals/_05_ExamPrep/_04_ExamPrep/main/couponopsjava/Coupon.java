@@ -5,7 +5,7 @@ public class Coupon {
     public int discountPercentage;
     public int validity;
     public Website websiteObj;
-	public String website;
+    public String website;
 
     public Coupon(String code, int discountPercentage, int validity) {
         this.code = code;
