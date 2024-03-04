@@ -3,7 +3,6 @@ package couponopsjava;
 import java.util.*;
 import java.util.stream.Collectors;
 
-
 public class CouponOperation implements ICouponOperation {
     private Map<String, Website> websites;
     private Map<String, Coupon> coupons;
