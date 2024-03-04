@@ -1,11 +1,12 @@
-package org.softuni.exam;
+package structures;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.softuni.exam.entities.User;
-import org.softuni.exam.entities.Video;
-import org.softuni.exam.structures.ViTubeRepository;
-import org.softuni.exam.structures.ViTubeRepositoryImpl;
+
+import entities.User;
+import entities.Video;
+import structures.ViTubeRepository;
+import structures.ViTubeRepositoryImpl;
 
 import java.util.Arrays;
 import java.util.List;
