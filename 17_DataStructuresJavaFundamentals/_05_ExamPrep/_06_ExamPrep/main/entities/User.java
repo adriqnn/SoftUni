@@ -1,4 +1,4 @@
-package org.softuni.exam.entities;
+package entities;
 
 public class User {
     private String id;
