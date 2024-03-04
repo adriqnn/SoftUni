@@ -11,7 +11,6 @@ import java.util.Arrays;
 import static org.junit.Assert.*;
 
 public class Tests {
-
     private ICouponOperation couponOperations;
     private Website w1 = new Website("a", 1);
     private Website w2 = new Website("b", 2);
