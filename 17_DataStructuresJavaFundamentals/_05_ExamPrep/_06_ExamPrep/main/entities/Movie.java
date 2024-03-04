@@ -1,4 +1,4 @@
-package org.softuni.exam.entities;
+package entities;
 
 import java.util.Objects;
 
