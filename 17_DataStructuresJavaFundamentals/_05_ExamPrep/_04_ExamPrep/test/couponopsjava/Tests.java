@@ -1,7 +1,4 @@
-import couponsopsjava.Coupon;
-import couponsopsjava.CouponOperation;
-import couponsopsjava.ICouponOperation;
-import couponsopsjava.Website;
+package couponsopsjava;
 
 import org.junit.Before;
 import org.junit.Test;
