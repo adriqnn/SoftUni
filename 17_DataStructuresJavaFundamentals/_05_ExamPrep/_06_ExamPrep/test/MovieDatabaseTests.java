@@ -1,11 +1,12 @@
-package org.softuni.exam;
+package structures;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.softuni.exam.entities.Actor;
-import org.softuni.exam.entities.Movie;
-import org.softuni.exam.structures.MovieDatabase;
-import org.softuni.exam.structures.MovieDatabaseImpl;
+
+import entities.Actor;
+import entities.Movie;
+import structures.MovieDatabase;
+import structures.MovieDatabaseImpl;
 
 import java.util.Arrays;
 import java.util.List;
