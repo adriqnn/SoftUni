@@ -1,4 +1,4 @@
-package org.softuni.exam.entities;
+package entities;
 
 public class Video {
     private String id;
