@@ -1,7 +1,7 @@
-package org.softuni.exam.structures;
+package structures;
 
-import org.softuni.exam.entities.User;
-import org.softuni.exam.entities.Video;
+import entities.User;
+import entities.Video;
 
 public interface ViTubeRepository {
     void registerUser(User user);
