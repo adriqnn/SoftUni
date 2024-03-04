@@ -1,7 +1,7 @@
-package org.softuni.exam.structures;
+package structures;
 
-import org.softuni.exam.entities.Actor;
-import org.softuni.exam.entities.Movie;
+import entities.Actor;
+import entities.Movie;
 
 import java.util.*;
 import java.util.stream.Collectors;
