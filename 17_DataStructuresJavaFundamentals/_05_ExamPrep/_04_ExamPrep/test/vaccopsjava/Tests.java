@@ -12,7 +12,6 @@ import java.util.stream.Collectors;
 import static org.junit.Assert.*;
 
 public class Tests {
-
     private VaccOps vaccOps;
     Doctor d1 = new Doctor("a", 1);
     Doctor d2 = new Doctor("b", 1);
