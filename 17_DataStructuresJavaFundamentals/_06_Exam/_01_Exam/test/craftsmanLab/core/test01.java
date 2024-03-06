@@ -10,8 +10,6 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
-
-
 public class test01 {
     private CraftsmanLab lab;
 
