@@ -12,7 +12,6 @@ import static org.junit.Assert.*;
 public class ApartmentRenovationTest {
     private CraftsmanLab lab;
 
-
     private final Craftsman craftsman1 = new Craftsman("Bai Pesho", 100, 0);
     private final Craftsman craftsman2 = new Craftsman("Bai Gosho", 10, 950);
 
