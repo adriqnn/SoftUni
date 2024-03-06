@@ -34,6 +34,7 @@ public class RenovationCorrectnessTests {
             Iterator<Laminate> laminateIterator = this.renovationService.layFlooring();
             while (laminateIterator.hasNext()) { laminateIterator.next(); }
         }
+        
         long stop = System.currentTimeMillis();
 
         assertTrue(stop - start < 420);
