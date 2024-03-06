@@ -13,7 +13,6 @@ import static org.junit.Assert.*;
 
 public class StorageServiceTests {
     private StorageService storageService;
-
     private final StorageUnit unit = new StorageUnit("first", 100, 0);
     private final Box box = new Box("some", 10, 2, 2);
 
