@@ -3,7 +3,6 @@ package renovation.models;
 import java.util.Objects;
 
 public class Tile {
-
     public double width;
     public double height;
     public double depth;
@@ -53,8 +52,10 @@ public class Tile {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
+        
         if (o == null || getClass() != o.getClass()) return false;
         Tile tile = (Tile) o;
+        
         return Double.compare(tile.width, width) == 0 && Double.compare(tile.height, height) == 0 && Double.compare(tile.depth, depth) == 0;
     }
 
