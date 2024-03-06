@@ -3,7 +3,6 @@ package renovation.models;
 import java.util.Objects;
 
 public class Laminate {
-
     public double length;
     public double width;
     public WoodType woodType;
@@ -53,8 +52,10 @@ public class Laminate {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
+        
         if (o == null || getClass() != o.getClass()) return false;
         Laminate laminate = (Laminate) o;
+        
         return Double.compare(laminate.length, length) == 0 && Double.compare(laminate.width, width) == 0 && woodType == laminate.woodType;
     }
 
