@@ -12,7 +12,6 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class RenovationCorrectnessTests {
-
     private Renovation renovationService;
 
     @Before
