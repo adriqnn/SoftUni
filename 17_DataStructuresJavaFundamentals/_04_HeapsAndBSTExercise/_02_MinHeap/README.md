@@ -1,4 +1,4 @@
-# MinHeap Class Documentation
+# MinHeap Documentation
 
 Overview:
 
