@@ -1,4 +1,4 @@
-package test.correctness;
+package correctness;
 
 import org.junit.Assert;
 import org.junit.Test;
