@@ -1,17 +1,17 @@
-package test.performance;
+package performance;
 
-import main.Hierarchy;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
-import test.helpers.BasePerformanceTest;
-import test.helpers.IterableExtensions;
-import test.types.PerformanceTests;
+
+import Hierarchy;
+import helpers.BasePerformanceTest;
+import helpers.IterableExtensions;
+import types.PerformanceTests;
 
 import java.util.Arrays;
 
 public class RemovePerformance extends BasePerformanceTest {
-
     @Category(PerformanceTests.class)
     @Test
     public void PerformanceRemove_With2GroupsOf25000RemovalsWith50000Elements() {
