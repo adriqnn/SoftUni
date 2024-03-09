@@ -1,4 +1,4 @@
-package test.correctness;
+package correctness;
 
 import main.Hierarchy;
 import org.junit.Assert;
