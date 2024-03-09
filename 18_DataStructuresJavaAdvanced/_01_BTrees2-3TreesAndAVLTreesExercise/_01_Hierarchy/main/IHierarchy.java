@@ -1,5 +1,3 @@
-package main;
-
 public interface IHierarchy<T> extends Iterable<T> {
     int getCount();
 
