@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
-import main.Hierarchy;
+import Hierarchy;
 import helpers.BasePerformanceTest;
 import types.PerformanceTests;
 
