@@ -1,6 +1,6 @@
 package correctness;
 
-import main.Hierarchy;
+import Hierarchy;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
