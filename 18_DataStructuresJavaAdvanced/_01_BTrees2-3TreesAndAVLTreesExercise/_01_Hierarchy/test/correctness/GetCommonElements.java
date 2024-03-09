@@ -1,10 +1,10 @@
 package correctness;
 
-import main.Hierarchy;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
+import Hierarchy;
 import helpers.BaseTest;
 import helpers.IterableExtensions;
 import types.CorrectnessTests;
