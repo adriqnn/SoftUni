@@ -3,8 +3,9 @@ package test.correctness;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
-import test.helpers.BaseTest;
-import test.types.CorrectnessTests;
+
+import helpers.BaseTest;
+import types.CorrectnessTests;
 
 public class GetParent extends BaseTest {
     @Category(CorrectnessTests.class)
