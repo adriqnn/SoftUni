@@ -1,4 +1,4 @@
-# Faster Queue Documentation
+# FasterQueue Documentation
 
 Overview:
 
