@@ -1,4 +1,4 @@
-package test.performance;
+package performance;
 
 import org.junit.Assert;
 import org.junit.Test;
