@@ -1,11 +1,12 @@
-package test.performance;
+package performance;
 
-import main.Hierarchy;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
-import test.helpers.BasePerformanceTest;
-import test.types.PerformanceTests;
+
+import Hierarchy;
+import helpers.BasePerformanceTest;
+import types.PerformanceTests;
 
 public class ContainsPerformance extends BasePerformanceTest {
     @Category(PerformanceTests.class)
