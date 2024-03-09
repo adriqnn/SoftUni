@@ -1,14 +1,14 @@
-package test.performance;
+package performance;
 
-import main.Hierarchy;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
-import test.helpers.BasePerformanceTest;
-import test.types.PerformanceTests;
+
+import main.Hierarchy;
+import helpers.BasePerformanceTest;
+import types.PerformanceTests;
 
 public class GetParentPerformance extends BasePerformanceTest {
-
     @Category(PerformanceTests.class)
     @Test
     public void PerformanceGetParent_With50000ElementsWith1ParentInReversedOrder() {
