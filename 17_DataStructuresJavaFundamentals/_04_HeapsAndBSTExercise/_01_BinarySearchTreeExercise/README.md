@@ -1,6 +1,7 @@
 # BinarySearchTree Documentation
 
 Overview:
+
 A Binary Search Tree (BST) is a hierarchical data structure where each node has at most two children: a left child and a right child. In a BST, elements are organized such that elements smaller than a node are on its left, and elements greater are on its right. This organization enables efficient searching, insertion, and deletion operations. It's widely used in computer science for its fast searching and sorting capabilities. The BinarySearchTree class represents a binary search tree data structure. It provides methods for inserting, searching, deleting, and traversing elements within the tree. The tree maintains elements in sorted order based on their natural ordering.
 
 Methods:
