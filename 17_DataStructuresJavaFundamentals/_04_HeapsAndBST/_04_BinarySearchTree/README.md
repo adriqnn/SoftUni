@@ -1,4 +1,4 @@
-# BinarySearchTree Class Documentation
+# BinarySearchTree Documentation
 
 Overview:
 
