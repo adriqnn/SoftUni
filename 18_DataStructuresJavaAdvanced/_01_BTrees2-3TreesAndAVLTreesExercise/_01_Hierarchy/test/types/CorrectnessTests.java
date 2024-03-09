@@ -1,4 +1,4 @@
-package test.types;
+package types;
 
 public interface CorrectnessTests {
 }
