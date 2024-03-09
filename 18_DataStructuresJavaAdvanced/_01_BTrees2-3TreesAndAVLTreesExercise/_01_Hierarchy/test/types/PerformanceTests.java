@@ -1,4 +1,5 @@
-package test.types;
+package types;
 
 public interface PerformanceTests {
+  
 }
