@@ -4,8 +4,8 @@ import main.Hierarchy;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
-import test.helpers.BaseTest;
-import test.types.CorrectnessTests;
+import helpers.BaseTest;
+import types.CorrectnessTests;
 
 public class Constructor extends BaseTest {
     @Category(CorrectnessTests.class)
