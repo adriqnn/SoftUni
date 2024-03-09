@@ -1,8 +1,9 @@
-package test.helpers;
+package helpers;
 
-import main.IHierarchy;
 import org.junit.Before;
-import test.HierarchyStructureInitializer;
+
+import IHierarchy;
+import HierarchyStructureInitializer;
 
 public class BaseTest {
     protected static final int DefaultRootValue = 5;
