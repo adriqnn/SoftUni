@@ -1,4 +1,4 @@
-# TwoThreeTree Documentation
+# Two-Three Tree Documentation
 
 Overview:
 
