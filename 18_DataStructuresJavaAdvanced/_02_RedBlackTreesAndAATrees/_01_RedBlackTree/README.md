@@ -1,4 +1,4 @@
-# RedBlackTree Documentation
+# Red-Black Tree Documentation
 
 Overview:
 
