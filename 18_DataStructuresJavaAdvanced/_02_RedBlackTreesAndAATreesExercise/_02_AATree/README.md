@@ -11,16 +11,16 @@ Methods:
 * void insert(T element): Inserts an element into the tree.
 * int countNodes(): Counts the number of nodes in the tree.
 * boolean search(T element): Searches for an element in the tree.
-* void inOrder(Consumer<T> consumer): Traverses the tree in in-order and applies the consumer to each element.
-* void preOrder(Consumer<T> consumer): Traverses the tree in pre-order and applies the consumer to each element.
-* void postOrder(Consumer<T> consumer): Traverses the tree in post-order and applies the consumer to each element.
-* Node<T> insert(Node<T> node, T element): Inserts an element into the subtree rooted at the given node.
-* Node<T> skew(Node<T> node): Performs skew operation to maintain balance.
-* Node<T> rotateRight(Node<T> node): Performs a right rotation.
-* Node<T> split(Node<T> node): Performs split operation to maintain balance.
-* Node<T> rotateLeft(Node<T> node): Performs a left rotation.
-* int countNodes(Node<T> node): Counts the number of nodes in the subtree rooted at the given node.
-* boolean search(Node<T> node, T element): Searches for an element in the subtree rooted at the given node.
-* void inOrder(Node<T> node, Consumer<T> consumer): Traverses the subtree rooted at the given node in in-order.
-* void preOrder(Node<T> node, Consumer<T> consumer): Traverses the subtree rooted at the given node in pre-order.
-* void postOrder(Node<T> node, Consumer<T> consumer): Traverses the subtree rooted at the given node in post-order.
+* void inOrder(Consumer&lt;T&gt; consumer): Traverses the tree in in-order and applies the consumer to each element.
+* void preOrder(Consumer&lt;T&gt; consumer): Traverses the tree in pre-order and applies the consumer to each element.
+* void postOrder(Consumer&lt;T&gt; consumer): Traverses the tree in post-order and applies the consumer to each element.
+* Node&lt;T&gt; insert(Node&lt;T&gt; node, T element): Inserts an element into the subtree rooted at the given node.
+* Node&lt;T&gt; skew(Node&lt;T&gt; node): Performs skew operation to maintain balance.
+* Node&lt;T&gt; rotateRight(Node&lt;T&gt; node): Performs a right rotation.
+* Node&lt;T&gt; split(Node&lt;T&gt; node): Performs split operation to maintain balance.
+* Node&lt;T&gt; rotateLeft(Node&lt;T&gt; node): Performs a left rotation.
+* int countNodes(Node&lt;T&gt; node): Counts the number of nodes in the subtree rooted at the given node.
+* boolean search(Node&lt;T&gt; node, T element): Searches for an element in the subtree rooted at the given node.
+* void inOrder(Node&lt;T&gt; node, Consumer&lt;T&gt; consumer): Traverses the subtree rooted at the given node in in-order.
+* void preOrder(Node&lt;T&gt; node, Consumer&lt;T&gt; consumer): Traverses the subtree rooted at the given node in pre-order.
+* void postOrder(Node&lt;T&gt; node, Consumer&lt;T&gt; consumer): Traverses the subtree rooted at the given node in post-order.
