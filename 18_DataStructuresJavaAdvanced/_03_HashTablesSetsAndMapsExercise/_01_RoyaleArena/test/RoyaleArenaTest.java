@@ -1,12 +1,11 @@
-import one.Battlecard;
-import one.CardType;
-import one.RoyaleArena;
-import org.junit.Test;
+import Battlecard;
+import CardType;
+import RoyaleArena;
 
+import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class RoyaleArenaTest {
-
     @Test
     public void testAddWorksCorrectly(){
         RoyaleArena royaleArena = new RoyaleArena();
