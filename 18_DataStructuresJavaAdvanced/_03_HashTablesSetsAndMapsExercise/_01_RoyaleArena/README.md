@@ -1,4 +1,4 @@
-RoyaleArena
+# RoyaleArena Documentation
 
 Overview:
 
