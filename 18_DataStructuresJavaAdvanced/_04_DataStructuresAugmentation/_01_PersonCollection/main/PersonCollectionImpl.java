@@ -24,8 +24,8 @@ public class PersonCollectionImpl implements PersonCollection {
             if (o == null || getClass() != o.getClass()) {
                 return false;
             }
-
             NameTownKey other = (NameTownKey) o;
+            
             return this.name.equals(other.name) && this.town.equals(other.town);
         }
 
@@ -158,15 +158,7 @@ public class PersonCollectionImpl implements PersonCollection {
 
     @Override
     public Iterable<Person> findAll(int startAge, int endAge) {
-        return this.peopleByAge
-                .entrySet()
-                .stream()
-                .filter(p -> p.getKey() >= startAge && p.getKey() <= endAge)
-                .map(Map.Entry::getValue)
-                .flatMap(ppl -> ppl
-                        .values()
-                        .stream()
-                ).collect(Collectors.toList());
+        return this.peopleByAge.entrySet().stream().filter(p -> p.getKey() >= startAge && p.getKey() <= endAge).map(Map.Entry::getValue).flatMap(ppl -> ppl.values().stream()).collect(Collectors.toList());
     }
 
     @Override
@@ -177,14 +169,7 @@ public class PersonCollectionImpl implements PersonCollection {
             return new ArrayList<>();
         }
 
-        return peopleByAgeByEmail.entrySet()
-                .stream()
-                .filter(p -> p.getKey() >= startAge && p.getKey() <= endAge)
-                .map(Map.Entry::getValue)
-                .flatMap(ppl -> ppl
-                        .values()
-                        .stream()
-                ).collect(Collectors.toList());
+        return peopleByAgeByEmail.entrySet().stream().filter(p -> p.getKey() >= startAge && p.getKey() <= endAge).map(Map.Entry::getValue).flatMap(ppl -> ppl.values().stream()).collect(Collectors.toList());
     }
 
     private String getEmailDomain(String email) {
