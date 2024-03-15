@@ -1,4 +1,4 @@
-HashTable Documentation
+# HashTable Documentation
 
 Overview:
 
