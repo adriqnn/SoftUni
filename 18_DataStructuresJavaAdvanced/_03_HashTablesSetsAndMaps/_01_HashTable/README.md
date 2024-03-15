@@ -15,6 +15,6 @@ Methods:
 * int size(): Returns the number of elements currently stored in the hash table.
 * int capacity(): Returns the current capacity of the hash table.
 * void clear(): Clears all elements from the hash table.
-*c Iterable<K> keys(): Returns an iterable containing all keys stored in the hash table.
+* Iterable<K> keys(): Returns an iterable containing all keys stored in the hash table.
 * Iterable<V> values(): Returns an iterable containing all values stored in the hash table.
 * Iterator<KeyValue<K, V>> iterator(): Returns an iterator over the key-value pairs stored in the hash table.
