@@ -1,7 +1,6 @@
 import java.util.Objects;
 
 public class Battlecard implements Comparable<Battlecard> {
-
     private int id;
     private CardType type;
     private String name;
