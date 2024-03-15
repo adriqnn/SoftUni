@@ -17,13 +17,7 @@ public class WordCruncher {
     public static void main(String[] args) throws IOException {
         var reader = new BufferedReader(new InputStreamReader(System.in));
 
-        pool = Arrays
-                .stream(reader
-                        .readLine()
-                        .split(", "))
-                .collect(Collectors
-                        .toList());
-
+        pool = Arrays.stream(reader.readLine().split(", ")).collect(Collectors.toList());
         target = reader.readLine();
 
         ArrayList<String> toRemove = new ArrayList<>();
@@ -37,9 +31,8 @@ public class WordCruncher {
                 resources.put(str, resources.get(str) + 1);
             }
         }
+        
         pool.removeAll(toRemove);
-
-
 
         for (int i = 0; i < target.length(); i++) {
             tree.put(i, new ArrayList<>());
@@ -65,6 +58,7 @@ public class WordCruncher {
         } else {
             for (int i = 0; i < tree.get(index).size(); i++) {
                 String element = tree.get(index).get(i);
+                
                 if(resources.get(element) > counter.get(element)) {
                     counter.put(element, counter.get(element) + 1);
                     buffer.add(element);
@@ -78,6 +72,7 @@ public class WordCruncher {
 
     private static void printCombination() {
         String text = String.join("", buffer);
+        
         if (text.equals(target)) {
             String output = String.join(" ", buffer);
             if (result.add(output)) {
