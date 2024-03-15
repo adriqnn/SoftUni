@@ -1,4 +1,4 @@
-Word Cruncher Documentation
+# Word Cruncher Documentation
 
 Overview:
 
