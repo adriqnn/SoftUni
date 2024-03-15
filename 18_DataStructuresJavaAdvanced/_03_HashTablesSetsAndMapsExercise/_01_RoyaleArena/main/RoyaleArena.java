@@ -1,7 +1,6 @@
 import java.util.*;
 import java.util.stream.Collectors;
 
-
 public class RoyaleArena implements IArena {
     private Set<Battlecard> battleCards;
     private Map<Integer, Battlecard> dictBattleCards;
@@ -20,9 +19,11 @@ public class RoyaleArena implements IArena {
     public void add(Battlecard card) {
         this.battleCards.add(card);
         this.dictBattleCards.put(card.getId(), card);
+        
         if (!this.battleTypes.containsKey(card.getType())) {
             this.battleTypes.put(card.getType(), new ArrayList<>());
         }
+        
         this.battleTypes.get(card.getType()).add(card);
     }
 
@@ -43,11 +44,7 @@ public class RoyaleArena implements IArena {
             throw new UnsupportedOperationException();
         }
 
-        return this.battleCards.stream()
-                .sorted(Comparator.comparingDouble(f -> f.getSwag()))
-                .limit(n)
-                .sorted(Comparator.comparingInt(x -> x.getId()))
-                .collect(Collectors.toList());
+        return this.battleCards.stream().sorted(Comparator.comparingDouble(f -> f.getSwag())).limit(n).sorted(Comparator.comparingInt(x -> x.getId())).collect(Collectors.toList());
     }
 
     public Iterable<Battlecard> getAllByNameAndSwag() {
@@ -57,6 +54,7 @@ public class RoyaleArena implements IArena {
             if (!cards.containsKey(battleCard.getName())) {
                 cards.put(battleCard.getName(), new HashSet<>());
             }
+            
             cards.get(battleCard.getName()).add(battleCard);
         }
 
@@ -78,10 +76,10 @@ public class RoyaleArena implements IArena {
     }
 
     public Iterable<Battlecard> getByCardType(CardType type) {
-
         if (!this.battleTypes.containsKey(type)) {
             throw new UnsupportedOperationException();
         }
+        
         var result = this.battleTypes.get(type);
         return result.stream().sorted(Battlecard::compareTo).collect(Collectors.toList());
     }
@@ -109,25 +107,22 @@ public class RoyaleArena implements IArena {
     }
 
     public Iterable<Battlecard> getByNameAndSwagRange(String name, double lo, double hi) {
-        var result = this.battleCards
-                .stream()
-                .filter(x -> x.getName().equals(name) && x.getDamage() >= lo && x.getDamage() < hi)
-                .sorted((f, s) -> Double.compare(s.getSwag(), f.getSwag())).sorted(Comparator.comparingInt(x -> x.getId())).collect(Collectors.toList());
+        var result = this.battleCards.stream().filter(x -> x.getName().equals(name) && x.getDamage() >= lo && x.getDamage() < hi).sorted((f, s) -> Double.compare(s.getSwag(), f.getSwag())).sorted(Comparator.comparingInt(x -> x.getId())).collect(Collectors.toList());
+        
         if (result.size() == 0) {
             throw new UnsupportedOperationException();
         }
+        
         return result;
     }
 
     public Iterable<Battlecard> getByNameOrderedBySwagDescending(String name) {
-        var result = this.battleCards
-                .stream()
-                .filter(x -> x.getName().equals(name))
-                .sorted(Comparator.comparingDouble(Battlecard::getSwag).reversed().thenComparing(Battlecard::getId)).collect(Collectors.toList());
+        var result = this.battleCards.stream().filter(x -> x.getName().equals(name)).sorted(Comparator.comparingDouble(Battlecard::getSwag).reversed().thenComparing(Battlecard::getId)).collect(Collectors.toList());
 
         if (result.size() == 0) {
             throw new UnsupportedOperationException();
         }
+        
         return result;
     }
 
@@ -135,23 +130,21 @@ public class RoyaleArena implements IArena {
         if (!this.battleTypes.containsKey(type)) {
             throw new UnsupportedOperationException();
         }
-        var result = this.battleTypes.get(type)
-                .stream()
-                .filter(v -> v.getDamage() > lo && v.getDamage() < hi)
-                .sorted(Battlecard::compareTo).collect(Collectors.toList());
+        
+        var result = this.battleTypes.get(type).stream().filter(v -> v.getDamage() > lo && v.getDamage() < hi).sorted(Battlecard::compareTo).collect(Collectors.toList());
 
         if (result.size() == 0) {
             throw new UnsupportedOperationException();
         }
 
         return result;
-
     }
 
     public void removeById(int id) {
         if (!this.dictBattleCards.containsKey(id)) {
             throw new UnsupportedOperationException();
         }
+        
         var toRemove = this.dictBattleCards.get(id);
         this.dictBattleCards.remove(id);
         this.battleCards.remove(toRemove);
