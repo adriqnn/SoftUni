@@ -9,7 +9,6 @@ import static org.junit.Assert.assertTrue;
 
 public class test002 {
     private MLMService service;
-
     private Seller seller = new Seller("first");
 
     @Before
