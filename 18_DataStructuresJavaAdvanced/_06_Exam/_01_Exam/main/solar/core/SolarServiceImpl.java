@@ -21,91 +21,90 @@ public class SolarServiceImpl implements SolarService {
         this.invertersAndModules = new HashMap<>();
     }
 
-
     @Override
     public void addInverter(Inverter inverter) {
         if (containsInverter(inverter.id)) {
             throw new IllegalArgumentException();
         }
 
-        inverters.put(inverter.id, inverter);
-        arrays.put(inverter.id, new HashSet<>());
-        invertersAndModules.put(inverter, new HashSet<>());
+        this.inverters.put(inverter.id, inverter);
+        this.arrays.put(inverter.id, new HashSet<>());
+        this.invertersAndModules.put(inverter, new HashSet<>());
     }
 
     @Override
     public void addArray(Inverter inverter, String arrayId) {
-        Inverter checkInverter = inverters.get(inverter.id);
+        Inverter checkInverter = this.inverters.get(inverter.id);
 
         if (checkInverter == null) {
             throw new IllegalArgumentException();
         }
 
-        if(arrays.get(inverter.id).contains(arrayId)
-                ||  (inverter.maxPvArraysConnected <= arrays.get(inverter.id).size())){
+        if(this.arrays.get(inverter.id).contains(arrayId)
+                ||  (inverter.maxPvArraysConnected <= this.arrays.get(inverter.id).size())){
             throw new IllegalArgumentException();
         }
 
-        arrays.get(inverter.id).add(arrayId);
-//        arrayModules.put(arrayId, new HashSet<>());
+        this.arrays.get(inverter.id).add(arrayId);
+//        this.arrayModules.put(arrayId, new HashSet<>());
     }
 
     @Override
     public void addPanel(Inverter inverter, String arrayId, PVModule pvModule) {
-        if(!inverters.containsKey(inverter.id)){
+        if(!this.inverters.containsKey(inverter.id)){
             throw new IllegalArgumentException();
         }
 
-        if(!arrays.get(inverter.id).contains(arrayId)){
+        if(!this.arrays.get(inverter.id).contains(arrayId)){
             throw new IllegalArgumentException();
         }
 
-        if(moduleToInverterMapping.containsKey(pvModule)){
+        if(this.moduleToInverterMapping.containsKey(pvModule)){
             throw new IllegalArgumentException();
         }
 
-        moduleToInverterMapping.put(pvModule, inverter.id);
-        invertersAndModules.get(inverter).add(pvModule);
-//        arrayModules.get(arrayId).add(pvModule);
+        this.moduleToInverterMapping.put(pvModule, inverter.id);
+        this.invertersAndModules.get(inverter).add(pvModule);
+//        this.arrayModules.get(arrayId).add(pvModule);
 
     }
 
     @Override
     public boolean containsInverter(String id) {
-        return inverters.containsKey(id);
+        return this.inverters.containsKey(id);
     }
 
     @Override
     public boolean isPanelConnected(PVModule pvModule) {
-        return moduleToInverterMapping.containsKey(pvModule);
+        return this.moduleToInverterMapping.containsKey(pvModule);
     }
 
     @Override
     public Inverter getInverterByPanel(PVModule pvModule) {
-        return inverters.get(moduleToInverterMapping.get(pvModule));
+        return this.inverters.get(this.moduleToInverterMapping.get(pvModule));
     }
 
     @Override
     public void replaceModule(PVModule oldModule, PVModule newModule) {
-        if(!moduleToInverterMapping.containsKey(oldModule)){
+        if(!this.moduleToInverterMapping.containsKey(oldModule)){
             throw new IllegalArgumentException();
         }
 
-        if(moduleToInverterMapping.containsKey(newModule)){
+        if(this.moduleToInverterMapping.containsKey(newModule)){
             throw new IllegalArgumentException();
         }
 
-        String remove = moduleToInverterMapping.remove(oldModule);
-        moduleToInverterMapping.put(newModule, remove);
-        invertersAndModules.get(inverters.get(remove)).remove(oldModule);
-        invertersAndModules.get(inverters.get(remove)).remove(newModule);
+        String remove = this.moduleToInverterMapping.remove(oldModule);
+        this.moduleToInverterMapping.put(newModule, remove);
+        this.invertersAndModules.get(this.inverters.get(remove)).remove(oldModule);
+        this.invertersAndModules.get(this.inverters.get(remove)).remove(newModule);
     }
 
     @Override
     public Collection<Inverter> getByProductionCapacity() {
         Map<Inverter, Integer> values = new HashMap<>();
 
-        invertersAndModules.forEach((key, value) -> {
+        this.invertersAndModules.forEach((key, value) -> {
             int sum = 0;
 
             for (PVModule pvModule : value) {
@@ -120,11 +119,11 @@ public class SolarServiceImpl implements SolarService {
 
     @Override
     public Collection<Inverter> getByNumberOfPVModulesConnected() {
-        return invertersAndModules.entrySet().stream().sorted((e1, e2) -> {
+        return this.invertersAndModules.entrySet().stream().sorted((e1, e2) -> {
             int cmp = Integer.compare(e1.getValue().size(), e2.getValue().size());
 
             if(cmp == 0){
-                cmp = Integer.compare(arrays.get(e1.getKey().id).size(), arrays.get(e2.getKey().id).size());
+                cmp = Integer.compare(this.arrays.get(e1.getKey().id).size(), this.arrays.get(e2.getKey().id).size());
             }
 
             return cmp;
@@ -133,7 +132,7 @@ public class SolarServiceImpl implements SolarService {
 
     @Override
     public Collection<PVModule> getByWattProduction() {
-        return moduleToInverterMapping.keySet().stream().sorted((e1, e2) -> {
+        return this.moduleToInverterMapping.keySet().stream().sorted((e1, e2) -> {
             int cmp = Integer.compare(e1.maxWattProduction, e2.maxWattProduction);
             return cmp;
         }).collect(Collectors.toList());
