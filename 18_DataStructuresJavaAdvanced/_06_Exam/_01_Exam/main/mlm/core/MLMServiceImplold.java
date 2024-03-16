@@ -5,7 +5,6 @@
 //import java.util.*;
 //
 //public class MLMServiceImplold implements MLMService {
-//
 //    private Map<String, Seller> sellersMap;
 //    private List<Seller> sellersList;
 //
@@ -16,26 +15,28 @@
 //
 //    @Override
 //    public void addSeller(Seller seller) {
-//        if (sellersMap.containsKey(seller.id)) {
+//        if (this.sellersMap.containsKey(seller.id)) {
 //            throw new IllegalArgumentException("Seller already exists");
 //        }
-//        sellersMap.put(seller.id, seller);
-//        sellersList.add(seller);
+//
+//        this.sellersMap.put(seller.id, seller);
+//        this.sellersList.add(seller);
 //    }
 //
 //    @Override
 //    public void hireSeller(Seller parent, Seller newHire) {
-//        if (!exists(parent) || sellersMap.containsKey(newHire.id)) {
+//        if (!exists(parent) || this.sellersMap.containsKey(newHire.id)) {
 //            throw new IllegalArgumentException("Invalid parent or newHire already exists");
 //        }
+//
 //        parent.addHire(newHire);
-//        sellersMap.put(newHire.id, newHire);
-//        sellersList.add(newHire);
+//        this.sellersMap.put(newHire.id, newHire);
+//        this.sellersList.add(newHire);
 //    }
 //
 //    @Override
 //    public boolean exists(Seller seller) {
-//        return sellersMap.containsKey(seller.id);
+//        return this.sellersMap.containsKey(seller.id);
 //    }
 //
 //    @Override
@@ -43,13 +44,15 @@
 //        if (!exists(seller)) {
 //            throw new IllegalArgumentException("Seller does not exist");
 //        }
+//
 //        Seller parent = seller.getParent();
 //        if (parent != null) {
 //            parent.removeHire(seller);
 //            parent.addHires(seller.getHires());
 //        }
-//        sellersMap.remove(seller.id);
-//        sellersList.remove(seller);
+//
+//        this.sellersMap.remove(seller.id);
+//        this.sellersList.remove(seller);
 //    }
 //
 //    @Override
@@ -65,27 +68,26 @@
 //        }
 //
 //        int earnings = amountLeft;
-//
 //        seller.addEarnings(earnings);
 //    }
 //
 //    @Override
 //    public Collection<Seller> getByProfits() {
-//        List<Seller> sortedList = new ArrayList<>(sellersList);
+//        List<Seller> sortedList = new ArrayList<>(this.sellersList);
 //        sortedList.sort(Comparator.comparingInt(seller -> -seller.getEarnings()));
 //        return sortedList;
 //    }
 //
 //    @Override
 //    public Collection<Seller> getByEmployeeCount() {
-//        List<Seller> sortedList = new ArrayList<>(sellersList);
+//        List<Seller> sortedList = new ArrayList<>(this.sellersList);
 //        sortedList.sort(Comparator.comparingInt(seller -> -seller.getTotalEmployeeCount()));
 //        return sortedList;
 //    }
 //
 //    @Override
 //    public Collection<Seller> getByTotalSalesMade() {
-//        List<Seller> sortedList = new ArrayList<>(sellersList);
+//        List<Seller> sortedList = new ArrayList<>(this.sellersList);
 //        sortedList.sort(Comparator.comparingInt(seller -> -seller.getTotalSales()));
 //        return sortedList;
 //    }
