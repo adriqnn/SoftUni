@@ -10,9 +10,7 @@ import static org.junit.Assert.assertFalse;
 
 public class SolarServiceTests {
     private SolarService service;
-
     private final Inverter inverter = new Inverter("initial", 5);
-
     private final PVModule pvModule = new PVModule(10);
 
     @Before
