@@ -53,9 +53,8 @@ public class Product implements Comparable<Product> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return Double.compare(product.price, price) == 0 &&
-                Objects.equals(name, product.name) &&
-                Objects.equals(producer, product.producer);
+        
+        return Double.compare(product.price, price) == 0 && Objects.equals(name, product.name) && Objects.equals(producer, product.producer);
     }
 
     @Override
