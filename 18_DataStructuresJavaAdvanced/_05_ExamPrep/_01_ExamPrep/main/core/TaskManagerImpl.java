@@ -3,7 +3,6 @@ package core;
 import models.Task;
 
 public class TaskManagerImpl implements TaskManager {
-
     @Override
     public void addTask(Task task) {
 
