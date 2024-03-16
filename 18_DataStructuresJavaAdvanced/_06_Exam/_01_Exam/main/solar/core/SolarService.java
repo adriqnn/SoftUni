@@ -5,7 +5,6 @@ import solar.models.*;
 import java.util.Collection;
 
 public interface SolarService {
-
     void addInverter(Inverter inverter);
 
     void addArray(Inverter inverter, String arrayId);
