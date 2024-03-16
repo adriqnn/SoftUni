@@ -48,6 +48,7 @@ public class ShoppingCentre {
                 this.productsByName.get(productName).remove(product);
                 this.productsByPrice.get(productPrice).remove(product);
             }
+            
             this.productsByProducer.remove(producer);
 
             return String.format("%d products deleted\n", removedProducts);
@@ -71,6 +72,7 @@ public class ShoppingCentre {
                 this.productsByName.get(name).remove(product);
                 this.productsByPrice.get(productPrice).remove(product);
             }
+            
             this.productsByNameAndProducer.remove(nameAndProducer);
 
             return String.format("%d products deleted\n", removedProducts);
