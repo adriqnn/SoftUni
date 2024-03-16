@@ -3,7 +3,6 @@ package core;
 import models.Category;
 
 public class CategorizatorImpl implements Categorizator {
-
     @Override
     public void addCategory(Category category) {
 
