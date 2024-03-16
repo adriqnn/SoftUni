@@ -9,7 +9,6 @@ import static org.junit.Assert.assertEquals;
 
 public class test003 {
     private MLMService service;
-
     private Seller seller = new Seller("first");
 
     @Before
