@@ -2,11 +2,8 @@ package models;
 
 public class Task {
     private String id;
-
     private String name;
-
     private int estimatedExecutionTime;
-
     private String domain;
 
     public Task(String id, String name, int estimatedExecutionTime, String domain) {
