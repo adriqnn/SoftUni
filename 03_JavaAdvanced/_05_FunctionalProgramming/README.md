@@ -1,7 +1,7 @@
 # Functional Programming - Lecture
 
 * Lambda Expressions -> unnamed function, has (parameters) -> {body}, implicit and explicit, zero or more parameters () -> {...};
-* Functions -> Function<Integer, Integer> func = x -> x * x(input, output, name, lambda expression), .apply()(calls the function;
+* Functions -> Function<Integer, Integer> func = x -> x * x(input, output, name, lambda expression), .apply()(calls the function);
 * Consumer -> Consumer<T> (void), .accept()(calls the consumer);
 * Supplier -> Supplier<T> (no parameters), .get()(calls the supplier);
 * Predicate -> Predicate<T> (evaluates a condition - boolean), .test()(calls the predicate);
