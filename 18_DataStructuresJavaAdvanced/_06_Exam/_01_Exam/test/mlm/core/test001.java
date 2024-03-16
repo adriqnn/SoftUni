@@ -13,7 +13,6 @@ import static org.junit.Assert.assertEquals;
 
 public class test001 {
     private MLMService service;
-
     private Seller seller = new Seller("first");
 
     @Before
