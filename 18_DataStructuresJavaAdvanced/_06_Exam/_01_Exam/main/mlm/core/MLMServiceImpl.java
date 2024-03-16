@@ -14,43 +14,43 @@ public class MLMServiceImpl implements MLMService {
 
     @Override
     public void addSeller(Seller seller) {
-        if(sellers.containsKey(seller.id)){
+        if(this.sellers.containsKey(seller.id)){
             throw new IllegalArgumentException();
         }
 
-        sellers.put(seller.id, seller);
+        this.sellers.put(seller.id, seller);
     }
 
     @Override
     public void hireSeller(Seller parent, Seller newHire) {
-        if(!sellers.containsKey(parent.id)){
+        if(!this.sellers.containsKey(parent.id)){
             throw new IllegalArgumentException();
         }
 
-        if(sellers.containsKey(newHire.id)){
+        if(this.sellers.containsKey(newHire.id)){
             throw new IllegalArgumentException();
         }
 
         newHire.setParent(parent);
-        sellers.put(newHire.id, newHire);
-        sellers.get(parent.id).getChildren().add(newHire);
+        this.sellers.put(newHire.id, newHire);
+        this.sellers.get(parent.id).getChildren().add(newHire);
     }
 
     @Override
     public boolean exists(Seller seller) {
-        return sellers.containsKey(seller.id);
+        return this.sellers.containsKey(seller.id);
     }
 
     @Override
     public void fire(Seller seller) {
-        if(!sellers.containsKey(seller.id)){
+        if(!this.sellers.containsKey(seller.id)){
             throw new IllegalArgumentException();
         }
 
 
-        Set<Seller> children = sellers.get(seller.id).getChildren();
+        Set<Seller> children = this.sellers.get(seller.id).getChildren();
 
-        Seller fired = sellers.get(seller.id);
+        Seller fired = this.sellers.get(seller.id);
         Seller parent = fired.getParent();
 
         if(parent != null){
@@ -65,7 +65,7 @@ public class MLMServiceImpl implements MLMService {
             children.forEach(e -> e.setParent(parent));
         }
 
-        sellers.remove(fired.id);
+        this.sellers.remove(fired.id);
     }
 
     @Override
@@ -81,7 +81,7 @@ public class MLMServiceImpl implements MLMService {
             parent = parent.getParent();
         }
 
-        Seller npc = sellers.get(seller.id);
+        Seller npc = this.sellers.get(seller.id);
 
         npc.setEarnings(npc.getEarnings() + amountLeft);
         npc.setSalesCount(npc.getSalesCount() + 1);
@@ -89,12 +89,12 @@ public class MLMServiceImpl implements MLMService {
 
     @Override
     public Collection<Seller> getByProfits() {
-        return sellers.values().stream().sorted(Comparator.comparing(Seller::getEarnings).reversed()).collect(Collectors.toList());
+        return this.sellers.values().stream().sorted(Comparator.comparing(Seller::getEarnings).reversed()).collect(Collectors.toList());
     }
 
     @Override
     public Collection<Seller> getByEmployeeCount() {
-        return sellers.values().stream().sorted((e1, e2) -> {
+        return this.sellers.values().stream().sorted((e1, e2) -> {
 
             int e1Count = 0;
             Deque<Seller> e1Hires = new ArrayDeque<>(e1.getChildren());
@@ -122,6 +122,6 @@ public class MLMServiceImpl implements MLMService {
 
     @Override
     public Collection<Seller> getByTotalSalesMade() {
-        return sellers.values().stream().sorted(Comparator.comparing(Seller::getSalesCount).reversed()).collect(Collectors.toList());
+        return this.sellers.values().stream().sorted(Comparator.comparing(Seller::getSalesCount).reversed()).collect(Collectors.toList());
     }
 }
