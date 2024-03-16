@@ -15,9 +15,7 @@ Methods:
 * findAll(int startAge, int endAge): Finds and returns all Person objects within the specified age range.
 * findAll(int startAge, int endAge, String town): Finds and returns all Person objects within the specified age range and town.
 
-Inner Class:
-
-NameTownKey: A private static nested class used as a composite key for indexing Person objects based on name and town.
+Inner Class: NameTownKey: A private static nested class used as a composite key for indexing Person objects based on name and town.
 
 Data Structures:
 
