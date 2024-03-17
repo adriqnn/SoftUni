@@ -1,4 +1,4 @@
-# RoyaleArena Documentation
+# Royale Arena Documentation
 
 Overview:
 
