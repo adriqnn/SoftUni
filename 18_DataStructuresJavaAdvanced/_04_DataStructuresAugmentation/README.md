@@ -1,4 +1,4 @@
-# Data Structures Augmentation:
+# Data Structures Augmentation
 
 * Classical Collection of Data Structures -> Linear DS vs. Balanced Binary Search Trees vs. Hash Tables;
 * Array -> Add - O(n), Find - O(n), Delete - O(n), Get-by-index - O(1);
