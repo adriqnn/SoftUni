@@ -1,4 +1,4 @@
-# ShoppingCentre Documentation
+# Shopping Center Documentation
 
 Overview:
 
