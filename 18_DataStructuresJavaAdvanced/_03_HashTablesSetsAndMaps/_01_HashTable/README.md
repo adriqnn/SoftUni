@@ -2,7 +2,7 @@
 
 Overview:
 
-A HashTable is a data structure that implements a hash table, allowing for efficient storage and retrieval of key-value pairs. It utilizes a hash function to map keys to indices in an array, providing fast access to elements based on their keys. Hash tables are commonly used in computer science due to their constant-time average-case complexity for basic operations such as insertion, deletion, and lookup. They are suitable for a wide range of applications where fast access to data based on keys is required, such as database indexing, caching, and symbol tables. A HashTable is a data structure that implements a hash table for storing key-value pairs. It uses a hash function to map keys to indices in an array, allowing for efficient insertion, deletion, and retrieval of elements based on their keys.
+A HashTable is a data structure that implements a hash table, allowing for efficient storage and retrieval of key-value pairs. It utilizes a hash function to map keys to indices in an array, providing fast access to elements based on their keys. Hash tables are commonly used in computer science due to their constant-time average-case complexity for basic operations such as insertion, deletion, and lookup. They are suitable for a wide range of applications where fast access to data based on keys is required, such as database indexing, caching, and symbol tables. A HashTable is a data structure that implements a hash table for storing key-value pairs. It uses a hash function to map keys to indices in an array, allowing for efficient insertion, deletion, and retrieval of elements based on their keys. Uses KeyValue class to store information.
 
 Methods:
 
