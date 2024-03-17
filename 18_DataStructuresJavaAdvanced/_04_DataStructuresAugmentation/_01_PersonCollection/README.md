@@ -1,4 +1,4 @@
-PersonCollection Documentation
+# Person Collection Documentation
 
 Overview:
 
