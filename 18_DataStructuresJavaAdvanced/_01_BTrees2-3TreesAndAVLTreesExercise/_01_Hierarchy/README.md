@@ -15,3 +15,4 @@ Methods:
 * public Iterable&lt;T&gt; getCommonElements(IHierarchy&lt;T&gt; other): Returns the common elements between this hierarchy and another hierarchy.
 * public Iterator&lt;T&gt; iterator(): Provides an iterator for traversing the hierarchy.
 * private HierarchyNode&lt;T&gt; ensureExistsAndGet(T key): Ensures that the specified element exists in the hierarchy and retrieves its corresponding node.
+
