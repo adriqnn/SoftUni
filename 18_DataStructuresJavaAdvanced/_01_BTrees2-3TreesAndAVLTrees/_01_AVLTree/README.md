@@ -19,3 +19,4 @@ Methods:
 * private void updateHeight(Node&lt;T&gt; node): Updates the height of a given node based on its children's heights.
 * private int height(Node&lt;T&gt; node): Calculates the height of a given node in the AVL tree.
 * private static <T extends Comparable&lt;T&gt;> int staticHeight(Node&lt;T&gt; node): Static method to calculate the height of a given node.
+
