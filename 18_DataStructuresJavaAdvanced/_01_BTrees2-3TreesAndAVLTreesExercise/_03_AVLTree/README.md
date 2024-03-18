@@ -28,4 +28,3 @@ Methods:
 * int balanceFactor(Node&lt;T&gt; node): Calculates the balance factor of a node.
 * int height(Node&lt;T&gt; node): Calculates the height of a node.
 * void updateHeight(Node&lt;T&gt; node): Updates the height of a node after insertion or deletion.
-
