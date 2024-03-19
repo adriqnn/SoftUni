@@ -8,19 +8,11 @@ Class: BinaryTree&lt;E&gt; This class represents a binary tree and implements th
 Methods:
 
 * E getKey(): Returns the key of the current node.
-  
 * BinaryTree&lt;E&gt; getLeft(): Returns the left subtree of the current node.
-  
 * BinaryTree&lt;E&gt; getRight(): Returns the right subtree of the current node.
-  
 * void setKey(E key): Sets the key of the current node.
-  
 * String asIndentedPreOrder(int indent): Returns a string representation of the tree in pre-order traversal with indentation.
-  
 * List<BinaryTree&lt;E&gt;> preOrder(): Returns the tree in pre-order traversal.
-  
 * List<BinaryTree&lt;E&gt;> inOrder(): Returns the tree in in-order traversal.
-  
 * List<BinaryTree&lt;E&gt;> postOrder(): Returns the tree in post-order traversal.
-  
 * void forEachInOrder(Consumer&lt;E&gt; consumer): Applies a Consumer&lt;E&gt; on each node traversed in in-order.
