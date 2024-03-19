@@ -7,15 +7,9 @@ The heap is typically implemented using an array-based representation where the 
 Methods:
 
 * int size(): Returns the number of elements in the max heap.
-  
 * void add(E element): Adds an element to the max heap and adjusts the heap to maintain the max heap property.
-  
 * void heapifyUp(int index): Adjusts the heap by moving the element at the given index upwards until the heap property is satisfied.
-  
 * boolean isLess(int childIndex, int parentIndex): Checks if the element at the child index is less than the element at the parent index.
-  
 * E getAt(int index): Retrieves the element at the specified index.
-  
 * int getParentIndex(int index): Calculates the index of the parent node for a given child index.
-  
 * E peek(): Returns the maximum element (root) of the max heap without removing it. Throws an IllegalStateException if the heap is empty.
