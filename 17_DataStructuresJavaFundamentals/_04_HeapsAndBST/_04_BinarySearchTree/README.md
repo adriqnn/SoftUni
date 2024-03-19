@@ -7,23 +7,13 @@ A binary search tree (BST) is a data structure that organizes elements in a hier
 Methods:
 
 * insert(E element): Inserts a new element into the binary search tree while maintaining the order property of the tree.
-
 * contains(E element): Checks whether the specified element exists in the binary search tree.
-
 * search(E element): Searches for the specified element in the binary search tree and returns a new tree containing only the found element (if present).
-
 * getRoot(): Returns the root node of the binary search tree.
-
 * getLeft(): Returns the left child node of the binary search tree.
-
 * getRight(): Returns the right child node of the binary search tree.
-
 * getValue(): Returns the value stored in the root node of the binary search tree.
-
 * copy(Node&lt;E&gt; node): Copies the structure of the specified node and its descendants to the current binary search tree.
-
 * isLess(E first, E second): Compares two elements and returns true if the first element is less than the second.
-
 * isGreater(E first, E second): Compares two elements and returns true if the first element is greater than the second.
-
 * areEqual(E first, E second): Compares two elements and returns true if they are equal.
