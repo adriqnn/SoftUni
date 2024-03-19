@@ -28,7 +28,7 @@ Methods:
     Validates the index and throws IndexOutOfBoundsException if validation fails.
 * int size() - 
     Returns the number of elements in the ArrayList.
-* int indexOf(E element)
+* int indexOf(E element) - 
     Returns the index of the element if present.
     Returns -1 if the element is not present in the structure.
 * boolean contains(E element) - 
