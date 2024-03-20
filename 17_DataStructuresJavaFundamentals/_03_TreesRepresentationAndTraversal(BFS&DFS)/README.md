@@ -8,5 +8,5 @@
 * Tree -> leaf - node with no children, branch - node with at least one child;
 * Recursive Tree -> a single node is a tree, nodes have zero or multiple children that are also tres;
 * Tree Traversal -> Depth-First Search(DFS)(Stack)(Recursion) and Breadth-First Search(BFS)(Queue)(Recursion);
-* BFS -> from top to bottom - visits neighbours then children and so-on;
-* DFS -> from bottom to right - visits descendants and then neighbours and their descendants and so-on;
+* BFS -> BFS explores level by level, visiting all neighbors before moving to the next level;
+* DFS -> DFS explores as far down one branch as possible before backtracking;
