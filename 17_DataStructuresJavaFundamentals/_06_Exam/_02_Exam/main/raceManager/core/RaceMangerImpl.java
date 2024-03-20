@@ -7,10 +7,8 @@ import java.util.stream.Collectors;
 
 public class RaceMangerImpl implements RaceManger {
     Map<String, Athlete> enrolledAthletes;
-
     Deque<Athlete> currentParticipants;
     Map<String, Athlete> racingAthletes;
-
     Deque<Athlete> finishedAthletesStack;
     List<Athlete> retired;
 
