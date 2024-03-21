@@ -17,5 +17,7 @@ public class _03_JavaIfElse {
         }else if (n > 20){
             System.out.println("Not Weird");
         }
+
+        scan.close();
     }
 }
