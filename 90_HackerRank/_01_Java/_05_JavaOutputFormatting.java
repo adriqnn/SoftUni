@@ -15,5 +15,7 @@ public class _05_JavaOutputFormatting {
         }
 
         System.out.println("================================");
+
+        scan.close();
     }
 }
