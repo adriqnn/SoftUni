@@ -13,5 +13,7 @@ public class _04_JavaStdinAndStdout2 {
         System.out.println("String: " + n3);
         System.out.println("Double: " + n2);
         System.out.println("Int: " + n1);
+
+        scan.close();
     }
 }
