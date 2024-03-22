@@ -11,6 +11,7 @@ public class _20_PatternSyntaxChecker {
 
         for (int i = 0; i < n; i++) {
             String pattern = scan.nextLine();
+            
             try{
                 Pattern.compile(pattern);
                 System.out.println("Valid");
@@ -19,4 +20,6 @@ public class _20_PatternSyntaxChecker {
             }
         }
     }
+
+    scan.close();
 }
