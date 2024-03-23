@@ -9,10 +9,8 @@ public class _39_JavaDeque {
         Scanner scan = new Scanner(System.in);
 
         String[] line = scan.nextLine().split("\\s+");
-
         int n = Integer.parseInt(line[0]);
         int m = Integer.parseInt(line[1]);
-
         int[] numbers = Arrays.stream(scan.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
 
         int unique = 0;
