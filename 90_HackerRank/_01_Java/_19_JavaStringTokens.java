@@ -10,7 +10,6 @@ public class _19_JavaStringTokens {
         Scanner scan = new Scanner(System.in);
 
         String console = scan.nextLine();
-
         List<String> list = Arrays.stream(console.split("!|,|\\?|\\.|_|'|@|\\s+")).collect(Collectors.toList());
 
         for (int i = 0; i < list.size(); i++) {
@@ -18,6 +17,7 @@ public class _19_JavaStringTokens {
                 list.remove(i);
             }
         }
+        
         for (int i = 0; i < list.size(); i++) {
             if(list.get(i).equals("")){
                 list.remove(i);
