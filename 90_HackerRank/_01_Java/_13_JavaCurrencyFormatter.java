@@ -13,10 +13,13 @@ public class _13_JavaCurrencyFormatter {
 
         NumberFormat us = NumberFormat.getCurrencyInstance(Locale.US);
         System.out.printf("US: %s%n", us.format(value));
+        
         NumberFormat in = NumberFormat.getCurrencyInstance(newIndiaLocale);
         System.out.printf("India: %s%n", in.format(value));
+        
         NumberFormat cn = NumberFormat.getCurrencyInstance(Locale.CHINA);
         System.out.printf("China: %s%n", cn.format(value));
+        
         NumberFormat fr = NumberFormat.getCurrencyInstance(Locale.FRANCE);
         System.out.printf("France: %s%n", fr.format(value));
 
