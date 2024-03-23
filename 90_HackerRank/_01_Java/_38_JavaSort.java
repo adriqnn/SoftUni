@@ -8,9 +8,10 @@ import java.util.Scanner;
 public class _38_JavaSort {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
+        
         int testCases = Integer.parseInt(scan.nextLine());
-
         List<Student> studentList = new ArrayList<Student>();
+        
         while(testCases>0){
             int id = scan.nextInt();
             String fname = scan.next();
