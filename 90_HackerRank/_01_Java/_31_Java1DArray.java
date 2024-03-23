@@ -24,7 +24,9 @@ public class _31_Java1DArray {
 
     public static boolean canWin(int leap, int[] game, int i) {
         if(i > game.length-1){
-            return true;}
+            return true;
+        }
+        
         if(i < 0 || game[i] == 1){
             return false;
         }
