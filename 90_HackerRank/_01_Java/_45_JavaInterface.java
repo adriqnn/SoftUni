@@ -4,12 +4,14 @@ import java.util.Scanner;
 
 public class _45_JavaInterface {
     public static void main(String []args){
+        Scanner scan = new Scanner(System.in);
+        
         MyCalculator my_calculator = new MyCalculator();
         System.out.print("I implemented: ");
         ImplementedInterfaceNames(my_calculator);
-        Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         System.out.print(my_calculator.divisor_sum(n) + "\n");
+        
         scan.close();
     }
 
@@ -31,6 +33,7 @@ class MyCalculator implements AdvancedArithmetic{
                 sum += i;
             }
         }
+        
         return sum;
     }
 }
