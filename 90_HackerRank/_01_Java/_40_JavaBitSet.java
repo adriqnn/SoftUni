@@ -33,7 +33,10 @@ public class _40_JavaBitSet {
             }else if (command.equals("SET")) {
                 bitSets[indexOne].set(indexTwo);
             }
+            
             System.out.println(bitSet1.cardinality() + " " + bitSet2.cardinality());
         }
+
+        scan.close();
     }
 }
