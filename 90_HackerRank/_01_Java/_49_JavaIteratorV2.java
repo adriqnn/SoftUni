@@ -10,15 +10,18 @@ public class _49_JavaIteratorV2 {
             if(element instanceof String)
                 break;
         }
+        
         return it;
     }
 
     @SuppressWarnings({ "unchecked" })
     public static void main(String []args){
-        ArrayList list = new ArrayList();
         Scanner scan = new Scanner(System.in);
+        
+        ArrayList list = new ArrayList();
         int n = scan.nextInt();
         int m = scan.nextInt();
+        
         for(int i = 0; i < n; i++){
             list.add(scan.nextInt());
         }
@@ -33,5 +36,7 @@ public class _49_JavaIteratorV2 {
             Object element = it.next();
             System.out.println((String)element);
         }
+
+        scan.close();
     }
 }
