@@ -23,6 +23,9 @@ public class _39_JavaDequeV2 {
             Set<Integer> unique = new HashSet<>(sublist);
             max = Math.max(unique.size(), max);
         }
+        
         System.out.println(max);
+
+        scan.close();
     }
 }
