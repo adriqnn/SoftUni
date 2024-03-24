@@ -37,16 +37,19 @@ class Priorities{
         for (String event : events) {
             String[] commands = event.split("\\s+");
             String command = commands[0];
+            
             if(command.equals("ENTER")){
                 int id = Integer.parseInt(commands[3]);
                 String name = commands[1];
                 double cgpa = Double.parseDouble(commands[2]);
+                
                 Students student = new Students(id, name, cgpa);
                 studentsPriorityQueue.offer(student);
             }else{
                 studentsPriorityQueue.poll();
             }
         }
+        
         return studentsPriorityQueue.stream().collect(Collectors.toList());
     }
 }
@@ -66,9 +69,11 @@ class Students{
     public int getID() {
         return id;
     }
+    
     public String getName() {
         return name;
     }
+    
     public double getCGPA() {
         return cgpa;
     }
