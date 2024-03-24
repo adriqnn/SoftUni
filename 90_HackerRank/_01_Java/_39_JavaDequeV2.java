@@ -5,12 +5,12 @@ import java.util.*;
 public class _39_JavaDequeV2 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        
         ArrayDeque<Integer> deque = new ArrayDeque<>();
-
+        List<Integer> list = new ArrayList<>();
+        
         int n = scan.nextInt();
         int m = scan.nextInt();
-
-        List<Integer> list = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
             int num = scan.nextInt();
