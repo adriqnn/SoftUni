@@ -5,10 +5,12 @@ import java.util.*;
 public class _49_JavaIteratorV2 {
     static Iterator func(ArrayList list){
         Iterator it = list.iterator();
+        
         while(it.hasNext()){
             Object element = it.next();
-            if(element instanceof String)
+            if(element instanceof String){
                 break;
+            }
         }
         
         return it;
