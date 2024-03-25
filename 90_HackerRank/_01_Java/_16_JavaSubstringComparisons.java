@@ -11,7 +11,6 @@ public class _16_JavaSubstringComparisons {
 
         String line = scan.nextLine();
         int n = Integer.parseInt(scan.nextLine());
-
         List<String> subs = new ArrayList<>();
 
         for (int i = 0; i <= line.length()-n; i++) {
