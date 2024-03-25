@@ -3,7 +3,7 @@ package _05_HackerRank._01_Java;
 import java.util.Scanner;
 
 public class _51_JavaExceptionHandling {
-    public static final MyC my_calculator = new MyC();
+    public static final MyCalc my_calculator = new MyCalc();
     public static final Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -20,13 +20,14 @@ public class _51_JavaExceptionHandling {
     }
 }
 
-class MyC{
+class MyCalc{
     public int power(int one, int two) throws Exception {
         if(one == 0 && two == 0){
             throw new Exception("n and p should not be zero.");
         }else if(one < 0 || two < 0){
             throw new Exception("n or p should not be negative.");
         }
+
         return (int) Math.pow(one, two);
     }
 }
