@@ -7,8 +7,8 @@ import java.util.Scanner;
 public class _37_JavaComparator {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        
         int n = scan.nextInt();
-
         Player[] player = new Player[n];
         Checker checker = new Checker();
 
