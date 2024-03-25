@@ -17,6 +17,8 @@ public class _51_JavaExceptionHandling {
                 System.out.println(e);
             }
         }
+
+        scan.close();
     }
 }
 
