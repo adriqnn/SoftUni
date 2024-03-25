@@ -9,11 +9,13 @@ public class _50_JavaExceptionHandling {
         try{
            int n = Integer.parseInt(scan.nextLine());
            int m = Integer.parseInt(scan.nextLine());
-            System.out.println(n/m);
+           System.out.println(n / m);
         }catch (NumberFormatException e){
             System.out.println("java.util.InputMismatchException");
         }catch (Exception f){
             System.out.println(f);
         }
+
+        scan.close();
     }
 }
