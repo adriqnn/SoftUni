@@ -12,19 +12,19 @@ public class _08_JavaDataTypes {
                 long num = scan.nextLong();
                 System.out.println(num + " can be fitted in:");
 
-                if (num>=Byte.MIN_VALUE && num<=Byte.MAX_VALUE){
+                if (num >= Byte.MIN_VALUE && num <= Byte.MAX_VALUE){
                     System.out.println("* byte");
                 }
 
-                if (num>=Short.MIN_VALUE && num<=Short.MAX_VALUE){
+                if (num >= Short.MIN_VALUE && num <= Short.MAX_VALUE){
                     System.out.println("* short");
                 }
 
-                if (num>=Integer.MIN_VALUE && num<=Integer.MAX_VALUE){
+                if (num >= Integer.MIN_VALUE && num <= Integer.MAX_VALUE){
                     System.out.println("* int");
                 }
 
-                if (num>=Long.MIN_VALUE && num<=Long.MAX_VALUE){
+                if (num >= Long.MIN_VALUE && num <= Long.MAX_VALUE){
                     System.out.println("* long");
                 }
             } catch (Exception e){
