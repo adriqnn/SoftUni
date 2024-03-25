@@ -32,6 +32,7 @@ public class _48_JavaInstanceOfKeyword {
         
         ArrayList list = new ArrayList();
         int t = scan.nextInt();
+        
         for(int i = 0; i < t; i++){
             String s = scan.next();
             
