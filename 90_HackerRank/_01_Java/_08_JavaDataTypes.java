@@ -25,7 +25,6 @@ public class _08_JavaDataTypes {
                 }
 
                 if (num>=Long.MIN_VALUE && num<=Long.MAX_VALUE){
-
                     System.out.println("* long");
                 }
             } catch (Exception e){
