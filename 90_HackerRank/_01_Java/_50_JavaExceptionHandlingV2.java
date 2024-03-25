@@ -10,8 +10,9 @@ public class _50_JavaExceptionHandlingV2 {
         try{
             System.out.println(scan.nextInt() / scan.nextInt());
         } catch (InputMismatchException | ArithmeticException e) {
-            System.out.println(
-                    e instanceof InputMismatchException ? e.getClass().getName() : e);
+            System.out.println(e instanceof InputMismatchException ? e.getClass().getName() : e);
         }
+
+        scan.close();
     }
 }
