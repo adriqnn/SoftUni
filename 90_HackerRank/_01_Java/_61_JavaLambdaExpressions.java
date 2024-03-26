@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class _61_JavaLambdaExpressions {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        
         Expression expression = new Expression();
-
         int n = Integer.parseInt(scan.nextLine());
 
         for (int i = 0; i < n; i++) {
