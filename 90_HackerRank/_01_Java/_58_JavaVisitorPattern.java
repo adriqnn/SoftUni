@@ -11,6 +11,7 @@ public class _58_JavaVisitorPattern {
 //            }
 //
 //            public void visitNode(TreeNode node) {
+//
 //            }
 //
 //            public void visitLeaf(TreeLeaf leaf) {
@@ -19,7 +20,6 @@ public class _58_JavaVisitorPattern {
 //        }
 //
 //        class ProductOfRedNodesVisitor extends TreeVis {
-//
 //            private long product = 1;
 //
 //            public int getResult() {
@@ -61,7 +61,6 @@ public class _58_JavaVisitorPattern {
 //        }
 //
 //        public class Solution {
-//
 //            private static int[] values;
 //            private static Color[] colors;
 //            private static Map<Integer, Set<Integer>> edges;
@@ -91,6 +90,7 @@ public class _58_JavaVisitorPattern {
 //                    if (children == null) {
 //                        children = new HashSet<Integer>();
 //                    }
+//
 //                    children.add(node2);
 //                    edges.put(node1, children);
 //
@@ -98,6 +98,7 @@ public class _58_JavaVisitorPattern {
 //                    if (children == null) {
 //                        children = new HashSet<Integer>();
 //                    }
+//
 //                    children.add(node1);
 //                    edges.put(node2, children);
 //                }
@@ -124,6 +125,7 @@ public class _58_JavaVisitorPattern {
 //                    } else {
 //                        child = new TreeNode(values[childIndex], colors[childIndex], depth);
 //                    }
+//
 //                    ((TreeNode) node).addChild(child);
 //                    addEdges(childIndex, child, depth);
 //                }
