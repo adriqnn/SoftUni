@@ -9,6 +9,7 @@ public class _48_JavaInstanceOfKeyword {
         
         for(int i = 0; i < list.size(); i++){
             Object element = list.get(i);
+            
             if(element instanceof S){
                 a++;
             }
