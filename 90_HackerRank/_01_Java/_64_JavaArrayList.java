@@ -22,6 +22,7 @@ public class _64_JavaArrayList {
             String[] line = scan.nextLine().split("\\s+");
             int indexOne = Integer.parseInt(line[0]);
             int indexTwo = Integer.parseInt(line[1]);
+            
             try{
                 int i1 = list.get(indexOne-1)[indexTwo];
                 System.out.println(i1);
@@ -29,5 +30,7 @@ public class _64_JavaArrayList {
                 System.out.println("ERROR!");
             }
         }
+        
+        scan.close();
     }
 }
