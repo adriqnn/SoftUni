@@ -13,6 +13,7 @@ public class _61_JavaLambdaExpressions {
         for (int i = 0; i < n; i++) {
             String print = "";
             int[] commands = Arrays.stream(scan.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
+
             if(commands[0] == 1){
                 print = expression.isOdd(commands[1]);
             }else if(commands[0] == 2){
@@ -20,13 +21,15 @@ public class _61_JavaLambdaExpressions {
             }else if(commands[0] == 3){
                 print = expression.isPalindrome(commands[1]);
             }
+
             System.out.println(print);
         }
+
+        scan.close();
     }
 }
 
 class Expression{
-
     public String isOdd(int n){
         return n % 2 == 0 ? "EVEN" : "ODD";
     }
@@ -40,9 +43,12 @@ class Expression{
     }
 
     public boolean isPrimeCheck(int a){
-        for(int i = 2; i <= Math.sqrt(a); i++)
-            if(a % i == 0)
+        for(int i = 2; i <= Math.sqrt(a); i++){
+            if(a % i == 0){
                 return false;
+            }
+        }
+
         return true;
     }
 }
