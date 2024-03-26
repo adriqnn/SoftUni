@@ -27,6 +27,8 @@ public class _41_PriorityQueue {
             }
         }
     }
+
+    scan.close();
 }
 
 class Priorities{
