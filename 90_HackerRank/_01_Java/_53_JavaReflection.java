@@ -13,11 +13,11 @@ public class _53_JavaReflection {
         for(Method m : methods){
             methodList.add(m.getName());
         }
+        
         Collections.sort(methodList);
         for(String name: methodList){
             System.out.println(name);
         }
-
     }
 }
 
@@ -29,11 +29,14 @@ class St{
     public String getName() {
         return name;
     }
+    
     public void setId(String id) {
         this.id = id;
     }
+    
     public void setEmail(String email) {
         this.email = email;
     }
-    public void anothermethod(){  }
+    
+    public void anothermethod(){}
 }
