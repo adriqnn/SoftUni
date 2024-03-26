@@ -8,9 +8,8 @@ import java.util.Scanner;
 public class _62_JavaMD5V2 {
     public static void main(String[] args) throws NoSuchAlgorithmException {
         Scanner scan = new Scanner(System.in);
+        
         MessageDigest md5 = MessageDigest.getInstance("MD5");
-        StringBuilder sb = new StringBuilder();
-
         String word = scan.nextLine();
 
         md5.update(word.getBytes());
@@ -24,5 +23,7 @@ public class _62_JavaMD5V2 {
         }
 
         System.out.println(hash);
+        
+        scan.close();
     }
 }
