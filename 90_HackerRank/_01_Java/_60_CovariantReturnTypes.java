@@ -7,8 +7,10 @@ import java.io.InputStreamReader;
 public class _60_CovariantReturnTypes {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        
         String s = reader.readLine().trim();
         Region region = null;
+        
         switch (s) {
             case "WestBengal":
                 region = new WestBengal();
@@ -17,8 +19,11 @@ public class _60_CovariantReturnTypes {
                 region = new AndhraPradesh();
                 break;
         }
+        
         Flower flower = region.yourNationalFlower();
         System.out.println(flower.whatsYourName());
+        
+        reader.close();
     }
 }
 
