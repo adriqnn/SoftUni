@@ -26,9 +26,9 @@ public class _41_PriorityQueue {
                 System.out.println(st.getName());
             }
         }
+        
+        scan.close();
     }
-
-    scan.close();
 }
 
 class Priorities{
