@@ -26,10 +26,10 @@ public class _55_PrimeChecker {
             Method[] methods = Prime.class.getDeclaredMethods();
             Set<String> set = new HashSet<>();
 
-            boolean overload=false;
+            boolean overload = false;
             for(int i = 0; i < methods.length; i++) {
                 if(set.contains(methods[i].getName())){
-                    overload=true;
+                    overload = true;
                     break;
                 }
                 
