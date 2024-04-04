@@ -8,7 +8,7 @@ function loginV1(input){
         let current = input.shift();
 
         if(current === password){
-            result += `User ${username} logged in.`
+            result += `User ${username} logged in.`;
             break;
         }
 
@@ -29,7 +29,7 @@ const loginV2 = function(input){
         let current = input.shift();
 
         if(current === password){
-            result += `User ${username} logged in.`
+            result += `User ${username} logged in.`;
             break;
         }
 
@@ -50,7 +50,7 @@ const loginV3 = (input) => {
         let current = input.shift();
 
         if(current === password){
-            result += `User ${username} logged in.`
+            result += `User ${username} logged in.`;
             break;
         }
 
