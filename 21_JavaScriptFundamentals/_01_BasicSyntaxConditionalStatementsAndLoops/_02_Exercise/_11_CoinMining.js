@@ -27,7 +27,7 @@ function bitcoin_miningV1(array){
     return `Bought bitcoins: ${coins}\n${firstPurchase !== 0 ? `Day of the first purchased bitcoin: ${firstPurchase}\n` : ``}Left money: ${income.toFixed(2)} lv.`;
 }
 
-const bitcoin_miningV2 = function (array){
+const bitcoin_miningV2 = function(array){
     let income = 0;
     let length = array.length;
     let goldGramPrice = 67.51;
