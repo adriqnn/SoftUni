@@ -38,7 +38,7 @@ function vacationV1(number, type, day){
     return showPrice(result);
 }
 
-const vacationV2 = function (number, type, day){
+const vacationV2 = function(number, type, day){
     const types = {
         Students: {
             Friday: 8.45,
