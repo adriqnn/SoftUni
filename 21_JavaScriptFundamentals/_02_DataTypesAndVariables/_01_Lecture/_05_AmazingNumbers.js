@@ -7,7 +7,6 @@ function amazing_numbersV1(number){
     }
 
     let result = sum.toString().includes("9");
-
     return result ? `${number} Amazing? True` : `${number} Amazing? False`;
 }
 
@@ -20,7 +19,6 @@ const amazing_numbersV2 = function(number){
     }
 
     let result = sum.toString().includes("9");
-
     return result ? `${number} Amazing? True` : `${number} Amazing? False`;
 }
 
@@ -33,7 +31,6 @@ const amazing_numbersV3 = (number) => {
     }
 
     let result = sum.toString().includes("9");
-
     return result ? `${number} Amazing? True` : `${number} Amazing? False`;
 }
 
