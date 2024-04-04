@@ -24,7 +24,7 @@ const divisionV2 = function(num){
     return division !== 0 ? `The number is divisible by ${division}` : "Not divisible";
 }
 
-const divisionV3 = () => {
+const divisionV3 = (num) => {
     let division = 0;
     const divisors = [2, 3, 6, 7, 10];
 
