@@ -1,5 +1,6 @@
 function agesV1(age){
     let status;
+    
     if(age >= 0 && age <= 2){
         status = "baby";
     }else if(age >= 3 && age <= 13){
@@ -19,6 +20,7 @@ function agesV1(age){
 
 const agesV2 = function(age){
     let status;
+    
     if(age >= 0 && age <= 2){
         status = "baby";
     }else if(age >= 3 && age <= 13){
@@ -38,6 +40,7 @@ const agesV2 = function(age){
 
 const agesV3 = (age) => {
     let status;
+    
     if(age >= 0 && age <= 2){
         status = "baby";
     }else if(age >= 3 && age <= 13){
