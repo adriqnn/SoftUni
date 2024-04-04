@@ -6,7 +6,7 @@ function gladiator_expensesV1(...args){
     for (let i = 1; i <= failedFights; i += 1) {
         if (i % 2 === 0) {
             if (i % 3 === 0) {
-                brokenTimes += 1
+                brokenTimes += 1;
                 if (brokenTimes % 2 === 0) {
                     finalPrice += args.reduce((a, v) => a + v);
                 } else {
@@ -31,7 +31,7 @@ const gladiator_expensesV2 = function (lost, helmet, sword, shield, armor){
     for (let i = 1; i <= failedFights; i += 1) {
         if (i % 2 === 0) {
             if (i % 3 === 0) {
-                brokenTimes += 1
+                brokenTimes += 1;
                 if (brokenTimes % 2 === 0) {
                     finalPrice += args.reduce((a, v) => a + v);
                 } else {
@@ -56,7 +56,7 @@ const gladiator_expensesV3 = (lost, helmet, sword, shield, armor) => {
     for (let i = 1; i <= failedFights; i += 1) {
         if (i % 2 === 0) {
             if (i % 3 === 0) {
-                brokenTimes += 1
+                brokenTimes += 1;
                 if (brokenTimes % 2 === 0) {
                     finalPrice += args.reduce((a, v) => a + v);
                 } else {
