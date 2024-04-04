@@ -1,5 +1,5 @@
 function theater_promotionV1(day, age){
-    let msg = "";
+    let msg;
 
     if(day === "Weekday" && age >= 0 && age <= 122){
         if(age <= 18){
@@ -33,7 +33,7 @@ function theater_promotionV1(day, age){
 }
 
 const theater_promotionV2 = function(day, age){
-    let msg = "";
+    let msg;
 
     if(day === "Weekday" && age >= 0 && age <= 122){
         if(age <= 18){
@@ -67,7 +67,7 @@ const theater_promotionV2 = function(day, age){
 }
 
 const theater_promotionV3 = (day, age) => {
-    let msg = "";
+    let msg;
 
     if(day === "Weekday" && age >= 0 && age <= 122){
         if(age <= 18){
