@@ -1,5 +1,5 @@
 function special_numbersV1(num){
-    let result = "";
+    let result;
 
     for (let i = 1; i <= num; i++) {
         let sum = 0;
@@ -16,7 +16,7 @@ function special_numbersV1(num){
 }
 
 const special_numbersV2 = function(num){
-    let result = "";
+    let result;
 
     for (let i = 1; i <= num; i++) {
         let sum = 0;
@@ -33,7 +33,7 @@ const special_numbersV2 = function(num){
 }
 
 const special_numbersV3 = (num) => {
-    let result = "";
+    let result;
 
     for (let i = 1; i <= num; i++) {
         let sum = 0;
