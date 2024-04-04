@@ -32,7 +32,7 @@ function theater_promotionV1(day, age){
     console.log(msg);
 }
 
-const theater_promotionV2 = function (day, age){
+const theater_promotionV2 = function(day, age){
     let msg = "";
 
     if(day === "Weekday" && age >= 0 && age <= 122){
