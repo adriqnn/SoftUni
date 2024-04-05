@@ -16,7 +16,7 @@ function spice_must_flowV1(number){
     return `${days}\n${isEnoughSpice() ? spice - 26 : 0}`;
 }
 
-const spice_must_flowV2 = function (){
+const spice_must_flowV2 = function (number){
     let spice = 0;
     let days = 0;
 
@@ -34,7 +34,7 @@ const spice_must_flowV2 = function (){
     return `${days}\n${isEnoughSpice() ? spice - 26 : 0}`;
 }
 
-const spice_must_flowV3 = () => {
+const spice_must_flowV3 = (number) => {
     let spice = 0;
     let days = 0;
 
