@@ -23,7 +23,7 @@ function gladiator_expensesV1(...args){
     return `Gladiator expenses: ${finalPrice.toFixed(2)} aureus`;
 }
 
-const gladiator_expensesV2 = function (lost, helmet, sword, shield, armor){
+const gladiator_expensesV2 = function (...args){
     let finalPrice = 0;
     let brokenTimes = 0;
     const failedFights = args.shift();
@@ -48,7 +48,7 @@ const gladiator_expensesV2 = function (lost, helmet, sword, shield, armor){
     return `Gladiator expenses: ${finalPrice.toFixed(2)} aureus`;
 }
 
-const gladiator_expensesV3 = (lost, helmet, sword, shield, armor) => {
+const gladiator_expensesV3 = (...args) => {
     let finalPrice = 0;
     let brokenTimes = 0;
     const failedFights = args.shift();
