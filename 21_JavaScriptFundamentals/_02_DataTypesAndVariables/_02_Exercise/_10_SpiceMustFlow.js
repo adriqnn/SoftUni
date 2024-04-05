@@ -10,6 +10,7 @@ function spice_must_flowV1(number){
         spice += n;
         n -= 10;
         days += 1;
+        
         isEnoughSpice() ? (spice -= 26) : (spice = 0);
     }
 
@@ -28,6 +29,7 @@ const spice_must_flowV2 = function (number){
         spice += n;
         n -= 10;
         days += 1;
+        
         isEnoughSpice() ? (spice -= 26) : (spice = 0);
     }
 
@@ -46,6 +48,7 @@ const spice_must_flowV3 = (number) => {
         spice += n;
         n -= 10;
         days += 1;
+        
         isEnoughSpice() ? (spice -= 26) : (spice = 0);
     }
 
