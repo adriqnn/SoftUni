@@ -1,5 +1,5 @@
 function triples_of_latin_lettersV1(number){
-    let result = "";
+    let result;
 
     for (let i = 0; i < number; i++) {
         for (let j = 0; j < number; j++) {
@@ -13,7 +13,7 @@ function triples_of_latin_lettersV1(number){
 }
 
 const triples_of_latin_lettersV2 = function(number){
-    let result = "";
+    let result;
 
     for (let i = 0; i < number; i++) {
         for (let j = 0; j < number; j++) {
@@ -27,7 +27,7 @@ const triples_of_latin_lettersV2 = function(number){
 }
 
 const triples_of_latin_lettersV3 = (number) => {
-    let result = "";
+    let result;
 
     for (let i = 0; i < number; i++) {
         for (let j = 0; j < number; j++) {
