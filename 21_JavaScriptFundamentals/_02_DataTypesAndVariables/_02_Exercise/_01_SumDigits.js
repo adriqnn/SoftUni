@@ -9,7 +9,7 @@ function sum_digitsV1(number){
     return sum;
 }
 
-const sum_digitsV2 = function (number){
+const sum_digitsV2 = function(number){
     let numString = number.toString();
     let sum = 0;
 
