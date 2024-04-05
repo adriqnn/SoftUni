@@ -7,6 +7,7 @@ function gladiator_expensesV1(...args){
         if (i % 2 === 0) {
             if (i % 3 === 0) {
                 brokenTimes += 1;
+                
                 if (brokenTimes % 2 === 0) {
                     finalPrice += args.reduce((a, v) => a + v);
                 } else {
@@ -32,6 +33,7 @@ const gladiator_expensesV2 = function (...args){
         if (i % 2 === 0) {
             if (i % 3 === 0) {
                 brokenTimes += 1;
+                
                 if (brokenTimes % 2 === 0) {
                     finalPrice += args.reduce((a, v) => a + v);
                 } else {
@@ -57,6 +59,7 @@ const gladiator_expensesV3 = (...args) => {
         if (i % 2 === 0) {
             if (i % 3 === 0) {
                 brokenTimes += 1;
+                
                 if (brokenTimes % 2 === 0) {
                     finalPrice += args.reduce((a, v) => a + v);
                 } else {
