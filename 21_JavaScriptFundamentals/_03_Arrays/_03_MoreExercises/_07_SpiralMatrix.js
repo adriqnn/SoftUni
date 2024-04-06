@@ -36,7 +36,7 @@ function spiral_matrixV1(rows, columns){
     let result = "";
 
     for (let row of matrix) {
-        result += `${row.join(" ")}\n`
+        result += `${row.join(" ")}\n`;
     }
 
     return result;
@@ -80,7 +80,7 @@ const spiral_matrixV2 = function(rows, columns){
     let result = "";
 
     for (let row of matrix) {
-        result += `${row.join(" ")}\n`
+        result += `${row.join(" ")}\n`;
     }
 
     return result;
@@ -124,7 +124,7 @@ const spiral_matrixV3 = (rows, columns) => {
     let result = "";
 
     for (let row of matrix) {
-        result += `${row.join(" ")}\n`
+        result += `${row.join(" ")}\n`;
     }
 
     return result;
