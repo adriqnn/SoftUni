@@ -1,1 +1,5 @@
-# Arrays - More Exercises
+# Arrays:
+
+* Lecture
+* Exercise
+* More Exercises
