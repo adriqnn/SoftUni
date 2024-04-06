@@ -11,7 +11,7 @@ function common_elementsV1(arr1, arr2){
     return result;
 }
 
-const common_elementsV2 = function(){
+const common_elementsV2 = function(arr1, arr2){
     let result = "";
 
     for (let i = 0; i < arr1.length; i++) {
@@ -24,7 +24,7 @@ const common_elementsV2 = function(){
     return result;
 }
 
-const common_elementsV3 = () => {
+const common_elementsV3 = (arr1, arr2) => {
     let result = "";
 
     for (let i = 0; i < arr1.length; i++) {
