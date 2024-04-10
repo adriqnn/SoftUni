@@ -15,7 +15,7 @@ function factorial_divisionV1(number1, number2){
     return (factorialIterative(number1) / factorialIterative(number2)).toFixed(2);
 }
 
-const factorial_divisionV2 = function(number){
+const factorial_divisionV2 = function(number1, number2){
     function factorialIterative(n) {
         if (n < 0) {
             return null;
@@ -32,7 +32,7 @@ const factorial_divisionV2 = function(number){
     return (factorialIterative(number1) / factorialIterative(number2)).toFixed(2);
 }
 
-const factorial_divisionV3 = (number) => {
+const factorial_divisionV3 = (number1, number2) => {
     function factorialIterative(n) {
         if (n < 0) {
             return null;
