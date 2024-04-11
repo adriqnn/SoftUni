@@ -31,7 +31,7 @@ function array_manipulatorV1(array1, array2){
     return result;
 }
 
-const array_manipulatorV2 = function(){
+const array_manipulatorV2 = function(array1, array2){
     let result = ``;
     const operations = {
         add: (array) => array1.splice(Number(array[0]), 0, Number(array[1])),
@@ -64,7 +64,7 @@ const array_manipulatorV2 = function(){
     return result;
 }
 
-const array_manipulatorV3 = () => {
+const array_manipulatorV3 = (array1, array2) => {
     let result = ``;
     const operations = {
         add: (array) => array1.splice(Number(array[0]), 0, Number(array[1])),
