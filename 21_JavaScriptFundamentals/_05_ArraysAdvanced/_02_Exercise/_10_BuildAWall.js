@@ -12,7 +12,7 @@ function build_a_wallV1(array){
                 array[index] = array[index] + 1;
             }
 
-            index++
+            index++;
         });
 
         days.push(sum);
@@ -35,7 +35,7 @@ const build_a_wallV2 = function(array){
                 array[index] = array[index] + 1;
             }
 
-            index++
+            index++;
         });
 
         days.push(sum);
@@ -58,7 +58,7 @@ const build_a_wallV3 = (array) => {
                 array[index] = array[index] + 1;
             }
 
-            index++
+            index++;
         });
 
         days.push(sum);
