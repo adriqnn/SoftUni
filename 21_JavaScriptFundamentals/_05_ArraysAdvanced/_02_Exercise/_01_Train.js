@@ -5,19 +5,19 @@ function trainV1(array){
     function addPassengers(n) {
         for (let i = 0; i < wagons.length; i++) {
             if (wagons[i] + n <= maxCapacity) {
-                wagons[i] += n
-                break
+                wagons[i] += n;
+                break;
             }
         }
     }
 
     function add(value) {
-        wagons.push(value)
+        wagons.push(value);
     }
 
     array.forEach(x => {
-        const [command, value] = x.split(" ")
-        value ? add(Number(value)) : addPassengers(Number(command))
+        const [command, value] = x.split(" ");
+        value ? add(Number(value)) : addPassengers(Number(command));
     })
 
     return wagons.join(" ");
@@ -30,19 +30,19 @@ const trainV2 = function(array){
     function addPassengers(n) {
         for (let i = 0; i < wagons.length; i++) {
             if (wagons[i] + n <= maxCapacity) {
-                wagons[i] += n
-                break
+                wagons[i] += n;
+                break;
             }
         }
     }
 
     function add(value) {
-        wagons.push(value)
+        wagons.push(value);
     }
 
     array.forEach(x => {
-        const [command, value] = x.split(" ")
-        value ? add(Number(value)) : addPassengers(Number(command))
+        const [command, value] = x.split(" ");
+        value ? add(Number(value)) : addPassengers(Number(command));
     })
 
     return wagons.join(" ");
@@ -55,19 +55,19 @@ const trainV3 = (array) => {
     function addPassengers(n) {
         for (let i = 0; i < wagons.length; i++) {
             if (wagons[i] + n <= maxCapacity) {
-                wagons[i] += n
-                break
+                wagons[i] += n;
+                break;
             }
         }
     }
 
     function add(value) {
-        wagons.push(value)
+        wagons.push(value);
     }
 
     array.forEach(x => {
-        const [command, value] = x.split(" ")
-        value ? add(Number(value)) : addPassengers(Number(command))
+        const [command, value] = x.split(" ");
+        value ? add(Number(value)) : addPassengers(Number(command));
     })
 
     return wagons.join(" ");
