@@ -15,7 +15,6 @@ function equal_neighborsV1(array){
                     counter++;
                 }
             }
-
         }
     }
 
@@ -39,7 +38,6 @@ const equal_neighborsV2 = function(array){
                     counter++;
                 }
             }
-
         }
     }
 
@@ -63,7 +61,6 @@ const equal_neighborsV3 = (array) => {
                     counter++;
                 }
             }
-
         }
     }
 
