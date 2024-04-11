@@ -9,7 +9,7 @@ function numbersV1(array1, array2){
     return(array1.reduce((a, v) => a + v, 0));
 }
 
-const numbersV2 = function(array){
+const numbersV2 = function(array1, array2){
     let numbersList = array1;
     let numbersArray = array2;
 
@@ -56,7 +56,7 @@ const numbersV2 = function(array){
     return numbersList.reduce((a, v) => a + v, 0);
 }
 
-const numbersV3 = (array) => {
+const numbersV3 = (array1, array2) => {
     let numbersList = array1;
     let numbersArray = array2;
 
