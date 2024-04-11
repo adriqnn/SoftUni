@@ -6,7 +6,7 @@ function helperV1(array){
     return array;
 }
 
-const helperV2 = function(){
+const helperV2 = function(array){
     let arrPartOne = array.slice(0, Number(2));
     array.splice(0, Number(2));
     array.push(...arrPartOne);
@@ -14,7 +14,7 @@ const helperV2 = function(){
     return array;
 }
 
-const helperV3 = () => {
+const helperV3 = (array) => {
     let arrPartOne = array.slice(0, Number(2));
     array.splice(0, Number(2));
     array.push(...arrPartOne);
