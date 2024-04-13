@@ -37,7 +37,7 @@ function moviesV1(array){
     return Object.values(movieDB).filter(e => Object.keys(e).length === 3).map(e => JSON.stringify(e)).join("\n");
 }
 
-const moviesV2 = function(){
+const moviesV2 = function(array){
     let movieDB = {};
 
     const actions = {
@@ -76,7 +76,7 @@ const moviesV2 = function(){
     return Object.values(movieDB).filter(e => Object.keys(e).length === 3).map(e => JSON.stringify(e)).join("\n");
 }
 
-const moviesV3 = () => {
+const moviesV3 = (array) => {
     let movieDB = {};
 
     const actions = {
