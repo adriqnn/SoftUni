@@ -20,7 +20,7 @@ function class_storageV1(capacity){
     return new Storage(capacity);
 }
 
-const class_storageV2 = function(){
+const class_storageV2 = function(capacity){
     class Storage{
         constructor(capacity) {
             this.capacity = capacity;
@@ -42,7 +42,7 @@ const class_storageV2 = function(){
     return new Storage(capacity);
 }
 
-const class_storageV3 = () => {
+const class_storageV3 = (capacity) => {
     class Storage{
         constructor(capacity) {
             this.capacity = capacity;
