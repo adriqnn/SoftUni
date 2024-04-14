@@ -57,7 +57,7 @@ function sequenceV5(input){
 }
 
 function sequenceV6(input){
-    let set = {}
+    let set = {};
 
     input.map(e => { return e.slice(1, -1).split(", ").map(Number); }).map(e => e.sort((a, b) => b - a)).map(e => {
         let arr = `[${e.join(", ")}]`;
