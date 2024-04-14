@@ -16,13 +16,12 @@ function school_registerV1(students){
         if(averageScore >= 3){
             register[studentGrade].push(o);
         }
-
     });
 
     let result = ``;
     Object.entries(register).sort((a, b) => a[0] - b[0]).forEach(([k, v]) => {
         result += `${Number(k) + 1} Grade\n`;
-        result += `List of students: ${v.filter(e => Object.values(e)[0] >= 3).map(e => Object.keys(e)[0]).join(", ")}\n`
+        result += `List of students: ${v.filter(e => Object.values(e)[0] >= 3).map(e => Object.keys(e)[0]).join(", ")}\n`;
         result += `Average annual score from last year: ${v.filter(e => Object.values(e)[0] >= 3).reduce((a, v, i, arr) => {
             a.sum += Number(Object.values(v)[0]);
             a.count++;
@@ -56,13 +55,12 @@ const school_registerV2 = function(students){
         if(averageScore >= 3){
             register[studentGrade].push(o);
         }
-
     });
 
     let result = ``;
     Object.entries(register).sort((a, b) => a[0] - b[0]).forEach(([k, v]) => {
         result += `${Number(k) + 1} Grade\n`;
-        result += `List of students: ${v.filter(e => Object.values(e)[0] >= 3).map(e => Object.keys(e)[0]).join(", ")}\n`
+        result += `List of students: ${v.filter(e => Object.values(e)[0] >= 3).map(e => Object.keys(e)[0]).join(", ")}\n`;
         result += `Average annual score from last year: ${v.filter(e => Object.values(e)[0] >= 3).reduce((a, v, i, arr) => {
             a.sum += Number(Object.values(v)[0]);
             a.count++;
@@ -96,13 +94,12 @@ const school_registerV3 = (students) => {
         if(averageScore >= 3){
             register[studentGrade].push(o);
         }
-
     });
 
     let result = ``;
     Object.entries(register).sort((a, b) => a[0] - b[0]).forEach(([k, v]) => {
         result += `${Number(k) + 1} Grade\n`;
-        result += `List of students: ${v.filter(e => Object.values(e)[0] >= 3).map(e => Object.keys(e)[0]).join(", ")}\n`
+        result += `List of students: ${v.filter(e => Object.values(e)[0] >= 3).map(e => Object.keys(e)[0]).join(", ")}\n`;
         result += `Average annual score from last year: ${v.filter(e => Object.values(e)[0] >= 3).reduce((a, v, i, arr) => {
             a.sum += Number(Object.values(v)[0]);
             a.count++;
