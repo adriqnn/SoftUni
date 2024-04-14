@@ -34,7 +34,7 @@ function class_laptopV1(info, quality){
     return new Laptop(info, quality);
 }
 
-const class_laptopV2 = function(){
+const class_laptopV2 = function(info, quality){
     class Laptop{
         constructor(info, quality){
             this.info = info;
@@ -70,7 +70,7 @@ const class_laptopV2 = function(){
     return new Laptop(info, quality);
 }
 
-const class_laptopV3 = () => {
+const class_laptopV3 = (info, quality) => {
     class Laptop{
         constructor(info, quality){
             this.info = info;
