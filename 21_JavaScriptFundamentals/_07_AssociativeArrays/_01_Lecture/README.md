@@ -1,5 +1,5 @@
+# Associative Arrays:
 
-7.Associative Arrays, Lambda and Stream API:
 - Associative Arrays -> key-value pairs; object; forin; accessing elements using fullname [''] or .value;
 - Associative Arrays -> present element - obj.hasOwnProperty(); delete elements with delete; destructuring;
 - Associative Arrays Sort -> cant sort objects they must be converted to arrays; destructuring of entries([keyA, valueA][keyB, valueB]);
