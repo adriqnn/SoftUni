@@ -33,7 +33,7 @@ function arena_tierV1(array){
     });
 
     function sumSkill(glad) {
-        return glad.reduce((a, v) => a + v[1], 0)
+        return glad.reduce((a, v) => a + v[1], 0);
     }
 
     const result = Object.entries(gladiators).sort((x, y) =>{
@@ -87,7 +87,7 @@ const arena_tierV2 = function(array){
     });
 
     function sumSkill(glad) {
-        return glad.reduce((a, v) => a + v[1], 0)
+        return glad.reduce((a, v) => a + v[1], 0);
     }
 
     const result = Object.entries(gladiators).sort((x, y) =>{
@@ -141,7 +141,7 @@ const arena_tierV3 = (array) => {
     });
 
     function sumSkill(glad) {
-        return glad.reduce((a, v) => a + v[1], 0)
+        return glad.reduce((a, v) => a + v[1], 0);
     }
 
     const result = Object.entries(gladiators).sort((x, y) =>{
