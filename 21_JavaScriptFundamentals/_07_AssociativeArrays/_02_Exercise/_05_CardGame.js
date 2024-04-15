@@ -15,7 +15,7 @@ function card_gameV1(input){
             if(hands[name].indexOf(e) === -1){
                 hands[name].push(e);
             }
-        })
+        });
     });
 
     return Object.entries(hands).map(e => {
@@ -46,7 +46,7 @@ const card_gameV2 = function(input){
             if(hands[name].indexOf(e) === -1){
                 hands[name].push(e);
             }
-        })
+        });
     });
 
     return Object.entries(hands).map(e => {
@@ -77,7 +77,7 @@ const card_gameV3 = (input) => {
             if(hands[name].indexOf(e) === -1){
                 hands[name].push(e);
             }
-        })
+        });
     });
 
     return Object.entries(hands).map(e => {
