@@ -18,18 +18,18 @@ function armiesV1(input){
                     e[1][army] = e[1][army] + Number(count);
                     armies[e[0]].total += Number(count);
                 }
-            })
+            });
         }else{
             let line = e.split(" "), leader = line.slice(0, -1).join(" "), word = line.pop();
             word === "arrives" ? armies[leader] = {total: 0} : delete armies[leader];
         }
-    })
+    });
 
 
     return Object.entries(armies).sort((a, b) => b[1].total - a[1].total).map(e => {
         let firstLine = `${e[0]}: ${e[1].total}`;
         delete e[1].total;
-        let secondLine = `${Object.entries(e[1]).sort((a, b) => b[1] - a[1]).map(e => `>>> ${e[0]} - ${e[1]}`).join("\n")}`
+        let secondLine = `${Object.entries(e[1]).sort((a, b) => b[1] - a[1]).map(e => `>>> ${e[0]} - ${e[1]}`).join("\n")}`;
         return `${firstLine}\n${secondLine}`;
     }).join("\n");
 }
@@ -54,18 +54,18 @@ const armiesV2 = function(input){
                     e[1][army] = e[1][army] + Number(count);
                     armies[e[0]].total += Number(count);
                 }
-            })
+            });
         }else{
             let line = e.split(" "), leader = line.slice(0, -1).join(" "), word = line.pop();
             word === "arrives" ? armies[leader] = {total: 0} : delete armies[leader];
         }
-    })
+    });
 
 
     return Object.entries(armies).sort((a, b) => b[1].total - a[1].total).map(e => {
         let firstLine = `${e[0]}: ${e[1].total}`;
         delete e[1].total;
-        let secondLine = `${Object.entries(e[1]).sort((a, b) => b[1] - a[1]).map(e => `>>> ${e[0]} - ${e[1]}`).join("\n")}`
+        let secondLine = `${Object.entries(e[1]).sort((a, b) => b[1] - a[1]).map(e => `>>> ${e[0]} - ${e[1]}`).join("\n")}`;
         return `${firstLine}\n${secondLine}`;
     }).join("\n");
 }
@@ -90,18 +90,18 @@ const armiesV3 = (input) => {
                     e[1][army] = e[1][army] + Number(count);
                     armies[e[0]].total += Number(count);
                 }
-            })
+            });
         }else{
             let line = e.split(" "), leader = line.slice(0, -1).join(" "), word = line.pop();
             word === "arrives" ? armies[leader] = {total: 0} : delete armies[leader];
         }
-    })
+    });
 
 
     return Object.entries(armies).sort((a, b) => b[1].total - a[1].total).map(e => {
         let firstLine = `${e[0]}: ${e[1].total}`;
         delete e[1].total;
-        let secondLine = `${Object.entries(e[1]).sort((a, b) => b[1] - a[1]).map(e => `>>> ${e[0]} - ${e[1]}`).join("\n")}`
+        let secondLine = `${Object.entries(e[1]).sort((a, b) => b[1] - a[1]).map(e => `>>> ${e[0]} - ${e[1]}`).join("\n")}`;
         return `${firstLine}\n${secondLine}`;
     }).join("\n");
 }
