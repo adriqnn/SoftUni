@@ -16,7 +16,7 @@ function party_timeV1(input){
         if(partyList[e].length > 0){
             partyList[e].map(e => result += `${e}\n`);
         }
-    })
+    });
 
     return result;
 }
