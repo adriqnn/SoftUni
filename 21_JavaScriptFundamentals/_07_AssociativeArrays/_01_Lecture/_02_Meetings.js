@@ -55,4 +55,4 @@ const meetingsV3 = (input) => {
     return result;
 }
 
-console.log(meetingsV1(['Monday Peter', 'Wednesday Bill', 'Monday Tim', 'Friday Tim']));
+// console.log(meetingsV1(['Monday Peter', 'Wednesday Bill', 'Monday Tim', 'Friday Tim']));
