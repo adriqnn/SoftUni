@@ -17,4 +17,4 @@ const censored_wordsV3 = (sentence, word) => {
     return sentence.replaceAll(word, "*".repeat(word.length));
 }
 
-console.log(censored_wordsV1('A small sentence with some words', 'small'));
+// console.log(censored_wordsV1('A small sentence with some words', 'small'));
