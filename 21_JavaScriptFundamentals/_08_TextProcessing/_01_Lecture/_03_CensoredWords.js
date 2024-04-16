@@ -3,7 +3,6 @@ function censored_wordsV1(sentence, word){
 
     while(toCensor.includes(word)){
         toCensor = toCensor.replace(word, "*".repeat(word.length));
-
     }
 
     return toCensor;
