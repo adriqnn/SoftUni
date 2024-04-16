@@ -64,4 +64,4 @@ const garageV3 = (input) => {
     return Object.entries(garages).map(e => `Garage № ${e[0]}\n${e[1].join("\n")}`).join("\n");
 }
 
-console.log(garageV1(['1 - color: blue, fuel type: diesel', '1 - color: red, manufacture: Audi', '2 - fuel type: petrol', '4 - color: dark blue, fuel type: diesel, manufacture: Fiat']));
+// console.log(garageV1(['1 - color: blue, fuel type: diesel', '1 - color: red, manufacture: Audi', '2 - fuel type: petrol', '4 - color: dark blue, fuel type: diesel, manufacture: Fiat']));
