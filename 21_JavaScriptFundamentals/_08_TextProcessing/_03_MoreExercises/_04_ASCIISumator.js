@@ -4,7 +4,7 @@ function ascii_sumatorV1(args){
     let sum = 0;
 
     for (let i = 0; i < args[2].length; i++) {
-        let current = args[2].charCodeAt(i)
+        let current = args[2].charCodeAt(i);
         if(current > min && current < max){
             sum += current;
         }
@@ -19,7 +19,7 @@ const ascii_sumatorV2 = function(args){
     let sum = 0;
 
     for (let i = 0; i < args[2].length; i++) {
-        let current = args[2].charCodeAt(i)
+        let current = args[2].charCodeAt(i);
         if(current > min && current < max){
             sum += current;
         }
@@ -34,7 +34,7 @@ const ascii_sumatorV3 = (args) => {
     let sum = 0;
 
     for (let i = 0; i < args[2].length; i++) {
-        let current = args[2].charCodeAt(i)
+        let current = args[2].charCodeAt(i);
         if(current > min && current < max){
             sum += current;
         }
