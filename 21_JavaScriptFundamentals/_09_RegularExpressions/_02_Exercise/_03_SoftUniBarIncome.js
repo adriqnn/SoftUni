@@ -40,4 +40,4 @@ const softuni_bar_incomeV3 = (input) => {
     return result + `\nTotal income: ${totalPrice.toFixed(2)}`;
 }
 
-console.log(softuni_bar_incomeV1(['%George%<Croissant>|2|10.3$', '%Peter%<Gum>|1|1.3$', '%Maria%<Cola>|1|2.4$', 'end of shift']));
+// console.log(softuni_bar_incomeV1(['%George%<Croissant>|2|10.3$', '%Peter%<Gum>|1|1.3$', '%Maria%<Cola>|1|2.4$', 'end of shift']));
