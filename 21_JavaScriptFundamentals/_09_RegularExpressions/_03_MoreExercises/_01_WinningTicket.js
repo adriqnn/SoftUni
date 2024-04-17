@@ -18,6 +18,7 @@ function winning_ticketV1(input){
         }else{
             let matchingSymbol = match[1].substring(0, 1);
             let matchingSymbolLength = match[2].length;
+            
             if (matchingSymbolLength < 10) {
                 result += `ticket "${e}" - ${matchingSymbolLength}${matchingSymbol}\n`;
             }
@@ -51,6 +52,7 @@ const winning_ticketV2 = function(input){
         }else{
             let matchingSymbol = match[1].substring(0, 1);
             let matchingSymbolLength = match[2].length;
+            
             if (matchingSymbolLength < 10) {
                 result += `ticket "${e}" - ${matchingSymbolLength}${matchingSymbol}\n`;
             }
@@ -84,6 +86,7 @@ const winning_ticketV3 = (input) => {
         }else{
             let matchingSymbol = match[1].substring(0, 1);
             let matchingSymbolLength = match[2].length;
+            
             if (matchingSymbolLength < 10) {
                 result += `ticket "${e}" - ${matchingSymbolLength}${matchingSymbol}\n`;
             }
