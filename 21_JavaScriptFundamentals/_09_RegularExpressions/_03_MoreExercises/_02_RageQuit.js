@@ -7,7 +7,9 @@ function rage_quitV1(input){
         let result = v.match(pattern);
         let sub = result[1].toUpperCase();
         let count = Number(result[2]);
+
         a += sub.repeat(count);
+        
         return a;
     }, "");
 
@@ -24,7 +26,9 @@ const rage_quitV2 = function(input){
         let result = v.match(pattern);
         let sub = result[1].toUpperCase();
         let count = Number(result[2]);
+
         a += sub.repeat(count);
+
         return a;
     }, "");
 
@@ -41,7 +45,9 @@ const rage_quitV3 = (input) => {
         let result = v.match(pattern);
         let sub = result[1].toUpperCase();
         let count = Number(result[2]);
+
         a += sub.repeat(count);
+
         return a;
     }, "");
 
