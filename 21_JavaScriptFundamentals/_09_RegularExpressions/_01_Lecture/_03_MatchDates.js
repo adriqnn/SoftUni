@@ -2,7 +2,7 @@ function match_datesV1(input){
     let path = /\b(?<day>\d{2})([\/.-])(?<month>[A-Z][a-z]{2})\2(?<year>\d{4})\b/g;
     let result = input.shift().matchAll(path);
 
-    let out = ""
+    let out = "";
     for (let date of result) {
         out += `Day: ${date.groups.day}, Month: ${date.groups.month}, Year: ${date.groups.year}\n`;
     }
@@ -14,7 +14,7 @@ const match_datesV2 = function(input){
     let path = /\b(?<day>\d{2})([\/.-])(?<month>[A-Z][a-z]{2})\2(?<year>\d{4})\b/g;
     let result = input.shift().matchAll(path);
 
-    let out = ""
+    let out = "";
     for (let date of result) {
         out += `Day: ${date.groups.day}, Month: ${date.groups.month}, Year: ${date.groups.year}\n`;
     }
@@ -26,7 +26,7 @@ const match_datesV3 = (input) => {
     let path = /\b(?<day>\d{2})([\/.-])(?<month>[A-Z][a-z]{2})\2(?<year>\d{4})\b/g;
     let result = input.shift().matchAll(path);
 
-    let out = ""
+    let out = "";
     for (let date of result) {
         out += `Day: ${date.groups.day}, Month: ${date.groups.month}, Year: ${date.groups.year}\n`;
     }
