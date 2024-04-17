@@ -24,7 +24,7 @@ function treasure_finderV1(input){
             let coordinates = string.match(patternCoordinates);
             coordinates = coordinates[0].substring(1, coordinates[0].length -1);
 
-            return `Found ${type} at ${coordinates}`
+            return `Found ${type} at ${coordinates}`;
         }
     }
 
