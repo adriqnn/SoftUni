@@ -13,7 +13,7 @@ function raceV1(input){
                 places[racer] = 0;
             }
 
-            places[racer] += distance
+            places[racer] += distance;
         }
     });
 
@@ -37,7 +37,7 @@ const raceV2 = function(input){
                 places[racer] = 0;
             }
 
-            places[racer] += distance
+            places[racer] += distance;
         }
     });
 
@@ -61,7 +61,7 @@ const raceV3 = (input) => {
                 places[racer] = 0;
             }
 
-            places[racer] += distance
+            places[racer] += distance;
         }
     });
 
