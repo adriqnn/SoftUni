@@ -1,3 +1,3 @@
-# Counter
+# Counter:
 
-Simple counter program with increase, decrease and reset buttons;
+Simple program for counting with increase, decrease and reset buttons;
