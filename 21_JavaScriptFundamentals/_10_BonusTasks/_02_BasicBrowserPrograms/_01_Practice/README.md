@@ -1,3 +1,3 @@
 # Practice:
 
-Simple welcome page with adjustable title;
+Simple welcome page with adjustable title from input;
