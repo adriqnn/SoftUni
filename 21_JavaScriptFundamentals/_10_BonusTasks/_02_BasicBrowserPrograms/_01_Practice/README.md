@@ -1,3 +1,3 @@
 # Practice:
 
-Simple welcome page with adjustable title from input;
+Simple program that represents a welcome page with adjustable title from input;
