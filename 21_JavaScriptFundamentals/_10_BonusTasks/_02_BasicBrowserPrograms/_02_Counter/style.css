@@ -1,9 +1,9 @@
 #countLabel{
+    font-family: Helvetica;
     margin-top: 120px;
     display: block;
     text-align: center;
     font-size: 10em;
-    font-family: Helvetica;
 }
 
 #btnContainer{
