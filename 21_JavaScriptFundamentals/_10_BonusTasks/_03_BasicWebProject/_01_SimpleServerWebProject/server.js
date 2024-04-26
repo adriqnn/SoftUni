@@ -20,5 +20,4 @@ const server = http.createServer(function(req, res){
 });
 
 server.listen(port);
-
 console.log(`My custom web server listening on port: ${port}!`);
