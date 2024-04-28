@@ -11,7 +11,6 @@ function get_fibonacci_creator(){
     });
 }
 
-
 let fib = get_fibonacci_creator();
 
 console.log(fib());
