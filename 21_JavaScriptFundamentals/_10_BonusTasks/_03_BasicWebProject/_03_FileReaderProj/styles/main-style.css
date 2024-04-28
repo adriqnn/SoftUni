@@ -1,0 +1,71 @@
+body{
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(129, 100%, 72%);
+}
+
+.file-input-container {
+    width: 460px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #000000;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.file-input-label {
+    display: block;
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
+}
+
+.file-input-label:hover {
+    color: #ffffff;
+}
+
+.file-input {
+    display: none;
+}
+
+#file-input-submit-container{
+    margin-top: 50px;
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#submitButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submitButton:hover {
+    background-color: #0056b3;
+}
+
+/* Additional styles for button focus and active states */
+#submitButton:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+#submitButton:active {
+    transform: translateY(1px); /* Add a slight downward shift on click */
+}
