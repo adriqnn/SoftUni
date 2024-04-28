@@ -11,10 +11,8 @@ function chain_sum_function(n){
     return inner;
 }
 
-
 console.log(chain_sum_function(1).toString());
 console.log(chain_sum_function(1)(6)(-3).toString());
-
 
 // chain calling example
 let sum = a => b => b ? sum(a + b) : a;
