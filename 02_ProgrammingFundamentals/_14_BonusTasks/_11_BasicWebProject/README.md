@@ -1,4 +1,4 @@
-# Basic Web Project
+# Basic Web Project:
 
 * MVC -> model, view, controller(view - ui/presentation)(controller - logic)(models - data);
 * MVC Pattern -> request - dispatcher - controller - model - view;
