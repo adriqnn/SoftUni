@@ -1,6 +1,6 @@
 # General Knowledge Examples:
 
-* array slice;
-* array splice;
-* callback;
-* array properties;
+* Array Slice;
+* Array Splice;
+* Callback;
+* Array Properties;
