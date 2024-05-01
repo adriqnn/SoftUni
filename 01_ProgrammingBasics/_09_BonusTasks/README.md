@@ -1,3 +1,3 @@
-# Bonus Tasks
+# Bonus Tasks:
 
 * Drawing Figures with Loops;
