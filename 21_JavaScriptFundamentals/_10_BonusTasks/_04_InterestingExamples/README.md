@@ -1,5 +1,5 @@
 # Interesting Examples:
 
-* fibonacci creator with bind;
-* fibonacci creator with replace destructuring;
-* chain calling functions;
+* Fibonacci Creator with bind;
+* Fibonacci Creator with replace destructuring;
+* Chain Calling functions;
