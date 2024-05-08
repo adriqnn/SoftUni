@@ -1,7 +1,10 @@
-function stringLength(string1,string2,string3){
-    let characterCount = string1.length + string2.length + string3.length;
-    let average = Math.floor(characterCount/3);
+function string_lengthV1(first, second, third){
+    const sum = first.length + second.length + third.length;
+    return `${sum}\n${Math.floor(sum / 3)}`;
+}
 
-    console.log(characterCount);
-    console.log(average);
+function string_lengthV2(string1, string2, string3){
+    const characterCount = string1.length + string2.length + string3.length;
+    const average = Math.floor(characterCount / 3);
+    return `${characterCount}\n${average}`;
 }
