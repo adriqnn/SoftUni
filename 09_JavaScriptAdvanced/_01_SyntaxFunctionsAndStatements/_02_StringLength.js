@@ -6,6 +6,7 @@ function string_lengthV1(first, second, third){
 function string_lengthV2(string1, string2, string3){
     const characterCount = string1.length + string2.length + string3.length;
     const average = Math.floor(characterCount / 3);
+    
     return `${characterCount}\n${average}`;
 }
 
