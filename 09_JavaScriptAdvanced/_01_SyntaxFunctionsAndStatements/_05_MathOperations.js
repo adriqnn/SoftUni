@@ -1,18 +1,34 @@
-function math(n1,n2,opperand){
-    let result;
-    
-    if(opperand == '+'){
-        result = n1+n2;
-    }else if(opperand == '-'){
-        result = n1-n2;
-    }else if(opperand == '*'){
-        result = n1*n2;
-    }else if(opperand == '/'){
-        result = n1/n2;
-    }else if(opperand == '%'){
-        result = n1%n2;
-    }else if(opperand == '**'){
-        result = n1**n2;
+function math_operationsV1(...args){
+    const [first, second, operand] = args;
+
+    let operations = {
+        "+": (a, b) => a + b,
+        "-": (a, b) => a - b,
+        "*": (a, b) => a * b,
+        "/": (a, b) => a / b,
+        "%": (a, b) => a % b,
+        "**": (a, b) => a ** b,
     }
-    console.log(result);
+
+    return operations[operand](first, second);
+}
+
+function math_operationsV2(n1, n2, operand){
+    let result;
+
+    if(operand === '+'){
+        result = n1 + n2;
+    }else if(operand === '-'){
+        result = n1 - n2;
+    }else if(operand === '*'){
+        result = n1 * n2;
+    }else if(operand === '/'){
+        result = n1 / n2;
+    }else if(operand === '%'){
+        result = n1 % n2;
+    }else if(operand === '**'){
+        result = n1 ** n2;
+    }
+
+    return result;
 }
