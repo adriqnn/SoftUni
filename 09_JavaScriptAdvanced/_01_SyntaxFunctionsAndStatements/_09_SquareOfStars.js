@@ -1,10 +1,13 @@
-function stars(num){
-    for(let i = 0;i<num;i++){
-        let starsLine = '';
-        for(let j = 0;j<num;j++){
-            starsLine += '* ';
-            
+function square_of_starsV1(num){
+    let result = "";
+
+    for (let i = 0; i < num; i++) {
+        for (let j = 0; j < num; j++) {
+            result += '* ';
         }
-        console.log(starsLine);
+
+        result += `\n`;
     }
+
+    return result;
 }
