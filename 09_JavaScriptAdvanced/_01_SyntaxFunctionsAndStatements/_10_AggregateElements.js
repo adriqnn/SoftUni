@@ -1,13 +1,35 @@
-function aggregate(params){
-    let sum1 = 0;
-    let sum2 = 0;
-    let sum3 = '';
-    for(let i=0; i < params.length;i++){
-        sum1 += Number(params[i]);
-        sum2 += 1/Number(params[i]);
-        sum3 += params[i];
-    }
-    console.log(sum1);
-    console.log(sum2);
-    console.log(sum3);
+function aggregate_elementsV1(...args){
+    let result = '';
+
+    result += `${args.reduce((a, v) => a + v, 0)}\n`;
+    result += `${args.reduce((a, v) => a + (1 / v), 0)}\n`;
+    result += args.join("");
+
+    return result;
+}
+
+function aggregate_elementsV2(args){
+    let result = '';
+
+    result += `${args.reduce((a, v) => a + v, 0)}\n`;
+    result += `${args.reduce((a, v) => a + (1 / v), 0)}\n`;
+    result += args.join("");
+
+    return result;
+}
+
+function aggregate_elementsV3(params){
+        let array = params;
+        
+        let sum = 0;
+        let inverseSum = 0;
+        let concat = '';
+
+        array.forEach(e => {
+            sum += e;
+            inverseSum += 1 / e;
+            concat += String(e);
+        });
+
+        return `${sum}\n${inverseSum}\n${concat}`;
 }
