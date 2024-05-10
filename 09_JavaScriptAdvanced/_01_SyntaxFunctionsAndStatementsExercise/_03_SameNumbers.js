@@ -35,3 +35,8 @@ function same_numbersV2(number){
 
     return `${isSame}\n${sum}`;
 }
+
+function same_numbersV3(number){
+    const array = `${number}`.split("");
+    return `${array.every((x, i, arr) => arr.slice(i).every(y => x === y))}\n${array.map(Number).reduce((a, v) => a + v, 0)}`;
+}
