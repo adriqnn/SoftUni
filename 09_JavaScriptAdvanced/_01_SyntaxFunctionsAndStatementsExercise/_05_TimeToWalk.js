@@ -35,3 +35,14 @@ function time_to_walkV3(steps, footprint, speed) {
 
     return `${hr.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
 }
+
+function time_to_walkV4(steps, footprint, speed){
+    const distance = steps * footprint;
+    const decimalTime = distance / 1000 / speed;
+    const n = new Date(0, 0);
+
+    n.setSeconds(decimalTime * 60 * 60 + 1);
+    n.setMinutes(n.getMinutes() + Math.floor(distance / 500));
+
+    return n.toTimeString().slice(0, 8);
+}
