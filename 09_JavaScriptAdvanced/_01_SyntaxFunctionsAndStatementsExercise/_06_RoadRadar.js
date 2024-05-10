@@ -59,3 +59,22 @@ function road_radarV2(speed, area){
         ? `The speed is ${speedDiff} km/h faster than the allowed speed of ${limits[area]} - ${getStatus(speedDiff)}`
         : `Driving ${speed} km/h in a ${limits[area]} zone`;
 }
+
+function road_radarV3(speed, area){
+    const limits = {
+        motorway: 130,
+        interstate: 90,
+        city: 50,
+        residential: 20
+    }
+
+    const getStatus = n => {
+        return n > 40 ? "reckless driving" : n > 20 ? "excessive speeding" : "speeding";
+    }
+
+    const speedDiff = speed - limits[area];
+
+    return speedDiff > 0
+        ? `The speed is ${speedDiff} km/h faster than the allowed speed of ${limits[area]} - ${getStatus(speedDiff)}`
+        : `Driving ${speed} km/h in a ${limits[area]} zone`;
+}
