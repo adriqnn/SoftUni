@@ -20,7 +20,7 @@ function aggregate_elementsV2(args){
 
 function aggregate_elementsV3(params){
         let array = params;
-        
+
         let sum = 0;
         let inverseSum = 0;
         let concat = '';
@@ -32,4 +32,8 @@ function aggregate_elementsV3(params){
         });
 
         return `${sum}\n${inverseSum}\n${concat}`;
+}
+
+function aggregate_elementsV4(arr){
+    return `${arr.reduce((a, v) => a + v, 0)}\n${arr.reduce((a,v) => a + 1 / v, 0)}\n${arr.join("")}`;
 }
