@@ -19,3 +19,7 @@ function largest_numberV3(num1, num2, num3){
 
     return `The largest number is ${result}.`;
 }
+
+function largest_numberV4(...args){
+    return `The largest number is ${args.sort((a, b) => b - a)[0]}.`;
+}
