@@ -33,5 +33,5 @@ function same_numbersV2(number){
         sum += Number(input[i]);
     }
 
-    return `${isSame}\n${sum}`
+    return `${isSame}\n${sum}`;
 }
