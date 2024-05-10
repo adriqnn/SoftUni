@@ -8,3 +8,12 @@ function greatest_common_divisorV1(num1, num2){
 
     return gcd;
 }
+
+function greatest_common_divisorV2(...args){
+    let result = 1;
+    for (let i = 2; i < 9; i++) {
+        result = args.every(x => x % 1 === 0) ? i : result;
+    }
+
+    return result;
+}
