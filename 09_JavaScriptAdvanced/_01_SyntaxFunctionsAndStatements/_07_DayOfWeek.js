@@ -28,3 +28,17 @@ function day_of_weekV2(day){
 
     return output;
 }
+
+function day_of_weekV3(day){
+    let weekDays = {
+        "Monday": 1,
+        "Tuesday": 2,
+        "Wednesday": 3,
+        "Thursday": 4,
+        "Friday": 5,
+        "Saturday": 6,
+        "Sunday": 7
+    }
+
+    return weekDays[day] || "error";
+}
