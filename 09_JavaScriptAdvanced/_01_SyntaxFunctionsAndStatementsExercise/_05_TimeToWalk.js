@@ -23,3 +23,15 @@ function time_to_walkV2(steps, footprint, speed){
 
     return (timeHr < 10 ? "0" : "") + timeHr + ":" + (timeMin + rest < 10 ? "0" : "") + (timeMin + rest) + ":" + (timeSec < 10 ? "0" : "") + timeSec;
 }
+
+function time_to_walkV3(steps, footprint, speed) {
+    const distanceKilometers = steps * footprint / 1000;
+    const rest = Math.floor(steps * footprint / 500);
+    const totalTimeMinutes = distanceKilometers / speed * 60 + rest;
+
+    const hr = Math.floor(totalTimeMinutes / 60);
+    const min = Math.floor(totalTimeMinutes % 60);
+    const sec = Math.round((totalTimeMinutes - Math.floor(totalTimeMinutes)) * 60);
+
+    return `${hr.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+}
