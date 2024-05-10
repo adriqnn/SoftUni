@@ -10,3 +10,7 @@ function circle_areaV2(radius){
         return `We can not calculate the circle area, because we receive a ${typeof radius}.`;
     }
 }
+
+function circle_areaV3(r){
+    return typeof r === "number" ? (Math.PI * r * r).toFixed(2) : `We can not calculate the circle area, because we receive a ${typeof r}.`;
+}
