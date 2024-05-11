@@ -1,7 +1,26 @@
-function solve(n, k) {
-    const arr = [1]
-    for (let i = 1; i < n; i++) {
-        arr.push(arr.slice(-k).reduce((a, v) => a + v, 0))
+function last_k_numbers_sequenceV1(length, elements){
+    let array = [1];
+    let helper = [1];
+
+    for (let i = 0; i < length - 1; i++) {
+        let number = helper.reduce((a, v) => a + v, 0);
+        array.push(number);
+
+        if(helper.length >= elements){
+            helper.shift()
+        }
+
+        helper.push(number);
     }
-    return arr
+
+    return array.join(" ");
+}
+
+function last_k_numbers_sequenceV2(length, elements){
+    const arr = [1];
+    for (let i = 0; i < length - 1; i++) {
+        arr.push(arr.slice(-elements).reduce((a, v) => a + v, 0));
+    }
+
+    return arr;
 }
