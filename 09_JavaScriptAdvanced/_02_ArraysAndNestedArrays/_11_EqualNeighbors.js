@@ -1,4 +1,27 @@
-function solve(matrix){
+function equal_neighborsV1(array){
+    let counter = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        let currentArray = array[i];
+
+        for (let j = 0; j < array[i].length; j++) {
+            if(currentArray[j] === currentArray[j + 1]){
+                counter++;
+            }
+
+            if(array[i + 1] !== undefined){
+                let nextArray = array[i + 1];
+                if(currentArray[j] === nextArray[j]){
+                    counter++;
+                }
+            }
+        }
+    }
+
+    return counter;
+}
+
+function equal_neighborsV2(matrix){
     let counter = 0;
 
     for(let rowIndex = 0; rowIndex < matrix.length; rowIndex++){
@@ -19,5 +42,5 @@ function solve(matrix){
         }
     }
 
-    console.log(counter);
+    return counter;
 }
