@@ -1,6 +1,10 @@
-function solve(pies,start,end){
-    const startIndex = pies.indexOf(start);
-    const endIndex = pies.indexOf(end) + 1;
+function piece_of_pieV1(arr, pie1, pie2){
+    let pieOneIndexStart = arr.indexOf(pie1);
+    let pieTwoIndexEnd = arr.indexOf(pie2) + 1;
 
-    return pies.slice(startIndex,endIndex);
+    return arr.slice(pieOneIndexStart, pieTwoIndexEnd);
+}
+
+function piece_of_pieV2(arr, p1, p2){
+    return arr.slice(arr.indexOf(p1), arr.indexOf(p2) + 1);
 }
