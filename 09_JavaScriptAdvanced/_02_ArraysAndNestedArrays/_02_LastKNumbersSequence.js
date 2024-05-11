@@ -13,7 +13,7 @@ function last_k_numbers_sequenceV1(length, elements){
         helper.push(number);
     }
 
-    return array.join(" ");
+    return array;
 }
 
 function last_k_numbers_sequenceV2(length, elements){
