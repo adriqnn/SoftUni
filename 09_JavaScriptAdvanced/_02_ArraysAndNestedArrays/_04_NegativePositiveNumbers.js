@@ -1,12 +1,34 @@
-function solve(nums){
-    const resust = [];
-    
-    for(let num of nums){
-        if (num < 0){
-            resust.unshift(num);
+function negative_positive_numbersV1(arr){
+    let newArr = [];
+
+    arr.forEach(e => {
+        if(e >= 0){
+            newArr.push(e);
         }else{
-            resust.push(num);
+            newArr.unshift(e);
+        }
+    });
+
+    return newArr.join("\n");
+}
+
+function negative_positive_numbersV2(arr){
+    const result = [];
+
+    for(let n of arr){
+        if(n < 0){
+            result.unshift(n);
+        }else{
+            result.push(n);
         }
     }
-    console.log(resust.join('\n'));
+
+    return result;
+}
+
+function negative_positive_numbersV3(arr){
+    return arr.reduce((a, v) => {
+        v < 0 ? a.unshift(v) : a.push(v);
+        return a;
+    }, []);
 }
