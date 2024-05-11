@@ -1,2 +1,2 @@
-# Syntax, Functions and Statements - Exercise
+# Syntax, Functions and Statements - Exercise 
 
