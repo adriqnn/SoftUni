@@ -1,8 +1,18 @@
-function hydrate(worker){
-    if(worker.dizziness){
-        let result = 0.1 * worker.weight * worker.experience;
-        worker.levelOfHydrated = worker.levelOfHydrated + result;
-        worker.dizziness = false;
+function construction_crewV1(obj){
+    if(obj.dizziness === true){
+        obj.levelOfHydrated += 0.1 * obj.weight * obj.experience;
+        obj.dizziness = false;
     }
-    return(worker);
+
+    return obj;
+}
+
+function construction_crewV2(obj){
+    if(obj.dizziness){
+        let result = 0.1 * obj.weight * obj.experience;
+        obj.levelOfHydrated += result;
+        obj.dizziness = false;
+    }
+
+    return obj;
 }
