@@ -22,3 +22,12 @@ function sum_numbersV3(){
 
     html.result().value = getNum(html.getNumField(1)) + getNum(html.getNumField(2));
 }
+
+function sum_numbersV4(){
+    const htmlRef = {
+        num1: Number(document.getElementById("num1").value),
+        num2: Number(document.getElementById("num2").value)
+    }
+
+    document.getElementById("sum").value = htmlRef.num1 + htmlRef.num2;
+}
