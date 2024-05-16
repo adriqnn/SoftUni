@@ -13,3 +13,10 @@ function edit_elementV3(htmlElement, match, replacerString){
     const regex = new RegExp(match, "g");
     htmlElement.textContent = htmlElement.textContent.replace(regex, replacerString);
 }
+
+function edit_elementV4(htmlElement, match, replacerString){
+    let textContent = htmlElement.textContent;
+    const regex = new RegExp(match, "g");
+
+    htmlElement.textContent = textContent.replace(regex, replacerString);
+}
