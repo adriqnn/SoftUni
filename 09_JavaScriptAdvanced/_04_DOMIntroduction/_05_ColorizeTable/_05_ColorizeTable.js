@@ -27,7 +27,7 @@ function colorize_tableV4(){
     }
 }
 
-function colorize_tableV5() {
+function colorize_tableV5(){
     let table = Array.from(document.getElementsByTagName("tr"));
 
     table = table.map((x, i) => {
