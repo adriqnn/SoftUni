@@ -41,3 +41,25 @@ function search_in_listV2() {
 
     html.result.innerHTML = `${count} matches found`;
 }
+
+function search_in_listV3(){
+    const html = {
+        search: document.getElementById("searchText").value,
+        list: document.getElementById("towns").children,
+        result: document.getElementById("result")
+    }
+
+    for (const element of html.list) {
+        element.style.fontWeight = 'normal';
+        element.style.textDecoration = '';
+    }
+
+    let count = Array.from(html.list).filter(e => e.textContent.includes(html.search)).map(e => {
+        e.style.fontWeight = "bold";
+        e.style.textDecoration = "underline";
+        
+        return e;
+    }).length;
+
+    html.result.textContent = `${count} matches found`;
+}
