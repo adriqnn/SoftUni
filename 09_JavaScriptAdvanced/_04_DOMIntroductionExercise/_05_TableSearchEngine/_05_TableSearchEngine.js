@@ -41,3 +41,25 @@ function table_search_engineV2() {
         })
     );
 }
+
+function table_search_engineV3(){
+    const html = {
+        table: document.querySelectorAll('tbody tr'),
+        search: document.getElementById("searchField"),
+        button: document.getElementById("searchBtn")
+    }
+
+    html.button.addEventListener('click', entries);
+
+    function entries(){
+        for(let row of html.table){
+            row.classList.remove('select');
+
+            if(row.innerHTML.includes(html.search.value)){
+                row.className = 'select';
+            }
+        }
+
+        html.search.value = '';
+    }
+}
