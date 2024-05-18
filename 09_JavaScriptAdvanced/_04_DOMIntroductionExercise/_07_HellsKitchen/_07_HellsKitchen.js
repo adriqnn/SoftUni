@@ -55,7 +55,7 @@ function hells_kitchenV1(){
     }
 }
 
-function hells_kitchenV2() {
+function hells_kitchenV2(){
     const html = {
         inputField: document.querySelector("#inputs textarea"),
         outputBestName: document.querySelector("#bestRestaurant p"),
