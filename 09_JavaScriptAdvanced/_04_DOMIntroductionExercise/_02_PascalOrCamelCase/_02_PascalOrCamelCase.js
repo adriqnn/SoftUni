@@ -40,3 +40,20 @@ function pascal_or_camel_caseV2() {
         data.resultSpan.innerHTML = data.case === "Pascal Case" ? result : `${result.charAt(0).toLocaleLowerCase()}${result.slice(1)}`;
     }
 }
+
+function pascal_or_camel_caseV3(){
+    const html = {
+        case: document.getElementById("naming-convention").value,
+        modifyStrong: document.getElementById("text").value,
+        result: document.getElementById("result")
+    }
+
+    const modified = html.modifyStrong.split(" ").map(x => x.toLocaleLowerCase()).map(x => `${x.charAt(0).toLocaleUpperCase()}${x.slice(1)}`).join("");
+
+    
+    if (html.case !== "Camel Case" && html.case !== "Pascal Case") {
+        html.result.textContent = "Error!";
+    } else {
+        html.result.textContent = html.case === "Pascal Case" ? modified : `${modified.charAt(0).toLocaleLowerCase()}${modified.slice(1)}`;
+    }
+}
