@@ -51,3 +51,11 @@ function colorize_tableV6(){
     });
 }
 
+function colorize_tableV7(){
+    let html = {
+        tableRows: Array.from(document.getElementsByTagName("tr")),
+    }
+
+    html.tableRows.filter((e, i) => i % 2 !== 0).map((e) => e.style.backgroundColor = "teal");
+}
+
