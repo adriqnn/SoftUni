@@ -38,3 +38,16 @@ function colorize_tableV5() {
         return x;
     });
 }
+
+function colorize_tableV6(){
+    let html = {
+        tableRows: Array.from(document.getElementsByTagName("tr")),
+    }
+
+    html.tableRows.map((e, i) => {
+        if(i % 2 !== 0){
+            e.style.backgroundColor = "teal";
+        }
+    });
+}
+
