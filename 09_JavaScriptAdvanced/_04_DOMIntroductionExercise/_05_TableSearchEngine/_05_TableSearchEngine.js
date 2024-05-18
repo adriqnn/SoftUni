@@ -17,7 +17,7 @@ function table_search_engineV1(){
     }
 }
 
-function table_search_engineV2() {
+function table_search_engineV2(){
     const data = {
         collection: document.getElementsByTagName("tr"),
         getValue: () => document.getElementById("searchField").value,
