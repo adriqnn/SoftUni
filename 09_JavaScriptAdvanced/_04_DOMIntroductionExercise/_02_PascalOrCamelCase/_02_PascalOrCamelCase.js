@@ -25,7 +25,7 @@ function pascal_or_camel_caseV1(){
     document.getElementById('result').textContent = result;
 }
 
-function pascal_or_camel_caseV2() {
+function pascal_or_camel_caseV2(){
     const data = {
         case: document.getElementById("naming-convention").value,
         str: document.getElementById("text").value,
