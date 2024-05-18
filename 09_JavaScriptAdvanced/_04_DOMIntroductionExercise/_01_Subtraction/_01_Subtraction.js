@@ -15,3 +15,13 @@ function subtractionV2(){
 
     html.result.innerHTML = (Number(html.firstV.value) || 0) - (Number(html.secondV.value) || 0);
 }
+
+function subtractionV3(){
+    const html = {
+        firstNumber: document.getElementById("firstNumber"),
+        secondNumber: document.getElementById("secondNumber"),
+        result: document.getElementById("result")
+    }
+
+    html.result.textContent = Number(html.firstNumber.value) - Number(html.secondNumber.value);
+}
