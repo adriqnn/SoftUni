@@ -18,3 +18,11 @@ function extract_parenthesisV2(content){
 
     return target.innerHTML.match(/(?!\()[\w*\s*\d*]*(?=\))/g).filter(x => x !== "").join("; ");
 }
+
+function extract_parenthesisV3(content){
+    const html = {
+        select: document.getElementById(content)
+    }
+
+    return html.select.innerHTML.match(/(?!\()[\w*\s*\d*]*(?=\))/g).filter(x => x !== "").join("; ");
+}
