@@ -1,5 +1,5 @@
 function table_search_engineV1(){
-    document.querySelector('#searchBtn').addEventListener('click',onClick);
+    document.querySelector('#searchBtn').addEventListener('click', onClick);
 
     let rows = document.querySelectorAll('tbody tr');
     let input = document.getElementById('searchField');
