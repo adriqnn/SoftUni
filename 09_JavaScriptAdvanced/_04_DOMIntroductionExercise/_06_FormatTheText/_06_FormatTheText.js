@@ -28,3 +28,19 @@ function format_the_textV2(){
             return a;
         }, []).map(x => tagTemplate("p", x)).join("\n");
 }
+
+function format_the_textV3(){
+    const html = {
+        input: document.getElementById("input"),
+        output: document.getElementById("output")
+    }
+
+    const inputArray = html.input.value.split(".").filter(x => x.length >= 1).map(x => x.trim());
+
+    while (inputArray.length > 0){
+        let textForParagraph = inputArray.splice(0, 3).join('. ') + '.';
+        let p = document.createElement('p');
+        p.textContent = textForParagraph;
+        html.output.appendChild(p);
+    }
+}
