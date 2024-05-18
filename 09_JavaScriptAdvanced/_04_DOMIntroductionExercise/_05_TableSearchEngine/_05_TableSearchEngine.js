@@ -85,3 +85,26 @@ function table_search_engineV4(){
         document.getElementById("searchField").value = "";
     }
 }
+
+function table_search_engineV5(){
+    const html = {
+        table: document.querySelectorAll('tbody tr'),
+        search: document.getElementById("searchField"),
+        button: document.getElementById("searchBtn")
+    }
+
+    html.button.addEventListener("click", entries);
+
+    function entries(){
+        for(let row of html.table){
+
+            if(row.innerHTML.includes(html.search.value)){
+                row.className = 'select';
+            }else{
+                row.classList.remove('select');
+            }
+        }
+
+        html.search.value = '';
+    }
+}
