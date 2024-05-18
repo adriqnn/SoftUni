@@ -63,3 +63,25 @@ function table_search_engineV3(){
         html.search.value = '';
     }
 }
+
+function table_search_engineV4(){
+    const html = {
+        table: document.querySelectorAll('tbody tr'),
+        button: document.getElementById("searchBtn"),
+        search: () => document.getElementById("searchField").value
+    }
+
+    html.button.addEventListener('click', entries);
+
+    function entries(){
+        for(let row of html.table){
+            row.classList.remove('select');
+
+            if(row.innerHTML.includes(html.search())){
+                row.className = 'select';
+            }
+        }
+
+        document.getElementById("searchField").value = "";
+    }
+}
