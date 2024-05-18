@@ -45,3 +45,18 @@ function accordionV4(){
         html.content.style.display = "none";
     }
 }
+
+function accordionV5(){
+    const html = {
+        button: document.getElementsByClassName("button")[0],
+        text: document.getElementById("extra")
+    }
+
+    if(html.button.textContent === "More"){
+        html.button.textContent = "Less";
+        html.text.style.display = "block";
+    }else{
+        html.button.textContent = "More";
+        html.text.style.display = "none";
+    }
+}
