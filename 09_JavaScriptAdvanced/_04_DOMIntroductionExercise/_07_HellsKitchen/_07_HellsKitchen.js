@@ -123,3 +123,46 @@ function hells_kitchenV3(){
 
     html.button.addEventListener("click", () => displayResult(getBest(deserialize(html.input.value))));
 }
+
+function hells_kitchenV4() {
+    const html = {
+        input: document.querySelector("#inputs textarea"),
+        bestRestaurant: document.querySelector("#bestRestaurant p"),
+        bestWorkers: document.querySelector("#workers p"),
+        button: document.getElementById("btnSend")
+    }
+
+    const db = {};
+    html.button.addEventListener('click', parseData);
+
+    function parseData(){
+        let input = JSON.parse(html.input.value);
+
+        for (const inputElement of input) {
+            let [restaurant, employeeData] = inputElement.split(" - ");
+            let employees = employeeData.split(", ");
+            let avgSalary = 0;
+
+            if(!db.hasOwnProperty(restaurant)){
+                db[restaurant] = {};
+                db[restaurant].empl = [];
+            }
+
+            db[restaurant].empl = [...db[restaurant].empl, ...employees.map(e => {
+                let [employee, salary] = e.split(" ");
+
+                return {employee, salary};
+            })];
+
+            db[restaurant].empl.forEach(e => avgSalary += Number(e.salary))
+            db[restaurant].avgSalary = (avgSalary / db[restaurant].empl.length).toFixed(2);
+        }
+
+        const bestRestaurantObj = Object.entries(db).sort((a, b) => b[1].avgSalary - a[1].avgSalary).map(e => ({[e[0]]: e[1]}))[0];
+        const bestRestaurant = Object.keys(bestRestaurantObj)[0];
+        const bestRestaurantInfo = Object.values(bestRestaurantObj)[0];
+
+        html.bestRestaurant.textContent = `Name: ${bestRestaurant} Average Salary: ${bestRestaurantInfo.avgSalary} Best Salary: ${Number(bestRestaurantInfo.empl.sort((a, b) => b.salary - a.salary).map(e => `${e.salary}`)[0]).toFixed(2)}`;
+        html.bestWorkers.textContent = bestRestaurantInfo.empl.sort((a, b) => b.salary - a.salary).map(e => `Name: ${e.employee} With Salary: ${e.salary}`).join(" ");
+    }
+}
