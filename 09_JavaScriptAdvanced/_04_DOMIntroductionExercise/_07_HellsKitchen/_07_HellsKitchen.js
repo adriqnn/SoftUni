@@ -98,7 +98,6 @@ function hells_kitchenV3(){
     }
 
     const getBest = data => Object.entries(data).sort((x, y) => getAverage(y[1]) - getAverage(x[1]))[0];
-
     const getAverage = workersData => workersData.reduce((a, v) => a + v[1], 0) / workersData.length;
 
     function deserialize(data) {
@@ -154,7 +153,7 @@ function hells_kitchenV4() {
                 return {employee, salary};
             })];
 
-            db[restaurant].empl.forEach(e => avgSalary += Number(e.salary))
+            db[restaurant].empl.forEach(e => avgSalary += Number(e.salary));
             db[restaurant].avgSalary = (avgSalary / db[restaurant].empl.length).toFixed(2);
         }
 
