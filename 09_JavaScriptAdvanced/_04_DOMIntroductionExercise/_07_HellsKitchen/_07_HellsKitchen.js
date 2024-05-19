@@ -123,7 +123,7 @@ function hells_kitchenV3(){
     html.button.addEventListener("click", () => displayResult(getBest(deserialize(html.input.value))));
 }
 
-function hells_kitchenV4() {
+function hells_kitchenV4(){
     const html = {
         input: document.querySelector("#inputs textarea"),
         bestRestaurant: document.querySelector("#bestRestaurant p"),
