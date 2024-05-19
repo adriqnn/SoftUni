@@ -90,8 +90,51 @@ function number_convertorV3(){
         const n = Number(html.numberField.value) || 0;
 
         const formats = {
-            binary: (n) => n.toString(2),
+            binary: (n) => (n >>> 0).toString(2),
             hexadecimal: (n) => n.toString(16).toLocaleUpperCase(),
+            same: (n) => n
+        }
+
+        showAnswer(formats[format](n));
+
+    }
+
+    html.button.addEventListener("click", convert);
+}
+
+function number_convertorV3(){
+    const html = {
+        numberField: document.getElementById("input"),
+        convertTo: document.getElementById("selectMenuTo"),
+        out: document.getElementById("result"),
+        button: document.querySelector("#container > button")
+    }
+
+    const createOptions = (arr) => arr.map(x => {
+        const option = document.createElement("option");
+        x = x.toLocaleLowerCase();
+        option.value = x;
+        option.text = `${x.charAt(0).toLocaleUpperCase()}${x.slice(1)}`;
+
+        return option;
+    });
+
+    createOptions(["BINARY", "HEXADECIMAL", "SAME"]).forEach(x => html.convertTo.add(x));
+
+    const showAnswer = (n) => { html.out.value = n };
+    const convert = () => {
+        const format = html.convertTo.value;
+        const n = Number(html.numberField.value) || 0;
+
+        const formats = {
+            binary: (n) => (n >>> 0).toString(2),
+            hexadecimal: (n) => {
+                if (n < 0) {
+                    n = 0xFFFFFFFF + n + 1;
+                }
+                
+                return n.toString(16).toUpperCase();
+            },
             same: (n) => n
         }
 
