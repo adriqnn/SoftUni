@@ -21,7 +21,7 @@ function search_in_listV1(){
     resultElement.textContent = `${matches} matches found`;
 }
 
-function search_in_listV2() {
+function search_in_listV2(){
     const html = {
         value: document.getElementById("searchText").value,
         data: document.getElementById("towns").children,
