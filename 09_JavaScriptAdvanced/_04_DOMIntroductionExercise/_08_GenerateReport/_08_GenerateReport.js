@@ -1,4 +1,4 @@
-function generate_reportV1() {
+function generate_reportV1(){
     const html = {
         checkboxes: document.querySelectorAll("input[type='checkbox']"),
         rows: document.getElementsByTagName("tr"),
