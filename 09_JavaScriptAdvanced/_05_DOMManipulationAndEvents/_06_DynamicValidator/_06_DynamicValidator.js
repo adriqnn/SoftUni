@@ -1,4 +1,4 @@
-function dynamic_validatorV1() {
+function dynamic_validatorV1(){
     const input = document.getElementById("email");
 
     function isValidEmail(str){
