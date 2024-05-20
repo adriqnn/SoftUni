@@ -23,7 +23,7 @@ function mouse_gradientV2(){
     }
 }
 
-function mouse_gradientV3() {
+function mouse_gradientV3(){
     const html = {
         hoverDiv: document.getElementById("gradient"),
         output: document.getElementById("result")
