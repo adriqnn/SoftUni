@@ -54,7 +54,7 @@ function delete_from_tableV3(){
     const data = {
         emails: Array.from(document.querySelectorAll("tbody tr td:nth-child(2)")),
         inputValue: document.querySelector("body > label > input[type=text]").value,
-        outputField: document.getElementById("result"),
+        outputField: document.getElementById("result")
     }
 
     let removed = false;
