@@ -6,7 +6,7 @@ function list_of_itemsV1(){
     //assign input value to element text content;
     liElement.textContent = content;
     //select <ul> and append new element;
-    const ulElement = document.getElementById('items')
+    const ulElement = document.getElementById('items');
     ulElement.appendChild(liElement);
     //select input field and clear contents(value);
     document.getElementById('newItemText').value = '';
@@ -33,13 +33,13 @@ function list_of_itemsV3(){
     html.list.appendChild(liElement);
 }
 
-function list_of_itemsV4() {
+function list_of_itemsV4(){
     const data = {
         valueToAdd: document.getElementById("newItemText").value,
-        list: document.getElementById("items"),
+        list: document.getElementById("items")
     }
 
-    function eFactory(tag, content) {
+    function eFactory(tag, content){
         const temp = document.createElement(tag);
         temp.innerHTML = content;
 
