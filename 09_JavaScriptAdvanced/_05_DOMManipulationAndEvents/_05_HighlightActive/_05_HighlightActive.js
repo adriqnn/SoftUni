@@ -35,7 +35,7 @@ function highlight_activeV2(){
     }
 }
 
-function highlight_activeV3() {
+function highlight_activeV3(){
     const inputs = document.getElementsByTagName("input");
 
     const addFocus = e => (e.parentNode.className = "focused");
