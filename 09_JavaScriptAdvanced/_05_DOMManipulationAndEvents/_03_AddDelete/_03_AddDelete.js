@@ -14,7 +14,7 @@ function add_deleteV1(){
     deleteBtn.addEventListener('click', onDelete);
 
     //select <ul> and append new element;
-    const ulElement = document.getElementById('items')
+    const ulElement = document.getElementById('items');
     ulElement.appendChild(liElement);
     //select input field and clear contents(value);
     document.getElementById('newItemText').value = '';
@@ -56,7 +56,7 @@ function add_deleteV2(){
 function add_deleteV3(){
     const data = {
         valueToAdd: document.getElementById("newText").value,
-        list: document.getElementById("items"),
+        list: document.getElementById("items")
     }
 
     function eFactory(tag, content) {
