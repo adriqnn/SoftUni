@@ -29,7 +29,7 @@ function fill_dropdownV2(){
     html.mewItemValue.value = "";
 }
 
-function fill_dropdownV3() {
+function fill_dropdownV3(){
     const html = {
         text: document.getElementById("newItemText"),
         value: document.getElementById("newItemValue"),
