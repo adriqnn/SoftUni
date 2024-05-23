@@ -1,4 +1,4 @@
-function sudomuV1() {
+function sudomuV1(){
     const html = {
         row: r => document.querySelector(`#exercise > table > tbody > tr:nth-child(${r})`).querySelectorAll("td > input"),
         outputDiv: document.querySelector("#check p"),
