@@ -1,4 +1,4 @@
-function java_script_quizzV1() {
+function java_script_quizzV1(){
     const html = {
         sections: document.getElementsByTagName("section"),
         outputSection: document.getElementById("results"),
