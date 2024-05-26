@@ -1,7 +1,7 @@
-function foo(n) {
-    let num = n
+function addV1(number){
+    let state = number;
 
-    return function add(n) {
-        return num + n
+    return function add(n){
+        return state + n;
     }
 }
