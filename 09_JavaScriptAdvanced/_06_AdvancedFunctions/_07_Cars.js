@@ -1,22 +1,23 @@
-function solve(input) {
+function carsV1(input){
     const data = {};
- 
-    const commandsMap = {
+
+    const commands = {
         create: (name, inherits, parentName) => {
-            data[name] = inherits ? Object.create(data[parentName]) : {};
+            data[name]  = inherits ? Object.create(data[parentName]) : {};
         },
         set: (name, k, v) => data[name][k] = v,
-        print: name => {
+        print: (name) => {
             const entries = [];
-            for (const key in data[name]) {
+            for (const key in data[name]){
                 entries.push(`${key}:${data[name][key]}`);
             }
+            
             console.log(entries.join(','));
         },
     }
- 
-    input.forEach(x => {
-        const [command, name, k, v] = x.split(" ");
-        commandsMap[command](name, k, v);
+    
+    input.forEach(e => {
+        const [command, name, k, v] = e.split(' ');
+        commands[command](name, k, v);
     });
 }
