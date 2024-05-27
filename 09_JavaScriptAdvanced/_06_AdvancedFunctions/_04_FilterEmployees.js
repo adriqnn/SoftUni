@@ -1,9 +1,6 @@
-function solve(a, b) {
-    const parsed = JSON.parse(a)
-    const [crit, value] = b.split("-")
+function filter_employeesV1(list, filter){
+    const parsed = JSON.parse(list);
+    const [criteria, value] = filter.split("-");
 
-    return parsed
-        .filter(x => x[crit] === value)
-        .map((x, i) => `${i}. ${x.first_name} ${x.last_name} - ${x.email}`)
-        .join("\n")
+    return parsed.filter(e => e[criteria] === value).map((e, i) => `${i}. ${e.first_name} ${e.last_name} - ${e.email}`).join("\n");
 }
