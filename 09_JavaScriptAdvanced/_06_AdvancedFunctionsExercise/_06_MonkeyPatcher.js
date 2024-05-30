@@ -3,7 +3,7 @@ function monkey_patcherV1(command){
         upvote: (x) => {x.upvotes += 1},
         downvote: (x) => {x.downvotes += 1},
         score: (x) => getScore(x)
-    }
+    };
 
     function shouldBeObfuscated(votes){
         return votes > 50;
