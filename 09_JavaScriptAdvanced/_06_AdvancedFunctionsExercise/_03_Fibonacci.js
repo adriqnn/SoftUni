@@ -11,3 +11,17 @@ function fibonacciV1(){
         return prev;
     }
 }
+
+function fibonacciV2(){
+    return (function() {
+        const next = this.prev + this.curr;
+
+        this.prev = this.curr;
+        this.curr = next;
+
+        return this.prev;
+    }).bind({
+        prev: 0,
+        curr: 1
+    });
+}
