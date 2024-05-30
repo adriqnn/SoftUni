@@ -1,10 +1,13 @@
-function add(n){
+function functional_sumV1(n){
     const inner = function(a){
         n += a;
+
         return inner;
     }
-    inner.toString = function(){
+
+    inner.toString = function (){
         return n;
     }
+
     return inner;
 }
