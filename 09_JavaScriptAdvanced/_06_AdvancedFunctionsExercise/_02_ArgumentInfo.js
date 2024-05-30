@@ -43,3 +43,18 @@ function argument_infoV2(...params){
         out += `${type} = ${count}\n`;
     }
 }
+
+function argument_infoV3(...args) {
+    const count = {};
+    const result = args.map(x => {
+        count[typeof x] = (count[typeof x] || 0) + 1;
+
+        return `${typeof x}: ${x}`;
+    });
+
+    let out = ``;
+    result.forEach(e => out += `${e}\n`);
+    Object.entries(count).sort((x,y) => y[1] - x[1]).map(([type, counts]) => out += `${type} = ${counts}\n`);
+
+    return out;
+}
