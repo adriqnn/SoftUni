@@ -18,3 +18,7 @@ function sort_arrayV2(arr,type){
 
     return arr;
 }
+
+function sort_arrayV3(arr, a) {
+    return a === "asc" ? arr.sort((x, y) => x - y) : arr.sort((x, y) => y - x);
+}
