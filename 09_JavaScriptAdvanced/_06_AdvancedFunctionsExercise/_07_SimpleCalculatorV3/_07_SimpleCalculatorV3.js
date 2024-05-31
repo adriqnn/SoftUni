@@ -1,4 +1,4 @@
-function simple_calculatorV1() {
+function simple_calculatorV1(){
     const html = { s1: "", s2: "", output: "" };
 
     function calc(a, b, sign) {
