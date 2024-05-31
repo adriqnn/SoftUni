@@ -12,7 +12,7 @@ function next_articleV1(articles){
     };
 }
 
-function next_articleV2(articles) {
+function next_articleV2(articles){
     const output = document.getElementById("content");
     const ourCopy = articles.slice();
 
