@@ -9,7 +9,7 @@ function simple_calculatorV1(){
         subtract
     };
 
-    function init(f1,f2,fr){
+    function init(f1, f2, fr){
         field1 = document.querySelector(f1);
         field2 = document.querySelector(f2);
         result = document.querySelector(fr);
@@ -25,7 +25,7 @@ function simple_calculatorV1(){
 }
 
 function simple_calculatorV2(){
-    function init(s1,s2,rs){
+    function init(s1, s2, rs){
         this.num1 = document.querySelector(s1);
         this.num2 = document.querySelector(s2);
         this.result = document.querySelector(rs);
