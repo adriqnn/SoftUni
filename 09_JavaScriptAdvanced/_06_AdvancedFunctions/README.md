@@ -18,4 +18,3 @@
 * Partial Application -> sets function arguments without executing them; pass remaining arguments when result is needed; retains all fixed arguments and can be used multiple times;
 * Currying -> supply arguments one at a time instead of at once, arguments can come from different sources and the execution might be delayed; used in function composition, memoization, to handle errors and others;
 * Partial Application vs. Currying -> function with arbitrary number of arguments vs. nested unary functions; currying is not partial application but can be implemented using partial application;
-
