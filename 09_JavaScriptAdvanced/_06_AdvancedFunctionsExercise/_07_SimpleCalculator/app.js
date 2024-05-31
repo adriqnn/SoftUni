@@ -1,4 +1,4 @@
-function calculator(){
+function simple_calculatorV1(){
     let field1 = null;
     let field2 = null;
     let result = null;
