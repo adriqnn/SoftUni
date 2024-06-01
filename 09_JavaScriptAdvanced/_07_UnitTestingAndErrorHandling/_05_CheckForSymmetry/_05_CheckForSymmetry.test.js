@@ -32,7 +32,30 @@ describe('Symmetry Checker',() =>{
     });
 });
 
-// for judge
+// check_for_symmetry_testV2
+describe(`check if array is symmetric`, () => {
+    it(`input -> [0,0] -> true`, () => {
+        expect(check_for_symmetryV2([1, 1])).to.equal(true);
+    });
+
+    it(`input -> [0,1] -> false`, () => {
+        expect(check_for_symmetryV2([0, 1])).to.equal(false);
+    });
+
+    it(`input -> 'a' -> false`, () => {
+        expect(check_for_symmetryV2('')).to.equal(false);
+    });
+
+    it(`input -> [] -> true`, () => {
+        expect(check_for_symmetryV2([1, 1, 1])).to.equal(true);
+    });
+
+    it(`input -> [1, '1'] -> false`, () => {
+        expect(check_for_symmetryV2([1, '1'])).to.equal(false);
+    });
+});
+
+// for judge check_for_symmetry_testV1
 /*
 describe('Symmetry Checker',() =>{
     it('works with symmetric numeric array', () => {
@@ -61,6 +84,31 @@ describe('Symmetry Checker',() =>{
 
     it('returns false for type mismatched params', () => {
         expect(isSymmetric([1, 2, '1'])).to.be.false;
+    });
+});
+*/
+
+// for judge check_for_symmetry_testV2
+/*
+describe(`check if array is symmetric`, () => {
+    it(`input -> [0,0] -> true`, () => {
+        expect(isSymmetric([1, 1])).to.equal(true);
+    });
+    
+    it(`input -> [0,1] -> false`, () => {
+        expect(isSymmetric([0, 1])).to.equal(false);
+    });
+    
+    it(`input -> 'a' -> false`, () => {
+        expect(isSymmetric('')).to.equal(false);
+    });
+    
+    it(`input -> [] -> true`, () => {
+        expect(isSymmetric([1, 1, 1])).to.equal(true);
+    });
+    
+    it(`input -> [1, '1'] -> false`, () => {
+        expect(isSymmetric([1, '1'])).to.equal(false);
     });
 });
 */
