@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { check_for_symmetryV1, check_for_symmetryV2 } from './_05_CheckForSymmetry.js';
 
 // check_for_symmetry_testV1
-describe('Symmetry Checker',() =>{
+describe('Check for Symmetry',() =>{
     it('works with symmetric numeric array', () => {
         expect(check_for_symmetryV1([1, 2, 2, 1])).to.be.true;
     });
@@ -33,7 +33,7 @@ describe('Symmetry Checker',() =>{
 });
 
 // check_for_symmetry_testV2
-describe(`check if array is symmetric`, () => {
+describe(`Check for Symmetry`, () => {
     it(`input -> [0,0] -> true`, () => {
         expect(check_for_symmetryV2([1, 1])).to.equal(true);
     });
@@ -94,19 +94,19 @@ describe(`check if array is symmetric`, () => {
     it(`input -> [0,0] -> true`, () => {
         expect(isSymmetric([1, 1])).to.equal(true);
     });
-    
+
     it(`input -> [0,1] -> false`, () => {
         expect(isSymmetric([0, 1])).to.equal(false);
     });
-    
+
     it(`input -> 'a' -> false`, () => {
         expect(isSymmetric('')).to.equal(false);
     });
-    
+
     it(`input -> [] -> true`, () => {
         expect(isSymmetric([1, 1, 1])).to.equal(true);
     });
-    
+
     it(`input -> [1, '1'] -> false`, () => {
         expect(isSymmetric([1, '1'])).to.equal(false);
     });
