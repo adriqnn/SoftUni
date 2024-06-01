@@ -57,7 +57,7 @@ describe(`Check for Symmetry`, () => {
 
 // for judge check_for_symmetry_testV1
 /*
-describe('Symmetry Checker',() =>{
+describe('Check for Symmetry',() =>{
     it('works with symmetric numeric array', () => {
         expect(isSymmetric([1, 2, 2, 1])).to.be.true;
     });
@@ -90,7 +90,7 @@ describe('Symmetry Checker',() =>{
 
 // for judge check_for_symmetry_testV2
 /*
-describe(`check if array is symmetric`, () => {
+describe(`Check for Symmetry`, () => {
     it(`input -> [0,0] -> true`, () => {
         expect(isSymmetric([1, 1])).to.equal(true);
     });
