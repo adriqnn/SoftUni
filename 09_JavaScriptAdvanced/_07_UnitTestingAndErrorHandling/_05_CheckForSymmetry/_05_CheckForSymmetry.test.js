@@ -1,6 +1,7 @@
 import { expect } from 'chai';
 import { check_for_symmetryV1, check_for_symmetryV2 } from './_05_CheckForSymmetry.js';
 
+// check_for_symmetry_testV1
 describe('Symmetry Checker',() =>{
     it('works with symmetric numeric array', () => {
         expect(check_for_symmetryV1([1, 2, 2, 1])).to.be.true;
