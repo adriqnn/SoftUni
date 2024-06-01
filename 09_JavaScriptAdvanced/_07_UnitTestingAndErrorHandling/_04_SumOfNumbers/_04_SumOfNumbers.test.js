@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { sum_of_numbersV1 } from './_04_SumOfNumbers.js';
 
 // sum_of_numbers_testV1
-describe('sum_of_numbersV1', () => {
+describe('Sum of Numbers', () => {
     it ('works with array of numbers', () => {
         expect(sum_of_numbersV1([2, 2, 1])).to.equal(5);
     });
@@ -17,7 +17,7 @@ describe('sum_of_numbersV1', () => {
 });
 
 // sum_of_numbers_testV2
-describe('sum_of_numbersV1', () => {
+describe('Sum of Numbers', () => {
     it('return NaN if one element of array is not a number', () => {
         expect(isNaN(sum_of_numbersV1([1, 'a']))).to.equal(true);
     });
@@ -31,9 +31,9 @@ describe('sum_of_numbersV1', () => {
     });
 });
 
-// for judge sum_of_numbersV1
+// for judge sum_of_numbers_testV1
 /*
-describe('sum_of_numbersV1', () => {
+describe('Sum of Numbers', () => {
     it ('works with array of numbers', () => {
         expect(sum([2, 2, 1])).to.equal(5);
     });
@@ -48,9 +48,9 @@ describe('sum_of_numbersV1', () => {
 });
 */
 
-// for judge sum_of_numbersV1
+// for judge sum_of_numbers_testV2
 /*
-describe('sum_of_numbersV1', () => {
+describe('Sum of Numbers', () => {
     it('return NaN if one element of array is not a number', () => {
         expect(isNaN(sum([1, 'a']))).to.equal(true);
     });
