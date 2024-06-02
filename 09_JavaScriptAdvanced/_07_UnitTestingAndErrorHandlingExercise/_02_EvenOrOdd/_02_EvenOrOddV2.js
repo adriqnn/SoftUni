@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-function isOddOrEven(string) {
+function even_or_oddV1(string) {
     if (typeof(string) !== 'string') {
         return undefined;
     }
@@ -12,24 +12,24 @@ function isOddOrEven(string) {
     return "odd";
 }
 
-describe('is odd or even tests', () => {
+describe('Even or Odd', () => {
     it('should be undefined if number', () => {
-        expect(isOddOrEven(2)).to.be.undefined;
+        expect(even_or_oddV1(2)).to.be.undefined;
     });
 
     it('should be undefined if array', () => {
-        expect(isOddOrEven([])).to.be.undefined;
+        expect(even_or_oddV1([])).to.be.undefined;
     });
 
     it('should be undefined if object', () => {
-        expect(isOddOrEven({})).to.be.undefined;
+        expect(even_or_oddV1({})).to.be.undefined;
     });
 
     it('should return odd if string is odd', () => {
-        expect(isOddOrEven('hi!')).to.equal('odd');
+        expect(even_or_oddV1('hi!')).to.equal('odd');
     });
 
     it('should return even if string is even', () => {
-        expect(isOddOrEven('hi')).to.equal('even');
+        expect(even_or_oddV1('hi')).to.equal('even');
     });
 });
