@@ -1,4 +1,4 @@
-function notificationsV1(message){
+function notificationV1(message){
     let divEl = document.getElementById('notification');
 
     divEl.textContent = message;
