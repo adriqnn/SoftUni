@@ -1,11 +1,11 @@
 import { expect } from 'chai';
 
-function char_lookupV1(string, index) {
-    if (typeof(string) !== 'string' || !Number.isInteger(index)) {
+function char_lookupV1(string, index){
+    if (typeof(string) !== 'string' || !Number.isInteger(index)){
         return undefined;
     }
 
-    if (string.length <= index || index < 0) {
+    if (string.length <= index || index < 0){
         return "Incorrect index";
     }
 
