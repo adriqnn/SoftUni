@@ -1,5 +1,5 @@
 class CircleV1{
-    constructor (r){
+    constructor(r){
         this._radius = r;
     }
 
