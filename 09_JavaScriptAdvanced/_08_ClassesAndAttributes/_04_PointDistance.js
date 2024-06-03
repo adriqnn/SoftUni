@@ -10,16 +10,16 @@ class PointV1{
 }
 
 class PointV2{
-    constructor(x, y) {
+    constructor(x, y){
         this._x = x;
         this._y = y;
     }
 
-    get x () {
+    get x(){
         return this._x;
     }
-    
-    get y () {
+
+    get y(){
         return this._y;
     }
 
