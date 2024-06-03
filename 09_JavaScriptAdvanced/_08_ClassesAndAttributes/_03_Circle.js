@@ -3,19 +3,19 @@ class CircleV1{
         this._radius = r;
     }
 
-    get radius (){
+    get radius(){
         return this._radius;
     }
 
-    get diameter (){
+    get diameter(){
         return this._radius * 2;
     }
 
-    set diameter (d){
+    set diameter(d){
         this._radius = d / 2;
     }
 
-    get area (){
-        return Math.PI * this._radius * this._radius ;
+    get area(){
+        return Math.PI * this._radius * this._radius;
     }
 }
