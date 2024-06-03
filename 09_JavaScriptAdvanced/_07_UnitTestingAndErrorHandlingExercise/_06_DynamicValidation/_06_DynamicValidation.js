@@ -11,7 +11,7 @@ function dynamic_validationV1(){
     });
 }
 
-function dynamic_validationV2() {
+function dynamic_validationV2(){
     const input = document.getElementById("email");
 
     function isValidEmail(str) {
