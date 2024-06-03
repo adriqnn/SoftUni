@@ -1,4 +1,4 @@
-function even_or_oddV1(string) {
+function even_or_oddV1(string){
     if (typeof(string) !== 'string') {
         return undefined;
     }
