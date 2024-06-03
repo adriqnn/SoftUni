@@ -21,7 +21,7 @@ describe('Math Enforcer', function (){
         });
     });
 
-    describe('subtractTen', function () {
+    describe('subtractTen', function (){
         it('should return undefined for non-number input', () => {
             expect(math_enforcerV1.subtractTen('5')).to.equal(undefined);
         });
@@ -39,7 +39,7 @@ describe('Math Enforcer', function (){
         });
     });
 
-    describe('sum', function() {
+    describe('sum', function(){
         it('should return undefined for invalid first param', () => {
             expect(math_enforcerV1.sum('5', 5)).to.equal(undefined);
         });
@@ -144,7 +144,7 @@ describe('Math Enforcer', function (){
         });
     });
 
-    describe('subtractTen', function () {
+    describe('subtractTen', function (){
         it('should return undefined for non-number input', () => {
             expect(mathEnforcer.subtractTen('5')).to.equal(undefined);
         });
@@ -162,7 +162,7 @@ describe('Math Enforcer', function (){
         });
     });
 
-    describe('sum', function() {
+    describe('sum', function(){
         it('should return undefined for invalid first param', () => {
             expect(mathEnforcer.sum('5', 5)).to.equal(undefined);
         });
