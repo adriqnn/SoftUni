@@ -1,5 +1,5 @@
 function get_peopleV1(){
-    class Person {
+    class Person{
         constructor(firstName, lastName, age, email) {
             this.firstName = firstName;
             this.lastName = lastName;
@@ -7,7 +7,7 @@ function get_peopleV1(){
             this.email = email;
         }
 
-        toString() {
+        toString(){
             return `${this.firstName} ${this.lastName} (age: ${this.age}, email: ${this.email})`;
         }
     }
@@ -21,7 +21,7 @@ function get_peopleV1(){
 }
 
 function get_peopleV2(){
-    class Person {
+    class Person{
         constructor(firstName, lastName, age, email) {
             this.firstName = firstName;
             this.lastName = lastName;
@@ -29,7 +29,7 @@ function get_peopleV2(){
             this.email = email;
         }
 
-        toString() {
+        toString(){
             return `${this.firstName} ${this.lastName} (age: ${this.age}, email: ${this.email})`;
         }
     }
