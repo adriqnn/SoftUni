@@ -1,4 +1,4 @@
-class Request{
+class RequestV1{
     method;
     uri;
     version;
@@ -6,7 +6,7 @@ class Request{
     response = undefined;
     fulfilled = false;
 
-    constructor(method,uri,version,message){
+    constructor(method, uri, version, message){
         this.message = message;
         this.method = method;
         this.uri = uri;
