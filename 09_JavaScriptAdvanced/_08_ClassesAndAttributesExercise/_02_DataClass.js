@@ -1,4 +1,4 @@
-class RequestV1{
+class DataClassV1{
     method;
     uri;
     version;
@@ -14,7 +14,7 @@ class RequestV1{
     }
 }
 
-class RequestV2{
+class DataClassV2{
     constructor (method, uri, version, message){
         this.method = method;
         this.uri = uri;
