@@ -1,4 +1,4 @@
-class Rectangle {
+class RectangleV1{
     width;
     height;
     color;
