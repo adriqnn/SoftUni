@@ -27,3 +27,17 @@ function ticketsV1(arr, criteria){
 
     return tickets;
 }
+
+function ticketsV2(data, criteria){
+    class Ticket{
+        constructor(destination, price, status){
+            this.destination = destination;
+            this.price = price;
+            this.status = status;
+        }
+    }
+
+    return data.slice().map(x => x.split('|')).map(([d, p, s]) => new Ticket(d, Number(p), s)).sort((a, b) => {
+        return typeof a[criteria] === 'number' ? a[criteria] - b[criteria] : a[criteria].localeCompare(b[criteria]);
+    });
+}
