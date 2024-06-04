@@ -1,6 +1,6 @@
 function get_peopleV1(){
     class Person{
-        constructor(firstName, lastName, age, email) {
+        constructor(firstName, lastName, age, email){
             this.firstName = firstName;
             this.lastName = lastName;
             this.age = age;
@@ -22,7 +22,7 @@ function get_peopleV1(){
 
 function get_peopleV2(){
     class Person{
-        constructor(firstName, lastName, age, email) {
+        constructor(firstName, lastName, age, email){
             this.firstName = firstName;
             this.lastName = lastName;
             this.age = age;
