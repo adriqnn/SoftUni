@@ -9,7 +9,7 @@ function ticketsV1(arr, criteria){
 
     let tickets = [];
 
-    for (const line of arr) {
+    for (const line of arr){
         let [destination, price, status] = line.split('|');
         price = Number(price);
         tickets.push(new Ticket(destination, price, status));
