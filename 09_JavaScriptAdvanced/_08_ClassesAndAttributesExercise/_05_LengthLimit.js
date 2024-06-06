@@ -1,4 +1,4 @@
-class Stringer{
+class LengthLimitV1{
     constructor(string, length){
         this.innerString = string;
         this.innerLength = length;
