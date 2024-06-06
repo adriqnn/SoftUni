@@ -1,21 +1,24 @@
-class List {
+class SortedListV1{
     constructor(){
         this.arr = [];
         this.size = this.arr.length;
-    };
+    }
+
     add(element){
         this.arr.push(element);
-        this.arr = this.arr.sort((a,b) => a-b);
+        this.arr = this.arr.sort((a, b) => a - b);
         this.size = this.arr.length;
-    };
+    }
+
     remove(index){
         if(index >= 0 && index < this.arr.length){
             this.arr.splice(index,1);
-            this.size = this.arr.length
+            this.size = this.arr.length;
         }else{
             throw new Error("invalid index!");
         }
-    };
+    }
+
     get(index){
         if(index >= 0 && index < this.arr.length){
             return this.arr[index];
@@ -23,5 +26,4 @@ class List {
             throw new Error("invalid index!");
         }
     }
-
 }
