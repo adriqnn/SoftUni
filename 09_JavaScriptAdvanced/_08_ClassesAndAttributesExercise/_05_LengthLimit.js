@@ -31,16 +31,16 @@ class LengthLimitV2{
         this.innerLength = l;
     }
 
-    increase (v){
+    increase(v){
         this.innerLength += v;
     }
 
-    decrease (v){
+    decrease(v){
         const result = this.innerLength - v;
         this.innerLength = result < 0 ? 0 : result;
     }
 
-    toString (){
+    toString(){
         if (this.innerLength === 0) return '...';
 
         if (this.innerString.length > this.innerLength){
