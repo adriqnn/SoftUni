@@ -26,7 +26,7 @@ class LengthLimitV1{
 }
 
 class LengthLimitV2{
-    constructor (s, l){
+    constructor(s, l){
         this.innerString = s;
         this.innerLength = l;
     }
