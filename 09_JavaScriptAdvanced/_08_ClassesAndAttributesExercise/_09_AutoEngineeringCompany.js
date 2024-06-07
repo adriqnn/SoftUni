@@ -23,3 +23,17 @@ function auto_engineering_companyV1(arr){
 
     return result;
 }
+
+function auto_engineering_companyV2(arr){
+    const data= {};
+
+    arr.forEach(x => {
+        const [brand, model, q] = x.split(' | ');
+
+        data[brand] = data[brand] || {};
+        data[brand][model] = data[brand][model] || 0;
+        data[brand][model] += Number(q);
+    });
+
+    return Object.entries(data).map(([brand, models]) => `${brand}\n${Object.entries(models).map(([model, quantity]) => `###${model} -> ${quantity}`).join('\n')}`).join('\n');
+}
