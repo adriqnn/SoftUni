@@ -1,6 +1,6 @@
 function person_and_teacherV1(){
 
-    class Person {
+    class Person{
         constructor(name, email){
             this.name = name;
             this.email = email;
