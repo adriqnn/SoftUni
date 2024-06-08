@@ -1,14 +1,14 @@
-function personAndTeacher() {
+function person_and_teacherV1(){
 
     class Person {
-        constructor(name, email) {
+        constructor(name, email){
             this.name = name;
             this.email = email;
         }
     }
 
-    class Teacher extends Person {
-        constructor(name, email, subject) {
+    class Teacher extends Person{
+        constructor(name, email, subject){
             super(name, email);
             this.subject = subject;
         }
