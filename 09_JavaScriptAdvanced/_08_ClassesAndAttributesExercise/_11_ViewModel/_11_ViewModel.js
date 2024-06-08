@@ -26,6 +26,34 @@ class ViewModelV1{
     }
 }
 
+class ViewModelV2{
+    constructor(selector, regex){
+        this._value = '';
+        this._elements = Array.from(document.querySelectorAll(selector));
+        this._invalidSymbols = regex;
+    }
+
+    get value(){
+        return this._value;
+    }
+
+    set value(v){
+        this._value = v;
+        
+        this._elements = this._elements.map(x => {
+            x.value = v;
+
+            return x;
+        });
+    }
+
+    get elements(){
+        return this._elements;
+    }
+
+    isValid = () => !this._invalidSymbols.test(this.value);
+}
+
 let textbox = new ViewModelV1('.textbox', /[^a-zA-Z0-9]/)
 let inputs = document.querySelectorAll('.textbox')
 
