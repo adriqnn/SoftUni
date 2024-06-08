@@ -54,8 +54,8 @@ class ViewModelV2{
     isValid = () => !this._invalidSymbols.test(this.value);
 }
 
-let textbox = new ViewModelV1('.textbox', /[^a-zA-Z0-9]/)
-let inputs = document.querySelectorAll('.textbox')
+let textbox = new ViewModelV1('.textbox', /[^a-zA-Z0-9]/);
+let inputs = document.querySelectorAll('.textbox');
 
 inputs.forEach(x => x.addEventListener('input', function () {
     console.log(x.value);
