@@ -1,15 +1,16 @@
-function solve(){
+function extensible_objectV1(){
     let proto = {};
     let inst = Object.create(proto);
 
     inst.extend = function(templates){
         Object.entries(templates).forEach(([key,value]) => {
-            if(typeof value == 'function'){
+            if(typeof value === 'function'){
                 proto[key] = value;
             }else{
                 inst[key] = value;
-            };
+            }
         });
     };
+
     return inst;
 }
