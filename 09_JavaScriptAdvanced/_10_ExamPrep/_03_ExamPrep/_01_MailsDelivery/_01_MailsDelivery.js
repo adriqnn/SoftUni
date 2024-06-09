@@ -1,4 +1,4 @@
-function _01_MailsDelivery(){
+function _01_MailsDeliveryV1(){
     const input = {
         recipient: document.getElementById('recipientName'),
         title: document.getElementById('title'),
@@ -83,4 +83,4 @@ function _01_MailsDelivery(){
     }
 }
 
-_01_MailsDelivery();
+_01_MailsDeliveryV1();
