@@ -59,6 +59,7 @@ class GardenV1{
         });
 
         this.spaceAvailable += plant.spaceRequired;
+        
         return `The ${plantName} has been successfully harvested.`;
     }
 
