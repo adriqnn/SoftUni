@@ -1,4 +1,4 @@
-import {expect} from "chai";
+import { expect } from "chai";
 
 const book_selectionV1 = {
     isGenreSuitable(genre, age){
