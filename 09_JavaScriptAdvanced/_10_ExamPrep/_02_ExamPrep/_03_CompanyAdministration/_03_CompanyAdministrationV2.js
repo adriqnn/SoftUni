@@ -1,4 +1,4 @@
-import {expect} from "chai";
+import { expect } from "chai";
 
 const company_administrationV1 = {
     hiringEmployee(name, position, yearsExperience){
