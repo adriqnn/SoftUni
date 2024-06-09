@@ -1,4 +1,4 @@
-class VegetableStore{
+class VegetableStoreV1{
     constructor(owner, location){
         this.owner = owner;
         this.location = location;
