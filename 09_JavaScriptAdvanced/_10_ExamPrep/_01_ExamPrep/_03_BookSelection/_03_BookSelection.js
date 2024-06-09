@@ -1,13 +1,13 @@
 const book_selectionV1 = {
-    isGenreSuitable(genre, age) {
-        if (age <= 12 && (genre === "Thriller" || genre === "Horror")) {
+    isGenreSuitable(genre, age){
+        if (age <= 12 && (genre === "Thriller" || genre === "Horror")){
             return `Books with ${genre} genre are not suitable for kids at ${age} age`;
         } else {
             return `Those books are suitable`;
         }
     },
-    isItAffordable(price, budget) {
-        if (typeof price !== "number" || typeof budget !== "number") {
+    isItAffordable(price, budget){
+        if (typeof price !== "number" || typeof budget !== "number"){
             throw new Error("Invalid input");
         }
 
@@ -18,14 +18,14 @@ const book_selectionV1 = {
             return `Book bought. You have ${result}$ left`;
         }
     },
-    suitableTitles(array, wantedGenre) {
+    suitableTitles(array, wantedGenre){
         let resultArr = [];
-        if (!Array.isArray(array) || typeof wantedGenre !== "string") {
+        if (!Array.isArray(array) || typeof wantedGenre !== "string"){
             throw new Error("Invalid input");
         }
 
         array.map((obj) => {
-            if (obj.genre === wantedGenre) {
+            if (obj.genre === wantedGenre){
                 resultArr.push(obj.title);
             }
         });
