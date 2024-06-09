@@ -25,6 +25,7 @@ function peopleV1(){
             console.log(`${this.name} received ${this.getSalary()} this month.`);
         }
     }
+    
     class Junior extends Employee{
         constructor(name, age){
             super(name, age);
