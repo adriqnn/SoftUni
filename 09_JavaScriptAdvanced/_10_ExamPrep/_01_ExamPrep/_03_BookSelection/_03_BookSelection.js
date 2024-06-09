@@ -12,7 +12,7 @@ const book_selectionV1 = {
         }
 
         let result = budget - price;
-        if (result < 0) {
+        if (result < 0){
             return "You don't have enough money";
         } else {
             return `Book bought. You have ${result}$ left`;
