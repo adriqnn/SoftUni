@@ -1,6 +1,6 @@
 import { expect } from "chai";
 
-const rentCarV1 = {
+const rent_carV1 = {
     searchCar(shop, model){
         let findModel = [];
         if (Array.isArray(shop) && typeof model == 'string'){
@@ -19,7 +19,7 @@ const rentCarV1 = {
             throw new Error('Invalid input!');
         }
     },
-    calculatePriceOfCar (model, days){
+    calculatePriceOfCar(model, days){
         let catalogue = {
             Volkswagen: 20,
             Audi: 36,
@@ -39,8 +39,8 @@ const rentCarV1 = {
             throw new Error('Invalid input!');
         }
     },
-    checkBudget(costPerDay, days, budget){
-        if (!Number.isInteger(costPerDay) || !Number.isInteger(days) || !Number.isInteger(budget)){
+    checkBudget(costPerDay, days, budget) {
+        if (!Number.isInteger(costPerDay) || !Number.isInteger(days) || !Number.isInteger(budget)) {
             throw new Error('Invalid input!');
         } else {
             let cost = costPerDay * days;
@@ -56,49 +56,49 @@ const rentCarV1 = {
 describe('Rent Car', () =>{
     describe('searchCar', () => {
         it('happy path', () => {
-            expect(rentCarV1.searchCar(['test', 'test2', 'test3'], 'test')).to.equal('There is 1 car of model test in the catalog!');
-            expect(rentCarV1.searchCar(['test', 'test', 'test3'], 'test')).to.equal('There is 2 car of model test in the catalog!');
-            expect(rentCarV1.searchCar(['test', 'test', 'test'], 'test')).to.equal('There is 3 car of model test in the catalog!');
-            expect(() => rentCarV1.searchCar(['test1', 'test2', 'test3'], 'test')).to.throw('There are no such models in the catalog!');
+            expect(rent_carV1.searchCar(['test', 'test2', 'test3'], 'test')).to.equal('There is 1 car of model test in the catalog!');
+            expect(rent_carV1.searchCar(['test', 'test', 'test3'], 'test')).to.equal('There is 2 car of model test in the catalog!');
+            expect(rent_carV1.searchCar(['test', 'test', 'test'], 'test')).to.equal('There is 3 car of model test in the catalog!');
+            expect(() => rent_carV1.searchCar(['test1', 'test2', 'test3'], 'test')).to.throw('There are no such models in the catalog!');
         });
 
         it('errors', () => {
-            expect(() => rentCarV1.searchCar([], 'test')).to.throw('There are no such models in the catalog!');
-            expect(() => rentCarV1.searchCar(1, 'test')).to.throw('Invalid input!');
-            expect(() => rentCarV1.searchCar('test', 'test')).to.throw('Invalid input!');
-            expect(() => rentCarV1.searchCar({}, 'test')).to.throw('Invalid input!');
-            expect(() => rentCarV1.searchCar(['test', 'test2', 'test3'], 1)).to.throw('Invalid input!');
-            expect(() => rentCarV1.searchCar(['test', 'test2', 'test3'], {})).to.throw('Invalid input!');
-            expect(() => rentCarV1.searchCar(['test', 'test2', 'test3'], [])).to.throw('Invalid input!');
-            expect(() => rentCarV1.searchCar(['test', 'test2', 'test3'], '')).to.throw('There are no such models in the catalog!');
+            expect(() => rent_carV1.searchCar([], 'test')).to.throw('There are no such models in the catalog!');
+            expect(() => rent_carV1.searchCar(1, 'test')).to.throw('Invalid input!');
+            expect(() => rent_carV1.searchCar('test', 'test')).to.throw('Invalid input!');
+            expect(() => rent_carV1.searchCar({}, 'test')).to.throw('Invalid input!');
+            expect(() => rent_carV1.searchCar(['test', 'test2', 'test3'], 1)).to.throw('Invalid input!');
+            expect(() => rent_carV1.searchCar(['test', 'test2', 'test3'], {})).to.throw('Invalid input!');
+            expect(() => rent_carV1.searchCar(['test', 'test2', 'test3'], [])).to.throw('Invalid input!');
+            expect(() => rent_carV1.searchCar(['test', 'test2', 'test3'], '')).to.throw('There are no such models in the catalog!');
         })
     });
 
     describe('calculatePriceOfCar', () => {
         it('functionality', () => {
-            expect(rentCarV1.calculatePriceOfCar('Audi', 10)).to.equal('You choose Audi and it will cost $360!');
-            expect(() => rentCarV1.calculatePriceOfCar('whatever', 10)).to.throw('No such model in the catalog!');
+            expect(rent_carV1.calculatePriceOfCar('Audi', 10)).to.equal('You choose Audi and it will cost $360!');
+            expect(() => rent_carV1.calculatePriceOfCar('whatever', 10)).to.throw('No such model in the catalog!');
         });
 
         it('error', () => {
-            expect(() => rentCarV1.calculatePriceOfCar(1, 1)).to.throw('Invalid input!');
-            expect(() => rentCarV1.calculatePriceOfCar(1, "1")).to.throw('Invalid input!');
-            expect(() => rentCarV1.calculatePriceOfCar({}, [])).to.throw('Invalid input!');
-            expect(() => rentCarV1.calculatePriceOfCar([], 1)).to.throw('Invalid input!');
-            expect(() => rentCarV1.calculatePriceOfCar('test', {})).to.throw('Invalid input!');
-            expect(() => rentCarV1.calculatePriceOfCar('test', [])).to.throw('Invalid input!');
+            expect(() => rent_carV1.calculatePriceOfCar(1, 1)).to.throw('Invalid input!');
+            expect(() => rent_carV1.calculatePriceOfCar(1, "1")).to.throw('Invalid input!');
+            expect(() => rent_carV1.calculatePriceOfCar({}, [])).to.throw('Invalid input!');
+            expect(() => rent_carV1.calculatePriceOfCar([], 1)).to.throw('Invalid input!');
+            expect(() => rent_carV1.calculatePriceOfCar('test', {})).to.throw('Invalid input!');
+            expect(() => rent_carV1.calculatePriceOfCar('test', [])).to.throw('Invalid input!');
 
         });
     });
 
     describe('checkBudget', function() {
         it("happy path",() => {
-            expect(rentCarV1.checkBudget(5, 5, 100)).to.equal('You rent a car!');
-            expect(rentCarV1.checkBudget(5, 1, 5)).to.equal('You rent a car!');
+            expect(rent_carV1.checkBudget(5, 5, 100)).to.equal('You rent a car!');
+            expect(rent_carV1.checkBudget(5, 1, 5)).to.equal('You rent a car!');
         });
 
         it("bigger budget",() => {
-            expect(rentCarV1.checkBudget(3, 3, 0)).to.equal('You need a bigger budget!');
+            expect(rent_carV1.checkBudget(3, 3, 0)).to.equal('You need a bigger budget!');
         });
     });
 });
