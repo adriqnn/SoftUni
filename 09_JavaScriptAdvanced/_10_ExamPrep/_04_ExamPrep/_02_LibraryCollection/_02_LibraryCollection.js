@@ -52,7 +52,6 @@ class LibraryCollectionV1{
 
     getStatistics(bookAuthor){
         let returnStringArray = [];
-
         if(!bookAuthor){
             returnStringArray.push(`The book collection has ${this.capacity - this.books.length} empty spots left.`);
             returnStringArray.push(this.books.sort((a,b) => a.bookName.localeCompare(b)).map(book => `${book.bookName} == ${book.bookAuthor} - ${book.payed ? 'Has Paid' : 'Not Paid'}.`).join('\n'));
