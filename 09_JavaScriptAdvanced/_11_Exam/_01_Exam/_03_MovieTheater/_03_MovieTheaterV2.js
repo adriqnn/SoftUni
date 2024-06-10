@@ -65,7 +65,7 @@ const movie_theaterV1 = {
         });
 
         return Math.max(...availableRows);
-    },
+    }
 };
 
 describe('Movie Theater', () =>{
@@ -91,7 +91,7 @@ describe('Movie Theater', () =>{
             expect(() => movie_theaterV1.moneySpent(1, '1', [])).to.throw('Invalid input');
             expect(() => movie_theaterV1.moneySpent(1, [], '1')).to.throw('Invalid input');
             expect(() => movie_theaterV1.moneySpent('1', '1', '1')).to.throw('Invalid input');
-        })
+        });
     });
 
     describe('reservation', function() {
