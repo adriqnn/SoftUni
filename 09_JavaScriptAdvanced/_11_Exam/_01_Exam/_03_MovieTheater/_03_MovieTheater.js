@@ -63,7 +63,7 @@ const movie_theaterV1 = {
         });
 
         return Math.max(...availableRows);
-    },
+    }
 };
 
 export { movie_theaterV1 };
