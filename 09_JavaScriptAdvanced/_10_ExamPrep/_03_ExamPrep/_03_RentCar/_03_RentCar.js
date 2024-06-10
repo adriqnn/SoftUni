@@ -1,4 +1,4 @@
-const rentCarV1 = {
+const rent_carV1 = {
     searchCar(shop, model){
         let findModel = [];
         if (Array.isArray(shop) && typeof model == 'string'){
@@ -51,4 +51,4 @@ const rentCarV1 = {
     }
 }
 
-export { rentCarV1 };
+export { rent_carV1 };
