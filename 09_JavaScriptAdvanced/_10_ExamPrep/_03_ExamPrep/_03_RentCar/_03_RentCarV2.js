@@ -39,8 +39,8 @@ const rentCarV1 = {
             throw new Error('Invalid input!');
         }
     },
-    checkBudget(costPerDay, days, budget) {
-        if (!Number.isInteger(costPerDay) || !Number.isInteger(days) || !Number.isInteger(budget)) {
+    checkBudget(costPerDay, days, budget){
+        if (!Number.isInteger(costPerDay) || !Number.isInteger(days) || !Number.isInteger(budget)){
             throw new Error('Invalid input!');
         } else {
             let cost = costPerDay * days;
