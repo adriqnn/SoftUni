@@ -17,7 +17,7 @@ const rent_carV1 = {
             throw new Error('Invalid input!');
         }
     },
-    calculatePriceOfCar (model, days){
+    calculatePriceOfCar(model, days){
         let catalogue = {
             Volkswagen: 20,
             Audi: 36,
