@@ -25,7 +25,7 @@ describe('Movie Theater', () =>{
             expect(() => movie_theaterV1.moneySpent(1, '1', [])).to.throw('Invalid input');
             expect(() => movie_theaterV1.moneySpent(1, [], '1')).to.throw('Invalid input');
             expect(() => movie_theaterV1.moneySpent('1', '1', '1')).to.throw('Invalid input');
-        })
+        });
     });
 
     describe('reservation', function() {
@@ -66,7 +66,7 @@ describe('Movie Theater', () =>{
 //             expect(() => movieTheater.moneySpent(1, '1', [])).to.throw('Invalid input');
 //             expect(() => movieTheater.moneySpent(1, [], '1')).to.throw('Invalid input');
 //             expect(() => movieTheater.moneySpent('1', '1', '1')).to.throw('Invalid input');
-//         })
+//         });
 //     });
 //
 //     describe('reservation', function() {
