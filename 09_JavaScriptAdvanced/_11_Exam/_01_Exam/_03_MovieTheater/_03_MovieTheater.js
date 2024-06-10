@@ -67,4 +67,3 @@ const movie_theaterV1 = {
 };
 
 export { movie_theaterV1 };
-
