@@ -52,7 +52,7 @@ class RefurbishedSmartphonesV1{
         return `${model} was sold for ${phone.price.toFixed(2)}$`;
     }
 
-    upgradePhones (){
+    upgradePhones(){
         if(this.availableSmartphones.length === 0){
             throw new Error('There are no available smartphones!');
         }
@@ -73,7 +73,7 @@ class RefurbishedSmartphonesV1{
         return[`Upgraded Smartphones:`, phonesMapToString].join('\n');
     }
 
-    salesJournal (criteria) {
+    salesJournal(criteria){
         if(criteria !== 'storage' && criteria !== 'model'){
             throw new Error('Invalid criteria!');
         }
@@ -149,7 +149,7 @@ class RefurbishedSmartphonesV2{
         return `${model} was sold for ${phone.price.toFixed(2)}$`;
     }
 
-    upgradePhones (){
+    upgradePhones(){
         if(this.availableSmartphones.length === 0){
             throw new Error('There are no available smartphones!');
         }
@@ -168,7 +168,7 @@ class RefurbishedSmartphonesV2{
         return[`Upgraded Smartphones:`, phonesMapToString].join('\n');
     }
 
-    salesJournal (criteria) {
+    salesJournal(criteria){
         if(criteria !== 'storage' && criteria !== 'model'){
             throw new Error('Invalid criteria!');
         }
