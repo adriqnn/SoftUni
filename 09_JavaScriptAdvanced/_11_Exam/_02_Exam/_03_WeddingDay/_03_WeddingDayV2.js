@@ -47,7 +47,7 @@ const wedding_dayV1 = {
         }
 
     },
-    tableDistribution(guests, tables) {
+    tableDistribution(guests, tables){
         if(typeof guests !== "number" || guests <= 0 || typeof tables !== "number" || tables <= 0){
             throw new Error("Invalid Information!");
         }
