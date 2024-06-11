@@ -1,6 +1,6 @@
 window.addEventListener("load", gem_collectionV1);
 
-function gem_collectionV1() {
+function gem_collectionV1(){
     const input = {
         gemstone: document.getElementById('gem-name'),
         color: document.getElementById('color'),
@@ -51,7 +51,6 @@ function gem_collectionV1() {
 
         const cancelButton = li.querySelector('.cancel-btn');
         cancelButton.addEventListener('click', cancel);
-
 
         submitButton.disabled = true;
         lists.preview.appendChild(li);
