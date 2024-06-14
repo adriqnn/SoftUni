@@ -1,1 +1,1 @@
-# Simple Canvas Test Initialization
+# Simple Canvas Initialization Test
