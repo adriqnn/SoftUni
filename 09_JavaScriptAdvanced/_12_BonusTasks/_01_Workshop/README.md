@@ -1,4 +1,4 @@
-# Workshop
+# Workshop:
 
 * Canvas Test;
 * Snake Game;
