@@ -1,1 +1,1 @@
-# Simple Snake Game
+# Simple Snake Game with JS and Canvas
