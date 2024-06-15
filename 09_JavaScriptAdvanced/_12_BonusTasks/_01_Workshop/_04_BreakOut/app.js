@@ -71,8 +71,8 @@ function clear(){
 
 function render(){
     clear();
-    for (let b of bricks) {
-        if (b.live === false) {
+    for(let b of bricks){
+        if(b.live === false){
             continue;
         }
 
@@ -87,11 +87,11 @@ function tick(){
     ball.x += ball.vel.x / rate;
     ball.y += ball.vel.y / rate;
 
-    if ((ball.x > limits.right && ball.vel.x > 0) || (ball.x < limits.left && ball.vel.x < 0)){
+    if((ball.x > limits.right && ball.vel.x > 0) || (ball.x < limits.left && ball.vel.x < 0)){
         ball.vel.x *= -1;
     }
 
-    if (ball.y < limits.top && ball.vel.y < 0){
+    if(ball.y < limits.top && ball.vel.y < 0){
         ball.vel.y *= -1;
     }
 
@@ -106,8 +106,8 @@ function tick(){
         ball.vel.y = -y;
     }
 
-    for (let b of bricks){
-        if (b.live === false){
+    for(let b of bricks){
+        if(b.live === false){
             continue;
         }
 
@@ -116,20 +116,20 @@ function tick(){
 }
 
 function checkBrick(b){
-    if ((ball.x + ballSize > b.x) && (ball.x - ballSize < b.x + brickWidth) && (ball.y + ballSize > b.y) && ball.y - ballSize < b.y + brickHeight){
+    if((ball.x + ballSize > b.x) && (ball.x - ballSize < b.x + brickWidth) && (ball.y + ballSize > b.y) && ball.y - ballSize < b.y + brickHeight){
         b.hits--;
 
-        if (b.hits === 0){
+        if(b.hits === 0){
             b.live = false;
         }
 
-        if (ball.x < b.x && ball.vel.x > 0){
+        if(ball.x < b.x && ball.vel.x > 0){
             ball.vel.x *= -1;
-        } else if (ball.x > b.x + brickWidth && ball.vel.x < 0){
+        }else if(ball.x > b.x + brickWidth && ball.vel.x < 0){
             ball.vel.x *= -1;
         }
 
-        if (ball.y < b.y && ball.vel.y > 0){
+        if(ball.y < b.y && ball.vel.y > 0){
             ball.vel.y *= -1;
         } else if (ball.y > b.y + brickHeight && ball.vel.x < 0){
             ball.vel.y *= -1;
@@ -170,7 +170,7 @@ function start(){
             });
         }
     }
-    
+
     requestAnimationFrame(main);
 }
 
