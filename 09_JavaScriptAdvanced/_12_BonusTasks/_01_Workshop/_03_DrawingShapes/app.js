@@ -28,7 +28,6 @@ function drawGrid(){
         ctx.lineTo(width - y * gridSize, width);  
     }
 
-
     ctx.closePath();
     ctx.stroke();
 }
