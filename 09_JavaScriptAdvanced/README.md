@@ -9,6 +9,6 @@
 * Unit Testing and Error Handling;
 * Classes and Attributes;
 * Prototypes and Inheritance;
-* Exam Prep
-* Exam
-* Bonus Tasks
+* Exam Prep;
+* Exam;
+* Bonus Tasks;
