@@ -10,4 +10,3 @@
 * HTTP Response Codes -> 2xx, 3xx, 4xx, and 5xx;
 * Content-Type and Content/Disposition -> examples(application/json, text/html, application/pdf & other);
 * URL -> consists of Network Protocol, Host/IP and Port, Path, Query String and Fragment; URLs are encoded to RFC 1738 and no spaces in URLs;
-
