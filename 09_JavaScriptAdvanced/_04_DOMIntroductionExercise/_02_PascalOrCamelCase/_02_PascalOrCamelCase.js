@@ -19,7 +19,7 @@ function pascal_or_camel_caseV1(){
         }
         result = words.join('');
     }else {
-        result = 'Error!'
+        result = 'Error!';
     }
 
     document.getElementById('result').textContent = result;
@@ -49,7 +49,6 @@ function pascal_or_camel_caseV3(){
     }
 
     const modified = html.modifyStrong.split(" ").map(x => x.toLocaleLowerCase()).map(x => `${x.charAt(0).toLocaleUpperCase()}${x.slice(1)}`).join("");
-
     
     if (html.case !== "Camel Case" && html.case !== "Pascal Case") {
         html.result.textContent = "Error!";
