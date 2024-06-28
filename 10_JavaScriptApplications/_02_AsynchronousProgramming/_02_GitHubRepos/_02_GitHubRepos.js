@@ -1,20 +1,21 @@
 function github_reposV1(){
-    const nameField = document.getElementById(`username`);
-    const resultEl = document.getElementById(`repos`);
-	
-    const url = `https://api.github.com/users/${nameField.value}/repos`;
+	const nameField = document.getElementById(`username`);
+	const resultEl = document.getElementById(`repos`);
 
-    fetch(url)
-	.then(res => {
-	    if(res.ok === false){
-		throw new Error(`${res.status} - ${res.statusText}`);
-	    }
+	const url = `https://api.github.com/users/${nameField.value}/repos`;
 
-	    return res.json();
-	}).then(handleResponse)
-	.catch(error => console.log(error));
+	fetch(url)
+		.then(res => {
+			if(res.ok === false){
+				throw new Error(`${res.status} - ${res.statusText}`);
+			}
 
-    resultEl.innerHTML = '';
+			return res.json();
+		})
+		.then(handleResponse)
+		.catch(error => console.log(error));
+
+	resultEl.innerHTML = '';
 
 	function handleResponse(data){
 		data.forEach(({ full_name, html_url }) => {
