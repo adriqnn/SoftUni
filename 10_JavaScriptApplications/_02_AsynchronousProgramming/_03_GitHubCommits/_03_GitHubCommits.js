@@ -37,3 +37,38 @@ function github_commitsV1(){
     username.value = '';
     repo.value = '';
 }
+
+function github_commitsV2(){
+    const html = {
+        username: document.getElementById('username'),
+        repo: document.getElementById('repo'),
+        result: document.getElementById('commits')
+    }
+
+    const url = `https://api.github.com/repos/${html.username.value}/${html.repo.value}/commits`;
+
+    fetch(url)
+        .then(promise => promise.json())
+        .then(data => {
+            html.result.innerHTML = '';
+
+            if(data.message === 'Not Found'){
+                createElement(`Error: ${data.status} (${data.message})`);
+                return;
+            }
+
+            data.forEach(e => {
+                createElement(`${e.commit.author.name}: ${e.commit.message}`);
+            });
+        });
+
+    html.username.value = '';
+    html.repo.value = '';
+
+    function createElement(text){
+        let li = document.createElement('li');
+        li.textContent = text;
+
+        html.result.appendChild(li);
+    }
+}
