@@ -34,6 +34,6 @@ function github_commitsV1(){
             });
         });
 
-        username.value = '';
-        repo.value = '';
+    username.value = '';
+    repo.value = '';
 }
