@@ -72,3 +72,42 @@ function github_commitsV2(){
         html.result.appendChild(li);
     }
 }
+
+async function github_commitsV3(){
+    const html = {
+        username: document.getElementById('username'),
+        repo: document.getElementById('repo'),
+        result: document.getElementById('commits')
+    }
+
+    const url = `https://api.github.com/repos/${html.username.value}/${html.repo.value}/commits`;
+
+    try{
+        let res = await fetch(url);
+        let data = await res.json();
+
+        html.result.innerHTML = '';
+
+        if(res.ok === false){
+            throw new Error(`Error: ${data.status} (${data.message})`);
+        }
+
+        data.forEach(createElement);
+
+        html.username.value = '';
+        html.repo.value = '';
+    }catch(err){
+        createElement(err);
+    }
+
+    function createElement(obj){
+        let li = document.createElement('li');
+
+        obj.hasOwnProperty('author')
+            ? li.textContent = `${obj.commit.author.name}: ${obj.commit.message}`
+            : li.textContent = obj.message;
+
+        html.result.appendChild(li);
+
+    }
+}
