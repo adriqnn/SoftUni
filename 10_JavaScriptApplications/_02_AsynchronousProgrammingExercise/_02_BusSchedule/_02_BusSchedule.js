@@ -59,7 +59,7 @@ function bus_scheduleV2(){
         name: undefined,
     };
 
-    async function depart() {
+    async function depart(){
         const url = `http://localhost:3030/jsonstore/bus/schedule/${stop.next}`;
         const response = await fetch(url);
         const data = await response.json();
@@ -72,7 +72,7 @@ function bus_scheduleV2(){
         arriveBtn.disabled = false;
     }
 
-    function arrive() {
+    function arrive(){
         banner.textContent = `Arriving at ${stop.name}`;
 
         departBtn.disabled = false;
