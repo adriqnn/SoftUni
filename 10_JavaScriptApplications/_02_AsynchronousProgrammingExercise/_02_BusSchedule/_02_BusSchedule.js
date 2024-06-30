@@ -107,7 +107,7 @@ function bus_scheduleV3(){
     let nextStop;
     let nextStopName = 'depot';
 
-    async function depart (){
+    async function depart(){
         html.depart.disabled = true;
         html.arrive.disabled = false;
         
@@ -115,7 +115,7 @@ function bus_scheduleV3(){
         html.info.innerHTML = `Next stop ${nextStop.name}`;
     }
 
-    function arrive () {
+    function arrive() {
         html.depart.disabled = false;
         html.arrive.disabled = true;
 
