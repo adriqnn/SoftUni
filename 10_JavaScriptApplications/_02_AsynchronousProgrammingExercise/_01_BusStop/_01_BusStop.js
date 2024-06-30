@@ -175,3 +175,91 @@ async function bus_stopV4(){
         document.getElementById('stopName').textContent = 'Error';
     }
 }
+
+async function bus_stopV5(){
+    const input = document.getElementById('stopId');
+    const id = input.value;
+    const url = `http://localhost:3030/jsonstore/bus/businfo/${id}`;
+
+    try {
+        const ul = document.getElementById('buses');
+        ul.innerHTML = '';
+        const response = await fetch(url);
+        const data = await response.json();
+
+        document.getElementById('stopName').textContent = data.name;
+
+        Object.entries(data.buses).map(([bus, time]) => {
+            const result = document.createElement('li');
+            result.textContent = `Bus ${bus} arrives in ${time} minutes`;
+            ul.appendChild(result);
+        });
+
+        input.value = '';
+
+    } catch (error) {
+        document.getElementById('stopName').textContent = 'Error';
+    }
+}
+
+async function bus_stopV6(){
+    const html = {
+        input: document.getElementById('stopId'),
+        ul: document.getElementById('buses'),
+        divStop: document.getElementById('stopName'),
+    };
+
+
+    const id = html.input.value;
+    const url = `http://localhost:3030/jsonstore/bus/businfo/${id}`;
+
+    try {
+        html.ul.innerHTML = '';
+        const response = await fetch(url);
+        const data = await response.json();
+
+        html.divStop.textContent = data.name;
+
+        Object.entries(data.buses).map(([bus, time]) => {
+            const result = document.createElement('li');
+            result.textContent = `Bus ${bus} arrives in ${time} minutes`;
+            html.ul.appendChild(result);
+        });
+
+        html.input.value = '';
+    } catch (error) {
+        document.getElementById('stopName').textContent = 'Error';
+        html.input.value = '';
+    }
+}
+
+async function bus_stopV7(){
+    const html = {
+        stopName: document.getElementById(`stopName`),
+        busses: document.getElementById(`buses`),
+        stopID: document.getElementById(`stopId`)
+    }
+
+    html.stopName.innerHTML = '';
+    html.busses.innerHTML = '';
+
+    try {
+        const data = await fetch(`http://localhost:3030/jsonstore/bus/businfo/${html.stopID.value}`);
+        if(! data.ok){
+            throw new Error();
+        }
+
+        const deserialized = await data.json();
+        html.stopName.innerHTML = deserialized.name;
+
+        Object.entries(deserialized.buses).forEach(([bus, time]) => {
+            const e = document.createElement('li');
+            e.innerHTML = `Bus ${bus} arrives in ${time}`;
+
+            html.busses.appendChild(e);
+        });
+
+    } catch (e) {
+        html.stopName.innerHTML = 'Error';
+    }
+}
