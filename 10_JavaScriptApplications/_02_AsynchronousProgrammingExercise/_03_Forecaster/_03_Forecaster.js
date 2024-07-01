@@ -337,3 +337,72 @@ function forecasterV3(){
         }
     }
 }
+
+function forecasterV4(){
+    const html = {
+        location: document.getElementById('location'),
+        button: document.getElementById('submit'),
+        forecast: document.getElementById('forecast')
+    }
+
+    html.button.addEventListener('click', getWeather);
+
+    const url = `http://localhost:3030/jsonstore/forecaster`;
+    const codes = { 'new york': 'ny', 'london': 'london', 'barcelona': 'barcelona' };
+    const weatherIcons = { "Sunny": "&#x2600", "Partly sunny": "&#x26C5", "Overcast": "&#x2601", "Rain": "&#x2614", "Degrees": "&#176" };
+
+    async function getWeather(){
+        html.forecast.style.display = 'block';
+        html.forecast.innerHTML = "";
+
+        try{
+            if(!codes.hasOwnProperty(html.location.value.toLowerCase())){
+                throw new Error('Error');
+            }
+
+            let c = await displayWeatherInfo(codes[html.location.value.toLowerCase()], 'today');
+            let u = await displayWeatherInfo(codes[html.location.value.toLowerCase()], 'upcoming');
+
+            html.forecast.innerHTML =  c + u;
+        }catch(err){
+            html.forecast.innerHTML = `<div id="current"><div class="label">${err.message}</div></div>`;
+        }
+    }
+
+    async function displayWeatherInfo(code, req){
+        let res = await fetch(`${url}/${req}/${code}`);
+        let data = await res.json();
+
+        return req === 'today' ? createCurrentDiv(data) : createUpcomingContainer(data);
+    }
+
+    function createCurrentDiv(data){
+        return `<div id="current">
+                    <div class="label">Current conditions</div>
+                    <div class="forecasts">
+                        <span class="condition symbol">${weatherIcons[data.forecast.condition]}</span>
+                        <span class="condition">
+                            <span class="forecast-data">${data.name}</span>
+                            <span class="forecast-data">${data.forecast.low}${weatherIcons.Degrees}/${data.forecast.high}${weatherIcons.Degrees}</span>
+                            <span class="forecast-data">${data.forecast.condition}</span>
+                        </span>
+                    </div>
+                </div>`;
+    }
+
+    function createUpcomingContainer(data){
+        let upcoming = data.forecast.map(e => {
+            return eWeather = `<upcoming class="upcoming">
+                                        <span class="symbol">${weatherIcons[e.condition]}</span>
+                                        <span class="forecast-data">${e.low}${weatherIcons.Degrees}/${e.high}${weatherIcons.Degrees}</span>
+                                        <span class="forecast-data">${e.condition}</span>
+                                    </upcoming>`;
+        }).join("");
+
+        return `<div id="upcoming">
+                    <div class="label">Three-day forecast</div>
+                        ${upcoming}
+                    </div>
+                </div>`;
+    }
+}
