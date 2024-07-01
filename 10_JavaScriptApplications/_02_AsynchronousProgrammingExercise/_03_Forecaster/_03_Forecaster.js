@@ -6,7 +6,7 @@ function forecasterV1(){
         current: document.getElementById('current'),
         upcoming: document.getElementById('upcoming'),
         labelCurrent: document.querySelector('#current .label'),
-        labelUpcoming: document.querySelector('#upcoming .label'),
+        labelUpcoming: document.querySelector('#upcoming .label')
     }
 
     html.button.addEventListener('click', getWeather);
