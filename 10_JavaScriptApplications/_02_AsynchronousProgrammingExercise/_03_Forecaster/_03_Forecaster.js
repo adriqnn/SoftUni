@@ -38,7 +38,7 @@ function forecasterV1(){
         let res = await fetch(`${url}/today/${code}`);
         let data = await res.json();
 
-        let divContainer = createCurrentDiv(data);
+        let divContainer = createCurrentContainer(data);
 
         html.current.innerHTML = "";
         html.current.appendChild(html.labelCurrent);
@@ -60,7 +60,7 @@ function forecasterV1(){
         html.forecast.appendChild(html.upcoming);
     }
 
-    function createCurrentDiv(data){
+    function createCurrentContainer(data){
         let divContainer = document.createElement('div');
         divContainer.classList.add('forecasts');
 
