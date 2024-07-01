@@ -16,6 +16,9 @@ function forecasterV1(){
     const weatherIcons = { "Sunny": "&#x2600", "Partly sunny": "&#x26C5", "Overcast": "&#x2601", "Rain": "&#x2614", "Degrees": "&#176" };
 
     async function getWeather(){
+        html.forecast.style.display = 'block';
+        html.forecast.innerHTML = "";
+
         try{
             if(!codes.hasOwnProperty(html.location.value.toLowerCase())){
                 throw new Error('Error');
@@ -23,21 +26,41 @@ function forecasterV1(){
 
             await displayCurrentWeather(codes[html.location.value.toLowerCase()]);
             await displayUpcomingWeather(codes[html.location.value.toLowerCase()]);
-
-            html.forecast.style.display = 'block';
         }catch(err){
-            html.forecast.style.display = 'block';
-            html.forecast.innerHTML = "";
-
-            html.labelCurrent.textContent = err.message;
+            html.current.innerHTML = "";
+            html.current.appendChild(html.labelCurrent);
             html.forecast.appendChild(html.current);
+            html.labelCurrent.textContent = err.message;
         }
     }
 
     async function displayCurrentWeather(code){
-        let res = await fetch(`${url}/today/${codes[code]}`);
+        let res = await fetch(`${url}/today/${code}`);
         let data = await res.json();
 
+        let divContainer = createCurrentDiv(data);
+
+        html.current.innerHTML = "";
+        html.current.appendChild(html.labelCurrent);
+        html.labelCurrent.textContent = "Current conditions";
+        html.current.appendChild(divContainer);
+        html.forecast.appendChild(html.current);
+    }
+
+    async function displayUpcomingWeather(code){
+        let res = await fetch(`${url}/upcoming/${code}`);
+        let data = await res.json();
+
+        let divContainer = createUpcomingContainer(data);
+
+        html.upcoming.innerHTML = "";
+        html.upcoming.appendChild(html.labelUpcoming);
+        html.labelUpcoming.textContent = 'Three-day forecast';
+        html.upcoming.appendChild(divContainer);
+        html.forecast.appendChild(html.upcoming);
+    }
+
+    function createCurrentDiv(data){
         let divContainer = document.createElement('div');
         divContainer.classList.add('forecasts');
 
@@ -63,21 +86,34 @@ function forecasterV1(){
         spanConditionContainer.append(spanName, spanDegrees, spanInnerCondition);
         divContainer.append(spanCondition, spanConditionContainer);
 
-        html.forecast.innerHTML = "";
-        html.labelCurrent.textContent = 'Current conditions';
-        html.current.append(html.labelCurrent, divContainer);
-        html.forecast.append(html.current);
+        return divContainer;
     }
 
-    async function displayUpcomingWeather(code){
-        html.upcoming.innerHTML = "";
-        html.upcoming.appendChild(html.labelCurrent);
-        html.labelUpcoming.textContent = 'Three-day forecast';
+    function createUpcomingContainer(data){
+        let divContainer = document.createElement('div');
+        divContainer.classList.add('forecast-info');
 
-        let res = await fetch(`${url}/upcoming/${codes[code]}`);
-        let data = await res.json();
+        data.forecast.forEach(e => {
+            let spanContainer = document.createElement('upcoming');
+            spanContainer.className = 'upcoming';
 
-        console.log(data);
+            let spanOne = document.createElement('span');
+            spanOne.className = 'symbol';
+            spanOne.innerHTML = weatherIcons[e.condition];
+
+            let spanTwo = document.createElement('span');
+            spanTwo.className = 'forecast-data';
+            spanTwo.innerHTML = `${e.low}${weatherIcons.Degrees}/${e.high}${weatherIcons.Degrees}`;
+
+            let spanThree = document.createElement('span');
+            spanThree.className = 'forecast-data';
+            spanThree.textContent = e.condition;
+
+            spanContainer.append(spanOne, spanTwo, spanThree);
+            divContainer.appendChild(spanContainer);
+        })
+
+        return divContainer;
     }
 }
 
