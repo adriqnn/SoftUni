@@ -8,6 +8,7 @@ async function bus_stopV1() {
     async function getBusInfoByID(){
         try{
             const res = await fetch(`${url}${html.busStopId.value}`);
+            
             if(res.status !== 200){
                 throw new Error(`Error`);
             }
@@ -55,6 +56,7 @@ async function bus_stopV2() {
     async function getBusInfoByID(){
         try{
             const res = await fetch(`${url}${html.busStopId.value}`);
+            
             if(res.status !== 200){
                 throw new Error(`Error`);
             }
@@ -117,8 +119,8 @@ async function bus_stopV3(){
 
     function createBusStopInfoElement(obj){
         const fragment = document.createDocumentFragment();
-
         const div = document.createElement('div');
+        
         div.id = 'stopName';
         div.textContent = obj === 'Error' ? 'Error' : obj.name;
         fragment.appendChild(div);
