@@ -77,8 +77,6 @@ function forecasterV1(){
         let res = await fetch(`${url}/upcoming/${codes[code]}`);
         let data = await res.json();
 
-
-
         console.log(data);
     }
 }
