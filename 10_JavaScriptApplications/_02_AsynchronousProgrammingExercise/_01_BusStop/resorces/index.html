@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
-    <title>Bus Schedule</title>
+    <title>Bus Stop</title>
 </head>
 
 <body>
-    <div id="schedule">
-        <div id="info"><span class="info">Not Connected</span></div>
-        <div id="controls">
-            <input id="depart" value="Depart" type="button" onclick="result.depart()">
-            <input id="arrive" value="Arrive" type="button" onclick="result.arrive()" disabled="true">
+    <div id="stopInfo" style="width:20em">
+        <div>
+            <label for="stopId">Stop ID: </label>
+            <input id="stopId" type="text">
+            <input id="submit" type="button" value="Check" onclick="bus_stopV1()"></div>
+        <div id="result">
+            <div id="stopName"></div>
+            <ul id="buses"></ul>
         </div>
     </div>
-    
-    <script src="../_02_BusSchedule.js"></script>
+
+    <script src="../_01_BusStop.js"></script>
 </body>
 
 </html>
