@@ -19,7 +19,7 @@ async function locked_profileV1(){
                         <hr>
                         <label>Username</label>
                         <input type="text" name="${e._id}-name" value="${e.username}" disabled readonly/>
-                        <div class="user1Username" style="display:none">
+                        <div class="${e._id}" style="display:none">
                             <hr>
                             <label>Email:</label>
                             <input type="email" name="${e._id}-email" value="${e.email}" disabled readonly/>
