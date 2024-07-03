@@ -43,3 +43,52 @@ function accordionV1(){
 }
 
 accordionV1();
+
+function accordionV2(){
+    const urlArticles = 'http://localhost:3030/jsonstore/advanced/articles/list';
+    const singularArticle = 'http://localhost:3030/jsonstore/advanced/articles/details/';
+    const html = { main: document.getElementById('main') };
+
+    window.onload = populateList;
+
+    async function populateList(){
+        let res = await fetch(urlArticles);
+        let articles = await res.json();
+
+        let promises = articles.map(async e => {
+            return `<div class="accordion">
+                        <div class="head">
+                            <span>${e.title}</span>
+                            <button class="button" id="${e._id}">More</button>
+                        </div>
+                        <div class="extra" style="display:none">
+                            <p>${await getInfoById(e._id)}</p>
+                        </div>
+                    </div>`;
+        });
+
+        html.main.innerHTML = (await Promise.all(promises)).join(" ");
+
+        async function getInfoById(id){
+            const res = await fetch(singularArticle + id);
+            const additionalInfo = await res.json();
+
+            return additionalInfo.content;
+        }
+
+        document.querySelectorAll('button').forEach(e => e.addEventListener('click', reveal));
+
+        async function reveal(e){
+            const id = e.target.id;
+            const extra = e.target.parentElement.parentElement.querySelector('.extra');
+
+            if(e.target.textContent === 'More'){
+                e.target.textContent = 'Less';
+                extra.style.display = 'block';
+            }else{
+                e.target.textContent = 'More';
+                extra.style.display = 'none';
+            }
+        }
+    }
+}
