@@ -38,7 +38,7 @@ async function locked_profileV1(){
             const content = button.previousElementSibling;
             const radio = button.parentElement.children[2];
 
-            if(!radio.checked === true){
+            if(!radio.checked){
                 if(button.textContent === 'Show more'){
                     button.textContent = 'Hide it';
                     content.style.display = 'block';
