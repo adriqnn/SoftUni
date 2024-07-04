@@ -12,7 +12,12 @@ function bus_scheduleV1(){
         html.busDepart.disabled = true;
         html.busArrive.disabled = false;
 
-        nextStop = await getBusStop(currentStop);
+        try{
+            nextStop = await getBusStop(currentStop);
+        }catch(err){
+            console.log(err);
+        }
+
         html.info.textContent = `Next stop ${nextStop.name}`;
     }
 
@@ -38,7 +43,6 @@ function bus_scheduleV1(){
             }
 
             return await res.json();
-
         }catch(err){
             html.info.textContent = `${err.message}`;
             html.busDepart.disabled = true;
@@ -56,20 +60,23 @@ function bus_scheduleV2(){
 
     let stop = {
         next: 'depot',
-        name: undefined,
+        name: undefined
     };
 
     async function depart(){
         const url = `http://localhost:3030/jsonstore/bus/schedule/${stop.next}`;
-        const response = await fetch(url);
-        const data = await response.json();
 
-        stop = data;
+        try{
+            const response = await fetch(url);
+            stop = await response.json();
 
-        banner.textContent = `Next stop ${stop.name}`;
+            banner.textContent = `Next stop ${stop.name}`;
 
-        departBtn.disabled = true;
-        arriveBtn.disabled = false;
+            departBtn.disabled = true;
+            arriveBtn.disabled = false;
+        }catch(err){
+            console.log(err);
+        }
     }
 
     function arrive(){
@@ -98,19 +105,19 @@ function bus_scheduleV3(){
             return await stop.json();
         } catch (e) {
             html.info.innerHTML = 'Error';
-            
+
             html.arrive.disabled = true;
             html.depart.disabled = true;
         }
     }
-    
+
     let nextStop;
     let nextStopName = 'depot';
 
     async function depart(){
         html.depart.disabled = true;
         html.arrive.disabled = false;
-        
+
         nextStop = await getStop(nextStopName);
         html.info.innerHTML = `Next stop ${nextStop.name}`;
     }
