@@ -35,29 +35,37 @@ function forecasterV1(){
     }
 
     async function displayCurrentWeather(code){
-        let res = await fetch(`${url}/today/${code}`);
-        let data = await res.json();
+        try{
+            let res = await fetch(`${url}/today/${code}`);
+            let data = await res.json();
 
-        let divContainer = createCurrentContainer(data);
+            let divContainer = createCurrentContainer(data);
 
-        html.current.innerHTML = "";
-        html.current.appendChild(html.labelCurrent);
-        html.labelCurrent.textContent = "Current conditions";
-        html.current.appendChild(divContainer);
-        html.forecast.appendChild(html.current);
+            html.current.innerHTML = "";
+            html.current.appendChild(html.labelCurrent);
+            html.labelCurrent.textContent = "Current conditions";
+            html.current.appendChild(divContainer);
+            html.forecast.appendChild(html.current);
+        }catch(err){
+            console.log(err);
+        }
     }
 
     async function displayUpcomingWeather(code){
-        let res = await fetch(`${url}/upcoming/${code}`);
-        let data = await res.json();
+        try{
+            let res = await fetch(`${url}/upcoming/${code}`);
+            let data = await res.json();
 
-        let divContainer = createUpcomingContainer(data);
+            let divContainer = createUpcomingContainer(data);
 
-        html.upcoming.innerHTML = "";
-        html.upcoming.appendChild(html.labelUpcoming);
-        html.labelUpcoming.textContent = 'Three-day forecast';
-        html.upcoming.appendChild(divContainer);
-        html.forecast.appendChild(html.upcoming);
+            html.upcoming.innerHTML = "";
+            html.upcoming.appendChild(html.labelUpcoming);
+            html.labelUpcoming.textContent = 'Three-day forecast';
+            html.upcoming.appendChild(divContainer);
+            html.forecast.appendChild(html.upcoming);
+        }catch(err){
+            console.log(err);
+        }
     }
 
     function createCurrentContainer(data){
@@ -207,6 +215,7 @@ function forecasterV2(){
 
     function createEl(type, className, text){
         const el = document.createElement(type);
+
         if(className){
             el.className = className;
         }
@@ -392,11 +401,11 @@ function forecasterV4(){
 
     function createUpcomingContainer(data){
         let upcoming = data.forecast.map(e => {
-            return eWeather = `<upcoming class="upcoming">
-                                        <span class="symbol">${weatherIcons[e.condition]}</span>
-                                        <span class="forecast-data">${e.low}${weatherIcons.Degrees}/${e.high}${weatherIcons.Degrees}</span>
-                                        <span class="forecast-data">${e.condition}</span>
-                                    </upcoming>`;
+            return `<upcoming class="upcoming">
+                        <span class="symbol">${weatherIcons[e.condition]}</span>
+                        <span class="forecast-data">${e.low}${weatherIcons.Degrees}/${e.high}${weatherIcons.Degrees}</span>
+                        <span class="forecast-data">${e.condition}</span>
+                    </upcoming>`;
         }).join("");
 
         return `<div id="upcoming">
