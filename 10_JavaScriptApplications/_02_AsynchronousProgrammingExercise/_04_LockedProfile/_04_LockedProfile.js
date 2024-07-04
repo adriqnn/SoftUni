@@ -3,7 +3,12 @@ async function locked_profileV1(){
     const html = { main: document.getElementById('main') };
 
     html.main.innerHTML = '';
-    await generateContent();
+
+    try{
+        await generateContent();
+    }catch(err){
+        console.log(err);
+    }
 
     async function generateContent(){
         let res = await fetch(url);
@@ -56,7 +61,12 @@ async function locked_profileV2(){
     const html = { main: document.getElementById('main') };
 
     html.main.innerHTML = '';
-    await generateContent();
+
+    try{
+        await generateContent();
+    }catch(err){
+        console.log(err);
+    }
 
     async function generateContent(){
         let res = await fetch(url);
@@ -106,13 +116,17 @@ async function locked_profileV2(){
 }
 
 async function locked_profileV3(){
-    const data = await fetch(`http://localhost:3030/jsonstore/advanced/profiles`);
-    const des = await data.json();
+    try{
+        const data = await fetch(`http://localhost:3030/jsonstore/advanced/profiles`);
+        const des = await data.json();
 
-    const main = document.querySelector('main');
-    main.innerHTML = '';
+        const main = document.querySelector('main');
+        main.innerHTML = '';
 
-    Object.values(des).forEach((x, i) => main.appendChild(profileTemplate(x, i + 1)));
+        Object.values(des).forEach((x, i) => main.appendChild(profileTemplate(x, i + 1)));
+    }catch(err){
+        console.log(err);
+    }
 
     function profileTemplate ({ username, email, age }, id){
         const wrapper = document.createElement('div');
