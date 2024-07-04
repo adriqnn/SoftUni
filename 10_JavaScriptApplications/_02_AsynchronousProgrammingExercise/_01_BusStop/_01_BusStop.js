@@ -8,7 +8,7 @@ async function bus_stopV1(){
     async function getBusInfoByID(){
         try{
             const res = await fetch(`${url}${html.busStopId.value}`);
-            
+
             if(res.status !== 200){
                 throw new Error(`Error`);
             }
@@ -33,10 +33,10 @@ async function bus_stopV1(){
         }else{
             div.textContent = obj.name;
             Object.entries(obj.buses).forEach(e => {
-               const li = document.createElement('li');
+                const li = document.createElement('li');
 
-               li.textContent = `Bus ${e[0]} arrives in ${e[1]} minutes`;
-               ul.appendChild(li);
+                li.textContent = `Bus ${e[0]} arrives in ${e[1]} minutes`;
+                ul.appendChild(li);
             });
         }
 
@@ -56,7 +56,7 @@ async function bus_stopV2(){
     async function getBusInfoByID(){
         try{
             const res = await fetch(`${url}${html.busStopId.value}`);
-            
+
             if(res.status !== 200){
                 throw new Error(`Error`);
             }
@@ -103,7 +103,7 @@ async function bus_stopV3(){
     };
 
     async function getBusInfoByID(){
-        try {
+        try{
             const res = await fetch(`${url}${html.busStopId.value}`);
 
             if(!res.ok){
@@ -111,7 +111,7 @@ async function bus_stopV3(){
             }
 
             return await res.json();
-        } catch (err) {
+        }catch(err){
             console.error(err);
             return 'Error';
         }
@@ -120,7 +120,7 @@ async function bus_stopV3(){
     function createBusStopInfoElement(obj){
         const fragment = document.createDocumentFragment();
         const div = document.createElement('div');
-        
+
         div.id = 'stopName';
         div.textContent = obj === 'Error' ? 'Error' : obj.name;
         fragment.appendChild(div);
@@ -157,7 +157,7 @@ async function bus_stopV4(){
     const id = input.value;
     const url = `http://localhost:3030/jsonstore/bus/businfo/${id}`;
 
-    try {
+    try{
         const ul = document.getElementById('buses');
         ul.innerHTML = '';
         const response = await fetch(url);
@@ -173,7 +173,7 @@ async function bus_stopV4(){
 
         input.value = '';
 
-    } catch (error) {
+    }catch(error){
         document.getElementById('stopName').textContent = 'Error';
     }
 }
@@ -183,7 +183,7 @@ async function bus_stopV5(){
     const id = input.value;
     const url = `http://localhost:3030/jsonstore/bus/businfo/${id}`;
 
-    try {
+    try{
         const ul = document.getElementById('buses');
         ul.innerHTML = '';
         const response = await fetch(url);
@@ -199,7 +199,7 @@ async function bus_stopV5(){
 
         input.value = '';
 
-    } catch (error) {
+    }catch(error){
         document.getElementById('stopName').textContent = 'Error';
     }
 }
@@ -211,11 +211,10 @@ async function bus_stopV6(){
         divStop: document.getElementById('stopName'),
     };
 
-
     const id = html.input.value;
     const url = `http://localhost:3030/jsonstore/bus/businfo/${id}`;
 
-    try {
+    try{
         html.ul.innerHTML = '';
         const response = await fetch(url);
         const data = await response.json();
@@ -229,7 +228,7 @@ async function bus_stopV6(){
         });
 
         html.input.value = '';
-    } catch (error) {
+    }catch(error){
         document.getElementById('stopName').textContent = 'Error';
         html.input.value = '';
     }
@@ -245,7 +244,7 @@ async function bus_stopV7(){
     html.stopName.innerHTML = '';
     html.busses.innerHTML = '';
 
-    try {
+    try{
         const data = await fetch(`http://localhost:3030/jsonstore/bus/businfo/${html.stopID.value}`);
         if(! data.ok){
             throw new Error();
@@ -261,7 +260,7 @@ async function bus_stopV7(){
             html.busses.appendChild(e);
         });
 
-    } catch (e) {
+    }catch(e){
         html.stopName.innerHTML = 'Error';
     }
 }
