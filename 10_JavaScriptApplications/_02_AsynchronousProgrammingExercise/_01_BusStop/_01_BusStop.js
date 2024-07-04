@@ -1,4 +1,4 @@
-async function bus_stopV1() {
+async function bus_stopV1(){
     const url = `http://localhost:3030/jsonstore/bus/businfo/`;
     const html = {
         busStopId: document.getElementById("stopId"),
@@ -46,7 +46,7 @@ async function bus_stopV1() {
     addInfo(await getBusInfoByID());
 }
 
-async function bus_stopV2() {
+async function bus_stopV2(){
     const url = `http://localhost:3030/jsonstore/bus/businfo/`;
     const html = {
         busStopId: document.getElementById("stopId"),
@@ -125,7 +125,7 @@ async function bus_stopV3(){
         div.textContent = obj === 'Error' ? 'Error' : obj.name;
         fragment.appendChild(div);
 
-        if (obj !== 'Error') {
+        if(obj !== 'Error'){
             const ul = document.createElement('ul');
             ul.id = 'buses';
 
