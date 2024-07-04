@@ -6,43 +6,51 @@ function accordionV1(){
     window.onload = populateList;
 
     async function populateList(){
-        let res = await fetch(urlArticles);
-        let articles = await res.json();
+        try{
+            let res = await fetch(urlArticles);
+            let articles = await res.json();
 
-        html.main.innerHTML = articles.map(e => {
-            return `<div class="accordion">
-                        <div class="head">
-                            <span>${e.title}</span>
-                            <button class="button" id="${e._id}">More</button>
-                        </div>
-                        <div class="extra" style="display:none">
-                            <p>Scalable Vector Graphics .....</p>
-                        </div>
-                    </div>`
-        }).join(" ");
+            html.main.innerHTML = articles.map(e => {
+                return `<div class="accordion">
+                            <div class="head">
+                                <span>${e.title}</span>
+                                <button class="button" id="${e._id}">More</button>
+                            </div>
+                            <div class="extra" style="display:none">
+                                <p>Scalable Vector Graphics .....</p>
+                            </div>
+                        </div>`
+            }).join(" ");
+        }catch(err){
+            console.log(err);
+        }
 
         document.querySelectorAll('button').forEach(e => e.addEventListener('click', reveal));
 
         async function reveal(e){
-            const id = e.target.id;
-            const extra = e.target.parentElement.parentElement.querySelector('.extra');
+            try{
+                const id = e.target.id;
+                const extra = e.target.parentElement.parentElement.querySelector('.extra');
 
-            const res = await fetch(singularArticle + id);
-            const additionalInfo = await res.json();
+                const res = await fetch(singularArticle + id);
+                const additionalInfo = await res.json();
 
-            if(e.target.textContent === 'More'){
-                e.target.textContent = 'Less';
-                extra.innerHTML = `<p>${additionalInfo.content}</p>`;
-                extra.style.display = 'block';
-            }else{
-                e.target.textContent = 'More';
-                extra.style.display = 'none';
+                if(e.target.textContent === 'More'){
+                    e.target.textContent = 'Less';
+                    extra.innerHTML = `<p>${additionalInfo.content}</p>`;
+                    extra.style.display = 'block';
+                }else{
+                    e.target.textContent = 'More';
+                    extra.style.display = 'none';
+                }
+            }catch(err){
+                console.log(err);
             }
         }
     }
 }
 
-accordionV1();
+accordionV4();
 
 function accordionV2(){
     const urlArticles = 'http://localhost:3030/jsonstore/advanced/articles/list';
@@ -52,11 +60,12 @@ function accordionV2(){
     window.onload = populateList;
 
     async function populateList(){
-        let res = await fetch(urlArticles);
-        let articles = await res.json();
+        try{
+            let res = await fetch(urlArticles);
+            let articles = await res.json();
 
-        let promises = articles.map(async e => {
-            return `<div class="accordion">
+            let promises = articles.map(async e => {
+                return `<div class="accordion">
                         <div class="head">
                             <span>${e.title}</span>
                             <button class="button" id="${e._id}">More</button>
@@ -65,9 +74,12 @@ function accordionV2(){
                             <p>${await getInfoById(e._id)}</p>
                         </div>
                     </div>`;
-        });
+            });
 
-        html.main.innerHTML = (await Promise.all(promises)).join(" ");
+            html.main.innerHTML = (await Promise.all(promises)).join(" ");
+        }catch(err){
+            console.log(err);
+        }
 
         async function getInfoById(id){
             const res = await fetch(singularArticle + id);
@@ -78,8 +90,7 @@ function accordionV2(){
 
         document.querySelectorAll('button').forEach(e => e.addEventListener('click', reveal));
 
-        async function reveal(e){
-            const id = e.target.id;
+        function reveal(e){
             const extra = e.target.parentElement.parentElement.querySelector('.extra');
 
             if(e.target.textContent === 'More'){
@@ -127,20 +138,24 @@ async function accordionV3(){
         const id = event.target.id;
         let url = `http://localhost:3030/jsonstore/advanced/articles/details/${id}`;
 
-        const response = await fetch(url);
-        const data = await response.json();
+        try{
+            const response = await fetch(url);
+            const data = await response.json();
 
-        let divExtra = event.target.parentNode.parentNode.querySelector('.extra');
-        let p = e('p', {}, data.content);
+            let divExtra = event.target.parentNode.parentNode.querySelector('.extra');
+            let p = e('p', {}, data.content);
 
-        if(event.target.textContent === 'MORE'){
-            divExtra.appendChild(p);
-            divExtra.style.display = 'block';
-            event.target.textContent = 'LESS';
-        }else{
-            event.target.textContent = 'MORE';
-            divExtra.style.display = 'none';
-            event.target.parentNode.parentNode.querySelector('.extra p').remove();
+            if(event.target.textContent === 'MORE'){
+                divExtra.appendChild(p);
+                divExtra.style.display = 'block';
+                event.target.textContent = 'LESS';
+            }else{
+                event.target.textContent = 'MORE';
+                divExtra.style.display = 'none';
+                event.target.parentNode.parentNode.querySelector('.extra p').remove();
+            }
+        }catch(err){
+            console.log(err);
         }
     }
 
@@ -172,11 +187,15 @@ async function accordionV3(){
 
 function accordionV4(){
     async function populateList(){
-        const output = document.getElementById('main');
-        const titles = await fetch('http://localhost:3030/jsonstore/advanced/articles/list');
-        const desTitles = await titles.json();
+        try{
+            const output = document.getElementById('main');
+            const titles = await fetch('http://localhost:3030/jsonstore/advanced/articles/list');
+            const desTitles = await titles.json();
 
-        desTitles.forEach(x => output.appendChild(template(x)));
+            desTitles.forEach(x => output.appendChild(template(x)));
+        }catch(err){
+            console.log(err);
+        }
     }
 
     window.onload = populateList;
