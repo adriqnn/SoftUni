@@ -140,3 +140,86 @@ function blogV2(){
         return result;
     }
 }
+
+function blogV3(){
+    const cache = { posts: null, comments: null };
+    const url = 'http://localhost:3030/jsonstore/blog/';
+
+    function createOption({ id, title }){
+        const e = document.createElement('option');
+        e.textContent = title;
+        e.id = id;
+
+        return e;
+    }
+
+    const clearOutput = (...arr) => arr.forEach(x => x.innerHTML = '');
+
+    async function getData(uri){
+        try{
+            const data = await fetch(`${url}${uri}`);
+
+            return await data.json();
+        }catch(err){
+            console.log(err);
+        }
+    }
+
+    async function loadData(type){
+        if(cache[type] === null){
+            const data = await getData(type);
+            cache[type] = data;
+        }
+    }
+
+    async function displayPosts(){
+        try{
+            await loadData('posts');
+            const selectElement = document.getElementById(`posts`);
+            selectElement.innerHTML = '';
+
+            Object.values(cache.posts).forEach(x => selectElement.appendChild(createOption(x)));
+        }catch(err){
+            console.log(err);
+        }
+    }
+
+    async function displayPost(){
+        try{
+            await loadData('comments');
+
+            const html = {
+                postTitle: document.getElementById(`post-title`),
+                postBody: document.getElementById(`post-body`),
+                postComments: document.getElementById(`post-comments`),
+                selectElement: document.getElementById(`posts`)
+            }
+
+            const selected = html.selectElement.options[html.selectElement.selectedIndex];
+            const comments = Object.values(cache.comments).filter(x => x.postId === selected.id);
+
+            clearOutput(html.postTitle, html.postBody, html.postComments);
+
+            html.postTitle.textContent = selected.value;
+            html.postBody.textContent = cache.posts[selected.id].body;
+            html.postComments.innerHTML = comments.map(x => `<li id=${x.id}>${x.text}</li>`).join('');
+        }catch(err){
+            console.log(err);
+        }
+    }
+
+    function attachEvents(){
+        document.addEventListener('click', e => {
+            if(e.target.tagName === 'BUTTON'){
+                const btns = {
+                    'btnViewPost': displayPost,
+                    'btnLoadPosts': displayPosts,
+                }
+
+                btns[e.target.id]();
+            }
+        });
+    }
+
+    attachEvents();
+}
