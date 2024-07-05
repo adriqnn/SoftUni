@@ -134,15 +134,15 @@ function forecasterV2(){
         const availableDivCurrent = document.querySelector('.forecasts');
         const availableDivUpcoming = document.querySelector('.forecast-info');
 
-        if (availableDivCurrent){
+        if(availableDivCurrent){
             availableDivCurrent.remove();
         }
 
-        if (availableDivUpcoming){
+        if(availableDivUpcoming){
             availableDivUpcoming.remove();
         }
 
-        const input= document.getElementById('location');
+        const input = document.getElementById('location');
 
         const cityName = input.value;
         let code = '';
@@ -169,13 +169,13 @@ function forecasterV2(){
 
         document.querySelector('#forecast').style.display = 'block';
 
-        const divForecasts= createEl('div', 'forecasts');
-        const spanSymbol= createEl('span', 'condition symbol', symbol);
-        const spanCondition= createEl('span', 'condition');
+        const divForecasts = createEl('div', 'forecasts');
+        const spanSymbol = createEl('span', 'condition symbol', symbol);
+        const spanCondition = createEl('span', 'condition');
 
-        const spanFirstData= createEl('span', 'forecast-data', current.name);
-        const spanSecondData= createEl('span', 'forecast-data', `${current.forecast.low}&#176;/${current.forecast.high}&#176;`);
-        const spanThirdData= createEl('span', 'forecast-data', current.forecast.condition);
+        const spanFirstData = createEl('span', 'forecast-data', current.name);
+        const spanSecondData = createEl('span', 'forecast-data', `${current.forecast.low}&#176;/${current.forecast.high}&#176;`);
+        const spanThirdData = createEl('span', 'forecast-data', current.forecast.condition);
 
         divForecasts.appendChild(spanSymbol);
         divForecasts.appendChild(spanCondition);
@@ -185,7 +185,7 @@ function forecasterV2(){
 
         document.querySelector('#current').appendChild(divForecasts);
 
-        const divForecastUpcoming= createEl('div', 'forecast-info');
+        const divForecastUpcoming = createEl('div', 'forecast-info');
         document.querySelector('#upcoming').appendChild(divForecastUpcoming);
 
         upcoming.forecast.map(d => {
@@ -199,10 +199,10 @@ function forecasterV2(){
                 symbol = '&#x2614;';
             }
 
-            const spanUpcoming= createEl('span', 'upcoming');
-            const spanSymbol= createEl('span', 'symbol', symbol);
-            const spanFirstData= createEl('span', 'forecast-data', `${d.low}&#176;/${d.high}&#176;`);
-            const spanSecondData= createEl('span', 'forecast-data', d.condition);
+            const spanUpcoming = createEl('span', 'upcoming');
+            const spanSymbol = createEl('span', 'symbol', symbol);
+            const spanFirstData = createEl('span', 'forecast-data', `${d.low}&#176;/${d.high}&#176;`);
+            const spanSecondData = createEl('span', 'forecast-data', d.condition);
 
             divForecastUpcoming.appendChild(spanUpcoming);
             spanUpcoming.appendChild(spanSymbol);
@@ -220,7 +220,7 @@ function forecasterV2(){
             el.className = className;
         }
 
-        if (text){
+        if(text){
             el.innerHTML = text;
         }
 
@@ -259,13 +259,13 @@ function forecasterV3(){
     const getData = async (uri) => {
         const data = await fetch(`http://localhost:3030/jsonstore/forecaster/${uri}`);
 
-        if(!data.ok) {
+        if(!data.ok){
             throw new Error();
         }
 
         const deserialized = data.json();
 
-        if(!deserialized) {
+        if(!deserialized){
             throw new Error();
         }
 
@@ -275,7 +275,7 @@ function forecasterV3(){
     const getCode = (arr, n) => {
         const location = arr.find(x => x.name === n);
 
-        if (location === undefined) {
+        if(location === undefined){
             throw new Error();
         }
 
@@ -321,7 +321,7 @@ function forecasterV3(){
         document.getElementById('upcoming').innerHTML = `<div class="label">Three-day forecast</div>`;
     }
 
-    async function displayData (name){
+    async function displayData(name){
         const html = {
             tmrwOutput: document.getElementById(`current`),
             threeDayOutput: document.getElementById(`upcoming`),
@@ -340,7 +340,6 @@ function forecasterV3(){
             html.tmrwOutput.appendChild(tomorrowTemplate(tomorrowNfo));
 
             Object.values(threeDayNfo.forecast).forEach(x => html.threeDayOutput.appendChild(dayTemplate(x)));
-
         }catch(err){
             html.tmrwOutput.appendChild(document.createTextNode('Error'));
         }
