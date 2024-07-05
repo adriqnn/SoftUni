@@ -3,7 +3,7 @@ const form = document.querySelector('form');
 form.addEventListener('submit', (ev => {
     ev.preventDefault();
     const formData = new FormData(ev.target);
-    
+
     onSubmit([...formData.entries()].reduce((p, [k, v]) => Object.assign(p, { [k]: v }), {}));
 }));
 
@@ -23,10 +23,7 @@ async function onSubmit(data){
     try{
         const response = await fetch('http://localhost:3030/data/recipes', {
             method: 'post',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-Authorization': token
-            },
+            headers: { 'Content-Type': 'application/json', 'X-Authorization': token },
             body
         });
 
