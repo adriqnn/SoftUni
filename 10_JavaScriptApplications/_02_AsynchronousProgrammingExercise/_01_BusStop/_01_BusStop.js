@@ -246,7 +246,7 @@ async function bus_stopV7(){
 
     try{
         const data = await fetch(`http://localhost:3030/jsonstore/bus/businfo/${html.stopID.value}`);
-        if(! data.ok){
+        if(!data.ok){
             throw new Error();
         }
 
@@ -259,7 +259,6 @@ async function bus_stopV7(){
 
             html.busses.appendChild(e);
         });
-
     }catch(e){
         html.stopName.innerHTML = 'Error';
     }
