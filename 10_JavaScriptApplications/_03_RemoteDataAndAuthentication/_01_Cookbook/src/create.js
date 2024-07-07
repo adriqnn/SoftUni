@@ -15,9 +15,12 @@ async function onSubmit(data){
         steps: data.steps.split('\n').map(l => l.trim()).filter(l => l !== '')
     });
 
+    const currentPath = window.location.pathname;
+    const newPath = currentPath.replace(/\/[^\/]*$/, '/index.html');
+
     const token = sessionStorage.getItem('authToken');
     if(token == null){
-        return window.location.pathname = 'index.html';
+        return window.location.pathname = newPath;
     }
 
     try{
@@ -28,7 +31,7 @@ async function onSubmit(data){
         });
 
         if(response.status === 200){
-            window.location.pathname = 'index.html';
+            window.location.pathname = newPath;
         }else{
             throw new Error(await response.json());
         }
