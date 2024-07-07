@@ -20,10 +20,13 @@ async function onSubmit(data){
             body
         });
         const data = await response.json();
-        
+
+        const currentPath = window.location.pathname;
+        const newPath = currentPath.replace(/\/[^\/]*$/, '/index.html');
+
         if(response.status === 200){
             sessionStorage.setItem('authToken', data.accessToken);
-            window.location.pathname = 'index.html';
+            window.location.pathname = newPath;
         }else{
             throw new Error(data.message);
         }
