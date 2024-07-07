@@ -51,10 +51,13 @@ async function logout(){
         method: 'get',
         headers: { 'X-Authorization': sessionStorage.getItem('authToken') }
     });
-    
-    if(response.status === 200){
+
+    const currentPath = window.location.pathname;
+    const newPath = currentPath.replace(/\/[^\/]*$/, '/index.html');
+
+    if(response.status === 204){
         sessionStorage.removeItem('authToken');
-        window.location.pathname = 'index.html';
+        window.location.pathname = newPath;
     }else{
         console.error(await response.json());
     }
