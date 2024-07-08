@@ -1,5 +1,5 @@
-function attachEvents() {
-    console.log('TODO...');
+function _02_Phonebook(){
+
 }
 
-attachEvents();
+_02_Phonebook();
