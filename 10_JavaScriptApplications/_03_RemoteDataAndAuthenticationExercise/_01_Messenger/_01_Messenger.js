@@ -22,7 +22,8 @@ function messengerV1(){
             }
 
             const data = await res.json();
-            html.messages.textContent = Object.entries(data).map(e => `${e[1].author}: ${e[1].content}`).join("\n");
+            console.log(data);
+            html.messages.innerHTML = Object.entries(data).map(e => `${e[1].author}: ${e[1].content}`).join("\n");
         }catch(err){
             console.log(err);
         }
