@@ -81,7 +81,7 @@ function phonebookV2(){
                     await createData();
                     displayData(await getData(baseUrl));
                 },
-                remove: () => deleteData(e.target.parentNode, e.target.parentNode.id),
+                remove: () => deleteData(e.target.parentNode, e.target.parentNode.id)
             };
 
             e.target.id ? actions[e.target.id]() : actions[e.target.className]();
