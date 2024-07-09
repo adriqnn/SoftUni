@@ -48,17 +48,19 @@ function messengerV2(){
     async function sendMessage() {
         const [name, message] = document.querySelectorAll('input');
 
-        await fetch('http://localhost:3030/jsonstore/messenger', {
-            method: 'post',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                author: name.value,
-                content: message.value
-            })
-        });
+        if(name.value !== '' && message.value !== ''){
+            await fetch('http://localhost:3030/jsonstore/messenger', {
+                method: 'post',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    author: name.value,
+                    content: message.value
+                })
+            });
 
-        name.value = '';
-        message.value = '';
+            name.value = '';
+            message.value = '';
+        }
     }
 
     async function refresh() {
