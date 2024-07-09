@@ -135,3 +135,70 @@ function phonebookV2(){
         e.outerHTML = '';
     }
 }
+
+function phonebookV3(){
+    const url = 'http://localhost:3030/jsonstore/phonebook';
+    const html = {
+        load: document.getElementById('btnLoad'),
+        create: document.getElementById('btnCreate'),
+        ul: document.getElementById('phonebook'),
+        inputPerson: document.getElementById('person'),
+        inputPhone: document.getElementById('phone')
+    }
+
+    html.load.addEventListener('click', loadInfo);
+    html.create.addEventListener('click', createEntry);
+
+    async function loadInfo(){
+        fetch(url).then(res => {
+            if(!res.ok){
+                throw new Error('Error');
+            }
+
+            return res.json();
+        }).then(data => {
+            html.ul.replaceChildren();
+            Object.entries(data).map(show);
+        }).catch(err => console.log(err));
+    }
+
+    function createEntry(){
+        const entry = { person: html.inputPerson.value, phone: html.inputPhone.value };
+
+        if(entry.person !== '' || entry.phone !== ''){
+            fetch(url, {
+                method: 'post',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(entry)
+            }).then(res => res.json()).catch(err => console.log(err));
+
+            loadInfo();
+        }
+    }
+
+    function show(entry){
+        const [id, obj] = entry;
+
+        let liEl = document.createElement('li');
+        let btnEl = document.createElement('button');
+
+        liEl.id = id;
+        liEl.textContent = `${obj.person}: ${obj.phone}`;
+
+        btnEl.textContent = 'Delete';
+        btnEl.addEventListener('click', deleteEntry);
+
+        liEl.appendChild(btnEl);
+        html.ul.appendChild(liEl);
+    }
+
+    function deleteEntry(e){
+        let elP = e.target.parentElement;
+
+        fetch(`${url}/${elP.id}`, {
+            method: 'delete'
+        }).then(res => res.json()).catch(err => console.log(err));;
+
+        html.ul.removeChild(elP);
+    }
+}
