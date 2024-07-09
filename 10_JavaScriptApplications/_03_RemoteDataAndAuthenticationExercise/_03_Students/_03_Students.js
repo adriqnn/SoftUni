@@ -20,14 +20,14 @@ function studentsV1(){
             Object.entries(e[1]).forEach(([key, value]) => {
                 const td = document.createElement('td');
 
-                if (key !== '_id') {
+                if(key !== '_id'){
                     td.innerHTML = value;
                     tr.appendChild(td);
                 }
 
                 html.tbody.appendChild(tr);
             });
-        })
+        });
     }
 
     async function createEntry(e){
