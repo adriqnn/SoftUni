@@ -64,11 +64,11 @@ function studentsV2(){
     const clearFields = (arr) => arr.forEach(x => x.value = '');
     const Url = `http://localhost:3030/jsonstore/collections/students`;
 
-    function validData (data){
+    function validData(data){
         return data.every(([_, value]) => value !== '');
     }
 
-    function displayStudents (studentsData){
+    function displayStudents(studentsData){
         const table = document.querySelector('#results > tbody');
         table.innerHTML = '';
 
@@ -89,13 +89,13 @@ function studentsV2(){
 
     }
 
-    async function getStudents (){
+    async function getStudents(){
         const response = await fetch(Url);
 
         return await response.json();
     }
 
-    async function postStudent (data){
+    async function postStudent(data){
         const response = await fetch(Url, {
             method: 'post',
             headers: { 'content-type': 'application/json' },
