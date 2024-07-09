@@ -117,3 +117,63 @@ function studentsV2(){
         }
     });
 }
+
+function studentsV3(){
+    const url = `http://localhost:3030/jsonstore/collections/students`;
+    const html = {
+        submitBtn: document.getElementById('submit'),
+        tbody: document.querySelector('tbody')
+    }
+
+    loadData();
+    html.submitBtn.addEventListener('click', createEntry);
+
+    function loadData(){
+        html.tbody.innerHTML = '';
+
+        fetch(url).then(res => res.json()).then(data => {
+            Object.entries(data).map(e => {
+                let tr = document.createElement('tr');
+
+                Object.entries(e[1]).forEach(([key, value]) => {
+                    const td = document.createElement('td');
+
+                    if(key !== '_id'){
+                        td.innerHTML = value;
+                        tr.appendChild(td);
+                    }
+
+                    html.tbody.appendChild(tr);
+                });
+            })
+        }).catch(err => console.log(err.message));
+
+    }
+
+    function createEntry(e){
+        e.preventDefault();
+        const formData = new FormData(e.target.parentElement);
+
+        const entry = {
+            firstName: formData.get('firstName'),
+            lastname: formData.get('lastName'),
+            facultyNumber: formData.get('facultyNumber'),
+            grade: formData.get('grade')
+        }
+
+        const hasEmptyStrings = Object.entries(entry).some(([key, value]) => value === '');
+
+        if(!hasEmptyStrings){
+            fetch(url, {
+                method: 'post',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(entry)
+            });
+
+            loadData();
+            clearFields([...document.querySelectorAll('#form > div.inputs > input[type=text]')]);
+        }
+    }
+
+    const clearFields = (arr) => arr.forEach(x => x.value = '');
+}
