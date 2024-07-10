@@ -18,17 +18,26 @@
             </tr>
         </thead>
         <tbody>
-            
         </tbody>
     </table>
 
-    <form>
-        <h3>FORM</h3>
+    <form id="createForm">
+        <h3 id="createFormH3">FORM</h3>
         <label>TITLE</label>
         <input type="text" name="title" placeholder="Title...">
         <label>AUTHOR</label>
         <input type="text" name="author" placeholder="Author...">
-        <button>Submit</button>
+        <button id="create">Submit</button>
+    </form>
+
+    <form id="editForm" style="display: none">
+        <h3 id="id">Edit FORM</h3>
+        <label>TITLE</label>
+        <input type="text" name="title" placeholder="Title...">
+        <label>AUTHOR</label>
+        <input type="text" name="author" placeholder="Author...">
+        <button id="edit">Save</button>
+        <button id="cancel">Cancel</button>
     </form>
 
     <script src="../_04_BookLibrary.js"></script>
