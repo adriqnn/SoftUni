@@ -89,9 +89,9 @@ function book_libraryV1(){
         if(html.editForm.style.display === 'none'){
             const mainEl = e.target.parentElement.parentElement;
             const id = mainEl.id;
-            const el = document.getElementById('id');
+            const el = mainEl.firstElementChild;
             el.id = id;
-            
+
             html.inputTitle[1].value = mainEl.firstElementChild.textContent;
             html.inputAuthor[1].value = mainEl.firstElementChild.nextElementSibling.textContent;
 
@@ -119,7 +119,7 @@ function book_libraryV1(){
                                        <button>Edit</button>
                                        <button>Delete</button>
                                    </td>`;
-        
+
         trElement.querySelectorAll('button')[0].addEventListener('click', editEl);
         trElement.querySelectorAll('button')[1].addEventListener('click', deleteEl);
 
