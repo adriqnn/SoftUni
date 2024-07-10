@@ -118,7 +118,8 @@ function book_libraryV1(){
                                    <td>
                                        <button>Edit</button>
                                        <button>Delete</button>
-                                   </td>`
+                                   </td>`;
+        
         trElement.querySelectorAll('button')[0].addEventListener('click', editEl);
         trElement.querySelectorAll('button')[1].addEventListener('click', deleteEl);
 
