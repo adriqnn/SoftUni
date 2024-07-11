@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biggest Catch</title>
     <link rel="stylesheet" href="./static/styles.css">
-    <script type="module" src="./app.js"></script>
+
+    <script defer type="module" src="./src/app.js"></script>
+
+    <title>Biggest Catch</title>
 </head>
 
 <body>
@@ -22,17 +24,20 @@
                 <a id="login" href="#">Login</a>
                 <a id="register" href="#">Register</a>
             </div>
-            <p class="email">Welcome, <span>guest</span></p>
+            <p id="greeting" class="email">Welcome, <span>guest</span></p>
         </nav>
     </header>
-    <main>
+
+    <main id="html-main">
+
     </main>
 
     <section id="views">
+
         <!-- Register -->
-        <section id="register-view">
+        <section id="register-view" style="display: none">
             <h2>Register</h2>
-            <form id="register">
+            <form id="registerForm">
                 <label>Email: <input type="text" name="email"></label>
                 <label>Password: <input type="password" name="password"></label>
                 <label>Repeat: <input type="password" name="rePass"></label>
@@ -42,9 +47,9 @@
         </section>
 
         <!-- Login -->
-        <section id="login-view">
+        <section id="login-view" style="display: none">
             <h2>Login</h2>
-            <form id="login">
+            <form id="loginForm">
                 <label>Email: <input type="text" name="email"></label>
                 <label>Password: <input type="password" name="password"></label>
                 <p class="notification"></p>
@@ -53,7 +58,7 @@
         </section>
 
         <!-- Home Page -->
-        <section id="home-view">
+        <section id="home-view" style="display: none">
             <fieldset id="main">
                 <legend>Catches</legend>
                 <div id="catches">
