@@ -192,6 +192,16 @@ main {
     margin-top: 20px;
 }
 
+#registerForm, #loginForm {
+    width: 400px;
+    margin: auto;
+}
+
+
+#registerForm button, #loginForm button {
+    width: 220px;
+}
+
 #home-view {
     text-align: end;
 }
