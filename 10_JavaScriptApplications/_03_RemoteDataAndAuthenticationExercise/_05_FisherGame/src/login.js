@@ -12,7 +12,6 @@ async function logout(e){
 
     await fetch('http://localhost:3030/users/logout', {
         headers: {
-            'Content-Type': 'application/json',
             'X-Authorization': userDetails.token
         }
     });
