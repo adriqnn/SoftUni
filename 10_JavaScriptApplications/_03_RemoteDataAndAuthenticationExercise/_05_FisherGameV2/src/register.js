@@ -30,6 +30,7 @@ async function register(event){
         }
 
         const data = await response.json();
+        
         const userData = {
             email: data.email,
             id: data._id,
