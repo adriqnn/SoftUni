@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+
+    <script defer src="./src/login.js" type="module"></script>
+
+    <title>FURNITURE</title>
+</head>
+
+<body>
+    <header>
+        <h1>Furniture List</h1>
+        <nav>
+            <h1 id="greeting">Welcome, <span>guest!</span></h1>
+            <a href="index.html">Home</a>
+            <div id="guest" style="display: none;">
+                <a href="#" class="active">Login</a>
+                <a href="register.html">Register</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="container">
+            <div id="exercise">
+                <div class="wrapper">
+                    <div class="card-wrapper">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>Login</h2>
+                                <form>
+                                    <label>E-mail: <input type="text" name="email"></label>
+                                    <label>Password: <input type="password" name="password"></label>
+                                    <button>Login</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
