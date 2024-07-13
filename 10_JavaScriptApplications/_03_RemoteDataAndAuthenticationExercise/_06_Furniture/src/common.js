@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', activeNav);
 
 function logout(){
     const logoutButton = document.getElementById('logoutBtn');
-
     const userData = JSON.parse(sessionStorage.getItem('userData'));
 
     logoutButton.addEventListener('click', async () => {
@@ -47,7 +46,6 @@ async function itemsRequest(){
 
 function createHTMlElements(el, tableEl, place){
     const tr = document.createElement('tr');
-
     tr.innerHTML = `<td>
                         <img src="${el.img}">
                     </td>
