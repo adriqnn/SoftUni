@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+
+    <script defer src="./src/catalog.js" type="module"></script>
+    <script defer src="./src/common.js" type="module"></script>
+
+    <title>FURNITURE</title>
+</head>
+
+<body>
+    <header>
+        <h1>Furniture List</h1>
+        <nav>
+<!--            <h1 id="greeting">Welcome, <span>guest!</span></h1>-->
+            <a href="index.html">Home</a>
+            <div id="user" style="display: none;">
+                <a href="catalog.html">Catalog</a>
+                <a href="#" class="active">Create Product</a>
+                <a id="logoutBtn" href="javascript:void(0)">Logout</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <div id="container">
+            <div id="exercise">
+                <div class="wrapper">
+                    <div class="card-wrapper">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>Create Product</h2>
+                                <form>
+                                    <label>Name: <input type="text" name="name"></label>
+                                    <label>Price: <input type="text" name="price"></label>
+                                    <label>Factor: <input type="text" name="factor"></label>
+                                    <label>Img: <input type="text" name="img"></label>
+                                    <button>Create</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
