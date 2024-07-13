@@ -1,6 +1,6 @@
 const access = {
     guest: document.getElementById('guest'),
-    user: document.getElementById('user'),
+    user: document.getElementById('user')
 }
 
 async function createUserDetails(event, type){
@@ -50,13 +50,15 @@ function userDetailsCheck(){
 
     if(userData !== null){
         access.user.style.display = 'inline';
+        
         if(access.guest){
             access.guest.style.display = 'none';
         }
     }else{
         if(access.user){
-            access.user.style.display = 'none'
+            access.user.style.display = 'none';
         }
+        
         access.guest.style.display = 'inline';
     }
 }
