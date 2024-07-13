@@ -32,7 +32,7 @@ async function login(event){
 
         sessionStorage.setItem('userData', JSON.stringify(userData));
         window.location = './index.html';
-    } catch(error){
+    }catch(error){
         alert(error.message);
     }
 }
