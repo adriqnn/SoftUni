@@ -39,9 +39,6 @@ async function register(event){
 
         sessionStorage.setItem('userData', JSON.stringify(userData));
         window.location = './index.html';
-
-        alert('Registered successfully!');
-        event.target.reset();
     }catch(error){
         alert(error.message);
     }
