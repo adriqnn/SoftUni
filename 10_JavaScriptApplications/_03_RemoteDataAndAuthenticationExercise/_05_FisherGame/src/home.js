@@ -80,7 +80,7 @@ async function addCatch(e){
         const userDetails = getUserDetails();
         const res = await fetch(`${url}`, {
             method: 'post',
-            headers: { 'Content-Type': 'application/json', 'X-Authorization': userDetails.token},
+            headers: { 'Content-Type': 'application/json', 'X-Authorization': userDetails.token },
             body: JSON.stringify(newCatch)
         });
 
