@@ -118,6 +118,20 @@ async function showAllOrders(){
                 const error = await res.json();
                 throw new Error(error.message);
             }
+
+            const data = await res.json();
+            let dataNameString = '';
+            let price = 0;
+
+            data.forEach(e => {
+               dataNameString += `${e.name}, `;
+               price += Number(e.price);
+            });
+
+
+            const ordersContainer = document.querySelector('.orders');
+            ordersContainer.firstElementChild.innerHTML = `Bought furniture: <span>${dataNameString}</span>`;
+            ordersContainer.firstElementChild.nextElementSibling.innerHTML = `<p>Total price: <span>${price} $</span></p>`;
         }catch(err){
             alert(err.message);
         }
