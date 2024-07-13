@@ -88,10 +88,7 @@ async function buyItems(){
             try{
                 const res = await fetch(orders, {
                     method: 'post',
-                    headers: {
-                        "Content-Type": "application/json",
-                        "X-Authorization": user.token
-                    },
+                    headers: { "Content-Type": "application/json", "X-Authorization": user.token },
                     body: JSON.stringify(item)
                 });
 
@@ -116,17 +113,11 @@ async function showAllOrders(){
 
             const res = await fetch(`${orders}?where=_ownerId%3D"${user.id}"`);
             // const res = await fetch(`http://localhost:3030/data/orders?where=_ownerId%3D"${user.id}"`);
-            console.log(res);
-
 
             if(!res.ok){
                 const error = await res.json();
                 throw new Error(error.message);
             }
-
-            const data = await res.json();
-            console.log(data);
-
         }catch(err){
             alert(err.message);
         }
