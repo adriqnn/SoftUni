@@ -12,7 +12,7 @@ async function login(event){
 
     try{
         const response = await fetch('http://localhost:3030/users/login', {
-            method:'post',
+            method: 'post',
             headers: { 'Content-Type':'application/json' },
             body: JSON.stringify({ email, password })
         });
