@@ -10,21 +10,21 @@ export function showLogin(){
     document.querySelector('main').replaceChildren(section);
 }
 
-async function onSubmit(event) {
+async function onSubmit(event){
     event.preventDefault();
     const formData = new FormData(form);
 
     const email = formData.get('email').trim();
     const password = formData.get('password').trim();
 
-    try {
+    try{
         const res = await fetch('http://localhost:3030/users/login', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password })
         });
 
-        if (res.ok === false) {
+        if(res.ok === false){
             const error = await res.json();
             throw Error(error.message);
         }
@@ -40,7 +40,7 @@ async function onSubmit(event) {
         sessionStorage.setItem('userData', JSON.stringify(userData));
         checkUserNav();
         showHome();
-    } catch (err) {
+    }catch(err){
         alert(err.message);
     }
 }
