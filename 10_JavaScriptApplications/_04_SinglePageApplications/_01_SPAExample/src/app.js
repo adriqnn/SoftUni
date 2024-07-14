@@ -24,7 +24,7 @@ const sections = {
 };
 
 function onNavigate(event){
-    if (event.target.tagName === 'A'){
+    if(event.target.tagName === 'A'){
         const view = sections[event.target.id];
 
         if(typeof view === 'function'){
