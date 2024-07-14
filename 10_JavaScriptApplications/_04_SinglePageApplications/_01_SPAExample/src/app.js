@@ -23,11 +23,11 @@ const sections = {
     'createBtn': showCreate,
 };
 
-function onNavigate(event) {
-    if (event.target.tagName == 'A') {
+function onNavigate(event){
+    if (event.target.tagName === 'A'){
         const view = sections[event.target.id];
 
-        if (typeof view == 'function') {
+        if(typeof view === 'function'){
             event.preventDefault();
             view();
         }
