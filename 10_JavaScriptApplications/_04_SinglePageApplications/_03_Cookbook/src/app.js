@@ -5,7 +5,6 @@ import { setupRegister, showRegister } from './register.js';
 import { setupDetails } from './details.js';
 import { setupEdit } from './edit.js';
 
-
 window.addEventListener('load', async () => {
     setUserNav();
 
@@ -26,19 +25,20 @@ window.addEventListener('load', async () => {
         'createLink': showCreate,
         'loginLink': showLogin,
         'registerLink': showRegister,
-        'logoutBtn': logout,
+        'logoutBtn': logout
     };
+    
     setupNavigation();
 
     // Start application in catalog view
     showCatalog();
 
-
-    function setupNavigation() {
+    function setupNavigation(){
         nav.addEventListener('click', (ev) => {
-            if (ev.target.tagName == 'A') {
+            if(ev.target.tagName === 'A'){
                 const handler = links[ev.target.id];
-                if (handler) {
+                
+                if(handler){
                     ev.preventDefault();
                     handler();
                 }
@@ -46,33 +46,31 @@ window.addEventListener('load', async () => {
         });
     }
 
-    function setActiveNav(targetId) {
-        [...nav.querySelectorAll('a')].forEach(a => a.id == targetId ? a.classList.add('active') : a.classList.remove('active'));
+    function setActiveNav(targetId){
+        [...nav.querySelectorAll('a')].forEach(a => a.id === targetId ? a.classList.add('active') : a.classList.remove('active'));
     }
 
-
-    function setUserNav() {
-        if (sessionStorage.getItem('authToken') != null) {
+    function setUserNav(){
+        if(sessionStorage.getItem('authToken') != null){
             document.getElementById('user').style.display = 'inline-block';
             document.getElementById('guest').style.display = 'none';
-        } else {
+        }else{
             document.getElementById('user').style.display = 'none';
             document.getElementById('guest').style.display = 'inline-block';
         }
     }
 
-    async function logout() {
+    async function logout(){
         const response = await fetch('http://localhost:3030/users/logout', {
             method: 'get',
-            headers: {
-                'X-Authorization': sessionStorage.getItem('authToken')
-            },
+            headers: { 'X-Authorization': sessionStorage.getItem('authToken') }
         });
-        if (response.status == 200) {
+        
+        if(response.status === 200){
             sessionStorage.removeItem('authToken');
             setUserNav();
             showCatalog();
-        } else {
+        }else{
             console.error(await response.json());
         }
     }
