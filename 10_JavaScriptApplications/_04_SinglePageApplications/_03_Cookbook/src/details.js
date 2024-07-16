@@ -1,38 +1,35 @@
 import { e } from './dom.js';
 import { showEdit } from './edit.js';
 
-
-async function getRecipeById(id) {
+async function getRecipeById(id){
     const response = await fetch('http://localhost:3030/data/recipes/' + id);
     const recipe = await response.json();
 
     return recipe;
 }
 
-async function deleteRecipeById(id) {
+async function deleteRecipeById(id){
     const token = sessionStorage.getItem('authToken');
 
-    try {
+    try{
         const response = await fetch('http://localhost:3030/data/recipes/' + id, {
             method: 'delete',
-            headers: {
-                'X-Authorization': token
-            }
+            headers: { 'X-Authorization': token }
         });
 
-        if (response.status != 200) {
+        if(response.status !== 200){
             const error = await response.json();
             throw new Error(error.message);
         }
 
         section.innerHTML = '';
         section.appendChild(e('article', {}, e('h2', {}, 'Recipe deleted')));
-    } catch (err) {
+    }catch(err){
         alert(err.message);
     }
 }
 
-function createRecipeCard(recipe) {
+function createRecipeCard(recipe){
     const result = e('article', {},
         e('h2', {}, recipe.name),
         e('div', { className: 'band' },
@@ -49,7 +46,8 @@ function createRecipeCard(recipe) {
     );
 
     const userId = sessionStorage.getItem('userId');
-    if (userId != null && recipe._ownerId == userId) {
+    
+    if(userId !== null && recipe._ownerId === userId){
         result.appendChild(e('div', { className: 'controls' },
             e('button', { onClick: () => showEdit(recipe._id) }, '\u270E Edit'),
             e('button', { onClick: onDelete }, '\u2716 Delete'),
@@ -58,9 +56,10 @@ function createRecipeCard(recipe) {
 
     return result;
 
-    function onDelete() {
+    function onDelete(){
         const confirmed = confirm(`Are you sure you want to delete ${recipe.name}?`);
-        if (confirmed) {
+        
+        if(confirmed){
             deleteRecipeById(recipe._id);
         }
     }
@@ -70,13 +69,13 @@ let main;
 let section;
 let setActiveNav;
 
-export function setupDetails(targetMain, targetSection, onActiveNav) {
+export function setupDetails(targetMain, targetSection, onActiveNav){
     main = targetMain;
     section = targetSection;
     setActiveNav = onActiveNav;
 }
 
-export async function showDetails(id) {
+export async function showDetails(id){
     setActiveNav();
     section.innerHTML = 'Loading&hellip;';
     main.innerHTML = '';
