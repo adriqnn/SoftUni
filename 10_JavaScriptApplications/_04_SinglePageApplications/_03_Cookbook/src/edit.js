@@ -1,7 +1,6 @@
 import { showDetails } from './details.js';
 
-
-async function getRecipeById(id) {
+async function getRecipeById(id){
     const response = await fetch('http://localhost:3030/data/recipes/' + id);
     const recipe = await response.json();
 
@@ -13,7 +12,7 @@ let section;
 let setActiveNav;
 let recipeId;
 
-export function setupEdit(targetMain, targetSection, onActiveNav) {
+export function setupEdit(targetMain, targetSection, onActiveNav){
     main = targetMain;
     section = targetSection;
     setActiveNav = onActiveNav;
@@ -25,36 +24,34 @@ export function setupEdit(targetMain, targetSection, onActiveNav) {
         onSubmit([...formData.entries()].reduce((p, [k, v]) => Object.assign(p, { [k]: v }), {}));
     }));
 
-    async function onSubmit(data) {
+    async function onSubmit(data){
         const body = JSON.stringify({
             name: data.name,
             img: data.img,
-            ingredients: data.ingredients.split('\n').map(l => l.trim()).filter(l => l != ''),
-            steps: data.steps.split('\n').map(l => l.trim()).filter(l => l != '')
+            ingredients: data.ingredients.split('\n').map(l => l.trim()).filter(l => l !== ''),
+            steps: data.steps.split('\n').map(l => l.trim()).filter(l => l !== '')
         });
 
         const token = sessionStorage.getItem('authToken');
-        if (token == null) {
+        
+        if(token == null){
             return alert('You\'re not logged in!');
         }
 
-        try {
+        try{
             const response = await fetch('http://localhost:3030/data/recipes/' + recipeId, {
                 method: 'put',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-Authorization': token
-                },
+                headers: { 'Content-Type': 'application/json', 'X-Authorization': token },
                 body
             });
 
-            if (response.status == 200) {
+            if(response.status === 200){
                 showDetails(recipeId);
-            } else {
+            }else{
                 const error = await response.json();
                 throw new Error(error.message);
             }
-        } catch (err) {
+        }catch(err){
             alert(err.message);
             console.error(err.message);
         }
