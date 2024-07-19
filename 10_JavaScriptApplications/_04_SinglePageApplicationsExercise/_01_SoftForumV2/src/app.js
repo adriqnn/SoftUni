@@ -2,5 +2,5 @@ import { showHome } from './home.js';
 
 document.getElementById('homeLink').addEventListener('click', showHome);
 
-// Start application in Home view
+// Start application in Home View
 showHome();
