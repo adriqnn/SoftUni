@@ -7,20 +7,17 @@
     <link rel="stylesheet" href="static/style.css">
     <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/3cd69e2433.js" crossorigin="anonymous"></script>
+
+    <script src="./src/app.js" type="module"></script>
+
     <title>SoftUni Forum</title>
-    <script src="/src/app.js" type="module"></script>
 </head>
 
 <body>
-
     <header>
         <div class="mini-navbar-wrap">
             <div class="logo-wrap">
                 <p class="logo"><span class="logo">SoftUni Forum</span></p>
-            </div>
-            <div class="mini-navbar">
-
             </div>
         </div>
         <nav>
@@ -33,51 +30,43 @@
     </header>
 
     <main id="main"></main>
-
-    <section id="homeView">
-
-        <!-- homepage -->
-        <div class="container">
-            <main>
-                <div class="new-topic-border">
-                    <div class="header-background">
-                        <span>New Topic</span>
+        <section id="homeView">
+            <!-- homepage -->
+            <div class="container">
+                <main>
+                    <div class="new-topic-border">
+                        <div class="header-background">
+                            <span>New Topic</span>
+                        </div>
+                        <form>
+                            <div class="new-topic-title">
+                                <label for="topicName">Title <span class="red">*</span></label>
+                                <input type="text" name="topicName" id="topicName">
+                            </div>
+                            <div class="new-topic-title">
+                                <label for="username">Username <span class="red">*</span></label>
+                                <input type="text" name="username" id="username">
+                            </div>
+                            <div class="new-topic-content">
+                                <label for="postText">Post <span class="red">*</span></label>
+                                <textarea type="text" name="postText" id="postText" rows="8" class="height"></textarea>
+                            </div>
+                            <div class="new-topic-buttons">
+                                <button type="button" name="cancel" class="cancel">Cancel</button>
+                                <button name="submit" class="public">Post</button>
+                            </div>
+                        </form>
                     </div>
-                    <form>
-                        <div class="new-topic-title">
-                            <label for="topicName">Title <span class="red">*</span></label>
-                            <input type="text" name="topicName" id="topicName">
-                        </div>
-                        <div class="new-topic-title">
-                            <label for="username">Username <span class="red">*</span></label>
-                            <input type="text" name="username" id="username">
-                        </div>
-                        <div class="new-topic-content">
-                            <label for="postText">Post <span class="red">*</span></label>
-                            <textarea type="text" name="postText" id="postText" rows="8" class="height"></textarea>
-                        </div>
-                        <div class="new-topic-buttons">
-                            <button type="button" name="cancel" class="cancel">Cancel</button>
-                            <button name="submit" class="public">Post</button>
-                        </div>
+                    <div class="topic-title">
+                        <!-- topic component  -->
 
-                    </form>
-                </div>
-
-                <div class="topic-title">
-
-                    <!-- topic component  -->
-
-                    <div class="topic-container">
-                        <!-- topic catalog -->
+                        <div class="topic-container">
+                            <!-- topic catalog -->
+                        </div>
                     </div>
-
-                </div>
-            </main>
-
-        </div>
-
-    </section>
+                </main>
+            </div>
+        </section>
 
     <section id="detailsView">
         <div class="container">
@@ -93,32 +82,30 @@
                 </div>
 
                 <!-- topic  -->
-
                 <div class="comment">
-
                     <!-- topic content -->
                     <div class="header">
                         <img src="./static/profile.png" alt="avatar">
                         <p><span id="details-username">David</span> posted on <time id="details-time">2020-10-10
                                 12:08:28</time></p>
-
                         <p id="details-content" class="post-content">Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Iure facere
                             sint
                             dolorem quam,
                             accusantium ipsa veniam laudantium inventore aut, tenetur quibusdam doloribus. Incidunt odio
-                            nostrum facilis ipsum dolorem deserunt illum?</p>
+                            nostrum facilis ipsum dolorem deserunt illum?
+                        </p>
                     </div>
 
                     <div id="user-comment">
-                        
                         <!-- topic comments -->
                         <div class="topic-name-wrapper">
                             <div class="topic-name">
                                 <p><strong>Daniel</strong> commented on <time>3/15/2021, 12:39:02 AM</time></p>
                                 <div class="post-content">
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facere sint
-                                        dolorem quam.</p>
+                                        dolorem quam.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -128,16 +115,18 @@
                                 <p><strong>Daniel</strong> commented on <time>3/15/2021, 12:39:02 AM</time></p>
                                 <div class="post-content">
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facere sint
-                                        dolorem quam.</p>
+                                        dolorem quam.
+                                    </p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
                 <div class="answer-comment">
-                    <p><span>currentUser</span> comment:</p>
+                    <p>
+                        <span>currentUser</span> comment:
+                    </p>
                     <div class="answer">
                         <form>
                             <textarea name="postText" id="comment" cols="30" rows="10"></textarea>
@@ -149,15 +138,12 @@
                         </form>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <footer>
-        <p>This site is designed to be used for training purposes at SoftUni.</p>
-        <p>You can find the real SoftUni forum at this link:</p>
-        <p><span><a href="https://softuni.bg/forum">https://softuni.bg/forum</a></span></p>
+        <p>The Real SoftUni Forum</p>
     </footer>
 </body>
 
