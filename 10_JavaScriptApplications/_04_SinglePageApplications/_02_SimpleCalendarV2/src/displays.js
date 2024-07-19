@@ -12,7 +12,7 @@ function displayYear(years, year){
 }
 
 function displayMonth(months, monthIndex, year){
-    const monthElement = months.find(x => x.id === `month-${year}-${monthIndex+1}`);
+    const monthElement = months.find(x => x.id === `month-${year}-${monthIndex + 1}`);
     loadView(monthElement);
 }
 
