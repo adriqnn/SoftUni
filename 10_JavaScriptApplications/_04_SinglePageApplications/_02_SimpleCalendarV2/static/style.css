@@ -12,11 +12,10 @@ body {
     margin-right: auto;
 }
 
-.daysCalendar table tr, .daysCalendar table tbody {
+.daysCalendar table thead, .daysCalendar table tr, .daysCalendar table tbody {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    width: 100%;
 }
 
 .monthCalendar table {
@@ -27,7 +26,7 @@ body {
     margin-right: auto;
 }
 
-.monthCalendar table tr, .monthCalendar table tbody {
+.monthCalendar table thead, .monthCalendar table tr, .monthCalendar table tbody {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -42,7 +41,7 @@ body {
     margin-right: auto;
 }
 
-.yearsCalendar table tr, .yearsCalendar table tbody {
+.yearsCalendar table thead, .yearsCalendar table tr, .yearsCalendar table tbody {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -80,7 +79,12 @@ caption {
     margin-bottom: 41px;
 }
 
+/*.weekdays {*/
+/*    width: 100%;*/
+/*}*/
+
 .calendar .weekdays th {
+    /*width: 96px;*/
     text-align: center;
     text-transform: uppercase;
     line-height: 20px;
@@ -146,7 +150,7 @@ caption {
         margin-bottom: -1px;
     }
 
-    .calendar, .calendar tr, .calendar tbody {
+    .calendar, .calendar thead, .calendar tr, .calendar tbody {
         grid-template-columns: 1fr;
     }
 
