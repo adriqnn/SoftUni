@@ -7,7 +7,7 @@ const html = {
     form: document.querySelector('form'),
     cancel: document.querySelector('[name="cancel"]'),
     container: document.querySelector('.topic-container')
-}
+};
 
 html.section.querySelector('div.topic-title').addEventListener('click', showDetails);
 html.form.addEventListener('submit', onSubmit);
