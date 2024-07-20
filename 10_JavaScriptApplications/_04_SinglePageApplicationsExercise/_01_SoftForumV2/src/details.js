@@ -1,25 +1,25 @@
 const section = document.getElementById('detailsView');
+const commentsList = document.getElementById('user-comment');
 const postElement = {
     title: document.getElementById('details-title'),
     username: document.getElementById('details-username'),
     time: document.getElementById('details-time'),
-    content: document.getElementById('details-content'),
+    content: document.getElementById('details-content')
 };
-const commentsList = document.getElementById('user-comment');
 
 const form = section.querySelector('form');
 form.addEventListener('submit', onSubmit);
 
 section.remove();
 
-
-export function showDetails(ev) {
+export function showDetails(ev){
     let target = ev.target;
 
-    if (target.tagName == 'H2') {
+    if(target.tagName === 'H2'){
         target = target.parentElement;
     }
-    if (target.tagName == 'A') {
+
+    if(target.tagName === 'A'){
         ev.preventDefault();
 
         const postId = target.id;
@@ -27,7 +27,7 @@ export function showDetails(ev) {
     }
 }
 
-async function showPost(postId) {
+async function showPost(postId){
     document.getElementById('main').replaceChildren('Loading...');
 
     const [res, commentsRes] = await Promise.all([
@@ -39,10 +39,7 @@ async function showPost(postId) {
         commentsRes.json()
     ]);
 
-    commentsList.replaceChildren(...Object
-        .values(comments)
-        .filter(c => c.postId == postId)
-        .map(createCommentElement));
+    commentsList.replaceChildren(...Object.values(comments).filter(c => c.postId === postId).map(createCommentElement));
 
     form.id = postId;
     postElement.title.textContent = post.title;
@@ -53,47 +50,40 @@ async function showPost(postId) {
     document.getElementById('main').replaceChildren(section);
 }
 
-function createCommentElement(comment) {
+function createCommentElement(comment){
     const element = document.createElement('div');
     element.className = 'topic-name-wrapper';
-    element.innerHTML = `
-    <div class="topic-name">
-        <p><strong>${comment.username}</strong> commented on <time>${comment.dateCreated}</time></p>
-        <div class="post-content">
-            <p>${comment.content}</p>
-        </div>
-    </div>`;
+    element.innerHTML = `<div class="topic-name">
+                             <p><strong>${comment.username}</strong> commented on <time>${comment.dateCreated}</time></p>
+                             <div class="post-content">
+                                 <p>${comment.content}</p>
+                             </div>
+                         </div>`;
 
     return element;
 }
 
-async function onSubmit(ev) {
+async function onSubmit(ev){
     ev.preventDefault();
+
     const formData = new FormData(form);
 
     const username = formData.get('username').trim();
     const content = formData.get('postText').trim();
     const postId = form.id;
 
-    try {
-        if (username == '' || content == '') {
+    try{
+        if (username === '' || content === ''){
             throw new Error('All fields are required!');
         }
 
         const res = await fetch('http://localhost:3030/jsonstore/collections/myboard/comments/', {
             method: 'post',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                username,
-                content,
-                postId,
-                dateCreated: new Date()
-            })
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, content, postId, dateCreated: new Date() })
         });
 
-        if (res.ok != true) {
+        if(res.ok !== true){
             const error = await res.json();
             throw new Error(error.message);
         }
@@ -101,8 +91,7 @@ async function onSubmit(ev) {
         form.reset();
 
         showPost(postId);
-
-    } catch (err) {
+    }catch(err){
         alert(err.message);
     }
 }
