@@ -17,7 +17,7 @@ html.section.remove();
 
 async function showHome(ev){
     ev?.preventDefault();
-    document.getElementById('main').replaceChildren('Loading...');
+    html.main.replaceChildren('Loading...');
 
     const res = await fetch(url);
     const posts = await res.json();
@@ -80,7 +80,7 @@ async function onSubmit(ev){
 }
 
 function clearForm(){
-    form.reset();
+    html.form.reset();
 }
 
 export { showHome };
