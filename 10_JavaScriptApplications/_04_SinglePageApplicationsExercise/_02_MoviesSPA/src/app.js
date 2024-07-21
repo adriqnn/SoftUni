@@ -21,8 +21,6 @@ function run(){
     home();
 }
 
-run();
-
 function home(){
     displayPage('home');
 }
@@ -31,3 +29,5 @@ function homeButton(e){
     e.preventDefault();
     home();
 }
+
+run();
