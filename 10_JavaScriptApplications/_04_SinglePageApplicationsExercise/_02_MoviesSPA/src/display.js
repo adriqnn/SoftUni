@@ -1,11 +1,13 @@
 import { loggedUser } from "./util.js";
+import { loadMovie, loadAllMovies } from "./movies.js";
 
 const html = {
     container: document.getElementById('container'),
     navbar: document.querySelector('nav.navbar'),
     credentialsHTML: document.querySelectorAll('nav li a'),
     main: document.getElementById('main-page-section'),
-    footer: document.querySelector('footer.page-footer')
+    footer: document.querySelector('footer.page-footer'),
+    addMovieBtn: document.getElementById('add-movie-button'),
 }
 
 const views = {
@@ -43,27 +45,45 @@ function addFooter(){
     html.container.appendChild(html.footer);
 }
 
-function showHomePage(id){
+async function showHomePage(id){
+    loggedUser() ? html.addMovieBtn.style.display = 'block' : html.addMovieBtn.style.display = 'none';
+
+    const movies = await loadAllMovies();
+    const moviesList = views.homePage.querySelector('#movies-list');
+
+    movies.forEach(e => e.querySelector(`div a`).addEventListener('click', showMovieDetailsPage));
+
+    moviesList.replaceChildren(...movies);
     html.container.appendChild(views[id]);
+}
+
+async function showMovieDetailsPage(e){
+    e.preventDefault();
+
+    const id = e.target.parentElement.id;
+    const movie = await loadMovie(id)
+
+    clearPage();
+    addHeaderNav();
+
+    views.movieExample.replaceChildren(movie);
+    html.container.appendChild(views.movieExample);
+
+    addFooter();
 }
 
 function showAddMoviePage(id){
     html.container.appendChild(views[id]);
 }
 
-function showMoviePage(id){
-
-}
-
 function showEditMoviePage(id){
 
 }
 
-function displayPage(page){
+async function displayPage(page){
     const display = {
         home: () => showHomePage('homePage'),
         addMovie: () =>  showAddMoviePage('addMovie'),
-        movie: () => showMoviePage('movieExample'),
         edit: () =>  showEditMoviePage('editMovie'),
         login: () => {
             html.container.appendChild(views.formLogin);
@@ -76,7 +96,7 @@ function displayPage(page){
     clearPage();
     addHeaderNav();
 
-    display[page]();
+    await display[page]();
 
     addFooter();
 }
