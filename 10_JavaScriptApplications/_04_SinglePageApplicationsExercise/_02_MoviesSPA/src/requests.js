@@ -1,5 +1,5 @@
 import { getUserDetails, hasEmptyStrings } from "./util.js";
-import { displayPage } from "./display.js";
+import { displayPage, showMovieDetailsPageWithoutEvent } from "./display.js";
 
 async function loadMovieReq(id){
     const res = await fetch(`http://localhost:3030/data/movies/${id}`);
@@ -36,7 +36,7 @@ async function userLikedReq(userId, movieId){
     const res = await fetch(`http://localhost:3030/data/likes?where=movieId%3D%22${movieId}%22%20and%20_ownerId%3D%22${userId}%22`);
     const data = await res.json();
 
-    return data.length;
+    return data;
 }
 
 async function addMovieReq(movie, e){
@@ -66,16 +66,68 @@ async function addMovieReq(movie, e){
     }
 }
 
-async function deleteMovieReq(){
-    return;
+async function editMovieReq(movie, e){
+    const url = `http://localhost:3030/data/movies`;
+    const userDetails = getUserDetails();
+    const id = e.target.id;
+
+    try {
+        if(hasEmptyStrings(movie)){
+            throw new Error('All fields required!');
+        }
+
+        const res = await fetch(`${url}/${id}`, {
+            method: 'put',
+            headers: {'Content-Type': 'application/json', 'X-Authorization': userDetails.token},
+            body: JSON.stringify(movie)
+        });
+
+        if(!res.ok){
+            const error = await res.json();
+            throw new Error(error.message);
+        }
+
+        e.target.reset();
+        await displayPage('home');
+    }catch(err) {
+        alert(err.message);
+    }
 }
 
-async function editMovieReq(){
-    return;
+async function likeMovieReq(movieId){
+    const userDetails = getUserDetails();
+
+    const like = { movieId, ownerID: userDetails.id };
+    const res = await fetch(`http://localhost:3030/data/likes`, {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json', 'X-Authorization': userDetails.token },
+        body: JSON.stringify(like)
+    });
+
+    showMovieDetailsPageWithoutEvent(movieId);
 }
 
-async function likeMovieReq(){
-    return;
+async function unlikeMovieReq(likeId, movieId){
+    const userDetails = getUserDetails();
+
+    const res = await fetch(`http://localhost:3030/data/likes/${likeId}`, {
+        method: 'delete',
+        headers: { 'X-Authorization': userDetails.token }
+    });
+
+    showMovieDetailsPageWithoutEvent(movieId);
+}
+
+async function deleteMovieReq(id){
+    const userDetails = getUserDetails();
+    const url = `http://localhost:3030/data/movies/`;
+
+    await fetch(`${url}${id}`, {
+        method: 'delete',
+        headers: { 'X-Authorization': userDetails.token }
+    });
+
+    displayPage('home');
 }
 
 async function authenticateReq(user, e, where){
@@ -120,4 +172,4 @@ function logoutReq(){
     });
 }
 
-export { loadMovieReq, loadMoviesReq, movieLikesReq, userLikedReq, deleteMovieReq, editMovieReq, likeMovieReq, addMovieReq, authenticateReq, logoutReq };
+export { loadMovieReq, loadMoviesReq, movieLikesReq, userLikedReq, editMovieReq, likeMovieReq, unlikeMovieReq, deleteMovieReq, addMovieReq, authenticateReq, logoutReq };
