@@ -66,6 +66,13 @@ document.addEventListener('click', e => {
     }
 
     if((e.target.tagName === 'BUTTON' || e.target.tagName === 'A') && e.target.type !== 'submit'){
+        if(e.target.tagName === 'A' && e.target.dataset.id === 'welcome'){
+            e.preventDefault();
+            e.target.blur();
+
+            return;
+        }
+
         buttonsActions[e.target.dataset.id]();
     }else{
         e.preventDefault();
@@ -96,6 +103,6 @@ document.addEventListener('click', e => {
             }
         }
 
-        forms[e.target.dataset.id]();
+        forms[e.target.parentElement.dataset.id]();
     }
 });
