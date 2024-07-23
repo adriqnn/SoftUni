@@ -39,9 +39,7 @@ function isValidInput(formType, data, output){
         }
     }
 
-    types[formType](data);
-
-    return true;
+    return types[formType](data) !== false;
 }
 
 function clearFormFields(form){
