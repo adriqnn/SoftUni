@@ -1,5 +1,5 @@
 import { loggedUser } from "./util.js";
-import { loadMovie, loadAllMovies } from "./movies.js";
+import { loadMovie, loadAllMovies, editMovie } from "./movies.js";
 
 const html = {
     container: document.getElementById('container'),
@@ -7,7 +7,7 @@ const html = {
     credentialsHTML: document.querySelectorAll('nav li a'),
     main: document.getElementById('main-page-section'),
     footer: document.querySelector('footer.page-footer'),
-    addMovieBtn: document.getElementById('add-movie-button'),
+    addMovieBtn: document.getElementById('add-movie-button')
 }
 
 const views = {
@@ -61,7 +61,7 @@ async function showMovieDetailsPage(e){
     e.preventDefault();
 
     const id = e.target.parentElement.id;
-    const movie = await loadMovie(id)
+    const movie = await loadMovie(id);
 
     clearPage();
     addHeaderNav();
@@ -72,25 +72,60 @@ async function showMovieDetailsPage(e){
     addFooter();
 }
 
-function showAddMoviePage(id){
+async function showMovieDetailsPageWithoutEvent(id){
+    const movie = await loadMovie(id);
+
+    clearPage();
+    addHeaderNav();
+
+    views.movieExample.replaceChildren(movie);
+    html.container.appendChild(views.movieExample);
+
+    addFooter();
+}
+
+function showAddMoviePage(id, e){
+    e.preventDefault();
+
     html.container.appendChild(views[id]);
 }
 
-function showEditMoviePage(id){
+function displayMovieEdit(movie){
+    clearPage();
+    addHeaderNav();
 
+    let divEl = document.createElement('div');
+    divEl.innerHTML = `<form id="${movie._id}" class="text-center border border-light p-5" action="#" method="">
+                           <h1>Edit Movie</h1>
+                           <div class="form-group">
+                               <label for="title">Movie Title</label>
+                               <input id="title" type="text" class="form-control" placeholder="Movie Title" value="${movie.title}" name="title"/>
+                           </div>
+                           <div class="form-group">
+                               <label for="description">Movie Description</label>
+                               <textarea class="form-control" placeholder="Movie Description..." name="description">${movie.description}</textarea>
+                           </div>
+                           <div class="form-group">
+                               <label for="imageUrl">Image url</label>
+                               <input id="imageUrl" type="text" class="form-control" placeholder="Image Url" value="${movie.img}" name="img"/>
+                           </div>
+                           <button type="submit" class="btn btn-primary">Submit</button>
+                       </form>`;
+
+    divEl.querySelector('form').addEventListener('submit', editMovie);
+
+    views.editMovie.replaceChildren(divEl);
+    html.container.appendChild(views.editMovie);
+
+    addFooter();
 }
 
-async function displayPage(page){
+async function displayPage(page, e){
     const display = {
         home: () => showHomePage('homePage'),
-        addMovie: () =>  showAddMoviePage('addMovie'),
-        edit: () =>  showEditMoviePage('editMovie'),
-        login: () => {
-            html.container.appendChild(views.formLogin);
-        },
-        register: () => {
-            html.container.appendChild(views.formSignUp);
-        }
+        addMovie: () =>  showAddMoviePage('addMovie', e),
+        login: () => html.container.appendChild(views.formLogin),
+        register: () => html.container.appendChild(views.formSignUp)
     }
 
     clearPage();
@@ -101,4 +136,4 @@ async function displayPage(page){
     addFooter();
 }
 
-export { displayPage };
+export { displayPage, showMovieDetailsPageWithoutEvent, displayMovieEdit };
