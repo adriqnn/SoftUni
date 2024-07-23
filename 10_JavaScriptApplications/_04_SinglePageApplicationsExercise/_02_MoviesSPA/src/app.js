@@ -1,7 +1,6 @@
 import { displayPage } from "./display.js";
 import { login, logout } from "./login.js";
 import { register } from "./register.js";
-import { addMovie } from "./movies.js";
 
 const html = {
     homeBtn: document.querySelector('a.navbar-brand'),
@@ -15,7 +14,7 @@ html.homeBtn.addEventListener('click', homeButton);
 html.loginBtn.addEventListener('click', login);
 html.registerBtn.addEventListener('click', register);
 html.logoutBtn.addEventListener('click', logout);
-html.addMovieBtn.addEventListener('click', addMovie);
+html.addMovieBtn.addEventListener('click', (e) =>  displayPage('addMovie', e));
 
 function run(){
     home();
