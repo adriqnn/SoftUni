@@ -38,3 +38,19 @@
     text-decoration: underline;
     box-shadow: 0 5px 10px #cccccc;
 }
+
+section#movie ul {
+    display: flex;
+    flex-direction: row;
+}
+
+section#movie ul li {
+    list-style: none;
+    padding: 50px;
+    width: 33%;
+    text-align: center;
+}
+
+section#movie ul li img{
+    width: 100%;
+}
