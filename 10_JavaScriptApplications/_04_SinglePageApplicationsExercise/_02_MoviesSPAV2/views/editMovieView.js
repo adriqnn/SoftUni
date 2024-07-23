@@ -16,7 +16,7 @@ function editMovieView ({ title, description, img }) {
                                <input type="text" class="form-control" placeholder="Image Url" value="${img}" name="imageUrl">
                            </div>
                            <button type="submit" class="btn btn-primary">Submit</button>
-                      </form>`;
+                       </form>`;
 
     const editMovieSection = eFactory('section', '', innerHTML);
     editMovieSection.id = 'edit-movie';
