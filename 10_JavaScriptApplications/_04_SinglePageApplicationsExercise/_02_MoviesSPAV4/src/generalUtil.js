@@ -32,7 +32,7 @@ function onLogout(ctx){
     get('/users/logout');
     sessionStorage.removeItem('userDetails');
     ctx.checkUserNav();
-    ctx.goTo('homePage');
+    ctx.goTo('loginPage');
 }
 
 function createSubmitHandler(form, callback){
