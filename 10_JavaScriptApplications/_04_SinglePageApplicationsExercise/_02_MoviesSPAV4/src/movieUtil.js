@@ -1,4 +1,4 @@
-import { get, post, put, del } from "./api.js";
+import { get, post, del } from "./api.js";
 import { getUserDetails } from "./generalUtil.js";
 
 async function onLikeMovie(ctx, movieId){
