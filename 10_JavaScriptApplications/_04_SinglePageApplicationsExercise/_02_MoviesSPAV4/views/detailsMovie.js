@@ -29,21 +29,19 @@ async function generateSection(fId){
     divEl.setAttribute('data-owner', movie._ownerId);
 
     divEl.innerHTML = `<h1>${movie.title}</h1>
-                        <div class="row bg-light text-dark">
-                             <div class="col-md-8">
-                                 <img class="img-thumbnail" src="${movie.img}" alt="Movie"/>
-                             </div>
-                             <div id="user-elements" class="col-md-4 text-center">
-                                 <h3 class="my-3">Movie Description</h3>
-                                 <p>
-                                     ${movie.description}
-                                 </p>
-                                 <a class="btn btn-danger" href="#">Delete</a>
-                                 <a class="btn btn-warning" href="#">Edit</a>
-                                 <a class="btn btn-primary" id="like" href="#">Like</a>
-                                 <a class="btn btn-primary" id="unlike" href="#">Unlike</a>
-                                 <span class="enrolled-span">Liked ${likes}</span>
-                             </div>
+                       <div class="row bg-light text-dark">
+                           <div class="col-md-8">
+                               <img class="img-thumbnail" src="${movie.img}" alt="Movie"/>
+                           </div>
+                           <div id="user-elements" class="col-md-4 text-center">
+                               <h3 class="my-3">Movie Description</h3>
+                               <p>${movie.description}</p>
+                               <a class="btn btn-danger" href="#">Delete</a>
+                               <a class="btn btn-warning" href="#">Edit</a>
+                               <a class="btn btn-primary" id="like" href="#">Like</a>
+                               <a class="btn btn-primary" id="unlike" href="#">Unlike</a>
+                               <span class="enrolled-span">Liked ${likes}</span>
+                           </div>
                        </div>`;
 
     const ux = {
