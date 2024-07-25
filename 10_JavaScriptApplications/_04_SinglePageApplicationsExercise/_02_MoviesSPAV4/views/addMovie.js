@@ -16,7 +16,7 @@ export function showAddMovie(incCtx){
 
 async function onSubmit(data){
     await post('/data/movies', data);
-    
+
     form.reset();
 
     ctx.goTo('homePage');
