@@ -1,5 +1,5 @@
 import { get, put } from "../src/api.js";
-import {createSubmitHandler, getUserDetails} from "../src/generalUtil.js";
+import { createSubmitHandler, getUserDetails } from "../src/generalUtil.js";
 
 const section = document.getElementById('edit-movie');
 section.remove();
@@ -17,7 +17,6 @@ export async function showEditMovie(incCtx, movieId){
 }
 
 async function generateSection(fId){
-    const user = getUserDetails();
     const movie = await get(`/data/movies/${fId}`);
 
     const form = document.createElement('form');
