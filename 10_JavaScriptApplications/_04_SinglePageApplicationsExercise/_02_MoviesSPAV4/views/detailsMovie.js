@@ -51,8 +51,7 @@ async function generateSection(fId){
         editBtn: divEl.querySelector('a.btn-warning'),
         likeBtn: divEl.querySelector('#like'),
         unlikeBtn: divEl.querySelector('#unlike'),
-        liked: divEl.querySelector('span.enrolled-span'),
-        divContainer: divEl.querySelector('#user-elements')
+        liked: divEl.querySelector('span.enrolled-span')
     }
 
     ux.deleteBtn.addEventListener('click', (e) => {
