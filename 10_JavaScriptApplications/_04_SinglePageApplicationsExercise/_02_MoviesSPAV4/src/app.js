@@ -7,6 +7,7 @@ import { showDetailsMovie } from "../views/detailsMovie.js";
 
 import { checkUserNav, onLogout } from "./generalUtil.js";
 import { onDeleteMovie, onLikeMovie, onUnlikeMovie } from "./movieUtil.js";
+
 import { render } from "./render.js";
 
 document.querySelector('nav').addEventListener('click', navigate);
