@@ -6,6 +6,7 @@ let moviesCache = null;
 
 const section = document.getElementById('home-page');
 const catalog = section.querySelector('.card-deck.d-flex.justify-content-center');
+const details = section.querySelector("section.add-movie-class-id");
 
 section.querySelector('#createLink').addEventListener('click', (event) => {
     event.preventDefault();
@@ -31,6 +32,9 @@ section.remove();
 
 export function showHome(){
     showView(section);
+
+    sessionStorage.getItem('userData') ? details.style.display = 'block' : details.style.display = 'none';
+
     getMovies();
 }
 
@@ -59,6 +63,6 @@ function createMovieCard(movie){
                                  <button type="button" class="btn btn-info">Details</button>
                              </a>
                          </div>`;
-    
+
     return element;
 }
