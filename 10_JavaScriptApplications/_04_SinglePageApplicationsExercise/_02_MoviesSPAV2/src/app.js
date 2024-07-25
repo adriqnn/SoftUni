@@ -34,7 +34,7 @@ document.addEventListener('click', e => {
         logout: async () => {
             await logoutRequest();
             sessionStorage.clear();
-            displayPage(createPageLayout(await getHomePageView()));
+            displayPage(createPageLayout(loginView));
         },
         movieDetailsBtn: async () => {
             const movieId = e.target.dataset['movieId'];
@@ -103,6 +103,7 @@ document.addEventListener('click', e => {
             }
         }
 
+        e.target.parentElement.reset();
         forms[e.target.parentElement.dataset.id]();
     }
 });
