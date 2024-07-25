@@ -6,13 +6,11 @@ async function onLikeMovie(ctx, movieId){
     const like = { movieId, ownerID: userDetails.id };
 
     await post('/data/likes', like);
-
     ctx.goTo('movieDetailsPage', movieId);
 }
 
 async function onUnlikeMovie(ctx, data){
     await del(`/data/likes/${data.likeId}`);
-
     ctx.goTo('movieDetailsPage', data.movieId);
 }
 
