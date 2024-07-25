@@ -1,5 +1,5 @@
-import { getUserDetails, loggedUser } from "../src/generalUtil.js";
 import { get } from "../src/api.js";
+import { getUserDetails, loggedUser } from "../src/generalUtil.js";
 
 const section = document.getElementById('home-page');
 const addMovieButton = document.querySelector('#add-movie-button a');
@@ -67,7 +67,6 @@ export async function showHome(incCtx){
 
 function loadAddMovie(ev){
     ev.preventDefault();
-
     ctx.goTo('addMoviePage');
 }
 
