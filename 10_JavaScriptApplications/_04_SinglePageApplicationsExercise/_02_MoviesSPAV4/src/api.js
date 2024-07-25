@@ -30,7 +30,7 @@ async function request(method, url, data){
         }else{
             return await res.json();
         }
-    } catch (err) {
+    }catch(err){
         alert(err.message);
         throw err;
     }
