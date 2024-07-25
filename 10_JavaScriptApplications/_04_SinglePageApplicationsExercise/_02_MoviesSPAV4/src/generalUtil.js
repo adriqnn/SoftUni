@@ -12,14 +12,6 @@ function getUserDetails(){
     return JSON.parse(sessionStorage.getItem('userDetails'));
 }
 
-function hasEmptyStrings(obj){
-    return Object.values(obj).some((e) => e === '');
-}
-
-function clearFields(arr){
-    arr.forEach(x => x.value = '');
-}
-
 function checkUserNav(){
     const userDetails = JSON.parse(sessionStorage.getItem('userDetails'));
 
@@ -53,4 +45,4 @@ function createSubmitHandler(form, callback){
     }
 }
 
-export { loggedUser, getUserDetails, hasEmptyStrings, clearFields, checkUserNav, createSubmitHandler, onLogout };
+export { loggedUser, getUserDetails, checkUserNav, createSubmitHandler, onLogout };
