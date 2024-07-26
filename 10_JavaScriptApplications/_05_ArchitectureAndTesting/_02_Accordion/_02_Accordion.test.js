@@ -12,8 +12,8 @@ describe('App: End-to-end testing', function (){
 
     it('Should check if we load the right sections', async () => {
         await page.goto('http://localhost:3000');
-        //let content = await page.content();
-        let location = await page.locator('.accordion .head > span'); // Locate the info you want to test
+
+        let location = await page.locator('.accordion .head > span');
         const titles = await location.evaluateAll((section) => section.map(s => s.textContent));
 
         assert.include(titles, 'Scalable Vector Graphics');
@@ -25,7 +25,7 @@ describe('App: End-to-end testing', function (){
     it('Should check if we reveal the hidden info', async () => {
         await page.goto('http://localhost:3000');
         await page.click('text=More');
-        const visible = await page.isVisible('.extra'); // Hidden info
+        const visible = await page.isVisible('.extra');
 
         assert.equal(visible, true);
     });
