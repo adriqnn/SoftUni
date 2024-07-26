@@ -11,6 +11,7 @@ async function loadMovieReq(id){
 async function loadMoviesReq(){
     const res = await fetch(`http://localhost:3030/data/movies`);
     const data = await res.json();
+    const userDetails = getUserDetails();
 
     return data.map(e => {
         const liEl = document.createElement('li');
@@ -20,6 +21,9 @@ async function loadMoviesReq(){
                               <h4>${e.title}</h4>
                               <a href="/movie-details" class="btn btn-warning">Details</a>
                           </div>`;
+
+        let details = liEl.querySelector('a');
+        userDetails ? details.style.display = 'inline' : details.style.display = 'none';
 
         return liEl;
     });
