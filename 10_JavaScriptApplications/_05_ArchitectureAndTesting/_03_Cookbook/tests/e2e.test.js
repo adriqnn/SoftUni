@@ -18,7 +18,7 @@ const endpoints = {
 function json(data){
     return {
         status: 200,
-        headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'},
+        headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
     };
 }
@@ -44,12 +44,13 @@ describe('E2E tests', function (){
 
         // block intensive resources and external calls (page routes take precedence)
         await context.route('**/*.{png,jpg,jpeg}', route => route.abort());
-        
+
         /*
         await context.route(url => {
             return url.hostname != 'localhost';
         }, route => route.abort());
         */
+        
         await context.route('**' + endpoints.count, route => route.fulfill(json(3)));
 
         page = await context.newPage();
@@ -187,7 +188,7 @@ describe('E2E tests', function (){
             const endpoint = '**' + endpoints.create;
             const mock = {
                 name: 'Name1',
-                img: '/assests/new.png',
+                img: '/assets/new.png',
                 ingredients: ['i1', 'i2'],
                 steps: ['s1', 's2'],
                 _id: '0002',
@@ -221,7 +222,7 @@ describe('E2E tests', function (){
             page.route('**' + endpoints.recent, route => route.fulfill(json([mock])));
             const mock = {
                 name: 'Name1',
-                img: '/assests/new.png',
+                img: '/assets/new.png',
                 ingredients: ['i1', 'i2'],
                 steps: ['s1', 's2'],
                 _id: '0002',
@@ -250,7 +251,7 @@ describe('E2E tests', function (){
             page.route('**' + endpoints.recent, route => route.fulfill(json([mock])));
             const mock = {
                 name: 'Name1',
-                img: '/assests/new.png',
+                img: '/assets/new.png',
                 ingredients: ['i1', 'i2'],
                 steps: ['s1', 's2'],
                 _id: '0002',
@@ -279,7 +280,7 @@ describe('E2E tests', function (){
             page.route('**' + endpoints.recent, route => route.fulfill(json([mock])));
             const mock = {
                 name: 'Name1',
-                img: '/assests/new.png',
+                img: '/assets/new.png',
                 ingredients: ['i1', 'i2'],
                 steps: ['s1', 's2'],
                 _id: '0002',
@@ -313,7 +314,7 @@ describe('E2E tests', function (){
             page.route('**' + endpoints.recent, route => route.fulfill(json([mock])));
             const mock = {
                 name: 'Name1',
-                img: '/assests/new.png',
+                img: '/assets/new.png',
                 ingredients: ['i1', 'i2'],
                 steps: ['s1', 's2'],
                 _id: '0002',
