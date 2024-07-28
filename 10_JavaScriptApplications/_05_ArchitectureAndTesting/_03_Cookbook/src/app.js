@@ -33,7 +33,7 @@ window.addEventListener('load', async () => {
         navigation.goTo('catalog');
     });
 
-    // Start application in catalog view
+    // Start application in home view
     navigation.goTo('home');
 
     async function logout(){
