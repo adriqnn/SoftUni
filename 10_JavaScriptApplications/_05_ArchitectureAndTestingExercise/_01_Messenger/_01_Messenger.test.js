@@ -43,7 +43,7 @@ describe('App: End-to-End testing', function () {
         await page.close();
     });
 
-    it('Should refresh the section and check the messages', async () => {
+    it('Should refresh the section and check the messages.', async () => {
         await page.goto(host);
 
         await page.route('**/jsonstore/messenger', route => {
@@ -62,7 +62,7 @@ describe('App: End-to-End testing', function () {
         assert.deepEqual(currentMessages, testMessages);
     });
 
-    it('Should successfully send a message', async () => {
+    it('Should successfully send a message.', async () => {
         await page.goto(host);
 
         await page.route('**/jsonstore/messenger', (route) => {
