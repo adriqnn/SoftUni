@@ -8,6 +8,7 @@ describe('E2E testing', function () {
 
     before(async () => { browser = await chromium.launch({headless: false, slowMo: 500}); });
     after(async () => { await browser.close(); });
+    
     beforeEach(async () => { page = await browser.newPage(); });
     afterEach(async () => { await page.close(); });
 
