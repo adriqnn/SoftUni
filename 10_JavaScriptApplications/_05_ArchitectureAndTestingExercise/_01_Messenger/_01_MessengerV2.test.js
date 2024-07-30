@@ -31,6 +31,7 @@ describe('E2E testing', function () {
 
     it('Send message.', async () => {
         await page.goto('http://localhost:63343/.../_01_Messenger');
+        
         await page.fill('#author', 'User');
         await page.fill('#content', 'message');
         await page.click('text=Send');
