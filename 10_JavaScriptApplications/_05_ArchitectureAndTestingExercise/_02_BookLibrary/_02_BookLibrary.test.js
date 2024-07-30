@@ -4,7 +4,7 @@ const { assert } = require('chai');
 let browser, page;
 let host = 'http://localhost:63343/.../_02_BookLibrary';
 
-describe('App: End-to-end testing', function () {
+describe('App: End-to-End testing', function () {
     this.timeout(6000);
 
     before(async () => {
@@ -24,11 +24,12 @@ describe('App: End-to-end testing', function () {
         await page.close();
     });
 
-    it('Should load the books', async () => {
+    it('Should load the books.', async () => {
         await page.goto(host);
         await page.click('text=LOAD ALL BOOKS');
 
         let content = await page.content();
+
         const bookName1 = await page.textContent('table tbody tr:nth-child(1) td:nth-child(1)');
         const author1 = await page.textContent('table tbody tr:nth-child(1) td:nth-child(2)');
         const bookName2 = await page.textContent('table tbody tr:nth-child(2) td:nth-child(1)');
@@ -42,7 +43,7 @@ describe('App: End-to-end testing', function () {
         assert.include(content, 'Delete');
     });
 
-    it('Should submit a book successfully', async () => {
+    it('Should submit a book successfully.', async () => {
         await page.goto(host);
 
         await page.fill('[placeholder="Title..."]', 'Witcher');
@@ -58,7 +59,7 @@ describe('App: End-to-end testing', function () {
         assert.equal(authorName, 'Andrej Sapkowski');
     });
 
-    it('Should correctly edit a book', async () => {
+    it('Should correctly edit a book.', async () => {
         await page.goto(host);
 
         await page.click('text=LOAD ALL BOOKS');
@@ -76,7 +77,7 @@ describe('App: End-to-end testing', function () {
         assert.equal(authorName, 'Svetlin Nakov');
     });
 
-    it('delete book', async () => {
+    it('Delete book.', async () => {
         await page.goto(host);
         await page.click('text=LOAD ALL BOOKS');
 
