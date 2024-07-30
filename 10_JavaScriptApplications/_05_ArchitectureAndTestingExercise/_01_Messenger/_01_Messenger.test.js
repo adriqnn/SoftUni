@@ -52,7 +52,7 @@ describe('App: End-to-End testing', function () {
 
         await Promise.all([
             page.waitForResponse('**/jsonstore/messenger'),
-            page.click('#refresh'),
+            page.click('#refresh')
         ]);
 
         let location = await page.locator('#messages');
@@ -74,7 +74,7 @@ describe('App: End-to-End testing', function () {
 
         const [response] = await Promise.all([
             page.waitForResponse('**/jsonstore/messenger'),
-            page.click('#submit'),
+            page.click('#submit')
         ]);
 
         const data = JSON.parse(response.request().postData());
