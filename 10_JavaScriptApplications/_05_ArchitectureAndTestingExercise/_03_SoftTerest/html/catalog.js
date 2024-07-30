@@ -8,12 +8,12 @@ emptyCatalogHTML.id = `dashboard-holder`;
 
 function catalogIdeaTemplate(idea){
     const el = eFactory('div', '', `<div class="card overflow-hidden current-card details" style="width: 20rem; height: 360px;">
-                                                                             <div class="card-body">
-                                                                                 <p class="card-text">${idea.title}</p>
-                                                                             </div>
-                                                                             <img class="card-image" src="${idea.img}" alt="Card image cap">
-                                                                             <a class="btn" href="/details-${idea._id}">Details</a>
-                                                                         </div>`);
+                                        <div class="card-body">
+                                            <p class="card-text">${idea.title}</p>
+                                        </div>
+                                        <img class="card-image" src="${idea.img}" alt="Card image cap">
+                                        <a class="btn" href="/details-${idea._id}">Details</a>
+                                    </div>`);
 
     el.id = idea._id;
 
