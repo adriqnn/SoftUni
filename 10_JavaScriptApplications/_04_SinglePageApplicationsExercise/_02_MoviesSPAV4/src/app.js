@@ -1,6 +1,6 @@
 import { showHome } from "../views/home.js";
-import { showRegister } from "../views/register.js";
 import { showLogin } from "../views/login.js";
+import { showRegister } from "../views/register.js";
 import { showAddMovie } from "../views/addMovie.js";
 import { showEditMovie } from "../views/editMovie.js";
 import { showDetailsMovie } from "../views/detailsMovie.js";
