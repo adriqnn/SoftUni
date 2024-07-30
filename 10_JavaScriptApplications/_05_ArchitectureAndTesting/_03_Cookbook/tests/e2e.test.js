@@ -3,7 +3,7 @@ const { chromium } = require('playwright-chromium');
 const { expect } = require('chai');
 
 const mockData = require('./mock-data.json');
-const host = 'http://localhost:3000';
+const host = 'http://localhost:63343/.../_03_Cookbook';
 const endpoints = {
     recipes: '/data/recipes?select=_id%2Cname%2Cimg',
     count: '/data/recipes?count',
@@ -50,7 +50,7 @@ describe('E2E tests', function (){
             return url.hostname != 'localhost';
         }, route => route.abort());
         */
-        
+
         await context.route('**' + endpoints.count, route => route.fulfill(json(3)));
 
         page = await context.newPage();
