@@ -3,9 +3,10 @@ import { deleteIdeaBtnHTML, detailsHTML } from "../html/details.js";
 import { getUserDetails } from "../src/util.js";
 
 let section = null;
-let deleteBtn = deleteIdeaBtnHTML;
 let ctx = null;
 let id = null;
+
+let deleteBtn = deleteIdeaBtnHTML;
 
 export async function showDetails(incCtx, incId){
     ctx = incCtx;
