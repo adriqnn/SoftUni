@@ -13,9 +13,7 @@ function list_of_townsV1(){
         let input = htmlElements.input.value;
         let townsList = input.split(', ');
 
-        let cardTemplate = html `<ul>
-                                     ${townsList.map(t => html `<li>${t}</li>`)}
-                                 </ul>`;
+        let cardTemplate = html `<ul>${townsList.map(t => html `<li>${t}</li>`)}</ul>`;
 
         render(cardTemplate, htmlElements.root);
     });
