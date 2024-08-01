@@ -1,6 +1,6 @@
 import { html, render } from "../node_modules/lit-html/lit-html.js";
 
-function list_of_townsV1(){
+function list_townsV1(){
     const htmlElements = {
         input: document.getElementById('towns'),
         btn: document.getElementById('btnLoadTowns'),
@@ -19,9 +19,9 @@ function list_of_townsV1(){
     });
 }
 
-list_of_townsV1();
+list_townsV1();
 
-function list_of_townsV2(){
+function list_townsV2(){
     const townTemplate = (name) => html `<li>${name}</li>`;
     const townsTemplate = (townsNames) => html `<ul>${townsNames.map(x => townTemplate(x))}</ul>`;
 
