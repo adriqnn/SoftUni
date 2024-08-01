@@ -20,3 +20,17 @@ function list_of_townsV1(){
 }
 
 list_of_townsV1();
+
+function list_of_townsV2(){
+    const townTemplate = (name) => html `<li>${name}</li>`;
+    const townsTemplate = (townsNames) => html `<ul>${townsNames.map(x => townTemplate(x))}</ul>`;
+
+    document.getElementsByTagName('form')[0].addEventListener('submit', e => {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+        const data = [...formData.values()][0].split(', ');
+
+        render(townsTemplate(data), document.getElementById('root'));
+    });
+}
