@@ -1,5 +1,6 @@
 import { html, render } from "../node_modules/lit-html/lit-html.js";
 import { cats } from "./_02_CatsSeeder.js";
+// import { LitElement } from "../node_modules/lit-element/lit-element.js";
 
 function http_status_catsV1(){
     const htmlElements = {
@@ -38,4 +39,5 @@ function http_status_catsV1(){
 
     htmlElements.section.appendChild(ulEl);
 }
+
 http_status_catsV1();
