@@ -80,7 +80,6 @@ function http_status_catsV2(){
     render(catsHTML(cats), document.getElementById('allCats'));
 }
 
-
 function http_status_catsV3(){
     let cardTemplate = (c) => html `<li>
                                         <img src="../images/cat${c.id}.jpg" witdth="250" height="250">
@@ -105,7 +104,7 @@ function http_status_catsV3(){
     }
 
     let result = cats.map(cardTemplate);
-    
+
     let ulEl = document.createElement('ul');
     render(result, ulEl);
 
