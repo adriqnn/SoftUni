@@ -15,10 +15,10 @@ function http_status_catsV1(){
 
         const el = html `<img src="../images/cat${e.id}.jpg" width="250" height="250" alt="cat-img">
                          <div class="info">
-                             <button class="showBtn"  @click=${onClick}>Show status code</button>
+                             <button class="showBtn" @click=${onClick}>Show status code</button>
                              <div class="status" style="display: none" id="100" on>
                                  <h4>Status Code: ${e.statusCode}</h4>
-                                 <p>Continue</p>
+                                 <p>${e.statusMessage}</p>
                              </div>
                          </div>`;
 
@@ -38,5 +38,4 @@ function http_status_catsV1(){
 
     htmlElements.section.appendChild(ulEl);
 }
-
 http_status_catsV1();
