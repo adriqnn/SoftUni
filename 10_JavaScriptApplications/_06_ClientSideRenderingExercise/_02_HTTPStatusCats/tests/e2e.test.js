@@ -2,7 +2,7 @@
 const { chromium } = require('playwright-chromium');
 const { expect } = require('chai');
 
-const host = 'http://localhost:63343/.../_01_HTTPStatusCats'; // Application host (NOT service host - that can be anything)
+const host = 'http://localhost:63343/.../_02_HTTPStatusCats'; // Application host (NOT service host - that can be anything)
 const DEBUG = false;
 const slowMo = 500;
 
