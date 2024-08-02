@@ -79,3 +79,36 @@ function http_status_catsV2(){
 
     render(catsHTML(cats), document.getElementById('allCats'));
 }
+
+
+function http_status_catsV3(){
+    let cardTemplate = (c) => html `<li>
+                                        <img src="../images/cat${c.id}.jpg" witdth="250" height="250">
+                                        <div class="info">
+                                            <button class="showBtn" @click=${onClick}>Show status code</button>
+                                            <div class="status" style="display: none" id=${c.id}>
+                                                <h4>Status Code: ${c.statusCode}</h4>
+                                                <p>${c.statusMessage}</p>
+                                            </div>
+                                        </div>
+                                    </li>`;
+
+    function onClick(e){
+        let cat = e.target.parentNode;
+        let div = cat.querySelector('.status');
+
+        if(div.style.display === 'block'){
+            div.style.display = 'none';
+        }else{
+            div.style.display = 'block';
+        }
+    }
+
+    let result = cats.map(cardTemplate);
+    
+    let ulEl = document.createElement('ul');
+    render(result, ulEl);
+
+    let main = document.getElementById('allCats');
+    main.appendChild(ulEl);
+}
