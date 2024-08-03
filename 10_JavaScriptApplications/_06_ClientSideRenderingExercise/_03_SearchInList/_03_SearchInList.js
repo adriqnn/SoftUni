@@ -43,3 +43,65 @@ function search_in_listV1(){
 
 search_in_listV1();
 
+function search_in_listV2(){
+    document.querySelector('body').innerHTML = '';
+
+    const template = (towns) => html`<article>
+                                         <div id="towns">
+                                             <ul>${towns.map(x => html`
+                                                 <li>${x}</li>`)}
+                                             </ul>
+                                         </div>
+                                         <input type="text" id="searchText"/>
+                                         <button>Search</button>
+                                         <div id="result"></div>
+                                     </article>`;
+
+
+    render(template(towns), document.querySelector('body'));
+
+    document.addEventListener('click', e => {
+        if(e.target.tagName === 'BUTTON'){
+            const value = document.getElementById(`searchText`).value;
+            const towns = [...document.getElementsByTagName('li')];
+            
+            let counter = 0
+
+            towns.forEach(x => {
+                x.className = '';
+                
+                if(x.innerText.toLocaleLowerCase().includes(value.toLocaleLowerCase())){
+                    x.className = 'active';
+                    counter += 1;
+                }
+            });
+
+            document.getElementById('result').innerText = counter !== 0 ? `${counter} matches found` : '';
+        }
+    });
+}
+
+function search_in_listV3(){
+    let cardTemplate = html `<ul>${towns.map(item => html `<li id=${item}>${item}</li>`)}</ul>`;
+
+    let card = document.getElementById('towns');
+    render(cardTemplate, card);
+
+    document.querySelector('button').addEventListener('click', search);
+
+    function search(){
+        let text = document.getElementById('searchText').value;
+
+        let result = towns.filter(t => {
+            if(t.toLowerCase().includes(text.toLowerCase())){
+                let match = document.getElementById(`${t}`);
+                match.setAttribute('class', 'active');
+
+                return t;
+            }
+        });
+        
+        let resultHTML = document.getElementById('result');
+        resultHTML.textContent = `${result.length} matches found`;
+    }
+}
