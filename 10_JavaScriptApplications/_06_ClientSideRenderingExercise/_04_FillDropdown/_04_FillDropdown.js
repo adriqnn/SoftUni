@@ -31,6 +31,7 @@ function fill_dropdownV1(){
         e.preventDefault();
 
         let text = htmlElements.item.value;
+        htmlElements.item.value = '';
 
         await fetch('http://localhost:3030/jsonstore/advanced/dropdown', {
             method: 'post',
@@ -100,7 +101,6 @@ async function fill_dropdownV2(){
         return await checkOkToJSON(response);
     }
 }
-
 
 async function fill_dropdownV3(){
     async function getAllItems(){
