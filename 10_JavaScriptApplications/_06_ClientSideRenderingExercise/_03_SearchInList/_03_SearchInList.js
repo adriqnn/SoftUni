@@ -10,8 +10,8 @@ function search_in_listV1(){
    }
 
    const ulEl = document.createElement('ul');
-
    const liEl = (e) => html `<li>${e}</li>`;
+
    render(towns.map(e => liEl(e)), ulEl);
    htmlElements.towns.appendChild(ulEl);
 
@@ -30,7 +30,7 @@ function search_in_listV1(){
        liList.forEach(e => {
            e.style.fontWeight = 'normal';
            e.style.textDecoration = 'none';
-       })
+       });
 
        let filtered = [...liList].filter(e => e.textContent.toLowerCase().includes(search)).map(e => {
            e.style.fontWeight = 'bold';
@@ -42,3 +42,4 @@ function search_in_listV1(){
 }
 
 search_in_listV1();
+
