@@ -27,6 +27,7 @@ input, select {
     outline: none;
     padding: 5px;
 }
+
 select {
     margin-bottom: 12px;
 }
