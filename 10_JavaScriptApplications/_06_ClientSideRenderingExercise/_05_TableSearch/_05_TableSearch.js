@@ -153,3 +153,42 @@ async function table_searchV3(){
       }
    });
 }
+
+async function table_searchV4(){
+   function search(){
+      let tableRows = document.querySelector('.container tbody').children;
+      let input = document.querySelector('#searchField');
+
+      let searchTerm = input.value;
+      input.value = '';
+
+      for(const row of tableRows){
+         row.classList.remove('select');
+
+         if(row.textContent.toLowerCase().includes(searchTerm.toLowerCase())){
+            row.classList.add('select');
+         }
+      }
+   }
+
+   let url = 'http://localhost:3030/jsonstore/advanced/table';
+
+   function getAllStudents(){
+      return fetch(url).then(res => res.json());
+   }
+
+   const studentsTemplate = (studentsData) => html `${studentsData.map(s => html `<tr>
+                                                                                      <td>${s.firstName} ${s.lastName}</td>
+                                                                                      <td>${s.email}</td>
+                                                                                      <td>${s.course}</td>
+                                                                                   </tr>`)}`;
+
+   let tableBody = document.querySelector('.container tbody');
+   let studentData = await getAllStudents();
+   let template = studentsTemplate(Object.values(studentData));
+
+   render(template, tableBody);
+
+   let searchButton = document.querySelector('#searchBtn');
+   searchButton.addEventListener('click', search);
+}
