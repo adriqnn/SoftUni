@@ -13,7 +13,7 @@ const endpoints = { catalog: '/jsonstore/advanced/dropdown' };
 let browser;
 let page;
 
-describe('E2E testing', function () {
+describe('E2E testing', function (){
     // Setup
     this.timeout(6000);
 
