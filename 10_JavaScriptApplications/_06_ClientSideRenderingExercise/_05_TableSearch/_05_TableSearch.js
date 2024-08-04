@@ -47,7 +47,7 @@ function table_searchV1(){
    }
 }
 
-table_searchV4();
+table_searchV1();
 
 function table_searchV2(){
    const htmlElements = {
