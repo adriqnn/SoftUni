@@ -50,7 +50,7 @@ function accordionV1(){
     }
 }
 
-accordionV4();
+accordionV1();
 
 function accordionV2(){
     const urlArticles = 'http://localhost:3030/jsonstore/advanced/articles/list';
