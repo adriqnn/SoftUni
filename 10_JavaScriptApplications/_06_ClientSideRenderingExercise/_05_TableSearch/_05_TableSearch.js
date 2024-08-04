@@ -1,6 +1,6 @@
 import { html, render } from "../node_modules/lit-html/lit-html.js";
 
-function table_searchV1() {
+function table_searchV1(){
    const htmlElements = {
       tbody: document.querySelector('tbody'),
       input: document.querySelector('input'),
@@ -47,9 +47,9 @@ function table_searchV1() {
    }
 }
 
-table_searchV1();
+table_searchV4();
 
-function table_searchV2() {
+function table_searchV2(){
    const htmlElements = {
       tbody: document.querySelector('tbody'),
       input: document.querySelector('input'),
