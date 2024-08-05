@@ -91,7 +91,6 @@ function book_libraryV1(){
                                </form>`;
 
         render(editForm, document.querySelector('#editDiv'));
-
     }
 
     function cancelEdit(e){
