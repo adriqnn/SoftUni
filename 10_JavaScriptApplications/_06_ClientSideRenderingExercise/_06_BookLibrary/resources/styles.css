@@ -110,3 +110,7 @@ button:hover{
     background-color: #71b8ff;
     cursor: pointer;
 }
+
+tr td button{
+    display: inline;
+}
