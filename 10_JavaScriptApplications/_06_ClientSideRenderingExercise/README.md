@@ -1,1 +1,1 @@
-# Client-Side Rendering
+# Client-Side Rendering Exercise
