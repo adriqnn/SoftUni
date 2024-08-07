@@ -239,3 +239,65 @@ function accordionV4(){
         return wrapper;
     }
 }
+
+async function accordionV5(){
+    try{
+        let main = document.getElementById('main');
+        let url = 'http://localhost:3030/jsonstore/advanced/articles/list';
+        let response = await fetch(url);
+
+        if(!response.ok){
+            throw new Error('Error obtaining article list');
+        }
+
+        let data = await response.json();
+
+        data.forEach(articleInfo => {
+            let articleElement = document.createElement('div');
+            articleElement.classList.add('accordion');
+
+            // can have onClick="function" inside the inner html if the function is in the global scope
+            articleElement.innerHTML = `<div class="head">
+                                            <span>${articleInfo.title}</span>
+                                            <button class="button" id="${articleInfo._id}">More</button>
+                                        </div>
+                                        <div class="extra"></div>`;
+
+            let button = articleElement.querySelector('button');
+            button.addEventListener('click', moreOnClick);
+
+            main.appendChild(articleElement);
+        });
+    }catch(error){
+        console.log(error);
+    }
+
+    async function moreOnClick(e){
+        try{
+            let currentTarget = e.currentTarget;
+            let parent = currentTarget.parentNode.parentNode;
+            let extraDiv = parent.querySelector('div.extra');
+
+            let url = 'http://localhost:3030/jsonstore/advanced/articles/details/' + currentTarget.id;
+            let response = await fetch(url);
+
+            if(!response.ok){
+                throw new Error('Error obtaining article details');
+            }
+
+            let data = await response.json();
+
+            extraDiv.innerHTML = `<p>${data.content}</p>`;
+
+            if(currentTarget.textContent === 'More'){
+                currentTarget.textContent = 'Less';
+                extraDiv.style.display = 'block';
+            }else{
+                currentTarget.textContent = 'More';
+                extraDiv.style.display = 'none';
+            }
+        }catch(error){
+            console.log(error);
+        }
+    }
+}
