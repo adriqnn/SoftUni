@@ -62,7 +62,7 @@ studentsV1();
 
 function studentsV2(){
     const clearFields = (arr) => arr.forEach(x => x.value = '');
-    const Url = `http://localhost:3030/jsonstore/collections/students`;
+    const url = `http://localhost:3030/jsonstore/collections/students`;
 
     function validData(data){
         return data.every(([_, value]) => value !== '');
@@ -90,13 +90,13 @@ function studentsV2(){
     }
 
     async function getStudents(){
-        const response = await fetch(Url);
+        const response = await fetch(url);
 
         return await response.json();
     }
 
     async function postStudent(data){
-        const response = await fetch(Url, {
+        const response = await fetch(url, {
             method: 'post',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(Object.fromEntries(data))
