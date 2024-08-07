@@ -259,7 +259,7 @@ function book_libraryV2(){
         content = content.reduce((a, c) => a.concat(Array.isArray(c) ? c : [c]), []);
 
         content.forEach(e => {
-            if(typeof e == 'string' || typeof e == 'number'){
+            if(typeof e === 'string' || typeof e === 'number'){
                 const node = document.createTextNode(e);
                 result.appendChild(node);
             }else{
