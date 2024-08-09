@@ -40,7 +40,7 @@ const create = (onSubmit) => html `<div class="container">
                                                        <label class="form-control-label" for="new-material">Material (optional)</label>
                                                        <input class="form-control" id="new-material" type="text" name="material">
                                                    </div>
-                                                   <input type="submit" class="btn btn-primary" value="Create" />
+                                                   <input type="submit" class="btn btn-primary" value="Create"/>
                                                </div>
                                            </div>
                                        </form>
