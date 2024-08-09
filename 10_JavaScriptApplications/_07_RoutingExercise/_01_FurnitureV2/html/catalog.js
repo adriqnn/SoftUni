@@ -16,7 +16,7 @@ const catalog = (data) => html `<div class="container">
 const element = (furniture) => html `<div class="col-md-4" id="${furniture._id}" data-owner="${furniture._ownerId}">
                                          <div class="card text-white bg-primary">
                                              <div class="card-body">
-                                                 <img src="${furniture.img}"/>
+                                                 <img src="${furniture.img}" alt="img"/>
                                                  <p>${furniture.description}</p>
                                                  <footer>
                                                      <p>Price: <span>${furniture.price} $</span></p>
