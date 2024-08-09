@@ -11,7 +11,7 @@ const details = (item) => html `<div class="container" id="${item._id}" data-own
                                         <div class="col-md-4">
                                             <div class="card text-white bg-primary">
                                                 <div class="card-body">
-                                                    <img src="${item.img}"/>
+                                                    <img src="${item.img}" alt="img"/>
                                                 </div>
                                             </div>
                                         </div>
