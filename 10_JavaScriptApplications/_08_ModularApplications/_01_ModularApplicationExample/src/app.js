@@ -1,12 +1,13 @@
-import page from '../node_modules/page/page.mjs';
-import { render as litRender } from '../node_modules/lit-html/lit-html.js';
-import { showAbout } from './views/about.js';
+import page from '../../node_modules/page/page.mjs';
+import { render as litRender } from '../../node_modules/lit-html/lit-html.js';
+
 import { showHome } from './views/home.js';
+import { showAbout } from './views/about.js';
 import { showCatalog } from './views/catalog.js';
 import { showDetails } from './views/details.js';
 import { showLogin } from './views/login.js';
-import { parseQueryString, userSession } from './util.js';
 
+import { parseQueryString, userSession } from './util.js';
 
 const main = document.querySelector('main');
 
@@ -22,19 +23,17 @@ page('/about', showAbout);
 page('/login', showLogin);
 page('*', notFound);
 
-
 page.start();
 
-
-function render(templateResult) {
+function render(templateResult){
     litRender(templateResult, main);
 }
 
-function decorateContext(ctx, next) {
+function decorateContext(ctx, next){
     ctx.render = render;
     next();
 }
 
-function notFound(ctx) {
+function notFound(ctx){
     ctx.render('404 Not Found');
 }
