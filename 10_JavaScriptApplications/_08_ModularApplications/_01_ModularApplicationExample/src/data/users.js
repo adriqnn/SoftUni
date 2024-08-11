@@ -1,6 +1,6 @@
 import { post } from './api.js';
 
-export async function login(email, password) {
+export async function login(email, password){
     const data = await post('/users/login', { email, password });
 
     const userData = {
@@ -8,5 +8,6 @@ export async function login(email, password) {
         email: data.email,
         accessToken: data.accessToken
     };
+    
     sessionStorage.setItem('userData', JSON.stringify(userData));
 }
