@@ -1,6 +1,5 @@
 import { html } from '../../node_modules/lit-html/lit-html.js';
 
-import { furniture as furnitureREQ } from '../requests/requests.js';
 import { furnitureTemplate } from '../Components/furniture.js';
 
 const Dashboard = (items) => {
