@@ -1,4 +1,5 @@
 import { html } from '../../node_modules/lit-html/lit-html.js';
+
 import { register } from '../controllers/userController.js';
 
 const Register = () => {
