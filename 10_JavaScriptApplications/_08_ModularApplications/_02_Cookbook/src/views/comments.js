@@ -18,9 +18,7 @@ const commentFormTemplate = (active, toggleForm, onSubmit) => html `<article cla
                                                                                   : html`<form><button class="button" @click=${toggleForm}>Add comment</button></form>`}
                                                                     </article>`;
 
-const commentsList = (comments) => html `<ul>
-                                             ${comments.map(comment)}
-                                         </ul>`;
+const commentsList = (comments) => html `<ul>${comments.map(comment)}</ul>`;
 
 const comment = (data) => html `<li class="comment">
                                     <header>${data.author.email}</header>
