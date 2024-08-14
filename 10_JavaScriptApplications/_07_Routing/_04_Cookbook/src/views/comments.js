@@ -72,4 +72,3 @@ function createForm(formActive, toggleForm, onSubmit){
         return commentFormTemplate(formActive, toggleForm, onSubmit);
     }
 }
-
