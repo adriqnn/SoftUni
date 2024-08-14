@@ -12,7 +12,6 @@ const loginTemplate = () => html `<section id="login">
                                       </article>
                                   </section>`;
 
-
 export function setupLogin(){
     return showLogin;
 
