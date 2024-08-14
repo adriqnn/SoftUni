@@ -23,7 +23,6 @@ export function setupLogin(){
 export async function onLoginSubmit(data, onSuccess){
     try{
         await login(data.email, data.password);
-      
         onSuccess();
     }catch(err){
         alert(err.message);
