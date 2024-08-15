@@ -1,4 +1,4 @@
-import {page, render} from './lib.js';
+import { page, render } from './lib.js';
 
 import { homeView } from './views/home.js';
 import { registerView } from './views/register.js';
