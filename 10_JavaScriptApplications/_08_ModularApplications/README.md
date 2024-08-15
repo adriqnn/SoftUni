@@ -1,1 +1,1 @@
-# Modular Applications
+# Modular Applications - Lecture
