@@ -28,8 +28,10 @@ let page;
 describe('E2E testing', function (){
     // Setup
     this.timeout(DEBUG ? 120000 : timeout);
+    
     before(async () => browser = await chromium.launch(DEBUG ? { headless: false, slowMo } : {}));
     after(async () => await browser.close());
+    
     beforeEach(async () => {
         context = await browser.newContext();
         setupContext(context);
