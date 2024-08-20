@@ -14,4 +14,4 @@ const saveUserInStorage = data => {
     return data;
 }
 
-export { isUserLogged, createFormObject, saveUserInStorage }
+export { isUserLogged, createFormObject, saveUserInStorage };
