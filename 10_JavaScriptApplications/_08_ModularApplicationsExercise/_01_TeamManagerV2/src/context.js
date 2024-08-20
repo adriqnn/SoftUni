@@ -4,6 +4,7 @@ const updateContext = async (context) => {
     const myId = sessionStorage.getItem('id');
     const teamId = context.params.id;
     const [currentTeam, allTeamMembers] = await Promise.all([ teams.getTeam(teamId), teams.getAllTeamMembers(teamId) ]);
+    
     const getOwnershipStatus = () => {
         if(myId === currentTeam._ownerId){
             return 'owner';
