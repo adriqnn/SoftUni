@@ -19,10 +19,10 @@ const renderView = (view) => render(PageLayout(view), document.getElementById('c
 page('/', () => renderView(HomeView()));
 page('/register', () => renderView(RegisterView()));
 page('/login', () => renderView(LoginView()));
+page('/myTeams', contextAPI.storeMyTeams, (context) => renderView(MyTeamsView(context)));
 page('/create', () => renderView(CreateView()));
 page('/edit/:id', contextAPI.storeSingleTeam, (context) => renderView(EditView(context)));
 page('/details/:id', contextAPI.storeDetails, (context) => renderView(DetailsView(context)));
 page('/browse', contextAPI.storeAllTeamsInfo, (context) => renderView(BrowseView(isUserLogged(), context.teams)));
-page('/myTeams', contextAPI.storeMyTeams, (context) => renderView(MyTeamsView(context)));
 
 page();
