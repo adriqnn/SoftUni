@@ -3,9 +3,9 @@ import { getGameById } from '../api/games.js';
 import { start } from '../engine/game.js';
 
 const canvasTemplate = (game) => html `<section>
-                                                <h1>${game.name}</h1>
-                                                <canvas width="800" height="600"></canvas>
-                                            </section>`;
+                                           <h1>${game.name}</h1>
+                                           <canvas width="800" height="600"></canvas>
+                                       </section>`;
 
 export async function canvasView(ctx){
     const gameId = ctx.params.id;
