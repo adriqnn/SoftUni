@@ -9,5 +9,5 @@ export const layoutTemplate = (body, onLogout, user) => html `<header>
                                                                              : html `<a href="/login">Login</a>
                                                                                      <a href="/register">Register</a>`}
                                                                   </nav>
-                                                                  </header>
-                                                                  ${body}`;
+                                                              </header>
+                                                              ${body}`;
