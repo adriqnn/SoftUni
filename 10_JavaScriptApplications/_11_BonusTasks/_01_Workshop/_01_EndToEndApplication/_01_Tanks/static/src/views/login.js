@@ -16,16 +16,16 @@ const loginTemplate = (onSubmit, error) => html `<section class="narrow">
                                                  </section>`;
 
 
-export function loginView(ctx) {
+export function loginView(ctx){
     ctx.render(loginTemplate(bindForm(onSubmit)));
 
-    async function onSubmit({ username, password }, form) {
-        try {
+    async function onSubmit({ username, password }, form){
+        try{
             await login(username, password);
             form.reset();
             ctx.page.redirect('/');
-        } catch (err) {
-            if (err.code == 101) {
+        }catch(err){
+            if(err.code === 101){
                 ctx.render(loginTemplate(bindForm(onSubmit), err.message));
             }
         }
