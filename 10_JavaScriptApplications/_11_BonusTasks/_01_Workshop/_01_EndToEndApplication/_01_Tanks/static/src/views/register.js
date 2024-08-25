@@ -22,7 +22,7 @@ export function registerView(ctx){
 
     async function onSubmit({ username, password, repass }, form){
         try{
-            if(password != repass){
+            if(password !== repass){
                 throw new Error('Passwords don\'t match!');
             }
 
