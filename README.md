@@ -12,3 +12,5 @@ Docker,
 DevOps,
 Data Structures,
 Algorithms;
+Python;
+C#;
