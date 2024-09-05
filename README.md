@@ -16,3 +16,5 @@ Python;
 C#;
 HackerRank;
 LeetCode;
+SoftUniada;
+Other;
