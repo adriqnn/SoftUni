@@ -1,1 +1,4 @@
 # Leetcode
+
+* Java
+* JavaScript
