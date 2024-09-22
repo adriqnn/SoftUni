@@ -17,5 +17,4 @@ C#;
 HackerRank;
 LeetCode;
 SoftUniada;
-Practice;
 Other;
