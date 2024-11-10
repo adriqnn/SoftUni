@@ -4,7 +4,7 @@ public class _02_NumsFrom01To10
 {
     public static void Main(string[] args)
     {
-        //Print numbers from 1 to 10 without a loop
+        // Print numbers from 1 to 10 without a loop
         Console.WriteLine("1");
         Console.WriteLine("2");
         Console.WriteLine("3");
