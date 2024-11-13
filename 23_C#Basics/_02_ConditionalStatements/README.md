@@ -1,6 +1,4 @@
-
-
-    Comparing Values;
+Comparing Values;
     Comparison Operators(==, !=, >, >=, < and <=);
     Logical Operators(&&, || and !);
     equals;
