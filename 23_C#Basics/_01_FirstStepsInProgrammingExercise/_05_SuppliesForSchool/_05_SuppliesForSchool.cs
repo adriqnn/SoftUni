@@ -19,9 +19,6 @@ public class _05_SuppliesForSchool
         double totalPrice = (pensPrice + sharpiesPrice + cleaningSuppliesPrice) * (1 - discountPercentage * 0.01);
 
         // Print the total price
-        Console.WriteLine(hoursPerDay);
-        System.out.printf("%.2f%n", totalPrice);
-
-        scan.close();
+        Console.WriteLine("{0:F2}\n", totalPrice);
     }
 }
