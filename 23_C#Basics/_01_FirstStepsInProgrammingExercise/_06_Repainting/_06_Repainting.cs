@@ -1,6 +1,6 @@
 using System;
 
-public class _05_SuppliesForSchool
+public class _06_Repainting
 {
     public static void Main(string[] args)
     {   
@@ -28,3 +28,4 @@ public class _05_SuppliesForSchool
         Console.WriteLine("{0:F2}\n", totalCost);
     }
 }
+
