@@ -20,4 +20,3 @@ public class _08_BasketballEquipment
         Console.WriteLine("{0:F2}\n", totalSum);
     }
 }
-
