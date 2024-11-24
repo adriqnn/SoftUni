@@ -1,4 +1,4 @@
-Conditional Statements - Lecture
+# Conditional Statements - Lecture
 
 * Comparing Values;
 * Comparison Operators(==, !=, >, >=, < and <=);
