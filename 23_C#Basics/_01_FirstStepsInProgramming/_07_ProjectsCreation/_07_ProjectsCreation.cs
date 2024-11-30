@@ -5,7 +5,7 @@ public class _07_ProjectsCreation
     public static void Main(string[] args)
     {
         // Read input data
-        String name = Console.ReadLine();
+        string name = Console.ReadLine();
         int projectsCount = int.Parse(Console.ReadLine());
 
         // Calculate total hours
