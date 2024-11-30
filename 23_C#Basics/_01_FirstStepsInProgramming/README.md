@@ -9,4 +9,3 @@
 * Variables;
 * Math Operations(+, -, * and /) and Remainder(%);
 * Concatenation;
-
