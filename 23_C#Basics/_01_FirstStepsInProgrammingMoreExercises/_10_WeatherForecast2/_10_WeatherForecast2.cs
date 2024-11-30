@@ -6,7 +6,7 @@ public class _10_WeatherForecast2
     {
         // Read the temperature input
         double degrees = double.Parse(Console.ReadLine());
-        String weatherType = "";
+        string weatherType = "";
 
         // Categorize weather based on temperature ranges
         if (degrees >= 5.00 && degrees <= 11.9)
