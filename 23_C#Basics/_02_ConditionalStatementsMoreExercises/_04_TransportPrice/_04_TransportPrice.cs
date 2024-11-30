@@ -6,7 +6,7 @@ public class _04_TransportPrice
     {
         // Read the input
         int kilometers = int.Parse(Console.ReadLine());
-        String timePeriod = Console.ReadLine();
+        string timePeriod = Console.ReadLine();
         double tripPrice = 0;
 
         // Calculate the trip price based on different cases
@@ -34,5 +34,4 @@ public class _04_TransportPrice
         Console.WriteLine($"{tripPrice:F2}");
     }
 }
-
 
