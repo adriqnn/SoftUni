@@ -10,4 +10,4 @@
 * Debugging;
 * Formatting;
 * Math class;
-* Text Formatting;
+* Text Formatting; 
