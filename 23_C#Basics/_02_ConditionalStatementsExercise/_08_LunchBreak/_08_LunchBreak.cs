@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 
 public class _08_LunchBreak
 {
     public static void Main(string[] args)
     {
         // Read the input values
-        String nameOfTheSeries = Console.ReadLine();
+        string nameOfTheSeries = Console.ReadLine();
         int episodeLength = int.Parse(Console.ReadLine());
         int breakLength = int.Parse(Console.ReadLine());
 
@@ -25,4 +25,3 @@ public class _08_LunchBreak
         }
     }
 }
-
