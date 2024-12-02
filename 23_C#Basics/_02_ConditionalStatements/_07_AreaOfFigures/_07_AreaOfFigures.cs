@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 
 public class _07_AreaOfFigures
 {
     public static void Main(string[] args)
     {
         // Read the shape input
-        String shape = Console.ReadLine();
+        string shape = Console.ReadLine();
 
         // Read additional information based on the shape, calculate and print the area of the shape
         if (shape.Equals("square"))
