@@ -1,4 +1,4 @@
-# Complex Conditional statements - Lecture
+# Complex Conditional Statements - Lecture
  
 * Comparing Values;
 * Comparison Operators(==, !=, >, >=, < and <=);
