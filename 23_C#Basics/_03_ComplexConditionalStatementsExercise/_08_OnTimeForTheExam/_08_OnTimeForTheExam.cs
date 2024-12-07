@@ -1,10 +1,9 @@
-﻿using System;
+using System;
 
 public class _08_OnTimeForTheExam
 {
     public static void Main(string[] args)
     {
-
         // Read input values
         int hourOfExam = int.Parse(Console.ReadLine());
         int minuteOfExam = int.Parse(Console.ReadLine());
