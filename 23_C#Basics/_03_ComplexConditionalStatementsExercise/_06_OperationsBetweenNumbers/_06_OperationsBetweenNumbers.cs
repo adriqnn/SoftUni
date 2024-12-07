@@ -10,7 +10,7 @@ public class _06_OperationsBetweenNumbers
         string op = Console.ReadLine();
 
         double result = 0;
-        String resultType = "";
+        string resultType = "";
 
         // Perform the selected operation based on the operator
         if (op.Equals("+")) {
