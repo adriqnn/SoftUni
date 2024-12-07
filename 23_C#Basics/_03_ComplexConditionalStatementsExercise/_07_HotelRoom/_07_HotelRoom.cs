@@ -63,6 +63,6 @@ public class _07_HotelRoom
 
         // Display the calculated prices for studio and apartment
         Console.WriteLine($"Apartment: {apartment:F2} lv.");
-        Console.WriteLine($"Studio: {studio:F2} lv.", studio);
+        Console.WriteLine($"Studio: {studio:F2} lv.");
     }
 }
