@@ -18,7 +18,7 @@ public class _08_OnTimeForTheExam
         int lateMinutes = arrivalInMinutes - examInMinutes;
         int earlyMinutes = examInMinutes - arrivalInMinutes;
 
-        String timeUnit = "";
+        string timeUnit = "";
         int value1 = 0;
         int value2 = 0;
 
