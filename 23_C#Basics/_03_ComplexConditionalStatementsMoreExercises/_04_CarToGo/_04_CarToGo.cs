@@ -36,6 +36,5 @@ public class _04_CarToGo
         // Print the result
         Console.WriteLine($"{carClass}");
         Console.WriteLine($"{carType} - {fee:F2}");
-
     }
 }
