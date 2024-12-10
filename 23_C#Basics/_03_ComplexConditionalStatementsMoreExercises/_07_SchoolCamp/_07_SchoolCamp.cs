@@ -82,4 +82,3 @@ public class _07_SchoolCamp
         Console.WriteLine($"{sport} {price:F2} lv.");
     }
 }
-
