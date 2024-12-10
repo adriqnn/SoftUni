@@ -34,4 +34,3 @@ public class _05_Vacation
         Console.WriteLine($"{location} - {accommodation} - {price:F2}");
     }
 }
-
