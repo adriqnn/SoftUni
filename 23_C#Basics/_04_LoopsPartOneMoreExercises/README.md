@@ -1,2 +1,2 @@
-# Loops Part One - More Exercises
+# For Loop - More Exercises
 
