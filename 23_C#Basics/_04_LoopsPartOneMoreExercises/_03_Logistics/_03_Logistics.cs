@@ -45,4 +45,3 @@ public class _03_Logistics
         Console.WriteLine("{0:F2}%", cargoByTrain / totalCargoTransported * 100);
     }
 }
-
