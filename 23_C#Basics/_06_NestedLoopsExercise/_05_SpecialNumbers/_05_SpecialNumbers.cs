@@ -17,7 +17,9 @@ public class _05_SpecialNumbers
                     for (int l = 1; l <= 9; l++)
                     {
                         if (num % i == 0 && num % j == 0 && num % k == 0 && num % l == 0)
+                        {
                             Console.Write($"{i}{j}{k}{l} ", i, j, k, l);
+                        }
                     }
                 }
             }
