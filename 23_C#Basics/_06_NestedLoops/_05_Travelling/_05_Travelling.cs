@@ -5,8 +5,8 @@ public class _05_Traveling
     public static void Main(string[] args)
     {
         // Read input values
-        String console = Console.ReadLine();
-        String destination = "";
+        string console = Console.ReadLine();
+        string destination = "";
 
         while (!console.Equals("End"))
         {
