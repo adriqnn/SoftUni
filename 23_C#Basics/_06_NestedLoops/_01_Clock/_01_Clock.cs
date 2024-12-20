@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-public class _01_HelloSoftUni
+public class _01_Clock
 {
     public static void Main(string[] args)
     {
