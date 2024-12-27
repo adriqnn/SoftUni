@@ -6,7 +6,4 @@
 - For Loop;
 - While Loop;
 - Nested Loops;
-- Exam Prep;
-- Exam;
 - Bonus Tasks;
-
