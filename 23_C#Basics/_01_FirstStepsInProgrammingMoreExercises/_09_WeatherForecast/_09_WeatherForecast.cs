@@ -9,5 +9,6 @@ public class _09_WeatherForecast
 
         // Determine and print the appropriate message
         Console.WriteLine(weatherType.Equals("sunny") ? "It's warm outside!" : "It's cold outside!");
+        //Console.WriteLine("{0}", weatherType.Equals("sunny") ? "It's warm outside!" : "It's cold outside!");
     }
 }
