@@ -16,6 +16,6 @@ public class _05_TrainingLab
         long numberOfSeats = (numberOfDesksPerRow * numberOfRows) - 3;
 
         // Print the total number of seats
-        Console.WriteLine("{0:F2}\n", numberOfSeats);
+        Console.WriteLine("{0:F2}", numberOfSeats);
     }
 }
