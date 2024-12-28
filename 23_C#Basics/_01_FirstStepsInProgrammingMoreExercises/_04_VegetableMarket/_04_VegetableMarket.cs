@@ -14,6 +14,6 @@ public class _04_VegetableMarket
         double revenueInEuro = ((priceForKilogramVegetables * kilogramsVegetables) + (priceForKilogramFruits * kilogramsFruits)) / 1.94;
 
         // Print the total revenue
-        Console.WriteLine("{0:F2}\n", revenueInEuro);
+        Console.WriteLine("{0:F2}", revenueInEuro);
     }
 }
