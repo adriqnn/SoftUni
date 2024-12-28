@@ -11,6 +11,6 @@ public class _03_CelsiusToFahrenheit
         double turnCelsiusToFahrenheit = (degreesInCelsius * 9 / 5) + 32;
 
         // Print the converted temperature in Fahrenheit
-        Console.WriteLine("{0:F2}\n", turnCelsiusToFahrenheit);
+        Console.WriteLine("{0:F2}", turnCelsiusToFahrenheit);
     }
 }
