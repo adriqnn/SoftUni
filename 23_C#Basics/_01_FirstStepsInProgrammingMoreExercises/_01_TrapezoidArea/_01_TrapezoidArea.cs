@@ -13,6 +13,6 @@ public class _01_TrapezoidArea
         double trapezoidArea = (basisOne + basisTwo) * height / 2;
 
         // Print the calculated area with two decimal places
-        Console.WriteLine("{0:F2}\n", trapezoidArea);
+        Console.WriteLine("{0:F2}", trapezoidArea);
     }
 }
