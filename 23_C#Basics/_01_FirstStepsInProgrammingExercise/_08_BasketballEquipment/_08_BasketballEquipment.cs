@@ -17,6 +17,6 @@ public class _08_BasketballEquipment
         double totalSum = trainingPrice + shoes + outfit + basketball + accessories;
 
         // Print the total cost
-        Console.WriteLine("{0:F2}\n", totalSum);
+        Console.WriteLine("{0:F2}", totalSum);
     }
 }
