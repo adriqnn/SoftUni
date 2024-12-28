@@ -28,4 +28,3 @@ public class _06_Repainting
         Console.WriteLine("{0:F2}\n", totalCost);
     }
 }
-
