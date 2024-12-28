@@ -13,6 +13,6 @@ public class _08_CircleAreaAndPerimeter
 
         // Print the calculated area and perimeter
         Console.WriteLine("{0:F2}", circleArea);
-        Console.WriteLine("{0:F2}\n", circlePerimeter);
+        Console.WriteLine("{0:F2}", circlePerimeter);
     }
 }
