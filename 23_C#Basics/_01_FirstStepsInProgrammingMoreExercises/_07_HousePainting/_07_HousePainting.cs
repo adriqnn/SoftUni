@@ -22,6 +22,6 @@ public class _07_HousePainting
 
         // Print the required liters of green and red paint with two decimal places
         Console.WriteLine("{0:F2}", litersGreenPaint);
-        Console.WriteLine("{0:F2}\n", litersRedPaint);
+        Console.WriteLine("{0:F2}", litersRedPaint);
     }
 }
