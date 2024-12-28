@@ -12,6 +12,6 @@ public class _02_TriangleArea
         double triangleArea = triangleSide * triangleHeight / 2;
 
         // Print the calculated area with two decimal places
-        Console.WriteLine("{0:F2}\n", triangleArea);
+        Console.WriteLine("{0:F2}", triangleArea);
     }
 }
