@@ -20,6 +20,6 @@ public class _06_FishLand
         double totalSum = priceOfBonito + priceOfScad + priceOfMussels;
 
         // Print the total sum with two decimal places
-        Console.WriteLine("{0:F2}\n", totalSum);
+        Console.WriteLine("{0:F2}", totalSum);
     }
 }
