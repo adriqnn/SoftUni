@@ -24,6 +24,6 @@ public class _07_FoodDelivery
         double totalPrice = totalPriceForMenus + priceForDesserts + 2.50;
 
         // Print the final total price
-        Console.WriteLine("{0:F2}\n", totalPrice);
+        Console.WriteLine("{0:F2}", totalPrice);
     }
 }
