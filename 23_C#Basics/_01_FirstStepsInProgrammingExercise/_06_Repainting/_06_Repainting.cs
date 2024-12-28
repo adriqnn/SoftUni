@@ -25,6 +25,6 @@ public class _06_Repainting
         double totalCost = totalForMaterials + workPrice;
 
         // Print the final total cost
-        Console.WriteLine("{0:F2}\n", totalCost);
+        Console.WriteLine("{0:F2}", totalCost);
     }
 }
