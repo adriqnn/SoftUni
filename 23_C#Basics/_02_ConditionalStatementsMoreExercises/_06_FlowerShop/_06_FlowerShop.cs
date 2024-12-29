@@ -17,7 +17,7 @@ public class _06_FlowerShop
         // Calculate the difference between present cost and flower cost
         double enoughMoney = presentCost - totalPriceForFlowers;
 
-        // Output the result
+        // Print the result
         if (enoughMoney > 0)
         {
             Console.WriteLine($"She will have to borrow {Math.Ceiling(enoughMoney):F0} leva.");
