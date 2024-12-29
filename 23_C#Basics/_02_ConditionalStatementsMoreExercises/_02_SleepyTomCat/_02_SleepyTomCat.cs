@@ -15,6 +15,7 @@ public class _02_SleepyTomCat
         // Calculate the difference between Tom's total playtime and the required norm
         double playtimeNorm = 30000 - (vacationDaysPlaytime + workingDaysPlaytime);
 
+        // Print the result
         if (playtimeNorm >= 0)
         {
             Console.WriteLine("Tom sleeps well");
