@@ -30,8 +30,7 @@ public class _04_TransportPrice
             tripPrice = kilometers * 0.06;
         }
 
-        // Output the calculated trip price
+        // Print the calculated trip price
         Console.WriteLine($"{tripPrice:F2}");
     }
 }
-
