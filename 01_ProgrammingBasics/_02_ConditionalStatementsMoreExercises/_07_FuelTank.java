@@ -16,7 +16,7 @@ public class _07_FuelTank {
         // Initialize a message based on fuel amount
         String fuelTank = fuelAmount < 25 ? String.format("Fill your tank with %s!", fuelType.toLowerCase()) : String.format("You have enough %s.", fuelType.toLowerCase());
 
-        // Check if the fuel type is valid and output the appropriate message
+        // Check if the fuel type is valid and print the appropriate message
         if (validType) {
             System.out.println(fuelTank);
         } else {
