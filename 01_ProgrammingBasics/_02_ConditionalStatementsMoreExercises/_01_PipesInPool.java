@@ -26,6 +26,7 @@ public class _01_PipesInPool {
             double percentToWhichThePoolIsFilled = (combinedBothPipes / volumeOfThePool) * 100;
             double percentFirstPipe = (volumeFilledByPipeOne / combinedBothPipes) * 100;
             double percentSecondPipe = (volumeFilledByPipeTwo / combinedBothPipes) * 100;
+            
             System.out.printf("The pool is %.2f%% full. Pipe 1: %.2f%%. Pipe 2: %.2f%%", percentToWhichThePoolIsFilled, percentFirstPipe, percentSecondPipe);
         }
 
