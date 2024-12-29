@@ -14,7 +14,7 @@ public class _07_FuelTank
         // Initialize a message based on fuel amount
         string fuelTank = fuelAmount < 25? $"Fill your tank with {fuelType.ToLower()}!" : $"You have enough {fuelType.ToLower()}.";
 
-        // Check if the fuel type is valid and output the appropriate message
+        // Check if the fuel type is valid and print the appropriate message
         if (validType)
         {
             Console.WriteLine(fuelTank);
