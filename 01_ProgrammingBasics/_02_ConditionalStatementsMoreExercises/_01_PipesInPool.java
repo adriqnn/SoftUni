@@ -19,11 +19,10 @@ public class _01_PipesInPool {
         // Calculate the combined volume filled by both pipes
         double combinedBothPipes = volumeFilledByPipeOne + volumeFilledByPipeTwo;
 
-        // Check if the pool overflows or not
+        // Check if the pool overflows or not and print result
         if (combinedBothPipes > volumeOfThePool) {
             System.out.printf("For %.2f hours the pool overflows with %.2f liters.", hoursWorkerIsOut, combinedBothPipes - volumeOfThePool);
         } else {
-            // Calculate percentages and provide output
             double percentToWhichThePoolIsFilled = (combinedBothPipes / volumeOfThePool) * 100;
             double percentFirstPipe = (volumeFilledByPipeOne / combinedBothPipes) * 100;
             double percentSecondPipe = (volumeFilledByPipeTwo / combinedBothPipes) * 100;
