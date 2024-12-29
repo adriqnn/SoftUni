@@ -16,6 +16,7 @@ public class _03_Harvest
 
         double wine = requiredLitersOfWine - litersOfWine;
 
+        // Print the result
         if (wine <= 0)
         {
             // Enough wine for everyone
