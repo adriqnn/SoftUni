@@ -17,14 +17,13 @@ public class _01_PipesInPool
         // Calculate the combined volume filled by both pipes
         double combinedBothPipes = volumeFilledByPipeOne + volumeFilledByPipeTwo;
 
-        // Check if the pool overflows or not
+        // Check if the pool overflows or not and print result
         if (combinedBothPipes > volumeOfThePool)
         {
             Console.WriteLine($"For {hoursWorkerIsOut:F2} hours the pool overflows with {combinedBothPipes - volumeOfThePool:F2} liters.");
         }
         else
         {
-            // Calculate percentages and provide output
             double percentToWhichThePoolIsFilled = (combinedBothPipes / volumeOfThePool) * 100;
             double percentFirstPipe = (volumeFilledByPipeOne / combinedBothPipes) * 100;
             double percentSecondPipe = (volumeFilledByPipeTwo / combinedBothPipes) * 100;
