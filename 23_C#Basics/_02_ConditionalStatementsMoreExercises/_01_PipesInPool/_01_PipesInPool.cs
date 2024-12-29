@@ -32,5 +32,3 @@ public class _01_PipesInPool
         }
     }
 }
-
-
