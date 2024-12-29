@@ -58,4 +58,3 @@ public class _08_FuelTank2
         Console.WriteLine($"{priceOfTheFuel:F2} lv.");
     }
 }
-
