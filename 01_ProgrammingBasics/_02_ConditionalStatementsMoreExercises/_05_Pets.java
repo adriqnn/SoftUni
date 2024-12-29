@@ -24,7 +24,7 @@ public class _05_Pets {
         // Calculate remaining food
         double remainingFood = kilogramsOfFood - foodNeeded;
 
-        // Output the result
+        // Print the result
         if (remainingFood >= 0) {
             System.out.printf("%.0f kilos of food left.", Math.floor(remainingFood));
         } else {
