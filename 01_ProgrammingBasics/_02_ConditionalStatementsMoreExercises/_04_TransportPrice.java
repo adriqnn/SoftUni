@@ -24,7 +24,7 @@ public class _04_TransportPrice {
             tripPrice = kilometers * 0.06;
         }
 
-        // Output the calculated trip price
+        // Print the calculated trip price
         System.out.printf("%.2f", tripPrice);
 
         scan.close();
