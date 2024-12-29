@@ -22,7 +22,7 @@ public class _05_Pets
         // Calculate remaining food
         double remainingFood = kilogramsOfFood - foodNeeded;
 
-        // Output the result
+        // Print the result
         if (remainingFood >= 0)
         {
             Console.WriteLine($"{Math.Floor(remainingFood):F0} kilos of food left.");
