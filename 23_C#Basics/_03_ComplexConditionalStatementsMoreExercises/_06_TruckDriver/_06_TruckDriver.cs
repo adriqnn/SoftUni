@@ -47,7 +47,7 @@ public class _06_TruckDriver
             courseCost = kilometersPerMonth * 1.45 * 4 * 0.90;
         }
 
+        // Print the result
         Console.WriteLine($"{courseCost:F2}");
-
     }
 }
