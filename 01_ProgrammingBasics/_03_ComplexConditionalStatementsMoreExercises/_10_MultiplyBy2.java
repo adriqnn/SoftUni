@@ -1,4 +1,4 @@
-package _01_ProgrammingBasics._03_ComplexConditionalStatementsMoreExercise;
+package _01_ProgrammingBasics._03_ComplexConditionalStatementsMoreExercises;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ public class _10_MultiplyBy2 {
         double number = Double.parseDouble(scan.nextLine());
 
         // Multiply the number by 2 and print
-        while(number >= 0){
+        while (number >= 0) {
             double result = number * 2;
 
             System.out.printf("Result: %.2f%n", result);
@@ -19,7 +19,7 @@ public class _10_MultiplyBy2 {
         }
 
         // End the program if the number is below 0
-        if(number < 0){
+        if (number < 0) {
             System.out.println("Negative number!");
         }
 
