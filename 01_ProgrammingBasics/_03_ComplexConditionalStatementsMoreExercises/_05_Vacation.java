@@ -1,4 +1,4 @@
-package _01_ProgrammingBasics._03_ComplexConditionalStatementsMoreExercise;
+package _01_ProgrammingBasics._03_ComplexConditionalStatementsMoreExercises;
 
 import java.util.Scanner;
 
