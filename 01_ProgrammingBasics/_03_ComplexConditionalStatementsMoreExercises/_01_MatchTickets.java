@@ -16,22 +16,22 @@ public class _01_MatchTickets {
         double ticketsCost = 0;
 
         // Determine transport cost
-        if(people <= 4){
+        if (people <= 4) {
             transportCost = budget * 0.75;
-        }else if(people <= 9){
+        } else if (people <= 9) {
             transportCost = budget * 0.60;
-        }else if(people <= 24){
+        } else if (people <= 24) {
             transportCost = budget * 0.50;
-        }else if(people <= 49){
+        } else if (people <= 49) {
             transportCost = budget * 0.40;
-        }else{
+        } else {
             transportCost = budget * 0.25;
         }
 
         // Determine ticket cost
-        if(category.equals("vip")){
+        if (category.equals("vip")) {
             ticketsCost = people * 499.99;
-        }else{
+        } else {
             ticketsCost = people * 249.99;
         }
 
@@ -39,9 +39,9 @@ public class _01_MatchTickets {
         double calculateBudget = budget - (transportCost + ticketsCost);
 
         // Print result based on budget value
-        if(calculateBudget < 0){
+        if (calculateBudget < 0) {
             System.out.printf("Not enough money! You need %.2f leva.", Math.abs(calculateBudget));
-        }else{
+        } else {
             System.out.printf("Yes! You have %.2f leva left.", calculateBudget);
         }
 
