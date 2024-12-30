@@ -1,4 +1,4 @@
-package _01_ProgrammingBasics._03_ComplexConditionalStatementsMoreExercise;
+package _01_ProgrammingBasics._03_ComplexConditionalStatementsMoreExercises;
 
 import java.util.Scanner;
 
@@ -47,11 +47,11 @@ public class _07_SchoolCamp {
         }
 
         // Add in the discount
-        if(studentsCount >= 10 && studentsCount < 20){
+        if (studentsCount >= 10 && studentsCount < 20) {
             price *= 0.95;
-        }else if(studentsCount >= 20 && studentsCount < 50){
+        } else if (studentsCount >= 20 && studentsCount < 50) {
             price *= 0.85;
-        }else if(studentsCount >= 50){
+        } else if (studentsCount >= 50) {
             price *= 0.50;
         }
 
