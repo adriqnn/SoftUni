@@ -1,4 +1,4 @@
-package _01_ProgrammingBasics._03_ComplexConditionalStatementsMoreExercise;
+package _01_ProgrammingBasics._03_ComplexConditionalStatementsMoreExercises;
 
 import java.util.Scanner;
 
@@ -18,13 +18,13 @@ public class _04_CarToGo {
         String carType = season.equals("summer") ? "Cabrio" : "Jeep";
 
         // Determine class type based on budget and calculate fee
-        if(budget <= 100){
+        if (budget <= 100) {
             carClass = "Economy class";
             fee = season.equals("summer") ? budget * 0.35 : budget * 0.65;
-        }else if(budget <= 500){
+        } else if(budget <= 500) {
             carClass = "Compact class";
             fee = season.equals("summer") ? budget * 0.45 : budget * 0.80;
-        }else{
+        } else {
             carClass = "Luxury class";
             carType = "Jeep";
             fee = budget * 0.90;
