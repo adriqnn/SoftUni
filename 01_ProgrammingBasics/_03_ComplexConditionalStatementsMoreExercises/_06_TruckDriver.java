@@ -1,4 +1,4 @@
-package _01_ProgrammingBasics._03_ComplexConditionalStatementsMoreExercise;
+package _01_ProgrammingBasics._03_ComplexConditionalStatementsMoreExercises;
 
 import java.util.Scanner;
 
@@ -34,6 +34,7 @@ public class _06_TruckDriver {
             courseCost = kilometersPerMonth * 1.45 * 4 * 0.90;
         }
 
+        // Print the result
         System.out.printf("%.2f", courseCost);
 
         scan.close();
