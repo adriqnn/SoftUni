@@ -10,7 +10,7 @@ public class _02_WeekendOrWorkingDay {
         String day = scan.nextLine();
 
         // Print whether the day if valid is working day or weekend day
-        switch (day){
+        switch (day) {
             case "Monday":
             case "Tuesday":
             case "Wednesday":
