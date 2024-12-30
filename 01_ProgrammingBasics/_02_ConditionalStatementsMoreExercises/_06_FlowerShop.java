@@ -20,9 +20,9 @@ public class _06_FlowerShop {
         double enoughMoney = presentCost - totalPriceForFlowers;
 
         // Print the result
-        if(enoughMoney > 0){
+        if (enoughMoney > 0) {
             System.out.printf("She will have to borrow %.0f leva.", Math.ceil(enoughMoney));
-        }else{
+        } else {
             System.out.printf("She is left with %.0f leva.", Math.floor(Math.abs(enoughMoney)));
         }
 
