@@ -21,7 +21,7 @@ public class _04_CarToGo {
         if (budget <= 100) {
             carClass = "Economy class";
             fee = season.equals("summer") ? budget * 0.35 : budget * 0.65;
-        } else if(budget <= 500) {
+        } else if (budget <= 500) {
             carClass = "Compact class";
             fee = season.equals("summer") ? budget * 0.45 : budget * 0.80;
         } else {
