@@ -16,32 +16,32 @@ public class _07_HotelRoom {
         double apartment = 0;
 
         // Calculate prices for studio and apartment based on month and number of nights
-        if (month.equals("may") || month.equals("october")){
-            if (nights > 14){
+        if (month.equals("may") || month.equals("october")) {
+            if (nights > 14) {
                 studio = (days * 50.00) * 0.70;
                 apartment = (days * 65.00) * 0.90;
-            }else if (nights > 7){
+            } else if (nights > 7) {
                 studio = (days * 50.00) * 0.95;
                 apartment = (days * 65.00);
-            }else {
+            } else {
                 studio = (days * 50.00);
                 apartment = (days * 65.00);
             }
-        }else if (month.equals("june") || month.equals("september")){
-            if (nights > 14){
+        } else if (month.equals("june") || month.equals("september")) {
+            if (nights > 14) {
                 studio = (days * 75.20) * 0.80;
                 apartment = (days * 68.70) * 0.90;
-            }else{
+            } else {
                 studio = (days * 75.20);
                 apartment = (days * 68.70);
             }
-        }else if (month.equals("july") || month.equals("august")){
+        } else if (month.equals("july") || month.equals("august")) {
             studio = 76.00;
             apartment = 77.00;
-            if (nights > 14){
+            if (nights > 14) {
                 studio = (days * 76.00);
                 apartment = (days * 77.00) * 0.90;
-            }else {
+            } else {
                 studio = (days * 76.00);
                 apartment = (days * 77.00);
             }
