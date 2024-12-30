@@ -10,7 +10,7 @@ public class _08_CinemaTicket {
         String day = scan.nextLine();
 
         // Print the price of the ticket based on the day
-        switch(day) {
+        switch (day) {
             case "Monday":
             case "Tuesday":
             case "Friday":
