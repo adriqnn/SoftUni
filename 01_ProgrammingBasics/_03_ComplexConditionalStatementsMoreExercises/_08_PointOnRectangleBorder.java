@@ -1,4 +1,4 @@
-package _01_ProgrammingBasics._03_ComplexConditionalStatementsMoreExercise;
+package _01_ProgrammingBasics._03_ComplexConditionalStatementsMoreExercises;
 
 import java.util.Scanner;
 
@@ -19,15 +19,15 @@ public class _08_PointOnRectangleBorder {
         double y = Double.parseDouble(scan.nextLine());
 
         // Determine if the point is on the border of the rectangle and print the result
-        if(y == sqrY1 && sqrX1 <= x && x <= sqrX2){
+        if (y == sqrY1 && sqrX1 <= x && x <= sqrX2) {
             System.out.println("Border");
-        }else if(y == sqrY2 && sqrX1 <= x && x <= sqrX2){
+        } else if (y == sqrY2 && sqrX1 <= x && x <= sqrX2) {
             System.out.println("Border");
-        }else if(x == sqrX1 && sqrY1 <= y && y <= sqrY2 ){
+        } else if (x == sqrX1 && sqrY1 <= y && y <= sqrY2 ) {
             System.out.println("Border");
-        }else if(x == sqrX2 && sqrY1 <= y && y <= sqrY2){
+        } else if (x == sqrX2 && sqrY1 <= y && y <= sqrY2) {
             System.out.println("Border");
-        }else{
+        } else {
             System.out.println("Inside / Outside");
         }
 
