@@ -45,6 +45,7 @@ public class _03_Flowers {
         // Add arrangement price
         flowerCost += 2;
 
+        // Print the result
         System.out.printf("%.2f", flowerCost);
 
         scan.close();
