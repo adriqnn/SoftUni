@@ -25,6 +25,5 @@ public class _02_WeekendOrWorkingDay
                 Console.WriteLine("Error");
                 break;
         }
-
     }
 }
