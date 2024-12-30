@@ -10,7 +10,7 @@ public class _03_AnimalType {
         String animal = scan.nextLine().toLowerCase();
 
         // Determine whether the animal is mammal, reptile or unknown
-        switch (animal){
+        switch (animal) {
             case "dog":
                 System.out.println("mammal");
                 break;
