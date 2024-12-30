@@ -101,4 +101,3 @@ public class _05_SmallShop
         Console.WriteLine($"Total price: {totalPrice:F2}");
     }
 }
-
