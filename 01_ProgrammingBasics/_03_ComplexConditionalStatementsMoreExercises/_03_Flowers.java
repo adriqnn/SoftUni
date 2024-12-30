@@ -33,7 +33,7 @@ public class _03_Flowers {
         // Add discount based on season and flower type count
         if (season.equals("spring") && tulips > 7) {
             flowerCost *= 0.95;
-        } else if (season.equals("winter") && roses >= 10){
+        } else if (season.equals("winter") && roses >= 10) {
             flowerCost *= 0.90;
         }
 
