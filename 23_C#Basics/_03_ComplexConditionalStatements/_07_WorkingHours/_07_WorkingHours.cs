@@ -11,7 +11,7 @@ public class _07_WorkingHours
         // Set a check for the working hours of the store
         bool isOpen = (hours >= 10 && hours <= 18);
 
-        // Determine if the store is opened or closed and print the result
+        // Determine if the store is open or closed and print the result
         switch (day)
         {
             case "Monday":
@@ -35,4 +35,3 @@ public class _07_WorkingHours
         }
     }
 }
-
