@@ -10,7 +10,7 @@ public class _09_FruitOrVegetable {
         String entry = scan.nextLine();
 
         // Print based on the input if the item is fruit, vegetable or unknown
-        switch(entry){
+        switch (entry) {
             case "banana":
             case "apple":
             case "kiwi":
