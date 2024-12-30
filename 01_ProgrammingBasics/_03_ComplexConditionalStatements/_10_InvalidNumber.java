@@ -13,7 +13,7 @@ public class _10_InvalidNumber {
         boolean isValid = (number >= 100 && number <= 200 || number == 0);
 
         // Print only if the number is invalid
-        if (!isValid){
+        if (!isValid) {
             System.out.println("invalid");
         }
         
