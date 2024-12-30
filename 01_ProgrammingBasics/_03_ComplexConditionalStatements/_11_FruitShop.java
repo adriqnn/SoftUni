@@ -16,42 +16,42 @@ public class _11_FruitShop {
         boolean isValidWeekDay = (day.equals("Monday") || day.equals("Tuesday") || day.equals("Wednesday") || day.equals("Thursday") || day.equals("Friday") || day.equals("Saturday") || day.equals("Sunday"));
 
         // End the program if either input is invalid
-        if (!isValidFruit || !isValidWeekDay){
+        if (!isValidFruit || !isValidWeekDay) {
             System.out.println("error");
             return;
         }
 
         // Print the result
         if (day.equals("Monday") || day.equals("Tuesday") || day.equals("Wednesday") || day.equals("Thursday") || day.equals("Friday")) {
-            if (fruit.equals("banana")){
+            if (fruit.equals("banana")) {
                 System.out.printf("%.2f", (quantity * 2.50));
-            }else if (fruit.equals("apple")) {
+            } else if (fruit.equals("apple")) {
                 System.out.printf("%.2f", (quantity * 1.20));
-            }else if (fruit.equals("orange")) {
+            } else if (fruit.equals("orange")) {
                 System.out.printf("%.2f", (quantity * 0.85));
-            }else if (fruit.equals("grapefruit")) {
+            } else if (fruit.equals("grapefruit")) {
                 System.out.printf("%.2f", (quantity * 1.45));
-            }else if (fruit.equals("kiwi")) {
+            } else if (fruit.equals("kiwi")) {
                 System.out.printf("%.2f", (quantity * 2.70));
-            }else if (fruit.equals("pineapple")) {
+            } else if (fruit.equals("pineapple")) {
                 System.out.printf("%.2f", (quantity * 5.50));
-            }else {
+            } else {
                 System.out.printf("%.2f", (quantity * 3.85));
             }
-        }else {
-            if (fruit.equals("banana")){
+        } else {
+            if (fruit.equals("banana")) {
                 System.out.printf("%.2f", (quantity * 2.70));
-            }else if (fruit.equals("apple")) {
+            } else if (fruit.equals("apple")) {
                 System.out.printf("%.2f", (quantity * 1.25));
-            }else if (fruit.equals("orange")) {
+            } else if (fruit.equals("orange")) {
                 System.out.printf("%.2f", (quantity * 0.90));
-            }else if (fruit.equals("grapefruit")) {
+            } else if (fruit.equals("grapefruit")) {
                 System.out.printf("%.2f", (quantity * 1.60));
-            }else if (fruit.equals("kiwi")) {
+            } else if (fruit.equals("kiwi")) {
                 System.out.printf("%.2f", (quantity * 3.00));
-            }else if (fruit.equals("pineapple")) {
+            } else if (fruit.equals("pineapple")) {
                 System.out.printf("%.2f", (quantity * 5.60));
-            }else {
+            } else {
                 System.out.printf("%.2f", (quantity * 4.20));
             }
         }
