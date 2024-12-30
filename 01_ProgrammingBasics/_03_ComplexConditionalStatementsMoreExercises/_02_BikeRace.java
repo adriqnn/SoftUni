@@ -14,17 +14,17 @@ public class _02_BikeRace {
         double collectedMoney = 0;
 
         // Calculate the collected money based on the track type
-        if(trackType.equals("trail")){
+        if (trackType.equals("trail")) {
             collectedMoney = (youngParticipants * 5.50) + (seniorParticipants * 7.00);
-        }else if(trackType.equals("cross-country")){
-            if((youngParticipants + seniorParticipants) >= 50){
+        } else if (trackType.equals("cross-country")) {
+            if ((youngParticipants + seniorParticipants) >= 50) {
                 collectedMoney = ((youngParticipants * 8.00) + (seniorParticipants * 9.50)) * 0.75;
-            }else{
+            } else {
                 collectedMoney = (youngParticipants * 8.00) + (seniorParticipants * 9.50);
             }
-        }else if(trackType.equals("downhill")){
+        } else if (trackType.equals("downhill")) {
             collectedMoney = (youngParticipants * 12.25) + (seniorParticipants * 13.75);
-        }else if(trackType.equals("road")){
+        } else if (trackType.equals("road")) {
             collectedMoney = (youngParticipants * 20) + (seniorParticipants * 21.50);
         }
 
