@@ -10,7 +10,7 @@ public class _01_DayOfWeek {
         int day = Integer.parseInt(scan.nextLine());
 
         // Check and print day of the week if it's valid
-        switch (day){
+        switch (day) {
             case 1:
                 System.out.println("Monday");
                 break;
