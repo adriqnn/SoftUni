@@ -43,4 +43,3 @@ public class _02_BikeRace
         Console.WriteLine($"{(collectedMoney - expenses):F2}");
     }
 }
-
