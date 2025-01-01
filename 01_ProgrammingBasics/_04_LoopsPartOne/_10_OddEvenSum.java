@@ -26,7 +26,7 @@ public class _10_OddEvenSum {
         }
 
         // Compare the sums and print the result
-        if (sumEven == sumOdd {
+        if (sumEven == sumOdd) {
             System.out.printf("Yes%n Sum = %d", sumEven);
         } else {
             System.out.printf("No %n Diff = %d", Math.abs(sumEven - sumOdd));
