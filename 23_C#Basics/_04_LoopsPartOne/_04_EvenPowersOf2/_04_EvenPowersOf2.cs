@@ -20,6 +20,7 @@ public class _04_EvenPowersOf2
             {
                 Console.WriteLine(power);
             }
+            
             power = power * 2;
         }
     }
