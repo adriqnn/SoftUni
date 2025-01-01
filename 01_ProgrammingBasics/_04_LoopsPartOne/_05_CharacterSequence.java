@@ -10,8 +10,7 @@ public class _05_CharacterSequence {
         String text = scan.nextLine();
 
         // Iterate through each character in the input text
-        for (int i = 0; i < text.length(); i++){
-
+        for (int i = 0; i < text.length(); i++) {
             // Symbol
             char symbol = text.charAt(i);
 
