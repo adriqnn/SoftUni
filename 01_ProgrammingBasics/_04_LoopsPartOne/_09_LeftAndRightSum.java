@@ -27,7 +27,7 @@ public class _09_LeftAndRightSum {
         // Compare the sums and print the result
         if (leftSum == rightSum) {
             System.out.printf("Yes, sum = %d", rightSum);
-        }else {
+        } else {
             System.out.printf("No, diff = %d", Math.abs(leftSum-rightSum));
         }
 
