@@ -22,24 +22,24 @@ public class _05_GameOfIntervals {
         for (int i = 0; i < gameTurns; i++) {
             int gameNumber = Integer.parseInt(scan.nextLine());
 
-            if(gameNumber < 0 || gameNumber > 50){
+            if (gameNumber < 0 || gameNumber > 50) {
                 invalidNumbers++;
-                if(gameResult > 0){
+                if (gameResult > 0) {
                     gameResult = gameResult/2;
                 }
-            }else if(gameNumber <= 9){
+            } else if (gameNumber <= 9) {
                 numbersFrom0to9++;
                 gameResult += gameNumber * 0.2;
-            }else if(gameNumber <= 19){
+            } else if (gameNumber <= 19) {
                 numbersFrom10to19++;
                 gameResult += gameNumber * 0.3;
-            }else if(gameNumber <= 29){
+            } else if (gameNumber <= 29) {
                 numbersFrom20to29++;
                 gameResult += gameNumber * 0.4;
-            }else if(gameNumber <= 39){
+            } else if (gameNumber <= 39) {
                 numbersFrom30to39++;
                 gameResult += 50;
-            }else {
+            } else {
                 numbersFrom40to50++;
                 gameResult += 100;
             }
