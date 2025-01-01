@@ -51,4 +51,3 @@ public class _07_TrekkingMania
         Console.WriteLine($"{(m5 / countAll * 100):F2}%");
     }
 }
-
