@@ -12,7 +12,7 @@ public class _07_SumNumbers {
         int sum = 0;
 
         // Sum all the numbers for the n loop
-        for (int i = 1; i <= n; i++){
+        for (int i = 1; i <= n; i++) {
             int currentNum = Integer.parseInt(scan.nextLine());
             sum += currentNum;
         }
