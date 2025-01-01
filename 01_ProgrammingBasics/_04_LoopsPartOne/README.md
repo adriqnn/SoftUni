@@ -1,4 +1,4 @@
-# For Loop - Lecture 
+# For Loop - Lecture
 
 * For loop;
 * While loop;
