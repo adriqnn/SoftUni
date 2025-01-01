@@ -18,11 +18,11 @@ public class _08_TennisRankList {
         for (int i = 0; i < n; i++) {
             String rank = scan.nextLine().toLowerCase();
 
-            if (rank.equals("w")){
+            if (rank.equals("w")) {
                 p1++;
-            }else if (rank.equals("f")) {
+            } else if (rank.equals("f")) {
                 p2++;
-            }else if (rank.equals("sf")) {
+            } else if (rank.equals("sf")) {
                 p3++;
             }
         }
