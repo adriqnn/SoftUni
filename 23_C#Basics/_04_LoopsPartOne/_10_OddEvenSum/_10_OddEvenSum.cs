@@ -38,4 +38,3 @@ public class _10_OddEvenSum
         }
     }
 }
-
