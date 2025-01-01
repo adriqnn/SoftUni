@@ -12,10 +12,10 @@ public class _06_VowelsSum {
         int sum = 0;
 
         // Iterate through the input value text and sum all the vowels
-        for (int i = 0; i < text.length(); i++){
+        for (int i = 0; i < text.length(); i++) {
             char symbol = text.charAt(i);
 
-            switch (symbol){
+            switch (symbol) {
                 case 'a':
                     sum += 1;
                     break;
