@@ -13,7 +13,7 @@ public class _09_LeftAndRightSum {
         int rightSum = 0;
 
         // Read and calculate the sum of the left sequence
-        for(int i =1; i <= n; i++) {
+        for (int i =1; i <= n; i++) {
             int currentNum = Integer.parseInt(scan.nextLine());
             leftSum += currentNum;
         }
@@ -25,7 +25,7 @@ public class _09_LeftAndRightSum {
         }
 
         // Compare the sums and print the result
-        if (leftSum == rightSum){
+        if (leftSum == rightSum) {
             System.out.printf("Yes, sum = %d", rightSum);
         }else {
             System.out.printf("No, diff = %d", Math.abs(leftSum-rightSum));
