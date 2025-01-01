@@ -20,13 +20,13 @@ public class _03_Logistics {
         for (int i = 0; i < cargoCount; i++) {
             double cargoWeight = Double.parseDouble(scan.nextLine());
 
-            if(cargoWeight <= 3){
+            if (cargoWeight <= 3) {
                 cargoByBus += cargoWeight;
                 totalPrice += cargoWeight * 200;
-            }else if(cargoWeight <= 11){
+            } else if (cargoWeight <= 11) {
                 cargoByTruck += cargoWeight;
                 totalPrice += cargoWeight * 175;
-            }else{
+            } else {
                 cargoByTrain += cargoWeight;
                 totalPrice += cargoWeight * 120;
             }
