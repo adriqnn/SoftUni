@@ -10,7 +10,7 @@ public class _02_NumbersNTo1 {
         int n = Integer.parseInt(scan.nextLine());
 
         // Loop from n down to 1 and print each number
-        for (int i = n; i >= 1; i--){
+        for (int i = n; i >= 1; i--) {
             System.out.println(i);
         }
 
