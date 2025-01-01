@@ -14,17 +14,17 @@ public class _01_BackToThePast {
 
         // Calculate money spent for each year from 1800 to the target year
         for (int i = 1800; i <= targetYear; i++) {
-            if(i % 2 == 0){
+            if (i % 2 == 0) {
                 money -= 12000;
-            }else{
+            } else {
                 money -= 12000 + (((i - 1800) + 18) * 50);
             }
         }
 
         // Determine and print the result based on the remaining money
-        if(money >= 0){
+        if (money >= 0) {
             System.out.printf("Yes! He will live a carefree life and will have %.2f dollars left.", money);
-        }else{
+        } else {
             System.out.printf("He will need %.2f dollars to survive.", Math.abs(money));
         }
 
