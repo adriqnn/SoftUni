@@ -14,14 +14,14 @@ public class _08_NumberSequence {
         int minNum = Integer.MAX_VALUE;
 
         // Find the max and min numbers in the n sequence
-        for ( int i = 1; i <= n; i++){
+        for ( int i = 1; i <= n; i++) {
             int currentNum = Integer.parseInt(scan.nextLine());
             
-            if (currentNum > maxNum){
+            if (currentNum > maxNum) {
                 maxNum = currentNum;
             }
             
-            if (currentNum < minNum){
+            if (currentNum < minNum) {
                 minNum = currentNum;
             }
         }
