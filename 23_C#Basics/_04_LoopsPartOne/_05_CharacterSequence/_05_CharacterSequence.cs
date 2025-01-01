@@ -7,7 +7,7 @@ public class _05_CharacterSequence
         // Read input value
         string text = Console.ReadLine();
 
-        // Iterate through each character in the input text
+        // Iterate through each character in the input text and print
         for (int i = 0; i < text.Length; i++)
         {
             // Symbol
