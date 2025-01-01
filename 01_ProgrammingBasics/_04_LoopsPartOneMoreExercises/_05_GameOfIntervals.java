@@ -47,12 +47,12 @@ public class _05_GameOfIntervals {
 
         // Calculate and print the statistics
         System.out.printf("%.2f%n", gameResult);
-        System.out.printf("From 0 to 9: %.2f%%%n", numbersFrom0to9/gameTurns * 100);
-        System.out.printf("From 10 to 19: %.2f%%%n", numbersFrom10to19/gameTurns * 100);
-        System.out.printf("From 20 to 29: %.2f%%%n", numbersFrom20to29/gameTurns * 100);
-        System.out.printf("From 30 to 39: %.2f%%%n", numbersFrom30to39/gameTurns * 100);
-        System.out.printf("From 40 to 50: %.2f%%%n", numbersFrom40to50/gameTurns * 100);
-        System.out.printf("Invalid numbers: %.2f%%%n", invalidNumbers/gameTurns * 100);
+        System.out.printf("From 0 to 9: %.2f%%%n", numbersFrom0to9 / gameTurns * 100);
+        System.out.printf("From 10 to 19: %.2f%%%n", numbersFrom10to19 / gameTurns * 100);
+        System.out.printf("From 20 to 29: %.2f%%%n", numbersFrom20to29 / gameTurns * 100);
+        System.out.printf("From 30 to 39: %.2f%%%n", numbersFrom30to39 / gameTurns * 100);
+        System.out.printf("From 40 to 50: %.2f%%%n", numbersFrom40to50 / gameTurns * 100);
+        System.out.printf("Invalid numbers: %.2f%%%n", invalidNumbers / gameTurns * 100);
 
         scan.close();
     }
