@@ -9,7 +9,7 @@ public class _05_CharacterSequence {
         // Read input value
         String text = scan.nextLine();
 
-        // Iterate through each character in the input text
+        // Iterate through each character in the input text and print
         for (int i = 0; i < text.length(); i++) {
             // Symbol
             char symbol = text.charAt(i);
