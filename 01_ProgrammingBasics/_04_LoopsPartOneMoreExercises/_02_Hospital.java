@@ -14,7 +14,7 @@ public class _02_Hospital {
         int treatedPatients = 0;
         int untreatedPatients = 0;
 
-        //
+        // Loop through each day of the hospital period
         for (int i = 1; i <= hospitalPeriod; i++) {
             // Check if it's a day to evaluate doctor availability
             if (i % 3 == 0 && untreatedPatients > treatedPatients) {
