@@ -16,7 +16,7 @@ public class _10_OddEvenSum {
         for (int i = 1; i <= n; i++) {
             int num = Integer.parseInt(scan.nextLine());
 
-            if (i % 2 == 0){
+            if (i % 2 == 0) {
                 // Add even-indexed numbers to sumEven
                 sumEven += num;
             }else {
@@ -26,9 +26,9 @@ public class _10_OddEvenSum {
         }
 
         // Compare the sums and print the result
-        if (sumEven == sumOdd){
+        if (sumEven == sumOdd {
             System.out.printf("Yes%n Sum = %d", sumEven);
-        }else{
+        } else {
             System.out.printf("No %n Diff = %d", Math.abs(sumEven - sumOdd));
         }
 
