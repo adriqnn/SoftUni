@@ -19,7 +19,7 @@ public class _10_OddEvenSum {
             if (i % 2 == 0) {
                 // Add even-indexed numbers to sumEven
                 sumEven += num;
-            }else {
+            } else {
                 // Add odd-indexed numbers to sumOdd
                 sumOdd += num;
             }
