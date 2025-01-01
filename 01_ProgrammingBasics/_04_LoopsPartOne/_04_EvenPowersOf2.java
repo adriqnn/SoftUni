@@ -11,7 +11,7 @@ public class _04_EvenPowersOf2 {
 
         int power = 1;
 
-        // Loop through the powers of 2 from 2^0 to 2^n
+        // Loop through the powers of 2 from 2^0 to 2^n and print
         for (int i = 0; i <= n; i++) {
             if (i == 0) {
                 System.out.println(1);
