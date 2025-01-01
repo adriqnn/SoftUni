@@ -17,7 +17,7 @@ public class _02_Hospital {
         //
         for (int i = 1; i <= hospitalPeriod; i++) {
             // Check if it's a day to evaluate doctor availability
-            if( i % 3 == 0 && untreatedPatients > treatedPatients){
+            if (i % 3 == 0 && untreatedPatients > treatedPatients) {
                 availableDoctors++;
             }
 
@@ -25,9 +25,9 @@ public class _02_Hospital {
             int patients = Integer.parseInt(scan.nextLine());
 
             // Treat patients based on doctor availability
-            if(availableDoctors >= patients){
+            if (availableDoctors >= patients) {
                 treatedPatients += patients;
-            }else{
+            } else {
                 treatedPatients += availableDoctors;
                 untreatedPatients += Math.abs(patients - availableDoctors);
             }
