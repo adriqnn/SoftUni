@@ -20,13 +20,13 @@ public class _04_Grades {
         for (int i = 0; i < examStudentsCount; i++) {
             double grade = Double.parseDouble(scan.nextLine());
 
-            if(grade >= 5.00){
+            if (grade >= 5.00) {
                 topStudents++;
-            }else if(grade >= 4.00){
+            } else if (grade >= 4.00) {
                 studentsWith4++;
-            }else if(grade >= 3.00){
+            } else if (grade >= 3.00) {
                 studentsWith3++;
-            }else{
+            } else {
                 failedStudents++;
             }
 
