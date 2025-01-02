@@ -30,7 +30,7 @@ public class _11_OddEvenPosition
             }
         }
 
-        // Calculate statistics for odd numbers and for even numbers based on the input values
+        // Calculate statistics for odd numbers and for even numbers based on the input values and print result
         if (n == 0)
         {
             Console.WriteLine("OddSum=0.00,\n OddMin=No,\n OddMax=No,\n EvenSum=0.00,\n EvenMin=No,\n EvenMax=No");
