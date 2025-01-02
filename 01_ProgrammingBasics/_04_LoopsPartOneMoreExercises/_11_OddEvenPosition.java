@@ -22,23 +22,23 @@ public class _11_OddEvenPosition {
         for (int i = 0; i < n; i++) {
             double number = Double.parseDouble(scan.nextLine());
 
-            if(i % 2 == 0){
+            if (i % 2 == 0) {
                 odds.add(number);
                 oddsSum += number;
-            }else{
+            } else {
                 evens.add(number);
                 evensSum += number;
             }
         }
 
-        // Calculate statistics for odd numbers and for even numbers based on the input values
-        if( n == 0){
+        // Calculate statistics for odd numbers and for even numbers based on the input values and print result
+        if ( n == 0) {
             System.out.printf("OddSum=0.00,%n OddMin=No,%n OddMax=No,%n EvenSum=0.00,%n EvenMin=No,%n EvenMax=No%n");
-        }else if( n == 1){
+        } else if ( n == 1) {
             double bigNumberOdd = odds.size() > 0 ? Collections.max(odds) : 0;
             double smallNumberOdd = odds.size() > 0 ? Collections.min(odds) : 0;
             System.out.printf("OddSum=%.2f,%n OddMin=%.2f,%n OddMax=%.2f,%n EvenSum=0.00,%n EvenMin=No,%n EvenMax=No%n", oddsSum, smallNumberOdd, bigNumberOdd, evensSum);
-        }else{
+        } else {
             double bigNumberOdd = Collections.max(odds);
             double smallNumberOdd = Collections.min(odds);
             double bigNumberEven = Collections.max(evens);
