@@ -12,7 +12,7 @@ public class _03_SumNumbers {
         int sum = 0;
 
         // Use a while loop to continuously read numbers and add them to the sum
-        while(sum < initialNum){
+        while (sum < initialNum) {
             int currentNum = Integer.parseInt(scan.nextLine());
             sum += currentNum;
         }
