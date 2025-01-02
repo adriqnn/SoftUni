@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 public class _01_Dishwasher
 {
@@ -8,13 +8,13 @@ public class _01_Dishwasher
         int detergent = int.Parse(Console.ReadLine());
         string input = Console.ReadLine();
 
-        // Prompt the user to enter the initial amount of detergent
+        // Add variables
         int detergentQuantity = detergent * 750;
         int washingBatch = 1;
         int plates = 0;
         int pots = 0;
 
-        // Add variables
+        // Operations
         while (input != "End")
         {
             int dishes = int.Parse(input);
