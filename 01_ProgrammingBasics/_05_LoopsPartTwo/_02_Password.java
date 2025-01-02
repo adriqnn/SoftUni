@@ -13,7 +13,7 @@ public class _02_Password {
         String input = scan.nextLine();
 
         // Use a while loop to repeatedly ask for the password until it matches
-        while(!input.equals(password)){
+        while (!input.equals(password)) {
             input = scan.nextLine();
         }
 
