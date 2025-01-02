@@ -29,4 +29,3 @@ public class _07_MinNumber {
         scan.close();
     }
 }
-
