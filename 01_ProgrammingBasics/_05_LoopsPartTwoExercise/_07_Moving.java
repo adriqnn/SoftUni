@@ -18,11 +18,11 @@ public class _07_Moving {
         String input = scan.nextLine();
 
         // Determine how many boxes are needed for the moving
-        while(!input.equals("Done")){
+        while (!input.equals("Done")) {
             int boxes = Integer.parseInt(input);
             boxesSum += boxes;
 
-            if(boxesSum >= volume){
+            if (boxesSum >= volume) {
                 break;
             }
 
@@ -33,9 +33,9 @@ public class _07_Moving {
         int diff = Math.abs(boxesSum - volume);
 
         // Print result 
-        if (boxesSum >= volume){
+        if (boxesSum >= volume) {
             System.out.printf("No more free space! You need %d Cubic meters more.", diff);
-        }else{
+        } else {
             System.out.printf("%d Cubic meters left.", diff);
         }
 
