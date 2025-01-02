@@ -20,13 +20,13 @@ public class _07_FootballLeague {
         for (int i = 0; i < fansCount; i++) {
             String sector = scan.nextLine().toLowerCase();
 
-            if(sector.equals("a")){
+            if (sector.equals("a")) {
                 sectorA++;
-            }else if(sector.equals("b")){
+            } else if (sector.equals("b")) {
                 sectorB++;
-            }else if(sector.equals("v")){
+            } else if (sector.equals("v")) {
                 sectorV++;
-            }else if(sector.equals("g")){
+            } else if (sector.equals("g")) {
                 sectorG++;
             }
         }
