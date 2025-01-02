@@ -12,11 +12,11 @@ public class _05_AccountBalance {
         // Initialize the account balance
         double accountBalance = 0;
 
-        while(!command.equals("NoMoreMoney")){
+        while (!command.equals("NoMoreMoney")) {
             double deposit = Double.parseDouble(command);
 
             // Exit the loop if the amount is invalid
-            if (deposit < 0){
+            if (deposit < 0) {
                 System.out.println("Invalid operation!");
                 break;
             }
