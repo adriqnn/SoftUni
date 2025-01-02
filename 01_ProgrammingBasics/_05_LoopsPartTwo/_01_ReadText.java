@@ -7,10 +7,10 @@ public class _01_ReadText {
         Scanner scan = new Scanner(System.in);
 
         // Use a while loop to continuously read input until "Stop" is entered
-        while(true){
+        while (true) {
             String input = scan.nextLine();
 
-            if (input.equalsIgnoreCase("Stop")){
+            if (input.equalsIgnoreCase("Stop")) {
                 break;
             }
 
