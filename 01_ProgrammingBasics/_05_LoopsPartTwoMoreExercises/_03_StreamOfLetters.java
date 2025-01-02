@@ -15,7 +15,7 @@ public class _03_StreamOfLetters {
         StringBuilder hiddenMessage = new StringBuilder();;
 
         // Solve the secret message
-        while(!input.equals("End")){
+        while (!input.equals("End")) {
             // Check if the input is a letter (A-Z or a-z)
             if (input.matches("[a-zA-Z]")) {
                 char letter = input.charAt(0);
