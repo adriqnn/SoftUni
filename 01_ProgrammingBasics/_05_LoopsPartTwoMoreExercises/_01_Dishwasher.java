@@ -10,14 +10,14 @@ public class _01_Dishwasher {
         int detergent = Integer.parseInt(scan.nextLine());
         String input = scan.nextLine();
 
-        // Prompt the user to enter the initial amount of detergent
+        // Add variables
         int detergentQuantity = detergent * 750;
         int washingBatch = 1;
         int plates = 0;
         int pots = 0;
 
         // Operations
-        while(!input.equals("End")){
+        while (!input.equals("End")) {
             int dishes = Integer.parseInt(input);
             int detergentNeeded = 0;
 
@@ -25,7 +25,7 @@ public class _01_Dishwasher {
             if (washingBatch % 3 == 0) {
                 pots += dishes;
                 detergentNeeded += dishes * 15;
-            }else{
+            } else {
                 plates += dishes;
                 detergentNeeded += dishes * 5;
             }
@@ -33,10 +33,10 @@ public class _01_Dishwasher {
             washingBatch++;
 
             // Check if there's enough detergent for the current batch
-            if(detergentQuantity - detergentNeeded < 0){
+            if (detergentQuantity - detergentNeeded < 0) {
                 System.out.printf("Not enough detergent, %d ml. more necessary!", Math.abs(detergentQuantity - detergentNeeded));
                 break;
-            }else{
+            } else {
                 detergentQuantity -= detergentNeeded;
             }
 
@@ -44,7 +44,7 @@ public class _01_Dishwasher {
         }
 
         // Display the results
-        if(input.equals("End")){
+        if (input.equals("End")) {
             System.out.printf("Detergent was enough!%n");
             System.out.printf("%d dishes and %d pots were washed.%n", plates, pots);
             System.out.printf("Leftover detergent %d ml.", detergentQuantity);
