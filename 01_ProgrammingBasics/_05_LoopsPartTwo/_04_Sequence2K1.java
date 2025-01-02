@@ -13,7 +13,7 @@ public class _04_Sequence2K1 {
         int k = 1;
 
         // Use a while loop to generate and print the sequence
-        while(k <= n){
+        while (k <= n) {
             System.out.println(k);
 
             k = 2 * k + 1;
