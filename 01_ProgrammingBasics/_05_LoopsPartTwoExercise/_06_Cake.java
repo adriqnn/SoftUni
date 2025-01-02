@@ -17,14 +17,14 @@ public class _06_Cake {
         int totalSlices = 0;
 
         // Using while manage the slices of the cake
-        while(!console.equals("STOP")){
+        while (!console.equals("STOP")) {
             int slices = Integer.parseInt(console);
 
             // Update the remaining cake and total slices taken
             remainingCake -= slices;
             totalSlices += slices;
 
-            if (remainingCake <= 0){
+            if (remainingCake <= 0) {
                 System.out.printf("No more cake left! You need %d pieces more.", Math.abs(wholeCake - totalSlices));
                 break;
             }
@@ -33,7 +33,7 @@ public class _06_Cake {
         }
 
         // Display the remaining pieces if the user stopped
-        if (console.equals("STOP")){
+        if (console.equals("STOP")) {
             System.out.printf("%d pieces are left.", remainingCake);
         }
 
