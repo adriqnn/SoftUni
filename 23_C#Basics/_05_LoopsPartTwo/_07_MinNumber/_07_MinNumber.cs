@@ -19,6 +19,7 @@ public class _07_MinNumber
             {
                 num = number;
             }
+            
             command = Console.ReadLine();
         }
 
