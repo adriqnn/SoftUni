@@ -12,13 +12,14 @@ public class _07_MinNumber {
         // Staging
         int num = Integer.MAX_VALUE;
 
-        while(!command.equals("Stop")){
+        while (!command.equals("Stop")) {
             int number = Integer.parseInt(command);
 
             // Check if the current number is lower than the current minimum
-            if (number < num){
+            if (number < num) {
                 num = number;
-            }
+            
+            
             command = scan.nextLine();
         }
 
