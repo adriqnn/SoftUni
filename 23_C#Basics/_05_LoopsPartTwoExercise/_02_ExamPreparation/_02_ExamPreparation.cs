@@ -38,6 +38,7 @@ public class _02_ExamPreparation
             problemName = Console.ReadLine();
         }
 
+        // Print result
         if (needBreak)
         {
             Console.WriteLine($"You need a break, {poorGradeCount} poor grades.");
