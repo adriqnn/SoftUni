@@ -24,23 +24,23 @@ public class _08_EqualPairs {
             int currentSum = numberOne + numberTwo;
             sums.add(currentSum);
 
-            if(i == 0){
+            if (i == 0) {
                 initialSum = currentSum;
-            }else{
-                if(initialSum != currentSum){
+            } else {
+                if (initialSum != currentSum) {
                     sameValue = false;
                 }
             }
         }
 
         // Print the result
-        if(sameValue){
+        if (sameValue) {
             System.out.printf("Yes, value=%d", initialSum);
-        }else{
+        } else {
             // int bigNumber = Collections.max(sums);
             // int smallNumber = Collections.min(sums);
-            int bigNumber = Math.max(sums.get(sums.size()-1), sums.get(sums.size()-2));
-            int smallNumber = Math.min(sums.get(sums.size()-1), sums.get(sums.size()-2));
+            int bigNumber = Math.max(sums.get(sums.size() - 1), sums.get(sums.size() - 2));
+            int smallNumber = Math.min(sums.get(sums.size() - 1), sums.get(sums.size() - 2));
             System.out.printf("No, maxdiff=%d", bigNumber - smallNumber);
         }
 
