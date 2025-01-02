@@ -15,7 +15,7 @@ public class _08_Graduation {
         double sum = 0;
 
         // Use a while loop to input and process the student's grades
-        while (count <= 12){
+        while (count <= 12) {
             double grade = Double.parseDouble(scan.nextLine());
 
             if (grade < 4.0) {
