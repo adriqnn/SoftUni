@@ -20,23 +20,23 @@ public class _02_ReportSystem {
         boolean moneyCollected = false;
 
         // Operations
-        while(!input.equals("End")){
+        while (!input.equals("End")) {
             double currentTransaction = Double.parseDouble(input);
 
             // Check if it's an even or odd order transaction
-            if(order % 2 == 0){
-                if(currentTransaction < 10){
+            if (order % 2 == 0) {
+                if (currentTransaction < 10) {
                     System.out.println("Error in transaction!");
-                }else{
+                } else {
                     moneyCard += currentTransaction;
                     collectedMoney += currentTransaction;
                     successfulCashDonations++;
                     System.out.println("Product sold!");
                 }
-            }else{
-                if(currentTransaction > 100){
+            } else {
+                if (currentTransaction > 100) {
                     System.out.println("Error in transaction!");
-                }else{
+                } else {
                     moneyCash += currentTransaction;
                     collectedMoney += currentTransaction;
                     successfulCardDonations++;
@@ -46,7 +46,7 @@ public class _02_ReportSystem {
             
             order++;
 
-            if(collectedMoney >= donationGoal){
+            if (collectedMoney >= donationGoal) {
                 moneyCollected = true;
                 break;
             }
@@ -55,10 +55,10 @@ public class _02_ReportSystem {
         }
 
         // Display the results
-        if(moneyCollected){
+        if (moneyCollected) {
             System.out.printf("Average CS: %.2f%n", moneyCash / successfulCashDonations);
             System.out.printf("Average CC: %.2f%n", moneyCard / successfulCardDonations);
-        }else{
+        } else {
             System.out.println("Failed to collect required money for charity.");
         }
 
