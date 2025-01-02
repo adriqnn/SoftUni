@@ -15,32 +15,32 @@ public class _03_Vacation {
         int daysPassed = 0;
 
         // Use a while loop to track the progress of saving money for the vacation
-        while (initialMoney < vacationCost){
+        while (initialMoney < vacationCost) {
             String action = scan.nextLine();
             double amount = Double.parseDouble(scan.nextLine());
 
             daysPassed++;
 
-            if (action.equals("save")){
+            if (action.equals("save")) {
                 daysSpent = 0;
                 initialMoney += amount;
-            }else if(action.equals("spend")){
+            } else if (action.equals("spend")) {
                 daysSpent++;
                 initialMoney -= amount;
 
-                if (initialMoney < 0){
+                if (initialMoney < 0) {
                     initialMoney = 0;
                 }
             }
 
-            if (daysSpent == 5){
+            if (daysSpent == 5) {
                 System.out.printf("You can't save the money.%n%d", daysPassed);
                 break;
             }
         }
 
         // Display the result based on whether the vacation cost was met
-        if (initialMoney >= vacationCost){
+        if (initialMoney >= vacationCost) {
             System.out.printf("You saved the money for %d days.", daysPassed);
         }
 
