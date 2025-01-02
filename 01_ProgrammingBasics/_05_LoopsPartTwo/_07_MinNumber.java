@@ -18,14 +18,15 @@ public class _07_MinNumber {
             // Check if the current number is lower than the current minimum
             if (number < num) {
                 num = number;
-            
-            
-            command = scan.nextLine();
+
+
+                command = scan.nextLine();
+            }
+
+            // Display the minimum number
+            System.out.println(num);
+
+            scan.close();
         }
-
-        // Display the minimum number
-        System.out.println(num);
-
-        scan.close();
     }
 }
