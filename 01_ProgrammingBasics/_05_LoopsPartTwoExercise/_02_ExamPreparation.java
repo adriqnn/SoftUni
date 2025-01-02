@@ -37,6 +37,7 @@ public class _02_ExamPreparation {
             problemName = scan.nextLine();
         }
 
+        // Print result
         if (needBreak) {
             System.out.printf("You need a break, %d poor grades.%n", poorGradeCount);
         } else {
