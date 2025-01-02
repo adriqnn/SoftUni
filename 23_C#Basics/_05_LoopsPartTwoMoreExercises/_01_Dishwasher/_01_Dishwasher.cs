@@ -14,7 +14,7 @@ public class _01_Dishwasher
         int plates = 0;
         int pots = 0;
 
-        // Operations
+        // Add variables
         while (input != "End")
         {
             int dishes = int.Parse(input);
