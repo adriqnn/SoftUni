@@ -19,6 +19,7 @@ public class _06_MaxNumber
             {
                 num = number;
             }
+            
             command = Console.ReadLine();
         }
 
