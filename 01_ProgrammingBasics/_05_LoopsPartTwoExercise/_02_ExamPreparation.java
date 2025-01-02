@@ -18,13 +18,13 @@ public class _02_ExamPreparation {
         String lastProblem = "";
 
         // Use a while loop to input and process the grades and problem names
-        while(!problemName.equals("Enough")){
+        while (!problemName.equals("Enough")) {
             int grade = Integer.parseInt(scan.nextLine());
 
-            if (grade <= 4){
+            if (grade <= 4) {
                 poorGradeCount++;
 
-                if (poorGradeCount == poorGradeThreshold){
+                if (poorGradeCount == poorGradeThreshold) {
                     needBreak = true;
                     break;
                 }
