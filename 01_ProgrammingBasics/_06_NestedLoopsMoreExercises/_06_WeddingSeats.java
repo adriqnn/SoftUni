@@ -20,12 +20,12 @@ public class _06_WeddingSeats {
         // Print all possible seats
         for (char i = 'A'; i <= lastSector; i++) {
             for (int j = 1; j <= countOfRowsFirstSector + countOfSectors; j++) {
-                if(j % 2 != 0){
+                if (j % 2 != 0) {
                     for (char k = 'a'; k < seatsOdd; k++) {
                         countSeats++;
                         System.out.printf("%s%d%s%n", i, j, k);
                     }
-                }else{
+                } else {
                     for (char k = 'a'; k < seatsEven; k++) {
                         countSeats++;
                         System.out.printf("%s%d%s%n", i, j, k);
