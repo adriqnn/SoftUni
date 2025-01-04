@@ -17,6 +17,7 @@ public class _07_SafePasswordsGeneratorV2
         // Flag to break out of outer loop
         bool breakOuter = false;
 
+        // Print generated passwords
         for (int i = 1; i <= a && !breakOuter; i++)
         {
             for (int j = 1; j <= b; j++)
