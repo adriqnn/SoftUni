@@ -13,8 +13,6 @@ public class _07_SafePasswordsGenerator
         char A = '#';
         char B = '@';
         int count = 0;
-
-        // We use a boolean flag to break the outer loop
         bool breakOuter = false;
 
         for (int i = 1; i <= a && !breakOuter; i++)
