@@ -14,11 +14,11 @@ public class _03_LuckyNumbers {
             for (int j = 1; j <= 9; j++) {
                 for (int k = 1; k <= 9; k++) {
                     for (int l = 1; l <= 9; l++) {
-                        if((i + j) == (k + l)){
+                        if ((i + j) == (k + l)) {
                             int num = Integer.parseInt(String.format("%d%d%d%d", i, j, k, l));
                             int sum = i + j;
                             
-                            if(n % sum == 0){
+                            if (n % sum == 0) {
                                 System.out.printf("%d ", num);
                             }
                         }
