@@ -22,7 +22,7 @@ public class _09_SumOfTwoNumbers {
                 combinations++;
                 int sum = i + j;
 
-                if(magicNumber == sum){
+                if (magicNumber == sum) {
                     magicNumberFound = true;
                     System.out.printf("Combination N:%d (%d + %d = %d)", combinations, i, j, sum);
                     break forLoopOuter;
@@ -31,7 +31,7 @@ public class _09_SumOfTwoNumbers {
         }
 
         // Print a message if there are no combinations
-        if(!magicNumberFound){
+        if (!magicNumberFound) {
             System.out.printf("%d combinations - neither equals %d", combinations, magicNumber);
         }
         
