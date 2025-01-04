@@ -18,7 +18,7 @@ public class _06_Building {
         }
 
         // Cycle through the rest of the building
-        for (int i = floors - 1; i >= 1; i--){
+        for (int i = floors - 1; i >= 1; i--) {
 
             // New line
             System.out.printf("%n");
