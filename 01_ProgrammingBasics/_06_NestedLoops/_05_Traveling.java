@@ -10,7 +10,7 @@ public class _05_Traveling {
         String console = scan.nextLine();
         String destination = "";
 
-        while(!console.equals("End")){
+        while (!console.equals("End")) {
             // Store the current destination
             destination = console;
 
