@@ -50,6 +50,7 @@ public class _06_CinemaTickets
                     Console.WriteLine($"{movie} - {occupancyIn:F2}% full.");
                     break;
                 }
+                
                 type = Console.ReadLine();
             }
 
