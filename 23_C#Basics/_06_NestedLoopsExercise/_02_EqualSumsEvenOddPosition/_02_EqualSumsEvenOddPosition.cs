@@ -25,6 +25,7 @@ public class _02_EqualSumsEvenOddPosition
                 {
                     even += currentDigit;
                 }
+                
                 if (j % 2 != 0)
                 {
                     odd += currentDigit;
