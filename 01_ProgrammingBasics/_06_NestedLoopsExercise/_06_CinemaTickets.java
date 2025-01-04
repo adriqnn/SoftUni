@@ -16,7 +16,7 @@ public class _06_CinemaTickets {
         int kidsTotal = 0;
 
         // Make statistics for ticket types and movies
-        while(!movie.equals("Finish")){
+        while (!movie.equals("Finish")) {
 
             // Read additional input values for each movie
             int seats = Integer.parseInt(scan.nextLine());
@@ -29,27 +29,29 @@ public class _06_CinemaTickets {
             int kids = 0;
 
 
-            while(!type.equals("End")){
-                if (type.equals("student")){
+            while (!type.equals("End")) {
+                if (type.equals("student")) {
                     students++;
-                }else if (type.equals("standard")){
+                } else if (type.equals("standard")) {
                     standard++;
-                }else if (type.equals("kid")){
+                } else if (type.equals("kid")) {
                     kids++;
                 }
+                
                 count++;
 
-                if (count == seats){
+                if (count == seats) {
                     double occupancy = ((1.00 * count) / seats) * 100;
                     System.out.printf("%s - %.2f%% full.%n", movie, occupancy);
                     break;
                 }
+                
                 type = scan.nextLine();
             }
 
             double occupancy = ((1.00 * count) / seats) * 100;
 
-            if(type.equals("End")){
+            if (type.equals("End")) {
                 System.out.printf("%s - %.2f%% full.%n", movie, occupancy);
             }
 
