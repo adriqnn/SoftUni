@@ -14,7 +14,7 @@ public class _08_SecretDoorsLock {
         // Print all the possible combination within the limitations
         for (int i = 2; i <= hundredsLimit; i += 2) {
             for (int j = 1; j <= tensLimit; j++) {
-                if(isPrime(j)) {
+                if (isPrime(j)) {
                     for (int k = 2; k <= unitsLimit; k += 2) {
                         System.out.printf("%d %d %d%n", i, j, k);
                     }
