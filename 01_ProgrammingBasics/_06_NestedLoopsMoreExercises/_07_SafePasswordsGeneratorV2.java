@@ -20,7 +20,7 @@ public class _07_SafePasswordsGeneratorV2 {
         forOuter:
         for (int i = 1; i <= a; i++) {
             for (int j = 1; j <= b; j++) {
-                if(count == max){
+                if (count == max) {
                     break forOuter;
                 }
 
