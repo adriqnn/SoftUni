@@ -1,4 +1,4 @@
-# Nested Loops - Lecture 
+# Nested Loops - Lecture
 
 * For loop;
 * While loop;
