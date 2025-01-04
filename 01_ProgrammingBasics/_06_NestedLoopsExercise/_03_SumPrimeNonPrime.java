@@ -14,13 +14,13 @@ public class _03_SumPrimeNonPrime {
         int nonPrimeSum = 0;
 
         // Calculate prime and non-prime sums
-        while(!console.equals("stop")){
+        while (!console.equals("stop")) {
             boolean isPrime = true;
             int num = Integer.parseInt(console);
 
-            if (num < 0){
+            if (num < 0) {
                 System.out.println("Number is negative.");
-            }else{
+            } else {
                 if (num <= 1) {
                     isPrime = false;
                 } else {
@@ -32,9 +32,9 @@ public class _03_SumPrimeNonPrime {
                     }
                 }
 
-                if (isPrime){
+                if (isPrime) {
                     primeSum += num;
-                }else{
+                } else {
                     nonPrimeSum += num;
                 }
             }
