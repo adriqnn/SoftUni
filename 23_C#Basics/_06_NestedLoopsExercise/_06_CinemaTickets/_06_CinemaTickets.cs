@@ -41,6 +41,7 @@ public class _06_CinemaTickets
                 {
                     kids++;
                 }
+                
                 count++;
 
                 if (count == seats)
