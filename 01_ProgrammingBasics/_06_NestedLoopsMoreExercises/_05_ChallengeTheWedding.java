@@ -14,7 +14,7 @@ public class _05_ChallengeTheWedding {
         // Arrange guest based on gender and free tables
         for (int i = 1; i <= clientsM; i++) {
             for (int j = 1; j <= clientsF; j++) {
-                if(maxTables == 0){
+                if (maxTables == 0) {
                     break;
                 }
                 
@@ -22,7 +22,7 @@ public class _05_ChallengeTheWedding {
                 System.out.printf("(%d <-> %d) ", i, j);
             }
             
-            if(maxTables == 0){
+            if (maxTables == 0) {
                 break;
             }
         }
