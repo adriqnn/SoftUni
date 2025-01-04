@@ -14,7 +14,7 @@ public class _01_UniquePINCodes {
         // Print valid pin codes
         for (int i = 2; i <= num1; i += 2) {
             for (int j = 2; j <= num2; j++) {
-                if(isPrime(j)){
+                if (isPrime(j)) {
                     for (int k = 2; k <= num3; k += 2) {
                         System.out.printf("%d %d% d%n", i, j, k);
                     }
