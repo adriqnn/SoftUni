@@ -15,6 +15,7 @@ public class _07_SafePasswordsGenerator
         int count = 0;
         bool breakOuter = false;
 
+        // Print generated passwords
         for (int i = 1; i <= a && !breakOuter; i++)
         {
             for (int j = 1; j <= b; j++)
