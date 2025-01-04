@@ -21,16 +21,17 @@ public class _02_EqualSumsEvenOddPosition {
                 int currentDigit = Integer.parseInt("" + current.charAt(j));
 
                 // Check if the current index is even or odd
-                if(j % 2 == 0){
+                if (j % 2 == 0) {
                     even += currentDigit;
                 }
-                if(j % 2 != 0){
+                
+                if (j % 2 != 0) {
                     odd += currentDigit;
                 }
             }
 
             // If the sums of even and odd-positioned digits are equal, print the number
-            if (even == odd){
+            if (even == odd) {
                 System.out.print(i + " ");
             }
         }
