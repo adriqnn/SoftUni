@@ -20,15 +20,15 @@ public class _07_SafePasswordsGenerator {
         forOuter:
         for (int i = 1; i <= a; i++) {
             for (int j = 1; j <= b; j++) {
-                if(count == max){
+                if (count == max) {
                     break forOuter;
                 }
                 
-                if(A == 56){
+                if (A == 56) {
                     A = '#';
                 }
                 
-                if( B == 97){
+                if ( B == 97) {
                     B = '@';
                 }
 
