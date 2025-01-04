@@ -15,7 +15,7 @@ public class _05_ChallengeTheWeddingV2 {
         outerLoop:
         for (int i = 1; i <= clientsM; i++) {
             for (int j = 1; j <= clientsF; j++) {
-                if(maxTables == 0){
+                if (maxTables == 0) {
                     break outerLoop;
                 }
                 
