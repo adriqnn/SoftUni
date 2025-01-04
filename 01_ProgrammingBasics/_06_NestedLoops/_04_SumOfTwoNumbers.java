@@ -21,20 +21,20 @@ public class _04_SumOfTwoNumbers {
                 count++;
 
                 // Print result if magic number is found
-                if (i + j == magicNum){
+                if (i + j == magicNum) {
                     System.out.printf("Combination N:%d (%d + %d = %d)%n", count, i, j, i + j);
                     isDone = true;
                     break;
                 }
             }
 
-            if (isDone){
+            if (isDone) {
                 break;
             }
         }
 
         // Print result
-        if(!isDone){
+        if (!isDone) {
             System.out.printf("%d combinations - neither equals %d", count, magicNum);
         }
 
