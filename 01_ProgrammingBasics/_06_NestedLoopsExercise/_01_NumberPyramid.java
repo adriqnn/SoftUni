@@ -16,7 +16,7 @@ public class _01_NumberPyramid {
         // Print the number pyramid
         for (int rows = 1; rows <= num; rows++) {
             for (int cols = 1; cols <= rows; cols++) {
-                if (current > num){
+                if (current > num) {
                     isBigger = true;
                     break;
                 }
@@ -25,7 +25,7 @@ public class _01_NumberPyramid {
                 current++;
             }
             
-            if (isBigger){
+            if (isBigger) {
                 break;
             }
             
