@@ -15,7 +15,7 @@ public class _04_TrainTheTrainers {
         int presentationCount = 0;
 
         // Evaluate all presentations
-        while(!presentationName.equals("Finish")){
+        while (!presentationName.equals("Finish")) {
             presentationCount++;
             double presentationAverage = 0;
 
