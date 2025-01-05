@@ -11,7 +11,6 @@ public class _07_ChristmasTree
         for (int i = 1; i <= n + 1; i++)
         {
             printRowOfAFigure(n + 1, i);
-
             Console.WriteLine();
         }
     }
