@@ -21,9 +21,9 @@ public class _02_CatFood {
 
             if (grams < 200) {
                 catSmall++;
-            } else if(grams < 300) {
+            } else if (grams < 300) {
                 catMedium++;
-            } else if(grams < 400) {
+            } else if (grams < 400) {
                 catBig++;
             }
             
