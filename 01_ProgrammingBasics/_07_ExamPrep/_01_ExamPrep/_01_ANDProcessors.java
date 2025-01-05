@@ -17,9 +17,9 @@ public class _01_ANDProcessors {
         double total = Math.abs(processors - processorsCost);
 
         // Print result
-        if (processors <= processorsCost){
+        if (processors <= processorsCost) {
             System.out.printf("Profit: -> %.2f BGN", total * 110.10);
-        }else{
+        } else {
             System.out.printf("Losses: -> %.2f BGN", total * 110.10);
         }
 
