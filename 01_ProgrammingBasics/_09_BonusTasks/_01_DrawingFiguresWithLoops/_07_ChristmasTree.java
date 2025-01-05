@@ -11,7 +11,6 @@ public class _07_ChristmasTree {
 
         // Print the tree
         for (int i = 1; i <= n + 1; i++) {
-
             printRowOfAFigure(n + 1, i);
 
             System.out.println();
@@ -29,9 +28,9 @@ public class _07_ChristmasTree {
 
         // Print stars in each row
         for (int k = 1; k <= 2 * i - 1; k++) {
-            if(k == i){
+            if (k == i) {
                 System.out.print(" | ");
-            }else{
+            } else {
                 System.out.print("*");
             }
         }
