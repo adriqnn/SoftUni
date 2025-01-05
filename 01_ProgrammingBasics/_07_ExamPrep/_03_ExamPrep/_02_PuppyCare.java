@@ -1,4 +1,4 @@
-package _01_ProgrammingBasics._08_Exam;
+package _01_ProgrammingBasics._08_ExamPrep;
 
 import java.util.Scanner;
 
@@ -15,7 +15,7 @@ public class _02_PuppyCare {
         int gramsTotal = 0;
 
         // Calculate the food
-        while(!console.equals("Adopted")){
+        while (!console.equals("Adopted")) {
             int grams = Integer.parseInt(console);
             gramsTotal += grams;
 
@@ -23,9 +23,9 @@ public class _02_PuppyCare {
         }
 
         // Print result
-        if(gramsFood >= gramsTotal){
+        if (gramsFood >= gramsTotal) {
             System.out.printf("Food is enough! Leftovers: %d grams.", gramsFood - gramsTotal);
-        }else{
+        } else {
             System.out.printf("Food is not enough. You need %d grams more.", gramsTotal - gramsFood);
         }
 
