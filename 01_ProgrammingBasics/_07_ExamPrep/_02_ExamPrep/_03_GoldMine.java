@@ -1,4 +1,4 @@
-package _01_ProgrammingBasics._08_Exam;
+package _01_ProgrammingBasics._08_ExamPrep;
 
 import java.util.Scanner;
 
@@ -24,9 +24,9 @@ public class _03_GoldMine {
             double average2 = total / n2;
 
             // Print result
-            if (average2 >= average){
+            if (average2 >= average) {
                 System.out.printf("Good job! Average gold per day: %.2f.%n", average2);
-            }else {
+            } else {
                 System.out.printf("You need %.2f gold.%n", average - average2);
             }
         }
