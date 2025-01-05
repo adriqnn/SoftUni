@@ -10,7 +10,6 @@ public class _06_RhombusOfStars
         // Upper triangle
         for (int i = 1; i <= n; i++)
         {
-
             // Print upper triangle lines
             printRowOfAFigure(n, i);
 
@@ -21,7 +20,6 @@ public class _06_RhombusOfStars
         // Lower triangle
         for (int i = n - 1; i >= 1; i--)
         {
-
             // Print lower triangle lines
             printRowOfAFigure(n, i);
 
@@ -29,7 +27,6 @@ public class _06_RhombusOfStars
             Console.WriteLine();
         }
     }
-
 
     public static void printRowOfAFigure(int n, int i)
     {
