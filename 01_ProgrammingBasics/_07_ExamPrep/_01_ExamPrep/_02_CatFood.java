@@ -19,13 +19,14 @@ public class _02_CatFood {
         for (int i = 0; i < n; i++) {
             int grams = Integer.parseInt(scan.nextLine());
 
-            if(grams < 200){
+            if (grams < 200) {
                 catSmall++;
-            }else if(grams < 300){
+            } else if(grams < 300) {
                 catMedium++;
-            }else if(grams < 400){
+            } else if(grams < 400) {
                 catBig++;
             }
+            
             total += grams;
         }
 
