@@ -1,4 +1,4 @@
-package _01_ProgrammingBasics._08_Exam;
+package _01_ProgrammingBasics._08_ExamPrep;
 
 import java.util.Scanner;
 
