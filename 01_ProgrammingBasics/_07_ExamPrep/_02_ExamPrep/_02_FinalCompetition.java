@@ -1,4 +1,4 @@
-package _01_ProgrammingBasics._08_Exam;
+package _01_ProgrammingBasics._08_ExamPrep;
 
 import java.util.Scanner;
 
@@ -16,18 +16,20 @@ public class _02_FinalCompetition {
         double prize = 0;
 
         // Determine the prize
-        if(place.equals("Bulgaria")){
+        if (place.equals("Bulgaria")) {
             prize = points * dancers;
-            if (season.equals("summer")){
+            
+            if (season.equals("summer")) {
                 prize *= 0.95;
-            }else if(season.equals("winter")){
+            } else if (season.equals("winter")) {
                 prize *= 0.92;
             }
-        }else{
+        } else {
             prize = (points * dancers) + ((points * dancers) * 0.50);
-            if (season.equals("summer")){
+            
+            if (season.equals("summer")) {
                 prize *= 0.90;
-            }else if(season.equals("winter")){
+            } else if (season.equals("winter")) {
                 prize *= 0.85;
             }
         }
