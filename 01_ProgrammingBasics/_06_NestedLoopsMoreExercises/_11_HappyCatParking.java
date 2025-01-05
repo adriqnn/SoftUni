@@ -17,16 +17,16 @@ public class _11_HappyCatParking {
         for (int day = 1; day <= numberOfDays; day++) {
             double dailySum = 0;
             for (int hour = 1; hour <= numberOfHoursPerDay; hour++) {
-                if(day % 2 != 0){
-                    if(hour % 2 == 0){
+                if (day % 2 != 0) {
+                    if (hour % 2 == 0) {
                         dailySum += 1.25;
-                    }else{
+                    } else {
                         dailySum += 1;
                     }
-                }else{
-                    if(hour % 2 != 0){
+                } else {
+                    if (hour % 2 != 0) {
                         dailySum += 2.50;
-                    }else{
+                    } else {
                         dailySum += 1;
                     }
                 }
