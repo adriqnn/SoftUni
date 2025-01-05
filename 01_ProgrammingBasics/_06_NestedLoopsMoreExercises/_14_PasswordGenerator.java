@@ -16,7 +16,7 @@ public class _14_PasswordGenerator {
                 for (char k = 'a'; k < 'a' + l; k++) {
                     for (char m = 'a'; m < 'a' +l; m++) {
                         for (int o = 1; o <= n; o++) {
-                            if(o > i && o > j){
+                            if (o > i && o > j) {
                                 System.out.printf("%d%d%s%s%d ", i, j, k, m, o);
                             }
                         }
