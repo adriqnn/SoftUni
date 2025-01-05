@@ -1,4 +1,4 @@
-package _01_ProgrammingBasics._07_ExamPrep;
+package _01_ProgrammingBasics._07_Exam;
 
 import java.util.Scanner;
 
@@ -16,9 +16,9 @@ public class _02_CatWalk {
         int burntCalories = minutesAll * 5;
 
         // Print result
-        if(burntCalories >= calories * 0.5){
+        if (burntCalories >= calories * 0.5) {
             System.out.printf("Yes, the walk for your cat is enough. Burned calories per day: %d.", burntCalories);
-        }else{
+        } else {
             System.out.printf("No, the walk for your cat is not enough. Burned calories per day: %d.", burntCalories);
         }
 
