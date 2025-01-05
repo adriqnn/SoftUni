@@ -16,9 +16,11 @@ public class _03_BestPlayer {
         // Find the best player
         while (!console.equals("END")) {
             int score = Integer.parseInt(scan.nextLine());
+            
             if (score > max) {
                 max = score;
                 bestPlayer = console;
+                
                 if (score >= 10) {
                     break;
                 }
