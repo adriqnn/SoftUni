@@ -18,7 +18,6 @@ public class _07_ChristmasTree
 
     public static void printRowOfAFigure(int n, int i)
     {
-
         // Print spaces
         for (int j = 1; j <= n - i; j++)
         {
