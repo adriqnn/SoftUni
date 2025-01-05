@@ -19,9 +19,9 @@ public class _01_BraceletStand {
         double expenses2 = saved - expenses;
 
         // Print result
-        if(gift <= expenses2){
+        if (gift <= expenses2) {
             System.out.printf("Profit: %.2f BGN, the gift has been purchased.", expenses2);
-        }else{
+        } else {
             System.out.printf("Insufficient money: %.2f BGN.", Math.abs(expenses2 - gift));
         }
 
