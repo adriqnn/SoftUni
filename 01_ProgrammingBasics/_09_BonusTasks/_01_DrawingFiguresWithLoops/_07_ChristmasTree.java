@@ -12,7 +12,6 @@ public class _07_ChristmasTree {
         // Print the tree
         for (int i = 1; i <= n + 1; i++) {
             printRowOfAFigure(n + 1, i);
-
             System.out.println();
         }
 
