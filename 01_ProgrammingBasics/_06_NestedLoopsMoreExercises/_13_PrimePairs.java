@@ -15,7 +15,7 @@ public class _13_PrimePairs {
         // Determine the prime pairs numbers and print them
         for (int i = firstNumberStart; i <= firstNumberStart + firstNumberEnd; i++) {
             for (int j = secondNumberStart; j <= secondNumberStart + secondNumberEnd; j++) {
-                if(isPrime(i) && isPrime(j)){
+                if (isPrime(i) && isPrime(j)) {
                     System.out.printf("%d%d%n", i, j);
                 }
             }
