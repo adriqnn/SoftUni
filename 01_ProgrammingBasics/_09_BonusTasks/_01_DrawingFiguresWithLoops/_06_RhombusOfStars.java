@@ -42,9 +42,9 @@ public class _06_RhombusOfStars {
 
         // Print stars in each row
         for (int k = 1; k <= 2 * i - k; k++) {
-            if(k == 1){
+            if (k == 1) {
                 System.out.print("*");
-            }else{
+            } else {
                 System.out.print(" *");
             }
         }
