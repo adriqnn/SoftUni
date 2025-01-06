@@ -11,7 +11,6 @@ public class _08_Sunglasses {
 
         // Print the sunglasses
         for (int i = 1; i <= n; i++) {
-
             printFrame(n * 2, i);
             printLink(n, i);
             printFrame(n * 2, i);
@@ -25,9 +24,9 @@ public class _08_Sunglasses {
     // Print sides
     public static void printFrame(int n, int i){
         for (int j = 1; j <= n; j++) {
-            if(j == 1 || i == 1 || j == n || i == n / 2){
+            if (j == 1 || i == 1 || j == n || i == n / 2) {
                 System.out.print("*");
-            }else {
+            } else {
                 System.out.print("/");
             }
         }
@@ -36,12 +35,11 @@ public class _08_Sunglasses {
     // Print middle
     public static void printLink(int n, int i){
         for (int j = 1; j <= n; j++) {
-
             double mid = Math.ceil((n * 1.00) / 2);
             
-            if(i == mid){
+            if (i == mid) {
                 System.out.print("|");
-            }else {
+            } else {
                 System.out.print(" ");
             }
         }
