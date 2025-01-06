@@ -9,10 +9,8 @@ public class _10_DiamondV2
 
         for (int i = 1; i <= n; i++)
         {
-
             // Print upper triangle lines
             printRowOfAFigure(n, i);
-
             // Move to the next line
             Console.WriteLine();
         }
@@ -20,10 +18,8 @@ public class _10_DiamondV2
         // Lower triangle
         for (int i = n - 1; i >= 1; i--)
         {
-
             // Print lower triangle lines
             printRowOfAFigure(n, i);
-
             // Move to the next line
             Console.WriteLine();
         }
@@ -31,7 +27,6 @@ public class _10_DiamondV2
 
     public static void printRowOfAFigure(int n, int i)
     {
-
         // Print spaces
         for (int j = 1; j <= n - i; j++)
         {
