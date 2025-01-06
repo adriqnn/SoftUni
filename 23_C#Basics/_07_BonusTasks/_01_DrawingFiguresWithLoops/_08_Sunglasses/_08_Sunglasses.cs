@@ -10,7 +10,6 @@ public class _08_Sunglasses
         // Print the sunglasses
         for (int i = 1; i <= n; i++)
         {
-
             printFrame(n * 2, i);
             printLink(n, i);
             printFrame(n * 2, i);
@@ -40,7 +39,6 @@ public class _08_Sunglasses
     {
         for (int j = 1; j <= n; j++)
         {
-
             double mid = Math.Ceiling((n * 1.00) / 2);
 
             if (i == mid)
