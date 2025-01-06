@@ -50,7 +50,6 @@ public class _09_House {
     }
 
     public static void printBaseLines(int n, int i){
-
         // Print lines for the base of the house
         for (int j = 1; j <= n; j++) {
             if (j == 1 || j == n) {
