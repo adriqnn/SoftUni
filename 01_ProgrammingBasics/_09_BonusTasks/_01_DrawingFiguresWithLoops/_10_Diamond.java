@@ -15,29 +15,23 @@ public class _10_Diamond {
 
             // Upper triangle
             for (int i = 1; i <= upper; i++) {
-
                 printTopPart(n, i);
-
                 System.out.println();
             }
 
             // Lower triangle
             for (int i = lower; i >= 1; i--) {
-
                 printTopPart(n, i);
-
                 System.out.println();
             }
-
 
         scan.close();
     }
 
     public static void printTopPart(int n, int i){
-
         int stars = n % 2 != 0 ? 1 : 2;
 
-        if(i == 1 || i == n){
+        if (i == 1 || i == n) {
             for (int j = 1; j <= Math.ceil(n / 2.00 - 1); j++) {
                 System.out.print("-");
             }
@@ -47,24 +41,26 @@ public class _10_Diamond {
             for (int j = 1; j <= Math.ceil(n / 2.00 - 1); j++) {
                 System.out.print("-");
             }
-        }else{
+        } else {
             int locationRight = ((n / 2) + i);
             
-            if(n % 2 != 0){
+            if (n % 2 != 0) {
                 int locationLeft = ((n / 2) + 2 - i);
+                
                 for (int j = 1; j <= n; j++) {
-                    if(j == locationLeft || j == locationRight){
+                    if (j == locationLeft || j == locationRight) {
                         System.out.print("*");
-                    }else{
+                    } else {
                         System.out.print("-");
                     }
                 }
-            }else{
+            } else {
                 int locationLeft = ((n / 2) + 1 - i);
+                
                 for (int j = 1; j <= n; j++) {
-                    if(j == locationLeft || j == locationRight){
+                    if (j == locationLeft || j == locationRight) {
                         System.out.print("*");
-                    }else{
+                    } else {
                         System.out.print("-");
                     }
                 }
