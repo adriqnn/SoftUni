@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 public class _10_Diamond
 {
@@ -14,25 +14,20 @@ public class _10_Diamond
         // Upper triangle
         for (int i = 1; i <= upper; i++)
         {
-
             printTopPart(n, i);
-
             Console.WriteLine();
         }
 
         // Lower triangle
         for (int i = lower; i >= 1; i--)
         {
-
             printTopPart(n, i);
-
             Console.WriteLine();
         }
     }
 
     public static void printTopPart(int n, int i)
     {
-
         int stars = n % 2 != 0 ? 1 : 2;
 
         if (i == 1 || i == n)
@@ -56,6 +51,7 @@ public class _10_Diamond
             if (n % 2 != 0)
             {
                 int locationLeft = ((n / 2) + 2 - i);
+
                 for (int j = 1; j <= n; j++)
                 {
                     if (j == locationLeft || j == locationRight)
@@ -71,6 +67,7 @@ public class _10_Diamond
             else
             {
                 int locationLeft = ((n / 2) + 1 - i);
+
                 for (int j = 1; j <= n; j++)
                 {
                     if (j == locationLeft || j == locationRight)
