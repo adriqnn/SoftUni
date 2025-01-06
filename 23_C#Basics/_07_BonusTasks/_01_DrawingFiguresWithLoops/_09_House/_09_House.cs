@@ -15,7 +15,6 @@ public class _09_House
         for (int i = 0; i < roof; i++)
         {
             printRoofLines(n, i);
-
             Console.WriteLine();
         }
 
@@ -23,14 +22,12 @@ public class _09_House
         for (int i = 0; i < baseNr; i++)
         {
             printBaseLines(n, i);
-
             Console.WriteLine();
         }
     }
 
     public static void printRoofLines(int n, int i)
     {
-
         // Add variables
         int stars = n % 2 != 0 ? 1 : 2;
         int numberOfStar = i == 0 ? stars : stars + (i * 2);
