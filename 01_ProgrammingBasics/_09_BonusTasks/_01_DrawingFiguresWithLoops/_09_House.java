@@ -16,14 +16,12 @@ public class _09_House {
         // Print roof section
         for (int i = 0; i < roof; i++) {
             printRoofLines(n, i);
-
             System.out.println();
         }
 
         // Print base section
         for (int i = 0; i < base; i++) {
             printBaseLines(n, i);
-
             System.out.println();
         }
 
@@ -31,7 +29,6 @@ public class _09_House {
     }
 
     public static void printRoofLines(int n, int i){
-
         // Add variables
         int stars = n % 2 != 0 ? 1 : 2;
         int numberOfStar =  i == 0 ? stars : stars + (i * 2);
@@ -56,9 +53,9 @@ public class _09_House {
 
         // Print lines for the base of the house
         for (int j = 1; j <= n; j++) {
-            if(j == 1 || j == n){
+            if (j == 1 || j == n) {
                 System.out.print("|");
-            }else{
+            } else {
                 System.out.print("*");
             }
         }
