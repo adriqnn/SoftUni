@@ -9,20 +9,16 @@ public class _10_DiamondV2 {
         int n = Integer.parseInt(scan.nextLine());
 
         for (int i = 1; i <= n; i++) {
-
             // Print upper triangle lines
             printRowOfAFigure(n, i);
-
             // Move to the next line
             System.out.println();
         }
 
         // Lower triangle
         for (int i = n - 1; i >= 1; i--) {
-
             // Print lower triangle lines
             printRowOfAFigure(n, i);
-
             // Move to the next line
             System.out.println();
         }
@@ -31,7 +27,6 @@ public class _10_DiamondV2 {
     }
 
     public static void printRowOfAFigure(int n, int i){
-
         // Print spaces
         for (int j = 1; j <= n - i; j++) {
             System.out.print("-");
@@ -39,9 +34,9 @@ public class _10_DiamondV2 {
 
         // Print stars in each row
         for (int k = 1; k <= 2 * i - 1; k++) {
-            if(k == 1 || k == 2 * i - 1){
+            if (k == 1 || k == 2 * i - 1) {
                 System.out.print("*");
-            }else{
+            } else {
                 System.out.print("-");
             }
         }
