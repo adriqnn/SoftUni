@@ -14,12 +14,10 @@ public class _07_ProjectsCreation {
         int allHours = projectsCount * 3;
 
         // Print formatted message
-        System.out.printf("The architect %s will need %d hours to complete %d project/s.",
-                name, allHours, projectsCount);
+        System.out.printf("The architect %s will need %d hours to complete %d project/s.", name, allHours, projectsCount);
 
         // Old version
-        /*System.out.printf("The architect %s will need %d hours to complete %d project%s.",
-                name, allHours, projectsCount, projectsCount == 1 ? "" : "s");*/
+        /* System.out.printf("The architect %s will need %d hours to complete %d project%s.", name, allHours, projectsCount, projectsCount == 1 ? "" : "s"); */
 
         scan.close();
     }
