@@ -21,7 +21,7 @@ public class _10_WeatherForecast2 {
             weatherType = "Warm";
         } else if (degrees >= 26.00 && degrees <= 35.00) {
             weatherType = "Hot";
-        }else {
+        } else {
             weatherType = "unknown";
         }
 
