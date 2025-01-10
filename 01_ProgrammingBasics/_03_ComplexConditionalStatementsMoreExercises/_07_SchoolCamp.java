@@ -19,6 +19,7 @@ public class _07_SchoolCamp {
         // Calculate initial price for all the students
         if (season.equals("winter")) {
             price = groupType.equals("mixed") ? studentsCount * 10 * nightsCount : studentsCount * 9.60 * nightsCount;
+            
             if (groupType.equals("girls")) {
                 sport = "Gymnastics";
             } else if (groupType.equals("boys")) {
@@ -28,6 +29,7 @@ public class _07_SchoolCamp {
             }
         } else if (season.equals("spring")) {
             price = groupType.equals("mixed") ? studentsCount * 9.50 * nightsCount : studentsCount * 7.20 * nightsCount;
+            
             if (groupType.equals("girls")) {
                 sport = "Athletics";
             } else if (groupType.equals("boys")) {
@@ -37,6 +39,7 @@ public class _07_SchoolCamp {
             }
         } else {
             price = groupType.equals("mixed") ? studentsCount * 20 * nightsCount : studentsCount * 15 * nightsCount;
+            
             if (groupType.equals("girls")) {
                 sport = "Volleyball";
             } else if (groupType.equals("boys")) {
