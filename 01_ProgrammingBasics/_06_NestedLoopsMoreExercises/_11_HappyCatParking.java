@@ -16,6 +16,7 @@ public class _11_HappyCatParking {
         // Calculate daily parking fee
         for (int day = 1; day <= numberOfDays; day++) {
             double dailySum = 0;
+            
             for (int hour = 1; hour <= numberOfHoursPerDay; hour++) {
                 if (day % 2 != 0) {
                     if (hour % 2 == 0) {
