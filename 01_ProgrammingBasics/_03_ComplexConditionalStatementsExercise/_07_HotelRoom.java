@@ -38,6 +38,7 @@ public class _07_HotelRoom {
         } else if (month.equals("july") || month.equals("august")) {
             studio = 76.00;
             apartment = 77.00;
+            
             if (nights > 14) {
                 studio = (days * 76.00);
                 apartment = (days * 77.00) * 0.90;
