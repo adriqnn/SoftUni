@@ -27,7 +27,6 @@ public class _04_Walking {
         // Print result at the end
         if (console.equals("Going home")) {
             int stepsAfter = Integer.parseInt(scan.nextLine());
-            
             stepsCounter += stepsAfter;
             
             if (stepsCounter >= 10000) {
