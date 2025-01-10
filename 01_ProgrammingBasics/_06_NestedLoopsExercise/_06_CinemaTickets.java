@@ -17,7 +17,6 @@ public class _06_CinemaTickets {
 
         // Make statistics for ticket types and movies
         while (!movie.equals("Finish")) {
-
             // Read additional input values for each movie
             int seats = Integer.parseInt(scan.nextLine());
             String type = scan.nextLine();
@@ -27,7 +26,6 @@ public class _06_CinemaTickets {
             int students = 0;
             int standard = 0;
             int kids = 0;
-
 
             while (!type.equals("End")) {
                 if (type.equals("student")) {
