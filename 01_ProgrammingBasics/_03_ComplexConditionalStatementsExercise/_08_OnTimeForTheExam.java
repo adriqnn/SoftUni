@@ -32,6 +32,7 @@ public class _08_OnTimeForTheExam {
                 timeUnit = "hours";
                 value1 = lateMinutes / 60;
                 value2 = lateMinutes % 60;
+                
                 if (value2 < 10) {
                     System.out.println("Late");
                     System.out.printf("%d:0%d %s after the start%n", value1, value2, timeUnit);
@@ -41,12 +42,14 @@ public class _08_OnTimeForTheExam {
                 }
             } else {
                 timeUnit = "minutes";
+                
                 System.out.println("Late");
                 System.out.printf("%d %s after the start%n", lateMinutes, timeUnit);
             }
         } else {
             if (earlyMinutes <= 30) {
                 timeUnit = "minutes";
+                
                 System.out.println("On time");
                 System.out.printf("%d %s before the start%n", earlyMinutes, timeUnit);
             } else {
@@ -54,6 +57,7 @@ public class _08_OnTimeForTheExam {
                     timeUnit = "hours";
                     value1 = earlyMinutes / 60;
                     value2 = earlyMinutes % 60;
+                    
                     if (value2 < 10) {
                         System.out.println("Early");
                         System.out.printf("%d:0%d %s before the start%n", value1, value2, timeUnit);
