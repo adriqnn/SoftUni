@@ -20,6 +20,7 @@ public class _12_TheSongOfTheWheels {
                 for (int c = 1; c <= 9; c++) {
                     for (int d = 1; d <= 9; d++) {
                         int sum = (a * b) + (c * d);
+                        
                         if (sum == controlNumber && a < b && c > d) {
                             combinations.add(String.format("%d%d%d%d", a, b, c, d));
                             System.out.printf("%d%d%d%d ", a, b, c, d);
