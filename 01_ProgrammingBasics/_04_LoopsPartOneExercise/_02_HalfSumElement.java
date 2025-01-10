@@ -20,6 +20,7 @@ public class _02_HalfSumElement {
             if (num > maxNum) {
                 maxNum = num;
             }
+            
             nSum += num;
         }
 
