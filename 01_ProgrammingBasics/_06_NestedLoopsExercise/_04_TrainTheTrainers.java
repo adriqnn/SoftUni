@@ -26,7 +26,7 @@ public class _04_TrainTheTrainers {
             
             totalAverage += presentationAverage/n;
             
-            System.out.printf("%s - %.2f.%n", presentationName, presentationAverage/n);
+            System.out.printf("%s - %.2f.%n", presentationName, presentationAverage / n);
             presentationName = scan.nextLine();
         }
         
