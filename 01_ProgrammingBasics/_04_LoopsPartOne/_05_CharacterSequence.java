@@ -13,7 +13,6 @@ public class _05_CharacterSequence {
         for (int i = 0; i < text.length(); i++) {
             // Symbol
             char symbol = text.charAt(i);
-
             System.out.println(symbol);
         }
 
