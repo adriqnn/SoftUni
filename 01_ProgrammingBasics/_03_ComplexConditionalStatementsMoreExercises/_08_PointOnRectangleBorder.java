@@ -23,7 +23,7 @@ public class _08_PointOnRectangleBorder {
             System.out.println("Border");
         } else if (y == sqrY2 && sqrX1 <= x && x <= sqrX2) {
             System.out.println("Border");
-        } else if (x == sqrX1 && sqrY1 <= y && y <= sqrY2 ) {
+        } else if (x == sqrX1 && sqrY1 <= y && y <= sqrY2) {
             System.out.println("Border");
         } else if (x == sqrX2 && sqrY1 <= y && y <= sqrY2) {
             System.out.println("Border");
