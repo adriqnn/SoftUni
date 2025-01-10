@@ -17,7 +17,6 @@ public class _03_Histogram {
 
         // Read integers and count them in different ranges
         for (int i = 1; i <= n; i++) {
-
             int num = Integer.parseInt(scan.nextLine());
 
             if (num < 200) {
