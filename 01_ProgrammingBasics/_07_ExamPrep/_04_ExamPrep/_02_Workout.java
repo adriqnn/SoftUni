@@ -17,6 +17,7 @@ public class _02_Workout {
         // Determine the running distance
         for (int i = 1; i <= nDays; i++) {
             double percentile = Double.parseDouble(scan.nextLine());
+            
             distance = distance + (distance * percentile / 100);
             allDistance += distance;
         }
