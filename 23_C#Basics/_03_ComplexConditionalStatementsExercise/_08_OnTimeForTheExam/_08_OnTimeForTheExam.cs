@@ -49,6 +49,7 @@ public class _08_OnTimeForTheExam
             else
             {
                 timeUnit = "minutes";
+                
                 Console.WriteLine("Late");
                 Console.WriteLine($"{lateMinutes} {timeUnit} after the start");
             }
@@ -58,6 +59,7 @@ public class _08_OnTimeForTheExam
             if (earlyMinutes <= 30)
             {
                 timeUnit = "minutes";
+                
                 Console.WriteLine("On time");
                 Console.WriteLine($"{earlyMinutes} {timeUnit} before the start");
             }
@@ -66,6 +68,7 @@ public class _08_OnTimeForTheExam
                 if (earlyMinutes >= 60)
                 {
                     timeUnit = "hours";
+                    
                     value1 = earlyMinutes / 60;
                     value2 = earlyMinutes % 60;
                     
