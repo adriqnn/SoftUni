@@ -86,6 +86,7 @@ public class _08_OnTimeForTheExam
                 else
                 {
                     timeUnit = "minutes";
+                    
                     Console.WriteLine("Early");
                     Console.WriteLine($"{earlyMinutes} {timeUnit} before the start");
                 }
