@@ -54,12 +54,17 @@ public class _06_OperationsBetweenNumbers
         }
 
         // Display the result based on the operation and input values
-        if (op.Equals("+") || op.Equals("-") || op.Equals("*")) {
-            Console.WriteLine($"{numberOne} {op} {numberTwo} = {result:F0} - {resultType}\n");
-        } else if (op.Equals("/")) {
-            Console.WriteLine($"{numberOne} {op} {numberTwo} = {result:F2}\n", numberOne, op, numberTwo, result);
-        } else if (op.Equals("%")) {
-            Console.WriteLine($"{numberOne} {op} {numberTwo} = {result:F0}\n", numberOne, op, numberTwo, result);
+        if (op.Equals("+") || op.Equals("-") || op.Equals("*")) 
+        {
+            Console.WriteLine($"{numberOne} {op} {numberTwo} = {result:F0} - {resultType}");
+        } 
+        else if (op.Equals("/")) 
+        {
+            Console.WriteLine($"{numberOne} {op} {numberTwo} = {result:F2}");
+        } 
+        else if (op.Equals("%")) 
+        {
+            Console.WriteLine($"{numberOne} {op} {numberTwo} = {result:F0}");
         }
     }
 }
