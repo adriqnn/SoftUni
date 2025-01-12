@@ -34,6 +34,7 @@ public class _08_OnTimeForTheExam
                 timeUnit = "hours";
                 value1 = lateMinutes / 60;
                 value2 = lateMinutes % 60;
+                
                 if (value2 < 10)
                 {
                     Console.WriteLine("Late");
@@ -67,6 +68,7 @@ public class _08_OnTimeForTheExam
                     timeUnit = "hours";
                     value1 = earlyMinutes / 60;
                     value2 = earlyMinutes % 60;
+                    
                     if (value2 < 10)
                     {
                         Console.WriteLine("Early");
