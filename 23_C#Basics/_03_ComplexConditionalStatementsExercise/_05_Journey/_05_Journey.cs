@@ -16,6 +16,7 @@ public class _05_Journey
         if (budget <= 100)
         {
             destination = "Bulgaria";
+            
             if (season.Equals("summer"))
             {
                 accommodation = "Camp";
@@ -30,6 +31,7 @@ public class _05_Journey
         else if (budget <= 1000)
         {
             destination = "Balkans";
+            
             if (season.Equals("summer"))
             {
                 accommodation = "Camp";
