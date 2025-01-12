@@ -67,6 +67,7 @@ public class _08_OnTimeForTheExam {
                     }
                 } else {
                     timeUnit = "minutes";
+                    
                     System.out.println("Early");
                     System.out.printf("%d %s before the start%n", earlyMinutes, timeUnit);
                 }
