@@ -13,7 +13,6 @@ public class _03_Harvest
         // Calculate grape and wine production
         double grapeForWine = (yardSquareMeters * grapesPerSquareMeter) * 0.4;
         double litersOfWine = grapeForWine / 2.5;
-
         double wine = requiredLitersOfWine - litersOfWine;
 
         // Print the result
