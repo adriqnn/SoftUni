@@ -18,6 +18,7 @@ public class _07_SchoolCamp
         if (season == "winter")
         {
             price = groupType == "mixed" ? studentsCount * 10 * nightsCount : studentsCount * 9.60 * nightsCount;
+            
             if (groupType == "girls")
             {
                 sport = "Gymnastics";
@@ -34,6 +35,7 @@ public class _07_SchoolCamp
         else if (season == "spring")
         {
             price = groupType == "mixed" ? studentsCount * 9.50 * nightsCount : studentsCount * 7.20 * nightsCount;
+            
             if (groupType == "girls")
             {
                 sport = "Athletics";
@@ -50,6 +52,7 @@ public class _07_SchoolCamp
         else
         {
             price = groupType == "mixed" ? studentsCount * 20 * nightsCount : studentsCount * 15 * nightsCount;
+            
             if (groupType == "girls")
             {
                 sport = "Volleyball";
