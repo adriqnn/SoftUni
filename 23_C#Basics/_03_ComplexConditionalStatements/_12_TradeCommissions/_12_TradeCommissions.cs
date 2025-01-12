@@ -43,7 +43,6 @@ public class _12_TradeCommissions
                     commission = money * 0.12;
                 }
                 break;
-
             case "Varna":
                 if (money <= 500)
                 {
@@ -62,7 +61,6 @@ public class _12_TradeCommissions
                     commission = money * 0.13;
                 }
                 break;
-
             case "Plovdiv":
                 if (money <= 500)
                 {
