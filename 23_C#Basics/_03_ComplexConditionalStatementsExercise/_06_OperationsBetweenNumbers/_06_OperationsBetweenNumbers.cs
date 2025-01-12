@@ -13,13 +13,20 @@ public class _06_OperationsBetweenNumbers
         string resultType = "";
 
         // Perform the selected operation based on the operator
-        if (op.Equals("+")) {
+        if (op.Equals("+")) 
+        {
             result = numberOne + numberTwo;
-        } else if (op.Equals("-")) {
+        } 
+        else if (op.Equals("-")) 
+        {
             result = numberOne - numberTwo;
-        } else if (op.Equals("*")) {
+        } 
+        else if (op.Equals("*")) 
+        {
             result = numberOne * numberTwo;
-        } else if (op.Equals("/")) {
+        } 
+        else if (op.Equals("/")) 
+        {
             if (numberTwo != 0)
             {
                 result = numberOne * 1.0 / numberTwo;
@@ -29,7 +36,9 @@ public class _06_OperationsBetweenNumbers
                 Console.WriteLine($"Cannot divide {numberOne} by zero\n");
                 return; // Exit the program if division by zero
             }
-        } else if (op.Equals("%")) {
+        } 
+        else if (op.Equals("%")) 
+        {
             if (numberTwo != 0)
             {
                 result = numberOne % numberTwo;
@@ -42,7 +51,8 @@ public class _06_OperationsBetweenNumbers
         }
 
         // Determine whether the result is even or odd for +, -, and *
-        if (op.Equals("+") || op.Equals("-") || op.Equals("*")) {
+        if (op.Equals("+") || op.Equals("-") || op.Equals("*")) 
+        {
             if (result % 2 == 0)
             {
                 resultType = "even";
