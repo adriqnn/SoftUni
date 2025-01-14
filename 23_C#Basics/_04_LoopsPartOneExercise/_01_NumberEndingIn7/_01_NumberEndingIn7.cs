@@ -7,7 +7,6 @@ public class _01_NumberEndingIn7
         // Iterate through numbers from 7 to 1000
         for (int i = 7; i <= 1000; i++)
         {
-
             // Check if the last digit is 7
             if (i % 10 == 7)
             {
