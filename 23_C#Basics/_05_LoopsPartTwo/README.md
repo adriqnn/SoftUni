@@ -8,5 +8,3 @@
 * MIN_VALUE and MAX_VALUE;
 * Loop labels;
 * Nested Loops;
-
-* 
