@@ -33,7 +33,6 @@ public class _07_SafePasswordsGeneratorV2
                 count++;
 
                 A = (A == 55) ? 35 : A + 1;
-
                 B = (B == 96) ? 64 : B + 1;
             }
         }
