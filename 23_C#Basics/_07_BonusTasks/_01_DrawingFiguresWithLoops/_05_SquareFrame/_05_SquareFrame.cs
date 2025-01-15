@@ -12,8 +12,7 @@ public class _05_SquareFrame
         {
             for (int j = 1; j <= sideLength; j++)
             {
-                if ((i == 1 && (j == 1 || j == sideLength)) ||
-                    (i == sideLength && (j == 1 || j == sideLength)))
+                if ((i == 1 && (j == 1 || j == sideLength)) || (i == sideLength && (j == 1 || j == sideLength)))
                 {
                     Console.Write("+ ");
                 }
