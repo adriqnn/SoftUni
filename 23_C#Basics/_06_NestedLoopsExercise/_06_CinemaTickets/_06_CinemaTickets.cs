@@ -26,7 +26,6 @@ public class _06_CinemaTickets
             int standard = 0;
             int kids = 0;
 
-
             while (!type.Equals("End"))
             {
                 if (type.Equals("student"))
