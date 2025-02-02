@@ -13,9 +13,9 @@ public class _05_MonthPrinter {
         String[] months = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 
         // Print result
-        try{
+        try {
             System.out.println(months[num - 1]);
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Error!");
         }
 
