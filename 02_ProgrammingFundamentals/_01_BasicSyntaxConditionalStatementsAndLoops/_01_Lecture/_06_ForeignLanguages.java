@@ -10,7 +10,7 @@ public class _06_ForeignLanguages {
         String country = scan.nextLine();
 
         // Print country based on the input
-        switch(country){
+        switch (country) {
             case "England":
             case "USA":
                 System.out.println("English");
