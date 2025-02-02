@@ -1,5 +1,4 @@
-﻿using System;
-using System.Reflection.PortableExecutable;
+using System;
 
 public class _06_StrongNumber
 {
