@@ -4,7 +4,7 @@ public class _01_StudentInformation
 {
     public static void Main(string[] args)
     {
-        // Read input value
+        // Read input values
         string name = Console.ReadLine();
         int age = int.Parse(Console.ReadLine());
         double grade = double.Parse(Console.ReadLine());
