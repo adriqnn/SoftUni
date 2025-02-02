@@ -7,7 +7,7 @@ public class _10_MultiplicationTable
         // Read input value 
         int n = int.Parse(Console.ReadLine());
 
-        // Print multiplication table for a given nmber
+        // Print multiplication table for a given number
         for (int i = 1; i <= 10; i++)
         {
             Console.WriteLine($"{n} X {i} = {n * i}");
