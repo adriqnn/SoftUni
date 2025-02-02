@@ -17,20 +17,19 @@ public class _06_StrongNumber {
         for (int i = 0; i < console.length(); i++) {
             char symbol = console.charAt(i);
             int num = Character.getNumericValue(symbol);
-            
+
             int factorial = 1;
             for (int j = 1; j <= num; j++) {
                 factorial = factorial * j;
-
             }
-            
+
             sum += factorial;
         }
 
         // Print result
-        if (sum == n){
+        if (sum == n) {
             System.out.println("yes");
-        }else{
+        } else {
             System.out.println("no");
         }
 
