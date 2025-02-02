@@ -6,7 +6,7 @@ public class _01_Ages {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Raed input value
+        // Read input value
         int n = Integer.parseInt(scan.nextLine());
 
         // Print result based on the input
