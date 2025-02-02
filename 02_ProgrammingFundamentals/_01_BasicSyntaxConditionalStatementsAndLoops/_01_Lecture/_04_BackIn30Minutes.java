@@ -15,7 +15,7 @@ public class _04_BackIn30Minutes {
         int newHour = timePlus30 / 60;
         int newMinutes = timePlus30 % 60;
 
-        if (newHour > 23){
+        if (newHour > 23) {
             newHour = 0;
         }
 
