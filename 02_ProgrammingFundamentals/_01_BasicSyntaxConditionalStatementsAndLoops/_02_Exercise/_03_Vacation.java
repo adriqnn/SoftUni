@@ -15,8 +15,8 @@ public class _03_Vacation {
         double price = 0;
 
         // Calculate the price of the vacation
-        if(day.equals("Friday")){
-            switch (person){
+        if (day.equals("Friday")) {
+            switch (person) {
                 case "Students":
                     price = 8.45;
                     break;
@@ -27,8 +27,8 @@ public class _03_Vacation {
                     price = 15.00;
                     break;
             }
-        }else if(day.equals("Saturday")){
-            switch (person){
+        } else if (day.equals("Saturday")) {
+            switch (person) {
                 case "Students":
                     price = 9.80;
                     break;
@@ -39,8 +39,8 @@ public class _03_Vacation {
                     price = 20.00;
                     break;
             }
-        }else{
-            switch (person){
+        } else {
+            switch (person) {
                 case "Students":
                     price = 10.46;
                     break;
@@ -55,11 +55,11 @@ public class _03_Vacation {
 
         // Calculate additional discounts
         double total = n * price;
-        if(person.equals("Students") && n >= 30){
+        if (person.equals("Students") && n >= 30) {
             total *= 0.85;
-        }else if(person.equals("Business") && n >= 100){
+        } else if (person.equals("Business") && n >= 100) {
             total -= 10 * price;
-        }else if(person.equals("Regular") && n >= 10 & n <= 20){
+        } else if (person.equals("Regular") && n >= 10 & n <= 20) {
             total *= 0.95;
         }
 
