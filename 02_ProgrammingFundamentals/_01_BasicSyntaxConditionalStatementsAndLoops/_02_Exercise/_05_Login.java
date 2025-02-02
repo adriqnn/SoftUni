@@ -15,21 +15,21 @@ public class _05_Login {
         int count = 0;
 
         // Reverse the username
-        for (int i = username.length()-1; i >= 0; i--) {
+        for (int i = username.length() - 1; i >= 0; i--) {
             reverseUsername.append(username.charAt(i));
         }
 
         // Check if the user can log in or block after few unsuccessful attempts
-        while (!console.equals(reverseUsername.toString())){
+        while (!console.equals(reverseUsername.toString())) {
             count++;
-            
-            if(count == 4){
+
+            if (count == 4) {
                 System.out.printf("User %s blocked!%n", username);
                 return;
             }
-            
+
             System.out.println("Incorrect password. Try again.");
-            
+
             console = scan.nextLine();
         }
 
