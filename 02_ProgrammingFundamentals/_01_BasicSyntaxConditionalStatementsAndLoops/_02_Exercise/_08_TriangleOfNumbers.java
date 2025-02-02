@@ -14,6 +14,7 @@ public class _08_TriangleOfNumbers {
             for (int j = 0; j < i; j++) {
                 System.out.print(i + " ");
             }
+            
             System.out.println();
         }
 
