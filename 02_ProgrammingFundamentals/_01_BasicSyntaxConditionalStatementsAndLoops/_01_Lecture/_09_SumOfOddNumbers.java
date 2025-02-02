@@ -13,7 +13,7 @@ public class _09_SumOfOddNumbers {
         int sum = 0;
         
         // Sum odd numbers
-        for (int i = 1; i < n*2; i += 2) {
+        for (int i = 1; i < n * 2; i += 2) {
             sum += i;
             System.out.println(i);
         }
