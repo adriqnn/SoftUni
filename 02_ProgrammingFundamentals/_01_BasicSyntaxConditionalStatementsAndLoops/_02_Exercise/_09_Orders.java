@@ -14,7 +14,6 @@ public class _09_Orders {
         
         // Calculate the price for all the orders
         for (int i = 0; i < numberOfOrders; i++) {
-            
             // Orders
             double pricePerCapsule = Double.parseDouble(scan.nextLine());
             int daysInMonth = Integer.parseInt(scan.nextLine());
