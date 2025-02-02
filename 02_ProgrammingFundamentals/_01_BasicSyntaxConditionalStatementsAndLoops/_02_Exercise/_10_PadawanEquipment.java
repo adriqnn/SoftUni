@@ -28,9 +28,9 @@ public class _10_PadawanEquipment {
         double total = sabers2 + robes2 + belts2;
 
         // Print result
-        if(total <= budget){
+        if (total <= budget) {
             System.out.printf("The money is enough - it would cost %.2flv.", total);
-        }else{
+        } else {
             System.out.printf("George Lucas will need %.2flv more.", total - budget);
         }
 
