@@ -20,26 +20,26 @@ public class _11_RageExpenses {
 
         // Make a statistic for the items
         for (int i = 1; i <= l; i++) {
-            if (i % 2 == 0){
+            if (i % 2 == 0) {
                 headset2++;
             }
-            
-            if (i % 3 == 0){
+
+            if (i % 3 == 0) {
                 mouse2++;
             }
-            
-            if(i % 2 == 0 && i % 3 == 0){
+
+            if (i % 2 == 0 && i % 3 == 0) {
                 keyboard2++;
             }
         }
-        
+
         // Calculate prices
         double display2 = Math.floor(keyboard2 / 2);
         double total = (headset * headset2) + (mouse * mouse2) + (keyboard * keyboard2) + (display2 * display);
 
         // Print result
         System.out.printf("Rage expenses: %.2f lv.", total);
-        
+
         scan.close();
     }
 }
