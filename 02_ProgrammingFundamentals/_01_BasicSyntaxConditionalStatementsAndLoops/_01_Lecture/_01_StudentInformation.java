@@ -6,7 +6,7 @@ public class _01_StudentInformation {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input value
+        // Read input values
         String name = scan.next();
         int age = scan.nextInt();
         double grade = scan.nextDouble();
