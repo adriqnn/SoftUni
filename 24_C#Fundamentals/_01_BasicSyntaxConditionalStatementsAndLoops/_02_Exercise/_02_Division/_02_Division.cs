@@ -1,2 +1,36 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using System;
+
+public class _02_Division
+{
+    public static void Main(string[] args)
+    {
+        // Read input value
+        int n = int.Parse(Console.ReadLine());
+
+        // Determine if the value is divisible by either 2, 3, 6, 7, 10 or if it's not divisible
+        if (n % 10 == 0)
+        {
+            Console.WriteLine("The number is divisible by 10");
+        }
+        else if (n % 7 == 0)
+        {
+            Console.WriteLine("The number is divisible by 7");
+        }
+        else if (n % 6 == 0)
+        {
+            Console.WriteLine("The number is divisible by 6");
+        }
+        else if (n % 3 == 0)
+        {
+            Console.WriteLine("The number is divisible by 3");
+        }
+        else if (n % 2 == 0)
+        {
+            Console.WriteLine("The number is divisible by 2");
+        }
+        else
+        {
+            Console.WriteLine("Not divisible");
+        }
+    }
+}
