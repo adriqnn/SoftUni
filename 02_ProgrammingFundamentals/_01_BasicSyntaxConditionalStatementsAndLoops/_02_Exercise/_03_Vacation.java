@@ -59,7 +59,7 @@ public class _03_Vacation {
             total *= 0.85;
         } else if (person.equals("Business") && n >= 100) {
             total -= 10 * price;
-        } else if (person.equals("Regular") && n >= 10 & n <= 20) {
+        } else if (person.equals("Regular") && n >= 10 && n <= 20) {
             total *= 0.95;
         }
 
