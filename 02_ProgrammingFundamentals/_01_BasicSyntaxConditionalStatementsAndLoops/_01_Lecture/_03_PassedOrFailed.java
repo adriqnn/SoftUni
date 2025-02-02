@@ -10,9 +10,9 @@ public class _03_PassedOrFailed {
         double grade = Double.parseDouble(scan.nextLine());
 
         // Print result
-        if (grade >= 3.00){
+        if (grade >= 3.00) {
             System.out.println("Passed!");
-        }else{
+        } else {
             System.out.println("Failed!");
         }
 
