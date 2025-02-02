@@ -11,6 +11,7 @@ public class _02_EnglishNameOfTheLastDigit
         int n = num % 10;
         string[] word = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
 
+        // Print Result
         Console.WriteLine(word[n]);
     }
 }
