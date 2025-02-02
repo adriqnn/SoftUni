@@ -11,10 +11,10 @@ public class _07_TheatrePromotion {
         int age  = Integer.parseInt(scan.nextLine());
 
         // Print price of a theater ticket
-        if (age < 0 || age > 122){
+        if (age < 0 || age > 122) {
             System.out.println("Error!");
-        }else if (age <= 18){
-            switch(day){
+        } else if (age <= 18) {
+            switch (day) {
                 case "Weekday":
                     System.out.println("12$");
                     break;
@@ -25,8 +25,8 @@ public class _07_TheatrePromotion {
                     System.out.println("5$");
                     break;
             }
-        }else if (age <= 64){
-            switch(day){
+        } else if (age <= 64) {
+            switch (day) {
                 case "Weekday":
                     System.out.println("18$");
                     break;
@@ -37,8 +37,8 @@ public class _07_TheatrePromotion {
                     System.out.println("12$");
                     break;
             }
-        }else {
-            switch(day){
+        } else {
+            switch (day) {
                 case "Weekday":
                     System.out.println("12$");
                     break;
