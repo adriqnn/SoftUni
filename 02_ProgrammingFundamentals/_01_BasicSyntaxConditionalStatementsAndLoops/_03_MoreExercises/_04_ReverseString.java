@@ -13,7 +13,7 @@ public class _04_ReverseString {
         StringBuilder rebuild = new StringBuilder();
 
         // Reverse string
-        for (int i = console.length()-1; i >= 0; i--) {
+        for (int i = console.length() - 1; i >= 0; i--) {
             char symbol = console.charAt(i);
 
             rebuild.append(symbol);
