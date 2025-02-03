@@ -25,7 +25,7 @@ public class _01_SortNumbers {
         //Collections.reverse(numbers);
 
         // Print result
-        numbers.stream().sorted((e1,e2) -> Integer.compare(e2,e1)).collect(Collectors.toList()).forEach(System.out::println);
+        numbers.stream().sorted((e1, e2) -> Integer.compare(e2, e1)).collect(Collectors.toList()).forEach(System.out::println);
 
         scan.close();
     }
