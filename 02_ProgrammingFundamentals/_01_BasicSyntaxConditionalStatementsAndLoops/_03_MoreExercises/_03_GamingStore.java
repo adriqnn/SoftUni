@@ -102,7 +102,7 @@ public class _03_GamingStore {
 
         // Print result
         if (console.equals("Game Time")) {
-            System.out.printf("Total spent: $%.2f. Remaining: $%.2f",spent,balance-spent);
+            System.out.printf("Total spent: $%.2f. Remaining: $%.2f", spent, balance - spent);
         }
 
         scan.close();
