@@ -25,12 +25,13 @@ public class _05_Messages {
             }
 
             int index = offset + numDigits - 1;
-            char symbol = (char)(index + 97);
+            char symbol = (char) (index + 97);
 
-            if (console == 0){
+            if (console == 0) {
                 build.append(" ");
-            }else
+            } else {
                 build.append(symbol);
+            }
         }
 
         // Print result
