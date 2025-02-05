@@ -23,7 +23,7 @@ public class _11_Snowballs {
             int snowballQuality = Integer.parseInt(scan.nextLine());
             double snowballValue = Math.pow((1.00 * snowballSnow / snowballTime), 1.00 * snowballQuality);
             
-            if (snowballValue > max){
+            if (snowballValue > max) {
                 maxSnowballSnow = snowballSnow;
                 maxSnowballTime = snowballTime;
                 maxSnowballQuality = snowballQuality;
