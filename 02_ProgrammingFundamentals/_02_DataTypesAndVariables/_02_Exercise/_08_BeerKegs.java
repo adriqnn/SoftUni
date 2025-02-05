@@ -21,7 +21,7 @@ public class _08_BeerKegs {
             
             double volume = Math.PI * radius * radius * height;
             
-            if(volume > volumeOfTheBiggestKeg){
+            if (volume > volumeOfTheBiggestKeg) {
                 volumeOfTheBiggestKeg = volume;
                 modelOfTheBiggestKeg = model;
             }
