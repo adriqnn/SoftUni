@@ -23,7 +23,7 @@ public class _09_SpiceMustFlow {
         }
 
         // Yield check for additional days
-        if (yield >= 26){
+        if (yield >= 26) {
             yield -= 26;
         }
 
