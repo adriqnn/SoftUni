@@ -6,7 +6,7 @@ public class _01_IntegerOperations {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input values
+        // Read input value
         int n1 = Integer.parseInt(scan.nextLine()), n2 = Integer.parseInt(scan.nextLine()), n3 = Integer.parseInt(scan.nextLine()), n4 = Integer.parseInt(scan.nextLine());
 
         // Calculate result
