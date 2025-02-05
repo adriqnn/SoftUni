@@ -6,7 +6,7 @@ public class _10_PokeMon {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input value
+        // Read input values
         int pokemonPowerN = Integer.parseInt(scan.nextLine());
         int distanceM = Integer.parseInt(scan.nextLine());
         int exhaustionFactorY = Integer.parseInt(scan.nextLine());
@@ -19,15 +19,16 @@ public class _10_PokeMon {
         while(pokemonPowerN >= distanceM){
             successfulPokes++;
             pokemonPowerN -= distanceM;
-            if (pokemonPowerN == originalValue && exhaustionFactorY != 0){
+            
+            if (pokemonPowerN == originalValue && exhaustionFactorY != 0) {
                 pokemonPowerN /= exhaustionFactorY;
             }
         }
-        
+
         // Print result
         System.out.println(pokemonPowerN);
         System.out.println(successfulPokes);
-        
+
         scan.close();
     }
 }
