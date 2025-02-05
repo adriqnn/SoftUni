@@ -16,7 +16,7 @@ public class _07_WaterOverflow {
         for (int i = 0; i < n; i++) {
             int liters = Integer.parseInt(scan.nextLine());
             
-            if(capacity + liters > 255){
+            if (capacity + liters > 255) {
                 System.out.println("Insufficient capacity!");
                 continue;
             }
