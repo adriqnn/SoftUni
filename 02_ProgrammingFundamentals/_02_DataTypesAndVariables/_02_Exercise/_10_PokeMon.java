@@ -16,7 +16,7 @@ public class _10_PokeMon {
         int successfulPokes = 0;
 
         // Check if pokemon can make the move
-        while(pokemonPowerN >= distanceM){
+        while (pokemonPowerN >= distanceM) {
             successfulPokes++;
             pokemonPowerN -= distanceM;
             
