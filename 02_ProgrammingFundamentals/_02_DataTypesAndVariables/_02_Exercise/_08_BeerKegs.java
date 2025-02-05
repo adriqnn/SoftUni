@@ -9,7 +9,7 @@ public class _08_BeerKegs {
         // Read input value
         int n = Integer.parseInt(scan.nextLine());
 
-        // Add variable
+        // Add variables
         double volumeOfTheBiggestKeg = 0;
         String modelOfTheBiggestKeg = "";
         
