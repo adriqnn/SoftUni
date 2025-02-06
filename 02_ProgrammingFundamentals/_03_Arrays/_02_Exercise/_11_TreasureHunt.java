@@ -15,45 +15,48 @@ public class _11_TreasureHunt {
         String input = scan.nextLine();
 
         // Accept commands for the treasure hunt
-        while(!input.equals("Yohoho!")){
+        while (!input.equals("Yohoho!")) {
             String[] commands = input.split("\\s+");
             String command = commands[0];
 
-            if(command.equals("Loot")){
+            if (command.equals("Loot")) {
                 for (int i = 1; i < commands.length; i++) {
-                    if(!loot.contains(commands[i])){
+                    if (!loot.contains(commands[i])) {
                         loot.add(0, commands[i]);
                     }
                 }
-            }else if(command.equals("Drop")){
+            } else if (command.equals("Drop")) {
                 int index = Integer.parseInt(commands[1]);
                 
-                if(index < loot.size() && index >= 0){
+                if (index < loot.size() && index >= 0) {
                     String removed = loot.remove(index);
                     loot.add(removed);
                 }
-            }else if(command.equals("Steal")){
+            } else if (command.equals("Steal")) {
                 int count = Integer.parseInt(commands[1]);
                 List<String> stolen = new ArrayList<>();
                 
-                if(count >= loot.size()){
+                if (count >= loot.size()) {
                     stolen.addAll(loot);
                     loot.clear();
-                }else{
+                } else {
                     for (int i = 0; i < count; i++) {
-                        stolen.add(loot.remove(loot.size() - (count - i)));
+                        stolen.add(loot.remove(loot.size()-(count - i)));
                     }
                 }
+                
                 System.out.println(stolen.stream().collect(Collectors.joining(", ")));
             }
+            
             input = scan.nextLine();
         }
 
         // Print result
-        if(loot.size() == 0){
+        if (loot.size() == 0) {
             System.out.println("Failed treasure hunt.");
-        }else{
+        } else {
             double value = 0;
+            
             for (int i = 0; i < loot.size(); i++) {
                 value += loot.get(i).length();
             }
@@ -64,4 +67,3 @@ public class _11_TreasureHunt {
         scan.close();
     }
 }
-
