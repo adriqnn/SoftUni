@@ -16,9 +16,9 @@ public class _05_EvenAndOddSubtraction {
 
         // Calculate sums for even and odd
         for (int i = 0; i < numbers.length; i++) {
-            if(numbers[i] % 2 == 0){
+            if (numbers[i] % 2 == 0) {
                 sumEven += numbers[i];
-            }else{
+            } else {
                 sumOdd += numbers[i];
             }
         }
