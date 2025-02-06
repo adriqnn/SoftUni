@@ -20,7 +20,7 @@ public class _05_KaminoFactory {
         int position = 0;
 
         // Find best clones to make
-        while(!console.equals("Clone them!")){
+        while (!console.equals("Clone them!")) {
             position++;
 
             int[] currentDNA = Arrays.stream(console.split("!+")).mapToInt(Integer::parseInt).toArray();
@@ -32,34 +32,34 @@ public class _05_KaminoFactory {
             int maxLengthOfCurrentDNA = 0;
 
             for (int i = 0; i < currentDNA.length; i++) {
-                if(currentDNA[i] == 1){
+                if (currentDNA[i] == 1) {
                     sumOfDNA++;
-                    
-                    if(lengthOfCurrentDNA == 0){
+
+                    if (lengthOfCurrentDNA == 0) {
                         indexOfCurrentDNA = i;
                     }
-                    
+
                     lengthOfCurrentDNA++;
-                }else{
+                } else {
                     lengthOfCurrentDNA = 0;
                 }
-                
-                if (lengthOfCurrentDNA > maxLengthOfCurrentDNA){
+
+                if (lengthOfCurrentDNA > maxLengthOfCurrentDNA) {
                     maxLengthOfCurrentDNA = lengthOfCurrentDNA;
                     bestIndexOfCurrentDNA = indexOfCurrentDNA;
                 }
             }
-            
+
             if ((maxLengthOfCurrentDNA > bestLengthDNA) || ((maxLengthOfCurrentDNA == bestLengthDNA) && (bestIndexOfCurrentDNA < bestIndexDNA))
-                    || ((maxLengthOfCurrentDNA == bestLengthDNA) && (bestIndexOfCurrentDNA == bestIndexDNA) && sumOfDNA > bestSumDNA)){
-                
+                    || ((maxLengthOfCurrentDNA == bestLengthDNA) && (bestIndexOfCurrentDNA == bestIndexDNA) && sumOfDNA > bestSumDNA)) {
+
                 bestLengthDNA = maxLengthOfCurrentDNA;
                 bestIndexDNA = bestIndexOfCurrentDNA;
                 bestSumDNA = sumOfDNA;
                 bestDNASample = currentDNA;
                 bestPosition =position;
             }
-            
+
             console = scan.nextLine();
         }
 
