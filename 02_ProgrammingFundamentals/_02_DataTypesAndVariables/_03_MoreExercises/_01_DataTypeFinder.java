@@ -18,26 +18,24 @@ public class _01_DataTypeFinder {
         Pattern patternFloat = Pattern.compile(regexFloat);
 
         // Determine what is the input
-        while(!console.equals("END")){
+        while (!console.equals("END")) {
             Matcher matcherInteger = patternInteger.matcher(console);
             Matcher matcherFloat = patternFloat.matcher(console);
 
             // Print result
-            if(console.equalsIgnoreCase("true") || console.equalsIgnoreCase("false")){
+            if (console.equalsIgnoreCase("true") || console.equalsIgnoreCase("false")) {
                 System.out.printf("%s is boolean type%n", console);
-            }else if (console.length() == 1 && (console.charAt(0) <= 47 || console.charAt(0) >= 58)){
+            } else if (console.length() == 1 && (console.charAt(0) <= 47 || console.charAt(0) >= 58)) {
                 System.out.printf("%s is character type%n", console);
-            }else if (matcherFloat.find()){
+            } else if (matcherFloat.find()) {
                 System.out.printf("%s is floating point type%n", console);
-            }else if (matcherInteger.find()){
+            } else if (matcherInteger.find()) {
                 System.out.printf("%s is integer type%n", console);
-            }else{
-                System.out.printf("%s is string type%n", console);
+            } else {
+                System.out.printf("%s is string type%n",console);
             }
-            
+
             console = scan.nextLine();
         }
-        
-        scan.nextLine();
     }
 }
