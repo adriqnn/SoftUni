@@ -1,5 +1,7 @@
 package _02_ProgrammingFundamentals._03_Arrays._03_MoreExercises;
 
+package _02_ProgrammingFundamentals._03_Arrays._03_MoreExercises;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -16,7 +18,7 @@ public class _04_LongestIncreasingSubsequence {
         int max = 0;
 
         // End if the length is 1
-        if(console.length <= 1){
+        if (console.length <= 1) {
             System.out.println(console.length);
             return;
         }
@@ -24,10 +26,11 @@ public class _04_LongestIncreasingSubsequence {
         // Find the LIS
         for (int i = 1; i < console.length; i++) {
             for (int j = 0; j < i; j++) {
-                if(console[j] < console[i] && empty[i] <= empty[j]){
+                if (console[j] < console[i] && empty[i] <= empty[j]) {
                     empty[i] = empty[j] + 1;
                 }
-                if (max < empty[i]){
+                
+                if (max < empty[i]) {
                     max++;
                 }
             }
@@ -52,7 +55,7 @@ public class _04_LongestIncreasingSubsequence {
 
         while (sequence != 0) {
             for (int i = 0; i < empty.length; i++) {
-                if(empty[i] == sequence && console[i]<value){
+                if (empty[i] == sequence && console[i] < value) {
                     print[count] = i;
                     sequence--;
                     count++;
@@ -67,6 +70,7 @@ public class _04_LongestIncreasingSubsequence {
         for (int i = 0; i < print.length; i++) {
             print2[i] = console[print[i]];
         }
+        
         Arrays.sort(print2);
         for (int i = 0; i < print2.length; i++) {
             System.out.print(print2[i] + " ");
