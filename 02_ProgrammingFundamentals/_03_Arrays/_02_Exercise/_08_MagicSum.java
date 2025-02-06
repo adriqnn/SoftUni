@@ -13,9 +13,8 @@ public class _08_MagicSum {
 
         // Print each pair that the sum of equals the number n
         for (int i = 0; i < numbersArray.length; i++) {
-
             for (int j = i+1; j < numbersArray.length; j++) {
-                if(numbersArray[i] + numbersArray[j] == n){
+                if (numbersArray[i] + numbersArray[j] == n) {
                     System.out.println(numbersArray[i] + " " + numbersArray[j]);
                 }
             }
