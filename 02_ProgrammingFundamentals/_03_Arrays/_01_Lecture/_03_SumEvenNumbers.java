@@ -12,17 +12,17 @@ public class _03_SumEvenNumbers {
 
         // Add variable
         int sum = 0;
-        
+
         // Calculate sum
         for (int i = 0; i < numbers.length; i++) {
-            if(numbers[i] % 2 == 0){
+            if (numbers[i] % 2 == 0) {
                 sum += numbers[i];
             }
         }
-        
+
         // Print result
         System.out.println(sum);
-        
+
         scan.close();
     }
 }
