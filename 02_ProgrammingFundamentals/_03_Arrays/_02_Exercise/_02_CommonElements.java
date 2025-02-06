@@ -12,10 +12,9 @@ public class _02_CommonElements {
 
         // Print common elements in two arrays
         for (int i = 0; i < arrOne.length; i++) {
-
             for (int j = 0; j < arrTwo.length; j++) {
 
-                if(arrOne[i].equals(arrTwo[j])){
+                if (arrOne[i].equals(arrTwo[j])) {
                     System.out.print(arrTwo[j] + " ");
                 }
             }
