@@ -17,11 +17,10 @@ public class _05_TopIntegers {
 
         // Determine the top integers
         for (int i = 0; i < numbersArray.length; i++) {
-
             boolean isBigger = true;
 
             for (int j = i+1; j < numbersArray.length; j++) {
-                if(numbersArray[i] <= numbersArray[j]){
+                if (numbersArray[i] <= numbersArray[j]) {
                     isBigger = false;
                     break;
                 }
