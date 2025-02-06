@@ -17,22 +17,22 @@ public class _06_EqualArrays {
 
         // Compare each element of the arrays
         for (int i = 0; i < numberOneArray.length; i++) {
-            if(numberOneArray[i] == numberTwoArray[i]){
+            if (numberOneArray[i] == numberTwoArray[i]) {
                 sum += numberOneArray[i];
-            }else{
+            } else {
                 isEqual = false;
                 sum = i;
                 break;
             }
         }
-        
+
         // Print result
-        if(isEqual){
+        if (isEqual) {
             System.out.println("Arrays are identical. Sum: " + sum);
-        }else{
+        } else {
             System.out.println("Arrays are not identical. Found difference at " + sum + " index.");
         }
-        
+
         scan.close();
     }
 }
