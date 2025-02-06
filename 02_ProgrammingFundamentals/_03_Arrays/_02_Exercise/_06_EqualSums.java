@@ -27,7 +27,7 @@ public class _06_EqualSums {
                 sumRight += numbersArray[j];
             }
 
-            if (sumLeft == sumRight){
+            if (sumLeft == sumRight) {
                 isEqual = true;
                 arrayIndex = i;
                 break;
@@ -35,9 +35,9 @@ public class _06_EqualSums {
         }
 
         // Print result
-        if (isEqual){
+        if (isEqual) {
             System.out.println(arrayIndex);
-        }else{
+        } else {
             System.out.println("no");
         }
 
