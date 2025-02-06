@@ -14,16 +14,16 @@ public class _04_RefactoringPrimeChecker {
             boolean isPrime = true;
 
             for (int j = 2; j < i; j++) {
-                if(i % j == 0){
+                if (i % j == 0) {
                     isPrime = false;
                     break;
                 }
             }
-            
+
             // Print result
             System.out.printf("%d -> %b%n", i, isPrime);
         }
-        
+
         scan.close();
     }
 }
