@@ -13,14 +13,13 @@ public class _04_ArrayRotation {
 
         for (int i = 0; i < n; i++) {
             int numberInTheFront = numbers[0];
-            
             int[] changingArray = new int[numbers.length];
-            
-            for (int j = 0; j < numbers.length-1; j++) {
-                changingArray[j] = numbers[j+1];
+
+            for (int j = 0; j < numbers.length - 1; j++) {
+                changingArray[j] = numbers[j + 1];
             }
-            
-            changingArray[changingArray.length-1] = numberInTheFront;
+
+            changingArray[changingArray.length - 1] = numberInTheFront;
             numbers = changingArray;
         }
 
