@@ -12,7 +12,7 @@ public class _03_ZigZagArrays {
         int[] numbersArrayOne = new int[n];
         int[] numbersArrayTwo = new int[n];
 
-        // Gather arrays in the selected pattern from the input value
+        // Gather arrays in the selected pattern from the input values
         for (int i = 0; i < n; i++) {
             int[] line = Arrays.stream(scan.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
 
