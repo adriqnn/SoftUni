@@ -20,15 +20,17 @@ public class _02_FromLeftToTheRight {
             long sum = 0;
 
             // Compare numbers
-            if (firstNumber >= secondNumber){
+            if (firstNumber >= secondNumber) {
                 firstNumber = Math.abs(firstNumber);
-                while (firstNumber > 0){
+                
+                while (firstNumber > 0) {
                     sum += firstNumber % 10;
                     firstNumber = firstNumber / 10;
                 }
-            }else {
+            } else {
                 secondNumber = Math.abs(secondNumber);
-                while (secondNumber > 0){
+                
+                while (secondNumber > 0) {
                     sum += secondNumber % 10;
                     secondNumber = secondNumber / 10;
                 }
