@@ -17,32 +17,32 @@ public class _06_BalancedBrackets {
         // Determine the count of the brackets
         for (int i = 0; i < numberOfLines; i++) {
             String console = scan.nextLine();
-            
-            if(console.length() == 1 && console.charAt(0) == '('){
+
+            if (console.length() == 1 && console.charAt(0) == '(') {
                 counterOpeningAndClosing++;
-                
-                if (counter > 0){
+
+                if (counter > 0) {
                     counter = 0;
                 }
-                
+
                 counter++;
-            }else if(console.length() == 1 && console.charAt(0) == ')'){
+            } else if (console.length() == 1 && console.charAt(0) == ')') {
                 counterOpeningAndClosing++;
-                
-                if (counter > 0){
+
+                if (counter > 0) {
                     counter = 0;
                     stack++;
                 }
             }
         }
-        
+
         // Print result
-        if((1.00 * counterOpeningAndClosing) / 2 != stack){
+        if ((1.00 * counterOpeningAndClosing) / 2 != stack) {
             System.out.println("UNBALANCED");
-        }else{
+        } else {
             System.out.println("BALANCED");
         }
-        
+
         scan.close();
     }
 }
