@@ -15,14 +15,15 @@ public class _10_TheLift {
         // Add variables
         int remainingPeopleInQueue = numberOfPeopleWaiting;
 
+        // Fill in the empty seats
         for (int i = 0; i < liftSeatsPosition.length; i++) {
-            if(liftSeatsPosition[i] < 4){
+            if (liftSeatsPosition[i] < 4) {
                 int availableSeats = 4 - liftSeatsPosition[i];
                 
-                if(remainingPeopleInQueue >= availableSeats){
+                if (remainingPeopleInQueue >= availableSeats) {
                     remainingPeopleInQueue -= availableSeats;
                     liftSeatsPosition[i] = 4;
-                }else{
+                } else {
                     liftSeatsPosition[i] = liftSeatsPosition[i] + remainingPeopleInQueue;
                     remainingPeopleInQueue = 0;
                 }
@@ -32,9 +33,9 @@ public class _10_TheLift {
         int availableSeatsLeft = Arrays.stream(liftSeatsPosition).map(seats -> 4 - seats).sum();
 
         // Print result 1.
-        if(availableSeatsLeft > 0){
+        if (availableSeatsLeft > 0) {
             System.out.println("The lift has empty spots!");
-        }else if(remainingPeopleInQueue > 0){
+        } else if (remainingPeopleInQueue > 0) {
             System.out.printf("There isn't enough space! %d people in a queue!%n", remainingPeopleInQueue);
         }
 
