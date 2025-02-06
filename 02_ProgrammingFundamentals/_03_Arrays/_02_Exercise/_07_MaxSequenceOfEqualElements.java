@@ -18,14 +18,14 @@ public class _07_MaxSequenceOfEqualElements {
 
         // Determine the longest sequence of equal numbers
         for (int i = 1; i < numbersArray.length; i++) {
-            if (numbersArray[i] == numbersArray[i-1]) {
+            if (numbersArray[i] == numbersArray[i - 1]) {
                 length++;
             } else {
                 length = 1;
                 startIndex = i;
             }
 
-            if (length > maxLength){
+            if (length > maxLength) {
                 maxLength = length;
                 bestStartIndex = startIndex;
             }
