@@ -26,7 +26,7 @@ public class _01_EncryptSortAndPrintArray {
                     sum += symbol * console.length();
                 } else if (symbol == 'A' || symbol == 'E' || symbol == 'U' || symbol == 'I' || symbol == 'O') {
                     sum += symbol * console.length();
-                }else{
+                } else {
                     sum +=  symbol / console.length();
                 }
             }
