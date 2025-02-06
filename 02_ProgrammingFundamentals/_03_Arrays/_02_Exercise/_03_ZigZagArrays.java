@@ -16,20 +16,20 @@ public class _03_ZigZagArrays {
         for (int i = 0; i < n; i++) {
             int[] line = Arrays.stream(scan.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
 
-            if (i % 2 == 0 ){
+            if (i % 2 == 0 ) {
                 numbersArrayOne[i] = line[0];
                 numbersArrayTwo[i] = line[1];
-            }else{
+            } else {
                 numbersArrayOne[i] = line[1];
                 numbersArrayTwo[i] = line[0];
             }
         }
-        
+
         // Print result
         Arrays.stream(numbersArrayOne).forEach(e -> System.out.print(e + " "));
         System.out.println();
         Arrays.stream(numbersArrayTwo).forEach(e -> System.out.print(e + " "));
-        
+
         scan.close();
     }
 }
