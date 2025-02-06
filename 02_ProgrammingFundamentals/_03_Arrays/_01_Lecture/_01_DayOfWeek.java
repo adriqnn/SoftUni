@@ -10,12 +10,12 @@ public class _01_DayOfWeek {
         int n = Integer.parseInt(scan.nextLine());
 
         // Add variable
-        String[] days = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" ,"Saturday", "Sunday"};
+        String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday" ,"Saturday", "Sunday"};
 
         // Print result
-        try{
-            System.out.println(days[n-1]);
-        }catch (Exception e){
+        try {
+            System.out.println(days[n - 1]);
+        } catch (Exception e) {
             System.out.println("Invalid day!");
         }
 
