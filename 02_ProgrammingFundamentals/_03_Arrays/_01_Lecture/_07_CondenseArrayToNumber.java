@@ -11,20 +11,20 @@ public class _07_CondenseArrayToNumber {
         int[] numbers = Arrays.stream(scan.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
 
         // Condense the array
-        while (numbers.length > 1){
-            int[] condensed = new int[numbers.length-1];
-            
-            for (int i = 0; i < numbers.length-1; i++) {
-                condensed[i] = numbers[i] + numbers[i+1];
+        while (numbers.length > 1) {
+            int[] condensed = new int[numbers.length - 1];
+
+            for (int i = 0; i < numbers.length - 1; i++) {
+                condensed[i] = numbers[i] + numbers[i + 1];
 
             }
-            
+
             numbers = condensed;
         }
-        
+
         // Print result
         System.out.println(numbers[0]);
-        
+
         scan.close();
     }
 }
