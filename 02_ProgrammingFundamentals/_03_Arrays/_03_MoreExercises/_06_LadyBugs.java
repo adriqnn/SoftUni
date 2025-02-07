@@ -41,7 +41,7 @@ public class _06_LadyBugs {
                     }
                 }
 
-            }else if (bugMoveDirection.equals("right") && (bugIndex >= 0 && bugIndex < fieldSize) && (positionsInTheField[bugIndex] == 1)) {
+            } else if (bugMoveDirection.equals("right") && (bugIndex >= 0 && bugIndex < fieldSize) && (positionsInTheField[bugIndex] == 1)) {
                 positionsInTheField[bugIndex] = 0;
 
                 if (bugIndex + bugMoves < fieldSize) {
