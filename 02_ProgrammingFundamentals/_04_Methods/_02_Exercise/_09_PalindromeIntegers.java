@@ -23,7 +23,7 @@ public class _09_PalindromeIntegers {
     private static boolean isPalindromeInteger(String number) {
         StringBuilder second = new StringBuilder();
 
-        for (int i = number.length() -1; i >= 0; i--) {
+        for (int i = number.length() - 1; i >= 0; i--) {
             second.append(number.charAt(i));
         }
 
