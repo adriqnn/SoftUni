@@ -20,17 +20,17 @@ public class _10_TopNumber {
             int number = i;
             int sum = 0;
             boolean hasOdd = false;
-            
-            while(number != 0){
-                if(number % 2 != 0){
+
+            while (number != 0) {
+                if (number % 2 != 0) {
                     hasOdd = true;
                 }
-                
-                sum += number%10;
+
+                sum += number % 10;
                 number /= 10;
             }
-            
-            if (sum % 8 == 0 && hasOdd){
+
+            if (sum % 8 == 0 && hasOdd) {
                 System.out.println(i);
             }
         }
