@@ -11,41 +11,41 @@ public class _06_ArrayManipulator {
         String command = scan.nextLine();
 
         // Execute commands to the array with the created methods based on the console input
-        while(!command.equals("end")){
+        while (!command.equals("end")) {
             String commandLine = command.split("\\s+")[0];
 
-            if(commandLine.equals("exchange")){
+            if (commandLine.equals("exchange")) {
                 int index = Integer.parseInt(command.split("\\s+")[1]);
 
-                if(indexIsValidExchange(numbersArray, index)){
+                if (indexIsValidExchange(numbersArray, index)) {
                     numbersArray = exchangeInsideArray(numbersArray, index);
-                }else{
+                } else {
                     System.out.println("Invalid index");
                 }
-            }else if(commandLine.equals("max")){
+            } else if (commandLine.equals("max")) {
                 String isItEvenOrOddMax = command.split("\\s+")[1];
 
                 returnMaxOrMinArray(numbersArray, isItEvenOrOddMax);
-            }else if(commandLine.equals("min")){
+            } else if (commandLine.equals("min")) {
                 String isItEvenOrOddMin = command.split("\\s+")[1];
 
                 returnMinOrMaxArray(numbersArray, isItEvenOrOddMin);
-            }else if(commandLine.equals("first")){
+            } else if (commandLine.equals("first")) {
                 int countFirst = Integer.parseInt(command.split("\\s+")[1]);
                 String firstIsItOddOrEven = command.split("\\s+")[2];
 
-                if(countFirst >= 0 && indexIsValidFirstLast(numbersArray, countFirst)) {
+                if (countFirst >= 0 && indexIsValidFirstLast(numbersArray, countFirst)) {
                     firstCountEvenOdd(numbersArray, countFirst, firstIsItOddOrEven);
-                }else{
+                } else {
                     System.out.println("Invalid count");
                 }
-            }else if(commandLine.equals("last")) {
+            } else if (commandLine.equals("last")) {
                 int countLast = Integer.parseInt(command.split("\\s+")[1]);
                 String firstIsItOddOrEven = command.split("\\s+")[2];
 
-                if(countLast >= 0 && indexIsValidFirstLast(numbersArray, countLast)) {
+                if (countLast >= 0 && indexIsValidFirstLast(numbersArray, countLast)) {
                     lastCountEvenOdd(numbersArray, countLast, firstIsItOddOrEven);
-                }else{
+                } else {
                     System.out.println("Invalid count");
                 }
             }
@@ -63,16 +63,16 @@ public class _06_ArrayManipulator {
         List<Integer> reverseArray = new ArrayList<>();
         int countNumbers = 0;
 
-        if(firstIsItOddOrEven.equals("odd")) {
-            for (int i = numbersArray.length-1; i >= 0; i--) {
-                if (numbersArray[i] % 2 != 0 && countLast > countNumbers){
+        if (firstIsItOddOrEven.equals("odd")) {
+            for (int i = numbersArray.length - 1; i >= 0; i--) {
+                if (numbersArray[i] % 2 != 0 && countLast > countNumbers) {
                     reverseArray.add(numbersArray[i]);
                     countNumbers++;
                 }
             }
-        }else{
-            for (int i = numbersArray.length-1; i >= 0; i--) {
-                if (numbersArray[i] % 2 == 0 && countLast > countNumbers){
+        } else {
+            for (int i = numbersArray.length - 1; i >= 0; i--) {
+                if (numbersArray[i] % 2 == 0 && countLast > countNumbers) {
                     reverseArray.add(numbersArray[i]);
                     countNumbers++;
                 }
@@ -81,9 +81,9 @@ public class _06_ArrayManipulator {
 
         Collections.reverse(reverseArray);
 
-        if (reverseArray.isEmpty()){
+        if (reverseArray.isEmpty()) {
             System.out.println("[]");
-        }else{
+        } else {
             System.out.println(reverseArray);
         }
     }
@@ -92,35 +92,34 @@ public class _06_ArrayManipulator {
         String arrayString = "";
         int countNumbers = 0;
 
-        if(firstIsItOddOrEven.equals("odd")) {
+        if (firstIsItOddOrEven.equals("odd")) {
             for (int i = 0; i < numbersArray.length; i++) {
-                if (countFirst == countNumbers){
+                if (countFirst == countNumbers) {
                     break;
                 }
 
-                if (numbersArray[i] % 2 != 0){
+                if (numbersArray[i] % 2 != 0) {
                     arrayString += numbersArray[i] + " ";
                     countNumbers++;
                 }
             }
         }
 
-        if (firstIsItOddOrEven.equals("even")){
+        if (firstIsItOddOrEven.equals("even")) {
             for (int i = 0; i < numbersArray.length; i++) {
-                if (countFirst == countNumbers){
+                if (countFirst == countNumbers) {
                     break;
                 }
 
-                if (numbersArray[i] % 2 == 0){
+                if (numbersArray[i] % 2 == 0) {
                     arrayString += numbersArray[i] + " ";
                     countNumbers++;
                 }
             }
         }
 
-        if (arrayString.equals("")){
+        if (arrayString.equals("")) {
             System.out.println("[]");
-
             return;
         }
 
@@ -134,25 +133,25 @@ public class _06_ArrayManipulator {
         int min = Integer.MAX_VALUE;
         int indexOfMin = -1;
 
-        if(isItEvenOrOddMin.equals("odd")){
+        if (isItEvenOrOddMin.equals("odd")) {
             for (int i = 0; i < numbersArray.length; i++) {
-                if(numbersArray[i] <= min && numbersArray[i] % 2 != 0){
+                if (numbersArray[i] <= min && numbersArray[i] % 2 != 0) {
                     min = numbersArray[i];
                     indexOfMin = i;
                 }
             }
-        }else{
+        } else {
             for (int i = 0; i < numbersArray.length; i++) {
-                if(numbersArray[i] <= min && numbersArray[i] % 2 == 0){
+                if (numbersArray[i] <= min && numbersArray[i] % 2 == 0) {
                     min = numbersArray[i];
                     indexOfMin = i;
                 }
             }
         }
 
-        if (indexOfMin != -1){
+        if (indexOfMin != -1) {
             System.out.println(indexOfMin);
-        }else{
+        } else {
             System.out.println("No matches");
         }
     }
@@ -161,31 +160,31 @@ public class _06_ArrayManipulator {
         int max = Integer.MIN_VALUE;
         int indexOfMax = -1;
 
-        if(isItEvenOrOddMax.equals("odd")){
+        if (isItEvenOrOddMax.equals("odd")) {
             for (int i = 0; i < numbersArray.length; i++) {
-                if(numbersArray[i] >= max && numbersArray[i] % 2 != 0){
+                if (numbersArray[i] >= max && numbersArray[i] % 2 != 0) {
                     max = numbersArray[i];
                     indexOfMax = i;
                 }
             }
-        }else{
+        } else {
             for (int i = 0; i < numbersArray.length; i++) {
-                if(numbersArray[i] >= max && numbersArray[i] % 2 == 0){
+                if (numbersArray[i] >= max && numbersArray[i] % 2 == 0) {
                     max = numbersArray[i];
                     indexOfMax = i;
                 }
             }
         }
 
-        if (indexOfMax != -1){
+        if (indexOfMax != -1) {
             System.out.println(indexOfMax);
-        }else{
+        } else {
             System.out.println("No matches");
         }
     }
 
     private static int[] exchangeInsideArray(int[] numbersArray, int index) {
-        if (index == numbersArray.length-1){
+        if (index == numbersArray.length - 1) {
             return numbersArray;
         }
 
@@ -205,15 +204,17 @@ public class _06_ArrayManipulator {
         return afterExchange;
     }
 
-    private static void printArray (int[] array){
+    private static void printArray (int[] array) {
         System.out.print("[");
 
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
-            if(i==array.length-1){
+
+            if (i == array.length - 1){
                 System.out.print("]");
                 break;
             }
+
             System.out.print(",");
             System.out.print(" ");
         }
@@ -221,12 +222,11 @@ public class _06_ArrayManipulator {
         System.out.println();
     }
 
-    private static boolean indexIsValidExchange (int[] array, int n){
-        return (n <= array.length-1 && n >= 0);
+    private static boolean indexIsValidExchange (int[] array, int n) {
+        return (n <= array.length - 1 && n >= 0);
     }
 
-    private static boolean indexIsValidFirstLast(int[] array, int n){
+    private static boolean indexIsValidFirstLast(int[] array, int n) {
         return (n <= array.length && n > 0);
     }
 }
-
