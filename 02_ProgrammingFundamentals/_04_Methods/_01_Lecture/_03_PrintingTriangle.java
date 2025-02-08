@@ -8,10 +8,10 @@ public class _03_PrintingTriangle {
 
         // Read input value
         int n = Integer.parseInt(scan.nextLine());
-        
+
         // Create method to print a triangle
         printTriangle(n);
-        
+
         scan.close();
     }
 
@@ -20,15 +20,15 @@ public class _03_PrintingTriangle {
             for (int j = 1; j <= i; j++) {
                 System.out.print(j + " ");
             }
-            
+
             System.out.println();
         }
-        
-        for (int i = n-1; i > 0; i--) {
+
+        for (int i = n - 1; i > 0; i--) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(j + " ");
             }
-            
+
             System.out.println();
         }
     }
