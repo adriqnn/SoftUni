@@ -17,13 +17,13 @@ public class _05_Orders {
     }
 
     private static void whatIsThePrice(String item, double quantity) {
-        if (item.equals("coffee")){
+        if (item.equals("coffee")) {
             System.out.printf("%.2f", 1.50 * quantity);
-        }else if (item.equals("water")){
+        } else if (item.equals("water")) {
             System.out.printf("%.2f", 1.00 * quantity);
-        }else if (item.equals("coke")){
+        } else if (item.equals("coke")) {
             System.out.printf("%.2f", 1.40 * quantity);
-        }else if (item.equals("snacks")){
+        } else if (item.equals("snacks")) {
             System.out.printf("%.2f", 2.00 * quantity);
         }
     }
