@@ -11,23 +11,22 @@ public class _09_PalindromeIntegers {
 
         // Cycle through and print result
         while(!number.equals("END")){
-
             // Create method that determines if the input is palindrome
             System.out.println(isPalindromeInteger(number));
 
             number = scan.nextLine();
         }
-        
+
         scan.close();
     }
 
     private static boolean isPalindromeInteger(String number) {
         StringBuilder second = new StringBuilder();
 
-        for (int i = number.length()-1; i >= 0; i--) {
+        for (int i = number.length() -1; i >= 0; i--) {
             second.append(number.charAt(i));
         }
-        
+
         int n1 = Integer.parseInt(number);
         int n2 = Integer.parseInt(second.toString());
 
