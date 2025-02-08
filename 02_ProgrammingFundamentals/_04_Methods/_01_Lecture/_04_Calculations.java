@@ -18,13 +18,13 @@ public class _04_Calculations {
     }
 
     private static void whatIsTheResult(String operation, int num1, int num2) {
-        if (operation.equals("add")){
+        if (operation.equals("add")) {
             System.out.println(num1 + num2);
-        }else if (operation.equals("multiply")){
+        } else if (operation.equals("multiply")) {
             System.out.println(num1 * num2);
-        }else if (operation.equals("subtract")){
+        } else if (operation.equals("subtract")) {
             System.out.println(num1 - num2);
-        }else if (operation.equals("divide")){
+        } else if (operation.equals("divide")) {
             System.out.println(num1 / num2);
         }
     }
