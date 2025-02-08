@@ -14,23 +14,23 @@ public class _11_MathOperations {
 
         // Create method for math operations
         mathOperations(n1, operation, n2);
-        
+
         scan.close();
     }
 
     private static void mathOperations(int n1, String operation, int n2) {
         double result = 0;
-        
-        if (operation.equals("/")){
+
+        if (operation.equals("/")) {
             result = n1 / n2;
-        }else if (operation.equals("*")){
+        } else if (operation.equals("*")) {
             result = n1 * n2;
-        }else if (operation.equals("+")){
+        } else if (operation.equals("+")) {
             result = n1 + n2;
-        }else if (operation.equals("-")){
+        } else if (operation.equals("-")) {
             result = n1 - n2;
         }
-        
+
         System.out.println(new DecimalFormat("0.##").format(result));
     }
 }
