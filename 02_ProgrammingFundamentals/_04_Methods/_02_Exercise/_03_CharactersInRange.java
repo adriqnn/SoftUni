@@ -11,7 +11,7 @@ public class _03_CharactersInRange {
         char charTwo = scan.nextLine().charAt(0);
 
         // Create method that prints ASCII chars in a given range
-        printThis(charOne,charTwo);
+        printThis(charOne, charTwo);
 
         scan.close();
     }
