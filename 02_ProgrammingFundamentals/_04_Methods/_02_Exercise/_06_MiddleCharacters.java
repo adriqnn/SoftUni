@@ -16,15 +16,14 @@ public class _06_MiddleCharacters {
     }
 
     private static void  middleString(String console) {
-        
-        if (console.length() % 2 == 0){
+        if (console.length() % 2 == 0) {
             char middleEvenOne = console.charAt((console.length() / 2) - 1);
             char middleEvenTwo = console.charAt(console.length() / 2);
-            
+
             System.out.printf("%c%c", middleEvenOne, middleEvenTwo);
-        }else{
+        } else {
             char middleOdd = console.charAt(console.length() / 2);
-            
+
             System.out.println(middleOdd);
         }
     }
