@@ -22,9 +22,9 @@ public class _02_CenterPoint {
         double first = Math.sqrt((x1 * x1) + (y1 * y1));
         double second = Math.sqrt((x2 * x2) + (y2 * y2));
 
-        if (first <= second){
+        if (first <= second) {
             System.out.printf("(%.0f, %.0f)", x1, y1);
-        }else{
+        } else {
             System.out.printf("(%.0f, %.0f)", x2, y2);
         }
     }
