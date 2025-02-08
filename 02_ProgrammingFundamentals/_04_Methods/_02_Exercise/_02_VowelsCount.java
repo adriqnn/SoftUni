@@ -11,7 +11,7 @@ public class _02_VowelsCount {
 
         // Create method that prints vowels sum
         printVowelsSum(console);
-        
+
         scan.close();
     }
 
@@ -19,7 +19,7 @@ public class _02_VowelsCount {
         int count = 0;
 
         for (int i = 0; i < console.length(); i++) {
-            switch(console.charAt(i)){
+            switch (console.charAt(i)) {
                 case 'a':
                 case 'y':
                 case 'o':
