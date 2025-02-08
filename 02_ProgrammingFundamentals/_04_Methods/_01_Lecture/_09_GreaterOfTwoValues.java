@@ -10,19 +10,17 @@ public class _09_GreaterOfTwoValues {
         String type = scan.nextLine();
 
         // Create methods for each possible input and print result
-        if (type.equals("int")){
+        if (type.equals("int")) {
             int numberOne = Integer.parseInt(scan.nextLine());
             int numberTwo = Integer.parseInt(scan.nextLine());
 
             System.out.println(whatIsBigger(numberOne, numberTwo));
-
-        }else if (type.equals("char")){
+        } else if (type.equals("char")) {
             char charOne = scan.nextLine().charAt(0);
             char charTwo = scan.nextLine().charAt(0);
 
             System.out.println(whatIsBigger(charOne, charTwo));
-
-        }else if (type.equals("string")){
+        } else if (type.equals("string")) {
             String firstString = scan.nextLine();
             String secondString = scan.nextLine();
 
@@ -41,9 +39,9 @@ public class _09_GreaterOfTwoValues {
     }
 
     private static String whatIsBigger(String firstString, String secondString){
-        if (firstString.compareTo(secondString) >= 0){
+        if (firstString.compareTo(secondString) >= 0) {
             return firstString;
-        }else {
+        } else {
             return secondString;
         }
     }
