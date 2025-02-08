@@ -8,36 +8,36 @@ public class _01_DataTypes {
 
         // Read input value
         String type = scan.nextLine();
-        
+
         // Determine the data type of the input
-        if(type.equals("int")){
+        if (type.equals("int")) {
             int num = Integer.parseInt(scan.nextLine());
-            
+
             printDataTypes(num);
-        }else if(type.equals("real")){
+        } else if (type.equals("real")) {
             double num = Double.parseDouble(scan.nextLine());
-            
+
             printDataTypes(num);
-        }else if(type.equals("string")){
+        } else if (type.equals("string")) {
             String line = scan.nextLine();
-            
+
             printDataTypes(line);
         }
-        
+
         scan.close();
     }
 
     private static void printDataTypes(int num) {
         System.out.println(num * 2);
     }
-    
+
     private static void printDataTypes(double num) {
         System.out.printf("%.2f", num * 1.5);
     }
-    
+
     private static void printDataTypes(String line) {
         String newString = "$" + line + "$";
-        
+
         System.out.println(newString);
     }
 }
