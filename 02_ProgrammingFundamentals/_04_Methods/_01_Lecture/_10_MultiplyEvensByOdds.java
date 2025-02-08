@@ -26,9 +26,9 @@ public class _10_MultiplyEvensByOdds {
             char symbol = num.charAt(i);
             int n = Character.getNumericValue(symbol);
 
-            if ( n % 2 == 0){
+            if ( n % 2 == 0) {
                 sumEven += n;
-            }else {
+            } else {
                 sumOdd += n;
             }
         }
