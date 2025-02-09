@@ -14,80 +14,80 @@ public class _10_SoftUniCoursePlanning {
         String commands = scan.nextLine();
 
         // Read and execute commands based on the input
-        while(!commands.equals("course start")){
+        while (!commands.equals("course start")) {
             String[] commandLine = commands.split(":");
             String command = commandLine[0];
             String lessonTitleOne = commandLine[1];
-            
-            if(command.equals("Add")){
-                if(!courseList.contains(lessonTitleOne)){
+
+            if (command.equals("Add")) {
+                if (!courseList.contains(lessonTitleOne)) {
                     courseList.add(lessonTitleOne);
                 }
-            }else if(command.equals("Insert")){
+            } else if (command.equals("Insert")) {
                 int indexInsert = Integer.parseInt(commandLine[2]);
-                
-                if (!courseList.contains(lessonTitleOne)){
+
+                if (!courseList.contains(lessonTitleOne)) {
                     courseList.add(indexInsert, lessonTitleOne);
                 }
-            }else if(command.equals("Remove")){
+            } else if (command.equals("Remove")) {
                 String removeExercise = lessonTitleOne + "-Exercise";
-                
+
                 courseList.remove(lessonTitleOne);
                 courseList.remove(removeExercise);
-            }else if(command.equals("Swap")){
+            } else if (command.equals("Swap")) {
                 String lessonTitleTwo = commandLine[2];
-                
-                if(courseList.contains(lessonTitleOne) && courseList.contains(lessonTitleTwo)){
+
+                if (courseList.contains(lessonTitleOne) && courseList.contains(lessonTitleTwo)) {
                     int indexLessonOne = courseList.indexOf(lessonTitleOne);
                     int indexLessonTwo = courseList.indexOf(lessonTitleTwo);
-                    
+
                     courseList.set(indexLessonOne, lessonTitleTwo);
                     courseList.set(indexLessonTwo, lessonTitleOne);
-                    
+
                     String swapLessonOneExercise = lessonTitleOne + "-Exercise";
                     String swapLessonTwoExercise = lessonTitleTwo + "-Exercise";
-                    
-                    if(courseList.contains(swapLessonOneExercise)){
+
+                    if (courseList.contains(swapLessonOneExercise)) {
                         courseList.remove(swapLessonOneExercise);
-                        
-                        if(courseList.indexOf(lessonTitleOne) == courseList.size()-1){
+
+                        if (courseList.indexOf(lessonTitleOne) == courseList.size() - 1) {
                             courseList.add(swapLessonOneExercise);
-                        }else{
+                        } else {
                             courseList.add(indexLessonTwo+1, swapLessonOneExercise);
                         }
                     }
-                    
-                    if (courseList.contains(swapLessonTwoExercise)){
+
+                    if (courseList.contains(swapLessonTwoExercise)) {
                         courseList.remove(swapLessonTwoExercise);
-                        
-                        courseList.add(indexLessonOne+1, swapLessonTwoExercise);
+
+                        courseList.add(indexLessonOne + 1, swapLessonTwoExercise);
                     }
                 }
-            }else if(command.equals("Exercise")){
+            } else if (command.equals("Exercise")) {
                 String exercise = lessonTitleOne + "-Exercise";
-                
-                if(courseList.contains(lessonTitleOne) && !courseList.contains(exercise)){
+
+                if (courseList.contains(lessonTitleOne) && !courseList.contains(exercise)) {
                     int indexExercise = courseList.indexOf(lessonTitleOne);
-                    
-                    if(indexExercise == courseList.size()-1){
+
+                    if (indexExercise == courseList.size() - 1) {
                         courseList.add(exercise);
-                    }else{
+                    } else {
                         courseList.add(indexExercise + 1, exercise);
                     }
-                }else if(!courseList.contains(lessonTitleOne)){
+                } else if (!courseList.contains(lessonTitleOne)) {
                     courseList.add(lessonTitleOne);
-                    
+
                     courseList.add(exercise);
                 }
 
             }
-            
+
             commands = scan.nextLine();
         }
-        
+
         // Print result
         for (int i = 0; i < courseList.size(); i++) {
-            System.out.printf("%d.%s%n", i+1, courseList.get(i));
+            System.out.printf("%d.%s%n", i + 1, courseList.get(i));
         }
 
         scan.close();
