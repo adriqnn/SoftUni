@@ -14,20 +14,21 @@ public class _02_ChangeList {
         String console = scan.nextLine();
 
         // Change the list based on the commands
-        while(!console.equals("end")){
+        while (!console.equals("end")) {
             String[] commandLine = console.split("\\s+");
             String command = commandLine[0];
-            
-            if(command.equals("Delete")){
+
+            if (command.equals("Delete")) {
                 int element = Integer.parseInt(commandLine[1]);
-                
+
                 numbersList.removeIf(e -> e == element);
-            }else if(command.equals("Insert")){
+            } else if (command.equals("Insert")) {
                 int index = Integer.parseInt(commandLine[2]);
                 int num = Integer.parseInt(commandLine[1]);
-                
+
                 numbersList.add(index, num);
             }
+            
             console = scan.nextLine();
         }
 
