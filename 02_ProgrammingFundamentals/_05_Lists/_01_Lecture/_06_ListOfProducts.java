@@ -14,20 +14,20 @@ public class _06_ListOfProducts {
 
         // Add variable
         List<String> productsList = new ArrayList<>();
-        
+
         // Create list
         for (int i = 0; i < n; i++) {
             productsList.add(scan.nextLine());
         }
-        
+
         // Arrange list
         Collections.sort(productsList);
-        
+
         // Print result
         for (int i = 0; i < productsList.size(); i++) {
-            System.out.printf("%d.%s%n", i+1, productsList.get(i));
+            System.out.printf("%d.%s%n", i + 1, productsList.get(i));
         }
-        
+
         scan.close();
     }
 }
