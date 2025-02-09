@@ -20,7 +20,7 @@ public class _05_Numbers {
 
         // Remove numbers based on value
         for (int i = 0; i < numbersList.size(); i++) {
-            if(numbersList.get(i) == number){
+            if (numbersList.get(i) == number) {
                 numbersList = removeNumbersFromListWithPower(numbersList, i, power);
                 i--;
             }
@@ -45,22 +45,22 @@ public class _05_Numbers {
     private static List<Integer> removeNumbersFromListWithPower(List<Integer> numbersList, int i, int power) {
         List<Integer> newList = new ArrayList<>();
 
-        if(i + power >= numbersList.size() - 1 && i - power < 0){
+        if (i + power >= numbersList.size() - 1 && i - power < 0) {
             return newList;
-        }else if(i + power >= numbersList.size() - 1){
-            for (int j = 0; j < i - power; j++) {
+        } else if (i + power >= numbersList.size() - 1) {
+            for (int j = 0; j < i-power; j++) {
                 newList.add(numbersList.get(j));
             }
 
             return newList;
-        }else if(i - power < 0){
+        }else if (i - power < 0) {
             for (int j = i + power + 1; j < numbersList.size(); j++) {
                 newList.add(numbersList.get(j));
             }
 
             return newList;
-        }else{
-            for (int j = 0; j < i - power; j++) {
+        } else {
+            for (int j = 0; j < i-power; j++) {
                 newList.add(numbersList.get(j));
             }
 
