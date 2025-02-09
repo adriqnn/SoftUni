@@ -14,16 +14,16 @@ public class _04_ListManipulationBasics {
         String console = scan.nextLine();
 
         // Manipulate lists based on the given commands
-        while(!console.equals("end")){
+        while (!console.equals("end")) {
             String commandline = console.split("\\s+")[0];
 
-            if(commandline.equals("Add")){
+            if (commandline.equals("Add")) {
                 numberList.add(Integer.parseInt(console.split("\\s+")[1]));
-            }else if(commandline.equals("Remove")){
+            } else if (commandline.equals("Remove")) {
                 numberList.remove(Integer.valueOf(Integer.parseInt(console.split("\\s+")[1])));
-            }else if(commandline.equals("RemoveAt")){
+            } else if (commandline.equals("RemoveAt")) {
                 numberList.remove(Integer.parseInt(console.split("\\s+")[1]));
-            }else if(commandline.equals("Insert")){
+            } else if (commandline.equals("Insert")) {
                 numberList.add(Integer.parseInt(console.split("\\s+")[2]), Integer.parseInt(console.split("\\s+")[1]));
             }
 
