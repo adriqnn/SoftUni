@@ -14,11 +14,11 @@ public class _01_SumAdjacentEqualNumbers {
         List<Double> listNumbers = Arrays.stream(scan.nextLine().split("\\s+")).map(Double::parseDouble).collect(Collectors.toList());
 
         // Sum adjacent numbers in list
-        for (int i = 0; i < listNumbers.size()-1; i++) {
-            if (listNumbers.get(i).equals(listNumbers.get(i+1))){
-                double sum = listNumbers.get(i) + listNumbers.get(i+1);
+        for (int i = 0; i < listNumbers.size() - 1; i++) {
+            if (listNumbers.get(i).equals(listNumbers.get(i + 1))) {
+                double sum = listNumbers.get(i) + listNumbers.get(i + 1);
                 listNumbers.set(i, sum);
-                listNumbers.remove(i+1);
+                listNumbers.remove(i + 1);
                 i = -1;
             }
         }
