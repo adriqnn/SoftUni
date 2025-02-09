@@ -25,11 +25,11 @@ public class _03_MergingLists {
         }
 
         // Continue merging the lists
-        if(numbersList1.size() < numbersList2.size()){
+        if (numbersList1.size() < numbersList2.size()) {
             for (int i = sizeOfSmaller; i < numbersList2.size(); i++) {
                 newNumbersList1and2.add(numbersList2.get(i));
             }
-        }else {
+        } else {
             for (int i = sizeOfSmaller; i < numbersList1.size(); i++) {
                 newNumbersList1and2.add(numbersList1.get(i));
             }
