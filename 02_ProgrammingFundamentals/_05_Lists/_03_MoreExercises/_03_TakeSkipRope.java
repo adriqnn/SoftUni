@@ -21,44 +21,44 @@ public class _03_TakeSkipRope {
         for (int i = 0; i < console.length(); i++) {
             char symbol = console.charAt(i);
 
-            if(Character.isDigit(symbol)){
+            if (Character.isDigit(symbol)) {
                 decryptIntegers.add(Character.getNumericValue(symbol));
-            }else{
+            } else {
                 decryptStrings.add(Character.toString(symbol));
             }
         }
 
         // Determine the needed integers
         for (int i = 0; i < decryptIntegers.size(); i++) {
-            if(i % 2 == 0){
+            if (i % 2 == 0) {
                 takeList.add(decryptIntegers.get(i));
-            }else{
+            } else {
                 skipList.add(decryptIntegers.get(i));
             }
         }
-        
-        
+
+
         StringBuilder fromDecryptStrings = new StringBuilder();
         decryptStrings.stream().forEach(fromDecryptStrings::append);
-        
+
         StringBuilder result = new StringBuilder();
-        
+
         // Decrypt String
         for (int i = 0; i < takeList.size(); i++) {
             int take = takeList.get(i);
             int skip = skipList.get(i);
-            
-            try{
-                try{
+
+            try {
+                try {
                     for (int j = 0; j < take; j++) {
                         result.append(fromDecryptStrings.charAt(j));
                     }
-                    
+
                     fromDecryptStrings.delete(0, take);
                     fromDecryptStrings.delete(0, skip);
-                }catch (Exception e){
+                } catch (Exception e) {
                 }
-            }catch(Exception e){
+            } catch (Exception e) {
             }
         }
 
