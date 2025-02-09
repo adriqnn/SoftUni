@@ -15,22 +15,22 @@ public class _07_RemoveNegativesAndReverse {
 
         // Remove negative numbers
         for (int i = 0; i < numbersList.size(); i++) {
-            if(numbersList.get(i) < 0 ){
+            if (numbersList.get(i) < 0 ) {
                 numbersList.remove(i);
                 i--;
             }
         }
-        
+
         // Reverse list
         Collections.reverse(numbersList);
-        
+
         // Print result
-        if (numbersList.isEmpty()){
+        if (numbersList.isEmpty()) {
             System.out.println("empty");
-        }else{
+        } else {
             numbersList.stream().forEach(e-> System.out.print(e + " "));
         }
-        
+
         scan.close();
     }
 }
