@@ -16,32 +16,32 @@ public class _01_Messaging {
         // Decipher message
         for (int i = 0; i < numbersList.size(); i++) {
             String number = numbersList.get(i).toString();
-            
+
             int sum = 0;
-            
+
             for (int j = 0; j < number.length(); j++) {
                 char symbol = number.charAt(j);
                 sum += Character.getNumericValue(symbol);
             }
-            
+
             numbersList.set(i, sum);
         }
-        
+
         StringBuilder lineToPrint = new StringBuilder();
-        
+
         for (int i = 0; i < numbersList.size(); i++) {
-            while(numbersList.get(i) > consoleSentence.length()-1){
-                numbersList.set(i,(numbersList.get(i)) - (consoleSentence.length()));
+            while (numbersList.get(i) > consoleSentence.length() - 1) {
+                numbersList.set(i, (numbersList.get(i)) - (consoleSentence.length()));
 
             }
-            
+
             lineToPrint.append(consoleSentence.charAt(numbersList.get(i)));
             consoleSentence.deleteCharAt(numbersList.get(i));
         }
-        
+
         // Print result
         System.out.println(lineToPrint);
-        
+
         scan.close();
     }
 }
