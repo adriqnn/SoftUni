@@ -15,28 +15,28 @@ public class _01_Train {
         String passengersListActions = scan.nextLine();
 
         // Arrange the train based on commands
-        while(!passengersListActions.equals("end")){
-            if(passengersListActions.split("\\s+")[0].equals("Add")){
+        while (!passengersListActions.equals("end")) {
+            if (passengersListActions.split("\\s+")[0].equals("Add")) {
                 int addWagonAndPassengers = Integer.parseInt(passengersListActions.split("\\s+")[1]);
                 
                 trainWagonsPassengers.add(addWagonAndPassengers);
-            }else{
+            } else {
                 int addPassengers = Integer.parseInt(passengersListActions.split("\\s+")[0]);
-                
+
                 for (int i = 0; i < trainWagonsPassengers.size(); i++) {
-                    if(trainWagonsPassengers.get(i) + addPassengers <= capacityOfWagon){
+                    if (trainWagonsPassengers.get(i) + addPassengers <= capacityOfWagon) {
                         trainWagonsPassengers.set(i, trainWagonsPassengers.get(i) + addPassengers);
                         break;
                     }
                 }
             }
-            
+
             passengersListActions = scan.nextLine();
         }
-        
+
         // Print result
         trainWagonsPassengers.stream().forEach(e -> System.out.print(e + " "));
-        
+
         scan.close();
     }
 }
