@@ -14,20 +14,20 @@ public class _06_CardsGame {
         List<Integer> cardsList2 = Arrays.stream(scan.nextLine().split("\\s+")).map(Integer::parseInt).collect(Collectors.toList());
 
         // Play card game and determine who wins
-        while(cardsList1.size() > 0 && cardsList2.size() > 0){
-            if(cardsList1.get(0).equals(cardsList2.get(0))){
+        while (cardsList1.size() > 0 && cardsList2.size() > 0) {
+            if (cardsList1.get(0).equals(cardsList2.get(0))) {
                 cardsList1.remove(0);
                 cardsList2.remove(0);
-            }else if(cardsList1.get(0) > cardsList2.get(0)){
+            } else if (cardsList1.get(0) > cardsList2.get(0)) {
                 cardsList1.add(cardsList1.get(0));
                 cardsList1.add(cardsList2.get(0));
-                
+
                 cardsList1.remove(0);
                 cardsList2.remove(0);
-            }else if(cardsList1.get(0) < cardsList2.get(0)){
+            } else if(cardsList1.get(0) < cardsList2.get(0)) {
                 cardsList2.add(cardsList2.get(0));
                 cardsList2.add(cardsList1.get(0));
-                
+
                 cardsList1.remove(0);
                 cardsList2.remove(0);
             }
@@ -36,13 +36,13 @@ public class _06_CardsGame {
         int sum = 0;
 
         // Print result
-        if(cardsList1.isEmpty()){
+        if (cardsList1.isEmpty()) {
             for (Integer integer : cardsList2) {
                 sum += integer;
             }
 
             System.out.printf("Second player wins! Sum: %d%n", sum);
-        }else {
+        } else {
             for (Integer integer : cardsList1) {
                 sum += integer;
             }
