@@ -17,25 +17,25 @@ public class _03_HouseParty {
         // Determine who is going to the party
         for (int i = 0; i < n; i++) {
             String[] commandline = scan.nextLine().split("\\s+");
-            
-            if(commandline[2].equals("going!")){
-                if(!partyList.contains(commandline[0])){
+
+            if (commandline[2].equals("going!")) {
+                if (!partyList.contains(commandline[0])) {
                     partyList.add(commandline[0]);
-                }else{
+                } else {
                     System.out.printf("%s is already in the list!%n", commandline[0]);
                 }
-            }else{
-                if(partyList.contains(commandline[0])){
+            } else {
+                if (partyList.contains(commandline[0])) {
                     partyList.remove(commandline[0]);
-                }else{
+                } else {
                     System.out.printf("%s is not in the list!%n", commandline[0]);
                 }
             }
         }
-        
+
         // Print result
         partyList.stream().forEach(System.out::println);
-        
+
         scan.close();
     }
 }
