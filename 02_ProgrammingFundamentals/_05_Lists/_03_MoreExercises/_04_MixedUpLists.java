@@ -18,20 +18,20 @@ public class _04_MixedUpLists {
         int[] numbers = new int[2];
 
         // Determine remaining elements
-        if(numbersListOne.size() > numbersListTwo.size()){
-            numbers[0] = numbersListOne.get(numbersListOne.size()-1);
-            numbers[1] = numbersListOne.get(numbersListOne.size()-2);
+        if (numbersListOne.size() > numbersListTwo.size()) {
+            numbers[0] = numbersListOne.get(numbersListOne.size() - 1);
+            numbers[1] = numbersListOne.get(numbersListOne.size() - 2);
 
-            numbersListOne.remove(numbersListOne.size()-1);
-            numbersListOne.remove(numbersListOne.size()-1);
-        }else{
+            numbersListOne.remove(numbersListOne.size() - 1);
+            numbersListOne.remove(numbersListOne.size() - 1);
+        } else {
             numbers[0] = numbersListTwo.get(0);
             numbers[1] = numbersListTwo.get(1);
 
             numbersListTwo.remove(0);
             numbersListTwo.remove(1);
         }
-        
+
         numbersListOne.addAll(numbersListTwo);
         numbersListTwo.clear();
 
@@ -40,7 +40,7 @@ public class _04_MixedUpLists {
 
         // Check and save elements that fit the requirement
         for (int i = 0; i < numbersListOne.size(); i++) {
-            if(numbersListOne.get(i) > numbers[0] && numbersListOne.get(i) < numbers[1]){
+            if (numbersListOne.get(i) > numbers[0] && numbersListOne.get(i) < numbers[1]) {
                 numbersListTwo.add(numbersListOne.get(i));
             }
         }
