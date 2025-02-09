@@ -37,7 +37,6 @@ public class _01_DataTypes {
 
     private static void printDataTypes(String line) {
         String newString = "$" + line + "$";
-
         System.out.println(newString);
     }
 }
