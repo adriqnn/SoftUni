@@ -15,7 +15,6 @@ public class _03_BigFactorial {
 
         // Determine the factorial of the input
         for (int i = 1; i <= factorial; i++) {
-
             result = result.multiply(new BigDecimal(String.valueOf(i)));
         }
 
