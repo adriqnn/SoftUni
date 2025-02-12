@@ -17,7 +17,7 @@ public class _06_OrderByAge {
 
 
         // Create collection of people
-        while(!console.equals("End")){
+        while (!console.equals("End")) {
             String[] consoleLine = console.split("\\s+");
 
             String name = consoleLine[0];
@@ -57,7 +57,7 @@ class Album{
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return String.format("%s with ID: %s is %d years old.", this.name, this.personalNUmber, this.age);
     }
 }
