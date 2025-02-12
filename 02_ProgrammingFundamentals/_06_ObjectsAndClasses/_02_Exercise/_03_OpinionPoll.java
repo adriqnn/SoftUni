@@ -27,7 +27,7 @@ public class _03_OpinionPoll {
         }
 
         /*listOfPeople.stream().sorted(Comparator.comparingInt(Persons::getAge).reversed()).forEach(e -> {
-            if(e.getAge() >= 30) {
+            if (e.getAge() >= 30) {
                 System.out.println(e.getPerson() + " - " + e.getAge());
             }
         });*/
@@ -37,7 +37,7 @@ public class _03_OpinionPoll {
 
         // Print result
         listOfPeople.forEach(e -> {
-            if(e.getAge() > 30) {
+            if (e.getAge() > 30) {
                 System.out.println(e.getPerson() + " - " + e.getAge());
             }
         });
@@ -55,7 +55,7 @@ class Person {
         this.person = person;
         this.age = age;
     }
-    
+
     public int getAge() {
         return this.age;
     }
