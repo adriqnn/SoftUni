@@ -29,13 +29,13 @@ public class _04_Songs {
         String consoleType = scan.nextLine();
 
         // Print result
-        if(consoleType.equals("all")){
+        if (consoleType.equals("all")) {
             for (Song element : songsList) {
                 System.out.println(element);
             }
-        }else{
+        } else {
             for (Song element : songsList) {
-                if(element.getType().equals(consoleType)){
+                if (element.getType().equals(consoleType)) {
                     System.out.println(element);
                 }
             }
@@ -57,12 +57,12 @@ class Song {
         this.time = time;
     }
 
-    public String getType(){
+    public String getType() {
         return this.type;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return this.name;
     }
 }
