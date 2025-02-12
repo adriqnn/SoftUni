@@ -23,11 +23,11 @@ public class _02_Articles {
             String[] commandLine = scan.nextLine().split(": ");
             String command = commandLine[0];
 
-            if(command.equals("Edit")){
+            if (command.equals("Edit")) {
                 myArticle.setContent(commandLine[1]);
-            }else if(command.equals("ChangeAuthor")){
+            } else if (command.equals("ChangeAuthor")) {
                 myArticle.setAuthor(commandLine[1]);
-            }else if(command.equals("Rename")){
+            } else if (command.equals("Rename")) {
                 myArticle.setTitle(commandLine[1]);
             }
         }
@@ -39,7 +39,7 @@ public class _02_Articles {
 }
 
 // Create practice Article class
-class Article{
+class Article {
     private String title;
     private String content;
     private String author;
@@ -63,7 +63,7 @@ class Article{
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return this.title + " - " + this.content + ": " + this.author;
     }
 }
