@@ -34,15 +34,15 @@ public class _02_RawData {
         String cargo = scan.nextLine();
 
         // Print result
-        if(cargo.equals("fragile")){
+        if (cargo.equals("fragile")) {
             for (Car element: carList) {
-                if((element.getCargoType().equals(cargo)) && (element.getTire1Pressure() < 1 || element.getTire2Pressure() < 1) || element.getTire3Pressure() < 1 || element.getTire4Pressure() < 1){
+                if ((element.getCargoType().equals(cargo)) && (element.getTire1Pressure() < 1 || element.getTire2Pressure() < 1) || element.getTire3Pressure() < 1 || element.getTire4Pressure() < 1) {
                     System.out.println(element.getModel());
                 }
             }
-        }else if(cargo.equals("flamable")){
+        } else if (cargo.equals("flamable")) {
             for (Car element : carList) {
-                if(element.getCargoType().equals(cargo) && element.getEngineHP() > 250){
+                if (element.getCargoType().equals(cargo) && element.getEngineHP() > 250) {
                     System.out.println(element.getModel());
                 }
             }
@@ -53,7 +53,7 @@ public class _02_RawData {
 }
 
 // Create practice Car class
-class Car{
+class Car {
     private String model;
     private int engineHP;
     private String cargoType;
@@ -100,4 +100,3 @@ class Car{
         return this.tire4Pressure;
     }
 }
-
