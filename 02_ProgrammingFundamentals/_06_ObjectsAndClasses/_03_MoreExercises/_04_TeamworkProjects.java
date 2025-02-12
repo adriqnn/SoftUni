@@ -26,31 +26,31 @@ public class _04_TeamworkProjects {
             boolean sameCreatorAndName = false;
 
             for (Teams creatorExist : teamsList) {
-                if(creatorExist.getCreator().equals(creator)){
+                if (creatorExist.getCreator().equals(creator)) {
                     creatorIsThere = true;
                 }
 
-                if(creatorExist.getTeam().equals(newTeam)){
+                if (creatorExist.getTeam().equals(newTeam)) {
                     teamExists = true;
                 }
 
-                if (creatorExist.getCreator().equals(creator) && creatorExist.getTeam().equals(newTeam)){
+                if (creatorExist.getCreator().equals(creator) && creatorExist.getTeam().equals(newTeam)) {
                     sameCreatorAndName = true;
                 }
 
             }
 
-            if (!creatorIsThere && !teamExists){
+            if (!creatorIsThere && !teamExists) {
                 Teams team = new Teams(creator, newTeam, new ArrayList<>(), 0);
 
                 teamsList.add(team);
 
                 System.out.printf("Team %s has been created by %s!%n", newTeam, creator);
-            }else if(creatorIsThere && teamExists && sameCreatorAndName){
+            } else if (creatorIsThere && teamExists && sameCreatorAndName) {
                 System.out.printf("Team %s was already created!%n", newTeam);
-            }else if(!creatorIsThere){
+            } else if (!creatorIsThere) {
                 System.out.printf("Team %s was already created!%n", newTeam);
-            }else if(!teamExists){
+            } else if (!teamExists) {
                 System.out.printf("%s cannot create another team!%n", creator);
             }
         }
@@ -58,7 +58,7 @@ public class _04_TeamworkProjects {
         String console = scan.nextLine();
 
         // Set assignments
-        while(!console.equals("end of assignment")){
+        while (!console.equals("end of assignment")) {
             String[] consoleLine = console.split("->");
 
             String name = consoleLine[0];
@@ -69,39 +69,39 @@ public class _04_TeamworkProjects {
             boolean anotherTeamContainsName = false;
 
             for (Teams teamExist : teamsList) {
-                if(teamExist.getTeam().equals(team)){
+                if (teamExist.getTeam().equals(team)) {
                     teamDoesNotExist = false;
                 }
 
-                if(teamExist.getCreator().equals(name)){
+                if (teamExist.getCreator().equals(name)) {
                     isCreator = true;
                 }
 
-                if(teamExist.getTeam().equals(team) && !teamExist.getMembers().contains(name)){
+                if (teamExist.getTeam().equals(team) && !teamExist.getMembers().contains(name)) {
                     containsName = true;
                 }
 
-                if(!teamExist.getTeam().equals(team) && teamExist.getMembers().contains(name)){
+                if (!teamExist.getTeam().equals(team) && teamExist.getMembers().contains(name)) {
                     anotherTeamContainsName = true;
                 }
 
             }
 
-            if(anotherTeamContainsName){
+            if (anotherTeamContainsName) {
                 System.out.printf("Member %s cannot join team %s!%n", name, team);
 
                 console = scan.nextLine();
                 continue;
             }
 
-            if(teamDoesNotExist){
+            if (teamDoesNotExist) {
                 System.out.printf("Team %s does not exist!%n", team);
 
                 console = scan.nextLine();
                 continue;
             }
 
-            if(isCreator || !containsName){
+            if (isCreator || !containsName) {
                 System.out.printf("Member %s cannot join team %s!%n", name, team);
 
                 console = scan.nextLine();
@@ -109,7 +109,7 @@ public class _04_TeamworkProjects {
             }
 
             for (Teams join : teamsList) {
-                if(join.getTeam().equals(team)){
+                if (join.getTeam().equals(team)) {
                     join.getMembers().add(name);
                     join.setSize(join.getSize()+1);
                 }
@@ -120,8 +120,8 @@ public class _04_TeamworkProjects {
 
         // Determine if teams have to disband
         List<String> disband = new ArrayList<>();
-        teamsList.stream().sorted((e1,e2) -> Integer.compare(e2.getMembers().size(),e1.getMembers().size())).forEach(element -> {
-            if(element.getMembers().size() == 0){
+        teamsList.stream().sorted((e1, e2) -> Integer.compare(e2.getMembers().size(), e1.getMembers().size())).forEach(element -> {
+            if (element.getMembers().size() == 0) {
                 disband.add(element.getTeam());
                 teamsList.remove(element);
             }
@@ -176,7 +176,8 @@ class Teams{
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return this.team;
     }
 }
+
