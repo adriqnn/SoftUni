@@ -15,48 +15,49 @@ public class _06_Students2 {
         List<StudentInfo> studentList = new ArrayList<>();
 
         // Save a list of students and their information
-        while(!console.equals("end")){
+        while (!console.equals("end")) {
             String[] lineFromConsole = console.split("\\s+");
-            
+
             String firstName = lineFromConsole[0];
             String secondName = lineFromConsole[1];
             int age = Integer.parseInt(lineFromConsole[2]);
             String town = lineFromConsole[3];
-            
-            if(!isAlreadyExistingInsideTheList(firstName, secondName, age, town, studentList)){
+
+            if (!isAlreadyExistingInsideTheList(firstName, secondName, age, town, studentList)) {
                 StudentInfo student = new StudentInfo(firstName, secondName, age, town);
-                
+
                 studentList.add(student);
             }
-            
+
             console = scan.nextLine();
         }
-        
+
         String town = scan.nextLine();
-        
+
         // Print result
         for (StudentInfo element : studentList) {
-            if(element.getTown().equals(town)) {
+            if (element.getTown().equals(town)) {
                 System.out.println(element);
             }
         }
-        
+
         scan.close();
     }
-    
+
     // Define method to check if the value already exists in the list
-    private static boolean isAlreadyExistingInsideTheList(String firstName, String secondName, int age, String town, List<StudentInfo> studentList){
+    private static boolean isAlreadyExistingInsideTheList(String firstName, String secondName, int age, String town, List<StudentInfo> studentList) {
         for (StudentInfo element : studentList) {
             boolean firstNameBoolean = element.getFirstName().equals(firstName);
             boolean secondNameBoolean = element.getSecondName().equals(secondName);
-            
-            if(firstNameBoolean && secondNameBoolean){
+
+            if (firstNameBoolean && secondNameBoolean) {
                 element.setAge(age);
                 element.setTown(town);
-                
+
                 return true;
             }
         }
+        
         return false;
     }
 }
