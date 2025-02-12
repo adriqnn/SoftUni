@@ -27,7 +27,7 @@ public class _05_Students {
         }
 
         // Print result
-        students.stream().sorted((e1,e2) -> Double.compare(e2.getGrade(),e1.getGrade())).forEach(e -> System.out.print(e));
+        students.stream().sorted((e1, e2) -> Double.compare(e2.getGrade(), e1.getGrade())).forEach(e -> System.out.print(e));
 
         scan.close();
     }
@@ -54,4 +54,3 @@ class Student {
         return String.format("%s %s: %.2f%n", this.firstName, this.lastName, this.grade);
     }
 }
-
