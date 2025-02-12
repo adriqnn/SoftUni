@@ -8,7 +8,7 @@ public class _03_CarSalesman {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input vale
+        // Read input value
         int engineCount = Integer.parseInt(scan.nextLine());
 
         // Add variables
@@ -24,25 +24,26 @@ public class _03_CarSalesman {
             String displacement = "";
             String efficiency = "";
 
-            try{
+            try {
                 displacement = String.valueOf(Integer.parseInt(engineSpecs[2]));
                 efficiency = engineSpecs[3];
-            }catch (Exception e){
+            } catch (Exception e) {
 
-                try{
+                try {
                     displacement = String.valueOf(Integer.parseInt(engineSpecs[2]));
                     efficiency = "n/a";
-                }catch (Exception e1){
+                } catch (Exception e1) {
 
-                    try{
+                    try {
                         displacement = "n/a";
                         efficiency = engineSpecs[2];
-                    }catch(Exception e2){
+                    } catch(Exception e2) {
                         displacement = "n/a";
                         efficiency = "n/a";
                     }
                 }
             }
+            
             EngineInfo engine = new EngineInfo(model, power, displacement, efficiency);
 
             engines.add(engine);
@@ -59,20 +60,20 @@ public class _03_CarSalesman {
             String weight = "";
             String color = "";
 
-            try{
+            try {
                 weight = String.valueOf(Integer.parseInt(carInformation[2]));
                 color = carInformation[3];
-            }catch (Exception e){
+            } catch (Exception e) {
 
-                try{
+                try {
                     weight = String.valueOf(Integer.parseInt(carInformation[2]));
                     color = "n/a";
-                }catch (Exception e1){
+                } catch (Exception e1) {
 
                     try {
                         weight = "n/a";
                         color = carInformation[2];
-                    }catch(Exception e2){
+                    } catch (Exception e2) {
                         weight = "n/a";
                         color = "n/a";
                     }
@@ -80,7 +81,7 @@ public class _03_CarSalesman {
             }
 
             for (EngineInfo eng: engines) {
-                if (eng.getModel().equals(engine)){
+                if (eng.getModel().equals(engine)) {
                     CarInfo car = new CarInfo(model, eng, weight, color);
                     cars.add(car);
                 }
@@ -103,7 +104,7 @@ public class _03_CarSalesman {
 }
 
 // Create practice CarInfo class
-class CarInfo{
+class CarInfo {
     private String model;
     private EngineInfo engine;
     private String weight;
@@ -134,7 +135,7 @@ class CarInfo{
 }
 
 // Create practice EngineInfo class
-class EngineInfo{
+class EngineInfo {
     private String model;
     private String power;
     private String displacement;
