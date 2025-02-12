@@ -11,7 +11,7 @@ public class _04_Articles2 {
 
         // Read input value
         int n = Integer.parseInt(scan.nextLine());
-        
+
         // add variable
         List<ArticlesDatabase> articles = new ArrayList<>();
 
@@ -21,7 +21,7 @@ public class _04_Articles2 {
             String title = articleLines[0];
             String content = articleLines[1];
             String author = articleLines[2];
-            
+
             ArticlesDatabase article = new ArticlesDatabase(title, content, author);
             articles.add(article);
         }
@@ -29,23 +29,23 @@ public class _04_Articles2 {
         String command = scan.nextLine();
 
         // Print result
-        if(command.equals("title")){
+        if (command.equals("title")) {
             articles.sort(Comparator.comparing(ArticlesDatabase::getTitle));
-            articles.forEach(e -> System.out.printf("%s - %s: %s%n",e.getTitle(),e.getContent(),e.getAuthor()));
-        }else if(command.equals("content")){
+            articles.forEach(e -> System.out.printf("%s - %s: %s%n", e.getTitle(), e.getContent(), e.getAuthor()));
+        } else if (command.equals("content")) {
             articles.sort(Comparator.comparing(ArticlesDatabase::getContent));
-            articles.forEach(e -> System.out.printf("%s - %s: %s%n",e.getTitle(),e.getContent(),e.getAuthor()));
-        }else if(command.equals("author")){
+            articles.forEach(e -> System.out.printf("%s - %s: %s%n", e.getTitle(), e.getContent(), e.getAuthor()));
+        } else if (command.equals("author")) {
             articles.sort(Comparator.comparing(ArticlesDatabase::getAuthor));
-            articles.forEach(e -> System.out.printf("%s - %s: %s%n",e.getTitle(),e.getContent(),e.getAuthor()));
+            articles.forEach(e -> System.out.printf("%s - %s: %s%n", e.getTitle(), e.getContent(), e.getAuthor()));
         }
-        
+
         scan.close();
     }
 }
 
 // Create practice ArticleDatabase class
-class ArticlesDatabase{
+class ArticlesDatabase {
     private String title;
     private String content;
     private String author;
