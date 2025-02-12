@@ -19,57 +19,57 @@ public class _01_CompanyRoster {
         // Create database for the employees
         for (int i = 0; i < n; i++) {
             String[] consoleLine = scan.nextLine().split("\\s+");
-            
+
             String name = consoleLine[0];
             double salary = Double.parseDouble(consoleLine[1]);
             String position = consoleLine[2];
             String department = consoleLine[3];
             String email = "";
             int age = 0;
-            
-            try{
+
+            try {
                 age = Integer.parseInt(consoleLine[5]);
                 email = consoleLine[4];
-            }catch (Exception e){
+            } catch (Exception e) {
                 try {
                     age = Integer.parseInt(consoleLine[4]);
                     email = "n/a";
-                }catch (Exception e1){
+                } catch (Exception e1) {
                     try {
                         email = consoleLine[4];
                         age = -1;
-                    }catch (Exception e2){
+                    } catch (Exception e2) {
                         email = "n/a";
                         age = -1;
                     }
                 }
             }
-            
+
             boolean containsDepartment = false;
             int index = 0;
-            
+
             for (int j = 0; j < departments.size(); j++) {
-                if(departments.get(j).getDepartment().equals(department)){
+                if (departments.get(j).getDepartment().equals(department)) {
                     containsDepartment = true;
                     index = j;
                 }
             }
-            
-            if (containsDepartment){
+
+            if (containsDepartment) {
                 departments.get(index).setNumber(departments.get(index).getNumber() + 1);
                 departments.get(index).setSalaries(departments.get(index).getSalaries() + salary);
-            }else{
+            } else {
                 Department newDepartment = new Department(department, 1, salary);
                 departments.add(newDepartment);
             }
-            
+
             Employee employee = new Employee(name, salary, position, department, email, age);
-            
+
             employeeList.add(employee);
         }
 
         // Calculate average
-        departments.stream().forEach(e ->{
+        departments.stream().forEach(e -> {
             double average = 0;
             average = e.getSalaries() / e.getNumber();
             e.setSalaries(average);
@@ -81,8 +81,8 @@ public class _01_CompanyRoster {
         // Print result
         System.out.printf("Highest Average Salary: %s%n", departments.get(0).getDepartment());
         employeeList.sort(Comparator.comparing(Employee::getSalary).reversed());
-        employeeList.stream().forEach(e ->{
-            if(e.getDepartment().equals(departments.get(0).getDepartment())){
+        employeeList.stream().forEach(e -> {
+            if (e.getDepartment().equals(departments.get(0).getDepartment())) {
                 System.out.println(e);
             }
         });
@@ -140,7 +140,7 @@ class Employee {
 }
 
 // Create practice Department class
-class Department{
+class Department {
     private String department;
     private int number = 0;
     private double salaries = 0;
@@ -176,8 +176,7 @@ class Department{
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return String.format("%s %d %.2f", this.department, this.number, this.salaries);
     }
 }
-
