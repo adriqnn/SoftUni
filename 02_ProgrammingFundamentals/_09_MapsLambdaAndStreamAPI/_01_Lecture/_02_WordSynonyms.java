@@ -17,12 +17,12 @@ public class _02_WordSynonyms {
             String word = scan.nextLine();
             String synonym = scan.nextLine();
 
-            if (!synonymDictionary.containsKey(word)){
+            if (!synonymDictionary.containsKey(word)) {
                 List<String> synonymForCurrentWord = new ArrayList<>();
 
                 synonymForCurrentWord.add(synonym);
                 synonymDictionary.put(word, synonymForCurrentWord);
-            }else {
+            } else {
                 List<String> synonymsForCurrentWord = synonymDictionary.get(word);
 
                 synonymsForCurrentWord.add(synonym);
@@ -31,10 +31,10 @@ public class _02_WordSynonyms {
         }
 
         // Print result
-        for(Map.Entry<String, List<String>> wordEntry : synonymDictionary.entrySet()){
+        for (Map.Entry<String, List<String>> wordEntry : synonymDictionary.entrySet()) {
             String currentWord = wordEntry.getKey();
             List<String> synonymsForCurrentWord = wordEntry.getValue();
-            
+
             System.out.printf("%s - %s%n", currentWord, String.join(", ", synonymsForCurrentWord));
         }
 
