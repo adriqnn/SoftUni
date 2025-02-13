@@ -14,15 +14,15 @@ public class _01_ComputerStore {
         double price = 0;
 
         // Make statistics for the orders
-        while (!console.equals("special")){
-            if (console.equals("regular")){
+        while (!console.equals("special")) {
+            if (console.equals("regular")) {
                 isRegular = true;
                 break;
             }
 
             double plus = Double.parseDouble(console);
 
-            if(plus < 0){
+            if (plus < 0) {
                 System.out.println("Invalid price!");
 
                 console = scan.nextLine();
@@ -33,7 +33,7 @@ public class _01_ComputerStore {
             console = scan.nextLine();
         }
 
-        if(price == 0){
+        if (price == 0) {
             System.out.println("Invalid order!");
             return;
         }
@@ -42,13 +42,13 @@ public class _01_ComputerStore {
         price = price + taxes;
 
         // Print result
-        if (isRegular){
+        if (isRegular) {
             System.out.printf("Congratulations you've just bought a new computer!%n" +
                     "Price without taxes: %.2f$%n" +
                     "Taxes: %.2f$%n" +
                     "-----------%n" +
                     "Total price: %.2f$", price - taxes, taxes, price);
-        }else{
+        } else {
             System.out.printf("Congratulations you've just bought a new computer!%n" +
                     "Price without taxes: %.2f$%n" +
                     "Taxes: %.2f$%n" +
