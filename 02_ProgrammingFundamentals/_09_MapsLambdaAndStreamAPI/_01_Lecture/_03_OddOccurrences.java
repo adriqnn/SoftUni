@@ -8,40 +8,40 @@ public class _03_OddOccurrences {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input values
+        // Read input value
         String[] words = scan.nextLine().split(" ");
 
         // Add variable
         LinkedHashMap<String, Integer> counts = new LinkedHashMap<>();
 
-        // Extract the elements that occur odd times 
+        // Extract the elements that occur odd times
         for (String word : words) {
             String wordInLowerCase = word.toLowerCase();
-            
-            if (counts.containsKey(wordInLowerCase)){
+
+            if (counts.containsKey(wordInLowerCase)) {
                 counts.put(wordInLowerCase, counts.get(wordInLowerCase) + 1);
-            }else{
+            } else {
                 counts.put(wordInLowerCase, 1);
             }
         }
-        
+
         ArrayList<String> odds = new ArrayList<>();
-        
-        for (var entry : counts.entrySet()){
-            if (entry.getValue() % 2 == 1){
+
+        for (var entry : counts.entrySet()) {
+            if (entry.getValue() % 2 == 1) {
                 odds.add(entry.getKey());
             }
         }
-        
+
         // Print result
         for (int i = 0; i < odds.size(); i++) {
             System.out.print(odds.get(i));
-            
-            if (i < odds.size()-1){
+
+            if (i < odds.size() - 1) {
                 System.out.print(", ");
             }
         }
-        
+
         scan.close();
     }
 }
