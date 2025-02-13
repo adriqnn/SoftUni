@@ -20,9 +20,9 @@ public class _03_Problem {
         for (int i = 0; i < entryIndex; i++) {
             int valueNumber = priceRatings[entryIndex];
 
-            if (priceRatings[i] < valueNumber){
+            if (priceRatings[i] < valueNumber) {
                 cheapValueLeft += priceRatings[i];
-            }else if (priceRatings[i] >= valueNumber){
+            } else if (priceRatings[i] >= valueNumber) {
                 expensiveValueLeft += priceRatings[i];
             }
         }
@@ -30,30 +30,29 @@ public class _03_Problem {
         int cheapValueRight = 0;
         int expensiveValueRight = 0;
 
-        for (int i = entryIndex+1; i < priceRatings.length; i++) {
+        for (int i = entryIndex + 1; i < priceRatings.length; i++) {
             int valueNumber = priceRatings[entryIndex];
-            if (priceRatings[i] < valueNumber){
+            
+            if (priceRatings[i] < valueNumber) {
                 cheapValueRight += priceRatings[i];
-            }else if (priceRatings[i] >= valueNumber){
+            } else if (priceRatings[i] >= valueNumber) {
                 expensiveValueRight += priceRatings[i];
             }
         }
 
         // Print result
-        if (value.equals("cheap")){
-            if(cheapValueLeft >= cheapValueRight){
+        if (value.equals("cheap")) {
+            if (cheapValueLeft >= cheapValueRight) {
                 System.out.printf("Left - %d", cheapValueLeft);
-            }else if (cheapValueLeft < cheapValueRight){
+            } else if (cheapValueLeft < cheapValueRight) {
                 System.out.printf("Right - %d", cheapValueRight);
             }
-
-        }else if (value.equals("expensive")){
-            if (expensiveValueLeft >= expensiveValueRight){
+        } else if (value.equals("expensive")) {
+            if (expensiveValueLeft >= expensiveValueRight) {
                 System.out.printf("Left - %d", expensiveValueLeft);
-            }else if (expensiveValueLeft < expensiveValueRight){
+            } else if (expensiveValueLeft < expensiveValueRight) {
                 System.out.printf("Right - %d", expensiveValueRight);
             }
-
         }
 
         scan.close();
