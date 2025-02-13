@@ -18,7 +18,7 @@ public class _01_CountRealNumbers {
 
         // Count numbers
         for (double number : nums) {
-            if(!numbers.containsKey(number)){
+            if (!numbers.containsKey(number)) {
                 numbers.put(number, 1);
             } else {
                 int occurrences = numbers.get(number);
