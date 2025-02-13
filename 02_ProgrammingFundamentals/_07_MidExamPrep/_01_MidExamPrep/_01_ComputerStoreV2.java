@@ -13,12 +13,12 @@ public class _01_ComputerStoreV2 {
         double totalWithoutTaxes = 0;
 
         // Make statistics for the orders
-        while(!userInput.equals("regular") && !userInput.equals("special")){
+        while (!userInput.equals("regular") && !userInput.equals("special")) {
             double currentPrice = Double.parseDouble(userInput);
 
-            if(currentPrice < 0){
+            if (currentPrice < 0) {
                 System.out.println("Invalid price!");
-            }else{
+            } else {
                 totalWithoutTaxes += currentPrice;
             }
 
@@ -29,12 +29,12 @@ public class _01_ComputerStoreV2 {
         double taxes = totalWithoutTaxes * 0.2;
         double finalPrice = totalWithoutTaxes + taxes;
 
-        if(totalWithoutTaxes == 0){
+        if (totalWithoutTaxes == 0) {
             System.out.println("Invalid order!");
             return;
         }
 
-        if (userInput.equals("special")){
+        if (userInput.equals("special")) {
             finalPrice = finalPrice * 0.9;
         }
 
