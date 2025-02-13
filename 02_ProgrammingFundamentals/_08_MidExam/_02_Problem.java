@@ -18,16 +18,15 @@ public class _02_Problem {
         int lost = 0;
 
         // Execute commands
-        while (!console.equals("Report")){
+        while (!console.equals("Report")) {
             String[] input = console.split(" ");
 
-            if (input[0].equals("Blacklist")){
+            if (input[0].equals("Blacklist")) {
                 String name = input[1];
-
                 boolean noName = true;
 
                 for (int i = 0; i < friendList.size(); i++) {
-                    if (friendList.get(i).equals(name)){
+                    if (friendList.get(i).equals(name)) {
                         friendList.set(i,"Blacklisted");
                         blacklisted++;
 
@@ -36,31 +35,30 @@ public class _02_Problem {
                     }
                 }
 
-                if (noName){
+                if (noName) {
                     System.out.printf("%s was not found.%n", name);
                 }
-
-            }else if (input[0].equals("Error")){
+            } else if (input[0].equals("Error")) {
                 int n = Integer.parseInt(input[1]);
 
-                if (n >= 0 && n <= friendList.size()-1){
-                    if (!friendList.get(n).equals("Blacklisted") && !friendList.get(n).equals("Lost")){
+                if (n >= 0 && n <= friendList.size() - 1) {
+                    if (!friendList.get(n).equals("Blacklisted") && !friendList.get(n).equals("Lost")) {
                         String name = friendList.get(n);
-                        friendList.set(n,"Lost");
+                        friendList.set(n, "Lost");
                         lost++;
 
                         System.out.printf("%s was lost due to an error.%n", name);
                     }
                 }
 
-            }else if (input[0].equals("Change")){
+            } else if (input[0].equals("Change")) {
                 int n = Integer.parseInt(input[1]);
                 String newName = input[2];
 
-                if (n >= 0 && n <= friendList.size()-1){
+                if (n >= 0 && n <= friendList.size() - 1) {
                     String name = friendList.get(n);
                     friendList.set(n, newName);
-                    
+
                     System.out.printf("%s changed his username to %s.%n", name, newName);
                 }
 
