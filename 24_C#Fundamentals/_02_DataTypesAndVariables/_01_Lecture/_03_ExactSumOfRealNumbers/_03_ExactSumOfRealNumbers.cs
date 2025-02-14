@@ -1,7 +1,7 @@
 using System;
 using System.Numerics;
 
-public class _01_HelloSoftUni
+public class _03_ExactSumOfRealNumbers
 {
     public static void Main(string[] args)
     {
