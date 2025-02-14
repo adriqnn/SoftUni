@@ -9,7 +9,7 @@ public class _09_CenturiesToMinutes
 
         // Add variables
         double years = centuries * 100;
-        double days = years * 365.2422;
+        double days = Math.Floor(years * 365.2422);
         double hours = days * 24;
         double minutes = hours * 60;
 
