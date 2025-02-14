@@ -11,6 +11,6 @@ public class _02_PoundsToDollars
         double poundsToDollars = inputPounds * 1.31;
 
         // Print result
-        Console.WriteLine($"{poundsToDollars:F3}", poundsToDollars);
+        Console.WriteLine($"{poundsToDollars:F3}");
     }
 }
