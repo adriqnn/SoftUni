@@ -14,9 +14,9 @@ public class _06_TriplesOfLatinLetters
             {
                 for (int k = 0; k < n; k++)
                 {
-                    char first = (char)('a' + i);
-                    char second = (char)('a' + j);
-                    char third = (char)('a' + k);
+                    char first = (char) ('a' + i);
+                    char second = (char) ('a' + j);
+                    char third = (char) ('a' + k);
 
                     Console.WriteLine($"{first}{second}{third}");
                 }
