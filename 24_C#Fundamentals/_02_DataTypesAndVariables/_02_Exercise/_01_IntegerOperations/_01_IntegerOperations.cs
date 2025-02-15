@@ -4,7 +4,7 @@ public class _01_IntegerOperations
 {
     public static void Main(string[] args)
     {
-        // Read input value
+        // Read input values
         int n1 = int.Parse(Console.ReadLine()), n2 = int.Parse(Console.ReadLine()), n3 = int.Parse(Console.ReadLine()), n4 = int.Parse(Console.ReadLine());
 
         // Calculate result
