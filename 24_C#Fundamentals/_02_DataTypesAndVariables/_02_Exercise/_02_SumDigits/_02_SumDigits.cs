@@ -1,2 +1,25 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using System;
+
+public class _01_HelloSoftUni
+{
+    public static void Main(string[] args)
+    {
+        // Read input value
+        string console = Console.ReadLine();
+
+        // Add variable
+        int sum = 0;
+
+        // Sum the numbers
+        for (int i = 0; i < console.Length; i++)
+        {
+            char symbol = console[i];
+
+            int n = symbol - '0';
+            sum += n;
+        }
+
+        // Print result
+        Console.WriteLine(sum);
+    }
+}
