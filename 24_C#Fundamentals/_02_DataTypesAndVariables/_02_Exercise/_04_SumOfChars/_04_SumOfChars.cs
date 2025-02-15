@@ -1,6 +1,6 @@
 using System;
 
-public class _01_HelloSoftUni
+public class _04_SumOfChars
 {
     public static void Main(string[] args)
     {
