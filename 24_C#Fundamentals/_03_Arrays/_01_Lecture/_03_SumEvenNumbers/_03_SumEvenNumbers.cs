@@ -1,6 +1,6 @@
 using System;
 
-public class _01_HelloSoftUni
+public class _03_SumEvenNumbers
 {
     public static void Main(string[] args)
     {
