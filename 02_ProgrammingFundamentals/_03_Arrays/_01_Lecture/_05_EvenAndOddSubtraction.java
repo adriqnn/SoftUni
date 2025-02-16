@@ -24,7 +24,7 @@ public class _05_EvenAndOddSubtraction {
         }
 
         // Print result
-        System.out.println((sumEven - sumOdd));
+        System.out.println(sumEven - sumOdd);
 
         scan.close();
     }
