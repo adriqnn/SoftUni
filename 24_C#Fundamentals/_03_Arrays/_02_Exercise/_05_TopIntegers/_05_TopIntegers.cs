@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 public class _01_HelloSoftUni
 {
@@ -31,6 +31,6 @@ public class _01_HelloSoftUni
         }
 
         // Print result
-        Console.WriteLine(string.Join(" ", topIntegers);
+        Console.WriteLine(string.Join(" ", topIntegers));
     }
 }
