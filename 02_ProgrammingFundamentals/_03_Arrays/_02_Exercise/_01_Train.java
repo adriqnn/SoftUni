@@ -16,7 +16,7 @@ public class _01_Train {
 
         // Add passengers to the train and sum all of them
         for (int i = 0; i < countOfTrainWagons; i++) {
-            train[i] = (scan.nextInt());
+            train[i] = scan.nextInt();
 
             sum += train[i];
         }
