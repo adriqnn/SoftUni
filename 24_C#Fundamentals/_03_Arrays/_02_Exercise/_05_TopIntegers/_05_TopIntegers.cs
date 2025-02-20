@@ -1,6 +1,6 @@
 using System;
 
-public class _01_HelloSoftUni
+public class _05_TopIntegers
 {
     public static void Main(string[] args)
     {
