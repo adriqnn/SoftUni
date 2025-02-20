@@ -1,7 +1,5 @@
 package _02_ProgrammingFundamentals._03_Arrays._03_MoreExercises;
 
-package _02_ProgrammingFundamentals._03_Arrays._03_MoreExercises;
-
 import java.util.Arrays;
 import java.util.Scanner;
 
