@@ -65,7 +65,7 @@ public class _05_KaminoFactory {
 
         // Print result
         System.out.printf("Best DNA sample %d with sum: %d.%n", bestPosition, bestSumDNA);
-        Arrays.stream(bestDNASample).forEach(e -> System.out.print(e+" "));
+        Arrays.stream(bestDNASample).forEach(e -> System.out.print(e + " "));
 
         scan.close();
     }
