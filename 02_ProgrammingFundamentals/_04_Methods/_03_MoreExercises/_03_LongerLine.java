@@ -22,6 +22,7 @@ public class _03_LongerLine {
 
         scan.close();
     }
+    
     private static void printLongerLine(double x1, double y1, double x2, double y2, double a1, double b1, double a2, double b2) {
         double distance1 = Math.sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)));
         double distance2 = Math.sqrt(((a2 - a1) * (a2 - a1)) + ((b2 - b1) * (b2 - b1)));
