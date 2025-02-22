@@ -7,15 +7,15 @@ public class _03_LongerLine {
         Scanner scan = new Scanner(System.in);
 
         // Read input values
-        double x1 = Integer.parseInt(scan.nextLine());
-        double y1 = Integer.parseInt(scan.nextLine());
-        double x2 = Integer.parseInt(scan.nextLine());
-        double y2 = Integer.parseInt(scan.nextLine());
+        double x1 = Double.parseDouble(scan.nextLine());
+        double y1 = Double.parseDouble(scan.nextLine());
+        double x2 = Double.parseDouble(scan.nextLine());
+        double y2 = Double.parseDouble(scan.nextLine());
 
-        double a1 = Integer.parseInt(scan.nextLine());
-        double b1 = Integer.parseInt(scan.nextLine());
-        double a2 = Integer.parseInt(scan.nextLine());
-        double b2 = Integer.parseInt(scan.nextLine());
+        double a1 = Double.parseDouble(scan.nextLine());
+        double b1 = Double.parseDouble(scan.nextLine());
+        double a2 = Double.parseDouble(scan.nextLine());
+        double b2 = Double.parseDouble(scan.nextLine());
 
         // Create method that determines the longer line
         printLongerLine(x1, y1, x2, y2, a1, b1, a2, b2);
