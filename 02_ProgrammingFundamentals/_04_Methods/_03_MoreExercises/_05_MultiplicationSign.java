@@ -24,6 +24,7 @@ public class _05_MultiplicationSign {
         }
 
         int count = 0;
+        
         if (num1 < 0) {
             count++;
         }
