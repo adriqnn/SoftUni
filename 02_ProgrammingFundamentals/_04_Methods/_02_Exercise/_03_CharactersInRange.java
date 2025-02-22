@@ -17,7 +17,6 @@ public class _03_CharactersInRange {
     }
 
     private static void printThis(char charOne, char charTwo) {
-
         for (int i = Math.min(charOne, charTwo) + 1; i < Math.max(charOne, charTwo); i++) {
             System.out.print((char) i + " ");
         }
