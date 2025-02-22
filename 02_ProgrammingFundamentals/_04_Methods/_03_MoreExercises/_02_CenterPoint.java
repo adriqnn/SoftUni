@@ -7,10 +7,10 @@ public class _02_CenterPoint {
         Scanner scan = new Scanner(System.in);
 
         // Read input values
-        double x1 = Integer.parseInt(scan.nextLine());
-        double y1 = Integer.parseInt(scan.nextLine());
-        double x2 = Integer.parseInt(scan.nextLine());
-        double y2 = Integer.parseInt(scan.nextLine());
+        double x1 = Double.parseInt(scan.nextLine());
+        double y1 = Double.parseInt(scan.nextLine());
+        double x2 = Double.parseInt(scan.nextLine());
+        double y2 = Double.parseInt(scan.nextLine());
 
         // Create method that prints the closest point
         rectangleDistance(x1, y1, x2, y2);
