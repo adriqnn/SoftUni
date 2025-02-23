@@ -12,23 +12,24 @@ public class _04_ListManipulationBasics
         // Manipulate lists based on the given commands
         while (!console.Equals("end"))
         {
-            string commandline = console.Split()[0];
+            string[] commandline = console.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            string command = commandline[0];
 
-            if (commandline.Equals("Add"))
+            if (command.Equals("Add"))
             {
-                numberList.Add(int.Parse(console.Split()[1]));
+                numberList.Add(int.Parse(commandline[1]));
             }
-            else if (commandline.Equals("Remove"))
+            else if (command.Equals("Remove"))
             {
-                numberList.Remove(int.Parse(console.Split()[1]));
+                numberList.Remove(int.Parse(commandline[1]));
             }
-            else if (commandline.Equals("RemoveAt"))
+            else if (command.Equals("RemoveAt"))
             {
-                numberList.Remove(int.Parse(console.Split()[1]));
+                numberList.RemoveAt(int.Parse(commandline[1]));
             }
-            else if (commandline.Equals("Insert"))
+            else if (command.Equals("Insert"))
             {
-                numberList.Insert(int.Parse(console.Split()[2]), int.Parse(console.Split()[1]));
+                numberList.Insert(int.Parse(commandline[2]), int.Parse(commandline[1]));
             }
 
             console = Console.ReadLine();
