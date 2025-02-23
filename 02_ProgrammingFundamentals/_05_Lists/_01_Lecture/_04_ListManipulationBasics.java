@@ -15,15 +15,15 @@ public class _04_ListManipulationBasics {
 
         // Manipulate lists based on the given commands
         while (!console.equals("end")) {
-            String commandline = console.split("\\s+")[0];
+            String commandLine = console.split("\\s+")[0];
 
-            if (commandline.equals("Add")) {
+            if (commandLine.equals("Add")) {
                 numberList.add(Integer.parseInt(console.split("\\s+")[1]));
-            } else if (commandline.equals("Remove")) {
+            } else if (commandLine.equals("Remove")) {
                 numberList.remove(Integer.valueOf(Integer.parseInt(console.split("\\s+")[1])));
-            } else if (commandline.equals("RemoveAt")) {
+            } else if (commandLine.equals("RemoveAt")) {
                 numberList.remove(Integer.parseInt(console.split("\\s+")[1]));
-            } else if (commandline.equals("Insert")) {
+            } else if (commandLine.equals("Insert")) {
                 numberList.add(Integer.parseInt(console.split("\\s+")[2]), Integer.parseInt(console.split("\\s+")[1]));
             }
 
