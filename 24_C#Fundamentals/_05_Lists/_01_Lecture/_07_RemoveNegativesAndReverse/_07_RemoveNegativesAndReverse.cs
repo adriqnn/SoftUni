@@ -7,17 +7,10 @@ public class _07_RemoveNegativesAndReverse
     public static void Main(string[] args)
     {
         // Read input values
-        List<int> numbersList = Console.ReadLine().Split().Select(int.Parse).ToList();
+        List<int> numbersList = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList();
 
         // Remove negative numbers
-        for (int i = 0; i < numbersList.Count; i++)
-        {
-            if (numbersList[i] < 0)
-            {
-                numbersList.Remove(i);
-                i--;
-            }
-        }
+        numbersList.RemoveAll(n => n < 0);
 
         // Reverse list
         numbersList.Reverse();
