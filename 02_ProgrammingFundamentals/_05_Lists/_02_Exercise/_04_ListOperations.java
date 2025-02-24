@@ -50,7 +50,7 @@ public class _04_ListOperations {
             console = scan.nextLine();
         }
 
-        //Print result
+        // Print result
         numbersList.stream().forEach(e -> System.out.print(e + " "));
 
         scan.close();
