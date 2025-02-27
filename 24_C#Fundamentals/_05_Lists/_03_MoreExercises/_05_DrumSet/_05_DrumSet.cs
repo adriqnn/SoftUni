@@ -21,32 +21,31 @@ public class _05_DrumSet
 
             for (int i = 0; i < drumsActualQualityNow.Count; i++)
             {
-                drumsActualQualityNow.set(i, (drumsActualQualityNow.get(i) - hitPower));
+                drumsActualQualityNow[i] -= hitPower;
             }
 
-            for (int i = 0; i < drumsActualQualityNow.size(); i++)
+            for (int i = 0; i < drumsActualQualityNow.Count; i++)
             {
-                if (drumsActualQualityNow.get(i) <= 0)
+                if (drumsActualQualityNow[i] <= 0)
                 {
-                    if (moneyToSpend - (drumsBaseQuality.get(i) * 3) >= 0)
+                    if (moneyToSpend - (drumsBaseQuality[i] * 3) >= 0)
                     {
-                        drumsActualQualityNow.set(i, drumsBaseQuality.get(i));
-                        moneyToSpend -= drumsBaseQuality.get(i) * 3;
+                        drumsActualQualityNow[i] = drumsBaseQuality[i];
+                        moneyToSpend -= drumsBaseQuality[i] * 3;
                     }
                     else
                     {
-                        drumsBaseQuality.remove(i);
-                        drumsActualQualityNow.remove(i);
+                        drumsBaseQuality.RemoveAt(i);
+                        drumsActualQualityNow.RemoveAt(i);
                     }
                 }
             }
 
-            commands = scan.nextLine();
+            commands = Console.ReadLine();
         }
 
         // Print result
-        drumsActualQualityNow.stream().forEach(e->System.out.print(e + " "));
-        System.out.println();
-        System.out.printf("Gabsy has %.2flv.", moneyToSpend);
+        Console.WriteLine(string.Join(" ", drumsActualQualityNow));
+        Console.WriteLine($"Gabsy has {moneyToSpend:F2}lv.");
     }
 }
