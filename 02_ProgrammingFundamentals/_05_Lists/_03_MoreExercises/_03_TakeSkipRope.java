@@ -37,7 +37,6 @@ public class _03_TakeSkipRope {
             }
         }
 
-
         StringBuilder fromDecryptStrings = new StringBuilder();
         decryptStrings.stream().forEach(fromDecryptStrings::append);
 
