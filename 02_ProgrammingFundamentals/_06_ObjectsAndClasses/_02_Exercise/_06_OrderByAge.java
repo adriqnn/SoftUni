@@ -15,7 +15,6 @@ public class _06_OrderByAge {
         // Add variable
         List<Album> names = new ArrayList<>();
 
-
         // Create collection of people
         while (!console.equals("End")) {
             String[] consoleLine = console.split("\\s+");
