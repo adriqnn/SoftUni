@@ -111,7 +111,7 @@ public class _04_TeamworkProjects {
             for (Teams join : teamsList) {
                 if (join.getTeam().equals(team)) {
                     join.getMembers().add(name);
-                    join.setSize(join.getSize()+1);
+                    join.setSize(join.getSize() + 1);
                 }
             }
 
