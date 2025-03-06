@@ -1,1 +1,5 @@
-_03_Arrays
+# Arrays:
+
+* Lecture
+* Exercise
+* More Exercises
