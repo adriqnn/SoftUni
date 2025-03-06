@@ -1,1 +1,5 @@
-_07_AssociativeArrays
+Associative Arrays:
+
+* Lecture
+* Exercise
+* More Exercises
