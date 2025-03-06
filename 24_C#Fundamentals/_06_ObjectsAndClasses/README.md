@@ -1,1 +1,6 @@
-_06_ObjectsAndClasses
+Objects and Classes:
+
+* Lecture
+* Exercise
+* More Exercises
+
