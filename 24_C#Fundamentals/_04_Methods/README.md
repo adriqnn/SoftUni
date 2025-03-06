@@ -1,2 +1,6 @@
-_04_Methods
+Methods:
+
+* Lecture
+* Exercise
+* More Exercises
 
