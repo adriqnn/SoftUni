@@ -1,4 +1,4 @@
-Text Processing:
+# Text Processing:
 
 * Lecture
 * Exercise
