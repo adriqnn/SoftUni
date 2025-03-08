@@ -1,4 +1,4 @@
-Methods:
+# Methods:
 
 * Lecture
 * Exercise
