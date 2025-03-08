@@ -1,4 +1,4 @@
-Associative Arrays:
+# Associative Arrays:
 
 * Lecture
 * Exercise
