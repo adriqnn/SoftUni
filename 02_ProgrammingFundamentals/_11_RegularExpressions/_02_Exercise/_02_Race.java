@@ -24,7 +24,7 @@ public class _02_Race {
         Pattern patternNumbers = Pattern.compile(regexDistance);
 
         // Determine the winner of the race
-        while(!input.equals("end of race")){
+        while (!input.equals("end of race")) {
             StringBuilder nameBuilder = new StringBuilder();
 
             int distance = 0;
