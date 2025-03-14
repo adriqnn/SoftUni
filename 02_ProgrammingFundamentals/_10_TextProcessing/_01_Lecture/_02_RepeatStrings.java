@@ -21,7 +21,7 @@ public class _02_RepeatStrings {
     }
 
     // Method that concatenates a string multiple times
-    private static String repeatWord(String word, int length) {
+    private static String repeatWord (String word, int length) {
         StringBuilder result = new StringBuilder();
         
         for (int i = 0; i < length; i++) {
