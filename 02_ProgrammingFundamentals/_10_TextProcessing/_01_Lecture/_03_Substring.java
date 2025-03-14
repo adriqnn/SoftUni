@@ -11,7 +11,7 @@ public class _03_Substring {
         String consoleString = scan.nextLine();
         
         // Remove the string from console
-        while(consoleString.contains(stringToRemove)){
+        while (consoleString.contains(stringToRemove)) {
             consoleString = consoleString.replaceFirst(stringToRemove, "");
         }
         
