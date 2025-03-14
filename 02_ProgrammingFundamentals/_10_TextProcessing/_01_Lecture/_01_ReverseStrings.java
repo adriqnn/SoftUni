@@ -10,7 +10,7 @@ public class _01_ReverseStrings {
         StringBuilder input = new StringBuilder(scan.nextLine());
         
         // Reverse strings
-        while(!input.toString().equals("end")) {
+        while (!input.toString().equals("end")) {
             String original = input.toString();
             input.reverse();
             
