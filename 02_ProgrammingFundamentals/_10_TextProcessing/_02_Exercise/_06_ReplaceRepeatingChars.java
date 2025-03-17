@@ -11,7 +11,7 @@ public class _06_ReplaceRepeatingChars {
         
         // Replace repeating character
         for (int i = 1; i < console.length(); i++) {
-            if(console.charAt(i) == console.charAt(i-1)){
+            if (console.charAt(i) == console.charAt(i - 1)) {
                 console.deleteCharAt(i);
                 i--;
             }
