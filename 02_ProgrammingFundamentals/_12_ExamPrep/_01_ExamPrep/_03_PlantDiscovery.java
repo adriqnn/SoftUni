@@ -28,7 +28,7 @@ public class _03_PlantDiscovery {
         String command = scan.nextLine();
 
         // Create plant data
-        while(!command.equals("Exhibition")){
+        while (!command.equals("Exhibition")) {
             String[] commandParts = command.split(": | - ");
 
             String commandName = commandParts[0];
