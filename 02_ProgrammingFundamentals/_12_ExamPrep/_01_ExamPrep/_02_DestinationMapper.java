@@ -26,7 +26,7 @@ public class _02_DestinationMapper {
         //String resultText = String.join(", ", locations);
 
         // Determine destination
-        while (regexMatcher.find()){
+        while (regexMatcher.find()) {
             locations.add(regexMatcher.group("destination"));
             
             for (int i = 0; i < regexMatcher.group("destination").length(); i++) {
