@@ -16,7 +16,7 @@ public class _01_WorldTour {
 
             String switchCommand = input[0];
 
-            switch (switchCommand){
+            switch (switchCommand) {
                 case "Add Stop":
                     int index1 = Integer.parseInt(input[1]);
                     String addString = input[2];
