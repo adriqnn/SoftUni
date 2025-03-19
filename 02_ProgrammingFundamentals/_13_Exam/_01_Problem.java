@@ -11,21 +11,21 @@ public class _01_Problem {
         String console = scan.nextLine();
 
         // String operations
-        while(!console.equals("Sign up")){
+        while (!console.equals("Sign up")) {
             String[] commandLine = console.split(" ");
             
             String command = commandLine[0];
             
-            switch (command){
+            switch (command) {
                 case "Case":
                     String caseUpperOrLower = commandLine[1];
                     
-                    if(caseUpperOrLower.equals("lower")){
+                    if (caseUpperOrLower.equals("lower")) {
                         String toLower = username.toString().toLowerCase();
                         username = new StringBuilder(toLower);
                         
                         System.out.println(username);
-                    }else if (caseUpperOrLower.equals("upper")){
+                    } else if (caseUpperOrLower.equals("upper")) {
                         String toUpper = username.toString().toUpperCase();
                         username = new StringBuilder(toUpper);
                         
@@ -36,7 +36,7 @@ public class _01_Problem {
                     int intReverseStart = Integer.parseInt(commandLine[1]);
                     int intReverseEnd = Integer.parseInt(commandLine[2]);
                     
-                    if((intReverseStart >= 0 && intReverseStart < username.length()) && (intReverseEnd >=0 && intReverseEnd < username.length())) {
+                    if ((intReverseStart >= 0 && intReverseStart < username.length()) && (intReverseEnd >=0 && intReverseEnd < username.length())) {
                         String toReverse = "";
                         
                         for (int i = intReverseStart; i <= intReverseEnd; i++) {
@@ -45,7 +45,7 @@ public class _01_Problem {
                         
                         String reversed = "";
                         
-                        for (int i = toReverse.length()-1; i >= 0; i--) {
+                        for (int i = toReverse.length() - 1; i >= 0; i--) {
                             reversed += toReverse.charAt(i);
                         }
                         
@@ -56,12 +56,12 @@ public class _01_Problem {
                 case "Cut":
                     String stringToCut = commandLine[1];
                     
-                    if(username.toString().contains(stringToCut)){
+                    if (username.toString().contains(stringToCut)) {
                         String cutString = username.toString().replaceFirst(stringToCut, "");
                         username = new StringBuilder(cutString);
                         
                         System.out.println(username);
-                    }else{
+                    } else {
                         System.out.printf("The word %s doesn't contain %s.%n", username, stringToCut);
                     }
                     
@@ -78,11 +78,12 @@ public class _01_Problem {
                 case "Check":
                     String charToContain = commandLine[1];
                     
-                    if(username.toString().contains(charToContain)){
+                    if (username.toString().contains(charToContain)) {
                         System.out.println("Valid");
-                    }else{
+                    } else {
                         System.out.printf("Your username must contain %s.%n", charToContain);
                     }
+                    
                     break;
             }
             
