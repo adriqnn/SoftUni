@@ -70,17 +70,17 @@ public class _03_Problem {
 }
 
 /*
-carsMileage.entrySet().stream().sorted((car1, car2) -> Integer.compare(car2.getValue(), car1.getValue())).forEach(carEntry -> {
-    String carName = carEntry.getKey();
-    System.out.printf("%s -> Mileage: %d kms, Fuel in the tank: %d lt.%n", carEntry.getKey(), carEntry.getValue(), carsFuel.get(carName));
-});
+    carsMileage.entrySet().stream().sorted((car1, car2) -> Integer.compare(car2.getValue(), car1.getValue())).forEach(carEntry -> {
+        String carName = carEntry.getKey();
+        System.out.printf("%s -> Mileage: %d kms, Fuel in the tank: %d lt.%n", carEntry.getKey(), carEntry.getValue(), carsFuel.get(carName));
+    });
  */
 
 /*
-courses.entrySet().stream().sorted((e1, e2) -> Integer.compare(e2.getValue().size(), e1.getValue().size())).forEach(entry -> {
-    System.out.println(entry.getKey() + ": " + entry.getValue().size());
-    // entry.getValue().stream().sorted().forEach(studentName -> System.out.println("-- " + studentName));});
-    List<String> students = entry.getValue();
-    students.stream().sorted().forEach(studentName -> System.out.println("-- " + studentName));
-});
+    courses.entrySet().stream().sorted((e1, e2) -> Integer.compare(e2.getValue().size(), e1.getValue().size())).forEach(entry -> {
+        System.out.println(entry.getKey() + ": " + entry.getValue().size());
+        // entry.getValue().stream().sorted().forEach(studentName -> System.out.println("-- " + studentName));});
+        List<String> students = entry.getValue();
+        students.stream().sorted().forEach(studentName -> System.out.println("-- " + studentName));
+    });
 */
