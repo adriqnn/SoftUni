@@ -18,11 +18,10 @@ public class _02_Problem {
         // Match passwords
         for (int i = 0; i < n; i++) {
             String console = scan.nextLine();
-            
             Matcher matcher = pattern.matcher(console);
 
             // Print result
-            if(matcher.find()){
+            if (matcher.find()) {
                 String one = matcher.group("grp2");
                 String two = matcher.group("grp3");
                 String three = matcher.group("grp4");
@@ -30,7 +29,7 @@ public class _02_Problem {
                 
                 StringBuilder password = new StringBuilder();
                 System.out.println("Password: " + one + two + three + four);
-            }else {
+            } else {
                 System.out.println("Try another password!");
             }
         }
