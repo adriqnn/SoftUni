@@ -13,7 +13,6 @@ public class _01_Problem {
         // String operations
         while (!console.equals("Sign up")) {
             String[] commandLine = console.split(" ");
-            
             String command = commandLine[0];
             
             switch (command) {
