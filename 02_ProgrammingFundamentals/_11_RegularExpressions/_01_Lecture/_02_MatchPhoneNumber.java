@@ -20,7 +20,7 @@ public class _02_MatchPhoneNumber {
         List<String> matchedPhones = new ArrayList<>();
 
         // Match phone numbers and save them
-        while(matcherPhone.find()){
+        while (matcherPhone.find()) {
             matchedPhones.add(matcherPhone.group());
         }
 
