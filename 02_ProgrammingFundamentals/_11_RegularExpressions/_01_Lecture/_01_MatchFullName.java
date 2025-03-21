@@ -17,7 +17,7 @@ public class _01_MatchFullName {
         Matcher matcherName = patternName.matcher(console);
         
         // Match the name and print result
-        while(matcherName.find()){
+        while (matcherName.find()) {
             String find = matcherName.group("name");
             
             System.out.print(find + " ");
