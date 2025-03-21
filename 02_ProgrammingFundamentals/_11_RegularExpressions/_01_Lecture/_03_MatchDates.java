@@ -17,7 +17,7 @@ public class _03_MatchDates {
         Matcher matcher = pattern.matcher(dates);
 
         // Match dates and print result
-        while(matcher.find()){
+        while (matcher.find()) {
             String day = matcher.group("day");
             String month = matcher.group("month");
             String year = matcher.group("year");
