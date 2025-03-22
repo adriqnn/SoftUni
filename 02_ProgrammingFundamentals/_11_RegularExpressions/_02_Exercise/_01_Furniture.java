@@ -20,10 +20,10 @@ public class _01_Furniture {
         double totalMoney = 0;
 
         // Purchase furniture
-        while(!console.equals("Purchase")){
+        while (!console.equals("Purchase")) {
             Matcher matcher = pattern.matcher(console);
             
-            if (matcher.find()){
+            if (matcher.find()) {
                 String furniture = matcher.group("furniture");
                 
                 double price = Double.parseDouble(matcher.group("price"));
