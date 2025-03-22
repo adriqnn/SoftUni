@@ -14,7 +14,7 @@ public class _02_Race {
 
         // Add variables
         List<String> racers = Arrays.stream(scan.nextLine().split(",\\s+")).collect(Collectors.toList());
-        Map<String,Integer> racersDistance = new LinkedHashMap<>();
+        Map<String, Integer> racersDistance = new LinkedHashMap<>();
         racers.forEach(racer -> racersDistance.put(racer, 0));
 
         String regexLetters = "[A-Za-z]{1}";
@@ -28,22 +28,21 @@ public class _02_Race {
             StringBuilder nameBuilder = new StringBuilder();
 
             int distance = 0;
-
             Matcher matcherName = patternLetters.matcher(input);
 
-            while(matcherName.find()){
+            while (matcherName.find()) {
                 nameBuilder.append(matcherName.group());
             }
 
             Matcher matcherDistance = patternNumbers.matcher(input);
 
-            while(matcherDistance.find()){
+            while (matcherDistance.find()) {
                 distance += Integer.parseInt(matcherDistance.group());
             }
 
             String racerName = nameBuilder.toString();
 
-            if(racersDistance.containsKey(racerName)){
+            if (racersDistance.containsKey(racerName)) {
                 int currentDistance = racersDistance.get(racerName);
                 racersDistance.put(racerName, currentDistance + distance);
             }
@@ -51,11 +50,9 @@ public class _02_Race {
             input = scan.nextLine();
         }
 
-        /*List<String> firstThreeNames = racersDistance.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-                .limit(3).map(entry -> entry.getKey()).collect(Collectors.toList());*/
+        /*List<String> firstThreeNames = racersDistance.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).limit(3).map(entry -> entry.getKey()).collect(Collectors.toList());*/
 
-        Map<String, Integer> sortedMap = racersDistance.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).limit(3)
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (a1, a2) -> a1, LinkedHashMap::new));
+        Map<String, Integer> sortedMap = racersDistance.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).limit(3).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (a1, a2) -> a1, LinkedHashMap::new));
         List<String> firstThreeNames = new ArrayList<>();
         sortedMap.entrySet().forEach(entry -> firstThreeNames.add(entry.getKey()));
 
