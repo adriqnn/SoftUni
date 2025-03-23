@@ -36,14 +36,14 @@ public class _05_NetherRealms {
 
             int health = 0;
 
-            while(matcherHealth.find()){
+            while (matcherHealth.find()) {
                 health += matcherHealth.group().charAt(0);
             }
 
             Matcher matcherAttack = patternAttack.matcher(console.get(i));
             double attackDemons = 0;
 
-            while(matcherAttack.find()){
+            while (matcherAttack.find()) {
                 attackDemons += Double.parseDouble(matcherAttack.group());
             }
 
@@ -51,8 +51,6 @@ public class _05_NetherRealms {
             int countDivide = 0;
 
             for (int i1 = 0; i1 < console.get(i).length(); i1++) {
-
-
                 if ((char) console.get(i).charAt(i1) == Character.valueOf('*')) {
                     countMultiply++;
                 } else if ((char) console.get(i).charAt(i1) == '/') {
@@ -67,7 +65,6 @@ public class _05_NetherRealms {
                 attackDemons *= 2;
             }
 
-
             // Print result
             System.out.printf("%s - %d health, %.2f damage%n", console.get(i), health, attackDemons);
         }
@@ -77,14 +74,14 @@ public class _05_NetherRealms {
 }
 
 //    Matcher matcherAction = patternAction.matcher(console.get(i));
-//        while(matcherAction.find()){
+//        while (matcherAction.find()) {
 //            actions.add(matcherAction.group().charAt(0));
 //        }
 //
 //        for (int j = 0; j < actions.size(); j++) {
-//            if(actions.get(j) == '*'){
+//            if (actions.get(j) == '*') {
 //                attackDemons *= 2;
-//            }else if(actions.get(j) == '/'){
+//            } else if (actions.get(j) == '/') {
 //                attackDemons /=2;
 //            }
 //        }
