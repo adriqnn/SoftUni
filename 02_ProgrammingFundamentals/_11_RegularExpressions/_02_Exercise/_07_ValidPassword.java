@@ -21,20 +21,20 @@ public class _07_ValidPassword {
             Matcher matcherEmail = patternEmail.matcher(input);
 
             // Print result
-            if(matcherEmail.find()){
+            if (matcherEmail.find()) {
                 StringBuilder groupString = new StringBuilder("Group: ");
 
                 for (int j = 0; j < input.length(); j++) {
                     char current = input.charAt(j);
 
-                    if(Character.isDigit(current)){
+                    if (Character.isDigit(current)) {
                         groupString.append(current);
                     }
                 }
 
                 System.out.println(groupString.length() > 7 ? groupString : groupString + "default");
 
-            }else{
+            } else {
                 System.out.println("Invalid pass!");
             }
         }
