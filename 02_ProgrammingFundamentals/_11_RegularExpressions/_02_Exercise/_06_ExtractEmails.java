@@ -17,7 +17,7 @@ public class _06_ExtractEmails {
         Matcher matcherEmail = patternEmail.matcher(input);
 
         // Extract emails and print result
-        while (matcherEmail.find()){
+        while (matcherEmail.find()) {
             String email = matcherEmail.group(1);
             System.out.println(email);
         }
