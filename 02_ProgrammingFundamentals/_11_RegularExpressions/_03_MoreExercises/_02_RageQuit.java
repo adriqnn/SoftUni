@@ -21,7 +21,7 @@ public class _02_RageQuit {
         Matcher matcherInput = patternInput.matcher(input);
 
         // Decipher the message
-        while (matcherInput.find()){
+        while (matcherInput.find()) {
             String stringType = matcherInput.group("string");
             int times = Integer.parseInt(matcherInput.group("number"));
 
