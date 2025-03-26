@@ -26,23 +26,23 @@ public class _01_WinningTicket {
 
         // Determine the winning ticket and print result
         for (int i = 0; i < tickets.size(); i++) {
-            if(tickets.get(i).length() == 20){
+            if (tickets.get(i).length() == 20) {
                 Matcher matcherTicket = patternTicket.matcher(tickets.get(i));
 
-                if(matcherTicket.find()) {
+                if (matcherTicket.find()) {
                     winningTickets.add(tickets.get(i));
                     String match = matcherTicket.group("grp");
 
-                    if(match.length() == 10){
+                    if (match.length() == 10) {
                         System.out.printf("ticket \"%s\" - %d%s Jackpot!%n", tickets.get(i), match.length(), match.charAt(0));
-                    }else{
+                    } else {
                         System.out.printf("ticket \"%s\" - %d%s%n", tickets.get(i), match.length(), match.charAt(0));
                     }
 
-                }else{
+                } else {
                     System.out.printf("ticket \"%s\" - no match%n", tickets.get(i));
                 }
-            }else{
+            } else {
                 System.out.printf("invalid ticket%n");
             }
         }
