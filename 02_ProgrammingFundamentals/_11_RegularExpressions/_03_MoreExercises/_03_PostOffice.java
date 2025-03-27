@@ -19,7 +19,7 @@ public class _03_PostOffice {
         Pattern patternCapitalLetters = Pattern.compile(regexCapitalLetters);
         Matcher matcherCapitalLetters = patternCapitalLetters.matcher(input[0]);
 
-        while(matcherCapitalLetters.find()){
+        while (matcherCapitalLetters.find()) {
             characters.append(matcherCapitalLetters.group("string"));
         }
 
@@ -32,7 +32,7 @@ public class _03_PostOffice {
             Matcher matcherWordLength = patternWordLength.matcher(input[1]);
 
             int wordLength = 0;
-            while(matcherWordLength.find()){
+            while (matcherWordLength.find()) {
                 wordLength = Integer.parseInt(matcherWordLength.group("length")) + 1;
             }
 
