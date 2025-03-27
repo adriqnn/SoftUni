@@ -13,7 +13,7 @@ public class _04_SantaSSecretHelper {
         String input = scan.nextLine();
 
         // Read the message and decipher
-        while(!input.equals("end")){
+        while (!input.equals("end")) {
 
             StringBuilder message = new StringBuilder();
 
