@@ -58,6 +58,6 @@ public class _03_PostOffice {
 //    Pattern patternWord = Pattern.compile(regexWord);
 //    Matcher matcherWord = patternWord.matcher(input[2]);
 //
-//    while(matcherWord.find()){
+//    while (matcherWord.find()) {
 //        System.out.println(matcherWord.group());
 //    }
