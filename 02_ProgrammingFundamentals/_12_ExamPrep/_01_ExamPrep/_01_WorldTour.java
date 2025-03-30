@@ -11,7 +11,7 @@ public class _01_WorldTour {
         String command = scan.nextLine();
 
         // Determine world tour route
-        while(!command.equals("Travel")){
+        while (!command.equals("Travel")) {
             String[] input = command.split(":");
 
             String switchCommand = input[0];
