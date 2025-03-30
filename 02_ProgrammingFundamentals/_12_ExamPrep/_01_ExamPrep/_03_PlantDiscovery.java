@@ -40,7 +40,7 @@ public class _03_PlantDiscovery {
                 continue;
             }
 
-            switch(commandName){
+            switch (commandName) {
                 case "Rate":
                     int rating = Integer.parseInt(commandParts[2]);
                     currentPlants.get(plantName).addRating(rating);
