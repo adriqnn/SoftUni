@@ -48,7 +48,7 @@ public class _01_PasswordReset {
                         console = new StringBuilder(consoleToString);
                         System.out.println(console);
 
-                    }else{
+                    } else {
                         console = new StringBuilder(consoleToString);
                         System.out.println("Nothing to replace!");
                     }
