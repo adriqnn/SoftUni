@@ -20,7 +20,7 @@ public class _02_FancyBarcodes {
             String console = scan.next();
             Matcher matcherBarcodes = patternBarcodes.matcher(console);
             
-            if (matcherBarcodes.find()){
+            if (matcherBarcodes.find()) {
                 String barcode = matcherBarcodes.group("group2");
                 StringBuilder group = new StringBuilder();
                 
@@ -32,12 +32,12 @@ public class _02_FancyBarcodes {
                     }
                 }
                 
-                if (group.toString().equals("")){
+                if (group.toString().equals("")) {
                     System.out.println("Product group: 00");
-                }else{
+                } else {
                     System.out.printf("Product group: %s%n", group);
                 }
-            }else{
+            } else {
                 System.out.println("Invalid barcode");
             }
         }
