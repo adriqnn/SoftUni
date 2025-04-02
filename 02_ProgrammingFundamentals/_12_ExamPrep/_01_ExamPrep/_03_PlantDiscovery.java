@@ -34,7 +34,7 @@ public class _03_PlantDiscovery {
             String commandName = commandParts[0];
             String plantName = commandParts[1];
 
-            if(!currentPlants.containsKey(plantName)){
+            if (!currentPlants.containsKey(plantName)) {
                 command = scan.nextLine();
                 System.out.println("error");
                 continue;
