@@ -1,5 +1,39 @@
-<!-- Sidebar -->
-      <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collapsible Sidebar Items</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Make the sidebar fixed */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 250px;
+      z-index: 100;
+      overflow-y: auto;
+    }
+
+    /* Adjust the main content to accommodate the fixed sidebar */
+    .main-content {
+      margin-left: 250px; /* Same as the sidebar width */
+      padding: 20px;
+    }
+
+    /* Optional: Add some margin to the top of the page for better visibility */
+    body {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="sidebar bg-light">
         <div class="position-sticky">
           <ul class="nav flex-column">
             <li class="nav-item">
@@ -67,3 +101,17 @@
           </ul>
         </div>
       </nav>
+
+      <!-- Main Content -->
+      <main class="main-content col-md-9 ms-sm-auto col-lg-10">
+        <h1>Welcome to the Main Content</h1>
+        <p>Here you can add your content.</p>
+        <p>Scroll this content independently from the sidebar.</p>
+      </main>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle with Popper (for Collapse) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
