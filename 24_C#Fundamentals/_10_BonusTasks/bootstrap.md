@@ -1,6 +1,6 @@
 <div class="container">
             <div class="row justify-content-center button-container">
-                <!-- First Column of Buttons -->
+                <!-- Column 1 of Buttons (Repeated every 3 rows) -->
                 <div class="col-md-6">
                     <asp:Button runat="server" ID="Button1" Text="Button 1" CssClass="btn btn-primary" />
                     <asp:Button runat="server" ID="Button2" Text="Button 2" CssClass="btn btn-primary" />
@@ -15,7 +15,7 @@
                     <asp:Button runat="server" ID="Button11" Text="Button 11" CssClass="btn btn-primary" />
                     <asp:Button runat="server" ID="Button12" Text="Button 12" CssClass="btn btn-primary" />
                 </div>
-                <!-- Second Column of Buttons -->
+                <!-- Column 2 of Buttons (Repeated every 3 rows) -->
                 <div class="col-md-6">
                     <asp:Button runat="server" ID="Button13" Text="Button 13" CssClass="btn btn-primary" />
                     <asp:Button runat="server" ID="Button14" Text="Button 14" CssClass="btn btn-primary" />
