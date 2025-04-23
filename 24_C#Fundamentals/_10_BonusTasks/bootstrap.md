@@ -60,3 +60,29 @@
                 <asp:Button runat="server" ID="Button24" Text="Button 24" CssClass="btn btn-primary" />
             </div>
         </div>
+
+body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Styling for the container to hold the buttons */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 columns */
+            gap: 10px; /* Gap between buttons */
+        }
+
+        /* Each button should be at least 200px wide */
+        .btn {
+            width: 200px;
+        }
+
+        /* Centering buttons within their container */
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+        }
