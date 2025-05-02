@@ -6,7 +6,6 @@
 * Methods;
 * Lists;
 * Objects and Classes;
-* Mid Exam;
 * Maps, Lambda and Stream API;
 * Text Processing;
 * Regular Expressions;
