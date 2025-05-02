@@ -9,6 +9,5 @@
 * Maps, Lambda and Stream API;
 * Text Processing;
 * Regular Expressions;
-* Exam Prep;
 * Exam;
 * Bonus Tasks;
