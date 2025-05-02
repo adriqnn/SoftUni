@@ -1,4 +1,4 @@
-# C# Fundamentals 
+# C# Fundamentals
 
 * Basic Syntax, Conditional Statements and Loops;
 * Data Types and Variables;
