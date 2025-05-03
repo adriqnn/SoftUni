@@ -6,7 +6,7 @@
 * Methods;
 * Lists;
 * Objects and Classes;
-* Maps, Lambda and Stream API;
+* Associative Arrays;
 * Text Processing;
 * Regular Expressions;
 * Bonus Tasks;
