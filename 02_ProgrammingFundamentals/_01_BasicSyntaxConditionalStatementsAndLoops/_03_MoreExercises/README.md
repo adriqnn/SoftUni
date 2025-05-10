@@ -1,1 +1,1 @@
-# Basic Syntax, Conditional Statements and Loops - More Exercises 
+# Basic Syntax, Conditional Statements and Loops - More Exercises
