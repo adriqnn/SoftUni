@@ -20,7 +20,7 @@ public class _05_Messages {
             int mainDigit = console % 10;
             int offset = (mainDigit - 2) * 3;
 
-            if (mainDigit == 8 || mainDigit == 9){
+            if (mainDigit == 8 || mainDigit == 9) {
                 offset += 1;
             }
 
