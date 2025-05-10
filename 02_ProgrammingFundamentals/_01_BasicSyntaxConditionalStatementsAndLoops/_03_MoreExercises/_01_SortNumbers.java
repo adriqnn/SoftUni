@@ -20,9 +20,9 @@ public class _01_SortNumbers {
         }
 
         // Additional methods of solving
-        /*numbers.stream().sorted((e1, e2) -> Integer.compare(e2, e1)).collect(Collectors.toList()).forEach(System.out::println);*/
-        /*numbers.stream().sorted(Comparator.reverseOrder()).forEach(e -> System.out.println(e));*/
-        //Collections.reverse(numbers);
+        /* numbers.stream().sorted((e1, e2) -> Integer.compare(e2, e1)).collect(Collectors.toList()).forEach(System.out::println); */
+        /* numbers.stream().sorted(Comparator.reverseOrder()).forEach(e -> System.out.println(e)); */
+        // Collections.reverse(numbers);
 
         // Print result
         numbers.stream().sorted((e1, e2) -> Integer.compare(e2, e1)).collect(Collectors.toList()).forEach(System.out::println);
