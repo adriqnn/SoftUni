@@ -1,1 +1,1 @@
-# Data Types and Variables - Exercise 
+# Data Types and Variables - Exercise
