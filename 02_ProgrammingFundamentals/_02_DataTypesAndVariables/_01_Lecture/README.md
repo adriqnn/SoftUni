@@ -1,4 +1,4 @@
-# Data Types and Variables - Lecture
+# Data Types and Variables - Lecture 
 
 * Data Types -> variables, name, size, default value, camelcase, scope and lifetime;
 * Integer Types -> byte, short, int, long, has range, integer literals, big integer;
