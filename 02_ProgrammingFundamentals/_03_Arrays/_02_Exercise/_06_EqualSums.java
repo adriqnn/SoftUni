@@ -23,7 +23,7 @@ public class _06_EqualSums {
                 sumLeft += numbersArray[j];
             }
 
-            for (int j = i+1; j < numbersArray.length; j++) {
+            for (int j = i + 1; j < numbersArray.length; j++) {
                 sumRight += numbersArray[j];
             }
 
