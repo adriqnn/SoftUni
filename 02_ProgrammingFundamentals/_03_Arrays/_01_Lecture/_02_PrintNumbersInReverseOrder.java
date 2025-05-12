@@ -13,7 +13,7 @@ public class _02_PrintNumbersInReverseOrder {
         int[] numbers = new int[n];
 
         // Reverse the array
-        for (int i = n-1; i >= 0; i--) {
+        for (int i = n - 1; i >= 0; i--) {
             int number = Integer.parseInt(scan.nextLine());
             numbers[i] = number;
         }
