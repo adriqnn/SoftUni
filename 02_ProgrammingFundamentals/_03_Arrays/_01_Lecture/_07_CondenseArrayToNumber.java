@@ -16,7 +16,6 @@ public class _07_CondenseArrayToNumber {
 
             for (int i = 0; i < numbers.length - 1; i++) {
                 condensed[i] = numbers[i] + numbers[i + 1];
-
             }
 
             numbers = condensed;
