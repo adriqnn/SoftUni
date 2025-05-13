@@ -52,7 +52,6 @@ public class _06_LadyBugs {
                         }
                     }
                 }
-
             }
 
             commands = scan.nextLine();
