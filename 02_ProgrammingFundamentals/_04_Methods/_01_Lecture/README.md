@@ -1,4 +1,4 @@
-# Methods - Lecture 
+# Methods - Lecture
 
 * Methods -> named block of code, definition, invoking, reusable, void type, meaningful names, single task;
 * Method -> type, method name, parameters, method body, declaration, invocation, return statements;
