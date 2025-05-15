@@ -6,7 +6,7 @@ public class _05_MultiplicationSign {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input value
+        // Read input values
         int num1 = Integer.parseInt(scan.nextLine());
         int num2 = Integer.parseInt(scan.nextLine());
         int num3 = Integer.parseInt(scan.nextLine());
