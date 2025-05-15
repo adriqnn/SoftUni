@@ -190,7 +190,7 @@ public class _06_ArrayManipulator {
         int[] afterExchange = new int[numbersArray.length];
         int change = 0;
 
-        for (int i = index+1; i < numbersArray.length; i++) {
+        for (int i = index + 1; i < numbersArray.length; i++) {
             afterExchange[change] = numbersArray[i];
             change++;
         }
