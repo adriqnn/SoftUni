@@ -5,4 +5,3 @@
 * Memory stack and heap -> variables(values)(primitive types)(int, float, double, boolean, char)[stack] and reference types(wrapper types)(string, array & other)[heap];
 * Overloading -> signature, name, parameters;
 * Program execution flow -> call stack and execution of pieces of code;
-  
