@@ -7,7 +7,7 @@ public class _08_MathPower {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input value
+        // Read input values
         double num = Double.parseDouble(scan.nextLine());
         double power = Double.parseDouble(scan.nextLine());
         
