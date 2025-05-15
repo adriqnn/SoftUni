@@ -126,7 +126,6 @@ public class _06_ArrayManipulator {
         int[] firstCountArray = Arrays.stream(arrayString.split("\\s+")).mapToInt(Integer::parseInt).toArray();
 
         printArray(firstCountArray);
-
     }
 
     private static void returnMinOrMaxArray(int[] numbersArray, String isItEvenOrOddMin) {
