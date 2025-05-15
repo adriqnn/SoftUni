@@ -34,11 +34,11 @@ public class _09_GreaterOfTwoValues {
         return Math.max(numberOne, numberTwo);
     }
 
-    private static char whatIsBigger(char charOne, char charTwo){
+    private static char whatIsBigger(char charOne, char charTwo) {
         return ((char) (Math.max(charOne, charTwo)));
     }
 
-    private static String whatIsBigger(String firstString, String secondString){
+    private static String whatIsBigger(String firstString, String secondString) {
         if (firstString.compareTo(secondString) >= 0) {
             return firstString;
         } else {
