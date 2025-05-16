@@ -48,19 +48,19 @@ public class _05_Numbers {
         if (i + power >= numbersList.size() - 1 && i - power < 0) {
             return newList;
         } else if (i + power >= numbersList.size() - 1) {
-            for (int j = 0; j < i-power; j++) {
+            for (int j = 0; j < i - power; j++) {
                 newList.add(numbersList.get(j));
             }
 
             return newList;
-        }else if (i - power < 0) {
+        } else if (i - power < 0) {
             for (int j = i + power + 1; j < numbersList.size(); j++) {
                 newList.add(numbersList.get(j));
             }
 
             return newList;
         } else {
-            for (int j = 0; j < i-power; j++) {
+            for (int j = 0; j < i - power; j++) {
                 newList.add(numbersList.get(j));
             }
 
