@@ -79,7 +79,6 @@ public class _10_SoftUniCoursePlanning {
 
                     courseList.add(exercise);
                 }
-
             }
 
             commands = scan.nextLine();
