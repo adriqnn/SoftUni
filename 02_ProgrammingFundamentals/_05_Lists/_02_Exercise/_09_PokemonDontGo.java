@@ -31,7 +31,7 @@ public class _09_PokemonDontGo {
                         pokemonDistance.set(i, pokemonDistance.get(i) - removedElement);
                     }
                 }
-            } else if(element < 0) {
+            } else if (element < 0) {
                 int removedElement = pokemonDistance.get(0);
                 pokemonDistance.set(0, pokemonDistance.get(pokemonDistance.size() - 1));
                 sum += removedElement;
