@@ -11,7 +11,7 @@ public class _02_GaussTrick {
 
         // Read input values
         List<Integer> listNumbers = Arrays.stream(scan.nextLine().split("\\s+")).map(Integer::parseInt).collect(Collectors.toList());
-        //List<String> hmm = Arrays.stream(scan.nextLine().split("\\s+")).collect(Collectors.toList());
+        // List<String> hmm = Arrays.stream(scan.nextLine().split("\\s+")).collect(Collectors.toList());
 
         // Add variable
         int middle = listNumbers.size() / 2;
