@@ -24,7 +24,7 @@ public class _06_CardsGame {
 
                 cardsList1.remove(0);
                 cardsList2.remove(0);
-            } else if(cardsList1.get(0) < cardsList2.get(0)) {
+            } else if (cardsList1.get(0) < cardsList2.get(0)) {
                 cardsList2.add(cardsList2.get(0));
                 cardsList2.add(cardsList1.get(0));
 
