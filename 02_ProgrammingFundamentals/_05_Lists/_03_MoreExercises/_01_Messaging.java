@@ -32,7 +32,6 @@ public class _01_Messaging {
         for (int i = 0; i < numbersList.size(); i++) {
             while (numbersList.get(i) > consoleSentence.length() - 1) {
                 numbersList.set(i, (numbersList.get(i)) - (consoleSentence.length()));
-
             }
 
             lineToPrint.append(consoleSentence.charAt(numbersList.get(i)));
