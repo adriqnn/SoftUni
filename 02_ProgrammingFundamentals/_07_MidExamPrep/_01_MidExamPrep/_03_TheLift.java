@@ -32,7 +32,6 @@ public class _03_TheLift {
                 int n = 4 - state[i];
                 count += n;
             }
-
         }
 
         // Print result
