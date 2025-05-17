@@ -33,7 +33,7 @@ public class _02_MemoryGame {
                 continue;
             }
 
-            if (input[0] < 0 || input[0] > game.size() - 1){
+            if (input[0] < 0 || input[0] > game.size() - 1) {
                 round++;
 
                 String add = "-" + round + "a";
