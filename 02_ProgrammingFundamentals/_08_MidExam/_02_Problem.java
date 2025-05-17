@@ -27,7 +27,7 @@ public class _02_Problem {
 
                 for (int i = 0; i < friendList.size(); i++) {
                     if (friendList.get(i).equals(name)) {
-                        friendList.set(i,"Blacklisted");
+                        friendList.set(i, "Blacklisted");
                         blacklisted++;
 
                         System.out.printf("%s was blacklisted.%n", name);
@@ -50,7 +50,6 @@ public class _02_Problem {
                         System.out.printf("%s was lost due to an error.%n", name);
                     }
                 }
-
             } else if (input[0].equals("Change")) {
                 int n = Integer.parseInt(input[1]);
                 String newName = input[2];
@@ -61,7 +60,6 @@ public class _02_Problem {
 
                     System.out.printf("%s changed his username to %s.%n", name, newName);
                 }
-
             }
 
             console = scan.nextLine();
