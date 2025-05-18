@@ -17,15 +17,14 @@ public class _06_StudentAcademy {
             String name = scan.nextLine();
             Double grade = Double.parseDouble(scan.nextLine());
 
-            if(!students.containsKey(name)){
+            if (!students.containsKey(name)) {
                 students.put(name, new ArrayList<>());
             }
             students.get(name).add(grade);
         }
 
         // Print result
-        students
-                .entrySet()
+        students.entrySet()
                 .stream()
                 .filter(e -> (e.getValue().stream().mapToDouble(Double::doubleValue).sum() / e.getValue().size()) >= 4.50).forEach(e -> {
                     System.out.printf("%s -> %.2f%n", e.getKey(), e.getValue().stream().mapToDouble(Double::doubleValue).sum() / e.getValue().size());
@@ -33,8 +32,7 @@ public class _06_StudentAcademy {
 
         scan.close();
         
-//        List<String> output = students
-//                .entrySet()
+//        List<String> output = students.entrySet()
 //                .stream()
 //                .map(e -> {
 //                    List<String> studentsAndAverages = new ArrayList<>();
