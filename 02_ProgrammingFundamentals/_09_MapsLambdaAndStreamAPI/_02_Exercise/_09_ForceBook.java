@@ -83,7 +83,7 @@ public class _09_ForceBook {
 
         // Print result
         forceAndUsers.entrySet().stream().forEach(e -> {
-            if(e.getValue().size() > 0){
+            if (e.getValue().size() > 0) {
                 System.out.printf("Side: %s, Members: %d%n", e.getKey(), e.getValue().size());
                 System.out.println(e.getValue().stream().map(element -> String.format("! %s", element)).collect(Collectors.joining("\n")));
             }
