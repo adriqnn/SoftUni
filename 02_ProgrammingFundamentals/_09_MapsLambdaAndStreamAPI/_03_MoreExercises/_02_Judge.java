@@ -107,13 +107,10 @@ public class _02_Judge {
 }
 
 //            Map<String, Integer> orderedMap = new LinkedHashMap<>();
-//            participantsResults.entrySet().stream().sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))
-//                    .sorted(Comparator.comparing(Map.Entry::getKey)).forEach(e -> orderedMap.put(e.getKey(), e.getValue()));
+//            participantsResults.entrySet().stream().sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue())).sorted(Comparator.comparing(Map.Entry::getKey)).forEach(e -> orderedMap.put(e.getKey(), e.getValue()));
 
 //            Map<String, Integer> orderedMap = new LinkedHashMap<>();
-//            participantsResults.entrySet().stream().sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))
-//                    .sorted(Comparator.comparing(Map.Entry::getKey).reversed()).forEach(e -> orderedMap.put(e.getKey(), e.getValue()));
-
+//            participantsResults.entrySet().stream().sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue())).sorted(Comparator.comparing(Map.Entry::getKey).reversed()).forEach(e -> orderedMap.put(e.getKey(), e.getValue()));
 
 // Create practice Student class
 class Student {
