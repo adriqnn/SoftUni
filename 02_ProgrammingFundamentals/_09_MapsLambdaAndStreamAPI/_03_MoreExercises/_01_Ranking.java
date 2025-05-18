@@ -14,7 +14,7 @@ public class _01_Ranking {
         Map<String, String> contestInformation = new LinkedHashMap<>();
 
         // Create rank list for contestants
-        while(!firstInput.equals("end of contests")){
+        while (!firstInput.equals("end of contests")) {
             String[] information = firstInput.split(":");
 
             String contest = information[0];
@@ -32,7 +32,7 @@ public class _01_Ranking {
         Map<String, Map<String, Integer>> students = new TreeMap<>();
 
         // Create database for submissions
-        while(!secondInput.equals("end of submissions")){
+        while (!secondInput.equals("end of submissions")) {
             String[] information = secondInput.split("=>");
 
             String contest = information[0];
@@ -40,20 +40,20 @@ public class _01_Ranking {
             String username = information[2];
             int points = Integer.parseInt(information[3]);
 
-            if(contestInformation.containsKey(contest)){
-                if(contestInformation.get(contest).equals(password)){
-                    if(!students.containsKey(username)){
+            if (contestInformation.containsKey(contest)) {
+                if (contestInformation.get(contest).equals(password)) {
+                    if (!students.containsKey(username)) {
                         students.put(username, new LinkedHashMap<>());
                     }
 
-                    if(!students.get(username).containsKey(contest)){
+                    if (!students.get(username).containsKey(contest)) {
                         Map<String, Integer> result = students.get(username);
                         result.put(contest, points);
                         students.put(username, result);
-                    }else{
+                    } else {
                         int currentPoints = students.get(username).get(contest);
 
-                        if(currentPoints < points){
+                        if (currentPoints < points) {
                             Map<String, Integer> result = students.get(username);
                             result.put(contest, points);
                             students.put(username, result);
@@ -107,4 +107,3 @@ public class _01_Ranking {
 //            return entry;
 //        }).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 //        collect.forEach((key, value) -> System.out.println(key + " " + value));
-
