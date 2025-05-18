@@ -14,13 +14,13 @@ public class _08_CompanyUsers {
         Map<String, Set<String>> employees = new LinkedHashMap<>();
 
         // Make employee database
-        while(!input.equals("End")){
+        while (!input.equals("End")) {
             String[] line = input.split(" -> ");
 
             String company = line[0];
             String id = line[1];
 
-            if(!employees.containsKey(company)){
+            if (!employees.containsKey(company)) {
                 employees.put(company, new LinkedHashSet<>());
             }
 
@@ -32,7 +32,7 @@ public class _08_CompanyUsers {
         // Print result
         employees.entrySet().forEach(element -> {
             String company = element.getKey();
-            String ids = element.getValue().stream().map(string -> String.format("-- %s",string)).collect(Collectors.joining("\n"));
+            String ids = element.getValue().stream().map(string -> String.format("-- %s", string)).collect(Collectors.joining("\n"));
 
             System.out.printf("%s%n%s%n", company, ids);
         });
@@ -41,7 +41,7 @@ public class _08_CompanyUsers {
 
 //        employees.entrySet().forEach(element -> {
 //            String company = element.getKey();
-//            String ids = element.getValue().stream().sorted().map(string -> String.format("-- %s",string)).collect(Collectors.joining("\n"));
+//            String ids = element.getValue().stream().sorted().map(string -> String.format("-- %s", string)).collect(Collectors.joining("\n"));
 //
 //            System.out.printf("%s%n%s%n", company, ids);
 //        });
@@ -49,10 +49,9 @@ public class _08_CompanyUsers {
 
 //        employees.entrySet().forEach(element -> {
 //            String company = element.getKey();
-//            String ids = element.getValue().stream().sorted(String::compareTo).map(string -> String.format("-- %s",string)).collect(Collectors.joining("\n"));
+//            String ids = element.getValue().stream().sorted(String::compareTo).map(string -> String.format("-- %s", string)).collect(Collectors.joining("\n"));
 //
 //            System.out.printf("%s%n%s%n", company, ids);
 //        });
     }
 }
-
