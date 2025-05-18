@@ -23,12 +23,12 @@ public class _04_SnowWhiteV2 {
             colorGroups.putIfAbsent(color, 0);
             colorGroups.put(color, colorGroups.get(color) + 1);
 
-            if(dwarfs.containsKey(dwarf)){
-                if(dwarfs.get(dwarf) < physics){
+            if (dwarfs.containsKey(dwarf)) {
+                if (dwarfs.get(dwarf) < physics) {
                     dwarfs.put(dwarf, physics);
-                    colorGroups.put(color, colorGroups.get(color) -1);
+                    colorGroups.put(color, colorGroups.get(color) - 1);
                 }
-            }else{
+            } else {
                 dwarfs.put(dwarf, physics);
             }
         }
@@ -48,14 +48,13 @@ public class _04_SnowWhiteV2 {
         System.out.println(unorderedDwarfs.stream().sorted(Comparator.comparing(Dwarf::getPhysics).reversed().thenComparing(Dwarf::getColorGrp, Comparator.reverseOrder()))
                 .map(e -> String.format("(%s) %s <-> %d", e.getColor(), e.getName(), e.getPhysics())).collect(Collectors.joining("\n")));
 
-
         scan.close();
     }
 }
 
 
 // Create practice Dwarf class
-class Dwarf{
+class Dwarf {
     private String name;
     private String color;
     private int physics;
