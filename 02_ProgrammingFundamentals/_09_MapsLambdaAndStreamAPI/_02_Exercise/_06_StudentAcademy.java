@@ -20,6 +20,7 @@ public class _06_StudentAcademy {
             if (!students.containsKey(name)) {
                 students.put(name, new ArrayList<>());
             }
+            
             students.get(name).add(grade);
         }
 
