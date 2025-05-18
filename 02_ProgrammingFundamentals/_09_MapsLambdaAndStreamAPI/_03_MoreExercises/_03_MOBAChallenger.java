@@ -14,41 +14,40 @@ public class _03_MOBAChallenger {
         Map<String, Map<String, Integer>> players = new HashMap<>();
 
         // Create statistics for MOBA players
-        while(!input.equals("Season end")){
+        while (!input.equals("Season end")) {
 
-            if(input.contains("->")){
+            if (input.contains("->")) {
                 String[] information = input.split(" -> ");
 
                 String player = information[0];
                 String position = information[1];
                 int skill = Integer.parseInt(information[2]);
 
-                if(!players.containsKey(player)){
+                if (!players.containsKey(player)) {
                     players.put(player, new HashMap<>());
                 }
 
-                if(!players.get(player).containsKey(position)){
+                if (!players.get(player).containsKey(position)) {
                     players.get(player).put(position, skill);
-                }else{
-                    if(skill > players.get(player).get(position)){
+                } else {
+                    if (skill > players.get(player).get(position)) {
                         players.get(player).put(position, skill);
                     }
                 }
-
-            }else{
+            } else {
                 String[] information = input.split(" vs ");
 
                 String player1 = information[0];
                 String player2 = information[1];
 
-                if(players.containsKey(player1) && players.containsKey(player2)){
-                    if(!Collections.disjoint(players.get(player1).keySet(), players.get(player2).keySet())){
+                if (players.containsKey(player1) && players.containsKey(player2)) {
+                    if (!Collections.disjoint(players.get(player1).keySet(), players.get(player2).keySet())) {
                         int playerOneScore = players.get(player1).values().stream().mapToInt(Integer::intValue).sum();
                         int playerTwoScore = players.get(player2).values().stream().mapToInt(Integer::intValue).sum();
 
-                        if(playerOneScore > playerTwoScore){
+                        if (playerOneScore > playerTwoScore) {
                             players.remove(player2);
-                        }else if(playerOneScore < playerTwoScore){
+                        } else if (playerOneScore < playerTwoScore) {
                             players.remove(player1);
                         }
                     }
@@ -84,7 +83,7 @@ public class _03_MOBAChallenger {
 }
 
 // Create practice Player class
-class PLayer{
+class PLayer {
     private String name;
     private int totalPoints;
     private List<Position> positions;
@@ -124,7 +123,7 @@ class PLayer{
 }
 
 // Create practice Position class
-class Position{
+class Position {
     private String name;
     private int skillPoints;
 
