@@ -15,12 +15,12 @@ public class _02_AMinerTask {
         Map<String, Integer> resourcesQuantity = new LinkedHashMap<>();
 
         // Complete miners task
-        while (!resource.equals("stop")){
+        while (!resource.equals("stop")) {
             int quantity = Integer.parseInt(scan.nextLine());
             
-            if(!resourcesQuantity.containsKey(resource)){
+            if (!resourcesQuantity.containsKey(resource)) {
                 resourcesQuantity.put(resource, quantity);
-            }else{
+            } else {
                 int currentQuantity = resourcesQuantity.get(resource);
                 resourcesQuantity.put(resource, currentQuantity + quantity);
             }
