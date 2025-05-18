@@ -143,7 +143,7 @@ public class _04_TeamworkProjects {
 }
 
 // Create practice Teams class
-class Teams{
+class Teams {
     private String creator;
     private String team;
     private List<String> members;
@@ -180,4 +180,3 @@ class Teams{
         return this.team;
     }
 }
-
