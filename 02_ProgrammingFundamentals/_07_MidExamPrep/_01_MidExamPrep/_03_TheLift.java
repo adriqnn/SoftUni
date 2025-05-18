@@ -1,4 +1,4 @@
-package _02_ProgrammingFundamentals._07_MidExamPrep;
+package _02_ProgrammingFundamentals._07_MidExamPrep._01_MidExamPrep;
 
 import java.util.Arrays;
 import java.util.Scanner;
