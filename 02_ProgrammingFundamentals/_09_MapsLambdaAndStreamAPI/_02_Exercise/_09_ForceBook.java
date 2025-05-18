@@ -15,36 +15,36 @@ public class _09_ForceBook {
         Map<String, List<String>> forceAndUsers = new LinkedHashMap<>();
 
         // Create database for force users
-        while(!inputLine.equals("Lumpawaroo")){
-            if(inputLine.contains("|")){
+        while (!inputLine.equals("Lumpawaroo")) {
+            if (inputLine.contains("|")) {
                 String[] line = inputLine.split(" \\| ");
 
                 String side = line[0];
                 String name = line[1];
 
-                if(!users.containsKey(name) && !forceAndUsers.containsKey(side)) {
+                if (!users.containsKey(name) && !forceAndUsers.containsKey(side)) {
                     forceAndUsers.put(side, new ArrayList<>());
                     users.put(name, side);
 
                     forceAndUsers.get(side).add(name);
 
-                }else if(!users.containsKey(name) && forceAndUsers.containsKey(side)){
+                } else if (!users.containsKey(name) && forceAndUsers.containsKey(side)) {
                     users.put(name, side);
 
                     forceAndUsers.get(side).add(name);
 
-                }else if(users.containsKey(name)){
+                } else if (users.containsKey(name)) {
                     inputLine = scan.nextLine();
                     continue;
                 }
 
-            }else if(inputLine.contains("->")){
+            } else if(inputLine.contains("->")) {
                 String[] line = inputLine.split(" -> ");
 
                 String name = line[0];
                 String side = line[1];
 
-                if(!users.containsKey(name) && !forceAndUsers.containsKey(side)) {
+                if (!users.containsKey(name) && !forceAndUsers.containsKey(side)) {
                     forceAndUsers.put(side, new ArrayList<>());
                     users.put(name, side);
 
@@ -52,14 +52,14 @@ public class _09_ForceBook {
 
                     System.out.printf("%s joins the %s side!%n", name, side);
 
-                }else if(!users.containsKey(name) && forceAndUsers.containsKey(side)){
+                } else if (!users.containsKey(name) && forceAndUsers.containsKey(side)) {
                     users.put(name, side);
 
                     forceAndUsers.get(side).add(name);
 
                     System.out.printf("%s joins the %s side!%n", name, side);
 
-                }else if(users.containsKey(name) && forceAndUsers.containsKey(side)){
+                } else if (users.containsKey(name) && forceAndUsers.containsKey(side)) {
                     forceAndUsers.get(users.get(name)).remove(name);
                     users.put(name, side);
 
@@ -67,7 +67,7 @@ public class _09_ForceBook {
 
                     System.out.printf("%s joins the %s side!%n", name, side);
 
-                }else if(users.containsKey(name) && !forceAndUsers.containsKey(side)){
+                } else if (users.containsKey(name) && !forceAndUsers.containsKey(side)) {
                     forceAndUsers.get(users.get(name)).remove(name);
                     users.put(name, side);
 
@@ -75,7 +75,6 @@ public class _09_ForceBook {
                     forceAndUsers.get(side).add(name);
 
                     System.out.printf("%s joins the %s side!%n", name, side);
-
                 }
             }
 
@@ -93,4 +92,3 @@ public class _09_ForceBook {
         scan.close();
     }
 }
-
