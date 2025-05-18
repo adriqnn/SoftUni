@@ -13,18 +13,18 @@ public class _05_Courses {
         Map<String, List<String>> courses = new LinkedHashMap<>();
 
         // Register courses
-        while(!input.equals("end")){
+        while (!input.equals("end")) {
             String[] courseInformation = input.split(" : ");
             
             String course = courseInformation[0];
             String name = courseInformation[1];
 
-            if(!courses.containsKey(course)){
+            if (!courses.containsKey(course)) {
                 List<String> names = new ArrayList<>();
                 names.add(name);
                 
                 courses.put(course, names);
-            }else{
+            } else {
                 courses.get(course).add(name);
             }
 
