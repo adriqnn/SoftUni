@@ -13,21 +13,21 @@ public class _03_Orders {
         Map<String, List<Double>> orders = new LinkedHashMap<>();
 
         // Combine all the orders and sort them
-        while(!input.equals("buy")){
+        while (!input.equals("buy")) {
             String[] order = input.split("\\s+");
             
             String item = order[0];
             double price = Double.parseDouble(order[1]);
             double quantity = Double.parseDouble(order[2]);
 
-            if(!orders.containsKey(item)){
+            if (!orders.containsKey(item)) {
                 List<Double> information = new ArrayList<>();
                 
                 information.add(price);
                 information.add(quantity);
                 orders.put(item, information);
-            }else{
-                if(orders.get(item).get(0) != price){
+            } else {
+                if (orders.get(item).get(0) != price) {
                     orders.get(item).set(0, price);
                 }
                 
