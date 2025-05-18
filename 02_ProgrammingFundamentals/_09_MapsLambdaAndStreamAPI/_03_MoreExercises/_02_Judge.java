@@ -86,14 +86,13 @@ public class _02_Judge {
             String name = student.getKey();
             int score = student.getValue().values().stream().mapToInt(Integer::intValue).sum();
             finalScores.add(new Student(name, score));
-
         });
 
         List<Student> orderedFinalScores = finalScores.stream().sorted(Comparator.comparing(Student::getScore).reversed().thenComparing(Student::getName)).collect(Collectors.toList());
         List<String> finalLines = new ArrayList<>();
         
         for (int i = 0; i < orderedFinalScores.size(); i++) {
-            String format = String.format("%d. %s -> %d", i+1, orderedFinalScores.get(i).getName(), orderedFinalScores.get(i).getScore());
+            String format = String.format("%d. %s -> %d", i + 1, orderedFinalScores.get(i).getName(), orderedFinalScores.get(i).getScore());
             finalLines.add(format);
         }
 
@@ -148,32 +147,13 @@ class Student {
 //    String zzzzzz = contests.entrySet().stream().map(contest -> {
 //        String firstLine = String.format("%s: %d participants%n", contest.getKey(), contest.getValue().size());
 //        StringBuilder secondLine = new StringBuilder();
-//        students.entrySet().stream()
-//                .map(student -> student
-//                        .getValue()
-//                        .entrySet()
-//                        .stream()
-//                        .filter(filterContest -> filterContest
-//                                .getKey()
-//                                .equals(contest.getKey()))
-//                        .map(s -> secondLine.append(String.format("%d. %s <::> %d%n", 1, s.getKey(), s.getValue())))
-//                );
+//        students.entrySet().stream().map(student -> student.getValue().entrySet().stream()
+//                                    .filter(filterContest -> filterContest.getKey().equals(contest.getKey())).map(s -> secondLine.append(String.format("%d. %s <::> %d%n", 1, s.getKey(), s.getValue()))));
 //        return firstLine + secondLine;
 //    }).collect(Collectors.joining("zzzzzz"));
 //
-//        System.out.println(zzzzzz);
-
-//    Map<String, Long> sortedMap = map.entrySet().stream()
-//            .sorted(reverseOrder(comparing(Entry::getValue)))
-//            .collect(toMap(Entry::getKey, Entry::getValue,
-//                    (e1, e2) -> e1, LinkedHashMap::new));
+//     System.out.println(zzzzzz);
 //
-//    Map<String, Long> sortedMap = map.entrySet().stream()
-//            .sorted(reverseOrder(comparingByValue()))
-//            .collect(toMap(Entry::getKey, Entry::getValue,
-//                    (e1, e2) -> e1, LinkedHashMap::new));
-//
-//    Map<String, Long> sortedMap = map.entrySet().stream()
-//            .sorted(comparingByValue(reverseOrder()))
-//            .collect(toMap(Entry::getKey, Entry::getValue,
-//                    (e1, e2) -> e1, LinkedHashMap::new));
+//    Map<String, Long> sortedMap = map.entrySet().stream().sorted(reverseOrder(comparing(Entry::getValue))).collect(toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+//    Map<String, Long> sortedMap = map.entrySet().stream() .sorted(reverseOrder(comparingByValue())).collect(toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+//    Map<String, Long> sortedMap = map.entrySet().stream().sorted(comparingByValue(reverseOrder())).collect(toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
