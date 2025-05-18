@@ -15,7 +15,7 @@ public class _04_SnowWhite {
         Map<String, Integer> colorGroups = new LinkedHashMap<>();
 
         // Create database for dwarfs
-        while(!input.equals("Once upon a time")){
+        while (!input.equals("Once upon a time")) {
             String[] information = input.split(" <:> ");
 
             String name = information[0];
@@ -27,14 +27,15 @@ public class _04_SnowWhite {
             colorGroups.putIfAbsent(color, 0);
             colorGroups.put(color, colorGroups.get(color) + 1);
 
-            if(!dwarfs.containsKey(key)){
+            if (!dwarfs.containsKey(key)) {
                 dwarfs.put(key, physics);
-            }else{
-                if(dwarfs.get(key) < physics){
+            } else {
+                if (dwarfs.get(key) < physics) {
                     dwarfs.put(key, physics);
-                    colorGroups.put(color, colorGroups.get(color) -1);
+                    colorGroups.put(color, colorGroups.get(color) - 1);
                 }
             }
+            
             input = scan.nextLine();
         }
 
@@ -62,4 +63,3 @@ public class _04_SnowWhite {
         scan.close();
     }
 }
-
