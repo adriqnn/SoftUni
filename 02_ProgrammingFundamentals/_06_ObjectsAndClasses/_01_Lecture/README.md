@@ -1,4 +1,4 @@
-# Objects and Classes - Lecture 
+# Objects and Classes - Lecture
 
 * Objects -> instance of a class, holds its own values(name and fields), instantiation of a class(runtime);
 * Classes -> structure for creating objects, fields, values, methods, constructors, getters/setters;
