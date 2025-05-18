@@ -12,7 +12,7 @@ public class _04_Articles2 {
         // Read input value
         int n = Integer.parseInt(scan.nextLine());
 
-        // add variable
+        // Add variable
         List<ArticlesDatabase> articles = new ArrayList<>();
 
         // Collect data for all the articles
