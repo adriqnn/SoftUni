@@ -92,7 +92,7 @@ class Vehicle {
     @Override
     public String toString() {
         String format = this.type.substring(0,1).toUpperCase() + this.type.substring(1);
-        //return String.format
+        // return String.format
         return "Type: " + format + "\n" + "Model: " + this.model + "\n" + "Color: " + this.color + "\n" + "Horsepower: " + this.horsePower + "\n";
     }
 }
