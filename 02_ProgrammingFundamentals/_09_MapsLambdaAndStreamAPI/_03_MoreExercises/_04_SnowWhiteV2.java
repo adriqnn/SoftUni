@@ -13,7 +13,7 @@ public class _04_SnowWhiteV2 {
         Map<String, Integer> colorGroups = new LinkedHashMap<>();
 
         // Read input values and create database for dwarfs
-        while(!"Once upon a time".equals(input = scan.nextLine())){
+        while (!"Once upon a time".equals(input = scan.nextLine())) {
             String[] information = input.split(" <:> ");
 
             String dwarf = information[0] + ">>>>>" + information[1];
