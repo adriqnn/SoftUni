@@ -52,7 +52,6 @@ public class _04_SnowWhiteV2 {
     }
 }
 
-
 // Create practice Dwarf class
 class Dwarf {
     private String name;
