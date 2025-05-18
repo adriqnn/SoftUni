@@ -17,34 +17,33 @@ public class _10_SoftUniExamResults {
         Map<String, String> users = new LinkedHashMap<>();
 
         // Create database for exam results
-        while(!input.equals("exam finished")){
+        while (!input.equals("exam finished")) {
             String[] information = input.split("-");
 
             String username = information[0];
             String command = information[1];
 
-            if(command.equals("banned")){
+            if (command.equals("banned")) {
                 users.put(username, "banned");
-            }else{
+            } else {
                 int points = Integer.parseInt(information[2]);
 
-                if(!courses.containsKey(command)){
+                if (!courses.containsKey(command)) {
                     courses.put(command, 0);
                 }
 
                 int submissions = courses.get(command);
                 courses.put(command, submissions + 1);
 
-                if(!users.containsKey(username)){
+                if (!users.containsKey(username)) {
                     users.put(username, points + "");
                 }
 
                 int userPoints = Integer.parseInt(users.get(username));
 
-                if(userPoints < points){
+                if (userPoints < points) {
                     users.put(username, points + "");
                 }
-
             }
 
             input = scan.nextLine();
@@ -52,8 +51,7 @@ public class _10_SoftUniExamResults {
 
         // Print result
         System.out.println("Results:");
-        System.out.println(users.entrySet().stream().filter(e -> !e.getValue().equals("banned"))
-                .map(e -> String.format("%s | %s", e.getKey(), e.getValue())).collect(Collectors.joining("\n")));
+        System.out.println(users.entrySet().stream().filter(e -> !e.getValue().equals("banned")).map(e -> String.format("%s | %s", e.getKey(), e.getValue())).collect(Collectors.joining("\n")));
         System.out.println("Submissions:");
         System.out.println(courses.entrySet().stream().map(e -> String.format("%s - %d", e.getKey(), e.getValue())).collect(Collectors.joining("\n")));
 
