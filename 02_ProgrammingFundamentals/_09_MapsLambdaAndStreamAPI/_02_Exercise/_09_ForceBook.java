@@ -37,7 +37,6 @@ public class _09_ForceBook {
                     inputLine = scan.nextLine();
                     continue;
                 }
-
             } else if(inputLine.contains("->")) {
                 String[] line = inputLine.split(" -> ");
 
