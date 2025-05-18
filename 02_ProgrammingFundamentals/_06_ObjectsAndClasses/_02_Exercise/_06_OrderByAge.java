@@ -41,7 +41,7 @@ public class _06_OrderByAge {
 
 // Create practice Album class
 class Album{
-    private String name ;
+    private String name;
     private String personalNUmber;
     private int age;
 
