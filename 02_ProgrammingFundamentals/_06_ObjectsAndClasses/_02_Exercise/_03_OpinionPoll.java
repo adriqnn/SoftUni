@@ -34,8 +34,10 @@ public class _03_OpinionPoll {
         }); 
         */
 
-        // Sort the list
+        /*
+        Sort the list
         listOfPeople.sort(Comparator.comparing(Person::getPerson));
+        */
 
         // Print result
         listOfPeople.forEach(e -> {
