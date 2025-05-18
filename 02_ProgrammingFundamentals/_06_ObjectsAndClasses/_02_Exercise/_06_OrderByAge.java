@@ -9,7 +9,7 @@ public class _06_OrderByAge {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Read input vale
+        // Read input value
         String console = scan.nextLine();
 
         // Add variable
