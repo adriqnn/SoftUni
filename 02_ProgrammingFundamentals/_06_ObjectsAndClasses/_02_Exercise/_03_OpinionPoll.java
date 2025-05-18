@@ -26,11 +26,13 @@ public class _03_OpinionPoll {
             listOfPeople.add(newPerson);
         }
 
-        /*listOfPeople.stream().sorted(Comparator.comparingInt(Persons::getAge).reversed()).forEach(e -> {
+        /*
+        listOfPeople.stream().sorted(Comparator.comparingInt(Persons::getAge).reversed()).forEach(e -> {
             if (e.getAge() >= 30) {
                 System.out.println(e.getPerson() + " - " + e.getAge());
             }
-        });*/
+        }); 
+        */
 
         // Sort the list
         listOfPeople.sort(Comparator.comparing(Person::getPerson));
