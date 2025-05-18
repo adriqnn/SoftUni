@@ -58,21 +58,21 @@ public class _03_MOBAChallenger {
         }
 
         // Sort by rating
-        List<PLayer> playersNew = new ArrayList<>();
+        List<Player> playersNew = new ArrayList<>();
         players.entrySet().stream().forEach(e -> {
-            PLayer pLayer = new PLayer(e.getKey(), 0);
+            Player pLayer = new Player(e.getKey(), 0);
             pLayer.setTotalPoints(e.getValue().values().stream().mapToInt(Integer::intValue).sum());
-            
+
             e.getValue().entrySet().stream().forEach(el -> {
                 Position position = new Position(el.getKey(), el.getValue());
                 pLayer.getPositions().add(position);
             });
-            
+
             playersNew.add(pLayer);
         });
 
         // Print result
-        playersNew.stream().sorted(Comparator.comparing(PLayer::getTotalPoints).reversed().thenComparing(PLayer::getName)).forEach(e -> {
+        playersNew.stream().sorted(Comparator.comparing(Player::getTotalPoints).reversed().thenComparing(Player::getName)).forEach(e -> {
             System.out.printf("%s: %d skill%n", e.getName(), e.getTotalPoints());
             String collect = e.getPositions().stream().sorted(Comparator.comparing(Position::getSkillPoints).reversed().thenComparing(Position::getName)).map(p -> String.format("- %s <::> %d", p.getName(), p.getSkillPoints())).collect(Collectors.joining("\n"));
             System.out.printf("%s%n", collect);
@@ -83,12 +83,12 @@ public class _03_MOBAChallenger {
 }
 
 // Create practice Player class
-class PLayer {
+class Player {
     private String name;
     private int totalPoints;
     private List<Position> positions;
 
-    public PLayer(String name, int totalPoints) {
+    public Player(String name, int totalPoints) {
         this.name = name;
         this.totalPoints = totalPoints;
         this.positions = new ArrayList<>();
@@ -98,7 +98,7 @@ class PLayer {
         return this.name;
     }
 
-    public PLayer setName(String name) {
+    public Player setName(String name) {
         this.name = name;
         return this;
     }
@@ -107,7 +107,7 @@ class PLayer {
         return this.totalPoints;
     }
 
-    public PLayer setTotalPoints(int totalPoints) {
+    public Player setTotalPoints(int totalPoints) {
         this.totalPoints = totalPoints;
         return this;
     }
@@ -116,7 +116,7 @@ class PLayer {
         return this.positions;
     }
 
-    public PLayer setPositions(List<Position> positions) {
+    public Player setPositions(List<Position> positions) {
         this.positions = positions;
         return this;
     }
