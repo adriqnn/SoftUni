@@ -18,13 +18,13 @@ public class _01_CountCharsInAString {
         for (int i = 0; i < text.length(); i++) {
             char currentSymbol = text.charAt(i);
 
-            if (currentSymbol == ' '){
+            if (currentSymbol == ' ') {
                 continue;
             }
 
-            if(!lettersCount.containsKey(currentSymbol)){
+            if (!lettersCount.containsKey(currentSymbol)) {
                 lettersCount.put(currentSymbol, 1);
-            }else{
+            } else {
                 int currentCount = lettersCount.get(currentSymbol);
                 currentCount = currentCount + 1;
                 lettersCount.put(currentSymbol, currentCount);
@@ -33,11 +33,11 @@ public class _01_CountCharsInAString {
 
         // Print result
         // Can use var instead!
-        for (Map.Entry<Character, Integer> entry : lettersCount.entrySet()){
+        for (Map.Entry<Character, Integer> entry : lettersCount.entrySet()) {
             System.out.println(entry.getKey() + " -> " + entry.getValue());
         }
 
-        //lettersCount.entrySet().stream().forEach(entry -> System.out.println(entry.getKey() + " -> " + entry.getValue()));
+        // lettersCount.entrySet().stream().forEach(entry -> System.out.println(entry.getKey() + " -> " + entry.getValue()));
 
         scan.close();
     }
