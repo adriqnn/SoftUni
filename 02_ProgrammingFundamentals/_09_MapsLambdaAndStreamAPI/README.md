@@ -1,4 +1,4 @@
-# Maps Lambda and Stream API:
+# Maps, Lambda and Stream API:
 
 * Lecture;
 * Exercise;
