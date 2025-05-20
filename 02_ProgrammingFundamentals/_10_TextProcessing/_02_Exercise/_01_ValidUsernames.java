@@ -13,7 +13,7 @@ public class _01_ValidUsernames {
         for (int i = 0; i < console.length; i++) {
 
             // Validate the length
-            if(console[i].length() >= 3 && console[i].length() <= 16){
+            if (console[i].length() >= 3 && console[i].length() <= 16) {
                 boolean isValid = true;
 
                 // Validate characters
@@ -21,13 +21,13 @@ public class _01_ValidUsernames {
                     char symbol = console[i].charAt(j);
 
                     isValid = Character.isLetterOrDigit(symbol) || symbol == '-' || symbol == '_';
-                    if(!isValid){
+                    if (!isValid) {
                         break;
                     }
                 }
 
                 // Print result
-                if(isValid){
+                if (isValid) {
                     System.out.println(console[i]);
                 }
             }
