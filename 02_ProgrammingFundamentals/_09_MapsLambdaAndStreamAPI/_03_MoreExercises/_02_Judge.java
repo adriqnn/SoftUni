@@ -152,5 +152,5 @@ class Student {
 //     System.out.println(zzzzzz);
 //
 //    Map<String, Long> sortedMap = map.entrySet().stream().sorted(reverseOrder(comparing(Entry::getValue))).collect(toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
-//    Map<String, Long> sortedMap = map.entrySet().stream() .sorted(reverseOrder(comparingByValue())).collect(toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+//    Map<String, Long> sortedMap = map.entrySet().stream().sorted(reverseOrder(comparingByValue())).collect(toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
 //    Map<String, Long> sortedMap = map.entrySet().stream().sorted(comparingByValue(reverseOrder())).collect(toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
