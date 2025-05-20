@@ -25,7 +25,7 @@ public class _05_DragonArmy {
 
             database.putIfAbsent(type, new TreeMap<>());
             List<Double> stats = new ArrayList<>();
-            Collections.addAll(stats, damage,health,armor);
+            Collections.addAll(stats, damage, health, armor);
             database.get(type).put(name, stats);
         }
 
