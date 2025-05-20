@@ -27,15 +27,15 @@ public class _01_ExtractPersonInformation {
             String name = "";
             String age = "";
 
-            if(matcherName.find()){
+            if (matcherName.find()) {
                 name = matcherName.group("name");
             }
 
-            if(matcherAge.find()){
+            if (matcherAge.find()) {
                 age = matcherAge.group("age");
             }
 
-            if(name.length() > 0 && age.length() > 0){
+            if (name.length() > 0 && age.length() > 0) {
                 System.out.printf("%s is %s years old.%n", name, age);
             }
         }
