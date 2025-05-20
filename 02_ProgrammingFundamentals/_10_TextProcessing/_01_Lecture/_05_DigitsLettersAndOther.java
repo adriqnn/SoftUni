@@ -9,7 +9,7 @@ public class _05_DigitsLettersAndOther {
         // Read input value
         String console = scan.nextLine();
 
-        // Add variable
+        // Add variables
         StringBuilder digits = new StringBuilder();
         StringBuilder letters = new StringBuilder();
         StringBuilder other = new StringBuilder();
