@@ -18,11 +18,11 @@ public class _05_DigitsLettersAndOther {
         for (int i = 0; i < console.length(); i++) {
             char symbol = console.charAt(i);
 
-            if (Character.isDigit(symbol)){
+            if (Character.isDigit(symbol)) {
                 digits.append(symbol);
-            }else if(Character.isLetter(symbol)){
+            } else if (Character.isLetter(symbol)) {
                 letters.append(symbol);
-            }else{
+            } else {
                 other.append(symbol);
             }
         }
