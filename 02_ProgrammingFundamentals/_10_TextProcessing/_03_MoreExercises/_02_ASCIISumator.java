@@ -24,7 +24,7 @@ public class _02_ASCIISumator {
         // Extract repeating characters
         for (int i = 0; i < charList.length(); i++) {
             for (int j = 0; j < consoleLine.length(); j++) {
-                if(charList.charAt(i) == consoleLine.charAt(j)){
+                if (charList.charAt(i) == consoleLine.charAt(j)) {
                     sum += charList.charAt(i);
                 }
             }
