@@ -27,4 +27,3 @@ public class _04_TextFilter {
         scan.close();
     }
 }
-
