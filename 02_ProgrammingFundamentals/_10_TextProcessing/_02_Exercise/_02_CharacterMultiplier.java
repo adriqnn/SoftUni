@@ -15,7 +15,7 @@ public class _02_CharacterMultiplier {
         int sum = 0;
 
         // Multiply characters
-        if(firstWord.length() > secondWord.length()){
+        if (firstWord.length() > secondWord.length()) {
             for (int i = 0; i < secondWord.length(); i++) {
                 sum += firstWord.charAt(i) * secondWord.charAt(i);
             }
@@ -23,7 +23,7 @@ public class _02_CharacterMultiplier {
             for (int i = secondWord.length(); i < firstWord.length(); i++) {
                 sum += firstWord.charAt(i);
             }
-        }else if(firstWord.length() < secondWord.length()){
+        } else if (firstWord.length() < secondWord.length()) {
             for (int i = 0; i < firstWord.length(); i++) {
                 sum += firstWord.charAt(i) * secondWord.charAt(i);
             }
@@ -31,7 +31,7 @@ public class _02_CharacterMultiplier {
             for (int i = firstWord.length(); i < secondWord.length(); i++) {
                 sum += secondWord.charAt(i);
             }
-        }else{
+        } else {
             for (int i = 0; i < secondWord.length(); i++) {
                 sum += firstWord.charAt(i) * secondWord.charAt(i);
             }
