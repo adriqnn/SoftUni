@@ -35,4 +35,3 @@ public class _05_DigitsLettersAndOther {
         scan.close();
     }
 }
-
