@@ -33,7 +33,6 @@ public class _07_ValidPassword {
                 }
 
                 System.out.println(groupString.length() > 7 ? groupString : groupString + "default");
-
             } else {
                 System.out.println("Invalid pass!");
             }
