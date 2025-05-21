@@ -14,7 +14,6 @@ public class _04_SantaSSecretHelper {
 
         // Read the message and decipher
         while (!input.equals("end")) {
-
             StringBuilder message = new StringBuilder();
 
             for (int i = 0; i < input.length(); i++) {
@@ -25,8 +24,8 @@ public class _04_SantaSSecretHelper {
             Pattern decodePattern = Pattern.compile(decodeRegex);
             Matcher decodeMatcher = decodePattern.matcher(message);
 
-            while(decodeMatcher.find()){
-                if(decodeMatcher.group("grade").equals("G")){
+            while (decodeMatcher.find()) {
+                if (decodeMatcher.group("grade").equals("G")) {
                     System.out.println(decodeMatcher.group("name"));
                 }
             }
