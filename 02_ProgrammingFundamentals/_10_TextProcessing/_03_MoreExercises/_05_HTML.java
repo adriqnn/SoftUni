@@ -17,7 +17,7 @@ public class _05_HTML {
         List<String> commentsList = new ArrayList<>();
 
         // Create the HTML list of comments
-        while(!comments.equals("end of comments")){
+        while (!comments.equals("end of comments")) {
             commentsList.add(comments);
             comments = scan.nextLine();
         }
