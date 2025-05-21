@@ -19,14 +19,14 @@ public class _03_TreasureFinder {
         List<String> treasureInformation = new ArrayList<>();
 
         // Decrypt information
-        while(!console.equals("find")){
+        while (!console.equals("find")) {
             int n = console.length();
 
             StringBuilder decrypted = new StringBuilder();
             for (int i = 0; i < n; i++) {
-                if(key.length-1 < i){
+                if (key.length - 1 < i) {
                     decrypted.append((char)(console.charAt(i) - key[(i % key.length)]));
-                }else {
+                } else {
                     decrypted.append((char)(console.charAt(i) - key[i]));
                 }
             }
@@ -50,11 +50,11 @@ public class _03_TreasureFinder {
             String treasure = "";
             String coordinates = "";
 
-            if (matcherTypeOfTreasure.find()){
+            if (matcherTypeOfTreasure.find()) {
                 treasure = matcherTypeOfTreasure.group("type");
             }
 
-            if(matcherCoordinates.find()){
+            if (matcherCoordinates.find()) {
                 coordinates = matcherCoordinates.group("coordinates");
             }
 
