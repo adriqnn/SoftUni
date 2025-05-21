@@ -32,8 +32,6 @@ public class _02_RageQuit {
             for (int i = 0; i < stringType.length(); i++) {
                 unique.add((stringType.charAt(i) + "").toUpperCase());
             }
-
-
         }
 
 //        System.out.println(unique.stream().collect(Collectors.joining("")));
