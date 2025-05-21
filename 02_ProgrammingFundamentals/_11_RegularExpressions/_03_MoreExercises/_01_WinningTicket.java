@@ -19,9 +19,9 @@ public class _01_WinningTicket {
         List<String> winningTickets = new ArrayList<>();
         
         String regexTicket = "(?<grp>[$|@|#|^]{6,}).*(?<=.{10})(\\1)";
-        //String regexTicket = "(?<grp>[$|@|#|^]{6,10})(?<grp2>.{1,})?(\\1)";
-        //String regexTicket = "(?=.{20}).*?(?=(?<ch>[@#$^]))(?<match>\\\\k<ch>{6,}).*(?<=.{10})\\\\k<match>.*";
-        //String  regexTicket = "(?<grp>[$|@|#|^]{6,10})(?<grp2>.{1,})?(?<=.{10})(\\1)";
+        // String regexTicket = "(?<grp>[$|@|#|^]{6,10})(?<grp2>.{1,})?(\\1)";
+        // String regexTicket = "(?=.{20}).*?(?=(?<ch>[@#$^]))(?<match>\\\\k<ch>{6,}).*(?<=.{10})\\\\k<match>.*";
+        // String  regexTicket = "(?<grp>[$|@|#|^]{6,10})(?<grp2>.{1,})?(?<=.{10})(\\1)";
         Pattern patternTicket = Pattern.compile(regexTicket);
 
         // Determine the winning ticket and print result
@@ -38,7 +38,6 @@ public class _01_WinningTicket {
                     } else {
                         System.out.printf("ticket \"%s\" - %d%s%n", tickets.get(i), match.length(), match.charAt(0));
                     }
-
                 } else {
                     System.out.printf("ticket \"%s\" - no match%n", tickets.get(i));
                 }
