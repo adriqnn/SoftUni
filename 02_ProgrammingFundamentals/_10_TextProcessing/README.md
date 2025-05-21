@@ -1,6 +1,5 @@
 # Text Processing:
 
-* Lecture
-* Exercise
-* More Exercises
-
+* Lecture;
+* Exercise;
+* More Exercises;
