@@ -15,8 +15,8 @@ public class _05_NetherRealms {
         // Read input values
         List<String> console = Arrays.stream(scan.nextLine().split(",\\s*")).map(e -> e.replaceAll(" ", "")).collect(Collectors.toList());
 
-        //String regexHealth = "[^\\d\\+\\-\\*\\/.]";
-        //String regexAttack = "[+\\-]?[0-9]+\\.?[0-9]*";
+        // String regexHealth = "[^\\d\\+\\-\\*\\/.]";
+        // String regexAttack = "[+\\-]?[0-9]+\\.?[0-9]*";
 
         // Add variables
         String regexHealth = "[^0-9*/+\\-.]";
