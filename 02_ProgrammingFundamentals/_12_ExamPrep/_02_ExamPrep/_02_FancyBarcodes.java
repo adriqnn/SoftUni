@@ -27,7 +27,7 @@ public class _02_FancyBarcodes {
                 for (int j = 0; j < barcode.length(); j++) {
                     char symbol = barcode.charAt(j);
                     
-                    if(Character.isDigit(symbol)){
+                    if (Character.isDigit(symbol)) {
                         group.append(symbol);
                     }
                 }
