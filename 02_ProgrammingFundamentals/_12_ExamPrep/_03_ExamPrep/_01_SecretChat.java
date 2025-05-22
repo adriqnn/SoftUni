@@ -11,11 +11,11 @@ public class _01_SecretChat {
         String console = scan.nextLine();
 
         // Decipher the chat messages
-        while(!console.equals("Reveal")){
+        while (!console.equals("Reveal")) {
             String[] line = console.split(":\\|:");
             String command = line[0];
 
-            switch (command){
+            switch (command) {
                 case "InsertSpace":
                     int indexInsertSpace = Integer.parseInt(line[1]);
                     message.insert(indexInsertSpace, " ");
@@ -26,17 +26,17 @@ public class _01_SecretChat {
                     String sub = line[1];
                     String bus = "";
                     
-                    for (int i = sub.length()-1; i >= 0; i--) {
+                    for (int i = sub.length() - 1; i >= 0; i--) {
                         bus += sub.charAt(i);
                     }
                     
-                    if(message.toString().contains(sub)){
+                    if (message.toString().contains(sub)) {
                         String newString = message.toString().replace(sub, "");
                         message = new StringBuilder(newString);
                         message.append(bus);
                         
                         System.out.println(message);
-                    }else{
+                    } else {
                         System.out.println("error");
                     }
                     
