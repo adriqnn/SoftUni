@@ -21,9 +21,9 @@ public class _02_DestinationMapper {
         List<String> locations = new ArrayList<>();
         int sum = 0;
         
-        //int travelPoints = locations.stream().mapToInt(location -> location.length()).sum();
-        //int travelPoints = locations.stream().mapToInt(String::length).sum();
-        //String resultText = String.join(", ", locations);
+        // int travelPoints = locations.stream().mapToInt(location -> location.length()).sum();
+        // int travelPoints = locations.stream().mapToInt(String::length).sum();
+        // String resultText = String.join(", ", locations);
 
         // Determine destination
         while (regexMatcher.find()) {
@@ -36,7 +36,7 @@ public class _02_DestinationMapper {
 
         // Print result
         System.out.print("Destinations: ");
-        //locations.stream().forEach(e -> System.out.print(e));
+        // locations.stream().forEach(e -> System.out.print(e));
         System.out.println(locations.toString().replace("[", "").replace("]",  ""));
         System.out.println("Travel Points: " + sum);
 
