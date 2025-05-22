@@ -23,31 +23,32 @@ public class _02_MirrorWorlds {
         int countMirrorWords = 0;
         
         // Find the mirrored words
-        while (matcher.find()){
+        while (matcher.find()) {
             countPairs++;
             String first = matcher.group("word1");
             String second = matcher.group("word2");
             
             StringBuilder match = new StringBuilder();
-            for (int i = second.length()-1; i >= 0; i--) {
+            for (int i = second.length() - 1; i >= 0; i--) {
                 match.append(second.charAt(i));
             }
             
-            if(match.toString().equals(first)){
+            if (match.toString().equals(first)) {
                 countMirrorWords++;
                 mirrors.add(first + " <=> " + second);
             }
         }
         
         // Print result
-        if (countPairs == 0){
+        if (countPairs == 0) {
             System.out.println("No word pairs found!");
             System.out.println("No mirror words!");
-        }else{
+        } else {
             System.out.printf("%d word pairs found!%n", countPairs);
-            if (countMirrorWords == 0){
+            
+            if (countMirrorWords == 0) {
                 System.out.println("No mirror words!");
-            }else{
+            } else {
                 System.out.println("The mirror words are:");
                 System.out.println(mirrors.toString().replace("[", "").replace("]", ""));
             }
