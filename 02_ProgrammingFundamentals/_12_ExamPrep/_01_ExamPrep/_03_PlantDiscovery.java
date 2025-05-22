@@ -70,7 +70,6 @@ public class _03_PlantDiscovery {
             }
 
             return result;
-
         }).forEach(p -> System.out.printf("- %s; Rarity: %d; Rating: %.2f%n", p.getKey(), p.getValue().getRarity(), p.getValue().getAverageRating()));
 
         scan.close();
