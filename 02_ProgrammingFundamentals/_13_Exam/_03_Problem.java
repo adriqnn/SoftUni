@@ -74,7 +74,7 @@ public class _03_Problem {
         String carName = carEntry.getKey();
         System.out.printf("%s -> Mileage: %d kms, Fuel in the tank: %d lt.%n", carEntry.getKey(), carEntry.getValue(), carsFuel.get(carName));
     });
- */
+*/
 
 /*
     courses.entrySet().stream().sorted((e1, e2) -> Integer.compare(e2.getValue().size(), e1.getValue().size())).forEach(entry -> {
