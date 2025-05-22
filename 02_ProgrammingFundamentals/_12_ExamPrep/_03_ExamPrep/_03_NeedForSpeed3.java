@@ -31,27 +31,27 @@ public class _03_NeedForSpeed3 {
         String commands = scan.nextLine();
 
         // Determine the outcome of the race
-        while(!commands.equals("Stop")){
+        while (!commands.equals("Stop")) {
             String[] input = commands.split(" : ");
 
             String command = input[0];
             String carName = input[1];
 
-            switch(command){
+            switch (command) {
                 case "Drive":
                     int distanceDrive = Integer.parseInt(input[2]);
                     int fuelDrive = Integer.parseInt(input[3]);
                     int currentFuel = carsFuel.get(carName);
 
-                    if(fuelDrive > currentFuel){
+                    if (fuelDrive > currentFuel) {
                         System.out.println("Not enough fuel to make that ride");
-                    }else{
+                    } else {
                         carsMileage.put(carName, carsMileage.get(carName) + distanceDrive);
                         carsFuel.put(carName, currentFuel - fuelDrive);
                         System.out.printf("%s driven for %d kilometers. %s liters of fuel consumed.%n", carName, distanceDrive, fuelDrive);
                     }
 
-                    if(carsMileage.get(carName) >= 100000){
+                    if (carsMileage.get(carName) >= 100000) {
                         System.out.println("Time to sell the " + carName + "!");
                         carsMileage.remove(carName);
                     }
@@ -61,13 +61,13 @@ public class _03_NeedForSpeed3 {
                     int fuelToRefill = Integer.parseInt(input[2]);
                     int fuelInTheTank = carsFuel.get(carName);
 
-                    if (fuelInTheTank + fuelToRefill > 75){
+                    if (fuelInTheTank + fuelToRefill > 75) {
                         int refill = 75 - fuelInTheTank;
                         fuelInTheTank = 75;
                         carsFuel.put(carName, fuelInTheTank);
                         
                         System.out.printf("%s refueled with %d liters%n", carName, refill);
-                    }else{
+                    } else {
                         fuelInTheTank += fuelToRefill;
                         carsFuel.put(carName, fuelInTheTank);
                         
@@ -78,10 +78,10 @@ public class _03_NeedForSpeed3 {
                     int kilometersToRemove = Integer.parseInt(input[2]);
                     int currentMileage = carsMileage.get(carName);
                     
-                    if(currentMileage-kilometersToRemove < 10000){
+                    if (currentMileage-kilometersToRemove < 10000) {
                         currentMileage = 10000;
                         carsMileage.put(carName, currentMileage);
-                    }else{
+                    } else {
                         currentMileage -= kilometersToRemove;
                         carsMileage.put(carName, currentMileage);
                         System.out.printf("%s mileage decreased by %d kilometers%n", carName, kilometersToRemove);
@@ -103,4 +103,3 @@ public class _03_NeedForSpeed3 {
         scan.close();
     }
 }
-
