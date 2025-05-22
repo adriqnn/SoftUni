@@ -7,4 +7,4 @@
 * Software tests -> Unit tests, Integration tests and System tests;
 * Test cases -> positive and negative tests;
 * Test automation -> QA engineers and DevOps;
-* CI/CD -> requierment analysis - defining - designing - coding - testing - deployment - maintenance;
+* CI/CD -> requirement analysis - defining - designing - coding - testing - deployment - maintenance;
