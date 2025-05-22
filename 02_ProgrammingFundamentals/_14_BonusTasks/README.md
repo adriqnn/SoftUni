@@ -1,4 +1,4 @@
-# Bonus Tasks: 
+# Bonus Tasks:
 
 * IT Talks and Language Comparison;
 * HTTP Basics;
