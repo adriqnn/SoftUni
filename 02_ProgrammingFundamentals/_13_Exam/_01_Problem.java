@@ -30,6 +30,7 @@ public class _01_Problem {
                         
                         System.out.println(username);
                     }
+                    
                     break;
                 case "Reverse":
                     int intReverseStart = Integer.parseInt(commandLine[1]);
