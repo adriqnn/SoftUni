@@ -11,16 +11,16 @@ public class _01_PasswordReset {
         String command = scan.nextLine();
 
         // Reset password
-        while (!command.equals("Done")){
+        while (!command.equals("Done")) {
             String[] commandCollection = command.split(" ");
             String commandLine = commandCollection[0];
 
-            switch (commandLine){
+            switch (commandLine) {
                 case "TakeOdd":
                     StringBuilder concatenate = new StringBuilder();
 
                     for (int i = 0; i < console.length(); i++) {
-                        if(i % 2 != 0){
+                        if (i % 2 != 0) {
                             concatenate.append(console.charAt(i));
                         }
                     }
@@ -32,8 +32,8 @@ public class _01_PasswordReset {
                     int index = Integer.parseInt(commandCollection[1]);
                     int length = Integer.parseInt(commandCollection[2]);
 
-                    //String substringToRemove = password.substring(index, index+length);
-                    //password = password.replaceFirst(substringToRemove, "");
+                    // String substringToRemove = password.substring(index, index+length);
+                    // password = password.replaceFirst(substringToRemove, "");
 
                     console.replace(index, index + length, "");
                     System.out.println(console);
@@ -47,7 +47,6 @@ public class _01_PasswordReset {
                         consoleToString = consoleToString.replaceAll(exist, replace);
                         console = new StringBuilder(consoleToString);
                         System.out.println(console);
-
                     } else {
                         console = new StringBuilder(consoleToString);
                         System.out.println("Nothing to replace!");
@@ -65,4 +64,3 @@ public class _01_PasswordReset {
         scan.close();
     }
 }
-
