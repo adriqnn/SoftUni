@@ -24,33 +24,33 @@ public class _03_HeroesOfCodeAndLogicVII {
             int hp = Integer.parseInt(splitData[1]);
             int mp = Integer.parseInt(splitData[2]);
 
-            if (hp <= 100){
+            if (hp <= 100) {
                 heroesHP.put(heroName, hp);
             }
             
-            if (mp <= 200){
+            if (mp <= 200) {
                 heroesMP.put(heroName, mp);
             }
         }
 
         String command = scan.nextLine();
-        while(!command.equals("End")){
+        while (!command.equals("End")) {
             String[] commandParams = command.split(" - ");
             String commandName = commandParams[0];
             String heroName = commandParams[1];
 
-            switch (commandName){
+            switch (commandName) {
                 case "CastSpell":
                     int mpNeeded = Integer.parseInt(commandParams[2]);
                     String spellName = commandParams[3];
                     int currentMP = heroesMP.get(heroName);
 
-                    if(currentMP >= mpNeeded){
+                    if (currentMP >= mpNeeded) {
                         int mpLeft = currentMP - mpNeeded;
                         heroesMP.put(heroName, mpLeft);
 
                         System.out.printf("%s has successfully cast %s and now has %d MP!%n", heroName, spellName, mpLeft);
-                    }else{
+                    } else {
                         System.out.printf("%s does not have enough MP to cast %s!%n", heroName, spellName);
                     }
 
@@ -60,11 +60,11 @@ public class _03_HeroesOfCodeAndLogicVII {
                     String attacker = commandParams[3];
                     int currentHP = heroesHP.get(heroName) - damage;
 
-                    if (currentHP> 0){
+                    if (currentHP> 0) {
                         heroesHP.put(heroName, currentHP);
 
                         System.out.printf("%s was hit for %d HP by %s and now has %d HP left!%n", heroName, damage, attacker, currentHP);
-                    }else{
+                    } else {
                         System.out.printf("%s has been killed by %s!%n", heroName, attacker);
                         heroesHP.remove(heroName);
                         heroesMP.remove(heroName);
@@ -76,7 +76,7 @@ public class _03_HeroesOfCodeAndLogicVII {
                     int currentMPForRecharge = heroesMP.get(heroName);
                     int increasedMP =currentMPForRecharge + amountRecharge;
 
-                    if (increasedMP > 200){
+                    if (increasedMP > 200) {
                         increasedMP = 200;
                     }
 
@@ -89,7 +89,7 @@ public class _03_HeroesOfCodeAndLogicVII {
                     int currentHPForHeal = heroesHP.get(heroName);
                     int increasedHP = currentHPForHeal + amountHeal;
 
-                    if(increasedHP > 100){
+                    if (increasedHP > 100) {
                         increasedHP = 100;
                     }
 
