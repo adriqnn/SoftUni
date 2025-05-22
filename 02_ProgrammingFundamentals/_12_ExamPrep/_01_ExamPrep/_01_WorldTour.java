@@ -33,11 +33,10 @@ public class _01_WorldTour {
                     int index3 = Integer.parseInt(input[2]);
 
                     if (indexIsValid(index2, initialDestination.toString()) && indexIsValid(index3, initialDestination.toString())) {
-                        initialDestination.delete(index2, index3+1);
+                        initialDestination.delete(index2, index3 + 1);
                     }
 
                     System.out.println(initialDestination);
-
                     break;
                 case "Switch":
                     String oldString = input[1];
@@ -55,7 +54,7 @@ public class _01_WorldTour {
         }
 
         // Print result
-        System.out.printf("Ready for world tour! Planned stops: %s",  initialDestination);
+        System.out.printf("Ready for world tour! Planned stops: %s", initialDestination);
 
         scan.close();
     }
