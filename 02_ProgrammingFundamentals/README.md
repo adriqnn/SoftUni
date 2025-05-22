@@ -1,4 +1,4 @@
-# Programming Fundamentals
+# Programming Fundamentals 
 
 * Basic Syntax, Conditional Statements and Loops;
 * Data Types and Variables;
