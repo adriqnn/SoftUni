@@ -65,7 +65,7 @@ public class _03_PlantDiscovery {
         currentPlants.entrySet().stream().sorted((p1, p2) -> {
             int result = Integer.compare(p2.getValue().getRarity(), p1.getValue().getRarity());
 
-            if (result == 0){
+            if (result == 0) {
                 result = Double.compare(p2.getValue().getAverageRating(), p1.getValue().getAverageRating());
             }
 
@@ -78,11 +78,11 @@ public class _03_PlantDiscovery {
 }
 
 // Create practice PlantData class 
-class PlantData{
+class PlantData {
     private List<Integer> ratings;
     private int rarity;
 
-    public void addRating(int rating){
+    public void addRating(int rating) {
         this.ratings.add(rating);
     }
 
@@ -98,16 +98,16 @@ class PlantData{
         return this.rarity;
     }
 
-    public double getAverageRating(){
+    public double getAverageRating() {
         double sumOfAllRatings = 0;
 
-        for (Integer rating : this.ratings){
+        for (Integer rating : this.ratings) {
             sumOfAllRatings += rating;
         }
 
-        if(sumOfAllRatings == 0){
+        if (sumOfAllRatings == 0) {
             return 0;
-        }else{
+        } else {
             return sumOfAllRatings / this.ratings.size();
         }
     }
@@ -117,4 +117,3 @@ class PlantData{
         this.ratings = ratings;
     }
 }
-
