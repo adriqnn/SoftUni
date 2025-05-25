@@ -4,7 +4,7 @@ public class _04_BackIn30Minutes
 {
     public static void Main(string[] args)
     {
-        // Read input value 
+        // Read input values
         int hours = int.Parse(Console.ReadLine());
         int minutes = int.Parse(Console.ReadLine());
 
