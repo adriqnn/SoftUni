@@ -6,6 +6,8 @@ public class _13_RefactorSumOfOddNumbers
     {
         // Read input value from the console
         int n = int.Parse(Console.ReadLine());
+
+        // Add variable
         int sum = 0;
 
         // Sum all the odd numbers and print each odd number
