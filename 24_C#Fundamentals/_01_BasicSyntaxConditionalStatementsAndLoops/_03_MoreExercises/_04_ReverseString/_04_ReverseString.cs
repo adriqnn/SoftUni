@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-public class _01_HelloSoftUni
+public class _04_ReverseString
 {
     public static void Main(string[] args)
     {
