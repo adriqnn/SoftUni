@@ -21,7 +21,6 @@ public class _06_StrongNumber
             for (int j = 1; j <= num; j++)
             {
                 factorial = factorial * j;
-
             }
 
             sum += factorial;
