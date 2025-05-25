@@ -14,7 +14,9 @@ public class _05_MonthPrinter
         try
         {
             Console.WriteLine(months[num - 1]);
-        }catch (Exception e) {
+        }
+        catch (Exception e) 
+        {
             Console.WriteLine("Error!");
         }
     }
