@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-public class _05_Login
+public class _11_RageExpenses
 {
     public static void Main(string[] args)
     {
