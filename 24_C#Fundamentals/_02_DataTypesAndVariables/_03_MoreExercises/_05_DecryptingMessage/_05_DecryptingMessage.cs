@@ -16,7 +16,7 @@ public class _05_DecryptingMessage
         for (int i = 0; i < numberOfLines; i++)
         {
             char symbol = Console.ReadLine()[0];
-            symbol = (char)(symbol + keyToDecrypt);
+            symbol = (char) (symbol + keyToDecrypt);
 
             message.Append(symbol);
         }
