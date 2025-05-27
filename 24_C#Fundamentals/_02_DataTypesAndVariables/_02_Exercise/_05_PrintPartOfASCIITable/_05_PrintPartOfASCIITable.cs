@@ -11,7 +11,7 @@ public class _05_PrintPartOfASCIITable
         // Print ASCII range
         for (int i = n1; i <= n2; i++)
         {
-            char symbol = (char)i;
+            char symbol = (char) i;
             Console.Write(symbol + " ");
         }
     }
