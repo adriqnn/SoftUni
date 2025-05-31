@@ -5,7 +5,7 @@ public class _04_ReverseArrayOfStrings
     public static void Main(string[] args)
     {
         // Read input values
-        string[] arr = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        string[] arr = Console.ReadLine().Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries);
 
         // Reverse the array
         for (int i = 0; i < arr.Length / 2; i++)
