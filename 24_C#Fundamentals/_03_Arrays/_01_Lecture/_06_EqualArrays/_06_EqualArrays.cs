@@ -6,7 +6,7 @@ public class _06_EqualArrays
     {
         // Read input values
         int[] numberOneArray = Console.ReadLine().Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
-        int[] numberTwoArray = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+        int[] numberTwoArray = Console.ReadLine().Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
 
         // Add variables
         int sum = 0;
