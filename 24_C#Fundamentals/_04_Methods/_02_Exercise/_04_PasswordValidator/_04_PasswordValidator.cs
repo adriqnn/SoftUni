@@ -42,6 +42,7 @@ public class _04_PasswordValidator
                 count++;
             }
         }
+        
         return count >= 2;
     }
 
@@ -56,6 +57,7 @@ public class _04_PasswordValidator
                 return false;
             }
         }
+        
         return true;
     }
 
