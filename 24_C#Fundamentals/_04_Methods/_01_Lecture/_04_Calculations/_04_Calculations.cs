@@ -11,7 +11,6 @@ public class _04_Calculations
 
         // Create method to do the calculations
         whatIsTheResult(operation, num1, num2);
-
     }
 
     private static void whatIsTheResult(String operation, int num1, int num2)
