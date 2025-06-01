@@ -17,6 +17,7 @@ public class _06_ArrayManipulator
             if (commandLine == "exchange")
             {
                 int index = int.Parse(parts[1]);
+                
                 if (IndexIsValidExchange(numbersArray, index))
                 {
                     numbersArray = ExchangeInsideArray(numbersArray, index);
@@ -40,6 +41,7 @@ public class _06_ArrayManipulator
             {
                 int countFirst = int.Parse(parts[1]);
                 string oddOrEven = parts[2];
+                
                 if (countFirst >= 0 && IndexIsValidFirstLast(numbersArray, countFirst))
                 {
                     FirstCountEvenOdd(numbersArray, countFirst, oddOrEven);
@@ -53,6 +55,7 @@ public class _06_ArrayManipulator
             {
                 int countLast = int.Parse(parts[1]);
                 string oddOrEven = parts[2];
+                
                 if (countLast >= 0 && IndexIsValidFirstLast(numbersArray, countLast))
                 {
                     LastCountEvenOdd(numbersArray, countLast, oddOrEven);
@@ -68,7 +71,6 @@ public class _06_ArrayManipulator
 
         // Print the final array
         PrintArray(numbersArray);
-
     }
 
     private static void LastCountEvenOdd(int[] numbersArray, int countLast, string oddOrEven)
