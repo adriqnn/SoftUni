@@ -6,7 +6,7 @@ public class _01_SumAdjacentEqualNumbers
     public static void Main(string[] args)
     {
         // Read input values
-        List<double> listNumbers = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(double.Parse).ToList();
+        List<double> listNumbers = Console.ReadLine().Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries).Select(double.Parse).ToList();
 
         // Sum adjacent numbers in list
         for (int i = 0; i < listNumbers.Count - 1; i++)
