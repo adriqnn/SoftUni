@@ -12,7 +12,7 @@ public class _04_ListManipulationBasics
         // Manipulate lists based on the given commands
         while (!console.Equals("end"))
         {
-            string[] commandLine = console.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] commandLine = console.Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries);
             string command = commandLine[0];
 
             if (command.Equals("Add"))
