@@ -6,7 +6,7 @@ public class _07_AppendArrays
     public static void Main(string[] args)
     {
         // Read input values
-        List<string> numbersList = Console.ReadLine().Split(new char[] { '|' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+        List<string> numbersList = Console.ReadLine().Split(new char[] {'|'}, StringSplitOptions.RemoveEmptyEntries).ToList();
 
         // Reverse the input
         numbersList.Reverse();
