@@ -45,7 +45,6 @@ public class _04_MixedUpLists
             }
         }
 
-
         numbersListTwo.Sort();
 
         // Print result
