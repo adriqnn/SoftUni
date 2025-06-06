@@ -1,1 +1,1 @@
-# Lecture
+# Arrays - Lecture
