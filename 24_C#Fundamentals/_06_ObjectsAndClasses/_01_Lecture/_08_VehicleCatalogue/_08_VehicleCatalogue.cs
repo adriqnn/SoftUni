@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 public class _08_VehicleCatalogue
 {
@@ -7,56 +7,78 @@ public class _08_VehicleCatalogue
         // Read input value
         string console = Console.ReadLine();
 
-        // Add variable
-        List<Student> studentList = new List<Student>();
+        // Add variables
+        List<Vehicle> carsList = new List<Vehicle>();
+        List<Vehicle> trucksList = new List<Vehicle>();
 
-        // Save a list of students and their information
+        // Create a DB of all vehicles
         while (!console.Equals("end"))
         {
-            string[] lineFromConsole = console.Split(" ");
+            string[] consoleLine = console.Split("/");
 
-            string firstName = lineFromConsole[0];
-            string secondName = lineFromConsole[1];
-            int age = int.Parse(lineFromConsole[2]);
-            string town = lineFromConsole[3];
+            string type = consoleLine[0];
+            string make = consoleLine[1];
+            string model = consoleLine[2];
+            int horsePower = int.Parse(consoleLine[3]);
 
-            Student student = new Student(firstName, secondName, age, town);
-            studentList.Add(student);
+            Vehicle catalogueEntry = new Vehicle(type, make, model, horsePower);
+
+            if (type.Equals("Car"))
+            {
+                carsList.Add(catalogueEntry);
+            }
+            else if (type.Equals("Truck"))
+            {
+                trucksList.Add(catalogueEntry);
+            }
+
 
             console = Console.ReadLine();
         }
 
-        string consoleTown = Console.ReadLine();
+        // Sort lists
+        List<Vehicle> sortedCars = carsList.OrderBy(b => b.Make).ToList();
+        List<Vehicle> sortedTrucks = trucksList.OrderBy(b => b.Make).ToList();
 
         // Print result
-        foreach (Student element in studentList)
+        if (sortedCars.Count > 0)
         {
-            if (element.Town.Equals(consoleTown))
+            Console.WriteLine("Cars:");
+            foreach (Vehicle element in sortedCars)
             {
-                Console.WriteLine(element);
+                Console.WriteLine(element.ToString());
+            }
+        }
+
+        if (sortedTrucks.Count > 0)
+        {
+            Console.WriteLine("Trucks:");
+            foreach (Vehicle element in sortedTrucks)
+            {
+                Console.WriteLine(element.ToString());
             }
         }
     }
 }
 
-// Create practice Student class
-class Student
+// Create practice Vehicle class
+class Vehicle
 {
-    public string FirstName { get; }
-    public string SecondName { get; }
-    public int Age { get; }
-    public string Town { get; }
+    public string Type { get; set; }
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public int HorsePower { get; set; }
 
-    public Student(string firstName, string secondName, int age, string town)
+    public Vehicle(string type, string make, string model, int horsePower)
     {
-        FirstName = firstName;
-        SecondName = secondName;
-        Age = age;
-        Town = town;
+        this.Type = type;
+        this.Make = make;
+        this.Model = model;
+        this.HorsePower = horsePower;
     }
 
     public override string ToString()
     {
-        return $"{FirstName} {SecondName} is {Age} years old.";
+        return $"{Make}: {Model} - {HorsePower}{(Type == "Car" ? "hp" : "kg")}";
     }
 }
