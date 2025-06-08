@@ -12,7 +12,7 @@ public class _07_StoreBoxes
         // Add variable
         List<Box> boxList = new List<Box>();
 
-        // Save a list of students and their information
+        // Save a list of boxes
         while (!console.Equals("end"))
         {
             string[] lineFromConsole = console.Split(" ");
@@ -21,7 +21,6 @@ public class _07_StoreBoxes
             string itemName = lineFromConsole[1];
             int itemQuantity = int.Parse(lineFromConsole[2]);
             double itemPrice = double.Parse(lineFromConsole[3]);
-
             
             Item item = new Item(itemName, itemPrice);
             Box box = new Box(serialNumber, item, itemQuantity, itemPrice);
@@ -63,7 +62,6 @@ class Box
 }
 
 // Create practice Item class
-
 class Item
 {
     public string Name { get; }
