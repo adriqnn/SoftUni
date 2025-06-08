@@ -36,7 +36,6 @@ public class _05_Students
                 Console.WriteLine(element);
             }
         }
-
     }
 }
 
