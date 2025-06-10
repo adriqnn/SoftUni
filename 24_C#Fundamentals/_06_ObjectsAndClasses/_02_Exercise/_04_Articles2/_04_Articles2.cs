@@ -22,22 +22,6 @@ public class _04_Articles2
             articles.Add(article);
         }
 
-        string command = Console.ReadLine();
-
-        // Sort and print result based on the command
-        if (command == "title")
-        {
-            articles.Sort((a, b) => a.Title.CompareTo(b.Title));
-        }
-        else if (command == "content")
-        {
-            articles.Sort((a, b) => a.Content.CompareTo(b.Content));
-        }
-        else if (command == "author")
-        {
-            articles.Sort((a, b) => a.Author.CompareTo(b.Author));
-        }
-
         // Print result
         Console.WriteLine(string.Join(System.Environment.NewLine, articles.Select(e => $"{e.Title} - {e.Content}: {e.Author}")));
     }
