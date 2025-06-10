@@ -10,7 +10,6 @@ public class _06_OrderByAge
         // Add variable
         List<Album> names = new List<Album>();
 
-
         // Create collection of people
         while (!console.Equals("End"))
         {
