@@ -54,7 +54,6 @@ class Article
         this.Author = author;
     }
 
-
     public override string ToString()
     {
         return $"{Title} - {Content}: {Author}";
