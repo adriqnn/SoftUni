@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using System;
+
+public class _03_CarSalesman
+{
+    public static void Main(string[] args)
+    {
+        // Print a greeting message
+        Console.WriteLine("Hello SoftUni");
+    }
+}
