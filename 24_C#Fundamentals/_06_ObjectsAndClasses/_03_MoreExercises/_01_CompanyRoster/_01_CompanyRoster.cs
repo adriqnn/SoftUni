@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using System;
+
+public class _01_CompanyRoster
+{
+    public static void Main(string[] args)
+    {
+    }
+}
