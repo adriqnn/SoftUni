@@ -10,3 +10,16 @@
         <asp:BoundField DataField="Mar2025" HeaderText="Mar" />
     </Columns>
 </asp:GridView>
+
+protected void GridView1_RowCreated(object sender, GridViewRowEventArgs e)
+{
+    if (e.Row.RowType == DataControlRowType.Header)
+    {
+        GridViewRow headerRow = new GridViewRow(0, 0, DataControlRowType.Header, DataControlRowState.Insert);
+
+        headerRow.Cells.Add(new TableHeaderCell { Text = "2024", ColumnSpan = 3, HorizontalAlign = HorizontalAlign.Center });
+        headerRow.Cells.Add(new TableHeaderCell { Text = "2025", ColumnSpan = 3, HorizontalAlign = HorizontalAlign.Center });
+
+        GridView1.Controls[0].Controls.AddAt(0, headerRow); // Add above default header
+    }
+}
