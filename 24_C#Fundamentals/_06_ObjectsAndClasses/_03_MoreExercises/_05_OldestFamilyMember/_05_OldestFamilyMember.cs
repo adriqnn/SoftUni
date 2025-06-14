@@ -10,7 +10,7 @@ public class _05_OldestFamilyMember
         // Add variable
         List<Person> list = new List<Person>();
 
-        // Person db
+        // Person database
         for (int i = 0; i < n; i++)
         {
             string[] consoleLine = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
