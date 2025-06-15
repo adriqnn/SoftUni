@@ -32,7 +32,6 @@ public class _08_VehicleCatalogue
                 trucksList.Add(catalogueEntry);
             }
 
-
             console = Console.ReadLine();
         }
 
@@ -79,6 +78,6 @@ class Vehicle
 
     public override string ToString()
     {
-        return $"{Make}: {Model} - {HorsePower}{(Type == "Car" ? "hp" : "kg")}";
+        return $"{this.Make}: {this.Model} - {this.HorsePower}{(this.Type == "Car" ? "hp" : "kg")}";
     }
 }
