@@ -88,7 +88,7 @@ class Employee
 
     public override string ToString()
     {
-        return $"{Name} {Salary:F2}";
+        return $"{this.Name} {this.Salary:F2}";
     }
 }
 
@@ -108,6 +108,6 @@ class Department
 
     public override string ToString()
     {
-        return $"{Name} {Number} {Salaries:F2}";
+        return $"{this.Name} {this.Number} {this.Salaries:F2}";
     }
 }
