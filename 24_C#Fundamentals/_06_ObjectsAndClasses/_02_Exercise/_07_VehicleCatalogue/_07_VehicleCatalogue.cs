@@ -85,6 +85,6 @@ class Vehicle
     public override string ToString()
     {
         string formattedType = char.ToUpper(Type[0]) + Type.Substring(1);
-        return $"Type: {formattedType}\nModel: {Model}\nColor: {Color}\nHorsepower: {HorsePower}";
+        return $"Type: {formattedType}\nModel: {this.Model}\nColor: {this.Color}\nHorsepower: {this.HorsePower}";
     }
 }
