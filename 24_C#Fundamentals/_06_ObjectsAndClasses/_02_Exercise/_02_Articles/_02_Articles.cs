@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 public class _02_Articles
 {
@@ -56,6 +56,6 @@ class Article
 
     public override string ToString()
     {
-        return $"{Title} - {Content}: {Author}";
+        return $"{this.Title} - {this.Content}: {this.Author}";
     }
 }
