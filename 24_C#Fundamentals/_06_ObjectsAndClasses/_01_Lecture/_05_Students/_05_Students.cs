@@ -49,14 +49,14 @@ class Student
 
     public Student(string firstName, string secondName, int age, string town)
     {
-        FirstName = firstName;
-        SecondName = secondName;
-        Age = age;
-        Town = town;
+        this.FirstName = firstName;
+        this.SecondName = secondName;
+        this.Age = age;
+        this.Town = town;
     }
 
     public override string ToString()
     {
-        return $"{FirstName} {SecondName} is {Age} years old.";
+        return $"{this.FirstName} {this.SecondName} is {this.Age} years old.";
     }
 }
