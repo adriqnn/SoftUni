@@ -11,7 +11,8 @@ public class _03_SpeedRacing
         List<Car> cars = new List<Car>();
 
         // Cars database
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++)
+        {
             string[] consoleLine = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
 
             string model = consoleLine[0];
@@ -69,12 +70,12 @@ class Car
 
     public void drive(int kilometers)
     {
-        double fuelNeeded = kilometers * FuelConsumption;
+        double fuelNeeded = kilometers * this.FuelConsumption;
 
-        if (fuelNeeded <= Fuel)
+        if (fuelNeeded <= this.Fuel)
         {
             this.Fuel -= fuelNeeded;
-            KilometersTraveled += kilometers;
+            this.KilometersTraveled += kilometers;
         }
         else
         {
@@ -84,6 +85,6 @@ class Car
 
     public override string ToString()
     {
-        return $"{Model} {Fuel:F2} {KilometersTraveled}";
+        return $"{this.Model} {this.Fuel:F2} {this.KilometersTraveled}";
     }
 }
