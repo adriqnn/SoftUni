@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -21,7 +21,7 @@ public class _07_StoreBoxes
             string itemName = lineFromConsole[1];
             int itemQuantity = int.Parse(lineFromConsole[2]);
             double itemPrice = double.Parse(lineFromConsole[3]);
-            
+
             Item item = new Item(itemName, itemPrice);
             Box box = new Box(serialNumber, item, itemQuantity, itemPrice);
             boxList.Add(box);
@@ -49,15 +49,15 @@ class Box
 
     public Box(int serialNumber, Item item, int itemQuantity, double itemPrice)
     {
-        SerialNumber = serialNumber;
-        Item = item;
-        ItemQuantity = itemQuantity;
-        BoxPrice = itemQuantity * itemPrice;
+        this.SerialNumber = serialNumber;
+        this.Item = item;
+        this.ItemQuantity = itemQuantity;
+        this.BoxPrice = itemQuantity * itemPrice;
     }
 
     public override string ToString()
     {
-        return $"{SerialNumber}{Environment.NewLine}-- {Item.Name} - ${Item.Price:F2}: {ItemQuantity}{Environment.NewLine}-- ${BoxPrice:F2}";
+        return $"{this.SerialNumber}{Environment.NewLine}-- {this.Item.Name} - ${this.Item.Price:F2}: {this.ItemQuantity}{Environment.NewLine}-- ${this.BoxPrice:F2}";
     }
 }
 
@@ -69,7 +69,7 @@ class Item
 
     public Item(string name, double price)
     {
-        Name = name;
-        Price = price;
+        this.Name = name;
+        this.Price = price;
     }
 }
