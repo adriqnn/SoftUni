@@ -7,7 +7,7 @@ public class _04_Articles2
         // Read input value
         int n = int.Parse(Console.ReadLine());
 
-        // add variable
+        // Add variable
         List<ArticlesDatabase> articles = new List<ArticlesDatabase>();
 
         // Collect data for all the articles
