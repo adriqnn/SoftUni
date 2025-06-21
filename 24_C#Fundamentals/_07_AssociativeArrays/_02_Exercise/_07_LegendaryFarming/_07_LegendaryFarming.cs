@@ -110,5 +110,3 @@ public class _07_LegendaryFarming
         }
     }
 }
-
-
