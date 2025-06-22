@@ -74,26 +74,17 @@ public class _01_Ranking
 
         // Sort
         // Calculate total scores
-        var totalScores = students
-            .ToDictionary(
-                entry => entry.Key,
-                entry => entry.Value.Values.Sum()
-            );
-
-        var bestCandidate = totalScores
-            .OrderByDescending(e => e.Value)
-            .First();
+        var totalScores = students.ToDictionary(entry => entry.Key, entry => entry.Value.Values.Sum());
+        var bestCandidate = totalScores.OrderByDescending(e => e.Value).First();
 
         // Print result
         Console.WriteLine($"Best candidate is {bestCandidate.Key} with total {bestCandidate.Value} points.");
         Console.WriteLine("Ranking:");
-
         foreach (var student in students)
         {
             Console.WriteLine(student.Key);
 
-            foreach (var contest in student.Value
-                         .OrderByDescending(c => c.Value))
+            foreach (var contest in student.Value.OrderByDescending(c => c.Value))
             {
                 Console.WriteLine($"#  {contest.Key} -> {contest.Value}");
             }
