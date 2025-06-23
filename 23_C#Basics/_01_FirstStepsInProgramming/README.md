@@ -1,4 +1,4 @@
-# First Steps in Coding - Lecture
+# First Steps in Coding - Lecture 
 
 * C#;
 * Visual Studio;
