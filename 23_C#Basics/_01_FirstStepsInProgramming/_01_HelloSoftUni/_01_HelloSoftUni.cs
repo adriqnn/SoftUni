@@ -1,21 +1,23 @@
-﻿using System;
+using System;
+using System.Text;
 
-public class _01_HelloSoftUni
+public class _01_ReverseStrings
 {
     public static void Main(string[] args)
     {
         // Read input value
-        StringBuilder input = new StringBuilder(scan.nextLine());
-        
+        string input = Console.ReadLine();
+
         // Reverse strings
-        while (!input.toString().equals("end")) {
-            String original = input.toString();
-            input.reverse();
-            
+        while (!input.Equals("end"))
+        {
+            string original = input;
+            string reversed = new string(input.Reverse().ToArray());
+
             // Print result
-            System.out.printf("%s = %s%n", original, input);
-            
-            input = new StringBuilder(scan.nextLine());
+            Console.WriteLine($"{original} = {reversed}");
+
+            input = Console.ReadLine();
         }
     }
 }
