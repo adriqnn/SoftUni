@@ -11,7 +11,6 @@ public class _01_ValidUsernames {
 
         // Validate usernames
         for (int i = 0; i < console.length; i++) {
-
             // Validate the length
             if (console[i].length() >= 3 && console[i].length() <= 16) {
                 boolean isValid = true;
