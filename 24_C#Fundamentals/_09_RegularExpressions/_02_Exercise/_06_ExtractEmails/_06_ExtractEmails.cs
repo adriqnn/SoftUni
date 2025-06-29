@@ -20,5 +20,12 @@ public class _06_ExtractEmails
             Console.WriteLine(matcherEmail.Value);
             matcherEmail = matcherEmail.NextMatch();
         }
+
+        //// Extract emails and print result
+        //MatchCollection matches = patternEmail.Matches(input);
+        //foreach (Match match in matches)
+        //{
+        //    Console.WriteLine(match.Value);
+        //}
     }
 }
