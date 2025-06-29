@@ -65,4 +65,3 @@ public class _04_StarEnigma
         D.OrderBy(p => p).ToList().ForEach(p => Console.WriteLine($"-> {p}"));
     }
 }
-
