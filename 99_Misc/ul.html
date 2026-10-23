@@ -1,0 +1,45 @@
+<%@ Page Language="C#" %>
+<!DOCTYPE html>
+<html lang="bg">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Content/login.css") %>" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="welcome-shell">
+        <header class="welcome-header">
+            <div class="welcome-company">company</div>
+            <p class="welcome-product"></p>
+        </header>
+        <main class="welcome-main">
+            <section class="welcome-card" aria-labelledby="login-title">
+                <header class="welcome-card-header"><h1 id="login-title">Вход в системата</h1></header>
+                <div class="welcome-card-body">
+                    <div class="welcome-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3 M12 14v3"/></svg></div>
+                    <p class="welcome-description">Въведете потребителското си име и парола.</p>
+                    <div class="login-fields">
+                        <div class="login-field">
+                            <asp:Label ID="UsernameLabel" runat="server" AssociatedControlID="Username" CssClass="login-label" Text="Потребителско име" />
+                            <asp:TextBox ID="Username" runat="server" CssClass="login-input" autocomplete="username" MaxLength="256" />
+                        </div>
+                        <div class="login-field">
+                            <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password" CssClass="login-label" Text="Парола" />
+                            <asp:TextBox ID="Password" runat="server" CssClass="login-input" TextMode="Password" autocomplete="current-password" />
+                        </div>
+                    </div>
+                    <!-- Connect this button to your existing authentication handler. -->
+                    <asp:Button ID="LoginButton" runat="server" CssClass="login-submit" Text="ВХОД" CausesValidation="False" />
+                    <asp:Label ID="LoginError" runat="server" CssClass="login-error" role="alert" Visible="False" />
+                    <asp:HyperLink ID="BackToWelcome" runat="server" CssClass="login-back" NavigateUrl="~/Default.aspx" Text="← Към началната страница" />
+                </div>
+                <div class="welcome-card-footer">Достъп за регистрирани потребители.</div>
+            </section>
+        </main>
+        <footer class="welcome-footer">company - 2026</footer>
+    </div>
+    </form>
+</body>
+</html>
