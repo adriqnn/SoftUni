@@ -1,0 +1,296 @@
+/* Standalone public welcome page: no sidebar or Bootstrap dependencies. */
+:root {
+    color-scheme: light;
+    --welcome-blue: #2e4f68;
+    --welcome-text: #243746;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--welcome-text);
+    background: #edf0f3;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.welcome-shell {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.welcome-header {
+    padding: 26px 24px;
+    background: var(--welcome-blue);
+    color: #ffffff;
+    text-align: center;
+    border-bottom: 1px solid #426580;
+}
+
+.welcome-company {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.welcome-product {
+    margin: 7px 0 0;
+    color: #dbe7f0;
+    font-size: 12px;
+    letter-spacing: 1.4px;
+}
+
+.welcome-main {
+    display: grid;
+    place-items: center;
+    flex: 1;
+    padding: 48px 20px;
+}
+
+.welcome-card {
+    width: 100%;
+    max-width: 760px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #d8e2eb;
+    border-radius: 22px;
+    box-shadow: 0 12px 40px rgba(36, 62, 82, 0.06);
+}
+
+.welcome-card-header {
+    padding: 25px 32px;
+    background: var(--welcome-blue);
+    color: #ffffff;
+}
+
+    .welcome-card-header h1 {
+        margin: 0;
+        font-size: clamp(24px, 4vw, 30px);
+        font-weight: 500;
+        line-height: 1.35;
+        text-align: center;
+    }
+
+.welcome-card-body {
+    padding: 42px 36px;
+    text-align: center;
+}
+
+.welcome-symbol {
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 22px;
+    color: var(--welcome-blue);
+    background: #eaf1f7;
+    border: 1px solid #d5e1eb;
+    border-radius: 18px;
+}
+
+    .welcome-symbol svg {
+        width: 30px;
+        height: 30px;
+    }
+
+.welcome-card-body h2 {
+    margin: 0 0 14px;
+    color: var(--welcome-blue);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.welcome-description {
+    max-width: 480px;
+    margin: 0 auto;
+    color: #607284;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+a.welcome-login-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 50px;
+    max-width: 100%;
+    margin-top: 28px;
+    padding: 14px 28px;
+    color: #ffffff;
+    background: var(--welcome-blue);
+    border: 1px solid var(--welcome-blue);
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+    a.welcome-login-button:hover {
+        color: #ffffff;
+        background: #244158;
+        border-color: #244158;
+        text-decoration: none;
+    }
+
+    a.welcome-login-button:focus-visible {
+        outline: 3px solid #8eafc8;
+        outline-offset: 4px;
+    }
+
+.welcome-login-button svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.welcome-card-footer {
+    padding: 18px 24px;
+    background: #f8fafc;
+    border-top: 1px solid #e3eaf0;
+    color: #778997;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.welcome-footer {
+    padding: 20px 24px;
+    color: #607284;
+    font-size: 13px;
+    text-align: center;
+}
+
+.welcome-demo-status {
+    margin: 18px 0 0;
+    color: #607284;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .welcome-main {
+        padding: 28px 16px;
+    }
+
+    .welcome-card-header {
+        padding: 22px 24px;
+    }
+
+    .welcome-card-body {
+        padding: 30px 22px;
+    }
+
+    a.welcome-login-button {
+        width: 100%;
+        padding-inline: 18px;
+    }
+}
+
+/* Login fields and server-rendered validation messages. */
+.welcome-card {
+    max-width: 520px;
+}
+
+.login-fields {
+    display: grid;
+    gap: 20px;
+    text-align: left;
+    margin-top: 26px;
+}
+
+.login-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.login-label {
+    color: #365974;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.login-input {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    color: #243746;
+    background: #f8fafc;
+    border: 1px solid #cbd8e3;
+    border-radius: 9px;
+    font: inherit;
+    font-size: 15px;
+}
+
+    .login-input:focus-visible {
+        outline: 2px solid #668ca8;
+        outline-offset: 2px;
+        border-color: #668ca8;
+    }
+
+.login-submit {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    margin-top: 24px;
+    padding: 14px 24px;
+    color: #fff;
+    background-color: #2e4f68;
+    border: 1px solid #2e4f68;
+    border-radius: 10px;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+    .login-submit:hover {
+        background-color: #244158;
+        border-color: #244158;
+    }
+
+    .login-submit:focus-visible {
+        outline: 3px solid #8eafc8;
+        outline-offset: 3px;
+    }
+
+.login-error {
+    display: block;
+    margin-top: 16px;
+    color: #b52d38;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.login-back {
+    display: inline-block;
+    margin-top: 22px;
+    color: #496b85;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+    .login-back:hover {
+        text-decoration: underline;
+    }
+
+    .login-back:focus-visible {
+        outline: 2px solid #668ca8;
+        outline-offset: 3px;
+    }
+
+.login-demo-message {
+    margin: 18px 0 0;
+    color: #607284;
+    font-size: 13px;
+    line-height: 1.6;
+}
