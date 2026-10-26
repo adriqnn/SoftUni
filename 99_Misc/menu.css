@@ -1,0 +1,139 @@
+/* Standalone main-menu page; do not load welcome.css or login.css here. */
+:root {
+    color-scheme:  light;
+}
+
+* {
+    box-sizing:  border-box;
+}
+
+body {
+    margin:  0;
+    background:  #edf0f3;
+    color:  #243746;
+    font-family:  "Segoe UI", Arial, sans-serif;
+}
+
+.menu-shell {
+    display:  flex;
+    flex-direction:  column;
+    min-height:  100vh;
+    min-height:  100dvh;
+}
+
+.menu-header {
+    padding:  26px 24px;
+    background:  #2e4f68;
+    color:  #ffffff;
+    text-align:  center;
+    border-bottom:  1px solid #426580;
+}
+
+.menu-company {
+    font-size:  26px;
+    font-weight:  600;
+    line-height:  1.4;
+}
+
+.menu-header-caption {
+    margin:  7px 0 0;
+    color:  #dbe7f0;
+    font-size:  12px;
+    letter-spacing:  1.3px;
+}
+
+.menu-main {
+    flex: 1;
+    width: 100%;
+    padding: 24px 32px 40px;
+}
+
+.menu-content {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 18px;
+}
+
+a.menu-app-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    min-height: 88px;
+    padding: 16px 22px;
+    color: #243746;
+    background: #ffffff;
+    border: 1px solid #d8e2eb;
+    border-radius: 12px;
+    box-shadow: 0 3px 14px rgba(36, 62, 82, 0.035);
+    text-decoration: none;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+a.menu-app-link:hover {
+    color:  #243746;
+    border-color:  #8eafc8;
+    box-shadow:  0 8px 28px rgba(36, 62, 82, 0.09);
+    text-decoration:  none;
+}
+
+a.menu-app-link:focus-visible {
+    outline:  3px solid #668ca8;
+    outline-offset:  4px;
+}
+
+.menu-app-arrow {
+    color:  #668ca8;
+    font-size:  24px;
+}
+
+.menu-app-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2e4f68;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.menu-app-description {
+    display: block;
+    margin-top: 4px;
+    color: #607284;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.menu-footer {
+    padding:  20px 24px;
+    color:  #607284;
+    text-align:  center;
+    font-size:  13px;
+}
+
+.menu-demo-status {
+    margin:  22px 0 0;
+    min-height:  24px;
+    color:  #607284;
+    font-size:  13px;
+    text-align:  center;
+    line-height:  1.6;
+}
+
+@media (max-width: 600px) {
+    .menu-main { padding: 18px 16px 28px; }
+    .menu-grid { grid-template-columns: 1fr; gap: 10px; }
+    a.menu-app-link { min-height: 80px; padding: 14px 18px; }
+    .menu-app-title { font-size: 17px; }
+}
+@media (prefers-reduced-motion: reduce) { a.menu-app-link {
+    transition:  none;
+}
+ }
