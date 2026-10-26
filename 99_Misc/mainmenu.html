@@ -1,0 +1,108 @@
+<%@ Page Language="C#" %>
+<!DOCTYPE html>
+<html lang="bg">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Главно меню</title>
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Content/main-menu.css") %>" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="menu-shell">
+        <header class="menu-header">
+            <div class="menu-company">company</div>
+            <p class="menu-header-caption">РАБОТНО ПРОСТРАНСТВО</p>
+        </header>
+        <main class="menu-main">
+            <section class="menu-content" aria-label="Главно меню">
+                <nav class="menu-grid" aria-label="Приложения">
+                    <asp:HyperLink ID="ApplicationLink1" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application1/Default.aspx">
+                        <span class="menu-app-title">Ведомости <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink2" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application2/Default.aspx">
+                        <span class="menu-app-title">Приложение 2 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink3" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application3/Default.aspx">
+                        <span class="menu-app-title">Приложение 3 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink4" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application4/Default.aspx">
+                        <span class="menu-app-title">Приложение 4 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink5" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application5/Default.aspx">
+                        <span class="menu-app-title">Приложение 5 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink6" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application6/Default.aspx">
+                        <span class="menu-app-title">Приложение 6 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink7" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application7/Default.aspx">
+                        <span class="menu-app-title">Приложение 7 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink8" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application8/Default.aspx">
+                        <span class="menu-app-title">Приложение 8 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink9" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application9/Default.aspx">
+                        <span class="menu-app-title">Приложение 9 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink10" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application10/Default.aspx">
+                        <span class="menu-app-title">Приложение 10 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink11" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application11/Default.aspx">
+                        <span class="menu-app-title">Приложение 11 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink12" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application12/Default.aspx">
+                        <span class="menu-app-title">Приложение 12 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink13" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application13/Default.aspx">
+                        <span class="menu-app-title">Приложение 13 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink14" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application14/Default.aspx">
+                        <span class="menu-app-title">Приложение 14 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink15" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application15/Default.aspx">
+                        <span class="menu-app-title">Приложение 15 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink16" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application16/Default.aspx">
+                        <span class="menu-app-title">Приложение 16 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink17" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application17/Default.aspx">
+                        <span class="menu-app-title">Приложение 17 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink18" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application18/Default.aspx">
+                        <span class="menu-app-title">Приложение 18 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink19" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application19/Default.aspx">
+                        <span class="menu-app-title">Приложение 19 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                    <asp:HyperLink ID="ApplicationLink20" runat="server" CssClass="menu-app-link" NavigateUrl="~/Application20/Default.aspx">
+                        <span class="menu-app-title">Приложение 20 <span class="menu-app-arrow" aria-hidden="true">→</span></span>
+                        <span class="menu-app-description">Отворете приложението и продължете работа.</span>
+                    </asp:HyperLink>
+                </nav>
+                
+            </section>
+        </main>
+        <footer class="menu-footer">company - 2026</footer>
+    </div>
+    </form>
+</body>
+</html>
