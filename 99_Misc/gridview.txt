@@ -1,0 +1,25 @@
+protected void GridViewRowDataBound(
+    object sender, GridViewRowEventArgs e)
+{
+    if (e.Row.RowType != DataControlRowType.DataRow)
+        return;
+ 
+    DataRowView data = e.Row.DataItem as DataRowView;
+ 
+    if (data == null || !data.Row.IsNull("Сума"))
+        return;
+ 
+    e.Row.Cells[0].ColumnSpan = e.Row.Cells.Count;
+ 
+    // Keep the cells in the control tree, but do not render them.
+    for (int i = 1; i < e.Row.Cells.Count; i++)
+    {
+        e.Row.Cells[i].Visible = false;
+    }
+ 
+    TableCell cell = e.Row.Cells[0];
+    cell.HorizontalAlign = HorizontalAlign.Center;
+    cell.VerticalAlign = VerticalAlign.Middle;
+    cell.BackColor =
+        System.Drawing.ColorTranslator.FromHtml("#fdfbd5");
+}
