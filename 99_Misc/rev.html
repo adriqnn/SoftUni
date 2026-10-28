@@ -1,0 +1,339 @@
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Globalization;
+using System.Web;
+using System.Web.UI.WebControls;
+using Microsoft.Reporting.WebForms;
+using V1718.DAL.General;
+
+namespace V1718.V1718._01.Ved18
+{
+    public partial class _01Review : System.Web.UI.Page
+    {
+        private readonly DatabaseHelper dbHelper = new DatabaseHelper();
+        private int CurrentRegion { get; set; }
+
+        private IEnumerable<string> RequiredPermissions
+        {
+            get { return new[] { "Rep221", "Rep222", "Rep223", "Rep224", "Rep225" }; }
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                ViewState["ReviewRegion"] = CurrentRegion;
+                DateTime openedAt = DateTime.Now;
+                ViewState["ReviewPeriod"] = new DateTime(openedAt.Year, openedAt.Month, 1);
+                BindPostalCodes();
+                HideResults();
+            }
+            else if (!(ViewState["ReviewRegion"] is int) ||
+                     (int)ViewState["ReviewRegion"] != CurrentRegion)
+            {
+                // A different tab may have changed the session-wide region.
+                throw new HttpException(409, "Регионът е променен. Отворете страницата отново.");
+            }
+
+            if (!(ViewState["ReviewPeriod"] is DateTime))
+                throw new HttpException(409, "Периодът липсва. Отворете страницата отново.");
+            DateTime now = (DateTime)ViewState["ReviewPeriod"];
+            LabelHeader.Text = HttpUtility.HtmlEncode("Преглед - Ved18 " + RegionName(CurrentRegion));
+            LabelDate.Text = HttpUtility.HtmlEncode("Дата: " + PeriodText(now));
+        }
+
+        private void BindPostalCodes()
+        {
+            PopulatePostalCodes(postalCode_dropdown1, CurrentRegion);
+            PopulatePostalCodes(postalCode_dropdown2, CurrentRegion);
+        }
+
+        private enum OutputView { Grid, Report }
+
+        protected void GenerateDataClick(object sender, EventArgs e) { ShowData(OutputView.Grid); }
+        protected void ReportDataClick(object sender, EventArgs e) { ShowData(OutputView.Report); }
+
+        private void ShowData(OutputView output)
+        {
+            HideResults();
+            try
+            {
+                int from, to;
+                if (!TryReadRange(out from, out to))
+                {
+                    ShowMessage("Изберете валидни пощенски станции за текущия регион.");
+                    return;
+                }
+                DateTime now = (DateTime)ViewState["ReviewPeriod"];
+                DataTable data = LoadDisplayData(CurrentRegion, now, from, to);
+                string period = PeriodText(now);
+                if (data.Rows.Count == 0)
+                {
+                    ShowMessage(string.Format("Няма въведени данни за месец {0}г. от ПС {1} до ПС {2}", period, from, to));
+                    return;
+                }
+                string message = string.Format("Преглед на въведени данни Ведомост 18 за месец {0}г. от ПС {1} до ПС {2}", period, from, to);
+                if (output == OutputView.Report) BindReport(data, message);
+                else
+                {
+                    GRIDVIEWNORMALONE.DataSource = data;
+                    GRIDVIEWNORMALONE.DataBind();
+                    LabelTable.Text = HttpUtility.HtmlEncode(message);
+                    TablePanel.Visible = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Replace Trace with the application's configured logger.
+                System.Diagnostics.Trace.TraceError("Review failed: {0}", ex);
+                HideResults();
+                ShowMessage("Възникна грешка при зареждане на данните. Опитайте отново.");
+            }
+        }
+
+        private bool TryReadRange(out int from, out int to)
+        {
+            from = to = 0;
+            int first, second;
+            if (!int.TryParse(postalCode_dropdown1.SelectedValue, out first) ||
+                !int.TryParse(postalCode_dropdown2.SelectedValue, out second)) return false;
+
+            // Fetch allowed choices again on the server; don't trust posted values.
+            var allowed = new DropDownList();
+            PopulatePostalCodes(allowed, CurrentRegion);
+            bool foundFirst = false, foundSecond = false;
+            foreach (ListItem item in allowed.Items)
+            {
+                int code;
+                if (!item.Enabled || !int.TryParse(item.Value, out code) || code <= 0) continue;
+                if (code == first) foundFirst = true;
+                if (code == second) foundSecond = true;
+            }
+            if (!foundFirst || !foundSecond) return false;
+            from = Math.Min(first, second);
+            to = Math.Max(first, second);
+            return true;
+        }
+
+        private void BindReport(DataTable data, string message)
+        {
+            ReviewV18Report.Reset();
+            ReviewV18Report.ProcessingMode = ProcessingMode.Local;
+            ReviewV18Report.LocalReport.ReportPath = Server.MapPath("~/V1718Reports/01.Ved18/01Review.rdlc");
+            ReviewV18Report.LocalReport.DataSources.Clear();
+            ReviewV18Report.LocalReport.DataSources.Add(new ReportDataSource("DataSetReport", data));
+            ReviewV18Report.LocalReport.SetParameters(new[] {
+                new ReportParameter("RUSO", RegionName(CurrentRegion)),
+                new ReportParameter("MESSAGE", message)
+            });
+            ReviewV18Report.LocalReport.Refresh();
+            LabelReport.Text = HttpUtility.HtmlEncode(message);
+            ReportPanel.Visible = true;
+        }
+
+        private static string PeriodText(DateTime date)
+        {
+            return CommonElements.GetMonthFromArrayOfMonthsTranslated(date.Month - 1).ToUpper()
+                + " " + date.Year;
+        }
+
+        private void HideResults()
+        {
+            TablePanel.Visible = false;
+            ReportPanel.Visible = false;
+        }
+
+        private void ShowMessage(string message)
+        {
+            // Encode for a JavaScript string, not for HTML. The helper includes quotes.
+            string argument = HttpUtility.JavaScriptStringEncode(message, true);
+            string script = "if (typeof window.showGenericMessageModal === 'function') {"
+                + "window.showGenericMessageModal(" + argument + ");} else {window.alert("
+                + argument + ");}";
+            System.Web.UI.ScriptManager.RegisterStartupScript(this, GetType(),
+                "reviewMessage", script, true);
+        }
+
+        protected void GridViewRowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType != DataControlRowType.DataRow) return;
+            var row = e.Row.DataItem as DataRowView;
+            if (row == null || !row.Row.IsNull("Сума")) return;
+            e.Row.Cells[0].ColumnSpan = e.Row.Cells.Count;
+            for (int i = e.Row.Cells.Count - 1; i > 0; i--) e.Row.Cells.RemoveAt(i);
+            e.Row.Cells[0].HorizontalAlign = HorizontalAlign.Center;
+            e.Row.Cells[0].VerticalAlign = VerticalAlign.Middle;
+            e.Row.Cells[0].BackColor = System.Drawing.ColorTranslator.FromHtml("#fdfbd5");
+        }
+
+        protected void ResetClick(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            ViewState["ReviewPeriod"] = new DateTime(now.Year, now.Month, 1);
+            LabelDate.Text = HttpUtility.HtmlEncode("Дата: " + PeriodText(now));
+            BindPostalCodes();
+            HideResults();
+            GRIDVIEWNORMALONE.DataSource = null;
+            GRIDVIEWNORMALONE.DataBind();
+            ReviewV18Report.Reset();
+        }
+        private static void PopulatePostalCodes(DropDownList dropdown, int region)
+        {
+            dropdown.Items.Clear();
+            if (region >= 1 && region <= 31)
+                CommonElements.PopulatePCsDropdownOnlyFromV18TypeNPS1AndStatus1(
+                    dropdown, region.ToString(CultureInfo.InvariantCulture));
+            else
+                // Preserve the supplied 35/99 fallback. Its authorization semantics
+                // must be confirmed in the existing helper and SQL.
+                CommonElements.PopulatePCsDropdown(dropdown, 0);
+        }
+
+        private static string RegionName(int region)
+        {
+            // GetRegion(region - 1) is safe only for ordinary 1..31 regions.
+            return region >= 1 && region <= 31
+                ? CommonElements.GetRegion(region - 1)
+                : "Регион " + region.ToString(CultureInfo.InvariantCulture);
+        }
+
+        protected override void OnPreInit(EventArgs e)
+        {
+            var rights = Session["UserDictionary"] as Dictionary<string, string>;
+            if (rights == null || rights.Count == 0)
+                RedirectAndStop("~/V1718/07.Default/LogIn.aspx");
+
+            int region;
+            if (!int.TryParse(Convert.ToString(Session["ruso"]), out region) || !IsSupportedRegion(region))
+                RedirectAndStop("~/V1718/07.Default/LogIn.aspx");
+
+            bool permitted = false;
+            foreach (string permission in RequiredPermissions)
+            {
+                string value;
+                if (rights.TryGetValue(permission, out value) && value == "1")
+                {
+                    permitted = true;
+                    break;
+                }
+            }
+            if (!permitted) RedirectAndStop("~/V1718/07.Default/Rights.aspx");
+            CurrentRegion = region;
+            base.OnPreInit(e);
+        }
+
+        private void RedirectAndStop(string url)
+        {
+            // The terminating overload prevents later click handlers from executing.
+            // CompleteRequest alone would not stop the page lifecycle.
+            Response.Redirect(ResolveUrl(url), true);
+            throw new HttpException(403, "Request denied."); // Defensive fallback.
+        }
+        private static bool IsSupportedRegion(int region)
+        {
+            return (region >= 1 && region <= 31) || region == 35 || region == 99;
+        }
+        private DataTable LoadDisplayData(int region, DateTime period, int from, int to)
+        {
+            DataTable records = dbHelper.ReviewV18AllRecordsForTheCurrentMonth(
+                region.ToString(CultureInfo.InvariantCulture),
+                period.Year.ToString(CultureInfo.InvariantCulture),
+                period.Month.ToString(CultureInfo.InvariantCulture),
+                from.ToString(CultureInfo.InvariantCulture),
+                to.ToString(CultureInfo.InvariantCulture));
+            if (records == null) throw new InvalidOperationException("The database returned no table.");
+            if (records.Rows.Count == 0) return records;
+            return BuildDisplayTable(records, dbHelper.GetPensionTypes());
+        }
+
+        // Public pure transformation: can be tested without a database or a Page.
+        // Retains the updated RDLC schema (all nine columns are strings).
+        private static DataTable BuildDisplayTable(DataTable records, IList<string> types)
+        {
+            if (records == null) throw new ArgumentNullException("records");
+            if (types == null) throw new ArgumentNullException("types");
+            DataTable display = new DataTable();
+            display.Columns.Add("ПС", typeof(string));
+            foreach (string column in new[] { "ВЕД_N", "ВЕД_Дата", "ЛНЧ", "ЕГН", "Вид", "Шиф", "Вид_Код", "Сума" })
+                display.Columns.Add(column, typeof(string));
+            if (records.Rows.Count == 0) return display;
+
+            // Explicitly group by EGN instead of relying on query ordering.
+            // Preserve first appearance and the original order within each group.
+            var groups = new Dictionary<string, List<DataRow>>(StringComparer.Ordinal);
+            var order = new List<string>();
+            foreach (DataRow row in records.Rows)
+            {
+                string key = Convert.ToString(row["EGN"], CultureInfo.CurrentCulture);
+                if (string.IsNullOrWhiteSpace(key))
+                    throw new InvalidOperationException("A record has no EGN. Define the grouping key for such records.");
+                List<DataRow> group;
+                if (!groups.TryGetValue(key, out group))
+                {
+                    group = new List<DataRow>();
+                    groups.Add(key, group);
+                    order.Add(key);
+                }
+                group.Add(row);
+            }
+
+            decimal grandTotal = 0m;
+            foreach (string key in order)
+            {
+                decimal personTotal = 0m;
+                DataRow last = null;
+                foreach (DataRow row in groups[key])
+                {
+                    int typeId = Convert.ToInt32(Required(row, "LND"), CultureInfo.CurrentCulture);
+                    if (typeId < 1 || typeId > types.Count)
+                        throw new InvalidOperationException("Unknown type ID: " + typeId);
+                    decimal amount = Convert.ToDecimal(Required(row, "RAZMER"), CultureInfo.CurrentCulture);
+                    DateTime date = Convert.ToDateTime(Required(row, "VEDDAT"), CultureInfo.CurrentCulture);
+                    decimal signedAmount = IsDeduction(typeId) ? -amount : amount;
+                    personTotal += signedAmount;
+                    grandTotal += signedAmount;
+                    display.Rows.Add(row["PTTS"], row["VEDNOM"], date.ToString("dd.MM.yyyy", CultureInfo.InvariantCulture),
+                        row["LNC"], key, types[typeId - 1], row["VID"], row["VID"],
+                        amount.ToString("F2", CultureInfo.GetCultureInfo("bg-BG")));
+                    last = row;
+                }
+                AddSummary(display, SummaryRow(last, personTotal));
+            }
+            AddSummary(display, "Общ брой пенсионери: " + order.Count + " --- СУМА: " +
+                grandTotal.ToString("F2", CultureInfo.GetCultureInfo("bg-BG")));
+            return display;
+        }
+
+        private static object Required(DataRow row, string column)
+        {
+            if (row.IsNull(column))
+                throw new InvalidOperationException("Required database value is NULL: " + column);
+            return row[column];
+        }
+
+        private static bool IsDeduction(int typeId)
+        {
+            return typeId == 6 || typeId == 7 || typeId == 9 || typeId == 10;
+        }
+
+        private static void AddSummary(DataTable table, string text)
+        {
+            DataRow row = table.NewRow();
+            row["ПС"] = text;
+            table.Rows.Add(row); // Сума stays DBNull for the existing RDLC convention.
+        }
+        private static string SummaryRow(DataRow row, decimal total)
+        {
+            string source = Convert.ToString(row["SOURCE"]) == "1" ? "екран" : "файл";
+            string code = Convert.ToString(row["KODI"]);
+            string economist = Convert.ToString(row["ECONOMISTNAME"]).Trim();
+            string name = Convert.ToString(row["NAMEPERSON"]).Trim();
+            string reason = Convert.ToString(row["PRIC_TEXT"]);
+            return string.Format(CultureInfo.GetCultureInfo("bg-BG"),
+                "Вход: от {0} --- Икон.: {1} {2} --- Причина: {3} --- Име: {4} --- Сума: {5:F2}",
+                source, code, economist.Length == 0 ? "- не е намерен" : economist,
+                reason, name.Length == 0 ? "Няма име в базата данни" : name, total);
+        }
+    }
+}
