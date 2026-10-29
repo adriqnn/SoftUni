@@ -1,0 +1,21 @@
+string[] anyPermissions = AnyAdditionalPermissions;
+
+if (anyPermissions.Length > 0)
+{
+    bool allowed = false;
+
+    foreach (string permission in anyPermissions)
+    {
+        if (HasPermission(rights, permission))
+        {
+            allowed = true;
+            break;
+        }
+    }
+
+    if (!allowed)
+    {
+        Response.Redirect("~/V1718/07.Default/Rights.aspx", true);
+        return;
+    }
+}
