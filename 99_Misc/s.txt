@@ -1,0 +1,55 @@
+    // All pages in this sub-application inherit from this class.
+    public abstract class V1718ApplicationPage : Page
+    {
+        // Preserve the original code, including leading zeros, for queries/helpers.
+        protected string Region { get; private set; }
+
+        // Numeric representation for comparisons and array indexing only.
+        protected int RegionAsInt { get; private set; }
+
+        // Ordinary pages need no override. Every additional key listed here is required.
+        protected virtual string[] AdditionalPermissions
+        {
+            get { return new string[0]; }
+        }
+
+        protected sealed override void OnPreInit(EventArgs e)
+        {
+            var rights = Session["UserDictionary"] as Dictionary<string, string>;
+            string regionCode = Session["REGION"] as string;
+            int region;
+            if (rights == null || rights.Count == 0 || !int.TryParse(regionCode, out region) || region < 1 || region > 31 || region == 29)
+            {
+                Response.Redirect("~/V1718/07.Default/LogIn.aspx", true);
+                return;
+            }
+
+            // Preserve the original ANY-of-five permission rule.
+            if (!(HasPermission(rights, "Rep221") || HasPermission(rights, "Rep222") || HasPermission(rights, "Rep223") || HasPermission(rights, "Rep224") || HasPermission(rights, "Rep225")))
+            {
+                Response.Redirect("~/V1718/07.Default/Rights.aspx", true);
+                return;
+            }
+
+            Region = regionCode;
+            RegionAsInt = region;
+
+            foreach (string permission in AdditionalPermissions)
+            {
+                if (!HasPermission(rights, permission))
+                {
+                    Response.Redirect("~/V1718/07.Default/Rights.aspx", true);
+                    return;
+                }
+            }
+
+            // Common checks finish before the page's PreInit/Init/Load handlers.
+            base.OnPreInit(e);
+        }
+
+        private static bool HasPermission(Dictionary<string, string> rights, string key)
+        {
+            string value;
+            return rights.TryGetValue(key, out value) && value == "1";
+        }
+    }
